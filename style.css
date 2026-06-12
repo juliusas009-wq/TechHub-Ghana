@@ -1,8 +1,12 @@
-body {
-    font-size: 18px;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f5f7fa;
+@media(max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.4;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f5f7fa;
+        width: 100%;
+    }
 }
 
 nav a {
@@ -14,7 +18,7 @@ nav a {
 .container {
     width:100%;
     max-width: 1200 px;
-    margin: 50px auto;
+    margin: auto;
     text-align: center;
 }
 h1 {
