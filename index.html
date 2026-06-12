@@ -1,23 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Tech Hub</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
 
-        <nav>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            transition: 0.3s;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+        nav {
+            background-color: #0078d7;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background-color: #0078d7;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .features {
+            display: grids;
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px 8%;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .dark-mode .card {
+            background-color: #1e1e1e;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0078d7;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .toggle {
+            background-color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Student Tech Hub</div>
+        <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="gpa.html">GPA Calculator</a>
             <a href="about.html">About Us</a>
+            <a href="gpa.html">GPA Calculator</a>
             <a href="contact.html">Contact Us</a>
-        </nav>
-        <div class="container">
-        <h1>Welcome to Student Tech Hub</h1>
+        <button class="toggle"
+        onclick="toggleDarkmode()">
 
-            <p>Learn programming, technology, and use free student tools.</p>
-        </div>  
-    </body>
-    </html>
+        </button>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Learn Technology & Built Your Future</h1>
+
+        <p>
+            Free programming tutorials, student resources, GPA calculator, and technology tools.
+        </p>
+
+        <a href="gpa_calculator.html" class="btn">Use GPA Calculator</a>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <h3>GPA Calculator</h3>
+            <p>Calculate your GPA quickly and accurately.</p>
+        </div>
+
+        <div class="card">
+            <h3>Programming Tutorials</h3>
+            <p>Learn HTML, css, JavaScript and more.</p>
+        </div>
+
+        <div class="card">
+            <h3>Student Resources</h3>
+            <p>Access guides, study materials and tips.</p>
+        </div>
+
+        <div class="card">
+            <h3>Career Development</h3>
+            <p>Improve your skills and prepare for IT jobs.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p> #2026 student Tech Hub | Built by Julius</p>
+        </footer>
+
+        <script>
+            function toggleDarkmode() {
+                document.body.classList.toggle("dark-mode");
+            }
+        </script>
+</body>
+</html>
