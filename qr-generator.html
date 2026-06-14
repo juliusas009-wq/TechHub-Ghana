@@ -6,7 +6,7 @@
     <title>QR Code Generator</title>
 
     <script>
-        src="https://cdnjs.cloudflare.com/ajax/libs/qr.codejs/1.0.0/qrcode.min.js"></Script>
+        src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.0.0/qrcode.min.js"></Script>
 
         <style>
             BODY {
@@ -59,7 +59,7 @@
         id="qrText"
         placeholder="https://example.com">
 
-        <br><div>
+        <br>
 
         <button onclick="generateQR()">
             Generate QR Code
@@ -80,13 +80,12 @@
 
             new QRCode(
                 document.getElementById("qrcode"),
-            
         {
             text: text,
             width: 200,
             height: 200
         }
-    );
+    )
         }
         </script>
 
