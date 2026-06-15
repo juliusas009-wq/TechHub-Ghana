@@ -5,79 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></Script>
-
-        <style>
-            BODY {
-                font-family: arial, sans-serif;
-                background-color: #f4f6f9;
-                text-align: center;
-                padding: 50px;
-            }
-
-            .container {
-                max-width: 600px;
-                margin: auto;
-                background-color: white;
-                padding: 30px;
-                border-radius: 12px;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 1);
-            }
-
-            input {
-                width: 80px;
-                padding: 12px;
-                margin: 15px 0;
-            }
-            button {
-                padding: 12px 20px;
-                background-color: #2563EB;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-            #qrcode {
-                margin-top: 20px;
-                display: flex;
-                justify-content: center;
-            }
-
-            </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2563EB;
+        }
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            padding: 12px 20px;
+            background-color: #2563EB;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1d4ed8;
+        }
+        #qrcode img {
+            border: 5px solid white;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
 
         <h1>QR Code Generator</h1>
 
-        <p>Enter a website link, text, phone number, or email.</p>
+        <p>Enter a website link, text, email, or phone number.</p>
 
         <input
-        type="text"
-        id="qrText"
-        placeholder="https://example.com">
-
-        <button onclick="QRgenerate()">
-            Generate QR Code
-        </button>
+            type="text"
+            id="qrText"
+            placeholder="https://example.com">
+            <br>
+        <button onclick="generateQRCode()">Generate QR Code</button>
 
         <div id="qrcode"></div>
 
-    </div>
+        </div>
 
-    <script>
-        function generateQR() {
-            let text = document.getElementById("qrText").value;
-
-            if(text.trim() === "") {
-                alert("please enter text or a URL");
-                return;
+        <script>
+            function generateQR() {
+                let text = document.getElementById("qrText").value;
+                if (text.trim() === "") {
+                    alert("Please enter text or a URL.");
+                    return;
+                }
+                document.getElementById("qrcode").innerHTML = '<img src="https://api.qrserver.com/v1/create-qr-code/?data=' + encodeURIComponent(text) + '&size=250x250" alt="QR Code">';
             }
-            document.getElementById("qrcode").innerHTM = '<img src="https://api.qrserver.com/v1/create-qr-code/size=200*200$data='+encodeURIComponent(text) +'" alt="QR Code">';
-        }
         </script>
 
-</body>
-</html>
+        </body> 
+        </html>
