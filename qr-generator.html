@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
 
-    <script>
+    <script
         src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></Script>
 
         <style>
@@ -59,7 +59,7 @@
         id="qrText"
         placeholder="https://example.com">
 
-        <button onclick="generateQR()">
+        <button onclick="QRgenerate()">
             Generate QR Code
         </button>
 
@@ -69,13 +69,13 @@
 
     <script>
         function generateQR() {
-            let text = docment.getElementById("qrText").value;
+            let text = document.getElementById("qrText").value;
 
             if(text.trim() === "") {
                 alert("please enter text or a URL");
                 return;
             }
-            documet.getElementById("qrcode").innerHTM = '<img src="https://api.qrserver.com/v1/create-qr-code/size=200*200$data='+encodeURIComponent(text) +'" alt="QR Code">';
+            document.getElementById("qrcode").innerHTM = '<img src="https://api.qrserver.com/v1/create-qr-code/size=200*200$data='+encodeURIComponent(text) +'" alt="QR Code">';
         }
         </script>
 
