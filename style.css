@@ -45,3 +45,17 @@ button {
     padding: 10px 20px;
     cursor: pointer;
 }
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: red;
+    font-size: 18px;
+}
