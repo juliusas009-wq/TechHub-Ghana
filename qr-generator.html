@@ -59,13 +59,9 @@
         id="qrText"
         placeholder="https://example.com">
 
-        <br>
-
         <button onclick="generateQR()">
             Generate QR Code
         </button>
-
-        <!-- QR code will appear here -->
 
         <div id="qrcode"></div>
 
@@ -73,19 +69,13 @@
 
     <script>
         function generateQR() {
-            document.getElementById("qrcode"). innerHTML = "";
+            let text = docment.getElementById("qrText").value;
 
-            let text =
-            document.getElementById("qrText").value;
-
-            new QRCode(
-                document.getElementById("qrcode"),
-        {
-            text: text,
-            width: 200,
-            height: 200
-        }
-    )
+            if(text.trim() === "") {
+                alert("please enter text or a URL");
+                return;
+            }
+            documet.getElementById("qrcode").innerHTM = '<img src="https://api.qrserver.com/v1/create-qr-code/size=200*200$data='+encodeURIComponent(text) +'" alt="QR Code">';
         }
         </script>
 
