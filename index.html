@@ -107,20 +107,23 @@
 
 <body>
     <nav>
-        <div class="logo">
-            Tech Hub
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="tools.html">Tools</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
-            </div>
-        <button class="toggle"
-        onclick="toggleDarkmode()">
-
-        </button>
+        <div class="navbar">
+            <div class="menu-icon"
+            onclick="toggleMenu()">
         </div>
+
+        <div class="logo">Tech Hub</div>
+
     </nav>
+
+    <div id="sideMenu" class="side-menu">
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+        <a href="gpa.html"> GPA Calculator</a>
+        <a herf="qr-generator.html">QR Generator</a>
+        <a herf="about.html">About Us</a>
+        <a herf="contact.html">Contact Us</a>
+    </div>
     <section class="hero">
         <h1>Learn Technology & Built Your Future</h1>
 
@@ -162,6 +165,17 @@
             function toggleDarkmode() {
                 document.body.classList.toggle("dark-mode");
             }
+
+            function toggleMenu() {
+                let menu = document.getElementById("sideMenu");
+
+                if(menu.style.width === "250px") {
+                    menu.style.width = "0";
+                } else {
+                    menu.style.width = "250px";
+                }
+            }
         </script>
+
 </body>
 </html>
