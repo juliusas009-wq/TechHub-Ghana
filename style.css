@@ -1,23 +1,1008 @@
-body {
-    background: red;
+/* ==========================================
+   TECH HUB V2 - PART 2A
+   Global Styles, Header & Hero
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.top-header {
-    background: blue;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+html{
+    scroll-behavior:smooth;
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: bold;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.6;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 10px;
+/* Links */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+header{
+
+    width:100%;
+    background:#ffffff;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:999;
+
+}
+
+.top-bar{
+
+    width:90%;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 0;
+
+}
+
+/* Logo */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:60px;
+    height:60px;
+    object-fit:cover;
+
+}
+
+.logo h1{
+
+    font-size:30px;
+    color:#0056d2;
+
+}
+
+.logo p{
+
+    color:#666;
+    font-size:14px;
+
+}
+
+/* Search */
+
+.search-box{
+
+    display:flex;
+
+}
+
+.search-box input{
+
+    width:280px;
+    padding:12px;
+
+    border:1px solid #ddd;
+    border-radius:6px 0 0 6px;
+
+    outline:none;
+
+}
+
+.search-box button{
+
+    background:#0056d2;
+    color:white;
+
+    border:none;
+
+    width:60px;
+
+    cursor:pointer;
+
+    border-radius:0 6px 6px 0;
+
+    transition:.3s;
+
+}
+
+.search-box button:hover{
+
+    background:#003d99;
+
+}
+
+/* ===============================
+   NAVIGATION
+================================ */
+
+nav{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+    background:#0056d2;
+
+}
+
+nav a{
+
+    color:white;
+
+    padding:16px 22px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    background:#003f9b;
+
+}
+
+.active{
+
+    background:#003f9b;
+
+}
+
+/* ===============================
+   BREAKING NEWS
+================================ */
+
+.breaking-news{
+
+    background:#ffcc00;
+    color:#111;
+
+    padding:12px;
+
+    font-weight:bold;
+
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+
+.hero{
+
+    width:90%;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+.hero-text h2{
+
+    font-size:48px;
+
+    color:#0056d2;
+
+    margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+    font-size:18px;
+
+    color:#555;
+
+    margin-bottom:30px;
+
+}
+
+/* Tag */
+
+.tag{
+
+    display:inline-block;
+
+    background:#ff4d4d;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    margin-bottom:20px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+/* Buttons */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.hero-buttons a{
+
+    padding:14px 30px;
+
+    border-radius:6px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.hero-buttons a:first-child{
+
+    background:#0056d2;
+
+    color:white;
+
+}
+
+.hero-buttons a:last-child{
+
+    background:white;
+
+    color:#0056d2;
+
+    border:2px solid #0056d2;
+
+}
+
+.hero-buttons a:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+/* Hero image */
+
+.hero-image img{
+
+    border-radius:15px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+/* ===============================
+   SECTION TITLE
+================================ */
+
+.section{
+
+    width:90%;
+
+    margin:60px auto;
+
+}
+
+.section h2{
+
+    font-size:34px;
+
+    margin-bottom:30px;
+
+    color:#0056d2;
+
+    border-left:6px solid #0056d2;
+
+    padding-left:15px;
+
+}
+
+/* ===============================
+   TOOL GRID
+================================ */
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+.tool-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.tool-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+}
+
+
+.tool-card .icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+
+.tool-card h3{
+
+    color:#0056d2;
+
+    margin-bottom:15px;
+
+}
+
+
+.tool-card p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+
+.tool-card a{
+
+    display:inline-block;
+
+    background:#0056d2;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:6px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.tool-card a:hover{
+
+    background:#003d99;
+
+}
+
+
+
+/* ===============================
+   NEWS LAYOUT
+================================ */
+
+.news-layout{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:30px;
+
+}
+
+
+.news-card{
+
+    display:flex;
+
+    gap:20px;
+
+    background:white;
+
+    margin-bottom:20px;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.news-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.news-card img{
+
+    width:220px;
+
+    height:150px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+
+.news-card h3{
+
+    color:#0056d2;
+
+    margin-bottom:10px;
+
+}
+
+
+.news-card p{
+
+    color:#555;
+
+}
+
+
+
+/* ===============================
+   SIDEBAR
+================================ */
+
+aside{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+aside h3{
+
+    color:#0056d2;
+
+    margin-bottom:20px;
+
+}
+
+
+aside ul{
+
+    list-style:none;
+
+}
+
+
+aside li{
+
+    padding:15px 0;
+
+    border-bottom:1px solid #eee;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+aside li:hover{
+
+    color:#0056d2;
+
+    padding-left:10px;
+
+}
+
+
+
+/* ===============================
+   TUTORIALS
+================================ */
+
+.tutorial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+.tutorial{
+
+    background:white;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.tutorial:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.tutorial img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+}
+
+
+.tutorial h3{
+
+    padding:20px;
+
+    color:#0056d2;
+
+}
+
+
+
+/* ===============================
+   NEWSLETTER
+================================ */
+
+.newsletter{
+
+    width:90%;
+
+    margin:70px auto;
+
+    text-align:center;
+
+    background:#0056d2;
+
+    color:white;
+
+    padding:60px 30px;
+
+    border-radius:15px;
+
+}
+
+
+.newsletter h2{
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+
+.newsletter p{
+
+    margin-bottom:30px;
+
+}
+
+
+.newsletter form{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+
+.newsletter input{
+
+    width:350px;
+
+    max-width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:6px;
+
+    outline:none;
+
+}
+
+
+.newsletter button{
+
+    background:#ffcc00;
+
+    color:#222;
+
+    border:none;
+
+    padding:15px 30px;
+
+    border-radius:6px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.newsletter button:hover{
+
+    background:#ffb300;
+
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer{
+    background:#0f172a;
+    color:#fff;
+    margin-top:60px;
+    padding:60px 5% 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:40px;
+}
+
+.footer-grid h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+}
+
+.footer-grid p{
+    margin-bottom:10px;
+    color:#cbd5e1;
+}
+
+.footer-grid a{
+    color:#cbd5e1;
+    transition:.3s;
+}
+
+.footer-grid a:hover{
+    color:#38bdf8;
+}
+
+footer hr{
+    margin:35px 0 20px;
+    border:none;
+    border-top:1px solid rgba(255,255,255,.15);
+}
+
+.copyright{
+    text-align:center;
+    color:#94a3b8;
+}
+
+/* ===============================
+   DARK MODE BUTTON
+================================ */
+
+#darkModeBtn{
+    background:#0056d2;
+    color:#fff;
+    border:none;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    cursor:pointer;
+    margin-left:12px;
+    transition:.3s;
+}
+
+#darkModeBtn:hover{
+    transform:rotate(20deg);
+    background:#003d99;
+}
+
+/* ===============================
+   DARK MODE
+================================ */
+
+body.dark{
+    background:#111827;
+    color:#f3f4f6;
+}
+
+body.dark header,
+body.dark .tool-card,
+body.dark .news-card,
+body.dark aside,
+body.dark .tutorial{
+    background:#1f2937;
+    color:#f3f4f6;
+}
+
+body.dark .section h2,
+body.dark .logo h1,
+body.dark .news-card h3,
+body.dark .tool-card h3,
+body.dark .tutorial h3{
+    color:#60a5fa;
+}
+
+body.dark .tool-card p,
+body.dark .news-card p,
+body.dark aside li,
+body.dark .logo p{
+    color:#d1d5db;
+}
+
+body.dark .search-box input{
+    background:#374151;
+    color:white;
+    border:1px solid #555;
+}
+
+body.dark nav{
+    background:#0f172a;
+}
+
+body.dark footer{
+    background:#020617;
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+
+.hero{
+    animation:fadeUp 1s ease;
+}
+
+.tool-card,
+.news-card,
+.tutorial{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===============================
+   SCROLLBAR
+================================ */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#0056d2;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media(max-width:992px){
+
+.top-bar{
+    flex-direction:column;
+    gap:20px;
+}
+
+.search-box input{
+    width:220px;
+}
+
+.hero{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.news-layout{
+    grid-template-columns:1fr;
+}
+
+.news-card{
+    flex-direction:column;
+}
+
+.news-card img{
+    width:100%;
+    height:220px;
+}
+
+}
+
+@media(max-width:768px){
+
+.logo{
+    flex-direction:column;
+    text-align:center;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+}
+
+.logo h1{
+    font-size:24px;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav a{
+    width:100%;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.15);
+}
+
+.hero-text h2{
+    font-size:34px;
+}
+
+.hero-text p{
+    font-size:16px;
+}
+
+.section h2{
+    font-size:28px;
+}
+
+.newsletter h2{
+    font-size:28px;
+}
+
+.newsletter input{
+    width:100%;
+}
+
+.newsletter button{
+    width:100%;
+}
+
+.footer-grid{
+    text-align:center;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-text h2{
+    font-size:28px;
+}
+
+.search-box{
+    width:100%;
+}
+
+.search-box input{
+    width:100%;
+}
+
+.tool-card,
+.news-card,
+.tutorial{
+    border-radius:8px;
+}
+
+}
+.today-date{
+    width:90%;
+    margin:15px auto;
+    color:#666;
+    font-size:14px;
+    font-weight:600;
+}
+
+#topBtn{
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+#topBtn:hover{
+    transform:translateY(-4px);
 }

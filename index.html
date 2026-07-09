@@ -1,69 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Hub | Technology News & Tools</title>
+    <title>TechHub Ghana | Technology News & Digital Tools</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
 
-<!-- Header -->
+<header>
 
-<header class="top-header">
+<div class="top-bar">
 
-    <div class="logo">
-        🚀 Tech Hub
-    </div>
+<div class="logo">
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#">Tech News</a>
-        <a href="#">AI</a>
-        <a href="#">Programming</a>
-        <a href="tools.html">Tools</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<img src="images/logo.png" alt="Tech Hub Logo">
 
-    <input type="text" placeholder="Search...">
+<div>
 
-</header>
+<h1>Tech Hub</h1>
 
+<p>Technology • Learning • Innovation</p>
 
+</div>
 
-<!-- Breaking News -->
+</div>
 
-<div class="breaking">
+<div class="search-box">
 
-📢 Breaking News: Welcome to Tech Hub - Latest Technology Updates
+<input type="text" placeholder="Search tutorials, news or tools...">
+
+<button>🔍</button>
+
+</div>
 
 </div>
 
 
 
-<!-- Main Featured Story -->
+<nav>
 
-<section class="featured">
+<a class="active" href="index.html">Home</a>
 
-<img src="images/hero.jpg" alt="Technology">
+<a href="news.html">News</a>
 
-<div class="featured-text">
+<a href="tutorials.html">Tutorials</a>
 
-<h1>
-The Future of Technology: AI, Coding and Digital Innovation
-</h1>
+<a href="tools.html">Tools</a>
+
+<a href="gpa.html">GPA</a>
+
+<a href="qr-generator.html">QR Generator</a>
+
+<a href="ai-assistant.html">AI Assistant</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- ================= BREAKING NEWS ================= -->
+
+<div class="breaking-news">
+    <div class="today-date" id="today"></div>
+
+<marquee>
+
+📢 Welcome to Tech Hub • Learn Programming • Free Online Tools • Artificial Intelligence • Web Development • Cybersecurity • Database Tutorials
+
+</marquee>
+
+</div>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<span class="tag">
+
+FEATURED
+
+</span>
+
+<h2>
+
+Technology Made Simple
+
+</h2>
 
 <p>
-Explore the latest technology trends, programming skills and digital tools.
+
+Learn programming, Artificial Intelligence,
+database management, cybersecurity and
+web development through easy tutorials
+and powerful free tools.
+
 </p>
 
-<button>
-Read More
-</button>
+<div class="hero-buttons">
+
+<a href="tools.html">
+
+Explore Tools
+
+</a>
+
+<a href="news.html">
+
+Latest News
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="hero-image">
+
+<img src="images/hero.jpg" alt="Technology">
 
 </div>
 
@@ -71,33 +143,160 @@ Read More
 
 
 
+<!-- ================= QUICK TOOLS ================= -->
 
-<!-- Content Area -->
+<section class="section">
 
-<div class="main-container">
+<h2>
+
+Popular Tools
+
+</h2>
+
+<div class="card-grid">
+
+<div class="tool-card">
+
+<div class="icon">
+
+🎓
+
+</div>
+
+<h3>
+
+GPA Calculator
+
+</h3>
+
+<p>
+
+Calculate your semester GPA quickly.
+
+</p>
+
+<a href="gpa.html">
+
+Open Tool
+
+</a>
+
+</div>
 
 
 
-<!-- Articles -->
+<div class="tool-card">
 
-<section class="articles">
+<div class="icon">
+
+📱
+
+</div>
+
+<h3>
+
+QR Generator
+
+</h3>
+
+<p>
+
+Create QR codes instantly.
+
+</p>
+
+<a href="qr-generator.html">
+
+Open Tool
+
+</a>
+
+</div>
 
 
-<h2>Latest Tech News</h2>
+
+<div class="tool-card">
+
+<div class="icon">
+
+🤖
+
+</div>
+
+<h3>
+
+AI Assistant
+
+</h3>
+
+<p>
+
+Get AI help for learning.
+
+</p>
+
+<a href="ai-assistant.html">
+
+Open Tool
+
+</a>
+
+</div>
 
 
-<div class="article-card">
+
+<div class="tool-card">
+
+<div class="icon">
+
+</h3>
+
+<p>
+
+Coming Soon
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= NEWS ================= -->
+
+<section class="section">
+
+<h2>
+
+Latest Technology News
+
+</h2>
+
+<div class="news-layout">
+
+<div class="news-left">
+
+<div class="news-card">
 
 <img src="images/tech1.jpg">
 
 <div>
 
 <h3>
-How Artificial Intelligence is Changing the World
+
+Artificial Intelligence in Education
+
 </h3>
 
 <p>
-Discover how AI is transforming education, business and everyday life.
+
+AI is transforming how students learn
+through intelligent assistants and adaptive
+learning systems.
+
 </p>
 
 </div>
@@ -106,18 +305,23 @@ Discover how AI is transforming education, business and everyday life.
 
 
 
-<div class="article-card">
+<div class="news-card">
 
 <img src="images/tech2.jpg">
 
 <div>
 
 <h3>
-Learn Web Development From Scratch
+
+Learn HTML, CSS & JavaScript
+
 </h3>
 
 <p>
-Start building websites using HTML, CSS and JavaScript.
+
+Start building beautiful websites from
+scratch with beginner-friendly tutorials.
+
 </p>
 
 </div>
@@ -126,96 +330,255 @@ Start building websites using HTML, CSS and JavaScript.
 
 
 
-<div class="article-card">
+<div class="news-card">
 
 <img src="images/tech3.jpg">
 
 <div>
 
 <h3>
-Why Cybersecurity Matters Today
+
+Cybersecurity Essentials
+
 </h3>
 
 <p>
-Learn how to protect yourself in the digital world.
+
+Protect yourself online using simple
+cybersecurity practices.
+
 </p>
 
 </div>
 
 </div>
 
+</div>
+
+
+
+<aside>
+
+<h3>
+
+Trending
+
+</h3>
+
+<ul>
+
+<li>🔥 AI Assistant</li>
+
+<li>🔥 GPA Calculator</li>
+
+<li>🔥 QR Generator</li>
+
+<li>🔥 Learn Python</li>
+
+<li>🔥 MySQL Basics</li>
+
+</ul>
+
+</aside>
+
+</div>
 
 </section>
 
 
 
+<!-- ================= TUTORIALS ================= -->
 
-<!-- Sidebar -->
+<section class="section">
 
+<h2>
 
-<aside>
+Latest Tutorials
 
+</h2>
 
-<h2>Trending Tools</h2>
+<div class="tutorial-grid">
 
+<div class="tutorial">
 
-<div class="tool-box">
-🤖 AI Assistant
-</div>
+<img src="images/tech1.jpg">
 
+<h3>
 
-<div class="tool-box">
-🎓 GPA Calculator
-</div>
+HTML for Beginners
 
-
-<div class="tool-box">
-📱 QR Generator
-</div>
-
-
-
-<h2>Categories</h2>
-
-
-<div class="categories">
-
-<span>AI</span>
-<span>Coding</span>
-<span>Mobile</span>
-<span>Software</span>
-<span>Security</span>
-
-</div>
-
-
-</aside>
-
-
+</h3>
 
 </div>
 
 
 
+<div class="tutorial">
 
-<!-- Footer -->
+<img src="images/tech2.jpg">
+
+<h3>
+
+CSS Masterclass
+
+</h3>
+
+</div>
+
+
+
+<div class="tutorial">
+
+<img src="images/tech3.jpg">
+
+<h3>
+
+JavaScript Essentials
+
+</h3>
+
+</div>
+
+
+
+<div class="tutorial">
+
+<img src="images/hero.jpg">
+
+<h3>
+
+Python Programming
+
+</h3>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+<h2>
+
+Stay Updated
+
+</h2>
+
+<p>
+
+Receive the latest technology news,
+tutorials and tools.
+
+</p>
+
+<form>
+
+<input type="email" placeholder="Enter your email">
+
+<button>
+
+Subscribe
+
+</button>
+
+</form>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<h3>🚀 Tech Hub</h3>
+<div class="footer-grid">
+
+<div>
+
+<h3>
+
+Tech Hub
+
+</h3>
 
 <p>
-Technology News | Digital Tools | Learning
+
+Technology • Learning • Innovation
+
 </p>
 
-<p>
-© 2026 Tech Hub. All Rights Reserved.
-</p>
+</div>
 
+
+
+<div>
+
+<h3>
+
+Quick Links</h3>
+
+<p><a href="index.html">Home</a></p>
+
+<p><a href="news.html">News</a></p>
+
+<p><a href="tutorials.html">Tutorials</a></p>
+
+<p><a href="tools.html">Tools</a></p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+
+Tools
+
+</h3>
+
+<p>GPA Calculator</p>
+
+<p>QR Generator</p>
+
+<p>AI Assistant</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+
+Contact
+
+</h3>
+
+<p>Email: info@techhub.com</p>
+
+<p>Accra, Ghana</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 TechHub Ghana. All Rights Reserved.
+
+</p>
 
 </footer>
 
-
+<script src="script.js"></script>
 
 </body>
 
