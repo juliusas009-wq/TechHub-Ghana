@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | TechHub Ghana</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="top-bar">
+
+<div class="logo">
+
+<img src="images/logo.png" alt="TechHub Ghana Logo">
+
+<div>
+
+<h1>TechHub Ghana</h1>
+
+<p>Technology • Learning • Innovation</p>
+
+</div>
+
+</div>
+
+</div>
+
+<button class="menu-btn" onclick="toggleMenu()">
+☰
+</button>
+    <nav id="navMenu">
+
+<a href="index.html">Home</a>
+
+<a href="news.html">News</a>
+
+<a href="tutorials.html">Tutorials</a>
+
+<a href="tools.html">Tools</a>
+
+<a class="active" href="dashboard.html">Dashboard</a>
+
+</nav>
+
+</header>
+
+
+
+
+<section class="dashboard-section">
+
+
+<div class="dashboard-box">
+
+
+<h1>
+Welcome, <span id="displayName">User</span> 👋
+</h1>
+
+
+<p>
+Your personal TechHub Ghana dashboard
+</p>
+
+
+
+<div class="dashboard-cards">
+
+
+
+<div class="dashboard-card">
+
+<h3>
+📰 Saved News
+</h3>
+
+<p>
+View your favorite technology articles.
+</p>
+
+<button>
+Open
+</button>
+
+</div>
+
+
+
+
+
+<div class="dashboard-card">
+
+<h3>
+📚 My Tutorials
+</h3>
+
+<p>
+Access your learning materials.
+</p>
+
+<button>
+Open
+</button>
+
+</div>
+
+
+
+
+
+<div class="dashboard-card">
+
+<h3>
+🛠 My Tools
+</h3>
+
+<p>
+Quick access to TechHub tools.
+</p>
+
+<a href="tools.html">
+<button>
+Open
+</button>
+</a>
+
+</div>
+
+
+
+
+
+<div class="dashboard-card">
+
+<h3>
+⚙ Account Settings
+</h3>
+
+<p>
+Manage your profile information.
+</p>
+
+<button onclick="logout()">
+Logout
+</button>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+<p class="copyright">
+
+© 2026 TechHub Ghana. All Rights Reserved.
+
+</p>
+
+</footer>
+
+
+
+<script src="dashboard.js"></script>
+
+
+</body>
+
+</html>
