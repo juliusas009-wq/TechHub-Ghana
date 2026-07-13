@@ -1,13 +1,15 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { initializeApp } 
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import { 
     getFirestore,
     collection,
     getDocs
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+} 
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
-// Firebase Config
+// Firebase configuration
 const firebaseConfig = {
 
     apiKey: "YOUR_API_KEY",
@@ -24,13 +26,74 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 
-// THIS CREATES db
+// THIS WAS MISSING
 const db = getFirestore(app);
-import  {
 
-    collection,
-    getDocs
-} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+
+
+const newsContainer = document.getElementById("newsContainer");
+
+
+async function loadNews(){
+
+    try{
+
+        const newsSnapshot = await getDocs(
+            collection(db,"news")
+        );
+
+
+        newsContainer.innerHTML = "";
+
+
+        if(newsSnapshot.empty){
+
+            newsContainer.innerHTML =
+            "<p>No news found in database</p>";
+
+            return;
+        }
+
+
+        newsSnapshot.forEach((doc)=>{
+
+            const news = doc.data();
+
+
+            newsContainer.innerHTML += `
+
+            <div class="news-card">
+
+                <img src="${news.image}" alt="news">
+
+                <h3>${news.title}</h3>
+
+                <p>${news.description}</p>
+
+                <small>${news.date}</small>
+
+            </div>
+
+            `;
+
+
+        });
+
+
+    }
+    catch(error){
+
+        console.log(error);
+
+        newsContainer.innerHTML =
+        "<p>Error loading news</p>";
+
+    }
+
+}
+
+
+loadNews();
 
 const newsContainer = document.getElementById("newsContainer");
 const searchInput = document.getElementById("searchInput");
