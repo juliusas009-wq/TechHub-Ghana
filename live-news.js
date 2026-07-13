@@ -1,114 +1,20 @@
-import { initializeApp } 
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { db } from "./firebase.js";
 
-import { 
-    getFirestore,
+import {
     collection,
     getDocs
-} 
-from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
-
-// Firebase configuration
-const firebaseConfig = {
-
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
-
-};
-
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-
-// THIS WAS MISSING
-const db = getFirestore(app);
-
-
-
-const newsContainer = document.getElementById("newsContainer");
-
-
-async function loadNews(){
-
-    try{
-
-        const newsSnapshot = await getDocs(
-            collection(db,"news")
-        );
-
-
-        newsContainer.innerHTML = "";
-
-
-        if(newsSnapshot.empty){
-
-            newsContainer.innerHTML =
-            "<p>No news found in database</p>";
-
-            return;
-        }
-
-
-        newsSnapshot.forEach((doc)=>{
-
-            const news = doc.data();
-
-
-            newsContainer.innerHTML += `
-
-            <div class="news-card">
-
-                <img src="${news.image}" alt="news">
-
-                <h3>${news.title}</h3>
-
-                <p>${news.description}</p>
-
-                <small>${news.date}</small>
-
-            </div>
-
-            `;
-
-
-        });
-
-
-    }
-    catch(error){
-
-        console.log(error);
-
-        newsContainer.innerHTML =
-        "<p>Error loading news</p>";
-
-    }
-
-}
-
-
-loadNews();
+} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 
 const newsContainer = document.getElementById("newsContainer");
 const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
 
 let allNews = [];
 
-// ================= LOAD NEWS =================
-
+// Load news from Firestore
 async function loadNews() {
 
-    newsContainer.innerHTML = `
-        <div class="loading">
-            <h3>Loading latest technology news...</h3>
-        </div>
-    `;
+    newsContainer.innerHTML = "<p>Loading latest news...</p>";
 
     try {
 
@@ -117,169 +23,108 @@ async function loadNews() {
         allNews = [];
 
         snapshot.forEach((doc) => {
-
             allNews.push(doc.data());
-
         });
 
         displayNews(allNews);
 
-    }
+    } catch (error) {
 
-    catch (error) {
-
-        console.error(error);
+        console.error("Firestore Error:", error);
 
         newsContainer.innerHTML = `
-
-        <div class="error-box">
-
-            <h3>Unable to load news.</h3>
-
-            <p>Please try again later.</p>
-
-        </div>
-
+            <div class="error-box">
+                <h3>Unable to load news.</h3>
+                <p>${error.message}</p>
+            </div>
         `;
-
     }
-
 }
 
-// ================= DISPLAY =================
-
-function displayNews(newsArray) {
+// Display news
+function displayNews(newsList) {
 
     newsContainer.innerHTML = "";
 
-    if (newsArray.length === 0) {
-
-        newsContainer.innerHTML = `
-
-        <div class="empty">
-
-            <h3>No news available.</h3>
-
-        </div>
-
-        `;
-
+    if (newsList.length === 0) {
+        newsContainer.innerHTML = "<p>No news found.</p>";
         return;
-
     }
 
-    newsArray.forEach(news => {
+    newsList.forEach(news => {
 
         newsContainer.innerHTML += `
+            <div class="news-card">
 
-        <div class="news-card">
+                <img src="${news.image}" alt="${news.title}">
 
-            <img src="${news.image}" alt="${news.title}">
+                <div class="news-content">
 
-            <div class="news-content">
+                    <span>${news.category}</span>
 
-                <span class="category">
+                    <h3>${news.title}</h3>
 
-                    ${news.category}
+                    <p>${news.summary}</p>
 
-                </span>
+                    <small>
+                        📅 ${news.date} |
+                        ✍ ${news.author}
+                    </small>
 
-                <h3>
+                    <br><br>
 
-                    ${news.title}
+                    <a href="${news.link}" class="read-btn">
+                        Read More →
+                    </a>
 
-                </h3>
-
-                <p>
-
-                    ${news.summary}
-
-                </p>
-
-                <small>
-
-                    📅 ${news.date}
-                    &nbsp;&nbsp;|&nbsp;&nbsp;
-                    ✍ ${news.author}
-
-                </small>
-
-                <br><br>
-
-                <a href="${news.link}" class="read-btn">
-
-                    Read More →
-
-                </a>
+                </div>
 
             </div>
-
-        </div>
-
         `;
 
     });
 
 }
 
-// ================= SEARCH =================
-
+// Search
 function searchNews() {
+
+    if (!searchInput) return;
 
     const keyword = searchInput.value.toLowerCase();
 
     const filtered = allNews.filter(news =>
-
         news.title.toLowerCase().includes(keyword) ||
-
         news.summary.toLowerCase().includes(keyword) ||
-
         news.category.toLowerCase().includes(keyword)
-
     );
 
     displayNews(filtered);
-
 }
 
-// ================= FILTER =================
-
+// Category filter
 window.filterNews = function(category) {
 
     if (category === "all") {
-
         displayNews(allNews);
-
         return;
-
     }
 
     const filtered = allNews.filter(news =>
-
         news.category === category
-
     );
 
     displayNews(filtered);
+};
 
-}
-
-// ================= SEARCH BUTTON =================
-
+// Search events
 if (searchInput) {
-
     searchInput.addEventListener("keyup", searchNews);
-
 }
-
-const searchBtn = document.getElementById("searchBtn");
 
 if (searchBtn) {
-
     searchBtn.addEventListener("click", searchNews);
-
 }
 
-// ================= START =================
-
+// Start
 loadNews();
