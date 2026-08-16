@@ -4,7 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>AI Assistant | TechHub Ghana</title>
 
@@ -13,10 +15,15 @@ content="TechHub Ghana AI Assistant for rewriting, summarizing, grammar correcti
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
 rel="stylesheet">
 
 <link
@@ -25,10 +32,13 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 </head>
 
+
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- ==================================================
+     HEADER
+================================================== -->
 
 <header class="main-header">
 
@@ -59,7 +69,7 @@ Technology News • Tutorials • Digital Tools
 type="text"
 placeholder="Search TechHub Ghana...">
 
-<button>
+<button type="button">
 
 <i class="fas fa-search"></i>
 
@@ -72,7 +82,8 @@ placeholder="Search TechHub Ghana...">
 
 <button
 class="menu-btn"
-onclick="toggleMenu()">
+onclick="toggleMenu()"
+type="button">
 
 ☰
 
@@ -118,7 +129,9 @@ Contact
 
 
 
-<!-- ================= BREAKING NEWS ================= -->
+<!-- ==================================================
+     BREAKING NEWS
+================================================== -->
 
 <section class="breaking-news">
 
@@ -133,7 +146,9 @@ Database • Technology News • Student Tools
 
 
 
-<!-- ================= AI HERO ================= -->
+<!-- ==================================================
+     AI HERO
+================================================== -->
 
 <section class="tutorial-hero">
 
@@ -160,7 +175,9 @@ your writing using the TechHub Ghana AI Assistant.
 
 
 
-<!-- ================= AI ASSISTANT ================= -->
+<!-- ==================================================
+     AI ASSISTANT
+================================================== -->
 
 <section class="section ai-section">
 
@@ -181,7 +198,9 @@ Improve your writing quickly and easily with AI.
 
 
 
-<!-- ================= INPUT ================= -->
+<!-- ==================================================
+     INPUT
+================================================== -->
 
 <div class="ai-input-box">
 
@@ -218,12 +237,15 @@ maxlength="5000"></textarea>
 
 
 
-<!-- ================= AI BUTTONS ================= -->
+<!-- ==================================================
+     AI BUTTONS
+================================================== -->
 
 <div class="ai-actions">
 
 
 <button
+type="button"
 class="ai-btn"
 onclick="processText('rewrite')">
 
@@ -233,6 +255,7 @@ onclick="processText('rewrite')">
 
 
 <button
+type="button"
 class="ai-btn"
 onclick="processText('summarize')">
 
@@ -242,6 +265,7 @@ onclick="processText('summarize')">
 
 
 <button
+type="button"
 class="ai-btn"
 onclick="processText('grammar')">
 
@@ -251,6 +275,7 @@ onclick="processText('grammar')">
 
 
 <button
+type="button"
 class="ai-btn"
 onclick="processText('clear')">
 
@@ -263,7 +288,9 @@ onclick="processText('clear')">
 
 
 
-<!-- ================= RESULT ================= -->
+<!-- ==================================================
+     RESULT
+================================================== -->
 
 <div class="ai-result-box">
 
@@ -276,6 +303,7 @@ onclick="processText('clear')">
 
 
 <button
+type="button"
 id="copyBtn"
 onclick="copyResult()">
 
@@ -299,11 +327,14 @@ Your result will appear here.
 
 
 
-<!-- ================= CLEAR ================= -->
+<!-- ==================================================
+     CLEAR
+================================================== -->
 
 <div class="ai-bottom-actions">
 
 <button
+type="button"
 onclick="clearAssistant()"
 class="clear-btn">
 
@@ -320,7 +351,9 @@ class="clear-btn">
 
 
 
-<!-- ================= WHAT AI CAN DO ================= -->
+<!-- ==================================================
+     WHAT AI CAN DO
+================================================== -->
 
 <section class="section">
 
@@ -372,7 +405,8 @@ summary.
 
 <p>
 
-Correct grammar, spelling and sentence mistakes.
+Find and correct common grammar, spelling and
+sentence mistakes.
 
 </p>
 
@@ -401,7 +435,9 @@ to understand.
 
 
 
-<!-- ================= STUDENT SECTION ================= -->
+<!-- ==================================================
+     STUDENT SECTION
+================================================== -->
 
 <section class="section">
 
@@ -426,8 +462,8 @@ to understand.
 
 <p>
 
-Improve the wording of assignment drafts while
-keeping the original ideas.
+Improve the wording of your assignment drafts
+without changing the main idea.
 
 </p>
 
@@ -486,15 +522,25 @@ projects and academic writing.
 
 <ul>
 
-<li>🤖 AI Assistant</li>
+<li>
+🤖 AI Assistant
+</li>
 
-<li>🎓 GPA Calculator</li>
+<li>
+🎓 GPA Calculator
+</li>
 
-<li>📱 QR Generator</li>
+<li>
+📱 QR Generator
+</li>
 
-<li>🐍 Python Tutorial</li>
+<li>
+🐍 Python Tutorial
+</li>
 
-<li>🗄️ MySQL Tutorial</li>
+<li>
+🗄️ MySQL Tutorial
+</li>
 
 </ul>
 
@@ -507,7 +553,9 @@ projects and academic writing.
 
 
 
-<!-- ================= NEWSLETTER ================= -->
+<!-- ==================================================
+     NEWSLETTER
+================================================== -->
 
 <section class="newsletter">
 
@@ -530,7 +578,7 @@ type="email"
 placeholder="Enter your email"
 required>
 
-<button>
+<button type="submit">
 Subscribe
 </button>
 
@@ -540,7 +588,9 @@ Subscribe
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ==================================================
+     FOOTER
+================================================== -->
 
 <footer>
 
@@ -563,6 +613,7 @@ news and digital tools.
 </p>
 
 </div>
+
 
 
 <div>
@@ -604,6 +655,7 @@ AI Assistant
 </div>
 
 
+
 <div>
 
 <h3>
@@ -629,6 +681,7 @@ Clear Writing
 </div>
 
 
+
 <div>
 
 <h3>
@@ -644,6 +697,7 @@ Contact
 </p>
 
 </div>
+
 
 </div>
 
@@ -661,18 +715,42 @@ Contact
 
 
 
-<!-- ================= MAIN SCRIPT ================= -->
+<!-- ==================================================
+     YOUR MAIN JAVASCRIPT
+================================================== -->
 
 <script src="script.js"></script>
 
 
 
-<!-- ================= REAL AI JAVASCRIPT ================= -->
+<!-- ==================================================
+     REAL AI JAVASCRIPT
+================================================== -->
 
 <script>
 
+/*
+========================================================
+TECHHUB GHANA AI API
+========================================================
+IMPORTANT:
+
+This is your Cloudflare Worker endpoint.
+
+Do NOT put your OpenAI API key here.
+
+The OpenAI API key stays safely inside Cloudflare.
+========================================================
+*/
+
 const AI_API_URL =
-"https://techhub-ai.juliusas009.workers.dev";
+"https://techhub-ai.juliusas009.workers.dev/api/ai";
+
+
+
+/* ======================================================
+   GET ELEMENTS
+====================================================== */
 
 const userText =
 document.getElementById("userText");
@@ -687,35 +765,46 @@ const aiResult =
 document.getElementById("aiResult");
 
 
-// ================= COUNT WORDS =================
+
+/* ======================================================
+   WORD + CHARACTER COUNTER
+====================================================== */
 
 userText.addEventListener("input", function () {
 
-    const text = this.value.trim();
+    const text =
+        this.value.trim();
+
 
     const words =
         text === ""
         ? 0
         : text.split(/\s+/).length;
 
+
     wordCount.textContent =
-        words + (words === 1 ? " word" : " words");
+        words +
+        (words === 1 ? " word" : " words");
+
 
     charCount.textContent =
-        this.value.length + " / 5000";
+        this.value.length +
+        " / 5000";
 
 });
 
 
-// ================= PROCESS AI =================
+
+/* ======================================================
+   PROCESS AI
+====================================================== */
 
 async function processText(action) {
 
-    const text =
-        userText.value.trim();
 
-
-    // CLEAR BUTTON
+    /* -----------------------------------------------
+       CLEAR
+    ----------------------------------------------- */
 
     if (action === "clear") {
 
@@ -726,7 +815,17 @@ async function processText(action) {
     }
 
 
-    // EMPTY INPUT
+    /* -----------------------------------------------
+       GET TEXT
+    ----------------------------------------------- */
+
+    const text =
+        userText.value.trim();
+
+
+    /* -----------------------------------------------
+       EMPTY TEXT
+    ----------------------------------------------- */
 
     if (text === "") {
 
@@ -738,54 +837,81 @@ async function processText(action) {
     }
 
 
-    // LOADING MESSAGE
+    /* -----------------------------------------------
+       LOADING
+    ----------------------------------------------- */
 
     aiResult.innerText =
         "🤖 TechHub Ghana AI is thinking...";
 
 
-    // DISABLE BUTTONS
+    /* -----------------------------------------------
+       BUTTONS
+    ----------------------------------------------- */
 
     const buttons =
         document.querySelectorAll(".ai-btn");
 
-    buttons.forEach(button => {
+
+    buttons.forEach(function(button) {
 
         button.disabled = true;
 
     });
 
 
+
     try {
 
+
+        /* ==========================================
+           SEND REQUEST TO CLOUDFLARE WORKER
+        ========================================== */
+
         const response =
-            await fetch(AI_API_URL, {
+            await fetch(
+                AI_API_URL,
+                {
 
-                method: "POST",
+                    method: "POST",
 
-                headers: {
+                    headers: {
 
-                    "Content-Type":
-                    "application/json"
+                        "Content-Type":
+                            "application/json"
 
-                },
+                    },
 
-                body: JSON.stringify({
+                    body: JSON.stringify({
 
-                    text: text,
+                        text: text,
 
-                    action: action
+                        action: action
 
-                })
+                    })
 
-            });
+                }
+            );
 
+
+
+        /* ==========================================
+           READ RESPONSE
+        ========================================== */
 
         const data =
             await response.json();
 
 
-        if (!response.ok || !data.success) {
+
+        /* ==========================================
+           CHECK ERROR
+        ========================================== */
+
+        if (
+            !response.ok ||
+            !data.success
+        ) {
 
             throw new Error(
                 data.error ||
@@ -795,7 +921,10 @@ async function processText(action) {
         }
 
 
-        // SHOW AI RESULT
+
+        /* ==========================================
+           DISPLAY AI RESULT
+        ========================================== */
 
         aiResult.innerText =
             data.result;
@@ -803,7 +932,9 @@ async function processText(action) {
 
     }
 
+
     catch (error) {
+
 
         console.error(
             "TechHub Ghana AI Error:",
@@ -817,21 +948,32 @@ async function processText(action) {
     }
 
 
-    // ENABLE BUTTONS
 
-    buttons.forEach(button => {
+    finally {
 
-        button.disabled = false;
 
-    });
+        /* -------------------------------------------
+           ENABLE BUTTONS AGAIN
+        ------------------------------------------- */
+
+        buttons.forEach(function(button) {
+
+            button.disabled = false;
+
+        });
+
+    }
 
 }
 
 
 
-// ================= COPY RESULT =================
+/* ======================================================
+   COPY RESULT
+====================================================== */
 
-function copyResult() {
+async function copyResult() {
+
 
     const text =
         aiResult.innerText;
@@ -839,8 +981,7 @@ function copyResult() {
 
     if (
         !text ||
-        text ===
-        "Your result will appear here."
+        text === "Your result will appear here."
     ) {
 
         return;
@@ -848,52 +989,108 @@ function copyResult() {
     }
 
 
-    navigator.clipboard.writeText(text)
+    try {
 
-    .then(() => {
+
+        await navigator.clipboard.writeText(
+            text
+        );
+
 
         const button =
-            document.getElementById("copyBtn");
+            document.getElementById(
+                "copyBtn"
+            );
+
 
         button.innerText =
             "✅ Copied!";
 
 
-        setTimeout(() => {
+        setTimeout(function() {
 
             button.innerText =
                 "📋 Copy";
 
         }, 1500);
 
-    })
 
-    .catch(() => {
+    }
+
+
+    catch (error) {
+
 
         alert(
             "Unable to copy the result."
         );
 
-    });
+    }
 
 }
 
 
 
-// ================= CLEAR =================
+/* ======================================================
+   CLEAR ASSISTANT
+====================================================== */
 
 function clearAssistant() {
 
-    userText.value = "";
+
+    userText.value =
+        "";
+
 
     wordCount.textContent =
         "0 words";
 
+
     charCount.textContent =
         "0 / 5000";
 
+
     aiResult.innerText =
         "Your result will appear here.";
+
+}
+
+
+
+/* ======================================================
+   TEST API CONNECTION
+====================================================== */
+
+async function testAIConnection() {
+
+    try {
+
+        const response =
+            await fetch(
+                "https://techhub-ai.juliusas009.workers.dev"
+            );
+
+
+        const data =
+            await response.json();
+
+
+        console.log(
+            "TechHub Ghana AI API:",
+            data
+        );
+
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "AI API connection test failed:",
+            error
+        );
+
+    }
 
 }
 
@@ -902,4 +1099,4 @@ function clearAssistant() {
 
 </body>
 
-  </html>
+    </html>
