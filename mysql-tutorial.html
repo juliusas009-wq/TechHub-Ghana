@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MySQL Tutorial | TechHub Ghana</title>
+
+<meta name="description"
+content="Learn MySQL databases from beginner to advanced with practical SQL examples at TechHub Ghana.">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="top-bar">
+
+<div class="logo">
+
+<img src="images/logo.png" alt="TechHub Ghana Logo">
+
+<div>
+
+<h1>TechHub Ghana</h1>
+
+<p>Technology • Learning • Innovation</p>
+
+</div>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Search tutorials...">
+
+<button>🔍</button>
+
+</div>
+
+</div>
+
+
+<button class="menu-btn" onclick="toggleMenu">
+
+☰
+
+</button>
+
+
+<nav id="navMenu">
+
+<a href="index.html">Home</a>
+
+<a href="news.html">News</a>
+
+<a class="active" href="tutorials.html">Tutorials</a>
+
+<a href="tools.html">Tools</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<!-- ================= BREAKING NEWS ================= -->
+
+<div class="breaking-news">
+
+<marquee>
+
+🗄️ Learn MySQL • Databases • SQL Queries • Tables • Relationships • Database Management
+
+</marquee>
+
+</div>
+
+
+<!-- ================= TUTORIAL ================= -->
+
+<section class="section">
+
+<div class="tutorial-header">
+
+<span class="category">
+
+🗄️ MYSQL TUTORIAL
+
+</span>
+
+<h2>
+
+MySQL Database Tutorial
+
+</h2>
+
+<p>
+
+Learn how to create databases, tables, insert data,
+write SQL queries and manage databases using MySQL.
+
+</p>
+
+</div>
+
+
+<div class="tutorial-content">
+
+
+<!-- ================= LESSON 1 ================= -->
+
+<h2>1. What is MySQL?</h2>
+
+<p>
+
+<strong>MySQL</strong> is a relational database management system
+used to store, organize and retrieve data.
+
+</p>
+
+<p>
+
+For example, a school can use MySQL to store:
+
+</p>
+
+<ul>
+
+<li>Students</li>
+
+<li>Courses</li>
+
+<li>Lecturers</li>
+
+<li>Grades</li>
+
+<li>Fees</li>
+
+</ul>
+
+
+<!-- ================= LESSON 2 ================= -->
+
+<h2>2. What is a Database?</h2>
+
+<p>
+
+A database is an organized collection of information.
+
+For example:
+
+</p>
+
+<div class="code-box">
+
+<pre><code>
+SchoolDB
+│
+├── Students
+├── Courses
+├── Lecturers
+└── Results
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 3 ================= -->
+
+<h2>3. Create a Database</h2>
+
+<p>
+
+The <strong>CREATE DATABASE</strong> command creates a new database.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+CREATE DATABASE SchoolDB;
+</code></pre>
+
+</div>
+
+
+<p>
+
+To use the database:
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+USE SchoolDB;
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 4 ================= -->
+
+<h2>4. Create a Table</h2>
+
+<p>
+
+A table stores information in rows and columns.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+CREATE TABLE Students (
+
+    student_id INT PRIMARY KEY,
+
+    name VARCHAR(100),
+
+    age INT,
+
+    course VARCHAR(100)
+
+);
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 5 ================= -->
+
+<h2>5. Insert Data</h2>
+
+<p>
+
+Use <strong>INSERT INTO</strong> to add information to a table.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+INSERT INTO Students
+(student_id, name, age, course)
+
+VALUES
+
+(1, 'Kwame Mensah', 21, 'Information Technology');
+</code></pre>
+
+</div>
+
+
+<p>
+
+You can insert multiple students:
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+INSERT INTO Students
+(student_id, name, age, course)
+
+VALUES
+
+(2, 'Ama Boateng', 20, 'Computer Science'),
+
+(3, 'Kofi Asante', 22, 'Information Technology'),
+
+(4, 'Akua Mensah', 21, 'Cybersecurity');
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 6 ================= -->
+
+<h2>6. Display Data</h2>
+
+<p>
+
+Use <strong>SELECT</strong> to retrieve information.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT * FROM Students;
+</code></pre>
+
+</div>
+
+
+<p>
+
+The asterisk (*) means all columns.
+
+</p>
+
+
+<!-- ================= LESSON 7 ================= -->
+
+<h2>7. Select Specific Columns</h2>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT name, course
+FROM Students;
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 8 ================= -->
+
+<h2>8. WHERE Clause</h2>
+
+<p>
+
+The WHERE clause allows you to find specific records.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT *
+FROM Students
+WHERE course = 'Information Technology';
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 9 ================= -->
+
+<h2>9. UPDATE Data</h2>
+
+<p>
+
+Use UPDATE to change existing information.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+UPDATE Students
+
+SET age = 22
+
+WHERE student_id = 1;
+</code></pre>
+
+</div>
+
+
+<p>
+
+⚠️ Always use a WHERE condition when updating specific records.
+
+</p>
+
+
+<!-- ================= LESSON 10 ================= -->
+
+<h2>10. DELETE Data</h2>
+
+<p>
+
+Use DELETE to remove a record.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+DELETE FROM Students
+
+WHERE student_id = 4;
+</code></pre>
+
+</div>
+
+
+<p>
+
+⚠️ Be careful with DELETE. Without a WHERE condition,
+you could delete every record in the table.
+
+</p>
+
+
+<!-- ================= LESSON 11 ================= -->
+
+<h2>11. ORDER BY</h2>
+
+<p>
+
+ORDER BY sorts your results.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT *
+FROM Students
+ORDER BY age ASC;
+</code></pre>
+
+</div>
+
+
+<p>
+
+For descending order:
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT *
+FROM Students
+ORDER BY age DESC;
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 12 ================= -->
+
+<h2>12. COUNT()</h2>
+
+<p>
+
+COUNT() counts records.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT COUNT(*)
+FROM Students;
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 13 ================= -->
+
+<h2>13. GROUP BY</h2>
+
+<p>
+
+GROUP BY groups records with similar values.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT course, COUNT(*)
+
+FROM Students
+
+GROUP BY course;
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 14 ================= -->
+
+<h2>14. Primary Key</h2>
+
+<p>
+
+A primary key uniquely identifies each record in a table.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+CREATE TABLE Students (
+
+    student_id INT PRIMARY KEY,
+
+    name VARCHAR(100)
+
+);
+</code></pre>
+
+</div>
+
+
+<p>
+
+In this example, <strong>student_id</strong> is the primary key.
+
+</p>
+
+
+<!-- ================= LESSON 15 ================= -->
+
+<h2>15. Foreign Key</h2>
+
+<p>
+
+A foreign key connects one table to another table.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+CREATE TABLE Courses (
+
+    course_id INT PRIMARY KEY,
+
+    course_name VARCHAR(100)
+
+);
+
+
+CREATE TABLE Students (
+
+    student_id INT PRIMARY KEY,
+
+    name VARCHAR(100),
+
+    course_id INT,
+
+    FOREIGN KEY (course_id)
+
+    REFERENCES Courses(course_id)
+
+);
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 16 ================= -->
+
+<h2>16. JOIN</h2>
+
+<p>
+
+JOIN allows you to retrieve related information from multiple tables.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT
+    Students.name,
+    Courses.course_name
+
+FROM Students
+
+INNER JOIN Courses
+
+ON Students.course_id = Courses.course_id;
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 17 ================= -->
+
+<h2>17. LIKE</h2>
+
+<p>
+
+LIKE searches for a particular pattern.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT *
+
+FROM Students
+
+WHERE name LIKE 'K%';
+</code></pre>
+
+</div>
+
+
+<p>
+
+The <strong>%</strong> means any number of characters.
+
+</p>
+
+
+<!-- ================= LESSON 18 ================= -->
+
+<h2>18. BETWEEN</h2>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT *
+
+FROM Students
+
+WHERE age BETWEEN 20 AND 22;
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 19 ================= -->
+
+<h2>19. DISTINCT</h2>
+
+<p>
+
+DISTINCT removes duplicate values from the result.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+SELECT DISTINCT course
+
+FROM Students;
+</code></pre>
+
+</div>
+
+
+<!-- ================= LESSON 20 ================= -->
+
+<h2>20. Complete Practical Example</h2>
+
+<p>
+
+Let's create a simple student database.
+
+</p>
+
+
+<div class="code-box">
+
+<pre><code>
+CREATE DATABASE TechHubSchool;
+
+USE TechHubSchool;
+
+
+CREATE TABLE Students (
+
+    student_id INT PRIMARY KEY,
+
+    name VARCHAR(100),
+
+    age INT,
+
+    course VARCHAR(100),
+
+    grade VARCHAR(5)
+
+);
+
+
+INSERT INTO Students
+
+VALUES
+
+(1, 'Kwame Mensah', 21,
+'Information Technology', 'A'),
+
+(2, 'Ama Boateng', 20,
+'Computer Science', 'B'),
+
+(3, 'Kofi Asante', 22,
+'Cybersecurity', 'A');
+
+
+SELECT * FROM Students;
+
+
+SELECT name, course
+
+FROM Students
+
+WHERE grade = 'A';
+</code></pre>
+
+</div>
+
+
+<!-- ================= PRACTICE ================= -->
+
+<div class="tutorial-exercise">
+
+<h2>📝 MySQL Practice Exercise</h2>
+
+<p>
+
+Create a database called:
+
+</p>
+
+<div class="code-box">
+
+<pre><code>
+UniversityDB
+</code></pre>
+
+</div>
+
+<p>
+
+Then create a table called <strong>Students</strong> containing:
+
+</p>
+
+<ol>
+
+<li>student_id</li>
+
+<li>name</li>
+
+<li>age</li>
+
+<li>course</li>
+
+<li>grade</li>
+
+</ol>
+
+<p>
+
+Then practice:
+
+</p>
+
+<ul>
+
+<li>INSERT</li>
+
+<li>SELECT</li>
+
+<li>WHERE</li>
+
+<li>UPDATE</li>
+
+<li>DELETE</li>
+
+<li>ORDER BY</li>
+
+<li>COUNT</li>
+
+<li>GROUP BY</li>
+
+<li>JOIN</li>
+
+</ul>
+
+
+<h3>Challenge</h3>
+
+<p>
+
+Find all students who are studying Information Technology
+and have a grade of A.
+
+</p>
+
+</div>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<div class="tutorial-navigation">
+
+<a href="python-tutorial.html" class="read-btn">
+
+← Python Tutorial
+
+</a>
+
+
+<a href="java-tutorial.html" class="read-btn">
+
+Java Tutorial →
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+<h2>
+
+Stay Updated
+
+</h2>
+
+<p>
+
+Receive new tutorials, technology news and digital tools.
+
+</p>
+
+
+<form>
+
+<input
+type="email"
+placeholder="Enter your email"
+required>
+
+<button>
+
+Subscribe
+
+</button>
+
+</form>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>TechHub Ghana</h3>
+
+<p>
+
+Technology • Learning • Innovation
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p>
+<a href="index.html">Home</a>
+</p>
+
+<p>
+<a href="news.html">News</a>
+</p>
+
+<p>
+<a href="tutorials.html">Tutorials</a>
+</p>
+
+<p>
+<a href="tools.html">Tools</a>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Tutorials</h3>
+
+<p>
+<a href="html-tutorial.html">HTML</a>
+</p>
+
+<p>
+<a href="css-tutorial.html">CSS</a>
+</p>
+
+<p>
+<a href="python-tutorial.html">Python</a>
+</p>
+
+<p>
+<a href="java-tutorial.html">Java</a>
+</p>
+
+<p>
+<a href="mysql-tutorial.html">MySQL</a>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📍 Accra, Ghana</p>
+
+<p>📧 info@techhubghana.com</p>
+
+</div>
+
+</div>
+
+
+<hr>
+
+
+<p class="copyright">
+
+© 2026 TechHub Ghana. All Rights Reserved.
+
+</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+                     </html>
