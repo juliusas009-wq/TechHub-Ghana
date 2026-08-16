@@ -4,9 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AI Assistant | TechHub Ghana</title>
 
@@ -15,15 +13,10 @@ content="TechHub Ghana AI Assistant for rewriting, summarizing, grammar correcti
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
 rel="stylesheet">
 
 <link
@@ -31,7 +24,6 @@ rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
-
 
 <body>
 
@@ -68,7 +60,9 @@ type="text"
 placeholder="Search TechHub Ghana...">
 
 <button>
+
 <i class="fas fa-search"></i>
+
 </button>
 
 </div>
@@ -124,7 +118,7 @@ Contact
 
 
 
-<!-- ================= BREAKING BAR ================= -->
+<!-- ================= BREAKING NEWS ================= -->
 
 <section class="breaking-news">
 
@@ -170,7 +164,6 @@ your writing using the TechHub Ghana AI Assistant.
 
 <section class="section ai-section">
 
-
 <div class="ai-container">
 
 
@@ -181,14 +174,14 @@ your writing using the TechHub Ghana AI Assistant.
 </h2>
 
 <p>
-Improve your writing quickly and easily.
+Improve your writing quickly and easily with AI.
 </p>
 
 </div>
 
 
 
-<!-- INPUT -->
+<!-- ================= INPUT ================= -->
 
 <div class="ai-input-box">
 
@@ -225,7 +218,7 @@ maxlength="5000"></textarea>
 
 
 
-<!-- ACTION BUTTONS -->
+<!-- ================= AI BUTTONS ================= -->
 
 <div class="ai-actions">
 
@@ -270,7 +263,7 @@ onclick="processText('clear')">
 
 
 
-<!-- RESULT -->
+<!-- ================= RESULT ================= -->
 
 <div class="ai-result-box">
 
@@ -306,7 +299,7 @@ Your result will appear here.
 
 
 
-<!-- CLEAR -->
+<!-- ================= CLEAR ================= -->
 
 <div class="ai-bottom-actions">
 
@@ -327,10 +320,9 @@ class="clear-btn">
 
 
 
-<!-- ================= HOW IT WORKS ================= -->
+<!-- ================= WHAT AI CAN DO ================= -->
 
 <section class="section">
-
 
 <h2>
 🚀 What Can The AI Assistant Do?
@@ -380,8 +372,7 @@ summary.
 
 <p>
 
-Find and correct common grammar, spelling and
-sentence mistakes.
+Correct grammar, spelling and sentence mistakes.
 
 </p>
 
@@ -414,7 +405,6 @@ to understand.
 
 <section class="section">
 
-
 <h2>
 🎓 Perfect For Students
 </h2>
@@ -436,8 +426,8 @@ to understand.
 
 <p>
 
-Improve the wording of your assignment drafts
-without changing the main idea.
+Improve the wording of assignment drafts while
+keeping the original ideas.
 
 </p>
 
@@ -496,25 +486,15 @@ projects and academic writing.
 
 <ul>
 
-<li>
-🤖 AI Assistant
-</li>
+<li>🤖 AI Assistant</li>
 
-<li>
-🎓 GPA Calculator
-</li>
+<li>🎓 GPA Calculator</li>
 
-<li>
-📱 QR Generator
-</li>
+<li>📱 QR Generator</li>
 
-<li>
-🐍 Python Tutorial
-</li>
+<li>🐍 Python Tutorial</li>
 
-<li>
-🗄️ MySQL Tutorial
-</li>
+<li>🗄️ MySQL Tutorial</li>
 
 </ul>
 
@@ -563,7 +543,6 @@ Subscribe
 <!-- ================= FOOTER ================= -->
 
 <footer>
-
 
 <div class="footer-grid">
 
@@ -666,7 +645,6 @@ Contact
 
 </div>
 
-
 </div>
 
 
@@ -679,21 +657,22 @@ Contact
 
 </p>
 
-
 </footer>
 
 
 
+<!-- ================= MAIN SCRIPT ================= -->
+
 <script src="script.js"></script>
+
 
 
 <!-- ================= REAL AI JAVASCRIPT ================= -->
 
 <script>
 
-const AI_WORKER_URL =
+const AI_API_URL =
 "https://techhub-ai.juliusas009.workers.dev";
-
 
 const userText =
 document.getElementById("userText");
@@ -710,215 +689,211 @@ document.getElementById("aiResult");
 
 // ================= COUNT WORDS =================
 
-userText.addEventListener("input", function() {
+userText.addEventListener("input", function () {
 
-const text = this.value.trim();
+    const text = this.value.trim();
 
-const words =
-text === ""
-? 0
-: text.split(/\s+/).length;
+    const words =
+        text === ""
+        ? 0
+        : text.split(/\s+/).length;
 
-wordCount.textContent =
-words + (words === 1 ? " word" : " words");
+    wordCount.textContent =
+        words + (words === 1 ? " word" : " words");
 
-charCount.textContent =
-this.value.length + " / 5000";
+    charCount.textContent =
+        this.value.length + " / 5000";
 
 });
 
 
-// ================= PROCESS WITH AI =================
+// ================= PROCESS AI =================
 
 async function processText(action) {
 
-if (action === "clear") {
-
-clearAssistant();
-
-return;
-
-}
+    const text =
+        userText.value.trim();
 
 
-const text =
-userText.value.trim();
+    // CLEAR BUTTON
+
+    if (action === "clear") {
+
+        clearAssistant();
+
+        return;
+
+    }
 
 
-if (!text) {
+    // EMPTY INPUT
 
-aiResult.innerText =
-"⚠️ Please enter some text first.";
+    if (text === "") {
 
-return;
+        aiResult.innerText =
+            "⚠️ Please enter some text first.";
 
-}
+        return;
 
-
-// Show loading message
-
-aiResult.innerText =
-"🤖 TechHub Ghana AI is thinking...";
+    }
 
 
-const buttons =
-document.querySelectorAll(".ai-btn");
+    // LOADING MESSAGE
 
-buttons.forEach(button => {
-
-button.disabled = true;
-
-});
+    aiResult.innerText =
+        "🤖 TechHub Ghana AI is thinking...";
 
 
-try {
+    // DISABLE BUTTONS
+
+    const buttons =
+        document.querySelectorAll(".ai-btn");
+
+    buttons.forEach(button => {
+
+        button.disabled = true;
+
+    });
 
 
-const response =
-await fetch(AI_WORKER_URL, {
+    try {
 
-method: "POST",
+        const response =
+            await fetch(AI_API_URL, {
 
-headers: {
+                method: "POST",
 
-"Content-Type":
-"application/json"
+                headers: {
 
-},
+                    "Content-Type":
+                    "application/json"
 
-body: JSON.stringify({
+                },
 
-text: text,
+                body: JSON.stringify({
 
-action: action
+                    text: text,
 
-})
+                    action: action
 
-});
+                })
 
-
-const data =
-await response.json();
+            });
 
 
-if (!response.ok) {
-
-throw new Error(
-data.error ||
-"AI request failed."
-);
-
-}
+        const data =
+            await response.json();
 
 
-if (!data.result) {
+        if (!response.ok || !data.success) {
 
-throw new Error(
-"No AI result was returned."
-);
+            throw new Error(
+                data.error ||
+                "AI request failed."
+            );
 
-}
-
-
-aiResult.innerText =
-data.result;
+        }
 
 
-}
+        // SHOW AI RESULT
 
-catch (error) {
-
-console.error(
-"TechHub Ghana AI Error:",
-error
-);
+        aiResult.innerText =
+            data.result;
 
 
-aiResult.innerText =
-"❌ " + error.message;
+    }
 
-}
+    catch (error) {
 
-finally {
+        console.error(
+            "TechHub Ghana AI Error:",
+            error
+        );
 
-buttons.forEach(button => {
 
-button.disabled = false;
+        aiResult.innerText =
+            "❌ Unable to connect to TechHub Ghana AI. Please try again.";
 
-});
+    }
 
-}
+
+    // ENABLE BUTTONS
+
+    buttons.forEach(button => {
+
+        button.disabled = false;
+
+    });
 
 }
 
 
-// ================= COPY =================
 
-async function copyResult() {
+// ================= COPY RESULT =================
 
-const text =
-aiResult.innerText;
+function copyResult() {
 
-
-if (
-!text ||
-text === "Your result will appear here." ||
-text.includes("TechHub Ghana AI is thinking")
-) {
-
-return;
-
-}
+    const text =
+        aiResult.innerText;
 
 
-try {
+    if (
+        !text ||
+        text ===
+        "Your result will appear here."
+    ) {
 
-await navigator.clipboard.writeText(text);
+        return;
 
-
-const button =
-document.getElementById("copyBtn");
-
-
-button.innerText =
-"✅ Copied!";
+    }
 
 
-setTimeout(() => {
+    navigator.clipboard.writeText(text)
 
-button.innerText =
-"📋 Copy";
+    .then(() => {
 
-}, 1500);
+        const button =
+            document.getElementById("copyBtn");
+
+        button.innerText =
+            "✅ Copied!";
 
 
-}
+        setTimeout(() => {
 
-catch (error) {
+            button.innerText =
+                "📋 Copy";
 
-alert(
-"Unable to copy the result."
-);
+        }, 1500);
 
-}
+    })
+
+    .catch(() => {
+
+        alert(
+            "Unable to copy the result."
+        );
+
+    });
 
 }
+
 
 
 // ================= CLEAR =================
 
 function clearAssistant() {
 
-userText.value = "";
+    userText.value = "";
 
-wordCount.textContent =
-"0 words";
+    wordCount.textContent =
+        "0 words";
 
-charCount.textContent =
-"0 / 5000";
+    charCount.textContent =
+        "0 / 5000";
 
-aiResult.innerText =
-"Your result will appear here.";
+    aiResult.innerText =
+        "Your result will appear here.";
 
 }
 
@@ -927,4 +902,4 @@ aiResult.innerText =
 
 </body>
 
-</html>
+  </html>
