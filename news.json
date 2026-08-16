@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-16T20:19:52.038148+00:00",
+  "updated": "2026-08-16T20:47:05.923407+00:00",
   "articles": [
+    {
+      "title": "Why people aren’t buying Mark Zuckerberg’s AI future",
+      "summary": "On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg’s vision.",
+      "link": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
+      "date": "Sun, 16 Aug 2026 20:32:01 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’",
       "summary": "Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI.",
@@ -150,14 +158,6 @@
       "summary": "The Administrative Office of the U.S. Courts told TechCrunch that it will start disclosing how many times judges authorized the use of spyware to wiretap suspected criminals.",
       "link": "https://techcrunch.com/2026/08/14/us-courts-will-start-publishing-how-often-the-government-uses-spyware/",
       "date": "Fri, 14 Aug 2026 13:29:04 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Uber and Pony.ai plan to bring 2,000 robotaxis to Europe",
-      "summary": "The partnership is expanding beyond the initial market of Zagreb, Croatia to four additional European cities.",
-      "link": "https://techcrunch.com/2026/08/14/uber-and-pony-ai-plan-to-bring-2000-robotaxis-to-europe/",
-      "date": "Fri, 14 Aug 2026 10:44:30 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
