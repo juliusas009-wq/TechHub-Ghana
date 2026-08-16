@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Python Programming Tutorial | TechHub Ghana</title>
+
+<meta name="description"
+content="Learn Python programming from beginner to advanced level with practical examples and exercises.">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+.tutorial-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.tutorial-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+}
+
+.lesson-sidebar {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.lesson-sidebar h3 {
+    margin-bottom: 20px;
+}
+
+.lesson-sidebar a {
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 6px;
+}
+
+.lesson-sidebar a:hover {
+    background: #f0f0f0;
+}
+
+.lesson-content {
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.lesson-content h2 {
+    margin-top: 35px;
+}
+
+.lesson-content h2:first-child {
+    margin-top: 0;
+}
+
+.code-box {
+    background: #111827;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.code-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.exercise {
+    background: #f5f7fa;
+    border-left: 5px solid #2563eb;
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 6px;
+}
+
+.answer {
+    margin-top: 15px;
+}
+
+.answer summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.lesson-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.lesson-nav a {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+}
+
+@media(max-width: 800px) {
+
+    .tutorial-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-sidebar {
+        position: static;
+    }
+
+    .lesson-content {
+        padding: 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="main-header">
+
+<div class="top-bar">
+
+<div class="logo">
+
+<img src="images/logo.png" alt="TechHub Ghana Logo">
+
+<div>
+
+<h1>TechHub Ghana</h1>
+
+<p>Technology News • Tutorials • Digital Tools</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<button class="menu-btn" onclick="toggleMenu()">
+☰
+</button>
+
+
+<nav id="navMenu">
+
+<a href="index.html">Home</a>
+
+<a href="news.html">News</a>
+
+<a class="active" href="tutorials.html">Tutorials</a>
+
+<a href="tools.html">Tools</a>
+
+<a href="gpa.html">GPA</a>
+
+<a href="qr-generator.html">QR Generator</a>
+
+<a href="ai-assistant.html">AI Assistant</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<!-- ================= BREAKING NEWS ================= -->
+
+<section class="breaking-news">
+
+<marquee>
+
+🐍 Learn Python • Programming • Web Development • Database • Cybersecurity • Artificial Intelligence
+
+</marquee>
+
+</section>
+
+
+<!-- ================= TUTORIAL ================= -->
+
+<main class="tutorial-page">
+
+<div class="tutorial-layout">
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="lesson-sidebar">
+
+<h3>🐍 Python Course</h3>
+
+<a href="#introduction">1. Introduction</a>
+
+<a href="#first-program">2. First Program</a>
+
+<a href="#variables">3. Variables</a>
+
+<a href="#data-types">4. Data Types</a>
+
+<a href="#strings">5. Strings</a>
+
+<a href="#lists">6. Lists</a>
+
+<a href="#tuples">7. Tuples</a>
+
+<a href="#sets">8. Sets</a>
+
+<a href="#dictionary">9. Dictionaries</a>
+
+<a href="#conditions">10. Conditions</a>
+
+<a href="#loops">11. Loops</a>
+
+<a href="#functions">12. Functions</a>
+
+<a href="#fstrings">13. f-Strings</a>
+
+<a href="#practice">14. Practice</a>
+
+<a href="#exam">15. Exam Questions</a>
+
+</aside>
+
+
+<!-- ================= CONTENT ================= -->
+
+<article class="lesson-content">
+
+
+<h1>🐍 Python Programming</h1>
+
+<p>
+
+Welcome to the TechHub Ghana Python Programming Tutorial.
+
+This course teaches Python from the basics using simple explanations,
+practical examples and exercises.
+
+</p>
+
+
+<!-- INTRODUCTION -->
+
+<h2 id="introduction">
+1. What is Python?
+</h2>
+
+<p>
+
+Python is a high-level programming language used to create software,
+web applications, automation tools, artificial intelligence systems,
+data analysis programs and many other technologies.
+
+</p>
+
+<p>
+
+Python is popular because its syntax is simple and easy to read.
+
+</p>
+
+
+<div class="exercise">
+
+<strong>Example:</strong>
+
+<p>
+Python allows you to write instructions in a simple way.
+</p>
+
+</div>
+
+
+<!-- FIRST PROGRAM -->
+
+<h2 id="first-program">
+2. Your First Python Program
+</h2>
+
+<p>
+
+The easiest Python program is printing text on the screen.
+
+</p>
+
+
+<div class="code-box">
+
+<pre>
+print("Hello World!")
+</pre>
+
+</div>
+
+
+<p>
+
+The <strong>print()</strong> function displays information on the screen.
+
+</p>
+
+
+<div class="exercise">
+
+<strong>Practice:</strong>
+
+<p>
+Write a Python program that prints:
+</p>
+
+<p>
+<code>Welcome to TechHub Ghana</code>
+</p>
+
+</div>
+
+
+<!-- VARIABLES -->
+
+<h2 id="variables">
+3. Variables
+</h2>
+
+<p>
+
+A variable is a name used to store data.
+
+</p>
+
+
+<div class="code-box">
+
+<pre>
+name = "Julius"
+
+age = 20
+
+country = "Ghana"
+
+print(name)
+print(age)
+print(country)
+</pre>
+
+</div>
+
+
+<p>
+
+Here:
+
+</p>
+
+<ul>
+
+<li><strong>name</strong> stores text.</li>
+
+<li><strong>age</strong> stores a number.</li>
+
+<li><strong>country</strong> stores text.</li>
+
+</ul>
+
+
+<!-- DATA TYPES -->
+
+<h2 id="data-types">
+4. Python Data Types
+</h2>
+
+<p>
+
+Python has several important data types.
+
+</p>
+
+
+<ul>
+
+<li>String</li>
+
+<li>Integer</li>
+
+<li>Float</li>
+
+<li>Complex</li>
+
+<li>List</li>
+
+<li>Tuple</li>
+
+<li>Set</li>
+
+<li>Dictionary</li>
+
+<li>Boolean</li>
+
+</ul>
+
+
+<div class="code-box">
+
+<pre>
+name = "Julius"          # String
+
+age = 20                 # Integer
+
+price = 25.50            # Float
+
+numbers = [1, 2, 3]      # List
+
+items = (1, 2, 3)        # Tuple
+
+unique = {1, 2, 3}       # Set
+
+student = {
+    "name": "Julius",
+    "age": 20
+}                        # Dictionary
+
+passed = True             # Boolean
+</pre>
+
+</div>
+
+
+<!-- STRINGS -->
+
+<h2 id="strings">
+5. Strings
+</h2>
+
+<p>
+
+A string is text surrounded by quotation marks.
+
+</p>
+
+
+<div class="code-box">
+
+<pre>
+name = "Julius"
+
+print(name)
+
+print(name.upper())
+
+print(name.lower())
+
+print(len(name))
+</pre>
+
+</div>
+
+
+<!-- LISTS -->
+
+<h2 id="lists">
+6. Lists
+</h2>
+
+<p>
+
+A list stores multiple values in one variable.
+
+</p>
+
+
+<div class="code-box">
+
+<pre>
+students = [
+    "Julius",
+    "Ama",
+    "Kofi"
+]
+
+print(students)
+
+print(students[0])
+</pre>
+
+</div>
+
+
+<p>
+
+Python list indexes start from <strong>0</strong>.
+
+Therefore:
+
+</p>
+
+<div class="code-box">
+
+<pre>
+students[0]  → Julius
+
+students[1]  → Ama
+
+students[2]  → Kofi
+</pre>
+
+</div>
+
+
+<!-- TUPLES -->
+
+<h2 id="tuples">
+7. Tuples
+</h2>
+
+<p>
+
+A tuple is similar to a list, but its values cannot normally be changed
+after creation.
+
+</p>
+
+
+<div class="code-box">
+
+<pre>
+coordinates = (10, 20)
+
+print(coordinates)
+
+print(coordinates[0])
+</pre>
+
+</div>
+
+
+<!-- SETS -->
+
+<h2 id="sets">
+8. Sets
+</h2>
+
+<p>
+
+A set stores unique values.
+
+</p>
+
+
+<div class="code-box">
+
+<pre>
+numbers = {1, 2, 3, 3, 4}
+
+print(numbers)
+</pre>
+
+</div>
+
+
+<p>
+
+The duplicate <strong>3</strong> is removed automatically.
+
+</p>
+
+
+<!-- DICTIONARY -->
+
+<h2 id="dictionary">
+9. Dictionaries
+</h2>
+
+<p>
+
+A dictionary stores information using key-value pairs.
+
+</p>
+
+
+<div class="code-box">
+
+<pre>
+student = {
+
+    "name": "Julius",
+
+    "age": 20,
+
+    "course": "Information Technology"
+
+}
+
+print(student["name"])
+
+print(student["course"])
+</pre>
+
+</div>
+
+
+<!-- CONDITIONS -->
+
+<h2 id="conditions">
+10. Conditions
+</h2>
+
+<p>
+
+Conditions allow a program to make decisions.
+
+</p>
+
+
+<div class="code-box">
+
+<pre>
+age = 20
+
+if age >= 18:
+
+    print("Adult")
+
+else:
+
+    print("Minor")
+</pre>
+
+</div>
+
+
+<h3>if / elif / else</h3>
+
+
+<div class="code-box">
+
+<pre>
+score = 75
+
+if score >= 80:
+
+    print("A")
+
+elif score >= 70:
+
+    print("B")
+
+elif score >= 60:
+
+    print("C")
+
+else:
+
+    print("Fail")
+</pre>
+
+</div>
+
+
+<!-- LOOPS -->
+
+<h2 id="loops">
+11. Loops
+</h2>
+
+<p>
+
+Loops allow you to repeat instructions.
+
+</p>
+
+
+<h3>For Loop</h3>
+
+
+<div class="code-box">
+
+<pre>
+for number in range(1, 6):
+
+    print(number)
+</pre>
+
+</div>
+
+
+<h3>While Loop</h3>
+
+
+<div class="code-box">
+
+<pre>
+number = 1
+
+while number <= 5:
+
+    print(number)
+
+    number += 1
+</pre>
+
+</div>
+
+
+<!-- FUNCTIONS -->
+
+<h2 id="functions">
+12. Functions
+</h2>
+
+<p>
+
+A function is a reusable block of code.
+
+</p>
+
+
+<div class="code-box">
+
+<pre>
+def greet():
+
+    print("Welcome to TechHub Ghana")
+
+
+greet()
+</pre>
+
+</div>
+
+
+<h3>Function with parameters</h3>
+
+
+<div class="code-box">
+
+<pre>
+def greet(name):
+
+    print(f"Hello {name}")
+
+
+greet("Julius")
+</pre>
+
+</div>
+
+
+<!-- F STRINGS -->
+
+<h2 id="fstrings">
+13. f-Strings
+</h2>
+
+<p>
+
+f-strings make it easy to insert variables inside text.
+
+</p>
+
+
+<div class="code-box">
+
+<pre>
+name = "Julius"
+
+age = 20
+
+print(f"My name is {name} and I am {age} years old.")
+</pre>
+
+</div>
+
+
+<!-- PRACTICE -->
+
+<h2 id="practice">
+14. Practical Exercises
+</h2>
+
+
+<div class="exercise">
+
+<h3>Exercise 1</h3>
+
+<p>
+
+Create variables for:
+
+</p>
+
+<ul>
+
+<li>Your name</li>
+
+<li>Your age</li>
+
+<li>Your school</li>
+
+<li>Your course</li>
+
+</ul>
+
+<p>
+
+Then print all the information.
+
+</p>
+
+</div>
+
+
+<div class="exercise">
+
+<h3>Exercise 2</h3>
+
+<p>
+
+Create a Python program that checks whether a student passed an exam.
+
+The pass mark is 50.
+
+</p>
+
+</div>
+
+
+<div class="exercise">
+
+<h3>Exercise 3</h3>
+
+<p>
+
+Create a list containing five student names and use a loop
+to print every name.
+
+</p>
+
+</div>
+
+
+<!-- EXAM -->
+
+<h2 id="exam">
+15. Practical Exam Questions
+</h2>
+
+
+<div class="exercise">
+
+<h3>Question 1</h3>
+
+<p>
+
+What is a variable in Python?
+
+</p>
+
+
+<details class="answer">
+
+<summary>
+Show Answer
+</summary>
+
+<p>
+
+A variable is a name used to store data in a program.
+
+</p>
+
+</details>
+
+</div>
+
+
+<div class="exercise">
+
+<h3>Question 2</h3>
+
+<p>
+
+Which Python data type is used to store True or False?
+
+</p>
+
+
+<details class="answer">
+
+<summary>
+Show Answer
+</summary>
+
+<p>
+
+<strong>Boolean (bool)</strong>
+
+</p>
+
+</details>
+
+</div>
+
+
+<div class="exercise">
+
+<h3>Question 3</h3>
+
+<p>
+
+Write Python code that prints numbers from 1 to 10.
+
+</p>
+
+
+<details class="answer">
+
+<summary>
+Show Answer
+</summary>
+
+<div class="code-box">
+
+<pre>
+for number in range(1, 11):
+
+    print(number)
+</pre>
+
+</div>
+
+</details>
+
+</div>
+
+
+<div class="exercise">
+
+<h3>Question 4</h3>
+
+<p>
+
+Create a dictionary containing a student's name, age and course.
+
+</p>
+
+
+<details class="answer">
+
+<summary>
+Show Answer
+</summary>
+
+<div class="code-box">
+
+<pre>
+student = {
+
+    "name": "Julius",
+
+    "age": 20,
+
+    "course": "Information Technology"
+
+}
+
+print(student)
+</pre>
+
+</div>
+
+</details>
+
+</div>
+
+
+<!-- FINAL PROJECT -->
+
+<h2>
+🎯 Mini Python Project
+</h2>
+
+<p>
+
+Create a simple student grading system.
+
+The program should:
+
+</p>
+
+<ul>
+
+<li>Ask for the student's name.</li>
+
+<li>Ask for the student's score.</li>
+
+<li>Determine the grade.</li>
+
+<li>Display the student's name and grade.</li>
+
+</ul>
+
+
+<div class="code-box">
+
+<pre>
+name = input("Enter student name: ")
+
+score = int(input("Enter score: "))
+
+
+if score >= 80:
+
+    grade = "A"
+
+elif score >= 70:
+
+    grade = "B"
+
+elif score >= 60:
+
+    grade = "C"
+
+elif score >= 50:
+
+    grade = "D"
+
+else:
+
+    grade = "F"
+
+
+print(f"{name} received grade {grade}")
+</pre>
+
+</div>
+
+
+<!-- NAVIGATION -->
+
+<div class="lesson-nav">
+
+<a href="tutorials.html">
+← Tutorials
+</a>
+
+<a href="html-tutorial.html">
+Next: HTML →
+</a>
+
+</div>
+
+
+</article>
+
+</div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>TechHub Ghana</h3>
+
+<p>
+Technology • Innovation • Learning
+</p>
+
+<p>
+Your trusted source for technology tutorials,
+news and digital tools.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Quick Links</h3>
+
+<p><a href="index.html">Home</a></p>
+
+<p><a href="news.html">News</a></p>
+
+<p><a href="tutorials.html">Tutorials</a></p>
+
+<p><a href="tools.html">Tools</a></p>
+
+</div>
+
+
+<div>
+
+<h3>Courses</h3>
+
+<p>Python</p>
+
+<p>HTML</p>
+
+<p>CSS</p>
+
+<p>JavaScript</p>
+
+<p>MySQL</p>
+
+<p>Cybersecurity</p>
+
+</div>
+
+
+<div>
+
+<h3>Contact</h3>
+
+<p>📍 Accra, Ghana</p>
+
+<p>📧 info@techhubghana.com</p>
+
+</div>
+
+</div>
+
+
+<hr>
+
+
+<p class="copyright">
+
+© 2026 TechHub Ghana. All Rights Reserved.
+
+</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+  </html>
