@@ -3,12 +3,127 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ================= BASIC SEO ================= -->
 
-<title>Cybersecurity Tips | TechHub Ghana</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Learn the importance of cybersecurity, common online threats and practical ways to protect your personal information and devices.">
+
+    <meta name="keywords"
+          content="cybersecurity Ghana, online safety, cybersecurity tips, internet security, TechHub Ghana, phishing, malware, passwords">
+
+    <meta name="author"
+          content="TechHub Ghana">
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <!-- ================= PAGE TITLE ================= -->
+
+    <title>
+        Cybersecurity Tips: How to Stay Safe Online | TechHub Ghana
+    </title>
+
+
+    <!-- ================= OPEN GRAPH ================= -->
+
+    <meta property="og:type"
+          content="article">
+
+    <meta property="og:title"
+          content="Cybersecurity Tips: How to Stay Safe Online">
+
+    <meta property="og:description"
+          content="Discover common cybersecurity threats and practical ways to protect yourself online.">
+
+    <meta property="og:image"
+          content="images/cyber-news.jpg">
+
+    <meta property="og:site_name"
+          content="TechHub Ghana">
+
+
+    <!-- ================= TWITTER CARD ================= -->
+
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="Cybersecurity Tips: How to Stay Safe Online">
+
+    <meta name="twitter:description"
+          content="Practical cybersecurity tips to help you stay safe online.">
+
+    <meta name="twitter:image"
+          content="images/cyber-news.jpg">
+
+
+    <!-- ================= FONTS ================= -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- ================= STYLESHEET ================= -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- ================= ICON ================= -->
+
+    <link rel="icon"
+          href="images/logo.png">
+
+
+    <!-- ================= STRUCTURED DATA ================= -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+
+        "headline": "Cybersecurity Tips: How to Stay Safe Online",
+
+        "description": "Learn about common cybersecurity threats and practical ways to protect yourself online.",
+
+        "image": [
+            "images/cyber-news.jpg"
+        ],
+
+        "author": {
+            "@type": "Organization",
+            "name": "TechHub Ghana"
+        },
+
+        "publisher": {
+            "@type": "Organization",
+            "name": "TechHub Ghana",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "images/logo.png"
+            }
+        },
+
+        "datePublished": "2026-07-01",
+
+        "dateModified": "2026-07-01"
+    }
+
+    </script>
 
 </head>
 
@@ -16,272 +131,1218 @@
 <body>
 
 
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header>
 
-<div class="top-bar">
-
-<div class="logo">
-
-<img src="images/logo.png" alt="TechHub Ghana Logo">
-
-<div>
-
-<h1>TechHub Ghana</h1>
-
-<p>Technology News • Tutorials • Digital Tools</p>
-
-</div>
-
-</div>
+    <div class="top-bar">
 
 
-<div class="search-box">
+        <!-- LOGO -->
 
-<input type="text" placeholder="Search...">
+        <div class="logo">
 
-<button>🔍</button>
+            <a href="index.html"
+               aria-label="TechHub Ghana Home">
 
-</div>
+                <img src="images/logo.png"
+                     alt="TechHub Ghana Logo">
 
-</div>
+            </a>
+
+
+            <div>
+
+                <h1>
+                    TechHub Ghana
+                </h1>
+
+                <p>
+                    Technology • Learning • Innovation
+                </p>
+
+            </div>
+
+        </div>
 
 
 
-<nav>
+        <!-- SEARCH -->
 
-<a href="index.html">Home</a>
+        <form class="search-box"
+              role="search"
+              action="news.html">
 
-<a href="news.html">News</a>
+            <label for="site-search"
+                   class="sr-only">
 
-<a href="tutorials.html">Tutorials</a>
+                Search TechHub Ghana
 
-<a href="tools.html">Tools</a>
+            </label>
 
-<a href="about.html">About</a>
+            <input
+                id="site-search"
+                type="search"
+                name="q"
+                placeholder="Search technology news..."
+                autocomplete="off"
+            >
 
-<a href="contact.html">Contact</a>
+            <button type="submit"
+                    aria-label="Search">
 
-</nav>
+                🔍
 
+            </button>
+
+        </form>
+
+    </div>
+
+
+
+    <!-- MOBILE MENU -->
+
+    <button
+        class="menu-btn"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+        aria-controls="navMenu"
+        aria-expanded="false">
+
+        ☰
+
+    </button>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav id="navMenu"
+         aria-label="Main navigation">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="news.html"
+           class="active">
+            News
+        </a>
+
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="tools.html">
+            Tools
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
 
 </header>
 
 
 
+<!-- =====================================================
+     BREAKING NEWS
+===================================================== -->
+
 <div class="breaking-news">
 
-<marquee>
+    <div class="today-date"
+         id="today">
+    </div>
 
-📢 TechHub Ghana • Cybersecurity • Online Safety • Digital Protection
+    <marquee
+        behavior="scroll"
+        direction="left">
 
-</marquee>
+        📢 TechHub Ghana • Cybersecurity • Online Safety •
+        Digital Protection • Technology • Learning
 
-</div>
-
-
-
-
-<section class="article-page">
-
-
-<img class="article-image" src="images/cyber-news.jpg" alt="Cybersecurity">
-
-
-
-<h1>
-Cybersecurity Becomes More Important Than Ever
-</h1>
-
-
-
-<div class="article-info">
-
-<p>📅 July 2026</p>
-
-<p>✍ By TechHub Ghana</p>
-
-<p>🔒 Cybersecurity</p>
+    </marquee>
 
 </div>
 
 
 
-<p>
+<!-- =====================================================
+     BREADCRUMB
+===================================================== -->
 
-The digital world continues to grow every day. People use the internet
-for banking, education, communication and business. However, as technology
-improves, cyber threats also become more advanced.
+<div class="article-container">
 
-</p>
+    <nav class="breadcrumb"
+         aria-label="Breadcrumb">
 
+        <a href="index.html">
+            Home
+        </a>
 
+        <span>
+            →
+        </span>
 
-<p>
+        <a href="news.html">
+            News
+        </a>
 
-Cybersecurity helps protect computers, smartphones, networks and personal
-information from hackers, malware and online attacks.
+        <span>
+            →
+        </span>
 
-</p>
+        <span>
+            Cybersecurity
+        </span>
 
-
-
-
-<h2>
-Common Cybersecurity Threats
-</h2>
-
-
-<ul>
-
-<li>🦠 Malware and viruses</li>
-
-<li>🎣 Phishing emails and fake websites</li>
-
-<li>🔑 Weak passwords</li>
-
-<li>📱 Unsecured mobile applications</li>
-
-<li>🌐 Unsafe public Wi-Fi networks</li>
-
-</ul>
+    </nav>
 
 
 
+    <!-- =================================================
+         ARTICLE
+    ================================================= -->
+
+    <main class="article-page">
 
 
-<h2>
-How To Stay Safe Online
-</h2>
+        <!-- CATEGORY -->
 
+        <span class="article-category">
 
-<p>
+            🔒 CYBERSECURITY
 
-You can improve your online security by using strong passwords,
-enabling two-factor authentication, updating your devices regularly
-and avoiding suspicious links.
-
-</p>
-
-
-
-<ul>
-
-<li>✅ Use unique passwords for different accounts</li>
-
-<li>✅ Enable two-factor authentication</li>
-
-<li>✅ Keep software and applications updated</li>
-
-<li>✅ Do not share private information online</li>
-
-<li>✅ Install security updates regularly</li>
-
-</ul>
+        </span>
 
 
 
+        <!-- TITLE -->
 
-<h2>
-The Future of Cybersecurity
-</h2>
+        <h1 class="article-title">
 
+            Cybersecurity Tips:
+            How to Stay Safe Online
 
-<p>
-
-As more businesses and individuals depend on digital technology,
-cybersecurity skills will continue to be highly valuable. Learning
-about online safety helps everyone become more protected in the
-digital age.
-
-</p>
+        </h1>
 
 
 
-<a href="news.html" class="read-btn">
+        <!-- INTRO -->
 
-← Back To News
+        <p class="article-lead">
 
-</a>
+            Learn about common cybersecurity threats and
+            practical steps you can take to protect your
+            accounts, devices and personal information online.
+
+        </p>
 
 
-</section>
+
+        <!-- ARTICLE INFORMATION -->
+
+        <div class="article-meta">
+
+            <div>
+
+                <strong>
+                    ✍ Author
+                </strong>
+
+                <span>
+                    TechHub Ghana
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    📅 Published
+                </strong>
+
+                <span>
+                    July 2026
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    ⏱ Reading time
+                </strong>
+
+                <span>
+                    5 minutes
+                </span>
+
+            </div>
+
+        </div>
 
 
 
+        <!-- FEATURED IMAGE -->
 
+        <figure class="article-hero">
+
+            <img
+                src="images/cyber-news.jpg"
+                alt="Cybersecurity and online protection"
+                loading="eager"
+            >
+
+            <figcaption>
+
+                Understanding cybersecurity can help protect
+                your digital life.
+
+            </figcaption>
+
+        </figure>
+
+
+
+        <!-- SHARE -->
+
+        <div class="article-share">
+
+            <span>
+                Share:
+            </span>
+
+            <a
+                href="https://wa.me/?text=Cybersecurity%20Tips%20-%20TechHub%20Ghana"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Share on WhatsApp">
+
+                WhatsApp
+
+            </a>
+
+
+            <button
+                type="button"
+                onclick="copyArticleLink()">
+
+                🔗 Copy Link
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TABLE OF CONTENTS
+        ================================================= -->
+
+        <aside class="article-toc">
+
+            <h2>
+                📚 In This Article
+            </h2>
+
+            <ul>
+
+                <li>
+                    <a href="#importance">
+                        Why Cybersecurity Matters
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#threats">
+                        Common Cybersecurity Threats
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#stay-safe">
+                        How to Stay Safe Online
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#passwords">
+                        Protect Your Passwords
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#future">
+                        The Future of Cybersecurity
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             ARTICLE CONTENT
+        ================================================= -->
+
+        <article>
+
+
+            <!-- INTRODUCTION -->
+
+            <section id="importance">
+
+                <h2>
+                    Why Cybersecurity Matters
+                </h2>
+
+
+                <p>
+
+                    The digital world continues to grow every day.
+                    People use smartphones, computers and the
+                    internet for banking, education, communication,
+                    entertainment and business.
+
+                </p>
+
+
+                <p>
+
+                    While technology provides many opportunities,
+                    it also creates new security risks. Cybercriminals
+                    may attempt to steal passwords, personal information,
+                    financial details or access to online accounts.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Cybersecurity
+                    </strong>
+
+                    refers to the practices and technologies used
+                    to protect computers, smartphones, networks,
+                    applications and information from unauthorized
+                    access and digital attacks.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- THREATS -->
+
+            <section id="threats">
+
+                <h2>
+                    Common Cybersecurity Threats
+                </h2>
+
+
+                <p>
+
+                    Understanding common threats is one of the
+                    first steps toward protecting yourself online.
+
+                </p>
+
+
+                <div class="security-list">
+
+
+                    <div class="security-item">
+
+                        <span class="security-icon">
+                            🦠
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Malware
+                            </h3>
+
+                            <p>
+
+                                Malicious software can damage devices,
+                                steal information or allow unauthorized
+                                access to a system.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="security-item">
+
+                        <span class="security-icon">
+                            🎣
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Phishing
+                            </h3>
+
+                            <p>
+
+                                Attackers may use fake emails,
+                                messages or websites to trick people
+                                into revealing sensitive information.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="security-item">
+
+                        <span class="security-icon">
+                            🔑
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Weak Passwords
+                            </h3>
+
+                            <p>
+
+                                Short, predictable or reused passwords
+                                can make accounts easier to compromise.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="security-item">
+
+                        <span class="security-icon">
+                            📱
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Unsafe Applications
+                            </h3>
+
+                            <p>
+
+                                Installing applications from unreliable
+                                sources can expose devices to security
+                                risks.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="security-item">
+
+                        <span class="security-icon">
+                            🌐
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Unsafe Networks
+                            </h3>
+
+                            <p>
+
+                                Unsecured public networks can create
+                                additional risks when handling sensitive
+                                information.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- STAY SAFE -->
+
+            <section id="stay-safe">
+
+                <h2>
+                    How to Stay Safe Online
+                </h2>
+
+
+                <p>
+
+                    Good cybersecurity does not always require
+                    complicated technical knowledge. Simple habits
+                    can significantly improve your digital security.
+
+                </p>
+
+
+                <div class="tips-box">
+
+                    <h3>
+                        🛡️ Essential Security Tips
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            ✅ Use strong and unique passwords.
+                        </li>
+
+                        <li>
+                            ✅ Enable two-factor authentication
+                            whenever available.
+                        </li>
+
+                        <li>
+                            ✅ Keep your phone, computer and applications
+                            updated.
+                        </li>
+
+                        <li>
+                            ✅ Avoid clicking suspicious links.
+                        </li>
+
+                        <li>
+                            ✅ Download applications from trusted sources.
+                        </li>
+
+                        <li>
+                            ✅ Avoid sharing sensitive information
+                            unnecessarily.
+                        </li>
+
+                        <li>
+                            ✅ Be careful when using public Wi-Fi.
+                        </li>
+
+                        <li>
+                            ✅ Back up important files regularly.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PASSWORDS -->
+
+            <section id="passwords">
+
+                <h2>
+                    Protect Your Passwords
+                </h2>
+
+
+                <p>
+
+                    Password security is one of the most important
+                    parts of protecting an online account.
+
+                </p>
+
+
+                <p>
+
+                    Avoid using the same password across multiple
+                    accounts. If one account is compromised, reused
+                    passwords could put other accounts at risk.
+
+                </p>
+
+
+                <div class="highlight-box">
+
+                    <strong>
+                        💡 TechHub Tip
+                    </strong>
+
+                    <p>
+
+                        Consider using a reputable password manager
+                        to generate and securely store strong,
+                        unique passwords.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- TWO FACTOR -->
+
+            <section>
+
+                <h2>
+                    Enable Two-Factor Authentication
+                </h2>
+
+
+                <p>
+
+                    Two-factor authentication, commonly called
+                    2FA, adds another layer of protection to your
+                    online accounts.
+
+                </p>
+
+
+                <p>
+
+                    Instead of relying only on a password, an account
+                    may also require a verification code or another
+                    authentication method.
+
+                </p>
+
+
+                <div class="warning-box">
+
+                    <strong>
+                        ⚠️ Important
+                    </strong>
+
+                    <p>
+
+                        Never share authentication codes with
+                        someone who contacts you unexpectedly.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FUTURE -->
+
+            <section id="future">
+
+                <h2>
+                    The Future of Cybersecurity
+                </h2>
+
+
+                <p>
+
+                    As more businesses, schools and individuals
+                    depend on digital technology, cybersecurity will
+                    continue to become increasingly important.
+
+                </p>
+
+
+                <p>
+
+                    Artificial intelligence, cloud computing,
+                    connected devices and digital financial services
+                    are creating new opportunities while also
+                    introducing new security challenges.
+
+                </p>
+
+
+                <p>
+
+                    Learning basic cybersecurity principles can help
+                    students, businesses and everyday internet users
+                    make safer decisions online.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- FINAL MESSAGE -->
+
+            <div class="article-conclusion">
+
+                <h2>
+                    🔐 Stay Safe. Stay Smart.
+                </h2>
+
+                <p>
+
+                    Cybersecurity is everyone's responsibility.
+                    Start with small security habits today and
+                    continue learning as technology evolves.
+
+                </p>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             AUTHOR BOX
+        ================================================= -->
+
+        <div class="author-box">
+
+            <img
+                src="images/logo.png"
+                alt="TechHub Ghana">
+
+            <div>
+
+                <h3>
+                    TechHub Ghana
+                </h3>
+
+                <p>
+
+                    Technology news, tutorials and digital tools
+                    designed to help students, developers and
+                    technology enthusiasts learn and grow.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             RELATED ARTICLES
+        ================================================= -->
+
+        <section class="related-section">
+
+            <h2>
+                🚀 You May Also Like
+            </h2>
+
+
+            <div class="related-grid">
+
+
+                <a href="ai-news.html"
+                   class="related-card">
+
+                    <img
+                        src="images/tech1.jpg"
+                        alt="Artificial Intelligence"
+                        loading="lazy">
+
+                    <div>
+
+                        <span>
+                            🤖 Artificial Intelligence
+                        </span>
+
+                        <h3>
+                            How AI Is Changing Education
+                        </h3>
+
+                        <p>
+                            Discover how artificial intelligence
+                            is transforming the way students learn.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+
+                <a href="programming.html"
+                   class="related-card">
+
+                    <img
+                        src="images/tech2.jpg"
+                        alt="Web development"
+                        loading="lazy">
+
+                    <div>
+
+                        <span>
+                            💻 Programming
+                        </span>
+
+                        <h3>
+                            Learn HTML, CSS and JavaScript
+                        </h3>
+
+                        <p>
+                            Start building modern websites with
+                            essential web technologies.
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+
+                <a href="cloud.html"
+                   class="related-card">
+
+                    <img
+                        src="images/hero.jpg"
+                        alt="Cloud computing"
+                        loading="lazy">
+
+                    <div>
+
+                        <span>
+                            ☁️ Cloud Computing
+                        </span>
+
+                        <h3>
+                            Understanding Cloud Technology
+                        </h3>
+
+                        <p>
+                            Learn the basics of modern cloud
+                            computing and digital services.
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BACK TO NEWS -->
+
+        <div class="article-back">
+
+            <a href="news.html"
+               class="read-btn">
+
+                ← Back To Technology News
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-
-<div class="footer-grid">
-
-
-<div>
-
-<h3>
-TechHub Ghana
-</h3>
-
-<p>
-Technology • Innovation • Learning
-</p>
-
-</div>
+    <div class="footer-grid">
 
 
+        <div>
 
-<div>
+            <h3>
+                TechHub Ghana
+            </h3>
 
-<h3>
-Quick Links
-</h3>
+            <p>
+                Technology • Learning • Innovation
+            </p>
 
-<p><a href="index.html">Home</a></p>
+            <p>
 
-<p><a href="news.html">News</a></p>
+                Your platform for technology news,
+                tutorials and useful digital tools.
 
-<p><a href="tutorials.html">Tutorials</a></p>
+            </p>
 
-<p><a href="tools.html">Tools</a></p>
-
-</div>
+        </div>
 
 
 
-<div>
+        <div>
 
-<h3>
-Contact
-</h3>
+            <h3>
+                Quick Links
+            </h3>
 
-<p>
-Accra, Ghana
-</p>
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
 
-<p>
-info@techhubghana.com
-</p>
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
 
-</div>
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
+
+            <p>
+                <a href="tools.html">
+                    Digital Tools
+                </a>
+            </p>
+
+        </div>
 
 
-</div>
+
+        <div>
+
+            <h3>
+                Popular
+            </h3>
+
+            <p>
+                <a href="ai-assistant.html">
+                    🤖 AI Assistant
+                </a>
+            </p>
+
+            <p>
+                <a href="gpa.html">
+                    🎓 GPA Calculator
+                </a>
+            </p>
+
+            <p>
+                <a href="qr-generator.html">
+                    📱 QR Generator
+                </a>
+            </p>
+
+            <p>
+                <a href="tutorials.html">
+                    💻 Programming
+                </a>
+            </p>
+
+        </div>
 
 
-<hr>
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                🇬🇭 Ghana
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact TechHub Ghana
+                </a>
+            </p>
+
+        </div>
+
+    </div>
 
 
-<p class="copyright">
+    <hr>
 
-© 2026 TechHub Ghana. All Rights Reserved.
 
-</p>
+    <p class="copyright">
 
+        © 2026 TechHub Ghana.
+        All Rights Reserved.
+
+    </p>
 
 </footer>
 
-<script src="save.js"></script>
+
+
+<!-- =====================================================
+     SCROLL TO TOP
+===================================================== -->
+
+<button
+    id="topBtn"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    aria-label="Scroll to top">
+
+    ↑
+
+</button>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    /* ===============================
+       MOBILE MENU
+    =============================== */
+
+    function toggleMenu(){
+
+        const nav =
+            document.getElementById("navMenu");
+
+        const button =
+            document.querySelector(".menu-btn");
+
+        nav.classList.toggle("show");
+
+        const isOpen =
+            nav.classList.contains("show");
+
+        button.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    }
+
+
+
+    /* ===============================
+       COPY ARTICLE LINK
+    =============================== */
+
+    function copyArticleLink(){
+
+        navigator.clipboard.writeText(
+            window.location.href
+        ).then(function(){
+
+            alert(
+                "Article link copied!"
+            );
+
+        }).catch(function(){
+
+            alert(
+                "Unable to copy the link."
+            );
+
+        });
+
+    }
+
+
+
+    /* ===============================
+       TODAY'S DATE
+    =============================== */
+
+    const today =
+        document.getElementById("today");
+
+    if(today){
+
+        const date =
+            new Date();
+
+        today.textContent =
+            date.toLocaleDateString(
+                "en-GH",
+                {
+                    weekday:"long",
+                    year:"numeric",
+                    month:"long",
+                    day:"numeric"
+                }
+            );
+
+    }
+
+
+
+    /* ===============================
+       SCROLL TO TOP
+    =============================== */
+
+    const topBtn =
+        document.getElementById("topBtn");
+
+    window.addEventListener(
+        "scroll",
+        function(){
+
+            if(window.scrollY > 400){
+
+                topBtn.style.display =
+                    "flex";
+
+            }else{
+
+                topBtn.style.display =
+                    "none";
+
+            }
+
+        }
+    );
+
+</script>
+
 
 </body>
 
-</html>
+          </html>
