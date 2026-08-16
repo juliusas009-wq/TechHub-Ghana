@@ -1861,3 +1861,122 @@ body.dark footer {
     }
 
         }
+
+/* =====================================================
+   TRENDING SECTION
+===================================================== */
+
+.trending-section {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.trending-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.trending-box h2 {
+    color: #0056d2;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.trending-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 18px 5px;
+
+    color: #222;
+    font-size: 20px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    transition: all .25s ease;
+}
+
+.trending-item span:first-child {
+    font-size: 25px;
+}
+
+.trending-item:hover {
+    color: #0056d2;
+    padding-left: 12px;
+    background: #f5f9ff;
+}
+
+.view-more {
+    display: block;
+    margin-top: 18px;
+
+    color: #0056d2;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark .trending-box {
+    background: #1f2937;
+}
+
+body.dark .trending-item {
+    color: #f3f4f6;
+    border-bottom-color: #374151;
+}
+
+body.dark .trending-item:hover {
+    color: #60a5fa;
+    background: #374151;
+}
+
+body.dark .view-more {
+    color: #60a5fa;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px) {
+
+    .trending-section {
+        width: 90%;
+        margin: 35px auto;
+    }
+
+    .trending-box {
+        padding: 25px 20px;
+    }
+
+    .trending-box h2 {
+        font-size: 28px;
+    }
+
+    .trending-item {
+        font-size: 18px;
+        padding: 18px 2px;
+    }
+
+    .trending-item span:first-child {
+        font-size: 23px;
+    }
+
+       }
