@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-16T20:47:05.923407+00:00",
+  "updated": "2026-08-16T21:18:34.373182+00:00",
   "articles": [
+    {
+      "title": "Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+",
+      "summary": "OpenRouter's CEO recently described the startup as Stripe for AI.",
+      "link": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
+      "date": "Sun, 16 Aug 2026 20:57:04 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Why people aren’t buying Mark Zuckerberg’s AI future",
       "summary": "On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg’s vision.",
@@ -150,14 +158,6 @@
       "summary": "Natural gas prices could triple in some parts of the U.S., which could saddle hyperscalers with massive bills to power their AI data centers.",
       "link": "https://techcrunch.com/2026/08/14/hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves-correct/",
       "date": "Fri, 14 Aug 2026 14:05:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "US courts will start publishing how often the government uses spyware",
-      "summary": "The Administrative Office of the U.S. Courts told TechCrunch that it will start disclosing how many times judges authorized the use of spyware to wiretap suspected criminals.",
-      "link": "https://techcrunch.com/2026/08/14/us-courts-will-start-publishing-how-often-the-government-uses-spyware/",
-      "date": "Fri, 14 Aug 2026 13:29:04 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
