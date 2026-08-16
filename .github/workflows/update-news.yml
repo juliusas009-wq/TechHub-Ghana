@@ -1,0 +1,161 @@
+name: Update TechHub Ghana News
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get repository
+        uses: actions/checkout@v4
+
+      - name: Download latest technology news
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+          import urllib.parse
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+
+          feeds = [
+              ("TechCrunch", "https://techcrunch.com/feed/"),
+              ("The Verge", "https://www.theverge.com/rss/index.xml"),
+              ("MIT Technology Review", "https://www.technologyreview.com/feed/")
+          ]
+
+          articles = []
+
+          def text(element, tag):
+              item = element.find(tag)
+              return item.text.strip() if item is not None and item.text else ""
+
+          def category(title, description):
+              value = (title + " " + description).lower()
+
+              if any(x in value for x in [
+                  "artificial intelligence",
+                  "machine learning",
+                  "chatgpt",
+                  "openai",
+                  "gemini",
+                  "copilot"
+              ]):
+                  return "Artificial Intelligence"
+
+              if any(x in value for x in [
+                  "cybersecurity",
+                  "cyber security",
+                  "malware",
+                  "ransomware",
+                  "phishing",
+                  "hacking"
+              ]):
+                  return "Cybersecurity"
+
+              if any(x in value for x in [
+                  "programming",
+                  "python",
+                  "javascript",
+                  "developer",
+                  "coding",
+                  "github"
+              ]):
+                  return "Programming"
+
+              if any(x in value for x in [
+                  "cloud computing",
+                  "aws",
+                  "azure",
+                  "google cloud"
+              ]):
+                  return "Cloud Computing"
+
+              if any(x in value for x in [
+                  "ghana",
+                  "accra",
+                  "mtn ghana",
+                  "telecel ghana",
+                  "fintech ghana"
+              ]):
+                  return "Ghana Technology"
+
+              return "Technology"
+
+          for source, url in feeds:
+
+              try:
+                  request = urllib.request.Request(
+                      url,
+                      headers={
+                          "User-Agent": "TechHub-Ghana-News-Bot/1.0"
+                      }
+                  )
+
+                  with urllib.request.urlopen(request, timeout=20) as response:
+                      xml = response.read()
+
+                  root = ET.fromstring(xml)
+
+                  for item in root.findall(".//item")[:15]:
+
+                      title = text(item, "title")
+                      link = text(item, "link")
+                      description = text(item, "description")
+                      date = text(item, "pubDate")
+
+                      if not title or not link:
+                          continue
+
+                      articles.append({
+                          "title": title,
+                          "summary": description,
+                          "link": link,
+                          "date": date,
+                          "source": source,
+                          "category": category(title, description)
+                      })
+
+              except Exception as error:
+                  print(f"Could not load {source}: {error}")
+
+          # Remove duplicate stories
+          unique = {}
+
+          for article in articles:
+              unique[article["link"]] = article
+
+          articles = list(unique.values())
+
+          # Keep newest 50 stories
+          articles = articles[:50]
+
+          output = {
+              "updated": datetime.now(timezone.utc).isoformat(),
+              "articles": articles
+          }
+
+          with open("news.json", "w", encoding="utf-8") as file:
+              json.dump(output, file, ensure_ascii=False, indent=2)
+
+          print(f"Saved {len(articles)} articles.")
+
+          PY
+
+      - name: Save updated news
+        run: |
+          git config user.name "TechHub Ghana Bot"
+          git config user.email "actions@github.com"
+
+          git add news.json
+
+          git diff --cached --quiet || git commit -m "Update latest technology news"
+
+          git push
