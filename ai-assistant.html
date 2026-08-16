@@ -687,9 +687,13 @@ Contact
 <script src="script.js"></script>
 
 
-<!-- ================= AI JAVASCRIPT ================= -->
+<!-- ================= REAL AI JAVASCRIPT ================= -->
 
 <script>
+
+const AI_WORKER_URL =
+"https://techhub-ai.juliusas009.workers.dev";
+
 
 const userText =
 document.getElementById("userText");
@@ -724,15 +728,11 @@ this.value.length + " / 5000";
 });
 
 
-// ================= PROCESS TEXT =================
+// ================= PROCESS WITH AI =================
 
-function processText(action) {
+async function processText(action) {
 
-const text =
-userText.value.trim();
-
-
-if(action === "clear") {
+if (action === "clear") {
 
 clearAssistant();
 
@@ -741,9 +741,13 @@ return;
 }
 
 
-if(text === "") {
+const text =
+userText.value.trim();
 
-aiResult.innerHTML =
+
+if (!text) {
+
+aiResult.innerText =
 "⚠️ Please enter some text first.";
 
 return;
@@ -751,145 +755,115 @@ return;
 }
 
 
-let result = "";
+// Show loading message
+
+aiResult.innerText =
+"🤖 TechHub Ghana AI is thinking...";
 
 
-if(action === "rewrite") {
+const buttons =
+document.querySelectorAll(".ai-btn");
 
-result =
-"Here is an improved version of your text:\\n\\n"
-+ rewriteText(text);
+buttons.forEach(button => {
 
-}
+button.disabled = true;
 
-
-else if(action === "summarize") {
-
-result =
-"Summary:\\n\\n"
-+ summarizeText(text);
-
-}
+});
 
 
-else if(action === "grammar") {
-
-result =
-"Corrected version:\\n\\n"
-+ grammarText(text);
-
-}
+try {
 
 
-else if(action === "clear") {
+const response =
+await fetch(AI_WORKER_URL, {
 
-result =
-makeClear(text);
+method: "POST",
 
-}
+headers: {
 
+"Content-Type":
+"application/json"
 
-aiResult.innerText = result;
+},
 
-}
+body: JSON.stringify({
 
+text: text,
 
-// ================= SIMPLE REWRITE =================
+action: action
 
-function rewriteText(text) {
+})
 
-return text
-.replace(/\bi am\b/gi, "I am")
-.replace(/\bvery good\b/gi, "excellent")
-.replace(/\ba lot\b/gi, "many")
-.replace(/\bwant to\b/gi, "would like to");
-
-}
+});
 
 
-// ================= SIMPLE SUMMARY =================
-
-function summarizeText(text) {
-
-const sentences =
-text.match(/[^.!?]+[.!?]+/g);
+const data =
+await response.json();
 
 
-if(!sentences) {
+if (!response.ok) {
 
-return text;
+throw new Error(
+data.error ||
+"AI request failed."
+);
 
 }
 
 
-return sentences
-.slice(0, 2)
-.join(" ")
-.trim();
+if (!data.result) {
+
+throw new Error(
+"No AI result was returned."
+);
 
 }
 
 
-// ================= GRAMMAR =================
+aiResult.innerText =
+data.result;
 
-function grammarText(text) {
-
-let result = text.trim();
-
-result =
-result.charAt(0).toUpperCase()
-+ result.slice(1);
-
-
-if(
-!/[.!?]$/.test(result)
-) {
-
-result += ".";
 
 }
 
+catch (error) {
 
-result =
-result.replace(/\bi\b/g, "I");
-
-
-result =
-result.replace(
-/\s+/g,
-" "
+console.error(
+"TechHub Ghana AI Error:",
+error
 );
 
 
-return result;
+aiResult.innerText =
+"❌ " + error.message;
 
 }
 
+finally {
 
-// ================= CLEAR WRITING =================
+buttons.forEach(button => {
 
-function makeClear(text) {
+button.disabled = false;
 
-return text
-.replace(/\bin order to\b/gi, "to")
-.replace(/\ba large number of\b/gi, "many")
-.replace(/\bdue to the fact that\b/gi, "because")
-.replace(/\bat this point in time\b/gi, "now");
+});
+
+}
 
 }
 
 
 // ================= COPY =================
 
-function copyResult() {
+async function copyResult() {
 
 const text =
 aiResult.innerText;
 
 
-if(
+if (
 !text ||
-text === "Your result will appear here."
+text === "Your result will appear here." ||
+text.includes("TechHub Ghana AI is thinking")
 ) {
 
 return;
@@ -897,14 +871,18 @@ return;
 }
 
 
-navigator.clipboard.writeText(text)
-.then(() => {
+try {
+
+await navigator.clipboard.writeText(text);
+
 
 const button =
 document.getElementById("copyBtn");
 
+
 button.innerText =
 "✅ Copied!";
+
 
 setTimeout(() => {
 
@@ -913,12 +891,16 @@ button.innerText =
 
 }, 1500);
 
-})
-.catch(() => {
 
-alert("Unable to copy the result.");
+}
 
-});
+catch (error) {
+
+alert(
+"Unable to copy the result."
+);
+
+}
 
 }
 
@@ -945,4 +927,4 @@ aiResult.innerText =
 
 </body>
 
-    </html>
+</html>
