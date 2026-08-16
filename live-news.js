@@ -1,112 +1,165 @@
-import { db } from "./firebase.js";
-
-import {
-    collection,
-    getDocs
-} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+let allNews = [];
 
 const newsContainer = document.getElementById("newsContainer");
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 
-let allNews = [];
-
-// Load news from Firestore
+// Load automatic news from news.json
 async function loadNews() {
 
-    newsContainer.innerHTML = "<p>Loading latest news...</p>";
+    if (!newsContainer) return;
+
+    newsContainer.innerHTML = `
+        <p>Loading latest technology news...</p>
+    `;
 
     try {
 
-        const snapshot = await getDocs(collection(db, "news"));
+        const response = await fetch("news.json", {
+            cache: "no-store"
+        });
 
-        allNews = [];
+        if (!response.ok) {
+            throw new Error("Unable to load news.json");
+        }
 
-        snapshot.forEach((doc) => {
-            allNews.push(doc.data());
+        const data = await response.json();
+
+        allNews = data.articles || [];
+
+        // Sort newest first
+        allNews.sort((a, b) => {
+            return new Date(b.date) - new Date(a.date);
         });
 
         displayNews(allNews);
 
     } catch (error) {
 
-        console.error("Firestore Error:", error);
+        console.error("News loading error:", error);
 
         newsContainer.innerHTML = `
             <div class="error-box">
-                <h3>Unable to load news.</h3>
-                <p>${error.message}</p>
+                <h3>Unable to load latest news.</h3>
+                <p>Please try again later.</p>
             </div>
         `;
     }
 }
+
 
 // Display news
 function displayNews(newsList) {
 
     newsContainer.innerHTML = "";
 
-    if (newsList.length === 0) {
-        newsContainer.innerHTML = "<p>No news found.</p>";
+    if (!newsList.length) {
+
+        newsContainer.innerHTML = `
+            <p>No news found.</p>
+        `;
+
         return;
     }
 
     newsList.forEach(news => {
 
-        newsContainer.innerHTML += `
-            <div class="news-card">
+        const card = document.createElement("article");
 
-                <img src="${news.image}" alt="${news.title}">
+        card.className = "news-card";
 
-                <div class="news-content">
+        card.innerHTML = `
 
-                    <span>${news.category}</span>
+            <div class="news-content">
 
-                    <h3>${news.title}</h3>
+                <span class="category">
+                    ${escapeHTML(news.category || "Technology")}
+                </span>
 
-                    <p>${news.summary}</p>
+                <h3>
+                    ${escapeHTML(news.title || "Untitled")}
+                </h3>
 
-                    <small>
-                        📅 ${news.date} |
-                        ✍ ${news.author}
-                    </small>
+                <p>
+                    ${cleanSummary(news.summary || "")}
+                </p>
 
-                    <br><br>
+                <small>
+                    📅 ${formatDate(news.date)}
+                    |
+                    📰 ${escapeHTML(news.source || "TechHub Ghana")}
+                </small>
 
-                    <a href="${news.link}" class="read-btn">
-                        Read More →
-                    </a>
+                <br><br>
 
-                </div>
+                <a
+                    href="${escapeAttribute(news.link)}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="read-btn"
+                >
+                    Read More →
+                </a>
 
             </div>
+
         `;
 
-    });
+        newsContainer.appendChild(card);
 
+    });
 }
+
 
 // Search
 function searchNews() {
 
     if (!searchInput) return;
 
-    const keyword = searchInput.value.toLowerCase();
+    const keyword =
+        searchInput.value.trim().toLowerCase();
 
-    const filtered = allNews.filter(news =>
-        news.title.toLowerCase().includes(keyword) ||
-        news.summary.toLowerCase().includes(keyword) ||
-        news.category.toLowerCase().includes(keyword)
-    );
+    if (!keyword) {
+
+        displayNews(allNews);
+
+        return;
+    }
+
+    const filtered = allNews.filter(news => {
+
+        const title =
+            (news.title || "").toLowerCase();
+
+        const summary =
+            (news.summary || "").toLowerCase();
+
+        const category =
+            (news.category || "").toLowerCase();
+
+        const source =
+            (news.source || "").toLowerCase();
+
+        return (
+            title.includes(keyword) ||
+            summary.includes(keyword) ||
+            category.includes(keyword) ||
+            source.includes(keyword)
+        );
+
+    });
 
     displayNews(filtered);
 }
+
 
 // Category filter
 window.filterNews = function(category) {
 
     if (category === "all") {
+
         displayNews(allNews);
+
         return;
     }
 
@@ -117,14 +170,83 @@ window.filterNews = function(category) {
     displayNews(filtered);
 };
 
+
+// Format date
+function formatDate(dateString) {
+
+    if (!dateString) return "Date unavailable";
+
+    const date = new Date(dateString);
+
+    if (isNaN(date.getTime())) {
+        return dateString;
+    }
+
+    return date.toLocaleDateString(
+        "en-GH",
+        {
+            year: "numeric",
+            month: "short",
+            day: "numeric"
+        }
+    );
+}
+
+
+// Remove HTML from RSS summaries
+function cleanSummary(text) {
+
+    const temp = document.createElement("div");
+
+    temp.innerHTML = text;
+
+    return escapeHTML(
+        temp.textContent || temp.innerText || ""
+    );
+}
+
+
+// Security: protect displayed text
+function escapeHTML(text) {
+
+    return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+
+// Security: protect links
+function escapeAttribute(text) {
+
+    return String(text)
+        .replace(/"/g, "&quot;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
+
+
 // Search events
 if (searchInput) {
-    searchInput.addEventListener("keyup", searchNews);
+
+    searchInput.addEventListener(
+        "input",
+        searchNews
+    );
+
 }
 
 if (searchBtn) {
-    searchBtn.addEventListener("click", searchNews);
+
+    searchBtn.addEventListener(
+        "click",
+        searchNews
+    );
+
 }
+
 
 // Start
 loadNews();
