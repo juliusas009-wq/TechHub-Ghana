@@ -1,80 +1,948 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Text Assistant | TechHub Ghana</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AI Assistant | TechHub Ghana</title>
+
+<meta name="description"
+content="TechHub Ghana AI Assistant for rewriting, summarizing, grammar correction and improving text.">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
+
 
 <body>
 
-<header class="navbar">
-    <div class="logo">🤖 AI Text Assistant</div>
-</header>
 
-<section class="hero">
-    <h1>AI Text Assistant</h1>
-    <p>Rewrite, summarize, and improve your text easily.</p>
-</section>
+<!-- ================= HEADER ================= -->
 
-<div class="ai-container">
+<header class="main-header">
 
-    <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+<div class="top-bar">
 
-    <div class="buttons">
-        <button onclick="rewriteText()">Rewrite</button>
-        <button onclick="summarizeText()">Summarize</button>
-        <button onclick="correctText()">Correct Grammar</button>
-        <button onclick="clearText()">Clear</button>
-    </div>
+<div class="logo">
 
-    <h3>Result:</h3>
-    <div id="result"></div>
+<img
+src="images/logo.png"
+alt="TechHub Ghana Logo">
+
+<div>
+
+<h1>TechHub Ghana</h1>
+
+<p>
+Technology News • Tutorials • Digital Tools
+</p>
+
+</div>
 
 </div>
 
 
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Search TechHub Ghana...">
+
+<button>
+<i class="fas fa-search"></i>
+</button>
+
+</div>
+
+</div>
+
+
+<button
+class="menu-btn"
+onclick="toggleMenu()">
+
+☰
+
+</button>
+
+
+<nav id="navMenu">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="news.html">
+News
+</a>
+
+<a href="tutorials.html">
+Tutorials
+</a>
+
+<a href="tools.html">
+Tools
+</a>
+
+<a class="active"
+href="ai-assistant.html">
+
+AI Assistant
+
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- ================= BREAKING BAR ================= -->
+
+<section class="breaking-news">
+
+<marquee>
+
+🤖 AI Assistant • Programming • Web Development • Cybersecurity •
+Database • Technology News • Student Tools
+
+</marquee>
+
+</section>
+
+
+
+<!-- ================= AI HERO ================= -->
+
+<section class="tutorial-hero">
+
+<div>
+
+<span>
+🤖 TECHHUB GHANA AI
+</span>
+
+<h2>
+AI Text Assistant
+</h2>
+
+<p>
+
+Rewrite, summarize, correct grammar and improve
+your writing using the TechHub Ghana AI Assistant.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= AI ASSISTANT ================= -->
+
+<section class="section ai-section">
+
+
+<div class="ai-container">
+
+
+<div class="ai-header">
+
+<h2>
+🤖 AI Text Assistant
+</h2>
+
+<p>
+Improve your writing quickly and easily.
+</p>
+
+</div>
+
+
+
+<!-- INPUT -->
+
+<div class="ai-input-box">
+
+<div class="ai-label">
+
+<label for="userText">
+
+Enter your text
+
+</label>
+
+<span id="wordCount">
+0 words
+</span>
+
+</div>
+
+
+<textarea
+id="userText"
+placeholder="Enter your text here..."
+maxlength="5000"></textarea>
+
+
+<div class="character-count">
+
+<span id="charCount">
+0 / 5000
+</span>
+
+</div>
+
+</div>
+
+
+
+<!-- ACTION BUTTONS -->
+
+<div class="ai-actions">
+
+
+<button
+class="ai-btn"
+onclick="processText('rewrite')">
+
+✍️ Rewrite
+
+</button>
+
+
+<button
+class="ai-btn"
+onclick="processText('summarize')">
+
+📝 Summarize
+
+</button>
+
+
+<button
+class="ai-btn"
+onclick="processText('grammar')">
+
+✅ Correct Grammar
+
+</button>
+
+
+<button
+class="ai-btn"
+onclick="processText('clear')">
+
+💡 Make Clear
+
+</button>
+
+
+</div>
+
+
+
+<!-- RESULT -->
+
+<div class="ai-result-box">
+
+
+<div class="result-header">
+
+<h3>
+✨ Result
+</h3>
+
+
+<button
+id="copyBtn"
+onclick="copyResult()">
+
+📋 Copy
+
+</button>
+
+</div>
+
+
+<div
+id="aiResult"
+class="ai-result">
+
+Your result will appear here.
+
+</div>
+
+
+</div>
+
+
+
+<!-- CLEAR -->
+
+<div class="ai-bottom-actions">
+
+<button
+onclick="clearAssistant()"
+class="clear-btn">
+
+🗑️ Clear
+
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="section">
+
+
+<h2>
+🚀 What Can The AI Assistant Do?
+</h2>
+
+
+<div class="tutorial-benefits">
+
+
+<div>
+
+<h3>
+✍️ Rewrite
+</h3>
+
+<p>
+
+Rewrite your text in a better and more professional
+way while keeping the original meaning.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+📝 Summarize
+</h3>
+
+<p>
+
+Turn long text into a shorter and easier-to-understand
+summary.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+✅ Grammar
+</h3>
+
+<p>
+
+Find and correct common grammar, spelling and
+sentence mistakes.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+💡 Clear Writing
+</h3>
+
+<p>
+
+Make complicated writing clearer, simpler and easier
+to understand.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= STUDENT SECTION ================= -->
+
+<section class="section">
+
+
+<h2>
+🎓 Perfect For Students
+</h2>
+
+
+<div class="news-layout">
+
+
+<div class="news-left">
+
+
+<div class="news-card">
+
+<div>
+
+<h3>
+📚 Assignments
+</h3>
+
+<p>
+
+Improve the wording of your assignment drafts
+without changing the main idea.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="news-card">
+
+<div>
+
+<h3>
+📧 Emails
+</h3>
+
+<p>
+
+Create clearer and more professional emails.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="news-card">
+
+<div>
+
+<h3>
+📄 Reports
+</h3>
+
+<p>
+
+Improve the grammar and clarity of reports,
+projects and academic writing.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<aside>
+
+<h3>
+🔥 Popular Tools
+</h3>
+
+<ul>
+
+<li>
+🤖 AI Assistant
+</li>
+
+<li>
+🎓 GPA Calculator
+</li>
+
+<li>
+📱 QR Generator
+</li>
+
+<li>
+🐍 Python Tutorial
+</li>
+
+<li>
+🗄️ MySQL Tutorial
+</li>
+
+</ul>
+
+</aside>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+<h2>
+📩 Stay Updated
+</h2>
+
+<p>
+
+Get new technology tutorials, AI updates and
+digital tools from TechHub Ghana.
+
+</p>
+
+
+<form>
+
+<input
+type="email"
+placeholder="Enter your email"
+required>
+
+<button>
+Subscribe
+</button>
+
+</form>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+TechHub Ghana
+</h3>
+
+<p>
+Technology • Learning • Innovation
+</p>
+
+<p>
+Your trusted source for technology tutorials,
+news and digital tools.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Quick Links
+</h3>
+
+<p>
+<a href="index.html">
+Home
+</a>
+</p>
+
+<p>
+<a href="news.html">
+News
+</a>
+</p>
+
+<p>
+<a href="tutorials.html">
+Tutorials
+</a>
+</p>
+
+<p>
+<a href="tools.html">
+Tools
+</a>
+</p>
+
+<p>
+<a href="ai-assistant.html">
+AI Assistant
+</a>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+AI Tools
+</h3>
+
+<p>
+Rewrite Text
+</p>
+
+<p>
+Summarize
+</p>
+
+<p>
+Grammar Correction
+</p>
+
+<p>
+Clear Writing
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<p>
+📍 Accra, Ghana
+</p>
+
+<p>
+📧 info@techhubghana.com
+</p>
+
+</div>
+
+
+</div>
+
+
+<hr>
+
+
+<p class="copyright">
+
+© 2026 TechHub Ghana. All Rights Reserved.
+
+</p>
+
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+<!-- ================= AI JAVASCRIPT ================= -->
+
 <script>
 
-function rewriteText() {
-    let text = document.getElementById("inputText").value;
+const userText =
+document.getElementById("userText");
 
-    document.getElementById("result").innerHTML =
-    "Improved version:<br><br>" +
-    text.split(" ").reverse().join(" ");
+const wordCount =
+document.getElementById("wordCount");
+
+const charCount =
+document.getElementById("charCount");
+
+const aiResult =
+document.getElementById("aiResult");
+
+
+// ================= COUNT WORDS =================
+
+userText.addEventListener("input", function() {
+
+const text = this.value.trim();
+
+const words =
+text === ""
+? 0
+: text.split(/\s+/).length;
+
+wordCount.textContent =
+words + (words === 1 ? " word" : " words");
+
+charCount.textContent =
+this.value.length + " / 5000";
+
+});
+
+
+// ================= PROCESS TEXT =================
+
+function processText(action) {
+
+const text =
+userText.value.trim();
+
+
+if(action === "clear") {
+
+clearAssistant();
+
+return;
+
 }
 
 
-function summarizeText() {
-    let text = document.getElementById("inputText").value;
+if(text === "") {
 
-    let words = text.split(" ");
-    let summary = words.slice(0, 20).join(" ");
+aiResult.innerHTML =
+"⚠️ Please enter some text first.";
 
-    document.getElementById("result").innerHTML =
-    "Summary:<br><br>" + summary + "...";
+return;
+
 }
 
 
-function correctText() {
-    let text = document.getElementById("inputText").value;
+let result = "";
 
-    let corrected = text
-    .replace(/\bi\b/g, "I")
-    .replace(/\s+/g, " ");
 
-    document.getElementById("result").innerHTML =
-    "Corrected Text:<br><br>" + corrected;
+if(action === "rewrite") {
+
+result =
+"Here is an improved version of your text:\\n\\n"
++ rewriteText(text);
+
 }
 
 
-function clearText() {
-    document.getElementById("inputText").value = "";
-    document.getElementById("result").innerHTML = "";
+else if(action === "summarize") {
+
+result =
+"Summary:\\n\\n"
++ summarizeText(text);
+
+}
+
+
+else if(action === "grammar") {
+
+result =
+"Corrected version:\\n\\n"
++ grammarText(text);
+
+}
+
+
+else if(action === "clear") {
+
+result =
+makeClear(text);
+
+}
+
+
+aiResult.innerText = result;
+
+}
+
+
+// ================= SIMPLE REWRITE =================
+
+function rewriteText(text) {
+
+return text
+.replace(/\bi am\b/gi, "I am")
+.replace(/\bvery good\b/gi, "excellent")
+.replace(/\ba lot\b/gi, "many")
+.replace(/\bwant to\b/gi, "would like to");
+
+}
+
+
+// ================= SIMPLE SUMMARY =================
+
+function summarizeText(text) {
+
+const sentences =
+text.match(/[^.!?]+[.!?]+/g);
+
+
+if(!sentences) {
+
+return text;
+
+}
+
+
+return sentences
+.slice(0, 2)
+.join(" ")
+.trim();
+
+}
+
+
+// ================= GRAMMAR =================
+
+function grammarText(text) {
+
+let result = text.trim();
+
+result =
+result.charAt(0).toUpperCase()
++ result.slice(1);
+
+
+if(
+!/[.!?]$/.test(result)
+) {
+
+result += ".";
+
+}
+
+
+result =
+result.replace(/\bi\b/g, "I");
+
+
+result =
+result.replace(
+/\s+/g,
+" "
+);
+
+
+return result;
+
+}
+
+
+// ================= CLEAR WRITING =================
+
+function makeClear(text) {
+
+return text
+.replace(/\bin order to\b/gi, "to")
+.replace(/\ba large number of\b/gi, "many")
+.replace(/\bdue to the fact that\b/gi, "because")
+.replace(/\bat this point in time\b/gi, "now");
+
+}
+
+
+// ================= COPY =================
+
+function copyResult() {
+
+const text =
+aiResult.innerText;
+
+
+if(
+!text ||
+text === "Your result will appear here."
+) {
+
+return;
+
+}
+
+
+navigator.clipboard.writeText(text)
+.then(() => {
+
+const button =
+document.getElementById("copyBtn");
+
+button.innerText =
+"✅ Copied!";
+
+setTimeout(() => {
+
+button.innerText =
+"📋 Copy";
+
+}, 1500);
+
+})
+.catch(() => {
+
+alert("Unable to copy the result.");
+
+});
+
+}
+
+
+// ================= CLEAR =================
+
+function clearAssistant() {
+
+userText.value = "";
+
+wordCount.textContent =
+"0 words";
+
+charCount.textContent =
+"0 / 5000";
+
+aiResult.innerText =
+"Your result will appear here.";
+
 }
 
 </script>
 
+
 </body>
-</html>
+
+    </html>
