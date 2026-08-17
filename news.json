@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-17T15:49:37.703939+00:00",
+  "updated": "2026-08-17T16:25:14.704267+00:00",
   "articles": [
+    {
+      "title": "Groq raises $350M to fuel its pivot from AI chips to neocloud",
+      "summary": "Groq raised $350 million at a $3.5 billion valuation as the former AI chipmaker pivots to a neocloud business and expands its Nvidia-powered data center footprint.",
+      "link": "https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/",
+      "date": "Mon, 17 Aug 2026 16:15:12 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Nvidia investing $1.5B in SoftBank data center developer behind OpenAI project",
       "summary": "Nvidia's investment in SoftBank's data center developer will guarantee its chips power an OpenAI data center.",
@@ -150,14 +158,6 @@
       "summary": "Over the last couple of weeks, hackers have targeted and broken into the systems of several water plants in the United States. Here’s what we know and don’t know about this wave of attacks allegedly carried out by the Iranian government.",
       "link": "https://techcrunch.com/2026/08/14/what-we-know-about-the-alleged-iranian-hacks-on-u-s-water-utilities/",
       "date": "Fri, 14 Aug 2026 19:04:32 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Read-it-later app Pocket shut down — here are the best alternatives",
-      "summary": "Pocket users have until October 8, 2025, to export their saved articles and other items, including lists, archives, favorites, notes, and highlights.",
-      "link": "https://techcrunch.com/2026/08/14/read-it-later-app-pocket-is-shutting-down-here-are-the-best-alternatives/",
-      "date": "Fri, 14 Aug 2026 18:58:15 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
