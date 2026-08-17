@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T08:41:12.834675+00:00",
+  "updated": "2026-08-17T09:39:41.316077+00:00",
   "articles": [
     {
       "title": "Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+",
@@ -162,6 +162,22 @@
       "category": "Technology"
     },
     {
+      "title": "How much hydrogen awaits us underground?",
+      "summary": "In the 1990s, Barbara Sherwood Lollar descended into the Kidd Creek mine in northern Ontario, which cuts more than three kilometers into the ancient root of North America. There her team of geochemists found water that had been confined underground for more than a billion years. This ancient brine turned out to be a habitat&#8230;",
+      "link": "https://www.technologyreview.com/2026/08/17/1141560/how-much-hydrogen-awaits-underground/",
+      "date": "Mon, 17 Aug 2026 09:00:00 +0000",
+      "source": "MIT Technology Review",
+      "category": "Technology"
+    },
+    {
+      "title": "What happens when a kid’s robot best friend dies?",
+      "summary": "When Xander first met Moxie, she taught him that when he was anxious, he could calm down by exhaling through his lips so that he buzzed like a bee. They practiced breathing like dragons to manage feeling mad and sniffing like bunnies to boost his energy. But in the six years they’ve known each other,&#8230;",
+      "link": "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/",
+      "date": "Mon, 17 Aug 2026 09:00:00 +0000",
+      "source": "MIT Technology Review",
+      "category": "Technology"
+    },
+    {
       "title": "The Download: Flock’s new rules, cloning’s future, and children’s cells",
       "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. Flock is tightening its rules in response to a growing surveillance backlash The police-tech giant Flock is changing officers’ access to its nationwide network of license plate readers. The move comes&#8230;",
       "link": "https://www.technologyreview.com/2026/08/14/1142033/the-download-flock-new-rules-cloning-future/",
@@ -224,22 +240,6 @@
       "date": "Thu, 13 Aug 2026 12:10:00 +0000",
       "source": "MIT Technology Review",
       "category": "Technology"
-    },
-    {
-      "title": "What’s behind this summer’s heat, and why 2027 could be worse",
-      "summary": "This summer has been a scorcher for much of the Northern Hemisphere. June and July marked the hottest two-month stretch in Europe since record-keeping began. The contiguous US endured its hottest month on record in July. South Korea saw its highest-ever recorded temperature.   The heat isn’t over yet, but some scientists are already looking ahead&#8230;",
-      "link": "https://www.technologyreview.com/2026/08/13/1141788/summer-heat-el-nino/",
-      "date": "Thu, 13 Aug 2026 10:00:00 +0000",
-      "source": "MIT Technology Review",
-      "category": "Technology"
-    },
-    {
-      "title": "How kids feel about AI, in their own words",
-      "summary": "When we set out to talk to kids about artificial intelligence, we thought we knew what we’d hear. We expected some to tell us they were using it to cheat a little, the way Millennials and Gen Xers opened up CliffsNotes or programmed formulas into their TI-82s, and others to share inspiring ways they were&#8230;",
-      "link": "https://www.technologyreview.com/2026/08/13/1141410/how-kids-feel-about-ai-own-words/",
-      "date": "Thu, 13 Aug 2026 09:00:00 +0000",
-      "source": "MIT Technology Review",
-      "category": "Artificial Intelligence"
     }
   ]
 }
