@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-17T19:52:31.397746+00:00",
+  "updated": "2026-08-17T20:25:20.897790+00:00",
   "articles": [
+    {
+      "title": "‘Unprecedented’ number of Apple users received recent spyware alert, say investigators",
+      "summary": "Cybersecurity experts who investigate spyware attacks say the number of people who received a recent threat notification from Apple is unusually high.",
+      "link": "https://techcrunch.com/2026/08/17/unprecedented-number-of-apple-users-received-recent-spyware-alert-say-investigators/",
+      "date": "Mon, 17 Aug 2026 20:18:35 +0000",
+      "source": "TechCrunch",
+      "category": "Cybersecurity"
+    },
     {
       "title": "Save up to $300 on your TechCrunch Disrupt 2026 pass until August 21",
       "summary": "If you’ve been circling around Disrupt, then now’s the best time to lock in your pass and start getting ready to join the rest of the startup community gathering in San Francisco from October 13-15 at Moscone West!",
@@ -150,14 +158,6 @@
       "summary": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.",
       "link": "https://techcrunch.com/2026/08/16/techcrunch-mobility-the-shifting-flight-path-of-electric-air-taxis/",
       "date": "Sun, 16 Aug 2026 16:04:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Woman claims her stepfather used Grok to transform childhood photo into explicit imagery",
-      "summary": "The woman claimed that AI tools are \"taking everyday life and turning it into child sexual abuse.\"",
-      "link": "https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/",
-      "date": "Sat, 15 Aug 2026 21:29:19 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
