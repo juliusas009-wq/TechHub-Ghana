@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-17T18:43:46.658196+00:00",
+  "updated": "2026-08-17T19:26:54.064594+00:00",
   "articles": [
+    {
+      "title": "Spotify’s new Playlist Notes let users and editors explain their song picks",
+      "summary": "Spotify launches a new feature that gives users a chance to explain the stories and reasoning behind their favorite music. Editors will be using the feature, too, on top playlists like RapCaviar and others.",
+      "link": "https://techcrunch.com/2026/08/17/spotifys-new-playlist-notes-let-users-and-editors-explain-their-song-picks/",
+      "date": "Mon, 17 Aug 2026 19:24:43 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Higgsfield raises $400M Series B, quadrupling its valuation in 8 months to $5.4B",
+      "summary": "Higgsfield, founded by former Snap exec Alex Mashrabov, lets users create AI images and videos.",
+      "link": "https://techcrunch.com/2026/08/17/higgsfield-raises-400m-series-b-quadrupling-its-valuation-in-8-months-to-5-4b/",
+      "date": "Mon, 17 Aug 2026 19:04:27 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Reddit begins testing a new audio and video experience, similar to popular TikTok videos",
       "summary": "Reddit is beginning to test video and audio versions of popular posts, allowing users to watch or listen to Reddit stories instead of just reading them.",
@@ -11,7 +27,7 @@
     },
     {
       "title": "Sound-powered fire protection startup gets $15M to snuff out fires before they turn catastrophic",
-      "summary": "Sonic Fire Protection raised its new funding to help get its sound-powered fire protection system into everything from commercial kitchens to apartment buildings.",
+      "summary": "Sonic Fire Tech raised its new funding to help get its sound-powered fire protection system into everything from commercial kitchens to apartment buildings.",
       "link": "https://techcrunch.com/2026/08/17/sound-powered-fire-protection-startup-gets-15m-to-snuff-out-fires-before-they-turn-catastrophic/",
       "date": "Mon, 17 Aug 2026 18:32:27 +0000",
       "source": "TechCrunch",
@@ -142,22 +158,6 @@
       "summary": "How will the watermarking actually work? Can it be hidden with editing? And how does this affect code?",
       "link": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
       "date": "Sat, 15 Aug 2026 18:58:39 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "SpaceX officially closes its Cursor acquisition",
-      "summary": "AI coding startup Cursor is now officially a part of SpaceX.",
-      "link": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/",
-      "date": "Sat, 15 Aug 2026 16:30:00 +0000",
-      "source": "TechCrunch",
-      "category": "Programming"
-    },
-    {
-      "title": "How to tell if your AI platforms’ accounts have been hacked",
-      "summary": "A guide on how to check if hackers have broken into your accounts on the most popular AI platforms.",
-      "link": "https://techcrunch.com/2026/08/15/how-to-tell-if-your-ai-platforms-accounts-have-been-hacked/",
-      "date": "Sat, 15 Aug 2026 16:10:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
