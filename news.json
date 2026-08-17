@@ -1,8 +1,16 @@
 {
-  "updated": "2026-08-17T16:55:25.355931+00:00",
+  "updated": "2026-08-17T17:26:15.326151+00:00",
   "articles": [
     {
-      "title": "Amazon, once an online bookseller, is destroying rare books to train AI models",
+      "title": "Feedly attributes weeklong slowdown to bug, not its AI pivot",
+      "summary": "Feedly says a bug is behind the performance issues that have made its web app nearly \"unusable\" for some users, while complaints about its mobile apps and customer support are adding to frustrations.",
+      "link": "https://techcrunch.com/2026/08/17/feedly-attributes-weeklong-slowdown-to-bug-not-its-ai-pivot/",
+      "date": "Mon, 17 Aug 2026 17:10:59 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Amazon, which started off selling books, is destroying rare texts to train AI",
       "summary": "Rare books are incredibly valuable for training LLMs, since these models have already trained on whatever's available online.",
       "link": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models/",
       "date": "Mon, 17 Aug 2026 16:38:44 +0000",
@@ -150,14 +158,6 @@
       "summary": "Aurora Innovation and Kodiak AI, two companies developing self-driving trucks, have received permits from the California Department of Motor Vehicles.",
       "link": "https://techcrunch.com/2026/08/14/self-driving-trucks-are-officially-testing-on-california-highways/",
       "date": "Fri, 14 Aug 2026 20:37:49 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Thrive’s Joshua Kushner chides Silicon Valley VCs over AI euphoria",
-      "summary": "The AI opportunity is huge, but \"it would also be a grave error in our minds to let excitement weaken our investment discipline,\" Kushner warns in his first-ever investment letter.",
-      "link": "https://techcrunch.com/2026/08/14/thrives-joshua-kushner-chides-silicon-valley-vcs-over-ai-euphoria/",
-      "date": "Fri, 14 Aug 2026 19:33:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
