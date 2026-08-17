@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-17T21:24:18.819558+00:00",
+  "updated": "2026-08-17T21:50:11.720316+00:00",
   "articles": [
+    {
+      "title": "AI automation startup Relay shuts down, staff joins Google’s Chrome team",
+      "summary": "Relay, which offered businesses workflow automation, will stop operating next month. Its CEO and some of its staff plan to get to work on Google Chrome next.",
+      "link": "https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/",
+      "date": "Mon, 17 Aug 2026 21:27:05 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "‘Unprecedented’ number of Apple users received recent spyware alert, say investigators",
       "summary": "Cybersecurity experts who investigate spyware attacks say the number of people who received a recent threat notification from Apple is unusually high.",
@@ -150,14 +158,6 @@
       "summary": "Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI.",
       "link": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
       "date": "Sun, 16 Aug 2026 16:53:51 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "TechCrunch Mobility: The shifting flight path of electric air taxis",
-      "summary": "Welcome back to TechCrunch Mobility — your central hub for news and insights on the future of transportation.",
-      "link": "https://techcrunch.com/2026/08/16/techcrunch-mobility-the-shifting-flight-path-of-electric-air-taxis/",
-      "date": "Sun, 16 Aug 2026 16:04:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
