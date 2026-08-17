@@ -1,9 +1,33 @@
 {
-  "updated": "2026-08-17T14:54:07.541815+00:00",
+  "updated": "2026-08-17T15:23:03.154745+00:00",
   "articles": [
     {
+      "title": "Nvidia investing $1.5B in SoftBank data center developer behind OpenAI project",
+      "summary": "Nvidia's investment in SoftBank's data center developer will guarantee its chips power an OpenAI data center.",
+      "link": "https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/",
+      "date": "Mon, 17 Aug 2026 15:16:24 +0000",
+      "source": "TechCrunch",
+      "category": "Artificial Intelligence"
+    },
+    {
+      "title": "Terra Industries closes $52M seed round to build defense infrastructure for the Global South",
+      "summary": "African defense tech company Terra Industries announced an additional $18 million in funding, bringing its seed round to $52 million.",
+      "link": "https://techcrunch.com/2026/08/17/terra-industries-closes-52m-seed-round-to-build-defense-infrastructure-for-the-global-south/",
+      "date": "Mon, 17 Aug 2026 15:06:07 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "WordPress.com targets the next generation of web creators with a free student plan",
+      "summary": "WordPress.com Education lets teachers offer their students free domains, plugin support and professional website-building tools.",
+      "link": "https://techcrunch.com/2026/08/17/wordpress-com-targets-the-next-generation-of-web-creators-with-a-free-student-plan/",
+      "date": "Mon, 17 Aug 2026 14:56:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
       "title": "Uber adds Zipline drones to its Eats delivery network",
-      "summary": "Uber is also making investing in Zipline as part of the tie-up.",
+      "summary": "Uber is also making investing in Zipline a part of the tie-up.",
       "link": "https://techcrunch.com/2026/08/17/uber-adds-zipline-drones-to-its-eats-delivery-network/",
       "date": "Mon, 17 Aug 2026 13:18:49 +0000",
       "source": "TechCrunch",
@@ -134,30 +158,6 @@
       "summary": "Pocket users have until October 8, 2025, to export their saved articles and other items, including lists, archives, favorites, notes, and highlights.",
       "link": "https://techcrunch.com/2026/08/14/read-it-later-app-pocket-is-shutting-down-here-are-the-best-alternatives/",
       "date": "Fri, 14 Aug 2026 18:58:15 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Unforgetful is a new reminders app for people who can’t stop hitting snooze",
-      "summary": "Unforgetful, the latest app from longtime indie developer Marco Arment, is designed to make reminders harder to ignore — or accidentally dismiss.",
-      "link": "https://techcrunch.com/2026/08/14/unforgetful-is-a-new-reminders-app-for-people-who-cant-stop-hitting-snooze/",
-      "date": "Fri, 14 Aug 2026 16:21:04 +0000",
-      "source": "TechCrunch",
-      "category": "Programming"
-    },
-    {
-      "title": "Google will now allow users to remove visible watermark from its AI generations",
-      "summary": "Turning off this setting won't affect invisible benchmarks used to identify an AI generated file.",
-      "link": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
-      "date": "Fri, 14 Aug 2026 16:13:40 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Does Mark Zuckerberg really believe AI is ‘for everyone’?",
-      "summary": "Meta released Glimmer this week, an open-weight AI&#160;model&#160;anyone can download and run on their own hardware&#160;— a contrast to&#160;Muse&#160;Spark, the company’s more powerful model that stays locked behind its own APIs. The release landed alongside&#160;a letter from Mark Zuckerberg&#160;arguing AI should be “for everyone” rather than controlled by a handful of labs, but as Equity’s [&#8230;]",
-      "link": "https://techcrunch.com/video/does-mark-zuckerberg-really-believe-ai-is-for-everyone/",
-      "date": "Fri, 14 Aug 2026 15:43:28 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
