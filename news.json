@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-17T12:40:27.015502+00:00",
+  "updated": "2026-08-17T13:38:00.332111+00:00",
   "articles": [
+    {
+      "title": "Uber adds Zipline drones to its Eats delivery network",
+      "summary": "Uber is also making investing in Zipline as part of the tie-up.",
+      "link": "https://techcrunch.com/2026/08/17/uber-adds-zipline-drones-to-its-eats-delivery-network/",
+      "date": "Mon, 17 Aug 2026 13:18:49 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Wispr raises $280M at $2B valuation as it looks beyond dictation",
+      "summary": "Wispr’s total funding is now over $361 million.",
+      "link": "https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/",
+      "date": "Mon, 17 Aug 2026 13:10:05 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Crypto hardware wallet owners face fresh security risks after recent spate of personal data thefts",
+      "summary": "The hacks at shipping companies used to mail out hardware wallets puts crypto owners at greater risk of real-world attacks.",
+      "link": "https://techcrunch.com/2026/08/17/crypto-hardware-wallet-owners-face-fresh-security-risks-after-recent-spate-of-personal-data-thefts/",
+      "date": "Mon, 17 Aug 2026 13:00:19 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+",
       "summary": "OpenRouter's CEO recently described the startup as Stripe for AI.",
@@ -134,30 +158,6 @@
       "summary": "Meta released Glimmer this week, an open-weight AI&#160;model&#160;anyone can download and run on their own hardware&#160;— a contrast to&#160;Muse&#160;Spark, the company’s more powerful model that stays locked behind its own APIs. The release landed alongside&#160;a letter from Mark Zuckerberg&#160;arguing AI should be “for everyone” rather than controlled by a handful of labs, but as Equity’s [&#8230;]",
       "link": "https://techcrunch.com/video/does-mark-zuckerberg-really-believe-ai-is-for-everyone/",
       "date": "Fri, 14 Aug 2026 15:43:28 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Apple proposes to take a 15% cut of purchases made outside the App Store",
-      "summary": "Apple is asking a federal judge to allow it to charge commissions of up to 15% on purchases made through external links in iOS apps.",
-      "link": "https://techcrunch.com/2026/08/14/apple-proposes-to-take-a-15-cut-of-purchases-made-outside-the-app-store/",
-      "date": "Fri, 14 Aug 2026 14:54:48 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Kog is going deeper to squeeze more inference out of GPUs",
-      "summary": "The idea that GPUs are poorly suited for agentic workflows may be a misconception, according to French startup Kog.",
-      "link": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/",
-      "date": "Fri, 14 Aug 2026 14:50:11 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Hyperscalers might regret embracing natural gas if new forecast proves correct",
-      "summary": "Natural gas prices could triple in some parts of the U.S., which could saddle hyperscalers with massive bills to power their AI data centers.",
-      "link": "https://techcrunch.com/2026/08/14/hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves-correct/",
-      "date": "Fri, 14 Aug 2026 14:05:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
