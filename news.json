@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-18T16:29:21.637306+00:00",
+  "updated": "2026-08-18T16:59:49.500614+00:00",
   "articles": [
+    {
+      "title": "Comcast adds motion sensing to millions of its newer routers, with a privacy catch",
+      "summary": "A new feature added to Comcast's newest routers can detect if there is motion is inside your home without needing traditional motion sensors.",
+      "link": "https://techcrunch.com/2026/08/18/comcast-adds-motion-sensing-to-millions-of-its-newer-routers-with-a-privacy-catch/",
+      "date": "Tue, 18 Aug 2026 16:39:05 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Why Apple’s camera-equipped AirPods may not be the ‘pervert pods’ consumers fear",
       "summary": "Apple’s leaked camera-equipped AirPods might avoid the privacy pitfalls of other AI wearables by preventing users from recording photos and videos.",
@@ -75,7 +83,7 @@
     },
     {
       "title": "Reach Capital raises $265M Fund V to back AI founders building to ‘expand human potential’",
-      "summary": "Reach Capital announced Tuesday an oversubscribed $265M Fund V.",
+      "summary": "Reach Capital announced Tuesday an oversubscribed $265 million Fund V.",
       "link": "https://techcrunch.com/2026/08/18/reach-capital-raises-265m-fund-v-to-back-ai-founders-building-to-expand-human-potential/",
       "date": "Tue, 18 Aug 2026 11:00:00 +0000",
       "source": "TechCrunch",
@@ -91,7 +99,7 @@
     },
     {
       "title": "Einride strikes deal to add 500 Tesla Semis to its fleet",
-      "summary": "Einride will buy the Tesla Semis, which will be made to Amazon and other customers.",
+      "summary": "The deal will triple the size of Einride's fleet while sweetening the company's sales pitch for its Saga AI software. The Tesla Semis will be available to customers across North America.",
       "link": "https://techcrunch.com/2026/08/18/einride-strikes-deal-to-add-500-tesla-semis-to-its-fleet/",
       "date": "Tue, 18 Aug 2026 10:30:00 +0000",
       "source": "TechCrunch",
@@ -99,7 +107,7 @@
     },
     {
       "title": "Detroit startup Grounded raises $5M to customize electric and gas-powered vans",
-      "summary": "The company has shifted from making van-life builds to custom outfitting vehicles for small businesses, all while the EV landscape in the US changed dramatically.",
+      "summary": "The company has shifted from making van-life builds to custom outfitting vehicles for small businesses, all while the EV landscape in the U.S. changed dramatically.",
       "link": "https://techcrunch.com/2026/08/18/detroit-startup-grounded-raises-5m-to-customize-electric-and-gas-powered-vans/",
       "date": "Tue, 18 Aug 2026 10:00:00 +0000",
       "source": "TechCrunch",
@@ -150,14 +158,6 @@
       "summary": "Higgsfield, founded by former Snap exec Alex Mashrabov, lets users create AI images and videos.",
       "link": "https://techcrunch.com/2026/08/17/higgsfield-raises-400m-series-b-quadrupling-its-valuation-in-8-months-to-5-4b/",
       "date": "Mon, 17 Aug 2026 19:04:27 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Reddit begins testing a new audio and video experience, similar to popular TikTok videos",
-      "summary": "Reddit is beginning to test video and audio versions of popular posts, allowing users to watch or listen to Reddit stories instead of just reading them.",
-      "link": "https://techcrunch.com/2026/08/17/reddit-begins-testing-a-new-audio-and-video-experience-similar-to-popular-tiktok-videos/",
-      "date": "Mon, 17 Aug 2026 18:42:30 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
