@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-18T21:47:45.795728+00:00",
+  "updated": "2026-08-18T22:21:32.176246+00:00",
   "articles": [
+    {
+      "title": "Cursor capitalizes on Github frustration, launches rival hosting platform",
+      "summary": "Cursor, known for its AI Code Editor, is launching a new code hosting platform to rival developers' long preferred favorite, Github.",
+      "link": "https://techcrunch.com/2026/08/18/cursor-capitalizes-on-github-frustration-launches-rival-hosting-platform/",
+      "date": "Tue, 18 Aug 2026 22:14:25 +0000",
+      "source": "TechCrunch",
+      "category": "Programming"
+    },
     {
       "title": "DOJ’s probe into Andreessen Horowitz over board seats baffles VCs",
       "summary": "Since portfolio companies often pivot and expand into competing markets, investors view occasional conflicts of interest as unavoidable for large VC firms.",
@@ -150,14 +158,6 @@
       "summary": "The deal will triple the size of Einride's fleet while sweetening the company's sales pitch for its Saga AI software. The Tesla Semis will be available to customers across North America.",
       "link": "https://techcrunch.com/2026/08/18/einride-strikes-deal-to-add-500-tesla-semis-to-its-fleet/",
       "date": "Tue, 18 Aug 2026 10:30:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Detroit startup Grounded raises $5M to customize electric and gas-powered vans",
-      "summary": "The company has shifted from making van-life builds to custom outfitting vehicles for small businesses, all while the EV landscape in the U.S. changed dramatically.",
-      "link": "https://techcrunch.com/2026/08/18/detroit-startup-grounded-raises-5m-to-customize-electric-and-gas-powered-vans/",
-      "date": "Tue, 18 Aug 2026 10:00:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
