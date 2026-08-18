@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-18T19:49:21.044107+00:00",
+  "updated": "2026-08-18T20:21:53.627032+00:00",
   "articles": [
+    {
+      "title": "TikTok explores peer-to-peer payments via DMs, report says",
+      "summary": "If rolled out, the feature would use the social media service’s TikTok Pay offering, which is already available in Southeast Asia for TikTok Shop purchases.",
+      "link": "https://techcrunch.com/2026/08/18/tiktok-explores-peer-to-peer-payments-via-dms-report-says/",
+      "date": "Tue, 18 Aug 2026 20:03:56 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "OpenAI institutes new safeguards after Hugging Face breach",
       "summary": "The new safeguards include more detailed monitoring of models during the development process, as well as greater emphasis on alignment and security during the post-training process.",
@@ -35,7 +43,7 @@
     },
     {
       "title": "Comcast adds motion sensing to millions of its newer routers, with a privacy catch",
-      "summary": "A new feature added to Comcast's newest routers can detect if there is motion is inside your home without needing traditional motion sensors.",
+      "summary": "A new feature added to Comcast's newest routers can detect if there is motion inside your home without needing traditional motion sensors.",
       "link": "https://techcrunch.com/2026/08/18/comcast-adds-motion-sensing-to-millions-of-its-newer-routers-with-a-privacy-catch/",
       "date": "Tue, 18 Aug 2026 16:39:05 +0000",
       "source": "TechCrunch",
@@ -150,14 +158,6 @@
       "summary": "The model maker added $18 billion in annualized revenue in two months.",
       "link": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
       "date": "Mon, 17 Aug 2026 23:56:26 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "AI automation startup Relay shuts down, staff joins Google’s Chrome team",
-      "summary": "\"We have some really ambitious plans to help you work with AI in Chrome to get things done, and I’ll have more to share soon,\" Jacob Bank, Relay founder and CEO, said.",
-      "link": "https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/",
-      "date": "Mon, 17 Aug 2026 21:27:05 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
