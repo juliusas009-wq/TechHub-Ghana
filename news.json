@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-18T14:31:51.945150+00:00",
+  "updated": "2026-08-18T15:30:27.345817+00:00",
   "articles": [
+    {
+      "title": "Peacock is raising prices across all of its streaming plans",
+      "summary": "The cheapest ad-supported “Select” plan is increasing from $7.99 to $8.99 per month.",
+      "link": "https://techcrunch.com/2026/08/18/peacock-is-raising-prices-across-all-of-its-streaming-plans/",
+      "date": "Tue, 18 Aug 2026 15:26:31 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Anthro Energy breaks ground on factory that could pave the road to solid-state batteries",
       "summary": "Battery materials startup Anthro Energy has broken ground on a Louisville factory to make electrolytes, including those for solid-state batteries.",
@@ -11,7 +19,7 @@
     },
     {
       "title": "Warp’s new system is an out-of-the-box software factory for AI development",
-      "summary": "On Tuesday, Warp introduced Warp Factories, a new infrastrructure system designed to make building AI software factories as easy as possible.",
+      "summary": "On Tuesday, Warp introduced Warp Factories, a new infrastructure system designed to make building AI software factories as easy as possible.",
       "link": "https://techcrunch.com/2026/08/18/warps-new-system-is-an-out-of-the-box-software-factory-for-ai-development/",
       "date": "Tue, 18 Aug 2026 14:00:00 +0000",
       "source": "TechCrunch",
@@ -150,14 +158,6 @@
       "summary": "The change comes a year after YouTube applied the same approach to counting views on Shorts videos.",
       "link": "https://techcrunch.com/2026/08/17/youtube-will-now-count-a-view-as-soon-as-a-video-starts-playing/",
       "date": "Mon, 17 Aug 2026 18:09:33 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Feedly attributes weeklong slowdown to bug, not its AI pivot",
-      "summary": "Feedly says a bug is behind the performance issues that have made its web app nearly \"unusable\" for some users, while complaints about its mobile apps and customer support are adding to frustrations.",
-      "link": "https://techcrunch.com/2026/08/17/feedly-attributes-weeklong-slowdown-to-bug-not-its-ai-pivot/",
-      "date": "Mon, 17 Aug 2026 17:10:59 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
