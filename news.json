@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-18T09:31:38.988725+00:00",
+  "updated": "2026-08-18T10:26:59.353682+00:00",
   "articles": [
+    {
+      "title": "Detroit startup Grounded raises $5M to customize electric and gas-powered vans",
+      "summary": "The company has shifted from making van-life builds to custom outfitting vehicles for small businesses, all while the EV landscape in the US changed dramatically.",
+      "link": "https://techcrunch.com/2026/08/18/detroit-startup-grounded-raises-5m-to-customize-electric-and-gas-powered-vans/",
+      "date": "Tue, 18 Aug 2026 10:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Anthropic’s annualized revenue surges to $65B",
       "summary": "The model maker added $18 billion in annualized revenue in two months.",
@@ -150,14 +158,6 @@
       "summary": "OpenRouter's CEO recently described the startup as Stripe for AI.",
       "link": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
       "date": "Sun, 16 Aug 2026 20:57:04 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Why people aren’t buying Mark Zuckerberg’s AI future",
-      "summary": "On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg’s vision.",
-      "link": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
-      "date": "Sun, 16 Aug 2026 20:32:01 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
