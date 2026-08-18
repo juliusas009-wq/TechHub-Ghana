@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-18T20:21:53.627032+00:00",
+  "updated": "2026-08-18T20:49:50.633741+00:00",
   "articles": [
+    {
+      "title": "DOJ’s probe into Andreessen Horowitz over board seats baffles VCs",
+      "summary": "Since portfolio companies often pivot and expand into competing markets, investors view occasional conflicts of interest as unavoidable for large VC firms.",
+      "link": "https://techcrunch.com/2026/08/18/dojs-probe-into-andreessen-horowitz-over-board-seats-baffles-vcs/",
+      "date": "Tue, 18 Aug 2026 20:36:20 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "TikTok explores peer-to-peer payments via DMs, report says",
       "summary": "If rolled out, the feature would use the social media service’s TikTok Pay offering, which is already available in Southeast Asia for TikTok Shop purchases.",
@@ -107,7 +115,7 @@
     },
     {
       "title": "Apple’s new macOS update reportedly contains a video of AirPods with a camera",
-      "summary": "A video in a MacOS Tahoe release candidate version shows a user wearing AirPods, looking at a book, and talking to Siri.",
+      "summary": "A video in a macOS Tahoe release candidate version shows a user wearing AirPods, looking at a book, and talking to Siri.",
       "link": "https://techcrunch.com/2026/08/18/apples-new-macos-update-reportedly-contains-a-video-of-airpods-with-a-camera/",
       "date": "Tue, 18 Aug 2026 13:28:51 +0000",
       "source": "TechCrunch",
@@ -150,14 +158,6 @@
       "summary": "The company has shifted from making van-life builds to custom outfitting vehicles for small businesses, all while the EV landscape in the U.S. changed dramatically.",
       "link": "https://techcrunch.com/2026/08/18/detroit-startup-grounded-raises-5m-to-customize-electric-and-gas-powered-vans/",
       "date": "Tue, 18 Aug 2026 10:00:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Anthropic’s annualized revenue surges to $65B",
-      "summary": "The model maker added $18 billion in annualized revenue in two months.",
-      "link": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
-      "date": "Mon, 17 Aug 2026 23:56:26 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
