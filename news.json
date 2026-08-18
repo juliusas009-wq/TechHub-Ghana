@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-18T15:30:27.345817+00:00",
+  "updated": "2026-08-18T16:29:21.637306+00:00",
   "articles": [
+    {
+      "title": "Why Apple’s camera-equipped AirPods may not be the ‘pervert pods’ consumers fear",
+      "summary": "Apple’s leaked camera-equipped AirPods might avoid the privacy pitfalls of other AI wearables by preventing users from recording photos and videos.",
+      "link": "https://techcrunch.com/2026/08/18/why-apples-camera-equipped-airpods-may-not-be-the-pervert-pods-consumers-fear/",
+      "date": "Tue, 18 Aug 2026 16:19:10 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Bluesky says its recent outage was caused by another DDoS attack",
+      "summary": "This is the latest large-scale DDoS attack to hit the social networking site this year.",
+      "link": "https://techcrunch.com/2026/08/18/bluesky-says-its-recent-outage-was-caused-by-another-ddos-attack/",
+      "date": "Tue, 18 Aug 2026 15:59:48 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Peacock is raising prices across all of its streaming plans",
       "summary": "The cheapest ad-supported “Select” plan is increasing from $7.99 to $8.99 per month.",
@@ -142,22 +158,6 @@
       "summary": "Reddit is beginning to test video and audio versions of popular posts, allowing users to watch or listen to Reddit stories instead of just reading them.",
       "link": "https://techcrunch.com/2026/08/17/reddit-begins-testing-a-new-audio-and-video-experience-similar-to-popular-tiktok-videos/",
       "date": "Mon, 17 Aug 2026 18:42:30 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Sound-powered fire protection startup gets $15M to snuff out fires before they turn catastrophic",
-      "summary": "Sonic Fire Tech raised its new funding to help get its sound-powered fire protection system into everything from commercial kitchens to apartment buildings.",
-      "link": "https://techcrunch.com/2026/08/17/sound-powered-fire-protection-startup-gets-15m-to-snuff-out-fires-before-they-turn-catastrophic/",
-      "date": "Mon, 17 Aug 2026 18:32:27 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "YouTube will now count a view as soon as a video starts playing",
-      "summary": "The change comes a year after YouTube applied the same approach to counting views on Shorts videos.",
-      "link": "https://techcrunch.com/2026/08/17/youtube-will-now-count-a-view-as-soon-as-a-video-starts-playing/",
-      "date": "Mon, 17 Aug 2026 18:09:33 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
