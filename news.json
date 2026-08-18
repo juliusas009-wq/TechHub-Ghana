@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-18T12:41:54.352706+00:00",
+  "updated": "2026-08-18T13:40:43.545551+00:00",
   "articles": [
+    {
+      "title": "Apple’s new macOS update reportedly contains a video of AirPods with a camera",
+      "summary": "A video in a MacOS Tahoe release candidate version shows a user wearing AirPods, looking at a book, and talking to Siri.",
+      "link": "https://techcrunch.com/2026/08/18/apples-new-macos-update-reportedly-contains-a-video-of-airpods-with-a-camera/",
+      "date": "Tue, 18 Aug 2026 13:28:51 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Daniel Ek’s body-scanning startup Neko Health opens first US office, in New York",
+      "summary": "The scanning and bloodwork health startup founded by Spotify's founder will officially launch in New York in about a month.",
+      "link": "https://techcrunch.com/2026/08/18/daniel-eks-body-scanning-startup-neko-health-opens-first-us-office-in-new-york/",
+      "date": "Tue, 18 Aug 2026 13:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Reach Capital raises $265M Fund V to back AI founders building to ‘expand human potential’",
       "summary": "Reach Capital announced Tuesday an oversubscribed $265M Fund V.",
@@ -146,22 +162,6 @@
       "category": "Technology"
     },
     {
-      "title": "WordPress.com targets the next generation of web creators with a free student plan",
-      "summary": "WordPress.com Education lets teachers offer their students free domains, plug-in support, and professional website-building tools.",
-      "link": "https://techcrunch.com/2026/08/17/wordpress-com-targets-the-next-generation-of-web-creators-with-a-free-student-plan/",
-      "date": "Mon, 17 Aug 2026 14:56:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Uber adds Zipline drones to its Eats delivery network",
-      "summary": "Uber is also making investing in Zipline a part of the tie-up.",
-      "link": "https://techcrunch.com/2026/08/17/uber-adds-zipline-drones-to-its-eats-delivery-network/",
-      "date": "Mon, 17 Aug 2026 13:18:49 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
       "title": "The Download: how people really use AI, and Flock’s design choices",
       "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. We still don’t know how people are really using AI AI companies like Anthropic and OpenAI regularly publish reports on how people are using their products. But they only release the&#8230;",
       "link": "https://www.technologyreview.com/2026/08/18/1142229/the-download-how-people-use-ai-flock-cameras-design/",
@@ -171,7 +171,7 @@
     },
     {
       "title": "We still don’t know how people are really using AI",
-      "summary": "AI companies like Anthropic and OpenAI regularly publish reports on how people are using products like Claude and ChatGPT, but they only release the data they want us to see, AI researchers say.&#160; “There is no independent source to corroborate it,” says Anka Reuel, a Computer Science PhD candidate at the Stanford Trustworthy AI Research&#8230;",
+      "summary": "AI companies like Anthropic and OpenAI regularly publish reports on how people are using products like Claude and ChatGPT, but they only release the data they want us to see, AI researchers say.&#160; “There is no independent source to corroborate it,” says Anka Reuel, a computer science PhD candidate at the Stanford Trustworthy AI Research&#8230;",
       "link": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/",
       "date": "Tue, 18 Aug 2026 10:06:43 +0000",
       "source": "MIT Technology Review",
@@ -195,7 +195,7 @@
     },
     {
       "title": "What Flock’s defenders are missing",
-      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Flock, the police-tech giant known for its network of some 120,000 automatic license plate readers around the US, announced some changes to its platform last Thursday. The updates are meant to prevent&#8230;",
+      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first,&#160;sign up here. Flock, the police-tech giant known for its network of some 120,000 automatic license plate readers around the US, announced some changes to its platform last Thursday. The updates are meant to prevent&#8230;",
       "link": "https://www.technologyreview.com/2026/08/17/1142200/what-flocks-defenders-are-missing/",
       "date": "Mon, 17 Aug 2026 19:16:09 +0000",
       "source": "MIT Technology Review",
