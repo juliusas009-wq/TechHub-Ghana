@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-17T23:46:43.845651+00:00",
+  "updated": "2026-08-18T01:08:08.792051+00:00",
   "articles": [
+    {
+      "title": "Anthropic’s annualized revenue surges to $65B",
+      "summary": "The model maker added $18 billion in annualized revenue in two months.",
+      "link": "https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/",
+      "date": "Mon, 17 Aug 2026 23:56:26 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "AI automation startup Relay shuts down, staff joins Google’s Chrome team",
       "summary": "\"We have some really ambitious plans to help you work with AI in Chrome to get things done, and I’ll have more to share soon,\" Jacob Bank, Relay founder and CEO, said.",
@@ -150,14 +158,6 @@
       "summary": "On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg’s vision.",
       "link": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
       "date": "Sun, 16 Aug 2026 20:32:01 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’",
-      "summary": "Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI.",
-      "link": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
-      "date": "Sun, 16 Aug 2026 16:53:51 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
