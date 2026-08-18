@@ -1,10 +1,18 @@
 {
-  "updated": "2026-08-18T11:53:52.073880+00:00",
+  "updated": "2026-08-18T12:41:54.352706+00:00",
   "articles": [
     {
       "title": "Reach Capital raises $265M Fund V to back AI founders building to ‘expand human potential’",
       "summary": "Reach Capital announced Tuesday an oversubscribed $265M Fund V.",
       "link": "https://techcrunch.com/2026/08/18/reach-capital-raises-265m-fund-v-to-back-ai-founders-building-to-expand-human-potential/",
+      "date": "Tue, 18 Aug 2026 11:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Fairphone is launching its latest repairable phone in the US too",
+      "summary": "The Fairphone 6+ is priced at $649 and will be available on Amazon.",
+      "link": "https://techcrunch.com/2026/08/18/fairphone-is-launching-its-latest-repairable-phone-in-the-us-too/",
       "date": "Tue, 18 Aug 2026 11:00:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
@@ -154,12 +162,12 @@
       "category": "Technology"
     },
     {
-      "title": "Wispr raises $280M at $2B valuation as it looks beyond dictation",
-      "summary": "The funds will allow Wispr to increase its footprint as it ventures into new areas, such as meetings, with its newly released note-taker tool.",
-      "link": "https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/",
-      "date": "Mon, 17 Aug 2026 13:10:05 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
+      "title": "The Download: how people really use AI, and Flock’s design choices",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. We still don’t know how people are really using AI AI companies like Anthropic and OpenAI regularly publish reports on how people are using their products. But they only release the&#8230;",
+      "link": "https://www.technologyreview.com/2026/08/18/1142229/the-download-how-people-use-ai-flock-cameras-design/",
+      "date": "Tue, 18 Aug 2026 12:10:00 +0000",
+      "source": "MIT Technology Review",
+      "category": "Artificial Intelligence"
     },
     {
       "title": "We still don’t know how people are really using AI",
@@ -229,14 +237,6 @@
       "title": "This scientist is helping build a missing map of childhood",
       "summary": "In 2017, Deanne Taylor attended a presentation at the University of Pennsylvania, just a short walk from her office. A researcher was there to unveil the Human Cell Atlas, an ambitious project that aimed to map every cell in the human body. Taylor was floored, and then concerned. As details emerged, she discovered that the&#8230;",
       "link": "https://www.technologyreview.com/2026/08/14/1141354/deanne-taylor-gene-expression-children/",
-      "date": "Fri, 14 Aug 2026 09:00:00 +0000",
-      "source": "MIT Technology Review",
-      "category": "Technology"
-    },
-    {
-      "title": "Job titles of the future: Space travel agent",
-      "summary": "Roman Chiporukha has long turned wild travel dreams into reality. Over two decades as co-owner of the luxury lifestyle firm Roman &#38; Erica, he has orchestrated everything from the construction of a client’s superyacht to vacations in the Bahamas at a location so private that guests must sign an NDA.&#160; The experiences earned him “the&#8230;",
-      "link": "https://www.technologyreview.com/2026/08/14/1141431/job-titles-space-travel-agent-roman-chiporukha/",
       "date": "Fri, 14 Aug 2026 09:00:00 +0000",
       "source": "MIT Technology Review",
       "category": "Technology"
