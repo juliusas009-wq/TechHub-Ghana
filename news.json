@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-18T17:35:58.073459+00:00",
+  "updated": "2026-08-18T18:36:21.186461+00:00",
   "articles": [
+    {
+      "title": "OpenAI institutes new safeguards after Hugging Face breach",
+      "summary": "The new safeguards include more detailed monitoring of models during the development process, as well as greater emphasis on alignment and security during the post-training process.",
+      "link": "https://techcrunch.com/2026/08/18/openai-institutes-new-safeguards-after-hugging-face-breach/",
+      "date": "Tue, 18 Aug 2026 18:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Artificial Intelligence"
+    },
     {
       "title": "Save up to $300 on your TechCrunch Disrupt 2026 pass until August 21",
       "summary": "If you’ve been circling around Disrupt, then now’s the best time to lock in your pass and start getting ready to join the rest of the startup community gathering in San Francisco from October 13-15 at Moscone West!",
@@ -152,14 +160,6 @@
       "date": "Mon, 17 Aug 2026 21:27:05 +0000",
       "source": "TechCrunch",
       "category": "Technology"
-    },
-    {
-      "title": "‘Unprecedented’ number of Apple users received recent spyware alert, say investigators",
-      "summary": "Cybersecurity experts who investigate spyware attacks say the number of people who received a recent threat notification from Apple is unusually high.",
-      "link": "https://techcrunch.com/2026/08/17/unprecedented-number-of-apple-users-received-recent-spyware-alert-say-investigators/",
-      "date": "Mon, 17 Aug 2026 20:18:35 +0000",
-      "source": "TechCrunch",
-      "category": "Cybersecurity"
     },
     {
       "title": "The Download: how people really use AI, and Flock’s design choices",
