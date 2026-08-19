@@ -1,59 +1,137 @@
-<!-- ================= HEADER ================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Assistant | TechHub Ghana</title>
+
+    <meta
+        name="description"
+        content="TechHub Ghana AI Assistant for rewriting, summarizing, grammar correction and improving text."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="main-header">
 
+
+    <!-- TOP BAR -->
     <div class="top-bar">
 
-        <div class="logo">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
 
             <img
                 src="images/logo.png"
-                alt="TechHub Ghana Logo">
+                alt="TechHub Ghana Logo"
+            >
 
-            <div>
+            <div class="logo-text">
 
-                <h1>TechHub Ghana</h1>
+                <h1>
+                    TechHub Ghana
+                </h1>
 
                 <p>
-                    Technology News • Tutorials • Digital Tools
+                    Technology • Tutorials • Digital Tools
                 </p>
 
             </div>
 
-        </div>
+        </a>
 
 
+        <!-- SEARCH -->
         <div class="search-box">
 
             <input
-                type="text"
-                placeholder="Search TechHub Ghana...">
+                type="search"
+                id="siteSearch"
+                placeholder="Search TechHub Ghana..."
+                aria-label="Search TechHub Ghana"
+            >
 
-            <button type="button">
+            <button
+                type="button"
+                id="siteSearchBtn"
+                aria-label="Search"
+            >
+
                 <i class="fas fa-search"></i>
+
             </button>
 
         </div>
+
+
+        <!-- DARK MODE -->
+        <button
+            type="button"
+            id="darkModeBtn"
+            class="dark-mode-btn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+        >
+            🌙
+        </button>
 
     </div>
 
 
     <!-- MOBILE MENU BUTTON -->
-
     <button
+        type="button"
         class="menu-btn"
         id="menuBtn"
-        type="button"
         aria-label="Open navigation menu"
-        aria-expanded="false">
-
+        aria-expanded="false"
+    >
         ☰
-
     </button>
 
 
     <!-- NAVIGATION -->
-
     <nav id="navMenu">
 
         <a href="index.html">
@@ -76,6 +154,21 @@
             Tools
         </a>
 
+        <a href="gpa.html">
+            GPA
+        </a>
+
+        <a href="qr-generator.html">
+            QR Generator
+        </a>
+
+        <a
+            href="ai-assistant.html"
+            class="active"
+        >
+            AI Assistant
+        </a>
+
         <a href="about.html">
             About
         </a>
@@ -87,3 +180,1144 @@
     </nav>
 
 </header>
+
+
+
+<!-- =====================================================
+     BREAKING NEWS
+===================================================== -->
+
+<section class="breaking-news">
+
+    <marquee>
+
+        🤖 AI Assistant • Programming • Web Development •
+        Cybersecurity • Database • Technology News •
+        Student Tools
+
+    </marquee>
+
+</section>
+
+
+
+<!-- =====================================================
+     AI HERO
+===================================================== -->
+
+<section class="tutorial-hero">
+
+    <div>
+
+        <span>
+            🤖 TECHHUB GHANA AI
+        </span>
+
+        <h2>
+            AI Text Assistant
+        </h2>
+
+        <p>
+
+            Rewrite, summarize, correct grammar and
+            improve your writing using the TechHub Ghana
+            AI Assistant.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     AI ASSISTANT
+===================================================== -->
+
+<section class="section ai-section">
+
+
+    <div class="ai-container">
+
+
+        <!-- AI HEADER -->
+
+        <div class="ai-header">
+
+            <h2>
+                🤖 AI Text Assistant
+            </h2>
+
+            <p>
+                Improve your writing quickly and easily with AI.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             INPUT
+        ================================================== -->
+
+        <div class="ai-input-box">
+
+
+            <div class="ai-label">
+
+                <label for="userText">
+                    Enter your text
+                </label>
+
+                <span id="wordCount">
+                    0 words
+                </span>
+
+            </div>
+
+
+            <textarea
+                id="userText"
+                placeholder="Enter your text here..."
+                maxlength="5000"
+                aria-label="Text for AI processing"
+            ></textarea>
+
+
+            <div class="character-count">
+
+                <span id="charCount">
+                    0 / 5000
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             AI ACTION BUTTONS
+        ================================================== -->
+
+        <div class="ai-actions">
+
+
+            <button
+                type="button"
+                class="ai-btn"
+                data-action="rewrite"
+            >
+                ✍️ Rewrite
+            </button>
+
+
+            <button
+                type="button"
+                class="ai-btn"
+                data-action="summarize"
+            >
+                📝 Summarize
+            </button>
+
+
+            <button
+                type="button"
+                class="ai-btn"
+                data-action="grammar"
+            >
+                ✅ Correct Grammar
+            </button>
+
+
+            <button
+                type="button"
+                class="ai-btn"
+                data-action="clear-writing"
+            >
+                💡 Make Clear
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             RESULT
+        ================================================== -->
+
+        <div class="ai-result-box">
+
+
+            <div class="result-header">
+
+                <h3>
+                    ✨ Result
+                </h3>
+
+
+                <button
+                    type="button"
+                    id="copyBtn"
+                >
+                    📋 Copy
+                </button>
+
+            </div>
+
+
+            <div
+                id="aiResult"
+                class="ai-result"
+            >
+
+                Your result will appear here.
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             CLEAR
+        ================================================== -->
+
+        <div class="ai-bottom-actions">
+
+            <button
+                type="button"
+                id="clearBtn"
+                class="clear-btn"
+            >
+                🗑️ Clear
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHAT AI CAN DO
+===================================================== -->
+
+<section class="section">
+
+
+    <h2>
+        🚀 What Can The AI Assistant Do?
+    </h2>
+
+
+    <div class="card-grid">
+
+
+        <div class="tool-card">
+
+            <div class="icon">
+                ✍️
+            </div>
+
+            <h3>
+                Rewrite
+            </h3>
+
+            <p>
+
+                Rewrite your text in a better and more
+                professional way while keeping the
+                original meaning.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="tool-card">
+
+            <div class="icon">
+                📝
+            </div>
+
+            <h3>
+                Summarize
+            </h3>
+
+            <p>
+
+                Turn long text into a shorter and
+                easier-to-understand summary.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="tool-card">
+
+            <div class="icon">
+                ✅
+            </div>
+
+            <h3>
+                Grammar
+            </h3>
+
+            <p>
+
+                Find and correct common grammar,
+                spelling and sentence mistakes.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="tool-card">
+
+            <div class="icon">
+                💡
+            </div>
+
+            <h3>
+                Clear Writing
+            </h3>
+
+            <p>
+
+                Make complicated writing clearer,
+                simpler and easier to understand.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STUDENT SECTION
+===================================================== -->
+
+<section class="section">
+
+
+    <h2>
+        🎓 Perfect For Students
+    </h2>
+
+
+    <div class="news-layout">
+
+
+        <div class="news-left">
+
+
+            <div class="news-card">
+
+                <div>
+
+                    <h3>
+                        📚 Assignments
+                    </h3>
+
+                    <p>
+
+                        Improve the wording of your assignment
+                        drafts without changing the main idea.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="news-card">
+
+                <div>
+
+                    <h3>
+                        📧 Emails
+                    </h3>
+
+                    <p>
+
+                        Create clearer and more professional
+                        emails.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="news-card">
+
+                <div>
+
+                    <h3>
+                        📄 Reports
+                    </h3>
+
+                    <p>
+
+                        Improve the grammar and clarity of
+                        reports, projects and academic writing.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- SIDEBAR -->
+
+        <aside>
+
+            <h3>
+                🔥 Popular Tools
+            </h3>
+
+
+            <ul>
+
+                <li>
+                    <a href="ai-assistant.html">
+                        🤖 AI Assistant
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gpa.html">
+                        🎓 GPA Calculator
+                    </a>
+                </li>
+
+                <li>
+                    <a href="qr-generator.html">
+                        📱 QR Generator
+                    </a>
+                </li>
+
+                <li>
+                    <a href="python-tutorial.html">
+                        🐍 Python Tutorial
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mysql-tutorial.html">
+                        🗄️ MySQL Tutorial
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+
+    <h2>
+        📩 Stay Updated
+    </h2>
+
+
+    <p>
+
+        Get new technology tutorials, AI updates and
+        digital tools from TechHub Ghana.
+
+    </p>
+
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+        <!-- ABOUT -->
+
+        <div>
+
+            <h3>
+                TechHub Ghana
+            </h3>
+
+            <p>
+                Technology • Learning • Innovation
+            </p>
+
+            <p>
+
+                Your trusted source for technology
+                tutorials, news and digital tools.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
+
+
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
+
+
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
+
+
+            <p>
+                <a href="tools.html">
+                    Tools
+                </a>
+            </p>
+
+
+            <p>
+                <a href="ai-assistant.html">
+                    AI Assistant
+                </a>
+            </p>
+
+
+        </div>
+
+
+
+        <!-- AI TOOLS -->
+
+        <div>
+
+            <h3>
+                AI Tools
+            </h3>
+
+            <p>
+                Rewrite Text
+            </p>
+
+            <p>
+                Summarize
+            </p>
+
+            <p>
+                Grammar Correction
+            </p>
+
+            <p>
+                Clear Writing
+            </p>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Accra, Ghana
+            </p>
+
+            <p>
+                📧 info@techhubghana.com
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 TechHub Ghana. All Rights Reserved.
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     MAIN JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+
+<!-- =====================================================
+     AI ASSISTANT JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   TECHHUB GHANA AI API
+===================================================== */
+
+const AI_API_URL =
+    "https://techhub-ai.juliusas009.workers.dev/api/ai";
+
+
+
+/* =====================================================
+   GET ELEMENTS
+===================================================== */
+
+const userText =
+    document.getElementById("userText");
+
+const wordCount =
+    document.getElementById("wordCount");
+
+const charCount =
+    document.getElementById("charCount");
+
+const aiResult =
+    document.getElementById("aiResult");
+
+const copyBtn =
+    document.getElementById("copyBtn");
+
+const clearBtn =
+    document.getElementById("clearBtn");
+
+const aiButtons =
+    document.querySelectorAll(".ai-btn");
+
+
+
+/* =====================================================
+   WORD + CHARACTER COUNTER
+===================================================== */
+
+userText.addEventListener(
+    "input",
+    function () {
+
+
+        const text =
+            this.value.trim();
+
+
+        let words = 0;
+
+
+        if (text !== "") {
+
+            words =
+                text.split(/\s+/).length;
+
+        }
+
+
+        wordCount.textContent =
+            words +
+            (
+                words === 1
+                    ? " word"
+                    : " words"
+            );
+
+
+        charCount.textContent =
+            this.value.length +
+            " / 5000";
+
+
+    }
+);
+
+
+
+/* =====================================================
+   AI BUTTONS
+===================================================== */
+
+aiButtons.forEach(
+    function (button) {
+
+
+        button.addEventListener(
+            "click",
+            function () {
+
+
+                const action =
+                    this.dataset.action;
+
+
+                if (
+                    action === "clear-writing"
+                ) {
+
+                    processText("clear");
+
+                } else {
+
+                    processText(action);
+
+                }
+
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   PROCESS AI
+===================================================== */
+
+async function processText(action) {
+
+
+    /* CLEAR */
+
+    if (action === "clear") {
+
+        clearAssistant();
+
+        return;
+
+    }
+
+
+
+    /* GET TEXT */
+
+    const text =
+        userText.value.trim();
+
+
+
+    /* CHECK EMPTY */
+
+    if (text === "") {
+
+        aiResult.innerText =
+            "⚠️ Please enter some text first.";
+
+        return;
+
+    }
+
+
+
+    /* SHOW LOADING */
+
+    aiResult.innerText =
+        "🤖 TechHub Ghana AI is thinking...";
+
+
+
+    /* DISABLE BUTTONS */
+
+    aiButtons.forEach(
+        function (button) {
+
+            button.disabled = true;
+
+        }
+    );
+
+
+
+    try {
+
+
+        /* =============================================
+           SEND REQUEST TO CLOUDFLARE WORKER
+        ============================================= */
+
+        const response =
+            await fetch(
+                AI_API_URL,
+                {
+
+                    method: "POST",
+
+                    headers: {
+
+                        "Content-Type":
+                            "application/json"
+
+                    },
+
+                    body:
+                        JSON.stringify({
+
+                            text: text,
+
+                            action: action
+
+                        })
+
+                }
+            );
+
+
+
+        /* =============================================
+           READ RESPONSE
+        ============================================= */
+
+        const data =
+            await response.json();
+
+
+
+        /* =============================================
+           CHECK SERVER RESPONSE
+        ============================================= */
+
+        if (
+            !response.ok ||
+            !data.success
+        ) {
+
+            throw new Error(
+                data.error ||
+                "AI request failed."
+            );
+
+        }
+
+
+
+        /* =============================================
+           SHOW RESULT
+        ============================================= */
+
+        aiResult.innerText =
+            data.result;
+
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(
+            "TechHub Ghana AI Error:",
+            error
+        );
+
+
+        aiResult.innerText =
+            "❌ Unable to connect to TechHub Ghana AI. Please check your internet connection or try again.";
+
+    }
+
+
+    finally {
+
+
+        /* ENABLE BUTTONS */
+
+        aiButtons.forEach(
+            function (button) {
+
+                button.disabled = false;
+
+            }
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   COPY RESULT
+===================================================== */
+
+copyBtn.addEventListener(
+    "click",
+    async function () {
+
+
+        const text =
+            aiResult.innerText.trim();
+
+
+        if (
+            !text ||
+            text ===
+            "Your result will appear here."
+        ) {
+
+            return;
+
+        }
+
+
+        try {
+
+
+            await navigator.clipboard.writeText(
+                text
+            );
+
+
+            copyBtn.innerText =
+                "✅ Copied!";
+
+
+            setTimeout(
+                function () {
+
+                    copyBtn.innerText =
+                        "📋 Copy";
+
+                },
+                1500
+            );
+
+
+        }
+
+
+        catch (error) {
+
+
+            /* FALLBACK */
+
+            const textarea =
+                document.createElement(
+                    "textarea"
+                );
+
+
+            textarea.value =
+                text;
+
+
+            document.body.appendChild(
+                textarea
+            );
+
+
+            textarea.select();
+
+
+            document.execCommand(
+                "copy"
+            );
+
+
+            textarea.remove();
+
+
+            copyBtn.innerText =
+                "✅ Copied!";
+
+
+            setTimeout(
+                function () {
+
+                    copyBtn.innerText =
+                        "📋 Copy";
+
+                },
+                1500
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   CLEAR ASSISTANT
+===================================================== */
+
+clearBtn.addEventListener(
+    "click",
+    clearAssistant
+);
+
+
+
+function clearAssistant() {
+
+
+    userText.value =
+        "";
+
+
+    wordCount.textContent =
+        "0 words";
+
+
+    charCount.textContent =
+        "0 / 5000";
+
+
+    aiResult.innerText =
+        "Your result will appear here.";
+
+
+}
+
+
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+
+const newsletterForm =
+    document.getElementById(
+        "newsletterForm"
+    );
+
+
+if (newsletterForm) {
+
+
+    newsletterForm.addEventListener(
+        "submit",
+        function (event) {
+
+
+            event.preventDefault();
+
+
+            const email =
+                document
+                    .getElementById(
+                        "newsletterEmail"
+                    )
+                    .value
+                    .trim();
+
+
+            if (!email) {
+
+                return;
+
+            }
+
+
+            alert(
+                "✅ Thank you for subscribing to TechHub Ghana!"
+            );
+
+
+            newsletterForm.reset();
+
+        }
+    );
+
+}
+
+
+
+</script>
+
+
+</body>
+
+    </html>
