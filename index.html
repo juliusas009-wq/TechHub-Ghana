@@ -1,2714 +1,2408 @@
-/* =========================================================
-   TECHHUB GHANA
-   COMPLETE MASTER STYLESHEET
-   Matched to the supplied index.html
-========================================================= */
-
-
-/* =========================================================
-   1. RESET & GLOBAL SETTINGS
-========================================================= */
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 90px;
-}
-
-body {
-    font-family: "Poppins", Arial, sans-serif;
-    background: #f4f7fb;
-    color: #172033;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-img {
-    display: block;
-    max-width: 100%;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button,
-input {
-    font: inherit;
-}
-
-button {
-    cursor: pointer;
-}
-
-ul {
-    list-style: none;
-}
-
-::selection {
-    background: #0b5cff;
-    color: #ffffff;
-}
-
-
-/* =========================================================
-   2. CSS VARIABLES
-========================================================= */
-
-:root {
-
-    /* Main colors */
-    --primary: #0b5cff;
-    --primary-dark: #0848c7;
-    --primary-light: #eaf2ff;
-
-    --secondary: #00a86b;
-    --secondary-dark: #087f55;
-
-    --accent: #ffb703;
-    --danger: #ef4444;
-
-    /* Text */
-    --text: #172033;
-    --text-dark: #0f172a;
-    --text-light: #667085;
-    --text-muted: #98a2b3;
-    --white: #ffffff;
+<!DOCTYPE html>  <html lang="en">  
+<head>  <!-- =====================================================  
+     BASIC DOCUMENT SETUP  
+====================================================== -->  
 
-    /* Background */
-    --background: #f4f7fb;
-    --surface: #ffffff;
-    --surface-alt: #eef3f9;
+<meta charset="UTF-8">  
 
-    /* Borders */
-    --border: #e5eaf1;
-    --border-dark: #d4dbe5;
+<meta name="viewport"  
+      content="width=device-width, initial-scale=1.0">  
 
-    /* Effects */
-    --shadow-sm: 0 4px 15px rgba(15, 23, 42, 0.06);
-    --shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
-    --shadow-lg: 0 20px 55px rgba(15, 23, 42, 0.12);
-
-    --radius-sm: 10px;
-    --radius: 16px;
-    --radius-lg: 24px;
+<meta name="theme-color"  
+      content="#0b5cff">  
 
-    --container: 1180px;
+<meta name="description"  
+      content="TechHub Ghana — Technology news, programming tutorials, AI, cybersecurity, web development and free digital tools for students and digital users in Ghana.">  
 
-    --transition: 0.25s ease;
-}
+<meta name="keywords"  
+      content="TechHub Ghana, Ghana technology, technology news Ghana, AI Ghana, programming tutorials, Python, JavaScript, cybersecurity, web development, digital tools, Ghana students">  
 
+<meta name="author"  
+      content="TechHub Ghana">  
 
-/* =========================================================
-   3. ACCESSIBILITY
-========================================================= */
+<meta name="robots"  
+      content="index, follow">  
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
+<link rel="canonical"  
+      href="https://juliusas009-wq.github.io/TechHub-Ghana/">  
 
-.skip-link {
-    position: fixed;
-    top: -100px;
-    left: 20px;
-    z-index: 9999;
+<title>TechHub Ghana | Technology News, Tutorials & Digital Tools</title>  
 
-    padding: 12px 18px;
 
-    background: var(--primary);
-    color: #fff;
+<!-- =====================================================  
+     OPEN GRAPH / SOCIAL SHARING  
+====================================================== -->  
 
-    border-radius: 8px;
+<meta property="og:type"  
+      content="website">  
 
-    font-size: 14px;
-    font-weight: 600;
+<meta property="og:title"  
+      content="TechHub Ghana | Technology News, Tutorials & Digital Tools">  
 
-    transition: top var(--transition);
-}
+<meta property="og:description"  
+      content="Technology news, tutorials, AI, programming, cybersecurity and useful free digital tools.">  
 
-.skip-link:focus {
-    top: 20px;
-}
+<meta property="og:url"  
+      content="https://juliusas009-wq.github.io/TechHub-Ghana/">  
 
+<meta property="og:site_name"  
+      content="TechHub Ghana">  
 
-/* =========================================================
-   4. GENERAL CONTAINERS
-========================================================= */
+<meta property="og:image"  
+      content="images/hero.jpg">  
 
-.section-container {
-    width: min(
-        calc(100% - 40px),
-        var(--container)
-    );
 
-    margin: 0 auto;
-}
+<!-- =====================================================  
+     FAVICON  
+====================================================== -->  
 
-.section {
-    padding: 85px 0;
-}
+<link rel="icon"  
+      type="image/png"  
+      href="images/logo.png">  
 
-.section-alt {
-    background: var(--surface-alt);
-}
 
+<!-- =====================================================  
+     GOOGLE FONT  
+====================================================== -->  
 
-/* =========================================================
-   5. SITE HEADER
-========================================================= */
+<link rel="preconnect"  
+      href="https://fonts.googleapis.com">  
 
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+<link rel="preconnect"  
+      href="https://fonts.gstatic.com"  
+      crossorigin>  
 
-    background: rgba(255, 255, 255, 0.96);
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"  
+      rel="stylesheet">  
 
-    border-bottom: 1px solid var(--border);
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-}
+<!-- =====================================================  
+     FONT AWESOME  
+     Icons will work if the CDN is available.  
+====================================================== -->  
 
+<link rel="stylesheet"  
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">  
 
-/* =========================================================
-   6. TOP BAR
-========================================================= */
 
-.top-bar {
-    width: min(
-        calc(100% - 40px),
-        var(--container)
-    );
+<!-- =====================================================  
+     MAIN STYLESHEET  
+====================================================== -->  
 
-    min-height: 82px;
+<link rel="stylesheet"  
+      href="style.css">
 
-    margin: 0 auto;
+</head>  <body id="top">  <!-- =====================================================  
+     SKIP LINK  
+     Improves keyboard accessibility.  
+====================================================== -->  <a class="skip-link"  
+href="#main-content">
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+Skip to main content
 
-    gap: 30px;
-}
+</a>  <!-- =====================================================  
+     SITE HEADER  
+====================================================== -->  <header class="site-header"  
+        id="siteHeader">  <!-- =================================================  
+     TOP HEADER  
+================================================== -->  
 
+<div class="top-bar">  
 
-/* =========================================================
-   7. LOGO
-========================================================= */
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    <!-- BRAND -->  
+    <a href="index.html"  
+       class="logo"  
+       aria-label="TechHub Ghana home">  
 
-    min-width: max-content;
-}
 
-.logo-image {
-    width: 52px;
-    height: 52px;
+        <div class="logo-image">  
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            <img src="images/logo.png"  
+                 alt="TechHub Ghana logo"  
+                 width="56"  
+                 height="56">  
 
-    overflow: hidden;
+        </div>  
 
-    border-radius: 14px;
 
-    background: var(--primary-light);
+        <div class="logo-content">  
 
-    box-shadow: var(--shadow-sm);
-}
+            <span class="logo-title">  
+                TechHub Ghana  
+            </span>  
 
-.logo-image img {
-    width: 100%;
-    height: 100%;
+            <span class="logo-tagline">  
+                Technology • Learning • Innovation  
+            </span>  
 
-    object-fit: contain;
-}
+        </div>  
 
-.logo-content {
-    display: flex;
-    flex-direction: column;
-}
 
-.logo-title {
-    color: var(--text-dark);
+    </a>  
 
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 1.2;
-}
 
-.logo-tagline {
-    margin-top: 3px;
 
-    color: var(--text-light);
+    <!-- DESKTOP SEARCH -->  
 
-    font-size: 10px;
-    font-weight: 500;
+    <form class="search-box"  
+          id="searchForm"  
+          role="search">  
 
-    letter-spacing: 0.3px;
-}
+        <label for="siteSearch"  
+               class="sr-only">  
 
+            Search TechHub Ghana  
 
-/* =========================================================
-   8. SEARCH BOX
-========================================================= */
+        </label>  
 
-.search-box {
-    width: min(420px, 42vw);
 
-    height: 44px;
+        <input  
+            type="search"  
+            id="siteSearch"  
+            name="q"  
+            placeholder="Search technology, tutorials..."  
+            autocomplete="off"  
+            aria-label="Search TechHub Ghana">  
 
-    display: flex;
-    align-items: center;
 
-    background: #f7f9fc;
+        <button  
+            type="submit"  
+            aria-label="Search">  
 
-    border: 1px solid var(--border);
+            <i class="fa-solid fa-magnifying-glass"  
+               aria-hidden="true"></i>  
 
-    border-radius: 50px;
+        </button>  
 
-    overflow: hidden;
+    </form>  
 
-    transition:
-        border-color var(--transition),
-        box-shadow var(--transition),
-        background var(--transition);
-}
 
-.search-box:focus-within {
-    background: #fff;
 
-    border-color: var(--primary);
+    <!-- MOBILE MENU BUTTON -->  
 
-    box-shadow:
-        0 0 0 4px rgba(11, 92, 255, 0.10);
-}
+    <button  
+        type="button"  
+        class="menu-btn"  
+        id="menuBtn"  
+        aria-label="Open navigation menu"  
+        aria-controls="navMenu"  
+        aria-expanded="false">  
 
-.search-box input {
-    flex: 1;
+        <span></span>  
+        <span></span>  
+        <span></span>  
 
-    width: 100%;
-    height: 100%;
+    </button>  
 
-    padding: 0 16px;
 
-    border: 0;
-    outline: 0;
+</div>  
 
-    background: transparent;
 
-    color: var(--text);
 
-    font-size: 13px;
-}
+<!-- =================================================  
+     NAVIGATION  
+================================================== -->  
 
-.search-box input::placeholder {
-    color: #98a2b3;
-}
+<nav class="main-nav"  
+     id="navMenu"  
+     aria-label="Main navigation">  
 
-.search-box button {
-    width: 48px;
-    height: 100%;
 
-    border: 0;
+    <div class="nav-inner">  
 
-    background: transparent;
 
-    color: var(--primary);
+        <a href="index.html"  
+           class="active"  
+           aria-current="page">  
 
-    transition:
-        background var(--transition),
-        color var(--transition);
-}
+            <i class="fa-solid fa-house"  
+               aria-hidden="true"></i>  
 
-.search-box button:hover {
-    background: var(--primary);
-    color: #fff;
-}
+            <span>Home</span>  
 
+        </a>  
 
-/* =========================================================
-   9. MOBILE MENU BUTTON
-========================================================= */
 
-.menu-btn {
-    width: 44px;
-    height: 44px;
+        <a href="ghana-tech.html">  
 
-    display: none;
+            <span class="nav-flag">  
+                🇬🇭  
+            </span>  
 
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+            <span>Ghana Tech</span>  
 
-    gap: 5px;
+        </a>  
 
-    border: 1px solid var(--border);
 
-    border-radius: 10px;
+        <a href="news.html">  
 
-    background: #fff;
+            <i class="fa-regular fa-newspaper"  
+               aria-hidden="true"></i>  
 
-    transition: var(--transition);
-}
+            <span>News</span>  
 
-.menu-btn span {
-    width: 21px;
-    height: 2px;
+        </a>  
 
-    display: block;
 
-    background: var(--text-dark);
+        <a href="tutorials.html">  
 
-    border-radius: 10px;
+            <i class="fa-solid fa-graduation-cap"  
+               aria-hidden="true"></i>  
 
-    transition: transform var(--transition),
-                opacity var(--transition);
-}
+            <span>Tutorials</span>  
 
-.menu-btn:hover {
-    border-color: var(--primary);
-}
+        </a>  
 
-.menu-btn.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-}
 
-.menu-btn.active span:nth-child(2) {
-    opacity: 0;
-}
+        <a href="tools.html">  
 
-.menu-btn.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-}
+            <i class="fa-solid fa-toolbox"  
+               aria-hidden="true"></i>  
 
+            <span>Tools</span>  
 
-/* =========================================================
-   10. MAIN NAVIGATION
-========================================================= */
+        </a>  
 
-.main-nav {
-    border-top: 1px solid #f0f2f5;
-    background: #fff;
-}
 
-.nav-inner {
-    width: min(
-        calc(100% - 40px),
-        var(--container)
-    );
+        <a href="about.html">  
 
-    min-height: 50px;
+            <i class="fa-solid fa-circle-info"  
+               aria-hidden="true"></i>  
 
-    margin: 0 auto;
+            <span>About</span>  
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        </a>  
 
-    gap: 4px;
-}
 
-.nav-inner a {
-    position: relative;
+        <a href="contact.html">  
 
-    min-height: 50px;
+            <i class="fa-solid fa-envelope"  
+               aria-hidden="true"></i>  
 
-    padding: 0 18px;
+            <span>Contact</span>  
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        </a>  
 
-    gap: 8px;
 
-    color: #475467;
+    </div>  
 
-    font-size: 13px;
-    font-weight: 600;
+</nav>
 
-    transition:
-        color var(--transition),
-        background var(--transition);
-}
+</header>  <!-- =====================================================  
+     BREAKING / SITE UPDATE BAR  
+====================================================== -->  <section class="breaking-news"  
+         aria-label="TechHub Ghana latest updates">  <div class="breaking-inner">  
 
-.nav-inner a::after {
-    content: "";
 
-    position: absolute;
+    <div class="today-date"  
+         id="today">  
 
-    left: 14px;
-    right: 14px;
-    bottom: 0;
+        <i class="fa-regular fa-calendar"  
+           aria-hidden="true"></i>  
 
-    height: 3px;
+        <span>Loading date...</span>  
 
-    background: var(--primary);
+    </div>  
 
-    border-radius: 5px 5px 0 0;
 
-    transform: scaleX(0);
+    <div class="breaking-label">  
 
-    transition: transform var(--transition);
-}
+        <i class="fa-solid fa-bolt"  
+           aria-hidden="true"></i>  
 
-.nav-inner a:hover {
-    color: var(--primary);
-    background: #f7f9fc;
-}
+        <span>Tech Update</span>  
 
-.nav-inner a:hover::after,
-.nav-inner a.active::after {
-    transform: scaleX(1);
-}
+    </div>  
 
-.nav-inner a.active {
-    color: var(--primary);
-}
 
-.nav-inner i {
-    font-size: 13px;
-}
+    <div class="breaking-content"  
+         aria-label="TechHub Ghana highlights">  
 
-.nav-flag {
-    font-size: 17px;
-}
 
+        <div class="breaking-track">  
 
-/* =========================================================
-   11. BREAKING NEWS / UPDATE BAR
-========================================================= */
+            <span>  
+                Technology News  
+            </span>  
 
-.breaking-news {
-    background: #0f172a;
-    color: #fff;
+            <span>  
+                Programming Tutorials  
+            </span>  
 
-    overflow: hidden;
-}
+            <span>  
+                Free Digital Tools  
+            </span>  
 
-.breaking-inner {
-    width: min(
-        calc(100% - 40px),
-        var(--container)
-    );
+            <span>  
+                Artificial Intelligence  
+            </span>  
 
-    min-height: 42px;
+            <span>  
+                Cybersecurity  
+            </span>  
 
-    margin: 0 auto;
+            <span>  
+                Web Development  
+            </span>  
 
-    display: flex;
-    align-items: center;
+            <span>  
+                Database Tutorials  
+            </span>  
 
-    gap: 14px;
-}
+        </div>  
 
-.today-date {
-    display: flex;
-    align-items: center;
+    </div>  
 
-    gap: 7px;
+</div>
 
-    min-width: max-content;
+</section>  <!-- =====================================================  
+     MAIN CONTENT  
+====================================================== -->  <main id="main-content">  <!-- =====================================================  
+     HERO SECTION  
+====================================================== -->  <section class="hero"  
+         aria-labelledby="hero-title">  <div class="hero-content">  
 
-    color: #d8dee9;
 
-    font-size: 11px;
-    font-weight: 500;
-}
+    <div class="hero-text">  
 
-.breaking-label {
-    min-width: max-content;
 
-    padding: 6px 12px;
+        <span class="eyebrow">  
 
-    display: flex;
-    align-items: center;
+            <span class="eyebrow-dot"></span>  
 
-    gap: 6px;
+            TECHHUB GHANA  
 
-    background: var(--primary);
+        </span>  
 
-    border-radius: 5px;
 
-    color: #fff;
+        <h1 id="hero-title">  
 
-    font-size: 11px;
-    font-weight: 700;
+            Technology  
+            <span>Made Simple.</span>  
 
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
+        </h1>  
 
-.breaking-content {
-    flex: 1;
 
-    overflow: hidden;
+        <p class="hero-description">  
 
-    white-space: nowrap;
-}
+            Discover technology news, learn programming,  
+            explore Artificial Intelligence, improve your  
+            cybersecurity knowledge and use powerful free  
+            digital tools — all in one place.  
 
-.breaking-track {
-    display: inline-flex;
-    align-items: center;
+        </p>  
 
-    gap: 30px;
 
-    animation: ticker 30s linear infinite;
-}
+        <div class="hero-buttons">  
 
-.breaking-track span {
-    position: relative;
 
-    color: #cbd5e1;
+            <a href="tools.html"  
+               class="btn btn-primary">  
 
-    font-size: 11px;
-    font-weight: 500;
-}
+                <i class="fa-solid fa-toolbox"  
+                   aria-hidden="true"></i>  
 
-.breaking-track span::before {
-    content: "•";
+                <span>Explore Tools</span>  
 
-    margin-right: 12px;
+            </a>  
 
-    color: var(--primary);
-}
 
-@keyframes ticker {
-    from {
-        transform: translateX(0);
-    }
+            <a href="news.html"  
+               class="btn btn-secondary">  
 
-    to {
-        transform: translateX(-50%);
-    }
-}
+                <i class="fa-regular fa-newspaper"  
+                   aria-hidden="true"></i>  
 
+                <span>Latest News</span>  
 
-/* =========================================================
-   12. HERO SECTION
-========================================================= */
+            </a>  
 
-.hero {
-    position: relative;
 
-    padding: 80px 0;
+        </div>  
 
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(11, 92, 255, 0.10),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #ffffff 0%,
-            #f4f8ff 100%
-        );
 
-    overflow: hidden;
-}
+        <div class="hero-stats">  
 
-.hero::before {
-    content: "";
 
-    position: absolute;
+            <div class="hero-stat">  
 
-    width: 320px;
-    height: 320px;
+                <strong>Free</strong>  
 
-    right: -130px;
-    top: -120px;
+                <span>Digital Tools</span>  
 
-    background: rgba(11, 92, 255, 0.05);
+            </div>  
 
-    border-radius: 50%;
-}
 
-.hero-content {
-    width: min(
-        calc(100% - 40px),
-        var(--container)
-    );
+            <div class="hero-stat">  
 
-    margin: 0 auto;
+                <strong>Practical</strong>  
 
-    display: grid;
+                <span>Tutorials</span>  
 
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(400px, 0.9fr);
+            </div>  
 
-    align-items: center;
 
-    gap: 70px;
-}
+            <div class="hero-stat">  
 
-.hero-text {
-    position: relative;
-    z-index: 2;
-}
+                <strong>Ghana</strong>  
 
-.eyebrow {
-    display: inline-flex;
-    align-items: center;
+                <span>Focused</span>  
 
-    gap: 8px;
+            </div>  
 
-    margin-bottom: 18px;
 
-    color: var(--primary);
+        </div>  
 
-    font-size: 12px;
-    font-weight: 800;
 
-    letter-spacing: 1.5px;
-}
+    </div>  
 
-.eyebrow-dot {
-    width: 8px;
-    height: 8px;
 
-    background: var(--secondary);
 
-    border-radius: 50%;
+    <div class="hero-image-wrapper">  
 
-    box-shadow:
-        0 0 0 5px rgba(0, 168, 107, 0.10);
-}
 
-.hero h1 {
-    max-width: 650px;
+        <div class="hero-image">  
 
-    color: var(--text-dark);
 
-    font-size: clamp(
-        42px,
-        5vw,
-        70px
-    );
+            <img  
+                src="images/hero.jpg"  
+                alt="Technology, innovation and digital learning"  
+                width="900"  
+                height="600"  
+                loading="eager">  
 
-    font-weight: 800;
 
-    line-height: 1.08;
+            <div class="hero-image-overlay"></div>  
 
-    letter-spacing: -2.5px;
-}
 
-.hero h1 span {
-    display: block;
+            <div class="hero-floating-card hero-card-one">  
 
-    color: var(--primary);
-}
+                <div class="floating-icon">  
 
-.hero-description {
-    max-width: 630px;
+                    <i class="fa-solid fa-microchip"  
+                       aria-hidden="true"></i>  
 
-    margin-top: 24px;
+                </div>  
 
-    color: var(--text-light);
+                <div>  
 
-    font-size: 16px;
+                    <strong>Technology</strong>  
 
-    line-height: 1.8;
-}
+                    <span>Learn & Explore</span>  
 
-.hero-buttons {
-    margin-top: 30px;
+                </div>  
 
-    display: flex;
-    flex-wrap: wrap;
+            </div>  
 
-    gap: 12px;
-}
 
+            <div class="hero-floating-card hero-card-two">  
 
-/* =========================================================
-   13. BUTTONS
-========================================================= */
+                <span class="pulse-dot"></span>  
 
-.btn {
-    min-height: 48px;
+                <span>Ghana Tech</span>  
 
-    padding: 0 20px;
+            </div>  
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 
-    gap: 9px;
+        </div>  
 
-    border-radius: 10px;
+    </div>  
 
-    font-size: 13px;
-    font-weight: 700;
 
-    transition:
-        transform var(--transition),
-        box-shadow var(--transition),
-        background var(--transition),
-        border-color var(--transition);
-}
+</div>
 
-.btn:hover {
-    transform: translateY(-2px);
-}
+</section>  <!-- =====================================================  
+     TRENDING TOPICS  
+====================================================== -->  <section class="trending-section"  
+         aria-labelledby="trending-title">  <div class="section-container">  
 
-.btn-primary {
-    background: var(--primary);
-    color: #fff;
 
-    box-shadow:
-        0 8px 20px rgba(11, 92, 255, 0.22);
-}
+    <div class="trending-box">  
 
-.btn-primary:hover {
-    background: var(--primary-dark);
 
-    box-shadow:
-        0 12px 25px rgba(11, 92, 255, 0.30);
-}
+        <div class="trending-heading">  
 
-.btn-secondary {
-    background: #fff;
 
-    color: var(--text-dark);
+            <div class="trending-icon">  
 
-    border: 1px solid var(--border);
-}
+                <i class="fa-solid fa-fire"  
+                   aria-hidden="true"></i>  
 
-.btn-secondary:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-}
+            </div>  
 
 
-/* =========================================================
-   14. HERO STATS
-========================================================= */
+            <div>  
 
-.hero-stats {
-    margin-top: 40px;
+                <span class="section-kicker">  
+                    What's trending  
+                </span>  
 
-    display: flex;
-    flex-wrap: wrap;
+                <h2 id="trending-title">  
+                    Popular Right Now  
+                </h2>  
 
-    gap: 30px;
-}
+            </div>  
 
-.hero-stat {
-    position: relative;
 
-    display: flex;
-    flex-direction: column;
-}
+        </div>  
 
-.hero-stat:not(:last-child)::after {
-    content: "";
 
-    position: absolute;
 
-    top: 4px;
-    right: -16px;
+        <div class="trending-list">  
 
-    width: 1px;
-    height: 38px;
 
-    background: var(--border-dark);
-}
+            <a href="ai-assistant.html"  
+               class="trending-item">  
 
-.hero-stat strong {
-    color: var(--text-dark);
+                <span class="trending-item-icon">  
+                    🤖  
+                </span>  
 
-    font-size: 15px;
-    font-weight: 800;
-}
+                <span>AI Assistant</span>  
 
-.hero-stat span {
-    color: var(--text-muted);
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    font-size: 11px;
-    font-weight: 500;
-}
+            </a>  
 
 
-/* =========================================================
-   15. HERO IMAGE
-========================================================= */
+            <a href="gpa.html"  
+               class="trending-item">  
 
-.hero-image-wrapper {
-    position: relative;
-}
+                <span class="trending-item-icon">  
+                    🎓  
+                </span>  
 
-.hero-image {
-    position: relative;
+                <span>GPA Calculator</span>  
 
-    min-height: 500px;
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    overflow: hidden;
+            </a>  
 
-    border-radius: 28px;
 
-    background: #dce6f5;
+            <a href="qr-generator.html"  
+               class="trending-item">  
 
-    box-shadow: var(--shadow-lg);
-}
+                <span class="trending-item-icon">  
+                    📱  
+                </span>  
 
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    min-height: 500px;
+                <span>QR Generator</span>  
 
-    object-fit: cover;
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    transition: transform 0.7s ease;
-}
+            </a>  
 
-.hero-image:hover img {
-    transform: scale(1.04);
-}
 
-.hero-image-overlay {
-    position: absolute;
+            <a href="tutorials.html#python"  
+               class="trending-item">  
 
-    inset: 0;
+                <span class="trending-item-icon">  
+                    🐍  
+                </span>  
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(15, 23, 42, 0.02),
-            rgba(15, 23, 42, 0.38)
-        );
-}
+                <span>Learn Python</span>  
 
-.hero-floating-card {
-    position: absolute;
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    display: flex;
-    align-items: center;
+            </a>  
 
-    background: rgba(255, 255, 255, 0.96);
 
-    backdrop-filter: blur(10px);
+            <a href="tutorials.html#mysql"  
+               class="trending-item">  
 
-    box-shadow: var(--shadow);
+                <span class="trending-item-icon">  
+                    🗄️  
+                </span>  
 
-    border: 1px solid rgba(255,255,255,0.6);
-}
+                <span>MySQL Basics</span>  
 
-.hero-card-one {
-    left: 24px;
-    bottom: 25px;
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    padding: 12px 15px;
+            </a>  
 
-    gap: 11px;
 
-    border-radius: 13px;
-}
+        </div>  
 
-.floating-icon {
-    width: 40px;
-    height: 40px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        <a href="news.html"  
+           class="view-more">  
 
-    background: var(--primary-light);
+            <span>View Technology News</span>  
 
-    color: var(--primary);
+            <i class="fa-solid fa-arrow-right"  
+               aria-hidden="true"></i>  
 
-    border-radius: 10px;
-}
+        </a>  
 
-.hero-card-one strong,
-.hero-card-one span {
-    display: block;
-}
 
-.hero-card-one strong {
-    color: var(--text-dark);
+    </div>  
 
-    font-size: 12px;
-}
+</div>
 
-.hero-card-one span {
-    color: var(--text-light);
+</section>  <!-- =====================================================  
+     POPULAR TOOLS  
+====================================================== -->  <section class="section"  
+         aria-labelledby="tools-title">  <div class="section-container">  
 
-    font-size: 10px;
-}
 
-.hero-card-two {
-    top: 24px;
-    right: 24px;
+    <div class="section-heading">  
 
-    padding: 9px 13px;
 
-    gap: 7px;
+        <div>  
 
-    border-radius: 30px;
+            <span class="section-kicker">  
+                Useful & free  
+            </span>  
 
-    color: var(--text-dark);
+            <h2 id="tools-title">  
+                Popular Tools  
+            </h2>  
 
-    font-size: 11px;
-    font-weight: 700;
-}
+        </div>  
 
-.pulse-dot {
-    width: 8px;
-    height: 8px;
 
-    background: var(--secondary);
+        <a href="tools.html"  
+           class="section-link">  
 
-    border-radius: 50%;
+            View All Tools  
 
-    animation: pulse 1.8s infinite;
-}
+            <i class="fa-solid fa-arrow-right"  
+               aria-hidden="true"></i>  
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.5);
-    }
+        </a>  
 
-    70% {
-        box-shadow: 0 0 0 8px rgba(0, 168, 107, 0);
-    }
 
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 168, 107, 0);
-    }
-}
+    </div>  
 
 
-/* =========================================================
-   16. TRENDING SECTION
-========================================================= */
 
-.trending-section {
-    padding: 35px 0 0;
-}
+    <div class="card-grid">  
 
-.trending-box {
-    display: grid;
 
-    grid-template-columns: 210px 1fr auto;
+        <!-- GPA -->  
 
-    align-items: center;
+        <article class="tool-card">  
 
-    gap: 22px;
 
-    padding: 18px 20px;
+            <div class="tool-card-top">  
 
-    background: #fff;
 
-    border: 1px solid var(--border);
+                <div class="icon">  
 
-    border-radius: var(--radius);
+                    <span>🎓</span>  
 
-    box-shadow: var(--shadow-sm);
-}
+                </div>  
 
-.trending-heading {
-    display: flex;
-    align-items: center;
 
-    gap: 12px;
-}
+                <span class="tool-label">  
+                    Student  
+                </span>  
 
-.trending-icon {
-    width: 42px;
-    height: 42px;
 
-    flex-shrink: 0;
+            </div>  
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    background: #fff4db;
+            <h3>  
+                GPA Calculator  
+            </h3>  
 
-    color: #e89a00;
 
-    border-radius: 11px;
-}
+            <p>  
+                Calculate your semester GPA quickly  
+                using your course grades and credit hours.  
+            </p>  
 
-.section-kicker {
-    display: block;
 
-    margin-bottom: 4px;
+            <a href="gpa.html"  
+               class="card-action">  
 
-    color: var(--primary);
+                Open Tool  
 
-    font-size: 10px;
-    font-weight: 800;
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    text-transform: uppercase;
-    letter-spacing: 1.1px;
-}
+            </a>  
 
-.trending-heading h2 {
-    color: var(--text-dark);
 
-    font-size: 15px;
-    font-weight: 800;
+        </article>  
 
-    line-height: 1.2;
-}
 
-.trending-list {
-    display: flex;
-    flex-wrap: wrap;
 
-    gap: 8px;
-}
+        <!-- QR -->  
 
-.trending-item {
-    min-height: 36px;
+        <article class="tool-card">  
 
-    padding: 0 11px;
 
-    display: flex;
-    align-items: center;
+            <div class="tool-card-top">  
 
-    gap: 7px;
 
-    border: 1px solid var(--border);
+                <div class="icon">  
 
-    border-radius: 8px;
+                    <span>📱</span>  
 
-    background: #f9fafb;
+                </div>  
 
-    color: #475467;
 
-    font-size: 10px;
-    font-weight: 600;
+                <span class="tool-label">  
+                    Generator  
+                </span>  
 
-    transition: var(--transition);
-}
 
-.trending-item:hover {
-    background: var(--primary-light);
+            </div>  
 
-    border-color: #c8d9ff;
 
-    color: var(--primary);
+            <h3>  
+                QR Generator  
+            </h3>  
 
-    transform: translateY(-2px);
-}
 
-.trending-item-icon {
-    font-size: 14px;
-}
+            <p>  
+                Create QR codes instantly for links,  
+                text, contact details and more.  
+            </p>  
 
-.trending-item i {
-    font-size: 8px;
-}
 
-.view-more {
-    display: flex;
-    align-items: center;
+            <a href="qr-generator.html"  
+               class="card-action">  
 
-    gap: 7px;
+                Open Tool  
 
-    color: var(--primary);
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    font-size: 11px;
-    font-weight: 700;
+            </a>  
 
-    white-space: nowrap;
-}
 
-.view-more:hover {
-    text-decoration: underline;
-}
+        </article>  
 
 
-/* =========================================================
-   17. SECTION HEADINGS
-========================================================= */
 
-.section-heading {
-    margin-bottom: 32px;
+        <!-- AI -->  
 
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+        <article class="tool-card">  
 
-    gap: 20px;
-}
 
-.section-heading h2 {
-    color: var(--text-dark);
+            <div class="tool-card-top">  
 
-    font-size: clamp(25px, 3vw, 34px);
 
-    font-weight: 800;
+                <div class="icon">  
 
-    line-height: 1.2;
+                    <span>🤖</span>  
 
-    letter-spacing: -0.8px;
-}
+                </div>  
 
-.section-heading p {
-    max-width: 600px;
 
-    margin-top: 10px;
+                <span class="tool-label">  
+                    AI  
+                </span>  
 
-    color: var(--text-light);
 
-    font-size: 13px;
-}
+            </div>  
 
-.section-link {
-    display: inline-flex;
-    align-items: center;
 
-    gap: 8px;
+            <h3>  
+                AI Assistant  
+            </h3>  
 
-    padding-bottom: 5px;
 
-    color: var(--primary);
+            <p>  
+                Improve writing, summarize text,  
+                fix grammar and make your work clearer.  
+            </p>  
 
-    border-bottom: 1px solid transparent;
 
-    font-size: 12px;
-    font-weight: 700;
+            <a href="ai-assistant.html"  
+               class="card-action">  
 
-    white-space: nowrap;
+                Try AI Assistant  
 
-    transition: var(--transition);
-}
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-.section-link:hover {
-    border-color: var(--primary);
-}
+            </a>  
 
-.centered-heading {
-    align-items: center;
-    justify-content: center;
 
-    text-align: center;
-}
+        </article>  
 
-.centered-heading p {
-    margin-left: auto;
-    margin-right: auto;
-}
 
 
-/* =========================================================
-   18. CARD GRID
-========================================================= */
+        <!-- PASSWORD -->  
 
-.card-grid {
-    display: grid;
+        <article class="tool-card">  
 
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
 
-    gap: 18px;
-}
+            <div class="tool-card-top">  
 
 
-/* =========================================================
-   19. TOOL CARDS
-========================================================= */
+                <div class="icon">  
 
-.tool-card {
-    position: relative;
+                    <span>🔐</span>  
 
-    min-width: 0;
+                </div>  
 
-    padding: 22px;
 
-    display: flex;
-    flex-direction: column;
+                <span class="tool-label">  
+                    Security  
+                </span>  
 
-    background: #fff;
 
-    border: 1px solid var(--border);
+            </div>  
 
-    border-radius: var(--radius);
 
-    box-shadow: var(--shadow-sm);
+            <h3>  
+                Password Generator  
+            </h3>  
 
-    transition:
-        transform var(--transition),
-        box-shadow var(--transition),
-        border-color var(--transition);
-}
 
-.tool-card:hover {
-    transform: translateY(-6px);
+            <p>  
+                Generate strong passwords for  
+                accounts and online services.  
+            </p>  
 
-    border-color: #cbdcff;
 
-    box-shadow: var(--shadow);
-}
+            <a href="password-generator.html"  
+               class="card-action">  
 
-.tool-card-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+                Generate Password  
 
-    gap: 10px;
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    margin-bottom: 18px;
-}
+            </a>  
 
-.icon {
-    width: 50px;
-    height: 50px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        </article>  
 
-    background: var(--primary-light);
 
-    border-radius: 13px;
+    </div>  
 
-    font-size: 24px;
-}
+</div>
 
-.tool-label {
-    padding: 5px 8px;
+</section>  <!-- =====================================================  
+     LATEST TECHNOLOGY NEWS  
+====================================================== -->  <section class="section section-alt"  
+         aria-labelledby="news-title">  <div class="section-container">  
 
-    background: #f1f5f9;
 
-    color: #667085;
+    <div class="section-heading">  
 
-    border-radius: 5px;
 
-    font-size: 9px;
-    font-weight: 700;
+        <div>  
 
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
+            <span class="section-kicker">  
+                Stay informed  
+            </span>  
 
-.tool-card h3 {
-    margin-bottom: 8px;
+            <h2 id="news-title">  
+                Latest Technology News  
+            </h2>  
 
-    color: var(--text-dark);
+        </div>  
 
-    font-size: 17px;
-    font-weight: 800;
-}
 
-.tool-card p {
-    margin-bottom: 20px;
+        <a href="news.html"  
+           class="section-link">  
 
-    color: var(--text-light);
+            View All News  
 
-    font-size: 12px;
+            <i class="fa-solid fa-arrow-right"  
+               aria-hidden="true"></i>  
 
-    line-height: 1.7;
-}
+        </a>  
 
-.card-action {
-    margin-top: auto;
 
-    display: inline-flex;
-    align-items: center;
+    </div>  
 
-    gap: 7px;
 
-    color: var(--primary);
 
-    font-size: 11px;
-    font-weight: 700;
+    <div class="news-layout">  
 
-    transition: gap var(--transition);
-}
 
-.tool-card:hover .card-action {
-    gap: 11px;
-}
+        <div class="news-left">  
 
 
-/* =========================================================
-   20. NEWS LAYOUT
-========================================================= */
+            <!-- NEWS 1 -->  
 
-.news-layout {
-    display: grid;
+            <a href="news.html"  
+               class="news-card">  
 
-    grid-template-columns:
-        minmax(0, 1fr)
-        300px;
 
-    gap: 24px;
+                <div class="news-image">  
 
-    align-items: start;
-}
+                    <img  
+                        src="images/tech1.jpg"  
+                        alt="Artificial Intelligence in education"  
+                        width="600"  
+                        height="400"  
+                        loading="lazy">  
 
-.news-left {
-    display: grid;
+                    <span class="news-category">  
+                        Artificial Intelligence  
+                    </span>  
 
-    gap: 18px;
-}
+                </div>  
 
 
-/* =========================================================
-   21. NEWS CARDS
-========================================================= */
+                <div class="news-content">  
 
-.news-card {
-    display: grid;
 
-    grid-template-columns: 270px minmax(0, 1fr);
+                    <span class="news-meta">  
+                        Technology  
+                    </span>  
 
-    overflow: hidden;
 
-    background: #fff;
+                    <h3>  
+                        Artificial Intelligence in Education  
+                    </h3>  
 
-    border: 1px solid var(--border);
 
-    border-radius: var(--radius);
+                    <p>  
+                        Discover how AI is changing  
+                        learning through intelligent  
+                        assistants, digital tools and  
+                        adaptive learning systems.  
+                    </p>  
 
-    box-shadow: var(--shadow-sm);
 
-    transition:
-        transform var(--transition),
-        box-shadow var(--transition);
-}
+                    <span class="read-more">  
 
-.news-card:hover {
-    transform: translateY(-4px);
+                        Read More  
 
-    box-shadow: var(--shadow);
-}
+                        <i class="fa-solid fa-arrow-right"  
+                           aria-hidden="true"></i>  
 
-.news-image {
-    position: relative;
+                    </span>  
 
-    min-height: 190px;
 
-    overflow: hidden;
+                </div>  
 
-    background: #dfe6ef;
-}
 
-.news-image img {
-    width: 100%;
-    height: 100%;
+            </a>  
 
-    min-height: 190px;
 
-    object-fit: cover;
 
-    transition: transform 0.5s ease;
-}
+            <!-- NEWS 2 -->  
 
-.news-card:hover .news-image img {
-    transform: scale(1.05);
-}
+            <a href="news.html"  
+               class="news-card">  
 
-.news-category {
-    position: absolute;
 
-    left: 12px;
-    top: 12px;
+                <div class="news-image">  
 
-    padding: 5px 8px;
+                    <img  
+                        src="images/tech2.jpg"  
+                        alt="Web development using HTML CSS and JavaScript"  
+                        width="600"  
+                        height="400"  
+                        loading="lazy">  
 
-    background: var(--primary);
+                    <span class="news-category">  
+                        Web Development  
+                    </span>  
 
-    color: #fff;
+                </div>  
 
-    border-radius: 5px;
 
-    font-size: 8px;
-    font-weight: 700;
+                <div class="news-content">  
 
-    text-transform: uppercase;
-}
 
-.news-content {
-    padding: 20px;
-}
+                    <span class="news-meta">  
+                        Programming  
+                    </span>  
 
-.news-meta {
-    display: block;
 
-    margin-bottom: 6px;
+                    <h3>  
+                        Learn HTML, CSS & JavaScript  
+                    </h3>  
 
-    color: var(--primary);
 
-    font-size: 9px;
-    font-weight: 700;
+                    <p>  
+                        Start building modern websites  
+                        from scratch with practical  
+                        beginner-friendly tutorials.  
+                    </p>  
 
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
 
-.news-content h3 {
-    margin-bottom: 8px;
+                    <span class="read-more">  
 
-    color: var(--text-dark);
+                        Read More  
 
-    font-size: 18px;
-    font-weight: 800;
+                        <i class="fa-solid fa-arrow-right"  
+                           aria-hidden="true"></i>  
 
-    line-height: 1.35;
-}
+                    </span>  
 
-.news-content p {
-    margin-bottom: 13px;
 
-    color: var(--text-light);
+                </div>  
 
-    font-size: 11px;
 
-    line-height: 1.7;
-}
+            </a>  
 
-.read-more {
-    display: inline-flex;
-    align-items: center;
 
-    gap: 7px;
 
-    color: var(--primary);
+            <!-- NEWS 3 -->  
 
-    font-size: 10px;
-    font-weight: 700;
-}
+            <a href="news.html"  
+               class="news-card">  
 
-.news-card:hover .read-more {
-    text-decoration: underline;
-}
 
+                <div class="news-image">  
 
-/* =========================================================
-   22. NEWS SIDEBAR
-========================================================= */
+                    <img  
+                        src="images/tech3.jpg"  
+                        alt="Cybersecurity protection"  
+                        width="600"  
+                        height="400"  
+                        loading="lazy">  
 
-.news-sidebar {
-    padding: 20px;
+                    <span class="news-category">  
+                        Cybersecurity  
+                    </span>  
 
-    background: #fff;
+                </div>  
 
-    border: 1px solid var(--border);
 
-    border-radius: var(--radius);
+                <div class="news-content">  
 
-    box-shadow: var(--shadow-sm);
-}
 
-.sidebar-heading {
-    display: flex;
-    align-items: center;
+                    <span class="news-meta">  
+                        Security  
+                    </span>  
 
-    gap: 9px;
 
-    padding-bottom: 14px;
+                    <h3>  
+                        Cybersecurity Essentials  
+                    </h3>  
 
-    margin-bottom: 4px;
 
-    border-bottom: 1px solid var(--border);
-}
+                    <p>  
+                        Learn practical cybersecurity  
+                        habits that can help protect your  
+                        accounts, devices and personal data.  
+                    </p>  
 
-.sidebar-heading span {
-    font-size: 18px;
-}
 
-.sidebar-heading h3 {
-    color: var(--text-dark);
+                    <span class="read-more">  
 
-    font-size: 17px;
-    font-weight: 800;
-}
+                        Read More  
 
-.news-sidebar li {
-    border-bottom: 1px solid #edf0f4;
-}
+                        <i class="fa-solid fa-arrow-right"  
+                           aria-hidden="true"></i>  
 
-.news-sidebar li:last-child {
-    border-bottom: 0;
-}
+                    </span>  
 
-.news-sidebar li a {
-    min-height: 55px;
 
-    display: grid;
+                </div>  
 
-    grid-template-columns: 25px 1fr 12px;
 
-    align-items: center;
+            </a>  
 
-    gap: 7px;
 
-    color: #475467;
+        </div>  
 
-    font-size: 11px;
-    font-weight: 600;
 
-    transition: var(--transition);
-}
 
-.news-sidebar li a:hover {
-    padding-left: 4px;
+        <!-- SIDEBAR -->  
 
-    color: var(--primary);
-}
+        <aside class="news-sidebar"  
+               aria-label="Popular TechHub Ghana content">  
 
-.news-sidebar li a > span:first-child {
-    font-size: 15px;
-}
 
-.news-sidebar li a i {
-    color: #98a2b3;
+            <div class="sidebar-heading">  
 
-    font-size: 8px;
-}
+                <span>  
+                    🔥  
+                </span>  
 
-.sidebar-cta {
-    min-height: 42px;
+                <h3>  
+                    Popular  
+                </h3>  
 
-    margin-top: 15px;
-    padding: 0 13px;
+            </div>  
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    background: var(--primary);
+            <ul>  
 
-    border-radius: 8px;
 
-    color: #fff;
+                <li>  
 
-    font-size: 10px;
-    font-weight: 700;
+                    <a href="ai-assistant.html">  
 
-    transition: var(--transition);
-}
+                        <span>🤖</span>  
 
-.sidebar-cta:hover {
-    background: var(--primary-dark);
+                        <span>  
+                            AI Assistant  
+                        </span>  
 
-    transform: translateY(-2px);
-}
+                        <i class="fa-solid fa-chevron-right"  
+                           aria-hidden="true"></i>  
 
+                    </a>  
 
-/* =========================================================
-   23. TUTORIAL GRID
-========================================================= */
+                </li>  
 
-.tutorial-grid {
-    display: grid;
 
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+                <li>  
 
-    gap: 18px;
-}
+                    <a href="gpa.html">  
 
-.tutorial {
-    overflow: hidden;
+                        <span>🎓</span>  
 
-    background: #fff;
+                        <span>  
+                            GPA Calculator  
+                        </span>  
 
-    border: 1px solid var(--border);
+                        <i class="fa-solid fa-chevron-right"  
+                           aria-hidden="true"></i>  
 
-    border-radius: var(--radius);
+                    </a>  
 
-    box-shadow: var(--shadow-sm);
+                </li>  
 
-    transition:
-        transform var(--transition),
-        box-shadow var(--transition);
-}
 
-.tutorial:hover {
-    transform: translateY(-5px);
+                <li>  
 
-    box-shadow: var(--shadow);
-}
+                    <a href="qr-generator.html">  
 
-.tutorial-image {
-    position: relative;
+                        <span>📱</span>  
 
-    height: 190px;
+                        <span>  
+                            QR Generator  
+                        </span>  
 
-    overflow: hidden;
+                        <i class="fa-solid fa-chevron-right"  
+                           aria-hidden="true"></i>  
 
-    background: #dce4ef;
-}
+                    </a>  
 
-.tutorial-image img {
-    width: 100%;
-    height: 100%;
+                </li>  
 
-    object-fit: cover;
 
-    transition: transform 0.5s ease;
-}
+                <li>  
 
-.tutorial:hover .tutorial-image img {
-    transform: scale(1.06);
-}
+                    <a href="tutorials.html#python">  
 
-.tutorial-badge {
-    position: absolute;
+                        <span>🐍</span>  
 
-    left: 12px;
-    top: 12px;
+                        <span>  
+                            Learn Python  
+                        </span>  
 
-    padding: 5px 8px;
+                        <i class="fa-solid fa-chevron-right"  
+                           aria-hidden="true"></i>  
 
-    background: #fff;
+                    </a>  
 
-    color: var(--primary);
+                </li>  
 
-    border-radius: 5px;
 
-    font-size: 8px;
-    font-weight: 800;
+                <li>  
 
-    text-transform: uppercase;
-}
+                    <a href="tutorials.html#mysql">  
 
-.tutorial-content {
-    padding: 17px;
-}
+                        <span>🗄️</span>  
 
-.tutorial-content > span {
-    display: block;
+                        <span>  
+                            MySQL Basics  
+                        </span>  
 
-    margin-bottom: 6px;
+                        <i class="fa-solid fa-chevron-right"  
+                           aria-hidden="true"></i>  
 
-    color: var(--primary);
+                    </a>  
 
-    font-size: 9px;
-    font-weight: 700;
+                </li>  
 
-    text-transform: uppercase;
-}
 
-.tutorial-content h3 {
-    margin-bottom: 15px;
+            </ul>  
 
-    color: var(--text-dark);
 
-    font-size: 16px;
-    font-weight: 800;
-}
+            <a href="ghana-tech.html"  
+               class="sidebar-cta">  
 
-.tutorial-content strong {
-    display: inline-flex;
-    align-items: center;
+                <span>Explore Ghana Tech</span>  
 
-    gap: 7px;
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    color: var(--primary);
+            </a>  
 
-    font-size: 10px;
-}
 
-.tutorial:hover .tutorial-content strong {
-    text-decoration: underline;
-}
+        </aside>  
 
 
-/* =========================================================
-   24. TECHNOLOGY CARDS
-========================================================= */
+    </div>  
 
-.technology-card {
-    min-height: 270px;
-}
+</div>
 
-.technology-card .icon {
-    margin-bottom: 20px;
-}
+</section>  <!-- =====================================================  
+     TUTORIALS  
+====================================================== -->  <section class="section"  
+         aria-labelledby="tutorials-title">  <div class="section-container">  
 
-.technology-card h3 {
-    font-size: 18px;
-}
 
-.technology-card p {
-    flex: 1;
-}
+    <div class="section-heading">  
 
 
-/* =========================================================
-   25. WHY TECHHUB
-========================================================= */
+        <div>  
 
-.why-grid {
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+            <span class="section-kicker">  
+                Learn by doing  
+            </span>  
 
-    max-width: 950px;
+            <h2 id="tutorials-title">  
+                Latest Tutorials  
+            </h2>  
 
-    margin: 0 auto;
-}
+        </div>  
 
-.why-grid .tool-card {
-    text-align: center;
-}
 
-.why-grid .icon {
-    margin: 0 auto 18px;
-}
+        <a href="tutorials.html"  
+           class="section-link">  
 
+            View All Tutorials  
 
-/* =========================================================
-   26. NEWSLETTER
-========================================================= */
+            <i class="fa-solid fa-arrow-right"  
+               aria-hidden="true"></i>  
 
-.newsletter {
-    padding: 65px 20px;
+        </a>  
 
-    background:
-        linear-gradient(
-            135deg,
-            #0b5cff 0%,
-            #0645bf 100%
-        );
 
-    color: #fff;
-}
+    </div>  
 
-.newsletter-inner {
-    width: min(
-        100%,
-        900px
-    );
 
-    margin: 0 auto;
 
-    display: grid;
+    <div class="tutorial-grid">  
 
-    grid-template-columns:
-        auto minmax(0, 1fr)
-        minmax(300px, 390px);
 
-    align-items: center;
+        <!-- HTML -->  
 
-    gap: 22px;
-}
+        <a href="tutorials.html#html"  
+           class="tutorial">  
 
-.newsletter-icon {
-    width: 60px;
-    height: 60px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            <div class="tutorial-image">  
 
-    background: rgba(255,255,255,0.13);
+                <img  
+                    src="images/tech1.jpg"  
+                    alt="HTML programming tutorial"  
+                    width="600"  
+                    height="400"  
+                    loading="lazy">  
 
-    border: 1px solid rgba(255,255,255,0.18);
+                <span class="tutorial-badge">  
+                    Beginner  
+                </span>  
 
-    border-radius: 16px;
+            </div>  
 
-    font-size: 23px;
-}
 
-.newsletter .section-kicker {
-    color: #bcd2ff;
-}
+            <div class="tutorial-content">  
 
-.newsletter-content h2 {
-    margin-bottom: 6px;
+                <span>  
+                    Web Development  
+                </span>  
 
-    font-size: 23px;
-    font-weight: 800;
-}
+                <h3>  
+                    HTML for Beginners  
+                </h3>  
 
-.newsletter-content p {
-    color: #dce8ff;
+                <strong>  
+                    Start Learning  
+                    <i class="fa-solid fa-arrow-right"  
+                       aria-hidden="true"></i>  
+                </strong>  
 
-    font-size: 11px;
-}
+            </div>  
 
-.newsletter-form {
-    min-height: 48px;
 
-    display: flex;
+        </a>  
 
-    background: #fff;
 
-    border-radius: 9px;
 
-    overflow: hidden;
-}
+        <!-- CSS -->  
 
-.newsletter-form input {
-    flex: 1;
+        <a href="tutorials.html#css"  
+           class="tutorial">  
 
-    min-width: 0;
 
-    padding: 0 14px;
+            <div class="tutorial-image">  
 
-    border: 0;
-    outline: 0;
+                <img  
+                    src="images/tech2.jpg"  
+                    alt="CSS web design tutorial"  
+                    width="600"  
+                    height="400"  
+                    loading="lazy">  
 
-    color: var(--text);
+                <span class="tutorial-badge">  
+                    Beginner  
+                </span>  
 
-    font-size: 11px;
-}
+            </div>  
 
-.newsletter-form button {
-    padding: 0 16px;
 
-    display: flex;
-    align-items: center;
+            <div class="tutorial-content">  
 
-    gap: 7px;
+                <span>  
+                    Web Design  
+                </span>  
 
-    border: 0;
+                <h3>  
+                    CSS Masterclass  
+                </h3>  
 
-    background: #0f172a;
+                <strong>  
+                    Start Learning  
+                    <i class="fa-solid fa-arrow-right"  
+                       aria-hidden="true"></i>  
+                </strong>  
 
-    color: #fff;
+            </div>  
 
-    font-size: 10px;
-    font-weight: 700;
 
-    transition: var(--transition);
-}
+        </a>  
 
-.newsletter-form button:hover {
-    background: #020617;
-}
 
-.newsletter-note {
-    grid-column: 2 / -1;
 
-    margin-top: -8px;
+        <!-- JAVASCRIPT -->  
 
-    color: #bcd2ff;
+        <a href="tutorials.html#javascript"  
+           class="tutorial">  
 
-    font-size: 9px;
-}
 
+            <div class="tutorial-image">  
 
-/* =========================================================
-   27. FOOTER
-========================================================= */
+                <img  
+                    src="images/tech3.jpg"  
+                    alt="JavaScript programming tutorial"  
+                    width="600"  
+                    height="400"  
+                    loading="lazy">  
 
-.site-footer {
-    padding: 65px 20px 0;
+                <span class="tutorial-badge">  
+                    Intermediate  
+                </span>  
 
-    background: #0b1220;
+            </div>  
 
-    color: #cbd5e1;
-}
 
-.footer-grid {
-    width: min(
-        100%,
-        var(--container)
-    );
+            <div class="tutorial-content">  
 
-    margin: 0 auto;
+                <span>  
+                    Programming  
+                </span>  
 
-    display: grid;
+                <h3>  
+                    JavaScript Essentials  
+                </h3>  
 
-    grid-template-columns:
-        1.5fr
-        1fr
-        1fr
-        1fr;
+                <strong>  
+                    Start Learning  
+                    <i class="fa-solid fa-arrow-right"  
+                       aria-hidden="true"></i>  
+                </strong>  
 
-    gap: 45px;
+            </div>  
 
-    padding-bottom: 50px;
-}
 
-.footer-brand {
-    display: inline-flex;
-    align-items: center;
+        </a>  
 
-    gap: 10px;
 
-    color: #fff;
 
-    font-size: 18px;
-    font-weight: 800;
-}
+        <!-- PYTHON -->  
 
-.footer-brand img {
-    width: 45px;
-    height: 45px;
+        <a href="tutorials.html#python"  
+           class="tutorial">  
 
-    object-fit: contain;
 
-    border-radius: 10px;
-}
+            <div class="tutorial-image">  
 
-.footer-tagline {
-    margin-top: 9px;
+                <img  
+                    src="images/hero.jpg"  
+                    alt="Python programming tutorial"  
+                    width="600"  
+                    height="400"  
+                    loading="lazy">  
 
-    color: #7da6ff !important;
+                <span class="tutorial-badge">  
+                    Beginner  
+                </span>  
 
-    font-size: 9px !important;
-    font-weight: 600 !important;
-}
+            </div>  
 
-.footer-about > p:last-child {
-    max-width: 310px;
 
-    margin-top: 13px;
+            <div class="tutorial-content">  
 
-    color: #94a3b8;
+                <span>  
+                    Programming  
+                </span>  
 
-    font-size: 11px;
+                <h3>  
+                    Python Programming  
+                </h3>  
 
-    line-height: 1.8;
-}
+                <strong>  
+                    Start Learning  
+                    <i class="fa-solid fa-arrow-right"  
+                       aria-hidden="true"></i>  
+                </strong>  
 
-.footer-column h3 {
-    margin-bottom: 18px;
+            </div>  
 
-    color: #fff;
 
-    font-size: 13px;
-    font-weight: 800;
-}
+        </a>  
 
-.footer-column ul {
-    display: grid;
 
-    gap: 10px;
-}
+    </div>  
 
-.footer-column li a {
-    color: #94a3b8;
+</div>
 
-    font-size: 10px;
-    font-weight: 500;
+</section>  <!-- =====================================================  
+     POPULAR TECHNOLOGIES  
+====================================================== -->  <section class="section section-alt"  
+         aria-labelledby="technologies-title">  <div class="section-container">  
 
-    transition: var(--transition);
-}
 
-.footer-column li a:hover {
-    color: #fff;
+    <div class="section-heading">  
 
-    padding-left: 4px;
-}
 
-.footer-bottom {
-    width: min(
-        100%,
-        var(--container)
-    );
+        <div>  
 
-    min-height: 65px;
+            <span class="section-kicker">  
+                Build your skills  
+            </span>  
 
-    margin: 0 auto;
+            <h2 id="technologies-title">  
+                Popular Technologies  
+            </h2>  
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        </div>  
 
-    gap: 20px;
 
-    border-top: 1px solid rgba(255,255,255,0.08);
-}
+        <a href="tutorials.html"  
+           class="section-link">  
 
-.footer-bottom p {
-    color: #64748b;
+            Explore Tutorials  
 
-    font-size: 9px;
-}
+            <i class="fa-solid fa-arrow-right"  
+               aria-hidden="true"></i>  
 
-.back-to-top-link {
-    display: inline-flex;
-    align-items: center;
+        </a>  
 
-    gap: 7px;
 
-    color: #94a3b8;
+    </div>  
 
-    font-size: 10px;
-    font-weight: 600;
 
-    transition: var(--transition);
-}
 
-.back-to-top-link:hover {
-    color: #fff;
-}
+    <div class="card-grid">  
 
 
-/* =========================================================
-   28. BACK TO TOP BUTTON
-========================================================= */
+        <a href="tutorials.html#python"  
+           class="tool-card technology-card">  
 
-.top-btn {
-    position: fixed;
 
-    right: 22px;
-    bottom: 22px;
+            <div class="icon">  
+                🐍  
+            </div>  
 
-    z-index: 900;
 
-    width: 44px;
-    height: 44px;
+            <h3>  
+                Python  
+            </h3>  
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    border: 0;
+            <p>  
+                Learn Python programming from  
+                beginner fundamentals to advanced concepts.  
+            </p>  
 
-    border-radius: 50%;
 
-    background: var(--primary);
+            <span class="card-action">  
 
-    color: #fff;
+                Learn Python  
 
-    box-shadow:
-        0 8px 25px rgba(11, 92, 255, 0.30);
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    opacity: 0;
-    visibility: hidden;
+            </span>  
 
-    transform: translateY(15px);
 
-    transition:
-        opacity var(--transition),
-        visibility var(--transition),
-        transform var(--transition),
-        background var(--transition);
-}
+        </a>  
 
-.top-btn.show {
-    opacity: 1;
-    visibility: visible;
 
-    transform: translateY(0);
-}
 
-.top-btn:hover {
-    background: var(--primary-dark);
+        <a href="tutorials.html#javascript"  
+           class="tool-card technology-card">  
 
-    transform: translateY(-3px);
-}
 
+            <div class="icon">  
+                🟨  
+            </div>  
 
-/* =========================================================
-   29. FOCUS STATES
-========================================================= */
 
-a:focus-visible,
-button:focus-visible,
-input:focus-visible {
-    outline: 3px solid rgba(11, 92, 255, 0.28);
-    outline-offset: 3px;
-}
+            <h3>  
+                JavaScript  
+            </h3>  
 
 
-/* =========================================================
-   30. TABLET
-========================================================= */
+            <p>  
+                Build interactive websites and  
+                modern web applications.  
+            </p>  
 
-@media (max-width: 1050px) {
 
-    .hero-content {
-        grid-template-columns:
-            minmax(0, 1fr)
-            minmax(350px, 0.9fr);
+            <span class="card-action">  
 
-        gap: 40px;
-    }
+                Learn JavaScript  
 
-    .card-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    .tutorial-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
+            </span>  
 
-    .trending-box {
-        grid-template-columns:
-            190px 1fr;
-    }
 
-    .view-more {
-        grid-column: 2;
-    }
+        </a>  
 
-    .footer-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
 
-}
 
+        <a href="tutorials.html#html"  
+           class="tool-card technology-card">  
 
-/* =========================================================
-   31. TABLET / SMALL LAPTOP NAV
-========================================================= */
 
-@media (max-width: 850px) {
+            <div class="icon">  
+                🌐  
+            </div>  
 
-    .top-bar {
-        min-height: 72px;
-    }
 
-    .search-box {
-        width: 280px;
-    }
+            <h3>  
+                HTML & CSS  
+            </h3>  
 
-    .nav-inner a {
-        padding: 0 11px;
 
-        font-size: 11px;
-    }
+            <p>  
+                Master the foundations of modern  
+                website development and design.  
+            </p>  
 
-    .hero {
-        padding: 65px 0;
-    }
 
-    .hero-content {
-        grid-template-columns: 1fr;
+            <span class="card-action">  
 
-        gap: 40px;
-    }
+                Learn Web Development  
 
-    .hero-text {
-        text-align: center;
-    }
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-    }
+            </span>  
 
-    .hero-buttons {
-        justify-content: center;
-    }
 
-    .hero-stats {
-        justify-content: center;
-    }
+        </a>  
 
-    .hero-image {
-        max-width: 700px;
 
-        min-height: 430px;
 
-        margin: 0 auto;
-    }
+        <a href="tutorials.html#mysql"  
+           class="tool-card technology-card">  
 
-    .hero-image img {
-        min-height: 430px;
-    }
 
-    .news-layout {
-        grid-template-columns: 1fr;
-    }
+            <div class="icon">  
+                🗄️  
+            </div>  
 
-    .news-sidebar {
-        order: -1;
-    }
 
-    .newsletter-inner {
-        grid-template-columns:
-            auto 1fr;
+            <h3>  
+                MySQL  
+            </h3>  
 
-        max-width: 700px;
-    }
 
-    .newsletter-form {
-        grid-column: 1 / -1;
-    }
+            <p>  
+                Learn databases, SQL queries,  
+                database design and management.  
+            </p>  
 
-    .newsletter-note {
-        grid-column: 1 / -1;
-    }
 
-}
+            <span class="card-action">  
 
+                Learn MySQL  
 
-/* =========================================================
-   32. MOBILE NAVIGATION
-========================================================= */
+                <i class="fa-solid fa-arrow-right"  
+                   aria-hidden="true"></i>  
 
-@media (max-width: 700px) {
+            </span>  
 
-    .section-container,
-    .top-bar,
-    .nav-inner,
-    .breaking-inner,
-    .hero-content {
-        width: min(
-            calc(100% - 28px),
-            var(--container)
-        );
-    }
 
-    .top-bar {
-        gap: 12px;
-    }
+        </a>  
 
-    .logo-image {
-        width: 45px;
-        height: 45px;
-    }
 
-    .logo-title {
-        font-size: 17px;
-    }
+    </div>  
 
-    .logo-tagline {
-        display: none;
-    }
+</div>
 
-    .search-box {
-        display: none;
-    }
+</section>  <!-- =====================================================  
+     WHY TECHHUB GHANA  
+====================================================== -->  <section class="section"  
+         aria-labelledby="why-title">  <div class="section-container">  
 
-    .menu-btn {
-        display: flex;
-    }
 
-    .main-nav {
-        display: none;
-    }
+    <div class="section-heading centered-heading">  
 
-    .main-nav.show {
-        display: block;
 
-        animation: menuDrop 0.25s ease;
-    }
+        <div>  
 
-    @keyframes menuDrop {
-        from {
-            opacity: 0;
-            transform: translateY(-8px);
-        }
+            <span class="section-kicker">  
+                Why choose us  
+            </span>  
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+            <h2 id="why-title">  
+                Why TechHub Ghana?  
+            </h2>  
 
-    .nav-inner {
-        padding: 8px 0 12px;
+            <p>  
+                Built to make technology easier to  
+                understand, learn and use.  
+            </p>  
 
-        flex-direction: column;
+        </div>  
 
-        align-items: stretch;
+    </div>  
 
-        gap: 2px;
-    }
 
-    .nav-inner a {
-        min-height: 45px;
 
-        justify-content: flex-start;
+    <div class="card-grid why-grid">  
 
-        padding: 0 14px;
 
-        border-radius: 8px;
-    }
+        <article class="tool-card">  
 
-    .nav-inner a::after {
-        display: none;
-    }
 
-    .nav-inner a.active {
-        background: var(--primary-light);
-    }
+            <div class="icon">  
+                🎓  
+            </div>  
 
-    .breaking-inner {
-        min-height: 40px;
 
-        gap: 8px;
-    }
+            <h3>  
+                Student Friendly  
+            </h3>  
 
-    .today-date {
-        display: none;
-    }
 
-    .breaking-label {
-        padding: 5px 9px;
+            <p>  
+                Simple explanations, practical  
+                examples and useful resources designed  
+                to make learning easier.  
+            </p>  
 
-        font-size: 9px;
-    }
 
-    .breaking-track {
-        gap: 20px;
-    }
+        </article>  
 
-    .breaking-track span {
-        font-size: 9px;
-    }
 
-    .section {
-        padding: 60px 0;
-    }
 
-    .hero {
-        padding: 55px 0;
-    }
+        <article class="tool-card">  
 
-    .hero h1 {
-        font-size: clamp(
-            39px,
-            12vw,
-            55px
-        );
 
-        letter-spacing: -1.8px;
-    }
+            <div class="icon">  
+                🛠️  
+            </div>  
 
-    .hero-description {
-        font-size: 13px;
-    }
 
-    .hero-image {
-        min-height: 350px;
+            <h3>  
+                Free Digital Tools  
+            </h3>  
 
-        border-radius: 20px;
-    }
 
-    .hero-image img {
-        min-height: 350px;
-    }
+            <p>  
+                Useful tools for studying,  
+                programming, productivity and everyday  
+                digital tasks.  
+            </p>  
 
-    .hero-card-one {
-        left: 14px;
-        bottom: 14px;
-    }
 
-    .hero-card-two {
-        top: 14px;
-        right: 14px;
-    }
+        </article>  
 
-    .trending-section {
-        padding-top: 20px;
-    }
 
-    .trending-box {
-        grid-template-columns: 1fr;
 
-        gap: 16px;
-    }
+        <article class="tool-card">  
 
-    .view-more {
-        grid-column: auto;
-    }
 
-    .section-heading {
-        align-items: flex-start;
+            <div class="icon">  
+                🇬🇭  
+            </div>  
 
-        flex-direction: column;
 
-        margin-bottom: 24px;
-    }
+            <h3>  
+                Built for Ghana  
+            </h3>  
 
-    .section-link {
-        align-self: flex-start;
-    }
 
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
+            <p>  
+                Technology resources created with  
+                Ghanaian students and digital users  
+                in mind.  
+            </p>  
 
-    .tutorial-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
+        </article>  
 
-    .news-card {
-        grid-template-columns: 1fr;
-    }
 
-    .news-image,
-    .news-image img {
-        min-height: 220px;
+    </div>  
 
-        height: 220px;
-    }
+</div>
 
-    .footer-grid {
-        grid-template-columns: 1fr;
+</section>  <!-- =====================================================  
+     NEWSLETTER  
+====================================================== -->  <section class="newsletter"  
+         aria-labelledby="newsletter-title">  <div class="newsletter-inner">  
 
-        gap: 30px;
-    }
 
-    .footer-bottom {
-        min-height: 85px;
+    <div class="newsletter-icon">  
 
-        flex-direction: column;
+        <i class="fa-regular fa-envelope"  
+           aria-hidden="true"></i>  
 
-        justify-content: center;
+    </div>  
 
-        text-align: center;
-    }
 
-}
+    <div class="newsletter-content">  
 
 
-/* =========================================================
-   33. SMALL MOBILE PHONES
-========================================================= */
+        <span class="section-kicker">  
+            Stay in the loop  
+        </span>  
 
-@media (max-width: 480px) {
 
-    .section-container,
-    .top-bar,
-    .nav-inner,
-    .breaking-inner,
-    .hero-content {
-        width: calc(100% - 22px);
-    }
+        <h2 id="newsletter-title">  
+            Get TechHub Ghana Updates  
+        </h2>  
 
-    .logo-title {
-        font-size: 16px;
-    }
 
-    .logo-image {
-        width: 42px;
-        height: 42px;
-    }
+        <p>  
+            Receive technology news, useful tutorials  
+            and new digital tools when they are available.  
+        </p>  
 
-    .hero {
-        padding: 45px 0;
-    }
 
-    .hero h1 {
-        font-size: 39px;
+    </div>  
 
-        letter-spacing: -1.5px;
-    }
 
-    .hero-buttons {
-        width: 100%;
+    <form  
+        class="newsletter-form"  
+        id="newsletterForm">  
 
-        flex-direction: column;
-    }
 
-    .btn {
-        width: 100%;
-    }
+        <label for="newsletterEmail"  
+               class="sr-only">  
 
-    .hero-stats {
-        gap: 18px;
-    }
+            Email address  
 
-    .hero-stat:not(:last-child)::after {
-        right: -10px;
-    }
+        </label>  
 
-    .hero-image {
-        min-height: 280px;
-    }
 
-    .hero-image img {
-        min-height: 280px;
-    }
+        <input  
+            type="email"  
+            id="newsletterEmail"  
+            name="email"  
+            placeholder="Enter your email address"  
+            autocomplete="email"  
+            required>  
 
-    .hero-floating-card {
-        transform: scale(0.88);
 
-        transform-origin: bottom left;
-    }
+        <button type="submit">  
 
-    .hero-card-two {
-        transform-origin: top right;
-    }
+            <span>Subscribe</span>  
 
-    .trending-list {
-        display: grid;
+            <i class="fa-solid fa-arrow-right"  
+               aria-hidden="true"></i>  
 
-        grid-template-columns: 1fr 1fr;
-    }
+        </button>  
 
-    .trending-item {
-        justify-content: space-between;
-    }
 
-    .section-heading h2 {
-        font-size: 26px;
-    }
+    </form>  
 
-    .tool-card {
-        padding: 19px;
-    }
 
-    .news-content {
-        padding: 17px;
-    }
+    <p class="newsletter-note">  
 
-    .newsletter {
-        padding: 50px 14px;
-    }
+        No spam. Unsubscribe anytime.  
 
-    .newsletter-inner {
-        grid-template-columns: 1fr;
+    </p>  
 
-        text-align: center;
-    }
 
-    .newsletter-icon {
-        margin: 0 auto;
-    }
+</div>
 
-    .newsletter-form,
-    .newsletter-note {
-        grid-column: auto;
-    }
+</section>  </main>  <!-- =====================================================  
+     FOOTER  
+====================================================== -->  <footer class="site-footer">  <div class="footer-grid">  
 
-    .newsletter-form {
-        flex-direction: column;
 
-        min-height: auto;
+    <!-- ABOUT -->  
 
-        background: transparent;
+    <div class="footer-column footer-about">  
 
-        overflow: visible;
 
-        gap: 8px;
-    }
+        <a href="index.html"  
+           class="footer-brand">  
 
-    .newsletter-form input {
-        width: 100%;
-        height: 46px;
 
-        border-radius: 8px;
-    }
+            <img  
+                src="images/logo.png"  
+                alt="TechHub Ghana logo"  
+                width="50"  
+                height="50">  
 
-    .newsletter-form button {
-        width: 100%;
-        height: 46px;
 
-        justify-content: center;
+            <span>  
+                TechHub Ghana  
+            </span>  
 
-        border-radius: 8px;
-    }
 
-    .top-btn {
-        right: 14px;
-        bottom: 14px;
+        </a>  
 
-        width: 40px;
-        height: 40px;
-    }
 
-}
+        <p class="footer-tagline">  
+            Technology • Learning • Innovation  
+        </p>  
 
 
-/* =========================================================
-   34. VERY SMALL DEVICES
-========================================================= */
+        <p>  
+            Your platform for technology news,  
+            practical tutorials and useful digital tools.  
+        </p>  
 
-@media (max-width: 360px) {
 
-    .logo-title {
-        font-size: 14px;
-    }
+    </div>  
 
-    .menu-btn {
-        width: 40px;
-        height: 40px;
-    }
 
-    .hero h1 {
-        font-size: 34px;
-    }
 
-    .hero-description {
-        font-size: 12px;
-    }
+    <!-- QUICK LINKS -->  
 
-    .trending-list {
-        grid-template-columns: 1fr;
-    }
+    <div class="footer-column">  
 
-    .hero-stats {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .hero-stat:not(:last-child)::after {
-        display: none;
-    }
+        <h3>  
+            Explore  
+        </h3>  
 
-}
 
+        <ul>  
 
-/* =========================================================
-   35. REDUCED MOTION
-========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+            <li>  
+                <a href="index.html">  
+                    Home  
+                </a>  
+            </li>  
 
-    html {
-        scroll-behavior: auto;
-    }
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+            <li>  
+                <a href="ghana-tech.html">  
+                    Ghana Tech  
+                </a>  
+            </li>  
 
-}
 
+            <li>  
+                <a href="news.html">  
+                    Technology News  
+                </a>  
+            </li>  
 
-/* =========================================================
-   36. PRINT
-========================================================= */
 
-@media print {
+            <li>  
+                <a href="tutorials.html">  
+                    Tutorials  
+                </a>  
+            </li>  
 
-    .site-header,
-    .breaking-news,
-    .top-btn,
-    .newsletter,
-    .site-footer {
-        display: none !important;
-    }
 
-    body {
-        background: #fff;
-        color: #000;
-    }
+            <li>  
+                <a href="tools.html">  
+                    Digital Tools  
+                </a>  
+            </li>  
 
-    .section {
-        padding: 20px 0;
-    }
 
-}
+        </ul>  
+
+
+    </div>  
+
+
+
+    <!-- TOOLS -->  
+
+    <div class="footer-column">  
+
+
+        <h3>  
+            Popular Tools  
+        </h3>  
+
+
+        <ul>  
+
+
+            <li>  
+                <a href="gpa.html">  
+                    GPA Calculator  
+                </a>  
+            </li>  
+
+
+            <li>  
+                <a href="qr-generator.html">  
+                    QR Generator  
+                </a>  
+            </li>  
+
+
+            <li>  
+                <a href="ai-assistant.html">  
+                    AI Assistant  
+                </a>  
+            </li>  
+
+
+            <li>  
+                <a href="password-generator.html">  
+                    Password Generator  
+                </a>  
+            </li>  
+
+
+        </ul>  
+
+
+    </div>  
+
+
+
+    <!-- COMPANY -->  
+
+    <div class="footer-column">  
+
+
+        <h3>  
+            TechHub Ghana  
+        </h3>  
+
+
+        <ul>  
+
+
+            <li>  
+                <a href="about.html">  
+                    About Us  
+                </a>  
+            </li>  
+
+
+            <li>  
+                <a href="contact.html">  
+                    Contact  
+                </a>  
+            </li>  
+
+
+            <li>  
+                <a href="ghana-tech.html">  
+                    Ghana Technology  
+                </a>  
+            </li>  
+
+
+            <li>  
+                <a href="tutorials.html#python">  
+                    Learn Python  
+                </a>  
+            </li>  
+
+
+        </ul>  
+
+
+    </div>  
+
+
+</div>  
+
+
+
+<!-- FOOTER BOTTOM -->  
+
+<div class="footer-bottom">  
+
+
+    <p>  
+
+        © <span id="footerYear">2026</span>  
+        TechHub Ghana.  
+        All Rights Reserved.  
+
+    </p>  
+
+
+    <a href="#top"  
+       class="back-to-top-link">  
+
+        Back to top  
+
+        <i class="fa-solid fa-arrow-up"  
+           aria-hidden="true"></i>  
+
+    </a>  
+
+
+</div>
+
+</footer>  <!-- =====================================================  
+     BACK TO TOP BUTTON  
+====================================================== -->  <button  
+type="button"  
+id="topBtn"  
+class="top-btn"  
+aria-label="Back to top"  
+title="Back to top">
+
+<i class="fa-solid fa-arrow-up"  
+   aria-hidden="true"></i>
+
+</button>  <!-- =====================================================  
+     JAVASCRIPT  
+       
+     IMPORTANT:  
+     Main functionality should eventually live inside  
+     script.js so every page can share the same system.  
+====================================================== -->  <script src="script.js"></script>  <script>  
+  
+/* =====================================================  
+   TECHHUB GHANA — HOMEPAGE FUNCTIONALITY  
+===================================================== */  
+  
+document.addEventListener("DOMContentLoaded", function () {  
+  
+  
+    /* =================================================  
+       MOBILE NAVIGATION  
+    ================================================== */  
+  
+    const menuBtn =  
+        document.getElementById("menuBtn");  
+  
+    const navMenu =  
+        document.getElementById("navMenu");  
+  
+  
+    if (menuBtn && navMenu) {  
+  
+        menuBtn.addEventListener(  
+            "click",  
+            function () {  
+  
+                const isOpen =  
+                    navMenu.classList.toggle("show");  
+  
+                menuBtn.classList.toggle(  
+                    "active",  
+                    isOpen  
+                );  
+  
+                menuBtn.setAttribute(  
+                    "aria-expanded",  
+                    String(isOpen)  
+                );  
+  
+                menuBtn.setAttribute(  
+                    "aria-label",  
+                    isOpen  
+                        ? "Close navigation menu"  
+                        : "Open navigation menu"  
+                );  
+  
+            }  
+        );  
+  
+  
+        /* Close menu after selecting a link */  
+  
+        navMenu.querySelectorAll("a").forEach(  
+            function (link) {  
+  
+                link.addEventListener(  
+                    "click",  
+                    function () {  
+  
+                        navMenu.classList.remove("show");  
+  
+                        menuBtn.classList.remove("active");  
+  
+                        menuBtn.setAttribute(  
+                            "aria-expanded",  
+                            "false"  
+                        );  
+  
+                        menuBtn.setAttribute(  
+                            "aria-label",  
+                            "Open navigation menu"  
+                        );  
+  
+                    }  
+                );  
+  
+            }  
+        );  
+  
+    }  
+  
+  
+  
+    /* =================================================  
+       CURRENT DATE  
+    ================================================== */  
+  
+    const todayElement =  
+        document.getElementById("today");  
+  
+  
+    if (todayElement) {  
+  
+        const date =  
+            new Date();  
+  
+  
+        todayElement.innerHTML =  
+            `  
+                <i class="fa-regular fa-calendar"  
+                   aria-hidden="true"></i>  
+  
+                <span>  
+                    ${date.toLocaleDateString(  
+                        "en-GH",  
+                        {  
+                            weekday: "long",  
+                            year: "numeric",  
+                            month: "long",  
+                            day: "numeric"  
+                        }  
+                    )}  
+                </span>  
+            `;  
+  
+    }  
+  
+  
+  
+    /* =================================================  
+       SEARCH  
+    ================================================== */  
+  
+    const searchForm =  
+        document.getElementById("searchForm");  
+  
+    const searchInput =  
+        document.getElementById("siteSearch");  
+  
+  
+    if (searchForm && searchInput) {  
+  
+        searchForm.addEventListener(  
+            "submit",  
+            function (event) {  
+  
+                event.preventDefault();  
+  
+  
+                const query =  
+                    searchInput.value.trim();  
+  
+  
+                if (!query) {  
+  
+                    searchInput.focus();  
+  
+                    return;  
+  
+                }  
+  
+  
+                window.location.href =  
+                    "news.html?search=" +  
+                    encodeURIComponent(query);  
+  
+            }  
+        );  
+  
+    }  
+  
+  
+  
+    /* =================================================  
+       NEWSLETTER  
+         
+       This currently provides frontend feedback only.  
+       We will connect it to a real service when the  
+       newsletter/backend system is configured.  
+    ================================================== */  
+  
+    const newsletterForm =  
+        document.getElementById("newsletterForm");  
+  
+  
+    if (newsletterForm) {  
+  
+        newsletterForm.addEventListener(  
+            "submit",  
+            function (event) {  
+  
+                event.preventDefault();  
+  
+  
+                const emailInput =  
+                    document.getElementById(  
+                        "newsletterEmail"  
+                    );  
+  
+  
+                const email =  
+                    emailInput.value.trim();  
+  
+  
+                if (!email) {  
+  
+                    emailInput.focus();  
+  
+                    return;  
+  
+                }  
+  
+  
+                alert(  
+                    "Thank you for subscribing to TechHub Ghana!"  
+                );  
+  
+  
+                newsletterForm.reset();  
+  
+            }  
+        );  
+  
+    }  
+  
+  
+  
+    /* =================================================  
+       BACK TO TOP  
+    ================================================== */  
+  
+    const topBtn =  
+        document.getElementById("topBtn");  
+  
+  
+    if (topBtn) {  
+  
+  
+        function updateTopButton() {  
+  
+            if (window.scrollY > 500) {  
+  
+                topBtn.classList.add("show");  
+  
+            } else {  
+  
+                topBtn.classList.remove("show");  
+  
+            }  
+  
+        }  
+  
+  
+        window.addEventListener(  
+            "scroll",  
+            updateTopButton,  
+            {  
+                passive: true  
+            }  
+        );  
+  
+  
+        topBtn.addEventListener(  
+            "click",  
+            function () {  
+  
+                window.scrollTo(  
+                    {  
+                        top: 0,  
+                        behavior: "smooth"  
+                    }  
+                );  
+  
+            }  
+        );  
+  
+  
+        updateTopButton();  
+  
+    }  
+  
+  
+  
+    /* =================================================  
+       FOOTER YEAR  
+    ================================================== */  
+  
+    const footerYear =  
+        document.getElementById("footerYear");  
+  
+  
+    if (footerYear) {  
+  
+        footerYear.textContent =  
+            new Date().getFullYear();  
+  
+    }  
+  
+  
+  
+    /* =================================================  
+       CLOSE MOBILE MENU WITH ESCAPE  
+    ================================================== */  
+  
+    document.addEventListener(  
+        "keydown",  
+        function (event) {  
+  
+            if (  
+                event.key === "Escape" &&  
+                navMenu &&  
+                navMenu.classList.contains("show")  
+            ) {  
+  
+                navMenu.classList.remove("show");  
+  
+                if (menuBtn) {  
+  
+                    menuBtn.classList.remove("active");  
+  
+                    menuBtn.setAttribute(  
+                        "aria-expanded",  
+                        "false"  
+                    );  
+  
+                    menuBtn.setAttribute(  
+                        "aria-label",  
+                        "Open navigation menu"  
+                    );  
+  
+                }  
+  
+            }  
+  
+        }  
+    );  
+  
+  
+});  
+  
+</script>  </body>  
+               </html>
