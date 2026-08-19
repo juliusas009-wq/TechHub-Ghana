@@ -2,54 +2,90 @@
    TECHHUB GHANA
    MODERN MASTER STYLESHEET
    Version: 2026
+   Designed for:
+   Home • News • Ghana Tech • Tutorials • Tools
+   AI Assistant • GPA • QR • Password • About • Contact
 ========================================================= */
 
 
 /* =========================================================
-   1. VARIABLES
+   1. DESIGN SYSTEM
 ========================================================= */
 
 :root {
 
-    --primary: #0056d2;
-    --primary-dark: #003d99;
+    /* BRAND */
+    --primary: #0756d6;
+    --primary-dark: #043f9f;
     --primary-light: #eaf2ff;
 
-    --accent: #ffcc00;
+    --accent: #ffd400;
+    --accent-dark: #e5b900;
 
+    /* STATUS */
     --success: #16a34a;
     --danger: #dc2626;
+    --warning: #f59e0b;
 
-    --text: #1e293b;
+    /* TEXT */
+    --text: #172033;
+    --text-secondary: #475569;
     --text-light: #64748b;
+    --text-muted: #94a3b8;
 
-    --background: #f4f7fb;
+    /* BACKGROUNDS */
+    --background: #f5f7fb;
     --surface: #ffffff;
-    --border: #e2e8f0;
+    --surface-alt: #f8fafc;
 
+    /* BORDERS */
+    --border: #e2e8f0;
+    --border-light: #eef2f7;
+
+    /* DARK MODE */
     --dark-background: #020617;
     --dark-surface: #0f172a;
-    --dark-card: #1e293b;
-    --dark-border: #334155;
+    --dark-card: #111c31;
+    --dark-border: #26354d;
 
+    /* WHITE */
     --white: #ffffff;
+    --black: #000000;
 
-    --radius-sm: 8px;
-    --radius-md: 12px;
+    /* RADIUS */
+    --radius-xs: 6px;
+    --radius-sm: 9px;
+    --radius-md: 13px;
     --radius-lg: 18px;
-    --radius-xl: 24px;
+    --radius-xl: 26px;
+    --radius-pill: 999px;
+
+    /* SHADOWS */
+    --shadow-xs:
+        0 2px 8px rgba(15, 23, 42, 0.04);
 
     --shadow-sm:
-        0 3px 12px rgba(15, 23, 42, 0.06);
+        0 5px 18px rgba(15, 23, 42, 0.06);
 
     --shadow-md:
-        0 8px 25px rgba(15, 23, 42, 0.08);
+        0 10px 30px rgba(15, 23, 42, 0.08);
 
     --shadow-lg:
-        0 15px 45px rgba(15, 23, 42, 0.12);
+        0 18px 50px rgba(15, 23, 42, 0.12);
+
+    /* TRANSITION */
+    --transition-fast:
+        0.18s ease;
 
     --transition:
         0.25s ease;
+
+    --transition-slow:
+        0.4s ease;
+
+    /* CONTAINER */
+    --container:
+        1400px;
 
 }
 
@@ -58,11 +94,12 @@
    2. RESET
 ========================================================= */
 
-* {
+*,
+*::before,
+*::after {
 
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
 
 }
@@ -70,14 +107,18 @@
 html {
 
     scroll-behavior: smooth;
+    scroll-padding-top: 120px;
 
 }
 
 body {
 
+    min-height: 100vh;
+
     font-family:
         "Poppins",
         Arial,
+        Helvetica,
         sans-serif;
 
     background:
@@ -100,23 +141,18 @@ body {
 
 body.no-scroll {
 
-    overflow: hidden;
+    overflow:
+        hidden;
 
 }
 
 a {
 
-    color: inherit;
+    color:
+        inherit;
 
-    text-decoration: none;
-
-}
-
-img {
-
-    max-width: 100%;
-
-    display: block;
+    text-decoration:
+        none;
 
 }
 
@@ -132,15 +168,39 @@ select {
 
 button {
 
-    cursor: pointer;
+    border:
+        0;
+
+    cursor:
+        pointer;
 
 }
 
 button:disabled {
 
-    cursor: not-allowed;
+    cursor:
+        not-allowed;
 
-    opacity: 0.6;
+    opacity:
+        0.6;
+
+}
+
+img {
+
+    display:
+        block;
+
+    max-width:
+        100%;
+
+}
+
+ul,
+ol {
+
+    padding-left:
+        20px;
 
 }
 
@@ -162,7 +222,7 @@ button:disabled {
 :focus-visible {
 
     outline:
-        3px solid rgba(0, 86, 210, 0.35);
+        3px solid rgba(7, 86, 214, 0.35);
 
     outline-offset:
         3px;
@@ -171,52 +231,74 @@ button:disabled {
 
 
 /* =========================================================
-   4. HEADER
+   4. GLOBAL CONTAINER
 ========================================================= */
 
-header,
-.main-header {
+.container {
 
-    width: 100%;
+    width:
+        min(92%, var(--container));
 
-    position: sticky;
-
-    top: 0;
-
-    z-index: 9999;
-
-    background:
-        rgba(255,255,255,0.96);
-
-    backdrop-filter:
-        blur(12px);
-
-    -webkit-backdrop-filter:
-        blur(12px);
-
-    box-shadow:
-        0 4px 25px rgba(15,23,42,0.08);
+    margin:
+        0 auto;
 
 }
 
 
 /* =========================================================
-   5. TOP BAR
+   5. HEADER
+========================================================= */
+
+header,
+.main-header {
+
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        9999;
+
+    width:
+        100%;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border-bottom:
+        1px solid rgba(226, 232, 240, 0.8);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    box-shadow:
+        0 4px 25px rgba(15, 23, 42, 0.06);
+
+}
+
+
+/* =========================================================
+   6. TOP BAR
 ========================================================= */
 
 .top-bar {
 
-    width: 92%;
+    width:
+        min(92%, var(--container));
 
-    max-width: 1400px;
-
-    min-height: 80px;
+    min-height:
+        78px;
 
     margin:
         0 auto;
 
     padding:
-        12px 0;
+        10px 0;
 
     display:
         flex;
@@ -234,7 +316,7 @@ header,
 
 
 /* =========================================================
-   6. LOGO
+   7. LOGO
 ========================================================= */
 
 .logo {
@@ -259,22 +341,18 @@ header,
 .logo img {
 
     width:
-        55px;
+        54px;
 
     height:
-        55px;
+        54px;
 
     object-fit:
         contain;
 
     border-radius:
-        12px;
+        13px;
 
-}
-
-.logo-text {
-
-    min-width:
+    flex-shrink:
         0;
 
 }
@@ -285,13 +363,16 @@ header,
         var(--primary);
 
     font-size:
-        27px;
+        clamp(20px, 2.3vw, 28px);
 
     font-weight:
         800;
 
     line-height:
-        1.1;
+        1.05;
+
+    letter-spacing:
+        -0.5px;
 
 }
 
@@ -304,28 +385,37 @@ header,
         var(--text-light);
 
     font-size:
-        11px;
+        10px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        0.3px;
 
 }
 
 
 /* =========================================================
-   7. SEARCH
+   8. SEARCH
 ========================================================= */
 
 .search-box {
-
-    display:
-        flex;
 
     width:
         100%;
 
     max-width:
-        430px;
+        440px;
 
     margin-left:
         auto;
+
+    display:
+        flex;
+
+    align-items:
+        stretch;
 
 }
 
@@ -337,8 +427,11 @@ header,
     min-width:
         0;
 
+    height:
+        46px;
+
     padding:
-        12px 15px;
+        0 15px;
 
     border:
         1px solid var(--border);
@@ -358,6 +451,9 @@ header,
     color:
         var(--text);
 
+    font-size:
+        13px;
+
     transition:
         var(--transition);
 
@@ -366,7 +462,7 @@ header,
 .search-box input::placeholder {
 
     color:
-        #94a3b8;
+        var(--text-muted);
 
 }
 
@@ -375,18 +471,21 @@ header,
     border-color:
         var(--primary);
 
+    box-shadow:
+        0 0 0 3px rgba(7, 86, 214, 0.08);
+
 }
 
 .search-box button {
 
     width:
-        55px;
+        52px;
 
     min-width:
-        55px;
+        52px;
 
-    border:
-        0;
+    height:
+        46px;
 
     border-radius:
         0 var(--radius-sm) var(--radius-sm) 0;
@@ -396,6 +495,9 @@ header,
 
     color:
         var(--white);
+
+    font-size:
+        17px;
 
     transition:
         var(--transition);
@@ -411,7 +513,8 @@ header,
 
 
 /* =========================================================
-   8. DARK MODE BUTTON
+   9. DARK MODE BUTTON
+   Supports future HTML implementation
 ========================================================= */
 
 #darkModeBtn {
@@ -425,8 +528,14 @@ header,
     min-width:
         44px;
 
-    border:
-        0;
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
     border-radius:
         50%;
@@ -451,14 +560,13 @@ header,
         var(--primary-dark);
 
     transform:
-        rotate(12deg)
-        scale(1.05);
+        rotate(10deg) scale(1.05);
 
 }
 
 
 /* =========================================================
-   9. MOBILE MENU BUTTON
+   10. MOBILE MENU BUTTON
 ========================================================= */
 
 .menu-btn {
@@ -473,10 +581,13 @@ header,
         46px;
 
     margin:
-        10px auto;
+        8px auto;
 
-    border:
-        0;
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
     border-radius:
         var(--radius-sm);
@@ -488,7 +599,7 @@ header,
         var(--white);
 
     font-size:
-        24px;
+        23px;
 
     line-height:
         1;
@@ -517,7 +628,7 @@ header,
 
 
 /* =========================================================
-   10. NAVIGATION
+   11. NAVIGATION
 ========================================================= */
 
 #navMenu,
@@ -529,10 +640,10 @@ nav {
     display:
         flex;
 
-    justify-content:
+    align-items:
         center;
 
-    align-items:
+    justify-content:
         center;
 
     flex-wrap:
@@ -546,26 +657,27 @@ nav {
 #navMenu a,
 nav a {
 
+    position:
+        relative;
+
     display:
         block;
 
     padding:
-        14px 17px;
+        13px 18px;
 
     color:
         var(--white);
 
     font-size:
-        14px;
+        13px;
 
     font-weight:
         600;
 
-    position:
-        relative;
-
     transition:
-        var(--transition);
+        background var(--transition),
+        color var(--transition);
 
 }
 
@@ -579,16 +691,19 @@ nav a::after {
         absolute;
 
     left:
-        15px;
+        18px;
 
     right:
-        15px;
+        18px;
 
     bottom:
-        7px;
+        5px;
 
     height:
         2px;
+
+    border-radius:
+        10px;
 
     background:
         var(--accent);
@@ -596,8 +711,11 @@ nav a::after {
     transform:
         scaleX(0);
 
+    transform-origin:
+        center;
+
     transition:
-        var(--transition);
+        transform var(--transition);
 
 }
 
@@ -623,7 +741,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   11. BREAKING NEWS
+   12. BREAKING NEWS
 ========================================================= */
 
 .breaking-news {
@@ -633,9 +751,6 @@ nav a.active::after {
 
     min-height:
         38px;
-
-    padding:
-        8px 0;
 
     display:
         flex;
@@ -650,7 +765,7 @@ nav a.active::after {
         #111827;
 
     font-size:
-        13px;
+        12px;
 
     font-weight:
         700;
@@ -662,61 +777,20 @@ nav a.active::after {
 
 .today-date {
 
+    min-width:
+        fit-content;
+
     padding:
-        0 12px;
+        0 14px;
 
     white-space:
         nowrap;
 
-}
-
-
-/* =========================================================
-   12. GENERAL SECTIONS
-========================================================= */
-
-.section {
-
-    width:
-        90%;
-
-    max-width:
-        1400px;
-
-    margin:
-        65px auto;
-
-}
-
-.section > h2 {
-
-    margin-bottom:
-        30px;
-
-    padding-left:
-        15px;
-
-    border-left:
-        6px solid var(--primary);
-
-    color:
-        var(--primary);
-
     font-size:
-        32px;
+        12px;
 
-    line-height:
-        1.3;
-
-}
-
-.section-intro {
-
-    margin-bottom:
-        30px;
-
-    color:
-        var(--text-light);
+    font-weight:
+        800;
 
 }
 
@@ -728,13 +802,10 @@ nav a.active::after {
 .hero {
 
     width:
-        90%;
-
-    max-width:
-        1400px;
+        min(92%, var(--container));
 
     margin:
-        50px auto;
+        48px auto 55px;
 
     display:
         grid;
@@ -742,34 +813,37 @@ nav a.active::after {
     grid-template-columns:
         1.05fr 0.95fr;
 
-    gap:
-        50px;
-
     align-items:
         center;
+
+    gap:
+        clamp(30px, 5vw, 65px);
 
 }
 
 .hero-text {
 
     animation:
-        fadeUp 0.6s ease;
+        fadeUp 0.6s ease both;
 
 }
 
 .hero-text .tag {
 
     display:
-        inline-block;
+        inline-flex;
+
+    align-items:
+        center;
 
     margin-bottom:
-        15px;
+        17px;
 
     padding:
         7px 13px;
 
     border-radius:
-        30px;
+        var(--radius-pill);
 
     background:
         var(--primary-light);
@@ -778,42 +852,57 @@ nav a.active::after {
         var(--primary);
 
     font-size:
-        12px;
+        11px;
 
     font-weight:
-        700;
+        800;
+
+    letter-spacing:
+        0.3px;
 
 }
 
 .hero-text h2 {
 
+    max-width:
+        760px;
+
     margin-bottom:
-        20px;
+        18px;
 
     color:
         var(--primary);
 
     font-size:
-        clamp(34px, 5vw, 55px);
+        clamp(36px, 5vw, 60px);
+
+    font-weight:
+        800;
 
     line-height:
-        1.12;
+        1.08;
+
+    letter-spacing:
+        -1.5px;
 
 }
 
 .hero-text p {
 
     max-width:
-        700px;
+        680px;
 
     margin-bottom:
         28px;
 
     color:
-        var(--text-light);
+        var(--text-secondary);
 
     font-size:
-        17px;
+        16px;
+
+    line-height:
+        1.8;
 
 }
 
@@ -821,6 +910,9 @@ nav a.active::after {
 
     display:
         flex;
+
+    align-items:
+        center;
 
     gap:
         12px;
@@ -832,6 +924,9 @@ nav a.active::after {
 
 .hero-buttons a {
 
+    min-height:
+        46px;
+
     display:
         inline-flex;
 
@@ -842,7 +937,10 @@ nav a.active::after {
         center;
 
     padding:
-        12px 22px;
+        0 22px;
+
+    border:
+        2px solid transparent;
 
     border-radius:
         var(--radius-sm);
@@ -853,8 +951,11 @@ nav a.active::after {
     color:
         var(--white);
 
+    font-size:
+        13px;
+
     font-weight:
-        600;
+        700;
 
     transition:
         var(--transition);
@@ -869,6 +970,9 @@ nav a.active::after {
     transform:
         translateY(-2px);
 
+    box-shadow:
+        var(--shadow-sm);
+
 }
 
 .hero-buttons a:nth-child(2) {
@@ -876,8 +980,8 @@ nav a.active::after {
     background:
         transparent;
 
-    border:
-        2px solid var(--primary);
+    border-color:
+        var(--primary);
 
     color:
         var(--primary);
@@ -901,10 +1005,47 @@ nav a.active::after {
 
 }
 
+.hero-image::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        90px;
+
+    height:
+        90px;
+
+    right:
+        -18px;
+
+    bottom:
+        -18px;
+
+    z-index:
+        -1;
+
+    border-radius:
+        20px;
+
+    background:
+        var(--accent);
+
+    opacity:
+        0.8;
+
+}
+
 .hero-image img {
 
     width:
         100%;
+
+    min-height:
+        320px;
 
     max-height:
         480px;
@@ -922,29 +1063,85 @@ nav a.active::after {
 
 
 /* =========================================================
-   14. TRENDING
+   14. GENERAL SECTIONS
+========================================================= */
+
+.section {
+
+    width:
+        min(92%, var(--container));
+
+    margin:
+        70px auto;
+
+}
+
+.section > h2 {
+
+    position:
+        relative;
+
+    margin-bottom:
+        28px;
+
+    padding-left:
+        15px;
+
+    border-left:
+        5px solid var(--primary);
+
+    color:
+        var(--primary);
+
+    font-size:
+        clamp(24px, 3vw, 32px);
+
+    font-weight:
+        800;
+
+    line-height:
+        1.25;
+
+}
+
+.section-intro {
+
+    max-width:
+        750px;
+
+    margin-bottom:
+        30px;
+
+    color:
+        var(--text-light);
+
+}
+
+
+/* =========================================================
+   15. TRENDING
 ========================================================= */
 
 .trending-section {
 
     width:
-        90%;
-
-    max-width:
-        1400px;
+        min(92%, var(--container));
 
     margin:
-        40px auto;
+        35px auto 60px;
 
 }
 
 .trending-box {
 
     padding:
-        25px;
+        24px;
 
     background:
         var(--surface);
+
+    border:
+        1px solid var(--border-light);
 
     border-radius:
         var(--radius-lg);
@@ -957,10 +1154,13 @@ nav a.active::after {
 .trending-box h2 {
 
     margin-bottom:
-        18px;
+        17px;
 
     color:
         var(--primary);
+
+    font-size:
+        22px;
 
 }
 
@@ -969,8 +1169,11 @@ nav a.active::after {
     display:
         flex;
 
+    align-items:
+        center;
+
     gap:
-        12px;
+        10px;
 
     flex-wrap:
         wrap;
@@ -989,19 +1192,22 @@ nav a.active::after {
         8px;
 
     padding:
-        10px 14px;
+        9px 14px;
 
     border:
         1px solid var(--border);
 
     border-radius:
-        30px;
+        var(--radius-pill);
 
     background:
-        var(--background);
+        var(--surface-alt);
+
+    color:
+        var(--text-secondary);
 
     font-size:
-        13px;
+        12px;
 
     font-weight:
         600;
@@ -1013,13 +1219,13 @@ nav a.active::after {
 
 .trending-item:hover {
 
+    border-color:
+        var(--primary);
+
     background:
         var(--primary-light);
 
     color:
-        var(--primary);
-
-    border-color:
         var(--primary);
 
     transform:
@@ -1030,27 +1236,40 @@ nav a.active::after {
 .view-more {
 
     display:
-        inline-block;
+        inline-flex;
 
     margin-top:
-        18px;
+        17px;
 
     color:
         var(--primary);
+
+    font-size:
+        13px;
 
     font-weight:
         700;
 
 }
 
+.view-more:hover {
+
+    text-decoration:
+        underline;
+
+}
+
 
 /* =========================================================
-   15. BUTTONS
+   16. BUTTON SYSTEM
 ========================================================= */
 
 .read-btn,
 .btn,
 .hero-btn {
+
+    min-height:
+        42px;
 
     display:
         inline-flex;
@@ -1062,7 +1281,7 @@ nav a.active::after {
         center;
 
     padding:
-        11px 20px;
+        0 18px;
 
     border:
         0;
@@ -1076,8 +1295,11 @@ nav a.active::after {
     color:
         var(--white);
 
+    font-size:
+        13px;
+
     font-weight:
-        600;
+        700;
 
     transition:
         var(--transition);
@@ -1098,7 +1320,7 @@ nav a.active::after {
 
 
 /* =========================================================
-   16. CARD GRID
+   17. CARD GRID
 ========================================================= */
 
 .card-grid,
@@ -1111,26 +1333,29 @@ nav a.active::after {
         repeat(auto-fit, minmax(230px, 1fr));
 
     gap:
-        25px;
+        22px;
 
 }
 
 
 /* =========================================================
-   17. TOOL CARDS
+   18. TOOL / GENERAL CARDS
 ========================================================= */
 
 .tool-card,
 .card {
 
+    position:
+        relative;
+
     padding:
-        30px 25px;
+        28px 23px;
 
     background:
         var(--surface);
 
     border:
-        1px solid transparent;
+        1px solid var(--border-light);
 
     border-radius:
         var(--radius-md);
@@ -1142,7 +1367,9 @@ nav a.active::after {
         center;
 
     transition:
-        var(--transition);
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
 
 }
 
@@ -1150,10 +1377,10 @@ nav a.active::after {
 .card:hover {
 
     transform:
-        translateY(-7px);
+        translateY(-6px);
 
     border-color:
-        rgba(0,86,210,0.12);
+        rgba(7, 86, 214, 0.16);
 
     box-shadow:
         var(--shadow-lg);
@@ -1162,11 +1389,32 @@ nav a.active::after {
 
 .tool-card .icon {
 
-    margin-bottom:
-        15px;
+    width:
+        68px;
+
+    height:
+        68px;
+
+    margin:
+        0 auto 16px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        18px;
+
+    background:
+        var(--primary-light);
 
     font-size:
-        48px;
+        34px;
 
 }
 
@@ -1174,10 +1422,13 @@ nav a.active::after {
 .card h2 {
 
     margin-bottom:
-        10px;
+        9px;
 
     color:
         var(--primary);
+
+    font-size:
+        18px;
 
 }
 
@@ -1185,13 +1436,16 @@ nav a.active::after {
 .card p {
 
     margin-bottom:
-        20px;
+        18px;
 
     color:
         var(--text-light);
 
     font-size:
-        14px;
+        13px;
+
+    line-height:
+        1.7;
 
 }
 
@@ -1200,14 +1454,24 @@ nav a.active::after {
     color:
         var(--primary);
 
+    font-size:
+        13px;
+
     font-weight:
         700;
 
 }
 
+.tool-card a:hover {
+
+    text-decoration:
+        underline;
+
+}
+
 
 /* =========================================================
-   18. NEWS
+   19. NEWS LAYOUT
 ========================================================= */
 
 .news-layout {
@@ -1216,10 +1480,17 @@ nav a.active::after {
         grid;
 
     grid-template-columns:
-        2fr 1fr;
+        minmax(0, 2fr) minmax(260px, 1fr);
 
     gap:
-        30px;
+        28px;
+
+}
+
+.news-left {
+
+    min-width:
+        0;
 
 }
 
@@ -1232,16 +1503,16 @@ nav a.active::after {
         20px;
 
     margin-bottom:
-        20px;
+        18px;
 
     padding:
-        18px;
+        17px;
 
     background:
         var(--surface);
 
     border:
-        1px solid transparent;
+        1px solid var(--border-light);
 
     border-radius:
         var(--radius-md);
@@ -1256,11 +1527,11 @@ nav a.active::after {
 
 .news-card:hover {
 
+    border-color:
+        rgba(7, 86, 214, 0.15);
+
     transform:
         translateY(-4px);
-
-    border-color:
-        rgba(0,86,210,0.12);
 
     box-shadow:
         var(--shadow-md);
@@ -1289,13 +1560,16 @@ nav a.active::after {
 .news-card h3 {
 
     margin-bottom:
-        9px;
+        8px;
 
     color:
         var(--primary);
 
     font-size:
-        20px;
+        19px;
+
+    line-height:
+        1.35;
 
 }
 
@@ -1305,22 +1579,31 @@ nav a.active::after {
         var(--text-light);
 
     font-size:
-        14px;
+        13px;
+
+    line-height:
+        1.7;
 
 }
 
 
 /* =========================================================
-   19. SIDEBAR
+   20. SIDEBAR
 ========================================================= */
 
 aside {
 
+    height:
+        fit-content;
+
     padding:
-        25px;
+        23px;
 
     background:
         var(--surface);
+
+    border:
+        1px solid var(--border-light);
 
     border-radius:
         var(--radius-md);
@@ -1328,22 +1611,34 @@ aside {
     box-shadow:
         var(--shadow-sm);
 
-    height:
-        fit-content;
-
 }
 
 aside h3 {
 
     margin-bottom:
-        18px;
+        14px;
+
+    padding-bottom:
+        12px;
+
+    border-bottom:
+        2px solid var(--primary-light);
 
     color:
         var(--primary);
 
+    font-size:
+        18px;
+
 }
 
 aside ul {
+
+    margin:
+        0;
+
+    padding:
+        0;
 
     list-style:
         none;
@@ -1353,7 +1648,7 @@ aside ul {
 aside li {
 
     padding:
-        12px 0;
+        11px 0;
 
     border-bottom:
         1px solid var(--border);
@@ -1369,6 +1664,12 @@ aside li:last-child {
 
 aside a {
 
+    color:
+        var(--text-secondary);
+
+    font-size:
+        13px;
+
     font-weight:
         600;
 
@@ -1383,7 +1684,7 @@ aside a:hover {
 
 
 /* =========================================================
-   20. TUTORIALS
+   21. TUTORIAL GRID
 ========================================================= */
 
 .tutorial-grid {
@@ -1392,26 +1693,29 @@ aside a:hover {
         grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+        repeat(auto-fit, minmax(240px, 1fr));
 
     gap:
-        25px;
+        22px;
 
 }
 
 .tutorial {
 
+    display:
+        block;
+
     overflow:
         hidden;
 
     padding-bottom:
-        20px;
+        18px;
 
     background:
         var(--surface);
 
     border:
-        1px solid transparent;
+        1px solid var(--border-light);
 
     border-radius:
         var(--radius-md);
@@ -1427,7 +1731,7 @@ aside a:hover {
 .tutorial:hover {
 
     transform:
-        translateY(-7px);
+        translateY(-6px);
 
     box-shadow:
         var(--shadow-lg);
@@ -1440,7 +1744,7 @@ aside a:hover {
         100%;
 
     height:
-        210px;
+        200px;
 
     object-fit:
         cover;
@@ -1459,7 +1763,7 @@ aside a:hover {
         5px 10px;
 
     border-radius:
-        20px;
+        var(--radius-pill);
 
     background:
         var(--primary-light);
@@ -1468,33 +1772,39 @@ aside a:hover {
         var(--primary);
 
     font-size:
-        11px;
+        10px;
 
     font-weight:
-        700;
+        800;
 
 }
 
 .tutorial h3 {
 
     padding:
-        10px 18px;
+        10px 18px 0;
 
     color:
         var(--primary);
+
+    font-size:
+        17px;
+
+    line-height:
+        1.4;
 
 }
 
 .tutorial > p {
 
     padding:
-        0 18px;
+        7px 18px 0;
 
     color:
         var(--text-light);
 
     font-size:
-        14px;
+        13px;
 
 }
 
@@ -1507,28 +1817,25 @@ aside a:hover {
         15px;
 
     padding:
-        15px 18px;
+        14px 18px 0;
 
     color:
         var(--text-light);
 
     font-size:
-        12px;
+        11px;
 
 }
 
 
 /* =========================================================
-   21. ARTICLE
+   22. ARTICLE
 ========================================================= */
 
 .article-page {
 
     width:
-        90%;
-
-    max-width:
-        1000px;
+        min(92%, 1000px);
 
     margin:
         50px auto;
@@ -1538,6 +1845,9 @@ aside a:hover {
 
     background:
         var(--surface);
+
+    border:
+        1px solid var(--border-light);
 
     border-radius:
         var(--radius-lg);
@@ -1550,23 +1860,33 @@ aside a:hover {
 .article-page h1 {
 
     margin:
-        25px 0 15px;
+        20px 0 15px;
 
     color:
         var(--primary);
 
     font-size:
-        38px;
+        clamp(29px, 5vw, 42px);
 
     line-height:
-        1.25;
+        1.2;
 
 }
 
 .article-page h2 {
 
     margin:
-        30px 0 15px;
+        32px 0 14px;
+
+    color:
+        var(--primary);
+
+}
+
+.article-page h3 {
+
+    margin:
+        25px 0 10px;
 
     color:
         var(--primary);
@@ -1579,14 +1899,15 @@ aside a:hover {
         18px;
 
     color:
-        #475569;
+        var(--text-secondary);
+
+    line-height:
+        1.85;
 
 }
 
-.article-page ul {
-
-    padding-left:
-        25px;
+.article-page ul,
+.article-page ol {
 
     margin-bottom:
         20px;
@@ -1596,7 +1917,7 @@ aside a:hover {
 .article-page li {
 
     margin-bottom:
-        10px;
+        9px;
 
 }
 
@@ -1606,7 +1927,7 @@ aside a:hover {
         100%;
 
     max-height:
-        500px;
+        520px;
 
     object-fit:
         cover;
@@ -1621,11 +1942,14 @@ aside a:hover {
     display:
         flex;
 
+    align-items:
+        center;
+
     flex-wrap:
         wrap;
 
     gap:
-        20px;
+        18px;
 
     margin-bottom:
         25px;
@@ -1634,29 +1958,26 @@ aside a:hover {
         var(--text-light);
 
     font-size:
-        14px;
+        12px;
 
 }
 
 
 /* =========================================================
-   22. AI ASSISTANT
+   23. AI ASSISTANT
 ========================================================= */
 
 .ai-section {
 
-    margin-top:
-        40px;
+    width:
+        min(92%, 1000px);
+
+    margin:
+        45px auto;
 
 }
 
 .ai-container {
-
-    max-width:
-        950px;
-
-    margin:
-        auto;
 
     padding:
         30px;
@@ -1703,6 +2024,9 @@ aside a:hover {
     color:
         var(--text-light);
 
+    font-size:
+        14px;
+
 }
 
 .ai-input-box {
@@ -1716,6 +2040,9 @@ aside a:hover {
 
     display:
         flex;
+
+    align-items:
+        center;
 
     justify-content:
         space-between;
@@ -1742,7 +2069,7 @@ aside a:hover {
         var(--text-light);
 
     font-size:
-        12px;
+        11px;
 
 }
 
@@ -1789,7 +2116,7 @@ aside a:hover {
         var(--primary);
 
     box-shadow:
-        0 0 0 3px rgba(0,86,210,0.1);
+        0 0 0 4px rgba(7, 86, 214, 0.08);
 
 }
 
@@ -1812,7 +2139,7 @@ aside a:hover {
         repeat(4, 1fr);
 
     gap:
-        12px;
+        10px;
 
     margin:
         20px 0;
@@ -1821,11 +2148,11 @@ aside a:hover {
 
 .ai-btn {
 
-    padding:
-        13px 10px;
+    min-height:
+        44px;
 
-    border:
-        0;
+    padding:
+        10px;
 
     border-radius:
         var(--radius-sm);
@@ -1836,8 +2163,11 @@ aside a:hover {
     color:
         var(--white);
 
+    font-size:
+        12px;
+
     font-weight:
-        600;
+        700;
 
     transition:
         var(--transition);
@@ -1904,9 +2234,6 @@ aside a:hover {
     padding:
         8px 13px;
 
-    border:
-        0;
-
     border-radius:
         var(--radius-sm);
 
@@ -1916,8 +2243,11 @@ aside a:hover {
     color:
         var(--primary);
 
+    font-size:
+        12px;
+
     font-weight:
-        600;
+        700;
 
 }
 
@@ -1971,9 +2301,6 @@ aside a:hover {
     padding:
         10px 18px;
 
-    border:
-        0;
-
     border-radius:
         var(--radius-sm);
 
@@ -1983,8 +2310,11 @@ aside a:hover {
     color:
         var(--danger);
 
+    font-size:
+        12px;
+
     font-weight:
-        600;
+        700;
 
 }
 
@@ -2000,7 +2330,7 @@ aside a:hover {
 
 
 /* =========================================================
-   23. LOGIN / SIGNUP
+   24. LOGIN / SIGNUP
 ========================================================= */
 
 .login-section {
@@ -2011,14 +2341,14 @@ aside a:hover {
     display:
         flex;
 
-    justify-content:
-        center;
-
     align-items:
         center;
 
+    justify-content:
+        center;
+
     padding:
-        50px 20px;
+        55px 20px;
 
 }
 
@@ -2035,6 +2365,9 @@ aside a:hover {
 
     background:
         var(--surface);
+
+    border:
+        1px solid var(--border-light);
 
     border-radius:
         var(--radius-lg);
@@ -2068,6 +2401,9 @@ aside a:hover {
     text-align:
         center;
 
+    font-size:
+        13px;
+
 }
 
 .login-box form {
@@ -2085,8 +2421,11 @@ aside a:hover {
     margin:
         10px 0 6px;
 
+    font-size:
+        13px;
+
     font-weight:
-        600;
+        700;
 
 }
 
@@ -2095,8 +2434,11 @@ aside a:hover {
     width:
         100%;
 
+    height:
+        46px;
+
     padding:
-        13px 14px;
+        0 14px;
 
     border:
         1px solid var(--border);
@@ -2120,18 +2462,18 @@ aside a:hover {
     border-color:
         var(--primary);
 
+    box-shadow:
+        0 0 0 3px rgba(7,86,214,0.08);
+
 }
 
 .login-box button {
 
+    min-height:
+        46px;
+
     margin-top:
         20px;
-
-    padding:
-        13px;
-
-    border:
-        0;
 
     border-radius:
         var(--radius-sm);
@@ -2166,19 +2508,16 @@ aside a:hover {
 
 
 /* =========================================================
-   24. NEWSLETTER
+   25. NEWSLETTER
 ========================================================= */
 
 .newsletter {
 
     width:
-        90%;
-
-    max-width:
-        1400px;
+        min(92%, var(--container));
 
     margin:
-        70px auto;
+        75px auto;
 
     padding:
         55px 25px;
@@ -2189,8 +2528,8 @@ aside a:hover {
     background:
         linear-gradient(
             135deg,
-            #0056d2,
-            #003d99
+            #0756d6,
+            #043f9f
         );
 
     color:
@@ -2207,17 +2546,26 @@ aside a:hover {
 .newsletter h2 {
 
     margin-bottom:
-        12px;
+        10px;
 
     font-size:
-        34px;
+        clamp(27px, 4vw, 35px);
 
 }
 
 .newsletter p {
 
-    margin-bottom:
-        25px;
+    max-width:
+        650px;
+
+    margin:
+        0 auto 25px;
+
+    color:
+        rgba(255,255,255,0.88);
+
+    font-size:
+        13px;
 
 }
 
@@ -2229,8 +2577,11 @@ aside a:hover {
     justify-content:
         center;
 
+    align-items:
+        center;
+
     gap:
-        12px;
+        10px;
 
     flex-wrap:
         wrap;
@@ -2245,8 +2596,11 @@ aside a:hover {
     max-width:
         100%;
 
+    height:
+        46px;
+
     padding:
-        14px 16px;
+        0 16px;
 
     border:
         0;
@@ -2261,11 +2615,11 @@ aside a:hover {
 
 .newsletter button {
 
-    padding:
-        14px 25px;
+    min-height:
+        46px;
 
-    border:
-        0;
+    padding:
+        0 24px;
 
     border-radius:
         var(--radius-sm);
@@ -2274,10 +2628,10 @@ aside a:hover {
         var(--accent);
 
     color:
-        #111;
+        #111827;
 
     font-weight:
-        700;
+        800;
 
     transition:
         var(--transition);
@@ -2286,6 +2640,9 @@ aside a:hover {
 
 .newsletter button:hover {
 
+    background:
+        var(--accent-dark);
+
     transform:
         translateY(-2px);
 
@@ -2293,19 +2650,19 @@ aside a:hover {
 
 
 /* =========================================================
-   25. FOOTER
+   26. FOOTER
 ========================================================= */
 
 footer {
 
     margin-top:
-        70px;
+        80px;
 
     padding:
         60px 5% 25px;
 
     background:
-        #0f172a;
+        #0b1220;
 
     color:
         var(--white);
@@ -2315,22 +2672,19 @@ footer {
 .footer-grid {
 
     width:
-        100%;
-
-    max-width:
-        1400px;
+        min(100%, var(--container));
 
     margin:
-        auto;
+        0 auto;
 
     display:
         grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(210px, 1fr));
+        1.5fr 1fr 1fr 1fr;
 
     gap:
-        40px;
+        45px;
 
 }
 
@@ -2340,7 +2694,10 @@ footer {
         15px;
 
     color:
-        #38bdf8;
+        #60a5fa;
+
+    font-size:
+        16px;
 
 }
 
@@ -2353,7 +2710,7 @@ footer {
         #cbd5e1;
 
     font-size:
-        14px;
+        13px;
 
 }
 
@@ -2372,12 +2729,15 @@ footer {
     color:
         var(--white);
 
+    padding-left:
+        3px;
+
 }
 
 footer hr {
 
-    max-width:
-        1400px;
+    width:
+        min(100%, var(--container));
 
     margin:
         35px auto 20px;
@@ -2386,7 +2746,7 @@ footer hr {
         0;
 
     border-top:
-        1px solid rgba(255,255,255,0.15);
+        1px solid rgba(255,255,255,0.12);
 
 }
 
@@ -2399,13 +2759,13 @@ footer hr {
         #94a3b8;
 
     font-size:
-        13px;
+        12px;
 
 }
 
 
 /* =========================================================
-   26. BACK TO TOP
+   27. BACK TO TOP
 ========================================================= */
 
 #topBtn {
@@ -2423,10 +2783,10 @@ footer hr {
         9998;
 
     width:
-        45px;
+        46px;
 
     height:
-        45px;
+        46px;
 
     display:
         none;
@@ -2453,7 +2813,7 @@ footer hr {
         20px;
 
     box-shadow:
-        0 5px 15px rgba(0,0,0,0.25);
+        0 8px 20px rgba(0,0,0,0.22);
 
     transition:
         var(--transition);
@@ -2466,13 +2826,13 @@ footer hr {
         var(--primary-dark);
 
     transform:
-        translateY(-3px);
+        translateY(-4px);
 
 }
 
 
 /* =========================================================
-   27. DARK MODE
+   28. DARK MODE
 ========================================================= */
 
 body.dark {
@@ -2483,20 +2843,32 @@ body.dark {
     --surface:
         #0f172a;
 
+    --surface-alt:
+        #111c31;
+
     --text:
         #f8fafc;
 
-    --text-light:
+    --text-secondary:
         #cbd5e1;
 
+    --text-light:
+        #94a3b8;
+
+    --text-muted:
+        #64748b;
+
     --border:
-        #334155;
+        #26354d;
+
+    --border-light:
+        #1e2b42;
 
     background:
-        #020617;
+        var(--background);
 
     color:
-        #f8fafc;
+        var(--text);
 
 }
 
@@ -2504,7 +2876,10 @@ body.dark header,
 body.dark .main-header {
 
     background:
-        rgba(15,23,42,0.96);
+        rgba(15, 23, 42, 0.96);
+
+    border-bottom-color:
+        rgba(51,65,85,0.65);
 
 }
 
@@ -2518,20 +2893,20 @@ body.dark .logo h1 {
 body.dark .logo p {
 
     color:
-        #cbd5e1;
+        #94a3b8;
 
 }
 
 body.dark .search-box input {
 
     background:
-        #1e293b;
+        #111c31;
 
     color:
-        #fff;
+        #ffffff;
 
     border-color:
-        #475569;
+        #334155;
 
 }
 
@@ -2543,13 +2918,7 @@ body.dark nav {
 
 }
 
-body.dark .hero-text p,
-body.dark .section-intro,
-body.dark .news-card p,
-body.dark .tool-card p,
-body.dark .card p,
-body.dark .tutorial > p,
-body.dark .article-page p {
+body.dark .hero-text p {
 
     color:
         #cbd5e1;
@@ -2580,17 +2949,37 @@ body.dark .login-box {
         #0f172a;
 
     border-color:
-        #334155;
+        #26354d;
 
 }
 
 body.dark .trending-item {
 
     background:
-        #1e293b;
+        #111c31;
 
     border-color:
         #334155;
+
+    color:
+        #cbd5e1;
+
+}
+
+body.dark .trending-item:hover {
+
+    background:
+        #172554;
+
+    color:
+        #60a5fa;
+
+}
+
+body.dark .tool-card .icon {
+
+    background:
+        #172554;
 
 }
 
@@ -2604,17 +2993,58 @@ body.dark .tutorial .category {
 
 }
 
-body.dark #userText,
-body.dark .ai-result {
-
-    background:
-        #1e293b;
+body.dark .hero-buttons a:nth-child(2) {
 
     color:
-        #fff;
+        #60a5fa;
 
     border-color:
-        #475569;
+        #60a5fa;
+
+}
+
+body.dark .hero-buttons a:nth-child(2):hover {
+
+    background:
+        #2563eb;
+
+    color:
+        #ffffff;
+
+}
+
+body.dark .news-card p,
+body.dark .tool-card p,
+body.dark .card p,
+body.dark .tutorial > p,
+body.dark .article-page p {
+
+    color:
+        #cbd5e1;
+
+}
+
+body.dark .article-page h1,
+body.dark .article-page h2,
+body.dark .article-page h3 {
+
+    color:
+        #60a5fa;
+
+}
+
+body.dark #userText,
+body.dark .ai-result,
+body.dark .login-box input {
+
+    background:
+        #111c31;
+
+    color:
+        #ffffff;
+
+    border-color:
+        #334155;
 
 }
 
@@ -2624,20 +3054,7 @@ body.dark .ai-result-box {
         #020617;
 
     border-color:
-        #334155;
-
-}
-
-body.dark .login-box input {
-
-    background:
-        #1e293b;
-
-    color:
-        #fff;
-
-    border-color:
-        #475569;
+        #26354d;
 
 }
 
@@ -2648,9 +3065,194 @@ body.dark .section > h2 {
 
 }
 
+body.dark aside li {
+
+    border-bottom-color:
+        #26354d;
+
+}
+
 
 /* =========================================================
-   28. MOBILE NAVIGATION
+   29. TABLES
+========================================================= */
+
+table {
+
+    width:
+        100%;
+
+    border-collapse:
+        collapse;
+
+    margin:
+        25px 0;
+
+    background:
+        var(--surface);
+
+    border-radius:
+        var(--radius-md);
+
+    overflow:
+        hidden;
+
+}
+
+th,
+td {
+
+    padding:
+        12px 14px;
+
+    border:
+        1px solid var(--border);
+
+    text-align:
+        left;
+
+}
+
+th {
+
+    background:
+        var(--primary);
+
+    color:
+        var(--white);
+
+    font-weight:
+        700;
+
+}
+
+td {
+
+    color:
+        var(--text-secondary);
+
+}
+
+tbody tr:hover {
+
+    background:
+        var(--surface-alt);
+
+}
+
+
+/* =========================================================
+   30. FORMS
+========================================================= */
+
+input,
+textarea,
+select {
+
+    color:
+        var(--text);
+
+}
+
+textarea {
+
+    min-height:
+        140px;
+
+    resize:
+        vertical;
+
+}
+
+input::placeholder,
+textarea::placeholder {
+
+    color:
+        var(--text-muted);
+
+}
+
+
+/* =========================================================
+   31. BADGES
+========================================================= */
+
+.badge,
+.category-badge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        5px 10px;
+
+    border-radius:
+        var(--radius-pill);
+
+    background:
+        var(--primary-light);
+
+    color:
+        var(--primary);
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* =========================================================
+   32. EMPTY / LOADING STATES
+========================================================= */
+
+.loading,
+.empty-state {
+
+    padding:
+        35px 20px;
+
+    text-align:
+        center;
+
+    color:
+        var(--text-light);
+
+}
+
+.spinner {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    margin:
+        0 auto 15px;
+
+    border:
+        4px solid var(--border);
+
+    border-top-color:
+        var(--primary);
+
+    border-radius:
+        50%;
+
+    animation:
+        spin 0.8s linear infinite;
+
+}
+
+
+/* =========================================================
+   33. MOBILE NAVIGATION
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -2674,6 +3276,9 @@ body.dark .section > h2 {
         width:
             94%;
 
+        min-height:
+            auto;
+
         display:
             grid;
 
@@ -2681,7 +3286,7 @@ body.dark .section > h2 {
             1fr auto;
 
         gap:
-            12px;
+            10px;
 
         padding:
             10px 0;
@@ -2691,34 +3296,27 @@ body.dark .section > h2 {
 
     /* LOGO */
 
-    .logo {
-
-        min-width:
-            0;
-
-    }
-
     .logo img {
 
         width:
-            48px;
+            47px;
 
         height:
-            48px;
+            47px;
 
     }
 
     .logo h1 {
 
         font-size:
-            21px;
+            20px;
 
     }
 
     .logo p {
 
         font-size:
-            9px;
+            8px;
 
     }
 
@@ -2745,31 +3343,12 @@ body.dark .section > h2 {
     }
 
 
-    /* DARK MODE */
-
-    #darkModeBtn {
-
-        width:
-            42px;
-
-        height:
-            42px;
-
-    }
-
-
-    /* MENU BUTTON */
+    /* MENU */
 
     .menu-btn {
 
         display:
             flex;
-
-        align-items:
-            center;
-
-        justify-content:
-            center;
 
         position:
             relative;
@@ -2859,18 +3438,48 @@ body.dark .section > h2 {
     }
 
 
+    /* BREAKING NEWS */
+
+    .breaking-news {
+
+        font-size:
+            11px;
+
+    }
+
+    .today-date {
+
+        padding:
+            0 9px;
+
+        font-size:
+            10px;
+
+    }
+
+
     /* HERO */
 
     .hero {
 
-        grid-template-columns:
-            1fr;
-
         width:
             92%;
 
+        grid-template-columns:
+            1fr;
+
+        margin-top:
+            35px;
+
         text-align:
             center;
+
+    }
+
+    .hero-text h2 {
+
+        letter-spacing:
+            -0.7px;
 
     }
 
@@ -2882,12 +3491,59 @@ body.dark .section > h2 {
         margin-right:
             auto;
 
+        font-size:
+            14px;
+
     }
 
     .hero-buttons {
 
         justify-content:
             center;
+
+    }
+
+    .hero-image {
+
+        margin-top:
+            5px;
+
+    }
+
+    .hero-image::after {
+
+        display:
+            none;
+
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+
+        width:
+            92%;
+
+        margin:
+            55px auto;
+
+    }
+
+    .section > h2 {
+
+        font-size:
+            26px;
+
+    }
+
+
+    /* TRENDING */
+
+    .trending-section {
+
+        width:
+            92%;
 
     }
 
@@ -2919,23 +3575,6 @@ body.dark .section > h2 {
     }
 
 
-    /* SECTIONS */
-
-    .section {
-
-        width:
-            92%;
-
-    }
-
-    .section > h2 {
-
-        font-size:
-            27px;
-
-    }
-
-
     /* ARTICLE */
 
     .article-page {
@@ -2944,7 +3583,7 @@ body.dark .section > h2 {
             92%;
 
         padding:
-            22px;
+            23px;
 
     }
 
@@ -2957,6 +3596,9 @@ body.dark .section > h2 {
 
     .article-info {
 
+        align-items:
+            flex-start;
+
         flex-direction:
             column;
 
@@ -2967,6 +3609,13 @@ body.dark .section > h2 {
 
 
     /* AI */
+
+    .ai-section {
+
+        width:
+            92%;
+
+    }
 
     .ai-container {
 
@@ -2987,8 +3636,11 @@ body.dark .section > h2 {
 
     .footer-grid {
 
-        text-align:
-            center;
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap:
+            30px;
 
     }
 
@@ -2996,10 +3648,27 @@ body.dark .section > h2 {
 
 
 /* =========================================================
-   29. SMALL PHONES
+   34. SMALL PHONES
 ========================================================= */
 
 @media (max-width: 480px) {
+
+    .top-bar {
+
+        width:
+            94%;
+
+    }
+
+    .logo img {
+
+        width:
+            43px;
+
+        height:
+            43px;
+
+    }
 
     .logo h1 {
 
@@ -3015,14 +3684,53 @@ body.dark .section > h2 {
 
     }
 
+    .menu-btn {
+
+        width:
+            43px;
+
+        height:
+            43px;
+
+    }
+
+    .hero {
+
+        margin-top:
+            28px;
+
+    }
+
+    .hero-text h2 {
+
+        font-size:
+            34px;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction:
+            column;
+
+        width:
+            100%;
+
+    }
+
+    .hero-buttons a {
+
+        width:
+            100%;
+
+    }
 
     .section > h2 {
 
         font-size:
-            24px;
+            23px;
 
     }
-
 
     .tool-card,
     .card {
@@ -3032,6 +3740,12 @@ body.dark .section > h2 {
 
     }
 
+    .news-card img {
+
+        height:
+            190px;
+
+    }
 
     .article-page {
 
@@ -3047,18 +3761,13 @@ body.dark .section > h2 {
 
     }
 
-
     .read-btn,
     .btn {
 
         width:
             100%;
 
-        text-align:
-            center;
-
     }
-
 
     .ai-actions {
 
@@ -3066,7 +3775,6 @@ body.dark .section > h2 {
             1fr;
 
     }
-
 
     .result-header {
 
@@ -3077,7 +3785,6 @@ body.dark .section > h2 {
             column;
 
     }
-
 
     .newsletter {
 
@@ -3096,11 +3803,36 @@ body.dark .section > h2 {
 
     }
 
+    .newsletter form {
+
+        flex-direction:
+            column;
+
+    }
+
+    .newsletter input,
+    .newsletter button {
+
+        width:
+            100%;
+
+    }
+
+    .footer-grid {
+
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+
+    }
+
 }
 
 
 /* =========================================================
-   30. VERY SMALL PHONES
+   35. VERY SMALL PHONES
 ========================================================= */
 
 @media (max-width: 360px) {
@@ -3108,10 +3840,10 @@ body.dark .section > h2 {
     .logo img {
 
         width:
-            42px;
+            40px;
 
         height:
-            42px;
+            40px;
 
     }
 
@@ -3125,10 +3857,24 @@ body.dark .section > h2 {
     .menu-btn {
 
         width:
-            42px;
+            40px;
 
         height:
-            42px;
+            40px;
+
+    }
+
+    .hero-text h2 {
+
+        font-size:
+            30px;
+
+    }
+
+    .section > h2 {
+
+        font-size:
+            21px;
 
     }
 
@@ -3136,7 +3882,88 @@ body.dark .section > h2 {
 
 
 /* =========================================================
-   31. REDUCED MOTION
+   36. TABLET
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1050px) {
+
+    .top-bar {
+
+        width:
+            94%;
+
+    }
+
+    .hero {
+
+        width:
+            94%;
+
+        gap:
+            30px;
+
+    }
+
+    .hero-text h2 {
+
+        font-size:
+            43px;
+
+    }
+
+    .section,
+    .trending-section {
+
+        width:
+            94%;
+
+    }
+
+    .news-layout {
+
+        grid-template-columns:
+            1.7fr 1fr;
+
+    }
+
+    .footer-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   37. LARGE SCREENS
+========================================================= */
+
+@media (min-width: 1600px) {
+
+    .hero-text h2 {
+
+        font-size:
+            64px;
+
+    }
+
+    .section {
+
+        margin-top:
+            80px;
+
+        margin-bottom:
+            80px;
+
+    }
+
+}
+
+
+/* =========================================================
+   38. REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -3167,7 +3994,7 @@ body.dark .section > h2 {
 
 
 /* =========================================================
-   32. ANIMATIONS
+   39. ANIMATIONS
 ========================================================= */
 
 @keyframes fadeUp {
@@ -3194,9 +4021,20 @@ body.dark .section > h2 {
 
 }
 
+@keyframes spin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
 
 /* =========================================================
-   33. SCROLLBAR
+   40. CUSTOM SCROLLBAR
 ========================================================= */
 
 ::-webkit-scrollbar {
@@ -3216,6 +4054,13 @@ body.dark .section > h2 {
 
 }
 
+::-webkit-scrollbar-thumb:hover {
+
+    background:
+        var(--primary-dark);
+
+}
+
 ::-webkit-scrollbar-track {
 
     background:
@@ -3226,6 +4071,57 @@ body.dark .section > h2 {
 body.dark ::-webkit-scrollbar-track {
 
     background:
-        #1e293b;
+        #111827;
+
+}
+
+
+/* =========================================================
+   41. PRINT
+========================================================= */
+
+@media print {
+
+    header,
+    nav,
+    .breaking-news,
+    .newsletter,
+    footer,
+    #topBtn,
+    .menu-btn {
+
+        display:
+            none !important;
+
+    }
+
+    body {
+
+        background:
+            #ffffff;
+
+        color:
+            #000000;
+
+    }
+
+    .article-page {
+
+        width:
+            100%;
+
+        margin:
+            0;
+
+        padding:
+            0;
+
+        box-shadow:
+            none;
+
+        border:
+            0;
+
+    }
 
    }
