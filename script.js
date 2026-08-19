@@ -1,41 +1,128 @@
 /* =========================================================
    TECHHUB GHANA
-   MASTER JAVASCRIPT
+   COMPLETE MASTER JAVASCRIPT
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+
 
     /* =====================================================
-       MOBILE MENU
+       MOBILE NAVIGATION
     ===================================================== */
 
-    const menuBtn = document.querySelector(".menu-btn");
+    const menuBtn = document.getElementById("menuBtn");
     const navMenu = document.getElementById("navMenu");
+
 
     if (menuBtn && navMenu) {
 
-        menuBtn.addEventListener("click", () => {
+        menuBtn.addEventListener("click", function (event) {
+
+            event.stopPropagation();
+
             navMenu.classList.toggle("show");
 
-            const isOpen = navMenu.classList.contains("show");
+            const isOpen =
+                navMenu.classList.contains("show");
 
-            menuBtn.setAttribute("aria-expanded", isOpen);
+            menuBtn.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
 
-            menuBtn.textContent = isOpen ? "✕" : "☰";
+            menuBtn.innerHTML =
+                isOpen ? "✕" : "☰";
+
         });
 
-        // Close menu when a link is clicked
-        navMenu.querySelectorAll("a").forEach(link => {
 
-            link.addEventListener("click", () => {
+        /* Close menu after clicking a link */
+
+        const navLinks =
+            navMenu.querySelectorAll("a");
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
 
                 navMenu.classList.remove("show");
 
-                menuBtn.textContent = "☰";
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-                menuBtn.setAttribute("aria-expanded", "false");
+                menuBtn.innerHTML = "☰";
 
             });
+
+        });
+
+
+        /* Close when clicking outside */
+
+        document.addEventListener("click", function (event) {
+
+            if (
+                !navMenu.contains(event.target) &&
+                !menuBtn.contains(event.target)
+            ) {
+
+                navMenu.classList.remove("show");
+
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuBtn.innerHTML = "☰";
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       ACTIVE NAVIGATION LINK
+    ===================================================== */
+
+    if (navMenu) {
+
+        let currentPage =
+            window.location.pathname
+            .split("/")
+            .pop()
+            .toLowerCase();
+
+        if (!currentPage) {
+            currentPage = "index.html";
+        }
+
+        const links =
+            navMenu.querySelectorAll("a");
+
+        links.forEach(function (link) {
+
+            const href =
+                link.getAttribute("href");
+
+            if (!href) return;
+
+            const linkPage =
+                href
+                .split("/")
+                .pop()
+                .toLowerCase();
+
+            link.classList.remove("active");
+
+            if (linkPage === currentPage) {
+
+                link.classList.add("active");
+
+            }
 
         });
 
@@ -46,124 +133,136 @@ document.addEventListener("DOMContentLoaded", () => {
        DARK MODE
     ===================================================== */
 
-    const darkBtn = document.getElementById("darkModeBtn");
+    const darkBtn =
+        document.getElementById("darkModeBtn");
 
-    function applyTheme(theme) {
+    const savedTheme =
+        localStorage.getItem("theme");
 
-        if (theme === "dark") {
 
-            document.body.classList.add("dark");
+    if (savedTheme === "dark") {
 
-            if (darkBtn) {
-                darkBtn.textContent = "☀️";
-                darkBtn.setAttribute("aria-label", "Switch to light mode");
+        document.body.classList.add("dark");
+
+        if (darkBtn) {
+            darkBtn.textContent = "☀️";
+        }
+
+    }
+
+
+    if (darkBtn) {
+
+        darkBtn.addEventListener(
+            "click",
+            function () {
+
+                document.body.classList.toggle("dark");
+
+                const isDark =
+                    document.body.classList.contains("dark");
+
+
+                localStorage.setItem(
+                    "theme",
+                    isDark ? "dark" : "light"
+                );
+
+
+                darkBtn.textContent =
+                    isDark ? "☀️" : "🌙";
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       SITE SEARCH
+    ===================================================== */
+
+    const searchInput =
+        document.getElementById("siteSearch");
+
+    const searchBtn =
+        document.getElementById("searchBtn");
+
+
+    function performSearch() {
+
+        if (!searchInput) return;
+
+        const keyword =
+            searchInput.value.trim().toLowerCase();
+
+        if (!keyword) return;
+
+
+        const searchableElements =
+            document.querySelectorAll(
+                ".news-card, .tool-card, .card, .tutorial, .article-page"
+            );
+
+
+        let found = false;
+
+
+        searchableElements.forEach(function (element) {
+
+            const text =
+                element.innerText.toLowerCase();
+
+            if (text.includes(keyword)) {
+
+                element.style.display = "";
+
+                found = true;
+
+            } else {
+
+                element.style.display = "none";
+
             }
 
-        } else {
+        });
 
-            document.body.classList.remove("dark");
 
-            if (darkBtn) {
-                darkBtn.textContent = "🌙";
-                darkBtn.setAttribute("aria-label", "Switch to dark mode");
-            }
+        if (!found) {
+
+            alert(
+                "No results found for: " + keyword
+            );
 
         }
 
     }
 
 
-    const savedTheme = localStorage.getItem("theme") || "light";
+    if (searchBtn) {
 
-    applyTheme(savedTheme);
-
-
-    if (darkBtn) {
-
-        darkBtn.addEventListener("click", () => {
-
-            const newTheme =
-                document.body.classList.contains("dark")
-                    ? "light"
-                    : "dark";
-
-            localStorage.setItem("theme", newTheme);
-
-            applyTheme(newTheme);
-
-        });
+        searchBtn.addEventListener(
+            "click",
+            performSearch
+        );
 
     }
 
-
-    /* =====================================================
-       GLOBAL SEARCH
-    ===================================================== */
-
-    const searchInput = document.querySelector(
-        ".search-box input:not(#tutorialSearch)"
-    );
 
     if (searchInput) {
 
-        searchInput.addEventListener("input", function () {
+        searchInput.addEventListener(
+            "keydown",
+            function (event) {
 
-            const value = this.value.toLowerCase().trim();
+                if (event.key === "Enter") {
 
-            const cards = document.querySelectorAll(
-                ".tool-card, .news-card, .tutorial, .ghana-news-card"
-            );
+                    performSearch();
 
-            cards.forEach(card => {
+                }
 
-                const text = card.textContent.toLowerCase();
-
-                card.style.display =
-                    !value || text.includes(value)
-                        ? ""
-                        : "none";
-
-            });
-
-        });
-
-    }
-
-
-    /* =====================================================
-       HERO IMAGE SLIDER
-    ===================================================== */
-
-    const heroImage =
-        document.querySelector(".hero-image img");
-
-    const heroImages = [
-        "images/hero.jpg",
-        "images/tech1.jpg",
-        "images/tech2.jpg",
-        "images/tech3.jpg"
-    ];
-
-    let currentImage = 0;
-
-    if (heroImage && heroImages.length > 1) {
-
-        setInterval(() => {
-
-            currentImage =
-                (currentImage + 1) % heroImages.length;
-
-            heroImage.style.opacity = "0";
-
-            setTimeout(() => {
-
-                heroImage.src = heroImages[currentImage];
-
-                heroImage.style.opacity = "1";
-
-            }, 250);
-
-        }, 5000);
+            }
+        );
 
     }
 
@@ -172,20 +271,24 @@ document.addEventListener("DOMContentLoaded", () => {
        LIVE DATE
     ===================================================== */
 
-    const todayElement =
+    const today =
         document.getElementById("today");
 
-    if (todayElement) {
 
-        const today = new Date();
+    if (today) {
 
-        todayElement.textContent =
-            today.toLocaleDateString("en-US", {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric"
-            });
+        const date = new Date();
+
+        today.textContent =
+            date.toLocaleDateString(
+                "en-US",
+                {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                }
+            );
 
     }
 
@@ -194,139 +297,106 @@ document.addEventListener("DOMContentLoaded", () => {
        BACK TO TOP
     ===================================================== */
 
-    const topButton =
+    let topButton =
         document.getElementById("topBtn");
 
-    if (topButton) {
 
-        window.addEventListener("scroll", () => {
+    if (!topButton) {
 
-            topButton.classList.toggle(
-                "show",
-                window.scrollY > 400
-            );
+        topButton =
+            document.createElement("button");
 
-        });
+        topButton.id = "topBtn";
 
-        topButton.addEventListener("click", () => {
+        topButton.type = "button";
+
+        topButton.innerHTML = "⬆";
+
+        topButton.setAttribute(
+            "aria-label",
+            "Back to top"
+        );
+
+        document.body.appendChild(topButton);
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        function () {
+
+            if (window.scrollY > 300) {
+
+                topButton.style.display =
+                    "block";
+
+            } else {
+
+                topButton.style.display =
+                    "none";
+
+            }
+
+        }
+    );
+
+
+    topButton.addEventListener(
+        "click",
+        function () {
 
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
 
-        });
-
-    }
+        }
+    );
 
 
     /* =====================================================
-       NEWSLETTER
+       HERO IMAGE SLIDER
     ===================================================== */
 
-    document.querySelectorAll(".newsletter form, .ghana-newsletter form")
-        .forEach(form => {
+    const heroImage =
+        document.querySelector(
+            ".hero-image img"
+        );
 
-            form.addEventListener("submit", event => {
 
-                event.preventDefault();
+    const heroImages = [
+        "images/hero.jpg",
+        "images/tech1.jpg",
+        "images/tech2.jpg",
+        "images/tech3.jpg"
+    ];
 
-                const email =
-                    form.querySelector("input[type='email']");
 
-                if (!email || !email.value.trim()) {
-                    return;
-                }
+    if (heroImage && heroImages.length > 1) {
 
-                alert(
-                    "Thank you for subscribing to TechHub Ghana! 📩"
-                );
+        let currentImage = 0;
 
-                email.value = "";
 
-            });
+        setInterval(function () {
 
-        });
+            currentImage++;
+
+            if (
+                currentImage >=
+                heroImages.length
+            ) {
+
+                currentImage = 0;
+
+            }
+
+
+            heroImage.src =
+                heroImages[currentImage];
+
+        }, 5000);
+
+    }
 
 });
-
-
-/* =========================================================
-   BACK TO TOP CREATION
-========================================================= */
-
-function createBackToTop() {
-
-    if (document.getElementById("topBtn")) {
-        return;
-    }
-
-    const button = document.createElement("button");
-
-    button.id = "topBtn";
-    button.type = "button";
-    button.innerHTML = "↑";
-    button.setAttribute("aria-label", "Back to top");
-
-    document.body.appendChild(button);
-
-    button.addEventListener("click", () => {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
-
-    window.addEventListener("scroll", () => {
-
-        button.classList.toggle(
-            "show",
-            window.scrollY > 400
-        );
-
-    });
-
-}
-
-
-document.addEventListener(
-    "DOMContentLoaded",
-    createBackToTop
-);
-
-
-/* =========================================================
-   GLOBAL MOBILE MENU FUNCTION
-   Keeps onclick="toggleMenu()" working
-========================================================= */
-
-function toggleMenu() {
-
-    const menu =
-        document.getElementById("navMenu");
-
-    const button =
-        document.querySelector(".menu-btn");
-
-    if (!menu) return;
-
-    menu.classList.toggle("show");
-
-    if (button) {
-
-        const isOpen =
-            menu.classList.contains("show");
-
-        button.textContent =
-            isOpen ? "✕" : "☰";
-
-        button.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
-
-    }
-
-}
