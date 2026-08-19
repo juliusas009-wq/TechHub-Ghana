@@ -1,10 +1,10 @@
 /* =========================================================
    TECHHUB GHANA
-   FINAL CLEAN MASTER STYLESHEET
+   COMPLETE MASTER STYLESHEET
 ========================================================= */
 
 /* =========================================================
-   1. RESET & BASE
+   1. RESET
 ========================================================= */
 
 * {
@@ -27,8 +27,8 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 img {
@@ -47,11 +47,6 @@ button {
     cursor: pointer;
 }
 
-ul,
-ol {
-    margin: 0;
-}
-
 ::selection {
     background: #0056d2;
     color: #fff;
@@ -62,68 +57,92 @@ ol {
    2. HEADER
 ========================================================= */
 
-header {
+header,
+.main-header {
     width: 100%;
-    background: #ffffff;
+    background: #fff;
     position: sticky;
     top: 0;
-    z-index: 999;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    z-index: 9999;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
 }
 
+
+/* =========================================================
+   3. TOP BAR
+========================================================= */
+
 .top-bar {
-    width: 90%;
+    width: 92%;
     max-width: 1400px;
+    min-height: 82px;
+
     margin: auto;
-    padding: 15px 0;
+    padding: 12px 0;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 25px;
 }
 
 
 /* =========================================================
-   3. LOGO
+   4. LOGO
 ========================================================= */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
+
     min-width: 0;
+
+    text-decoration: none;
 }
 
 .logo img {
-    width: 58px;
-    height: 58px;
+    width: 55px;
+    height: 55px;
+
     object-fit: contain;
     border-radius: 10px;
 }
 
+.logo-text {
+    min-width: 0;
+}
+
 .logo h1 {
     color: #0056d2;
-    font-size: 30px;
-    line-height: 1.15;
+
+    font-size: 28px;
     font-weight: 800;
+
+    line-height: 1.1;
 }
 
 .logo p {
     margin-top: 4px;
+
     color: #64748b;
-    font-size: 13px;
+
+    font-size: 12px;
 }
 
 
 /* =========================================================
-   4. SEARCH
+   5. SEARCH
 ========================================================= */
 
 .search-box {
     display: flex;
+
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
+
+    margin-left: auto;
 }
 
 .search-box input {
@@ -134,14 +153,13 @@ header {
 
     border: 1px solid #d9dee7;
     border-right: 0;
+
     border-radius: 8px 0 0 8px;
 
     outline: none;
 
-    background: #ffffff;
+    background: #fff;
     color: #1f2937;
-
-    transition: 0.25s;
 }
 
 .search-box input:focus {
@@ -149,14 +167,15 @@ header {
 }
 
 .search-box button {
-    width: 58px;
-    min-width: 58px;
+    width: 55px;
+    min-width: 55px;
 
     border: 0;
+
     border-radius: 0 8px 8px 0;
 
     background: #0056d2;
-    color: #ffffff;
+    color: #fff;
 
     transition: 0.25s;
 }
@@ -167,46 +186,41 @@ header {
 
 
 /* =========================================================
-   5. NAVIGATION
+   6. DARK MODE BUTTON
 ========================================================= */
 
-nav {
-    width: 100%;
+#darkModeBtn {
+    width: 45px;
+    height: 45px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-shrink: 0;
+
+    border: 0;
+    border-radius: 50%;
 
     background: #0056d2;
+    color: #fff;
+
+    font-size: 18px;
+
+    transition: 0.25s;
 }
 
-nav a {
-    color: #ffffff;
-
-    padding: 14px 20px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    transition: background 0.25s ease, color 0.25s ease;
-}
-
-nav a:hover,
-nav a.active {
+#darkModeBtn:hover {
     background: #003d99;
+    transform: rotate(15deg);
 }
 
 
 /* =========================================================
-   6. MOBILE MENU BUTTON
+   7. MOBILE MENU BUTTON
 ========================================================= */
 
 .menu-btn {
     display: none;
 
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
 
     margin: 10px auto;
 
@@ -214,14 +228,63 @@ nav a.active {
     border-radius: 8px;
 
     background: #0056d2;
-    color: #ffffff;
+    color: #fff;
 
-    font-size: 23px;
+    font-size: 24px;
+    line-height: 1;
+
+    transition: 0.25s;
+}
+
+.menu-btn:hover {
+    background: #003d99;
 }
 
 
 /* =========================================================
-   7. BREAKING NEWS
+   8. NAVIGATION
+========================================================= */
+
+#navMenu,
+nav {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    background: #0056d2;
+}
+
+#navMenu a,
+nav a {
+    display: block;
+
+    padding: 14px 17px;
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+#navMenu a:hover,
+#navMenu a.active,
+nav a:hover,
+nav a.active {
+    background: #003d99;
+}
+
+
+/* =========================================================
+   9. BREAKING NEWS
 ========================================================= */
 
 .breaking-news {
@@ -230,38 +293,45 @@ nav a.active {
     padding: 9px 0;
 
     background: #ffcc00;
-    color: #111111;
+    color: #111;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
 
     overflow: hidden;
 }
 
-.breaking-news marquee {
-    font-size: 13px;
-}
-
 
 /* =========================================================
-   8. DATE
+   10. GENERAL SECTIONS
 ========================================================= */
 
-.today-date {
+.section {
     width: 90%;
     max-width: 1400px;
 
-    margin: 10px auto 5px;
+    margin: 60px auto;
+}
 
+.section > h2 {
+    margin-bottom: 30px;
+    padding-left: 15px;
+
+    border-left: 6px solid #0056d2;
+
+    color: #0056d2;
+
+    font-size: 32px;
+}
+
+.section-intro {
+    margin-bottom: 30px;
     color: #64748b;
-
-    font-size: 13px;
-    font-weight: 600;
 }
 
 
 /* =========================================================
-   9. GENERAL HERO
+   11. HERO
 ========================================================= */
 
 .hero {
@@ -275,10 +345,6 @@ nav a.active {
 
     gap: 45px;
     align-items: center;
-}
-
-.hero-text {
-    min-width: 0;
 }
 
 .hero-text h2 {
@@ -299,68 +365,6 @@ nav a.active {
     font-size: 17px;
 }
 
-.tag {
-    display: inline-block;
-
-    margin-bottom: 18px;
-    padding: 7px 17px;
-
-    border-radius: 30px;
-
-    background: #ef4444;
-    color: #ffffff;
-
-    font-size: 12px;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   10. HERO BUTTONS
-========================================================= */
-
-.hero-buttons,
-.ghana-hero-buttons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.hero-buttons a,
-.ghana-hero-buttons a {
-    display: inline-block;
-
-    padding: 12px 22px;
-
-    border-radius: 8px;
-
-    font-weight: 700;
-
-    transition: 0.25s;
-}
-
-.hero-buttons a:first-child {
-    background: #0056d2;
-    color: #ffffff;
-}
-
-.hero-buttons a:last-child {
-    background: #ffffff;
-    color: #0056d2;
-    border: 2px solid #0056d2;
-}
-
-.hero-buttons a:hover,
-.ghana-hero-buttons a:hover {
-    transform: translateY(-3px);
-}
-
-
-/* =========================================================
-   11. HERO IMAGE
-========================================================= */
-
 .hero-image img {
     width: 100%;
     max-height: 480px;
@@ -374,24 +378,32 @@ nav a.active {
 
 
 /* =========================================================
-   12. GENERAL SECTION
+   12. BUTTONS
 ========================================================= */
 
-.section {
-    width: 90%;
-    max-width: 1400px;
+.read-btn,
+.btn,
+.hero-btn {
+    display: inline-block;
 
-    margin: 65px auto;
+    padding: 11px 20px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #0056d2;
+    color: #fff;
+
+    font-weight: 600;
+
+    transition: 0.25s;
 }
 
-.section > h2 {
-    margin-bottom: 30px;
-    padding-left: 15px;
-
-    border-left: 6px solid #0056d2;
-
-    color: #0056d2;
-    font-size: 32px;
+.read-btn:hover,
+.btn:hover,
+.hero-btn:hover {
+    background: #003d99;
+    transform: translateY(-2px);
 }
 
 
@@ -399,7 +411,8 @@ nav a.active {
    13. CARD GRID
 ========================================================= */
 
-.card-grid {
+.card-grid,
+.cards {
     display: grid;
 
     grid-template-columns:
@@ -413,23 +426,27 @@ nav a.active {
    14. TOOL CARDS
 ========================================================= */
 
-.tool-card {
+.tool-card,
+.card {
     padding: 30px 25px;
 
-    background: #ffffff;
+    background: #fff;
 
     border-radius: 13px;
 
-    text-align: center;
-
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    text-align: center;
 
     transition: 0.3s;
 }
 
-.tool-card:hover {
+.tool-card:hover,
+.card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.11);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.11);
 }
 
 .tool-card .icon {
@@ -437,57 +454,29 @@ nav a.active {
     font-size: 48px;
 }
 
-.tool-card h3 {
+.tool-card h3,
+.card h2 {
     margin-bottom: 10px;
     color: #0056d2;
 }
 
-.tool-card p {
+.tool-card p,
+.card p {
     margin-bottom: 20px;
     color: #64748b;
     font-size: 14px;
 }
 
-.tool-card a {
-    display: inline-block;
-
-    padding: 10px 20px;
-
-    border-radius: 7px;
-
-    background: #0056d2;
-    color: #ffffff;
-
-    font-weight: 600;
-
-    transition: 0.25s;
-}
-
-.tool-card a:hover {
-    background: #003d99;
-}
-
 
 /* =========================================================
-   15. NEWS LAYOUT
+   15. NEWS
 ========================================================= */
 
 .news-layout {
     display: grid;
-
     grid-template-columns: 2fr 1fr;
-
     gap: 30px;
 }
-
-.news-left {
-    min-width: 0;
-}
-
-
-/* =========================================================
-   16. NEWS CARD
-========================================================= */
 
 .news-card {
     display: flex;
@@ -497,7 +486,7 @@ nav a.active {
     margin-bottom: 20px;
     padding: 18px;
 
-    background: #ffffff;
+    background: #fff;
 
     border-radius: 11px;
 
@@ -527,7 +516,6 @@ nav a.active {
     color: #0056d2;
 
     font-size: 20px;
-    line-height: 1.35;
 }
 
 .news-card p {
@@ -537,55 +525,14 @@ nav a.active {
 
 
 /* =========================================================
-   17. SIDEBAR
-========================================================= */
-
-aside {
-    position: sticky;
-    top: 125px;
-
-    padding: 25px;
-
-    background: #ffffff;
-
-    border-radius: 11px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
-}
-
-aside h3 {
-    margin-bottom: 15px;
-    color: #0056d2;
-}
-
-aside ul {
-    list-style: none;
-}
-
-aside li {
-    padding: 13px 0;
-
-    border-bottom: 1px solid #e5e7eb;
-
-    color: #475569;
-
-    transition: 0.2s;
-}
-
-aside li:hover {
-    color: #0056d2;
-}
-
-
-/* =========================================================
-   18. TUTORIALS
+   16. TUTORIALS
 ========================================================= */
 
 .tutorial-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(230px, 1fr));
+        repeat(auto-fit, minmax(250px, 1fr));
 
     gap: 25px;
 }
@@ -593,13 +540,15 @@ aside li:hover {
 .tutorial {
     overflow: hidden;
 
-    background: #ffffff;
+    background: #fff;
 
     border-radius: 11px;
 
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
 
     transition: 0.3s;
+
+    padding-bottom: 20px;
 }
 
 .tutorial:hover {
@@ -613,15 +562,119 @@ aside li:hover {
     object-fit: cover;
 }
 
+.tutorial .category {
+    display: inline-block;
+
+    margin: 15px 18px 0;
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #eaf2ff;
+    color: #0056d2;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
 .tutorial h3 {
-    padding: 18px;
+    padding: 10px 18px;
 
     color: #0056d2;
 }
 
+.tutorial > p {
+    padding: 0 18px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.tutorial-info {
+    display: flex;
+
+    gap: 15px;
+
+    padding: 15px 18px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
 
 /* =========================================================
-   19. NEWSLETTER
+   17. ARTICLE
+========================================================= */
+
+.article-page {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 50px auto;
+    padding: 35px;
+
+    background: #fff;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.article-page h1 {
+    margin: 25px 0 15px;
+
+    color: #0056d2;
+
+    font-size: 38px;
+    line-height: 1.25;
+}
+
+.article-page h2 {
+    margin: 30px 0 15px;
+
+    color: #0056d2;
+}
+
+.article-page p {
+    margin-bottom: 18px;
+    color: #475569;
+}
+
+.article-page ul {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.article-page li {
+    margin-bottom: 10px;
+}
+
+.article-image {
+    width: 100%;
+    max-height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.article-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   18. NEWSLETTER
 ========================================================= */
 
 .newsletter {
@@ -634,7 +687,8 @@ aside li:hover {
     text-align: center;
 
     background: #0056d2;
-    color: #ffffff;
+
+    color: #fff;
 
     border-radius: 16px;
 }
@@ -675,8 +729,98 @@ aside li:hover {
     border-radius: 7px;
 
     background: #ffcc00;
-    color: #111111;
+    color: #111;
 
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   19. LOGIN / SIGNUP
+========================================================= */
+
+.login-section {
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 35px;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.login-box h2 {
+    margin-bottom: 8px;
+
+    color: #0056d2;
+
+    text-align: center;
+}
+
+.login-box > p {
+    margin-bottom: 25px;
+
+    color: #64748b;
+
+    text-align: center;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    margin: 10px 0 6px;
+
+    font-weight: 600;
+}
+
+.login-box input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #d9dee7;
+
+    border-radius: 8px;
+
+    outline: none;
+}
+
+.login-box input:focus {
+    border-color: #0056d2;
+}
+
+.login-box button {
+    margin-top: 20px;
+
+    padding: 13px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: #0056d2;
+    color: #fff;
+
+    font-weight: 700;
+}
+
+.login-box a {
+    color: #0056d2;
     font-weight: 700;
 }
 
@@ -687,10 +831,12 @@ aside li:hover {
 
 footer {
     margin-top: 70px;
+
     padding: 60px 5% 25px;
 
     background: #0f172a;
-    color: #ffffff;
+
+    color: #fff;
 }
 
 .footer-grid {
@@ -714,17 +860,18 @@ footer {
 
 .footer-grid p {
     margin-bottom: 9px;
+
     color: #cbd5e1;
+
     font-size: 14px;
 }
 
 .footer-grid a {
     color: #cbd5e1;
-    transition: 0.2s;
 }
 
 .footer-grid a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
 footer hr {
@@ -733,7 +880,8 @@ footer hr {
     margin: 35px auto 20px;
 
     border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-top: 1px solid rgba(255,255,255,0.15);
 }
 
 .copyright {
@@ -746,1083 +894,7 @@ footer hr {
 
 
 /* =========================================================
-   21. ARTICLE PAGE
-========================================================= */
-
-.article-page {
-    width: 90%;
-    max-width: 1000px;
-
-    margin: 50px auto;
-    padding: 35px;
-
-    background: #ffffff;
-
-    border-radius: 14px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-}
-
-.article-page h1 {
-    margin: 25px 0 15px;
-
-    color: #0056d2;
-
-    font-size: 38px;
-    line-height: 1.25;
-}
-
-.article-page h2 {
-    margin: 30px 0 15px;
-    color: #0056d2;
-}
-
-.article-page p {
-    margin-bottom: 18px;
-    color: #475569;
-}
-
-.article-page ul {
-    padding-left: 25px;
-    margin-bottom: 20px;
-}
-
-.article-page li {
-    margin-bottom: 10px;
-}
-
-.article-image {
-    width: 100%;
-    max-height: 500px;
-
-    object-fit: cover;
-
-    border-radius: 12px;
-}
-
-.article-info {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-
-    margin-bottom: 25px;
-
-    color: #64748b;
-
-    font-size: 14px;
-}
-
-.read-btn {
-    display: inline-block;
-
-    margin-top: 15px;
-    padding: 11px 20px;
-
-    border-radius: 7px;
-
-    background: #0056d2;
-    color: #ffffff;
-
-    font-weight: 600;
-
-    transition: 0.25s;
-}
-
-.read-btn:hover {
-    background: #003d99;
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   22. FEATURED NEWS
-========================================================= */
-
-.featured-news {
-    display: flex;
-
-    gap: 30px;
-
-    padding: 25px;
-
-    background: #ffffff;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.featured-news img {
-    width: 50%;
-
-    object-fit: cover;
-
-    border-radius: 12px;
-}
-
-.featured-content {
-    flex: 1;
-}
-
-.featured-content h1 {
-    margin: 10px 0;
-    font-size: 32px;
-}
-
-
-/* =========================================================
-   23. TRENDING
-========================================================= */
-
-.trending-section {
-    width: 90%;
-    max-width: 1100px;
-
-    margin: 40px auto;
-}
-
-.trending-box {
-    padding: 30px;
-
-    background: #ffffff;
-
-    border-radius: 16px;
-
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
-}
-
-.trending-box h2 {
-    margin-bottom: 20px;
-    color: #0056d2;
-}
-
-.trending-list {
-    display: flex;
-    flex-direction: column;
-}
-
-.trending-item {
-    display: flex;
-    align-items: center;
-
-    gap: 14px;
-
-    padding: 18px 5px;
-
-    border-bottom: 1px solid #e5e7eb;
-
-    font-size: 18px;
-
-    transition: 0.25s;
-}
-
-.trending-item:hover {
-    padding-left: 12px;
-    color: #0056d2;
-}
-
-
-/* =========================================================
-   24. GHANA TECH PAGE
-========================================================= */
-
-.ghana-tech-page {
-    width: 100%;
-}
-
-
-/* =========================================================
-   25. GHANA TECH HERO
-========================================================= */
-
-.ghana-tech-hero {
-    width: 90%;
-    max-width: 1400px;
-
-    margin: 40px auto;
-    padding: 55px;
-
-    display: grid;
-
-    grid-template-columns: 1.1fr 0.9fr;
-
-    gap: 45px;
-
-    align-items: center;
-
-    background: linear-gradient(
-        135deg,
-        #0056d2,
-        #003d99
-    );
-
-    color: #ffffff;
-
-    border-radius: 22px;
-
-    overflow: hidden;
-
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.ghana-tech-hero-content {
-    min-width: 0;
-}
-
-.ghana-badge {
-    display: inline-block;
-
-    padding: 8px 18px;
-
-    border-radius: 30px;
-
-    background: #ffcc00;
-    color: #111111;
-
-    font-size: 13px;
-    font-weight: 800;
-}
-
-.ghana-tech-hero h1 {
-    margin: 18px 0;
-
-    font-size: 48px;
-    line-height: 1.15;
-}
-
-.ghana-tech-hero p {
-    max-width: 680px;
-
-    color: #e5efff;
-
-    font-size: 17px;
-}
-
-.ghana-tech-hero-image img {
-    width: 100%;
-    height: 360px;
-
-    object-fit: cover;
-
-    border-radius: 16px;
-
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-
-/* =========================================================
-   26. GHANA HERO BUTTONS
-========================================================= */
-
-.ghana-hero-buttons {
-    margin-top: 30px;
-}
-
-.ghana-primary-btn {
-    background: #ffcc00;
-    color: #111111;
-}
-
-.ghana-secondary-btn {
-    border: 2px solid #ffffff;
-    color: #ffffff;
-}
-
-
-/* =========================================================
-   27. GHANA STATS
-========================================================= */
-
-.ghana-stats {
-    width: 90%;
-    max-width: 1400px;
-
-    margin: 35px auto 60px;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.ghana-stat {
-    padding: 25px;
-
-    text-align: center;
-
-    background: #ffffff;
-
-    border: 1px solid #edf0f5;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-}
-
-.ghana-stat-icon {
-    margin-bottom: 8px;
-    font-size: 34px;
-}
-
-.ghana-stat strong {
-    display: block;
-
-    color: #0056d2;
-
-    font-size: 25px;
-}
-
-.ghana-stat p {
-    color: #64748b;
-    font-size: 13px;
-}
-
-
-/* =========================================================
-   28. GHANA NEWS CONTROLS
-========================================================= */
-
-.ghana-news-controls {
-    width: 90%;
-    max-width: 1200px;
-
-    margin: 50px auto 25px;
-}
-
-.ghana-news-controls h2 {
-    margin-bottom: 20px;
-
-    color: #0056d2;
-
-    font-size: 32px;
-}
-
-.ghana-search {
-    display: flex;
-
-    width: 100%;
-
-    margin-bottom: 20px;
-}
-
-.ghana-search input {
-    width: 100%;
-    min-width: 0;
-
-    padding: 14px 17px;
-
-    border: 1px solid #d9dee7;
-    border-right: 0;
-
-    border-radius: 8px 0 0 8px;
-
-    outline: none;
-
-    background: #ffffff;
-    color: #1f2937;
-}
-
-.ghana-search input:focus {
-    border-color: #0056d2;
-}
-
-.ghana-search button {
-    width: 60px;
-    min-width: 60px;
-
-    border: 0;
-    border-radius: 0 8px 8px 0;
-
-    background: #0056d2;
-    color: #ffffff;
-}
-
-.ghana-category-buttons {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 10px;
-}
-
-.ghana-filter {
-    padding: 10px 17px;
-
-    border: 0;
-    border-radius: 30px;
-
-    background: #ffffff;
-    color: #334155;
-
-    font-weight: 600;
-
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-
-    transition: 0.25s;
-}
-
-.ghana-filter:hover {
-    color: #0056d2;
-    transform: translateY(-2px);
-}
-
-.ghana-filter.active {
-    background: #0056d2;
-    color: #ffffff;
-}
-
-
-/* =========================================================
-   29. GHANA SEARCH MESSAGE
-========================================================= */
-
-.ghana-search-message {
-    width: 90%;
-    max-width: 1200px;
-
-    margin: 0 auto 20px;
-
-    color: #0056d2;
-
-    font-weight: 600;
-}
-
-
-/* =========================================================
-   30. GHANA FEATURED STORY
-========================================================= */
-
-.ghana-featured {
-    width: 90%;
-    max-width: 1200px;
-
-    margin: 40px auto;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    overflow: hidden;
-
-    background: #ffffff;
-
-    border-radius: 18px;
-
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-}
-
-.ghana-featured-image img {
-    width: 100%;
-    height: 100%;
-    min-height: 360px;
-
-    object-fit: cover;
-}
-
-.ghana-featured-content {
-    padding: 40px;
-}
-
-.ghana-featured-content > span {
-    color: #0056d2;
-
-    font-size: 13px;
-    font-weight: 800;
-}
-
-.ghana-featured-content h2 {
-    margin: 14px 0;
-
-    color: #0056d2;
-
-    font-size: 32px;
-    line-height: 1.25;
-}
-
-.ghana-featured-content p {
-    margin-bottom: 20px;
-    color: #64748b;
-}
-
-
-/* =========================================================
-   31. GHANA NEWS SECTION
-========================================================= */
-
-.ghana-news-section {
-    width: 90%;
-    max-width: 1200px;
-
-    margin: 70px auto;
-}
-
-.ghana-news-section-heading {
-    margin-bottom: 30px;
-}
-
-.ghana-news-section-heading h2 {
-    color: #0056d2;
-    font-size: 32px;
-}
-
-.ghana-news-section-heading p {
-    margin-top: 5px;
-    color: #64748b;
-}
-
-.ghana-news-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-
-/* =========================================================
-   32. GHANA NEWS CARD
-========================================================= */
-
-.ghana-news-card {
-    overflow: hidden;
-
-    background: #ffffff;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-
-    transition: 0.3s;
-}
-
-.ghana-news-card:hover {
-    transform: translateY(-7px);
-
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
-}
-
-.ghana-news-card img {
-    width: 100%;
-    height: 210px;
-
-    object-fit: cover;
-}
-
-.ghana-news-content {
-    padding: 22px;
-}
-
-.ghana-category {
-    display: inline-block;
-
-    padding: 5px 10px;
-
-    border-radius: 20px;
-
-    background: #eaf2ff;
-    color: #0056d2;
-
-    font-size: 11px;
-    font-weight: 800;
-}
-
-.ghana-news-content h3 {
-    margin: 12px 0;
-
-    color: #0056d2;
-
-    font-size: 19px;
-    line-height: 1.35;
-}
-
-.ghana-news-content p {
-    color: #64748b;
-    font-size: 14px;
-}
-
-.ghana-card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 10px;
-
-    margin-top: 20px;
-    padding-top: 15px;
-
-    border-top: 1px solid #e5e7eb;
-}
-
-.ghana-card-footer span {
-    color: #94a3b8;
-    font-size: 12px;
-}
-
-.ghana-card-footer a {
-    color: #0056d2;
-    font-size: 13px;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   33. GHANA NO RESULTS
-========================================================= */
-
-.no-ghana-news {
-    display: none;
-
-    width: 100%;
-
-    padding: 50px 20px;
-
-    background: #ffffff;
-
-    border-radius: 14px;
-
-    text-align: center;
-
-    color: #64748b;
-}
-
-.no-ghana-news.show {
-    display: block;
-}
-
-
-/* =========================================================
-   34. GHANA TRENDING
-========================================================= */
-
-.ghana-trending {
-    width: 90%;
-    max-width: 1200px;
-
-    margin: 70px auto;
-}
-
-.ghana-trending-box {
-    padding: 35px;
-
-    background: #ffffff;
-
-    border-radius: 16px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-}
-
-.ghana-trending-box h2 {
-    margin-bottom: 25px;
-    color: #0056d2;
-}
-
-.ghana-trending-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 15px;
-}
-
-.ghana-trending-grid a {
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 17px;
-
-    background: #f4f7fb;
-
-    border-radius: 10px;
-
-    font-weight: 600;
-
-    transition: 0.25s;
-}
-
-.ghana-trending-grid a:hover {
-    background: #0056d2;
-    color: #ffffff;
-
-    transform: translateY(-3px);
-}
-
-
-/* =========================================================
-   35. GHANA TOPICS
-========================================================= */
-
-.ghana-topics {
-    width: 90%;
-    max-width: 1200px;
-
-    margin: 70px auto;
-}
-
-.ghana-topics h2 {
-    margin-bottom: 25px;
-    color: #0056d2;
-}
-
-.ghana-topic-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.ghana-topic-card {
-    padding: 25px;
-
-    background: #ffffff;
-
-    border-radius: 14px;
-
-    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-
-    transition: 0.3s;
-}
-
-.ghana-topic-card:hover {
-    transform: translateY(-5px);
-}
-
-.ghana-topic-card span {
-    font-size: 35px;
-}
-
-.ghana-topic-card h3 {
-    margin: 10px 0;
-    color: #0056d2;
-}
-
-.ghana-topic-card p {
-    color: #64748b;
-    font-size: 13px;
-}
-
-
-/* =========================================================
-   36. GHANA NEWSLETTER
-========================================================= */
-
-.ghana-newsletter {
-    width: 90%;
-    max-width: 1200px;
-
-    margin: 80px auto;
-
-    padding: 50px 30px;
-
-    text-align: center;
-
-    background: linear-gradient(
-        135deg,
-        #0056d2,
-        #003d99
-    );
-
-    color: #ffffff;
-
-    border-radius: 20px;
-}
-
-.ghana-newsletter h2 {
-    margin-bottom: 10px;
-    font-size: 32px;
-}
-
-.ghana-newsletter p {
-    margin-bottom: 25px;
-    color: #e5efff;
-}
-
-
-/* =========================================================
-   37. GHANA SOURCE NOTE
-========================================================= */
-
-.ghana-source-note {
-    width: 90%;
-    max-width: 1100px;
-
-    margin: 50px auto;
-    padding: 25px;
-
-    border-left: 5px solid #0056d2;
-    border-radius: 10px;
-
-    background: #eef4ff;
-}
-
-.ghana-source-note h3 {
-    margin-bottom: 8px;
-    color: #0056d2;
-}
-
-.ghana-source-note p {
-    color: #475569;
-    font-size: 13px;
-}
-
-
-/* =========================================================
-   38. AI ASSISTANT
-========================================================= */
-
-.ai-section {
-    max-width: 1100px;
-}
-
-.ai-container {
-    padding: 30px;
-
-    background: #ffffff;
-
-    border-radius: 15px;
-
-    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.07);
-}
-
-.ai-header {
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.ai-header h2 {
-    color: #0056d2;
-}
-
-.ai-input-box textarea {
-    width: 100%;
-    min-height: 220px;
-
-    padding: 16px;
-
-    border: 1px solid #d9dee7;
-    border-radius: 10px;
-
-    outline: none;
-
-    resize: vertical;
-}
-
-.ai-input-box textarea:focus {
-    border-color: #0056d2;
-}
-
-.ai-actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-
-    margin: 20px 0;
-}
-
-.ai-btn {
-    padding: 12px 18px;
-
-    border: 0;
-    border-radius: 7px;
-
-    background: #0056d2;
-    color: #ffffff;
-
-    font-weight: 600;
-
-    transition: 0.25s;
-}
-
-.ai-btn:hover {
-    background: #003d99;
-}
-
-.ai-result-box {
-    overflow: hidden;
-
-    background: #f8fafc;
-
-    border: 1px solid #e2e8f0;
-
-    border-radius: 10px;
-}
-
-.result-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 15px 18px;
-
-    background: #eef4ff;
-
-    border-bottom: 1px solid #dbeafe;
-}
-
-.result-header h3 {
-    color: #0056d2;
-}
-
-.ai-result {
-    min-height: 150px;
-
-    padding: 20px;
-
-    white-space: pre-wrap;
-}
-
-
-/* =========================================================
-   39. DARK MODE
-========================================================= */
-
-body.dark {
-    background: #0f172a;
-    color: #f3f4f6;
-}
-
-body.dark header {
-    background: #1e293b;
-}
-
-body.dark .logo p {
-    color: #cbd5e1;
-}
-
-body.dark .search-box input,
-body.dark .ghana-search input {
-    background: #334155;
-    color: #ffffff;
-    border-color: #475569;
-}
-
-body.dark nav {
-    background: #020617;
-}
-
-body.dark .hero-text p,
-body.dark .news-card p,
-body.dark .tool-card p,
-body.dark aside li,
-body.dark .article-page p,
-body.dark .ghana-news-content p,
-body.dark .ghana-featured-content p,
-body.dark .ghana-topic-card p {
-    color: #cbd5e1;
-}
-
-body.dark .hero-buttons a:last-child {
-    background: #1e293b;
-    color: #60a5fa;
-}
-
-body.dark .tool-card,
-body.dark .news-card,
-body.dark aside,
-body.dark .tutorial,
-body.dark .article-page,
-body.dark .featured-news,
-body.dark .trending-box,
-body.dark .ai-container,
-body.dark .ghana-stat,
-body.dark .ghana-featured,
-body.dark .ghana-news-card,
-body.dark .ghana-trending-box,
-body.dark .ghana-topic-card,
-body.dark .no-ghana-news {
-    background: #1e293b;
-    color: #f3f4f6;
-}
-
-body.dark .ghana-filter {
-    background: #334155;
-    color: #ffffff;
-}
-
-body.dark .ghana-filter.active {
-    background: #0056d2;
-}
-
-body.dark .ghana-trending-grid a {
-    background: #334155;
-    color: #ffffff;
-}
-
-body.dark .ghana-category {
-    background: #1e3a5f;
-    color: #60a5fa;
-}
-
-body.dark .ghana-source-note {
-    background: #172554;
-}
-
-body.dark .ghana-source-note p {
-    color: #dbeafe;
-}
-
-body.dark .ghana-card-footer {
-    border-color: #334155;
-}
-
-body.dark .ai-result-box {
-    background: #0f172a;
-    border-color: #334155;
-}
-
-body.dark .result-header {
-    background: #172554;
-    border-color: #1e3a5f;
-}
-
-body.dark .ai-input-box textarea {
-    background: #334155;
-    color: #ffffff;
-    border-color: #475569;
-}
-
-body.dark .trending-item {
-    border-color: #334155;
-}
-
-body.dark aside li {
-    border-color: #334155;
-}
-
-
-/* =========================================================
-   40. DARK MODE BUTTON
-========================================================= */
-
-#darkModeBtn {
-    width: 45px;
-    height: 45px;
-
-    margin-left: 10px;
-
-    border: 0;
-    border-radius: 50%;
-
-    background: #0056d2;
-    color: #ffffff;
-
-    transition: 0.25s;
-}
-
-#darkModeBtn:hover {
-    background: #003d99;
-    transform: rotate(15deg);
-}
-
-
-/* =========================================================
-   41. BACK TO TOP
+   21. BACK TO TOP
 ========================================================= */
 
 #topBtn {
@@ -1831,88 +903,185 @@ body.dark aside li {
     right: 20px;
     bottom: 20px;
 
-    z-index: 1000;
-
-    display: none;
+    z-index: 9998;
 
     width: 45px;
     height: 45px;
+
+    display: none;
 
     border: 0;
     border-radius: 50%;
 
     background: #0056d2;
-    color: #ffffff;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    color: #fff;
 
-    transition: 0.25s;
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.25);
 }
 
 #topBtn:hover {
     background: #003d99;
-    transform: translateY(-3px);
 }
 
 
 /* =========================================================
-   42. ANIMATIONS
+   22. DARK MODE
 ========================================================= */
 
-.hero,
-.tool-card,
-.news-card,
-.tutorial,
-.featured-news,
-.ghana-news-card,
-.ghana-featured,
-.ghana-stat {
-    animation: fadeUp 0.6s ease;
+body.dark {
+    background: #0f172a;
+    color: #f3f4f6;
 }
 
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* =========================================================
-   43. SCROLLBAR
-========================================================= */
-
-::-webkit-scrollbar {
-    width: 9px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #0056d2;
-    border-radius: 20px;
-}
-
-::-webkit-scrollbar-track {
-    background: #e5e7eb;
-}
-
-body.dark ::-webkit-scrollbar-track {
+body.dark header,
+body.dark .main-header {
     background: #1e293b;
 }
 
+body.dark .logo p {
+    color: #cbd5e1;
+}
+
+body.dark .search-box input {
+    background: #334155;
+    color: #fff;
+    border-color: #475569;
+}
+
+body.dark #navMenu,
+body.dark nav {
+    background: #020617;
+}
+
+body.dark .section-intro,
+body.dark .hero-text p,
+body.dark .news-card p,
+body.dark .tool-card p,
+body.dark .card p,
+body.dark .tutorial > p,
+body.dark .article-page p {
+    color: #cbd5e1;
+}
+
+body.dark .tool-card,
+body.dark .card,
+body.dark .news-card,
+body.dark .tutorial,
+body.dark .article-page,
+body.dark .login-box {
+    background: #1e293b;
+    color: #f3f4f6;
+}
+
+body.dark .tutorial .category {
+    background: #1e3a5f;
+    color: #60a5fa;
+}
+
+body.dark .login-box input {
+    background: #334155;
+    color: #fff;
+    border-color: #475569;
+}
+
 
 /* =========================================================
-   44. TABLET
+   23. MOBILE
 ========================================================= */
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
+
+    header,
+    .main-header {
+        position: sticky;
+        top: 0;
+    }
+
+    .top-bar {
+        width: 94%;
+
+        display: grid;
+
+        grid-template-columns: 1fr auto;
+
+        gap: 12px;
+
+        padding: 12px 0;
+    }
+
+    .logo {
+        min-width: 0;
+    }
+
+    .logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .logo h1 {
+        font-size: 21px;
+    }
+
+    .logo p {
+        font-size: 10px;
+    }
+
+    .search-box {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+    }
+
+    #darkModeBtn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .menu-btn {
+        display: block;
+
+        position: relative;
+
+        z-index: 10001;
+    }
+
+    #navMenu {
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+        justify-content: flex-start;
+
+        background: #0056d2;
+    }
+
+    #navMenu.show {
+        display: flex;
+    }
+
+    #navMenu a {
+        width: 100%;
+
+        padding: 14px 20px;
+
+        text-align: center;
+
+        border-top:
+            1px solid rgba(255,255,255,0.1);
+    }
 
     .hero {
         grid-template-columns: 1fr;
+
+        width: 92%;
+
         text-align: center;
     }
 
@@ -1921,134 +1090,8 @@ body.dark ::-webkit-scrollbar-track {
         margin-right: auto;
     }
 
-    .hero-buttons {
-        justify-content: center;
-    }
-
     .news-layout {
         grid-template-columns: 1fr;
-    }
-
-    aside {
-        position: static;
-    }
-
-    .ghana-tech-hero {
-        grid-template-columns: 1fr;
-        padding: 40px;
-    }
-
-    .ghana-stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .ghana-news-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .ghana-featured {
-        grid-template-columns: 1fr;
-    }
-
-    .ghana-trending-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .ghana-topic-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-/* =========================================================
-   45. MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    header {
-        position: relative;
-    }
-
-    .top-bar {
-        width: 92%;
-
-        flex-direction: column;
-
-        gap: 15px;
-
-        text-align: center;
-    }
-
-    .logo {
-        justify-content: center;
-    }
-
-    .logo h1 {
-        font-size: 24px;
-    }
-
-    .logo img {
-        width: 55px;
-        height: 55px;
-    }
-
-    .search-box {
-        max-width: 100%;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    nav {
-        display: none;
-
-        flex-direction: column;
-    }
-
-    nav.show {
-        display: flex;
-    }
-
-    nav a {
-        width: 100%;
-
-        padding: 12px;
-
-        text-align: center;
-    }
-
-    .hero {
-        width: 92%;
-        margin: 30px auto;
-    }
-
-    .hero-text h2 {
-        font-size: 34px;
-    }
-
-    .hero-text p {
-        font-size: 15px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hero-buttons a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .section {
-        width: 92%;
-        margin: 45px auto;
-    }
-
-    .section > h2 {
-        font-size: 27px;
     }
 
     .news-card {
@@ -2060,18 +1103,16 @@ body.dark ::-webkit-scrollbar-track {
         height: 220px;
     }
 
-    .featured-news {
-        flex-direction: column;
+    .section {
+        width: 92%;
     }
 
-    .featured-news img {
-        width: 100%;
+    .section > h2 {
+        font-size: 27px;
     }
 
     .article-page {
         width: 92%;
-
-        margin: 30px auto;
 
         padding: 22px;
     }
@@ -2085,128 +1126,33 @@ body.dark ::-webkit-scrollbar-track {
         gap: 5px;
     }
 
-
-    /* GHANA TECH MOBILE */
-
-    .ghana-tech-hero {
-        width: 94%;
-
-        padding: 28px;
-
-        text-align: center;
-    }
-
-    .ghana-tech-hero h1 {
-        font-size: 32px;
-    }
-
-    .ghana-tech-hero p {
-        font-size: 15px;
-    }
-
-    .ghana-hero-buttons {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .ghana-hero-buttons a {
-        width: 100%;
-        text-align: center;
-    }
-
-    .ghana-tech-hero-image img {
-        height: 250px;
-    }
-
-    .ghana-stats {
-        width: 94%;
-
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .ghana-news-controls {
-        width: 94%;
-    }
-
-    .ghana-news-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .ghana-featured {
-        width: 94%;
-    }
-
-    .ghana-featured-image img {
-        height: 230px;
-        min-height: 230px;
-    }
-
-    .ghana-featured-content {
-        padding: 25px;
-    }
-
-    .ghana-featured-content h2 {
-        font-size: 26px;
-    }
-
-    .ghana-news-section {
-        width: 94%;
-    }
-
-    .ghana-trending {
-        width: 94%;
-    }
-
-    .ghana-trending-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .ghana-topics {
-        width: 94%;
-    }
-
-    .ghana-topic-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .ghana-newsletter {
-        width: 94%;
-    }
-
-    .ghana-source-note {
-        width: 94%;
-    }
-
     .footer-grid {
         text-align: center;
     }
+
 }
 
 
 /* =========================================================
-   46. SMALL PHONES
+   24. SMALL PHONES
 ========================================================= */
 
 @media (max-width: 480px) {
 
-    .logo {
-        flex-direction: column;
-        gap: 5px;
-    }
-
     .logo h1 {
-        font-size: 22px;
+        font-size: 19px;
     }
 
-    .hero-text h2 {
-        font-size: 29px;
+    .logo p {
+        display: none;
     }
 
     .section > h2 {
         font-size: 24px;
     }
 
-    .tool-card {
+    .tool-card,
+    .card {
         padding: 25px 18px;
     }
 
@@ -2218,63 +1164,17 @@ body.dark ::-webkit-scrollbar-track {
         font-size: 25px;
     }
 
-    .read-btn {
+    .read-btn,
+    .btn {
         width: 100%;
         text-align: center;
     }
 
-    .ghana-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .ghana-tech-hero {
-        padding: 22px;
-    }
-
-    .ghana-tech-hero h1 {
-        font-size: 27px;
-    }
-
-    .ghana-tech-hero-image img {
-        height: 210px;
-    }
-
-    .ghana-category-buttons {
-        flex-direction: column;
-    }
-
-    .ghana-filter {
-        width: 100%;
-    }
-
-    .ghana-search input {
-        font-size: 13px;
-    }
-
-    .ghana-featured-content {
-        padding: 20px;
-    }
-
-    .ghana-featured-content h2 {
-        font-size: 23px;
-    }
-
-    .ghana-trending-box {
-        padding: 25px 20px;
-    }
-
-    .ghana-newsletter {
-        padding: 35px 20px;
-    }
-
-    .ghana-newsletter h2 {
-        font-size: 27px;
-    }
 }
 
 
 /* =========================================================
-   47. ACCESSIBILITY / REDUCED MOTION
+   25. REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2287,397 +1187,30 @@ body.dark ::-webkit-scrollbar-track {
     *::before,
     *::after {
         animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-}
 
-/* =========================================================
-   TECHHUB GHANA
-   FINAL COMPONENT FIXES
-========================================================= */
-
-
-/* =========================================================
-   TOOL PAGE
-========================================================= */
-
-.tool-page {
-    width: 90%;
-    max-width: 900px;
-    margin: 60px auto;
-}
-
-.tool-header {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.tool-header h1 {
-    margin: 15px 0;
-    color: #0056d2;
-    font-size: clamp(32px, 5vw, 48px);
-}
-
-.tool-header p {
-    color: #64748b;
-}
-
-.tool-badge {
-    display: inline-block;
-    padding: 7px 15px;
-    border-radius: 30px;
-    background: #eaf2ff;
-    color: #0056d2;
-    font-size: 12px;
-    font-weight: 800;
 }
 
 
 /* =========================================================
-   QR GENERATOR
+   26. SCROLLBAR
 ========================================================= */
 
-.qr-generator-card {
-    padding: 35px;
-    background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+::-webkit-scrollbar {
+    width: 9px;
 }
 
-.qr-generator-card label {
-    display: block;
-    margin-bottom: 10px;
-    color: #334155;
-    font-weight: 700;
-}
-
-.qr-generator-card textarea {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 18px;
-    border: 1px solid #d9dee7;
-    border-radius: 10px;
-    outline: none;
-    resize: vertical;
-    color: #1f2937;
-    background: #ffffff;
-}
-
-.qr-generator-card textarea:focus {
-    border-color: #0056d2;
-}
-
-.primary-btn,
-.secondary-btn {
-    padding: 12px 22px;
-    border: 0;
-    border-radius: 8px;
-    font-weight: 700;
-    transition: 0.25s;
-}
-
-.primary-btn {
+::-webkit-scrollbar-thumb {
     background: #0056d2;
-    color: #ffffff;
-}
-
-.primary-btn:hover {
-    background: #003d99;
-    transform: translateY(-2px);
-}
-
-.secondary-btn {
-    background: #eaf2ff;
-    color: #0056d2;
-}
-
-.secondary-btn:hover {
-    background: #dbeafe;
-}
-
-.qr-result {
-    min-height: 250px;
-    margin-top: 30px;
-    padding: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f8fafc;
-    border: 1px dashed #cbd5e1;
-    border-radius: 15px;
-    text-align: center;
-    color: #64748b;
-}
-
-.qr-result img {
-    width: 300px;
-    max-width: 100%;
-    padding: 10px;
-    background: #ffffff;
-    border-radius: 10px;
-}
-
-.qr-actions {
-    margin-top: 20px;
-    text-align: center;
-}
-
-
-/* =========================================================
-   TOOLS HERO
-========================================================= */
-
-.tools-hero {
-    width: 90%;
-    max-width: 1200px;
-    margin: 45px auto;
-    padding: 60px 40px;
-    text-align: center;
     border-radius: 20px;
-    background: linear-gradient(135deg, #0056d2, #003d99);
-    color: #ffffff;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.tools-hero span {
-    display: inline-block;
-    padding: 7px 15px;
-    border-radius: 30px;
-    background: #ffcc00;
-    color: #111111;
-    font-size: 12px;
-    font-weight: 800;
+::-webkit-scrollbar-track {
+    background: #e5e7eb;
+
 }
 
-.tools-hero h1 {
-    margin: 18px 0 10px;
-    font-size: clamp(34px, 5vw, 52px);
-}
-
-.tools-hero p {
-    max-width: 700px;
-    margin: auto;
-    color: #e5efff;
-}
-
-
-/* =========================================================
-   SAVE ARTICLE BUTTON
-========================================================= */
-
-.save-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 15px;
-    padding: 11px 20px;
-    border: 0;
-    border-radius: 8px;
-    background: #ffcc00;
-    color: #111111;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-.save-btn:hover {
-    transform: translateY(-2px);
-    filter: brightness(0.95);
-}
-
-
-/* =========================================================
-   SAVED NEWS
-========================================================= */
-
-.saved-card {
-    align-items: center;
-}
-
-.saved-card-content {
-    flex: 1;
-    min-width: 0;
-}
-
-.saved-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-}
-
-.delete-save-btn {
-    margin-top: 15px;
-    padding: 10px 16px;
-    border: 1px solid #fecaca;
-    border-radius: 7px;
-    background: #fff1f2;
-    color: #dc2626;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.delete-save-btn:hover {
-    background: #fee2e2;
-}
-
-.empty-state {
-    grid-column: 1 / -1;
-    padding: 70px 25px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-}
-
-.empty-icon {
-    margin-bottom: 15px;
-    font-size: 55px;
-}
-
-.empty-state h3 {
-    margin-bottom: 8px;
-    color: #0056d2;
-}
-
-.empty-state p {
-    margin-bottom: 20px;
-    color: #64748b;
-}
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-#topBtn {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-#topBtn.show {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-
-/* =========================================================
-   HERO IMAGE TRANSITION
-========================================================= */
-
-.hero-image img {
-    transition: opacity 0.25s ease;
-}
-
-
-/* =========================================================
-   DARK MODE - EXTRA COMPONENTS
-========================================================= */
-
-body.dark .tool-header p {
-    color: #cbd5e1;
-}
-
-body.dark .tool-badge {
-    background: #1e3a5f;
-    color: #93c5fd;
-}
-
-body.dark .qr-generator-card,
-body.dark .empty-state,
-body.dark .tools-hero {
-    color: #f8fafc;
-}
-
-body.dark .qr-generator-card {
+body.dark ::-webkit-scrollbar-track {
     background: #1e293b;
-}
-
-body.dark .qr-generator-card label {
-    color: #e2e8f0;
-}
-
-body.dark .qr-generator-card textarea {
-    background: #334155;
-    color: #ffffff;
-    border-color: #475569;
-}
-
-body.dark .qr-result {
-    background: #0f172a;
-    border-color: #475569;
-}
-
-body.dark .empty-state {
-    background: #1e293b;
-}
-
-body.dark .empty-state p {
-    color: #cbd5e1;
-}
-
-body.dark .delete-save-btn {
-    background: #450a0a;
-    border-color: #7f1d1d;
-    color: #fca5a5;
-}
-
-
-/* =========================================================
-   MOBILE TOOL FIXES
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .tools-hero {
-        width: 94%;
-        padding: 40px 25px;
-    }
-
-    .tool-page {
-        width: 94%;
-        margin: 40px auto;
-    }
-
-    .qr-generator-card {
-        padding: 25px 20px;
-    }
-
-    .saved-card {
-        align-items: stretch;
-    }
-
-    .saved-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .saved-actions .read-btn,
-    .delete-save-btn {
-        width: 100%;
-        text-align: center;
-    }
-
-}
-
-
-@media (max-width: 480px) {
-
-    .tools-hero {
-        padding: 35px 20px;
-    }
-
-    .qr-generator-card {
-        padding: 20px 16px;
-    }
-
-    .primary-btn,
-    .secondary-btn {
-        width: 100%;
-    }
-
    }
