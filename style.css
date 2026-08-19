@@ -1980,3 +1980,1663 @@ body.dark .view-more {
     }
 
        }
+
+
+/* =========================================================
+   GHANA TECH HUB
+   MODERN GHANA TECHNOLOGY PAGE
+========================================================= */
+
+.ghana-tech-hero{
+
+    width:90%;
+    margin:45px auto;
+
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+
+    gap:50px;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #0056d2,
+        #003c99
+    );
+
+    color:white;
+
+    padding:55px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.15);
+
+}
+
+
+.ghana-tech-hero-content span{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.15);
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+
+.ghana-tech-hero h1{
+
+    font-size:48px;
+
+    line-height:1.15;
+
+    margin-bottom:20px;
+
+}
+
+
+.ghana-tech-hero p{
+
+    color:#e5efff;
+
+    font-size:17px;
+
+    margin-bottom:30px;
+
+}
+
+
+.ghana-tech-hero-image{
+
+    position:relative;
+
+}
+
+
+.ghana-tech-hero-image img{
+
+    width:100%;
+
+    height:400px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+
+.ghana-floating-card{
+
+    position:absolute;
+
+    bottom:20px;
+    left:20px;
+
+    background:white;
+
+    color:#111;
+
+    padding:15px 20px;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.ghana-floating-card span{
+
+    font-size:12px;
+
+    color:#666;
+
+    background:none;
+
+    padding:0;
+
+    margin:3px 0 0;
+
+}
+
+
+/* HERO BUTTONS */
+
+.ghana-hero-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.ghana-primary-btn,
+.ghana-secondary-btn{
+
+    display:inline-block;
+
+    padding:13px 22px;
+
+    border-radius:8px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+.ghana-primary-btn{
+
+    background:#ffcc00;
+
+    color:#111;
+
+}
+
+
+.ghana-secondary-btn{
+
+    border:2px solid rgba(255,255,255,.7);
+
+    color:white;
+
+}
+
+
+.ghana-primary-btn:hover,
+.ghana-secondary-btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.ghana-stats{
+
+    width:90%;
+
+    margin:35px auto 70px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+.ghana-stat-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+
+    border:1px solid #edf0f5;
+
+}
+
+
+.ghana-stat-icon{
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+
+.ghana-stat-card strong{
+
+    display:block;
+
+    font-size:28px;
+
+    color:#0056d2;
+
+}
+
+
+.ghana-stat-card span{
+
+    color:#666;
+
+    font-size:13px;
+
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.ghana-section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:75px auto;
+
+}
+
+
+.ghana-section-heading{
+
+    margin-bottom:35px;
+
+}
+
+
+.ghana-section-heading span{
+
+    color:#0056d2;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:.8px;
+
+}
+
+
+.ghana-section-heading h2{
+
+    font-size:36px;
+
+    color:#0056d2;
+
+    margin:8px 0 12px;
+
+}
+
+
+.ghana-section-heading p{
+
+    color:#666;
+
+    max-width:750px;
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.ghana-intro-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1.5fr 1fr;
+
+    gap:35px;
+
+}
+
+
+.ghana-intro-grid p{
+
+    color:#555;
+
+    margin-bottom:18px;
+
+}
+
+
+.ghana-highlight-box{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:30px;
+
+    border-left:5px solid #0056d2;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+.ghana-highlight-box h3{
+
+    color:#0056d2;
+
+    margin-bottom:15px;
+
+}
+
+
+.ghana-highlight-box ul{
+
+    list-style:none;
+
+    margin-top:15px;
+
+}
+
+
+.ghana-highlight-box li{
+
+    padding:7px 0;
+
+}
+
+
+/* =========================================================
+   SECTOR CARDS
+========================================================= */
+
+.ghana-sector-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+.ghana-sector-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:16px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+
+    border:1px solid #edf0f5;
+
+    transition:.3s;
+
+}
+
+
+.ghana-sector-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+
+}
+
+
+.sector-icon{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+
+.ghana-sector-card h3{
+
+    color:#0056d2;
+
+    margin-bottom:12px;
+
+}
+
+
+.ghana-sector-card p{
+
+    color:#666;
+
+    font-size:14px;
+
+    margin-bottom:20px;
+
+}
+
+
+.ghana-sector-card a{
+
+    color:#0056d2;
+
+    font-weight:700;
+
+    font-size:14px;
+
+}
+
+
+/* =========================================================
+   FEATURE SECTIONS
+========================================================= */
+
+.ghana-feature-section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:80px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+
+.ghana-feature-section.reverse{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+
+.ghana-feature-image{
+
+    min-height:350px;
+
+    background:#eaf2ff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.ghana-feature-image img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+}
+
+
+.feature-placeholder{
+
+    position:absolute;
+
+    font-size:100px;
+
+}
+
+
+.ghana-feature-content > span{
+
+    color:#0056d2;
+
+    font-weight:800;
+
+    font-size:13px;
+
+}
+
+
+.ghana-feature-content h2{
+
+    font-size:35px;
+
+    color:#0056d2;
+
+    margin:10px 0 18px;
+
+}
+
+
+.ghana-feature-content p{
+
+    color:#555;
+
+    margin-bottom:18px;
+
+}
+
+
+.ghana-info-list{
+
+    margin-top:25px;
+
+}
+
+
+.ghana-info-list div{
+
+    padding:14px 0;
+
+    border-bottom:1px solid #eee;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.ghana-info-list strong{
+
+    color:#0056d2;
+
+}
+
+
+.ghana-info-list span{
+
+    color:#666;
+
+    font-size:13px;
+
+}
+
+
+/* =========================================================
+   AI
+========================================================= */
+
+.ghana-ai-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+.ghana-ai-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+
+}
+
+
+.ghana-ai-card h3{
+
+    color:#0056d2;
+
+    margin-bottom:12px;
+
+}
+
+
+.ghana-ai-card p{
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+
+.ghana-tip-box{
+
+    margin-top:30px;
+
+    background:#fff7d6;
+
+    border-left:5px solid #ffcc00;
+
+    padding:22px;
+
+    border-radius:10px;
+
+}
+
+
+.ghana-tip-box strong{
+
+    color:#8a6500;
+
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+.skill-item{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+
+    transition:.3s;
+
+}
+
+
+.skill-item:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+.skill-item > span{
+
+    font-size:35px;
+
+}
+
+
+.skill-item h3{
+
+    color:#0056d2;
+
+    margin:10px 0;
+
+}
+
+
+.skill-item p{
+
+    color:#666;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+
+.skill-item a{
+
+    color:#0056d2;
+
+    font-weight:700;
+
+    font-size:13px;
+
+}
+
+
+/* =========================================================
+   STARTUP
+========================================================= */
+
+.ghana-check-list{
+
+    list-style:none;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    margin:20px 0 30px;
+
+}
+
+
+.ghana-check-list li{
+
+    color:#444;
+
+}
+
+
+.startup-idea-box{
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #eef5ff,
+        #ffffff
+    );
+
+    border-radius:20px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+
+.startup-icon{
+
+    font-size:65px;
+
+}
+
+
+.startup-idea-box h3{
+
+    font-size:28px;
+
+    color:#0056d2;
+
+    margin:10px 0;
+
+}
+
+
+.startup-idea-box p{
+
+    color:#666;
+
+}
+
+
+.startup-steps{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+
+.startup-steps span{
+
+    background:white;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+/* =========================================================
+   CONNECTIVITY
+========================================================= */
+
+.connectivity-content{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+
+}
+
+
+.connectivity-content > p{
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+
+.connectivity-cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+
+.connectivity-cards div{
+
+    background:#f4f7fb;
+
+    padding:20px;
+
+    border-radius:12px;
+
+}
+
+
+.connectivity-cards strong{
+
+    color:#0056d2;
+
+}
+
+
+.connectivity-cards p{
+
+    color:#666;
+
+    font-size:13px;
+
+    margin-top:5px;
+
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.ghana-security-section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:80px auto;
+
+    padding:50px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #172554
+    );
+
+    border-radius:22px;
+
+    color:white;
+
+}
+
+
+.ghana-security-section > div{
+
+    max-width:850px;
+
+}
+
+
+.ghana-security-section span{
+
+    color:#60a5fa;
+
+    font-weight:800;
+
+    font-size:13px;
+
+}
+
+
+.ghana-security-section h2{
+
+    font-size:35px;
+
+    margin:10px 0 15px;
+
+}
+
+
+.ghana-security-section p{
+
+    color:#cbd5e1;
+
+}
+
+
+.security-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:15px;
+
+    margin:30px 0;
+
+}
+
+
+.security-grid div{
+
+    background:rgba(255,255,255,.08);
+
+    padding:18px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+
+.security-grid strong{
+
+    font-size:13px;
+
+}
+
+
+.ghana-security-btn{
+
+    display:inline-block;
+
+    background:#38bdf8;
+
+    color:#06111f;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    font-weight:800;
+
+}
+
+
+/* =========================================================
+   PRIVACY
+========================================================= */
+
+.privacy-card{
+
+    display:grid;
+
+    grid-template-columns:100px 1fr;
+
+    gap:25px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+
+    border-left:5px solid #0056d2;
+
+}
+
+
+.privacy-icon{
+
+    font-size:65px;
+
+}
+
+
+.privacy-card span{
+
+    color:#0056d2;
+
+    font-size:13px;
+
+    font-weight:800;
+
+}
+
+
+.privacy-card h2{
+
+    color:#0056d2;
+
+    margin:5px 0 15px;
+
+}
+
+
+.privacy-card p{
+
+    color:#555;
+
+    margin-bottom:12px;
+
+}
+
+
+/* =========================================================
+   OPPORTUNITIES
+========================================================= */
+
+.ghana-opportunities{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:80px auto;
+
+}
+
+
+.center{
+
+    text-align:center;
+
+}
+
+
+.center p{
+
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+
+.opportunity-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+.opportunity-grid > div{
+
+    background:white;
+
+    padding:28px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+
+}
+
+
+.opportunity-grid span{
+
+    font-size:40px;
+
+}
+
+
+.opportunity-grid h3{
+
+    color:#0056d2;
+
+    margin:10px 0;
+
+}
+
+
+.opportunity-grid p{
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+
+/* =========================================================
+   TAKEAWAY
+========================================================= */
+
+.ghana-takeaway{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:80px auto;
+
+    padding:55px;
+
+    text-align:center;
+
+    background:#0056d2;
+
+    color:white;
+
+    border-radius:22px;
+
+}
+
+
+.ghana-takeaway h2{
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+}
+
+
+.ghana-takeaway p{
+
+    max-width:800px;
+
+    margin:0 auto 18px;
+
+    color:#e5efff;
+
+}
+
+
+/* =========================================================
+   RELATED
+========================================================= */
+
+.related-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+.related-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+
+    transition:.3s;
+
+}
+
+
+.related-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+.related-card span{
+
+    font-size:35px;
+
+}
+
+
+.related-card h3{
+
+    color:#0056d2;
+
+    margin:10px 0;
+
+}
+
+
+.related-card p{
+
+    color:#666;
+
+    font-size:13px;
+
+}
+
+
+/* =========================================================
+   SOURCE NOTE
+========================================================= */
+
+.ghana-source-note{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:50px auto;
+
+    padding:25px;
+
+    background:#eef4ff;
+
+    border-radius:12px;
+
+    border-left:4px solid #0056d2;
+
+}
+
+
+.ghana-source-note h3{
+
+    color:#0056d2;
+
+    margin-bottom:10px;
+
+}
+
+
+.ghana-source-note p{
+
+    color:#555;
+
+    font-size:13px;
+
+}
+
+
+.ghana-source-note .updated{
+
+    margin-top:10px;
+
+    font-weight:700;
+
+}
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+body.dark .ghana-stat-card,
+body.dark .ghana-highlight-box,
+body.dark .ghana-sector-card,
+body.dark .ghana-ai-card,
+body.dark .skill-item,
+body.dark .connectivity-content,
+body.dark .connectivity-cards div,
+body.dark .privacy-card,
+body.dark .opportunity-grid > div,
+body.dark .related-card,
+body.dark .startup-idea-box{
+
+    background:#1f2937;
+
+    color:#f3f4f6;
+
+}
+
+
+body.dark .ghana-stat-card span,
+body.dark .ghana-sector-card p,
+body.dark .ghana-ai-card p,
+body.dark .skill-item p,
+body.dark .connectivity-content p,
+body.dark .connectivity-cards p,
+body.dark .privacy-card p,
+body.dark .opportunity-grid p,
+body.dark .related-card p{
+
+    color:#d1d5db;
+
+}
+
+
+body.dark .ghana-highlight-box li,
+body.dark .ghana-check-list li{
+
+    color:#d1d5db;
+
+}
+
+
+body.dark .ghana-source-note{
+
+    background:#172554;
+
+}
+
+
+body.dark .ghana-source-note p{
+
+    color:#dbeafe;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:992px){
+
+    .ghana-tech-hero{
+
+        grid-template-columns:1fr;
+
+        padding:35px;
+
+    }
+
+
+    .ghana-tech-hero h1{
+
+        font-size:40px;
+
+    }
+
+
+    .ghana-stats{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    .ghana-sector-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    .ghana-ai-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    .skills-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    .opportunity-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+
+    .related-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .ghana-tech-hero{
+
+        width:94%;
+
+        padding:28px;
+
+    }
+
+
+    .ghana-tech-hero h1{
+
+        font-size:32px;
+
+    }
+
+
+    .ghana-tech-hero p{
+
+        font-size:15px;
+
+    }
+
+
+    .ghana-tech-hero-image img{
+
+        height:280px;
+
+    }
+
+
+    .ghana-stats{
+
+        width:94%;
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+
+    .ghana-section,
+    .ghana-feature-section,
+    .ghana-opportunities{
+
+        width:94%;
+
+    }
+
+
+    .ghana-intro-grid,
+    .ghana-feature-section,
+    .ghana-feature-section.reverse{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .ghana-section-heading h2{
+
+        font-size:28px;
+
+    }
+
+
+    .ghana-sector-grid,
+    .ghana-ai-grid,
+    .skills-grid,
+    .opportunity-grid,
+    .related-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .ghana-feature-image{
+
+        min-height:280px;
+
+    }
+
+
+    .ghana-feature-image img{
+
+        height:280px;
+
+    }
+
+
+    .security-grid{
+
+        grid-template-columns:
+        1fr 1fr;
+
+    }
+
+
+    .ghana-security-section{
+
+        width:94%;
+
+        padding:30px 22px;
+
+    }
+
+
+    .ghana-security-section h2{
+
+        font-size:28px;
+
+    }
+
+
+    .privacy-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .ghana-takeaway{
+
+        width:94%;
+
+        padding:35px 22px;
+
+    }
+
+
+    .ghana-takeaway h2{
+
+        font-size:28px;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .ghana-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .ghana-stat-card strong{
+
+        font-size:25px;
+
+    }
+
+
+    .ghana-hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+
+    .ghana-primary-btn,
+    .ghana-secondary-btn{
+
+        text-align:center;
+
+        width:100%;
+
+    }
+
+
+    .security-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .startup-steps{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .ghana-check-list{
+
+        grid-template-columns:1fr;
+
+    }
+
+   }
