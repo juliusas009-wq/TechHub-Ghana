@@ -1,132 +1,157 @@
 /* =========================================================
    TECHHUB GHANA
-   SAVED NEWS
+   SAVED NEWS PAGE
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener(
+    "DOMContentLoaded",
+    loadSavedArticles
+);
+
+
+function loadSavedArticles() {
 
     const container =
-        document.getElementById("savedArticles");
+        document.getElementById(
+            "savedArticles"
+        );
+
 
     if (!container) return;
 
 
-    let savedArticles =
+    const savedArticles =
         JSON.parse(
-            localStorage.getItem("savedArticles")
+            localStorage.getItem(
+                "savedArticles"
+            )
         ) || [];
 
 
-    /* =====================================================
-       EMPTY STATE
-    ===================================================== */
+    container.innerHTML = "";
+
+
+    /* No articles */
 
     if (savedArticles.length === 0) {
 
         container.innerHTML = `
-            <div class="empty-state">
-                <div class="empty-icon">🔖</div>
 
-                <h3>No saved articles yet</h3>
+            <div class="article-page">
+
+                <h2>
+                    🔖 No Saved Articles
+                </h2>
 
                 <p>
-                    Articles you save will appear here.
+                    You haven't saved any articles yet.
                 </p>
 
-                <a href="news.html" class="read-btn">
+                <a
+                    href="news.html"
+                    class="read-btn"
+                >
                     Browse News
                 </a>
+
             </div>
+
         `;
 
         return;
+
     }
 
 
-    /* =====================================================
-       DISPLAY ARTICLES
-    ===================================================== */
+    /* Display articles */
 
-    container.innerHTML = savedArticles.map(
-        (article, index) => `
+    savedArticles.forEach(
+        function (article, index) {
 
-        <article class="news-card saved-card">
+            const card =
+                document.createElement("div");
 
-            <img
-                src="${escapeHTML(article.image)}"
-                alt="${escapeHTML(article.title)}"
-                loading="lazy"
-                onerror="this.src='images/logo.png'"
-            >
+            card.className =
+                "news-card";
 
-            <div class="saved-card-content">
 
-                <h3>
-                    ${escapeHTML(article.title)}
-                </h3>
+            card.innerHTML = `
 
-                <p>
-                    ${escapeHTML(article.description)}
-                </p>
+                <img
+                    src="${escapeHTML(article.image)}"
+                    alt="${escapeHTML(article.title)}"
+                    onerror="this.src='images/logo.png'"
+                >
 
-                <div class="saved-actions">
+                <div>
+
+                    <h3>
+                        ${escapeHTML(article.title)}
+                    </h3>
+
+                    <p>
+                        ${escapeHTML(article.description)}
+                    </p>
 
                     <a
                         href="${escapeHTML(article.link)}"
-                        class="read-btn">
-
-                        Read Article →
-
+                        class="read-btn"
+                    >
+                        Read Article
                     </a>
 
                     <button
-                        class="delete-save-btn"
-                        data-index="${index}">
-
-                        🗑 Remove
-
+                        type="button"
+                        class="read-btn"
+                        style="margin-left:8px;background:#dc2626;"
+                        onclick="deleteSavedArticle(${index})"
+                    >
+                        Remove
                     </button>
 
                 </div>
 
-            </div>
-
-        </article>
-
-        `
-    ).join("");
+            `;
 
 
-    /* =====================================================
-       REMOVE SAVED ARTICLE
-    ===================================================== */
+            container.appendChild(card);
 
-    document.querySelectorAll(".delete-save-btn")
-        .forEach(button => {
+        }
+    );
 
-            button.addEventListener("click", () => {
-
-                const index =
-                    Number(button.dataset.index);
-
-                savedArticles.splice(index, 1);
-
-                localStorage.setItem(
-                    "savedArticles",
-                    JSON.stringify(savedArticles)
-                );
-
-                location.reload();
-
-            });
-
-        });
-
-});
+}
 
 
 /* =========================================================
-   BASIC HTML ESCAPING
+   DELETE
+========================================================= */
+
+function deleteSavedArticle(index) {
+
+    let savedArticles =
+        JSON.parse(
+            localStorage.getItem(
+                "savedArticles"
+            )
+        ) || [];
+
+
+    savedArticles.splice(index, 1);
+
+
+    localStorage.setItem(
+        "savedArticles",
+        JSON.stringify(savedArticles)
+    );
+
+
+    loadSavedArticles();
+
+}
+
+
+/* =========================================================
+   SECURITY HELPER
 ========================================================= */
 
 function escapeHTML(value) {
@@ -134,8 +159,9 @@ function escapeHTML(value) {
     const div =
         document.createElement("div");
 
-    div.textContent = value ?? "";
+    div.textContent =
+        value || "";
 
     return div.innerHTML;
 
-                                    }
+                                           }
