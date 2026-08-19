@@ -3,314 +3,525 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>TechHub Ghana | Latest Technology News</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta name="description" content="Latest technology news, AI, cybersecurity, programming tutorials and Ghana technology updates.">
+    <title>Tech News | TechHub Ghana</title>
 
-<link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="Latest technology news from Ghana and around the world covering AI, cybersecurity, programming, cloud computing and digital innovation."
+    >
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+        name="theme-color"
+        content="#0756d6"
+    >
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
 
 </head>
 
+
 <body>
 
-<!-- ================= HEADER ================= -->
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="main-header">
 
-<div class="top-bar">
+    <div class="top-bar">
 
-<div class="logo">
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="TechHub Ghana Home"
+        >
 
-<img src="images/logo.png" alt="TechHub Ghana Logo">
+            <img
+                src="images/logo.png"
+                alt="TechHub Ghana Logo"
+            >
 
-<div>
+            <div>
 
-<h1>TechHub Ghana</h1>
+                <h1>TechHub Ghana</h1>
 
-<p>Technology News • Tutorials • Digital Tools</p>
+                <p>
+                    Technology News • Tutorials • Digital Tools
+                </p>
 
-</div>
+            </div>
 
-</div>
+        </a>
 
-<div class="header-right">
 
-<div class="search-box">
+        <div class="header-right">
 
-<input
-type="text"
-id="searchInput"
-placeholder="Search technology news...">
+            <div class="search-box">
 
-<button id="searchBtn">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search technology news..."
+                    aria-label="Search technology news"
+                    autocomplete="off"
+                >
 
-<i class="fas fa-search"></i>
+                <button
+                    type="button"
+                    id="searchBtn"
+                    aria-label="Search"
+                >
 
-</button>
+                    <i class="fas fa-search"></i>
 
-</div>
+                </button>
 
-<button class="menu-btn" onclick="toggleMenu()">
+            </div>
 
-☰
 
-</button>
+            <button
+                type="button"
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open navigation menu"
+                aria-controls="navMenu"
+                aria-expanded="false"
+                onclick="toggleMenu()"
+            >
 
-</div>
+                <i class="fas fa-bars"></i>
 
-</div>
+            </button>
 
-<nav id="navMenu">
+        </div>
 
-<a href="index.html">Home</a>
+    </div>
 
-<a class="active" href="news.html">News</a>
 
-<a href="tutorials.html">Tutorials</a>
+    <!-- NAVIGATION -->
 
-<a href="tools.html">Tools</a>
+    <nav id="navMenu" aria-label="Main navigation">
 
-<a href="about.html">About</a>
+        <a href="index.html">
+            Home
+        </a>
 
-<a href="contact.html">Contact</a>
+        <a
+            href="news.html"
+            class="active"
+            aria-current="page"
+        >
+            News
+        </a>
 
-</nav>
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="tools.html">
+            Tools
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
 
 </header>
 
-<!-- =============== BREAKING NEWS =============== -->
 
-<section class="breaking-bar">
+<!-- =====================================================
+     BREAKING NEWS
+===================================================== -->
 
-<div class="breaking-label">
+<section
+    class="breaking-news"
+    aria-label="Breaking technology news"
+>
 
-LIVE
+    <div class="today-date">
 
-</div>
+        <span>
+            <i class="fas fa-bolt"></i>
+            LIVE
+        </span>
 
-<marquee id="breakingNews">
-    📢 Loading latest technology news...
-</marquee>
+    </div>
 
-</section>
 
-<!-- =============== HERO =============== -->
+    <div class="breaking-track">
 
-<section class="hero-news">
+        <div
+            id="breakingNews"
+            class="breaking-content"
+        >
 
-<div class="hero-left">
+            📢 Loading latest technology news...
 
-<img src="images/ai-news.jpg"
-alt="Artificial Intelligence">
+        </div>
 
-<div class="hero-overlay">
-
-<span class="category">
-
-🤖 FEATURED STORY
-
-</span>
-
-<h2>
-
-Artificial Intelligence Is Transforming Education Around The World
-
-</h2>
-
-<p>
-
-Artificial Intelligence is revolutionizing education through smart tutoring,
-automatic translation, coding assistants and personalized learning experiences.
-
-</p>
-
-<a href="ai-education.html"
-class="hero-btn">
-
-Read Full Story
-
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-right">
-
-<div class="mini-card">
-
-<img src="images/cyber-news.jpg">
-
-<div>
-
-<span>Cybersecurity</span>
-
-<h4>
-
-Cybersecurity Becomes More Important Than Ever
-
-</h4>
-
-</div>
-
-</div>
-
-<div class="mini-card">
-
-<img src="images/web-news.jpg">
-
-<div>
-
-<span>Programming</span>
-
-<h4>
-
-Web Development Continues To Grow In Demand
-
-</h4>
-
-</div>
-
-</div>
-
-<div class="mini-card">
-
-<img src="images/cloud-news.jpg">
-
-<div>
-
-<span>Cloud Computing</span>
-
-<h4>
-
-Cloud Technology Powers Modern Businesses
-
-</h4>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- =============== LATEST NEWS =============== -->
+
+<!-- =====================================================
+     HERO NEWS
+===================================================== -->
+
+<main>
+
+
+<section class="news-hero">
+
+    <article class="featured-news">
+
+        <div class="featured-image">
+
+            <img
+                src="images/ai-news.jpg"
+                alt="Artificial Intelligence transforming education"
+            >
+
+        </div>
+
+
+        <div class="featured-content">
+
+            <span class="category-badge">
+                🤖 Featured Story
+            </span>
+
+            <h2>
+                Artificial Intelligence Is Transforming
+                Education Around The World
+            </h2>
+
+            <p>
+
+                Artificial Intelligence is revolutionizing
+                education through smart tutoring, automatic
+                translation, coding assistants and personalized
+                learning experiences.
+
+            </p>
+
+            <a
+                href="ai-education.html"
+                class="hero-btn"
+            >
+
+                Read Full Story
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </article>
+
+
+    <!-- FEATURED MINI STORIES -->
+
+    <div class="featured-mini-grid">
+
+
+        <article class="mini-card">
+
+            <img
+                src="images/cyber-news.jpg"
+                alt="Cybersecurity technology"
+                loading="lazy"
+            >
+
+            <div>
+
+                <span class="mini-category">
+                    Cybersecurity
+                </span>
+
+                <h3>
+                    Cybersecurity Becomes More Important Than Ever
+                </h3>
+
+                <a href="news.html">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="mini-card">
+
+            <img
+                src="images/web-news.jpg"
+                alt="Web development"
+                loading="lazy"
+            >
+
+            <div>
+
+                <span class="mini-category">
+                    Programming
+                </span>
+
+                <h3>
+                    Web Development Continues To Grow In Demand
+                </h3>
+
+                <a href="news.html">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <article class="mini-card">
+
+            <img
+                src="images/cloud-news.jpg"
+                alt="Cloud computing technology"
+                loading="lazy"
+            >
+
+            <div>
+
+                <span class="mini-category">
+                    Cloud Computing
+                </span>
+
+                <h3>
+                    Cloud Technology Powers Modern Businesses
+                </h3>
+
+                <a href="news.html">
+                    Read More →
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LATEST NEWS
+===================================================== -->
 
 <section class="section">
 
-<h2>
+    <h2>
+        📰 Latest Technology News
+    </h2>
 
-📰 Latest Technology News
 
-</h2>
+    <!-- CATEGORY FILTER -->
 
-<div class="category-buttons">
+    <div
+        class="category-buttons"
+        role="group"
+        aria-label="News categories"
+    >
 
-<button onclick="filterNews('all')">
+        <button
+            type="button"
+            class="active"
+            onclick="filterNews('all')"
+        >
+            All
+        </button>
 
-All
+        <button
+            type="button"
+            onclick="filterNews('Artificial Intelligence')"
+        >
+            🤖 AI
+        </button>
 
-</button>
+        <button
+            type="button"
+            onclick="filterNews('Cybersecurity')"
+        >
+            🔒 Cybersecurity
+        </button>
 
-<button onclick="filterNews('Artificial Intelligence')">
+        <button
+            type="button"
+            onclick="filterNews('Programming')"
+        >
+            💻 Programming
+        </button>
 
-🤖 AI
+        <button
+            type="button"
+            onclick="filterNews('Cloud Computing')"
+        >
+            ☁️ Cloud
+        </button>
 
-</button>
+        <button
+            type="button"
+            onclick="filterNews('Ghana Technology')"
+        >
+            🇬🇭 Ghana Tech
+        </button>
 
-<button onclick="filterNews('Cybersecurity')">
+    </div>
 
-🔒 Cybersecurity
 
-</button>
+    <div class="news-layout">
 
-<button onclick="filterNews('Programming')">
 
-💻 Programming
+        <!-- NEWS -->
 
-</button>
+        <div
+            id="newsContainer"
+            class="news-left"
+            aria-live="polite"
+        >
 
-<button onclick="filterNews('Cloud Computing')">
+            <div class="loading">
 
-☁ Cloud
+                <div class="spinner"></div>
 
-</button>
+                <p>
+                    Loading latest technology news...
+                </p>
 
-<button onclick="filterNews('Ghana Technology')">
+            </div>
 
-🇬🇭 Ghana Tech
+        </div>
 
-</button>
 
-</div>
-
-<div class="news-layout">
-
-<div id="newsContainer" class="news-left">
-
-<p>
-
-Loading latest news...
-
-</p>
-
-</div>
-
-        <!-- ================= RIGHT SIDEBAR ================= -->
+        <!-- SIDEBAR -->
 
         <aside class="sidebar">
 
+
             <div class="widget">
 
-                <h3>🔥 Trending Topics</h3>
+                <h3>
+                    🔥 Trending Topics
+                </h3>
 
                 <ul>
 
-                    <li>🤖 Artificial Intelligence</li>
-                    <li>🔒 Cybersecurity</li>
-                    <li>💻 Programming</li>
-                    <li>☁️ Cloud Computing</li>
-                    <li>📱 Mobile Technology</li>
-                    <li>🌐 Web Development</li>
-                    <li>📊 Data Science</li>
-                    <li>🧠 Machine Learning</li>
-                    <li>🇬🇭 Ghana Technology</li>
-                    <li>🚀 Startups</li>
+                    <li>
+                        🤖 Artificial Intelligence
+                    </li>
+
+                    <li>
+                        🔒 Cybersecurity
+                    </li>
+
+                    <li>
+                        💻 Programming
+                    </li>
+
+                    <li>
+                        ☁️ Cloud Computing
+                    </li>
+
+                    <li>
+                        📱 Mobile Technology
+                    </li>
+
+                    <li>
+                        🌐 Web Development
+                    </li>
+
+                    <li>
+                        📊 Data Science
+                    </li>
+
+                    <li>
+                        🧠 Machine Learning
+                    </li>
+
+                    <li>
+                        🇬🇭 Ghana Technology
+                    </li>
+
+                    <li>
+                        🚀 Startups
+                    </li>
 
                 </ul>
 
             </div>
 
+
             <div class="widget">
 
-                <h3>📈 Popular Technologies</h3>
+                <h3>
+                    📈 Popular Technologies
+                </h3>
+
 
                 <div class="tags">
 
                     <span>AI</span>
+
                     <span>Python</span>
+
                     <span>JavaScript</span>
+
                     <span>HTML</span>
+
                     <span>CSS</span>
+
                     <span>Firebase</span>
+
                     <span>GitHub</span>
+
                     <span>Cloud</span>
 
                 </div>
 
             </div>
+
 
         </aside>
 
@@ -318,30 +529,37 @@ Loading latest news...
 
 </section>
 
-<!-- ================= GHANA TECH ================= -->
+
+<!-- =====================================================
+     GHANA TECHNOLOGY
+===================================================== -->
 
 <section class="section">
 
-    <h2>🇬🇭 Ghana Technology</h2>
+    <h2>
+        🇬🇭 Ghana Technology
+    </h2>
+
 
     <div class="ghana-grid">
 
-        <div class="ghana-card">
 
-            <img src="images/ghana-tech.jpg" alt="Ghana Technology">
+        <article class="ghana-card">
 
-            <div>
+            <img
+                src="images/ghana-tech.jpg"
+                alt="Ghana technology and digital transformation"
+                loading="lazy"
+            >
 
-                <span class="category">
+            <div class="ghana-card-content">
 
+                <span class="category-badge">
                     🇬🇭 Digital Ghana
-
                 </span>
 
                 <h3>
-
                     Ghana's Digital Transformation Continues
-
                 </h3>
 
                 <p>
@@ -352,64 +570,75 @@ Loading latest news...
 
                 </p>
 
-                <a href="ghana-digital.html" class="read-btn">
+                <a
+                    href="ghana-digital.html"
+                    class="read-btn"
+                >
 
-                    Read More →
+                    Read More
+                    <i class="fas fa-arrow-right"></i>
 
                 </a>
 
             </div>
 
-        </div>
+        </article>
 
-        <div class="ghana-card">
 
-            <img src="images/mobile-money.jpg" alt="Mobile Money">
+        <article class="ghana-card">
 
-            <div>
+            <img
+                src="images/mobile-money.jpg"
+                alt="Mobile Money technology in Ghana"
+                loading="lazy"
+            >
 
-                <span class="category">
+            <div class="ghana-card-content">
 
+                <span class="category-badge">
                     💳 FinTech
-
                 </span>
 
                 <h3>
-
                     Mobile Money Continues To Transform Payments
-
                 </h3>
 
                 <p>
 
                     Mobile Money has become one of Ghana's biggest
                     financial innovations, making payments and money
-                    transfers simple and secure.
+                    transfers simple and convenient.
 
                 </p>
 
-                <a href="mobile-money.html" class="read-btn">
+                <a
+                    href="mobile-money.html"
+                    class="read-btn"
+                >
 
-                    Read More →
+                    Read More
+                    <i class="fas fa-arrow-right"></i>
 
                 </a>
 
             </div>
 
-        </div>
+        </article>
+
 
     </div>
 
 </section>
 
-<!-- ================= NEWSLETTER ================= -->
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
 
 <section class="newsletter">
 
     <h2>
-
         Subscribe To TechHub Ghana
-
     </h2>
 
     <p>
@@ -420,14 +649,19 @@ Loading latest news...
 
     </p>
 
-    <form>
+
+    <form id="newsletterForm">
 
         <input
             type="email"
-            placeholder="Enter your email"
-            required>
+            name="email"
+            placeholder="Enter your email address"
+            aria-label="Email address"
+            autocomplete="email"
+            required
+        >
 
-        <button>
+        <button type="submit">
 
             Subscribe
 
@@ -437,93 +671,161 @@ Loading latest news...
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-<div class="footer-grid">
+    <div class="footer-grid">
 
-<div>
 
-<h3>TechHub Ghana</h3>
+        <div>
 
-<p>
+            <h3>
+                TechHub Ghana
+            </h3>
 
-Technology • Innovation • Learning
+            <p>
+                Technology • Innovation • Learning
+            </p>
 
-</p>
+            <p>
+                Your trusted source for technology news,
+                tutorials and digital innovation.
+            </p>
 
-<p>
+        </div>
 
-Your trusted source for technology news,
-tutorials and digital innovation.
 
-</p>
+        <div>
 
-</div>
+            <h3>
+                Quick Links
+            </h3>
 
-<div>
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
 
-<h3>Quick Links</h3>
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
 
-<p><a href="index.html">Home</a></p>
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
 
-<p><a href="news.html">News</a></p>
+            <p>
+                <a href="tools.html">
+                    Tools
+                </a>
+            </p>
 
-<p><a href="tutorials.html">Tutorials</a></p>
+            <p>
+                <a href="about.html">
+                    About
+                </a>
+            </p>
 
-<p><a href="tools.html">Tools</a></p>
+            <p>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </p>
 
-<p><a href="about.html">About</a></p>
+        </div>
 
-<p><a href="contact.html">Contact</a></p>
 
-</div>
+        <div>
 
-<div>
+            <h3>
+                Categories
+            </h3>
 
-<h3>Categories</h3>
+            <p>Artificial Intelligence</p>
 
-<p>Artificial Intelligence</p>
+            <p>Programming</p>
 
-<p>Programming</p>
+            <p>Cybersecurity</p>
 
-<p>Cybersecurity</p>
+            <p>Cloud Computing</p>
 
-<p>Cloud Computing</p>
+            <p>Ghana Technology</p>
 
-<p>Ghana Technology</p>
+        </div>
 
-</div>
 
-<div>
+        <div>
 
-<h3>Contact</h3>
+            <h3>
+                Contact
+            </h3>
 
-<p>📧 info@techhubghana.com</p>
+            <p>
+                📧 info@techhubghana.com
+            </p>
 
-<p>📍 Accra, Ghana</p>
+            <p>
+                📍 Accra, Ghana
+            </p>
 
-<p>🌍 www.techhubghana.com</p>
+        </div>
 
-</div>
 
-</div>
+    </div>
 
-<hr>
 
-<p class="copyright">
+    <hr>
 
-© 2026 TechHub Ghana. All Rights Reserved.
 
-</p>
+    <p class="copyright">
+
+        © 2026 TechHub Ghana.
+        All Rights Reserved.
+
+    </p>
 
 </footer>
 
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button
+    id="topBtn"
+    type="button"
+    aria-label="Back to top"
+>
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script src="script.js"></script>
 
-<script type="module" src="live-news.js"></script>
+<script
+    type="module"
+    src="live-news.js"
+></script>
+
 
 </body>
 
-</html>
+    </html>
