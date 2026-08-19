@@ -1,39 +1,104 @@
-<!-- ================= HEADER ================= -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tutorials | TechHub Ghana</title>
+
+    <meta name="description"
+          content="Learn HTML, CSS, JavaScript, Python, MySQL and Cybersecurity with TechHub Ghana.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="main-header">
 
+    <!-- TOP BAR -->
+
     <div class="top-bar">
 
-        <div class="logo">
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="logo">
 
             <img
                 src="images/logo.png"
                 alt="TechHub Ghana Logo">
 
-            <div>
+            <div class="logo-text">
 
-                <h1>TechHub Ghana</h1>
+                <h1>
+                    TechHub Ghana
+                </h1>
 
                 <p>
-                    Technology News • Tutorials • Digital Tools
+                    Technology • Tutorials • Digital Tools
                 </p>
 
             </div>
 
-        </div>
+        </a>
 
+
+        <!-- SEARCH -->
 
         <div class="search-box">
 
             <input
-                type="text"
-                placeholder="Search TechHub Ghana...">
+                type="search"
+                id="tutorialSearch"
+                placeholder="Search tutorials..."
+                aria-label="Search tutorials">
 
-            <button type="button">
-                <i class="fas fa-search"></i>
+            <button
+                type="button"
+                id="tutorialSearchBtn"
+                aria-label="Search">
+
+                🔍
+
             </button>
 
         </div>
+
+
+        <!-- DARK MODE -->
+
+        <button
+            type="button"
+            id="darkModeBtn"
+            class="dark-mode-btn"
+            aria-label="Toggle dark mode">
+
+            🌙
+
+        </button>
 
     </div>
 
@@ -41,9 +106,9 @@
     <!-- MOBILE MENU BUTTON -->
 
     <button
+        type="button"
         class="menu-btn"
         id="menuBtn"
-        type="button"
         aria-label="Open navigation menu"
         aria-expanded="false">
 
@@ -68,12 +133,25 @@
             News
         </a>
 
-        <a href="tutorials.html">
+        <a href="tutorials.html"
+           class="active">
             Tutorials
         </a>
 
         <a href="tools.html">
             Tools
+        </a>
+
+        <a href="gpa.html">
+            GPA
+        </a>
+
+        <a href="qr-generator.html">
+            QR Generator
+        </a>
+
+        <a href="ai-assistant.html">
+            AI Assistant
         </a>
 
         <a href="about.html">
@@ -87,3 +165,895 @@
     </nav>
 
 </header>
+
+
+
+<!-- =====================================================
+     BREAKING NEWS
+===================================================== -->
+
+<section class="breaking-news">
+
+    <marquee>
+
+        📚 Programming • Web Development • Database •
+        Cybersecurity • Artificial Intelligence •
+        Networking • Software Development
+
+    </marquee>
+
+</section>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <span>
+            🎓 TECHHUB GHANA LEARNING CENTER
+        </span>
+
+        <h2>
+            Learn Technology Step by Step
+        </h2>
+
+        <p>
+            Master programming, web development,
+            databases and cybersecurity through
+            simple explanations, practical examples
+            and exercises.
+        </p>
+
+        <a
+            href="#tutorials"
+            class="hero-btn">
+
+            Start Learning
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TUTORIALS
+===================================================== -->
+
+<section
+    class="section"
+    id="tutorials">
+
+
+    <h2>
+        📚 Popular Tutorials
+    </h2>
+
+
+    <p class="section-intro">
+        Choose a subject and start learning from
+        beginner to advanced level.
+    </p>
+
+
+
+    <div class="tutorial-grid">
+
+
+        <!-- =================================================
+             HTML
+        ================================================== -->
+
+        <div
+            class="tutorial"
+            data-title="html web development">
+
+
+            <img
+                src="images/html.jpg"
+                alt="HTML Tutorial">
+
+
+            <span class="category">
+                🌐 Web Development
+            </span>
+
+
+            <h3>
+                HTML For Beginners
+            </h3>
+
+
+            <p>
+                Learn HTML elements, headings,
+                paragraphs, links, images,
+                tables and forms.
+            </p>
+
+
+            <div class="tutorial-info">
+
+                <span>
+                    📖 Beginner
+                </span>
+
+                <span>
+                    📚 10 Lessons
+                </span>
+
+            </div>
+
+
+            <a
+                href="html-tutorial.html"
+                class="read-btn">
+
+                Start Learning →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CSS
+        ================================================== -->
+
+        <div
+            class="tutorial"
+            data-title="css web design">
+
+
+            <img
+                src="images/css.jpg"
+                alt="CSS Tutorial">
+
+
+            <span class="category">
+                🎨 Web Design
+            </span>
+
+
+            <h3>
+                CSS Masterclass
+            </h3>
+
+
+            <p>
+                Learn colors, layouts, Flexbox,
+                Grid, animations and responsive
+                web design.
+            </p>
+
+
+            <div class="tutorial-info">
+
+                <span>
+                    📖 Beginner
+                </span>
+
+                <span>
+                    📚 12 Lessons
+                </span>
+
+            </div>
+
+
+            <a
+                href="css-tutorial.html"
+                class="read-btn">
+
+                Start Learning →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             JAVASCRIPT
+        ================================================== -->
+
+        <div
+            class="tutorial"
+            data-title="javascript programming">
+
+
+            <img
+                src="images/javascript.jpg"
+                alt="JavaScript Tutorial">
+
+
+            <span class="category">
+                💻 Programming
+            </span>
+
+
+            <h3>
+                JavaScript Essentials
+            </h3>
+
+
+            <p>
+                Learn variables, data types,
+                functions, arrays, objects,
+                events and DOM manipulation.
+            </p>
+
+
+            <div class="tutorial-info">
+
+                <span>
+                    📖 Beginner
+                </span>
+
+                <span>
+                    📚 15 Lessons
+                </span>
+
+            </div>
+
+
+            <a
+                href="javascript-tutorial.html"
+                class="read-btn">
+
+                Start Learning →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PYTHON
+        ================================================== -->
+
+        <div
+            class="tutorial"
+            data-title="python programming">
+
+
+            <img
+                src="images/python.jpg"
+                alt="Python Tutorial">
+
+
+            <span class="category">
+                🐍 Programming
+            </span>
+
+
+            <h3>
+                Python Programming
+            </h3>
+
+
+            <p>
+                Learn Python variables, data types,
+                conditions, loops, functions
+                and practical projects.
+            </p>
+
+
+            <div class="tutorial-info">
+
+                <span>
+                    📖 Beginner
+                </span>
+
+                <span>
+                    📚 20 Lessons
+                </span>
+
+            </div>
+
+
+            <a
+                href="python-tutorial.html"
+                class="read-btn">
+
+                Start Learning →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             MYSQL
+        ================================================== -->
+
+        <div
+            class="tutorial"
+            data-title="mysql database sql">
+
+
+            <img
+                src="images/mysql.jpg"
+                alt="MySQL Tutorial">
+
+
+            <span class="category">
+                🗄️ Database
+            </span>
+
+
+            <h3>
+                MySQL Database Basics
+            </h3>
+
+
+            <p>
+                Learn databases, tables, SQL commands,
+                relationships, JOINs and practical
+                database management.
+            </p>
+
+
+            <div class="tutorial-info">
+
+                <span>
+                    📖 Beginner
+                </span>
+
+                <span>
+                    📚 15 Lessons
+                </span>
+
+            </div>
+
+
+            <a
+                href="mysql-tutorial.html"
+                class="read-btn">
+
+                Start Learning →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CYBERSECURITY
+        ================================================== -->
+
+        <div
+            class="tutorial"
+            data-title="cybersecurity security">
+
+
+            <img
+                src="images/cybersecurity.jpg"
+                alt="Cybersecurity Tutorial">
+
+
+            <span class="category">
+                🔐 Cybersecurity
+            </span>
+
+
+            <h3>
+                Cybersecurity Fundamentals
+            </h3>
+
+
+            <p>
+                Learn how to protect computers,
+                networks, accounts and personal
+                information from common cyber threats.
+            </p>
+
+
+            <div class="tutorial-info">
+
+                <span>
+                    📖 Beginner
+                </span>
+
+                <span>
+                    📚 12 Lessons
+                </span>
+
+            </div>
+
+
+            <a
+                href="cybersecurity-tutorial.html"
+                class="read-btn">
+
+                Start Learning →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY LEARN WITH TECHHUB GHANA
+===================================================== -->
+
+<section class="section">
+
+
+    <h2>
+        🚀 Why Learn With TechHub Ghana?
+    </h2>
+
+
+    <div class="card-grid">
+
+
+        <div class="tool-card">
+
+            <div class="icon">
+                📖
+            </div>
+
+            <h3>
+                Simple Lessons
+            </h3>
+
+            <p>
+                Lessons are explained in simple
+                language so beginners can understand
+                quickly.
+            </p>
+
+        </div>
+
+
+
+        <div class="tool-card">
+
+            <div class="icon">
+                💻
+            </div>
+
+            <h3>
+                Practical Examples
+            </h3>
+
+            <p>
+                Learn through real code examples
+                and practical technology projects.
+            </p>
+
+        </div>
+
+
+
+        <div class="tool-card">
+
+            <div class="icon">
+                📝
+            </div>
+
+            <h3>
+                Exercises
+            </h3>
+
+            <p>
+                Practice what you learn with
+                exercises and practical questions.
+            </p>
+
+        </div>
+
+
+
+        <div class="tool-card">
+
+            <div class="icon">
+                🎯
+            </div>
+
+            <h3>
+                Student Focused
+            </h3>
+
+            <p>
+                Tutorials are designed especially
+                for IT and computer science students.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+
+    <h2>
+        📩 Stay Updated
+    </h2>
+
+
+    <p>
+        Get new tutorials, technology news
+        and digital tools.
+    </p>
+
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            required>
+
+
+        <button type="submit">
+
+            Subscribe
+
+        </button>
+
+    </form>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+        <!-- COMPANY -->
+
+        <div>
+
+            <h3>
+                TechHub Ghana
+            </h3>
+
+            <p>
+                Technology • Innovation • Learning
+            </p>
+
+            <p>
+                Your trusted source for technology
+                tutorials, news and digital tools.
+            </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
+
+
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
+
+
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
+
+
+            <p>
+                <a href="tools.html">
+                    Tools
+                </a>
+            </p>
+
+
+            <p>
+                <a href="ai-assistant.html">
+                    AI Assistant
+                </a>
+            </p>
+
+        </div>
+
+
+
+        <!-- CATEGORIES -->
+
+        <div>
+
+            <h3>
+                Categories
+            </h3>
+
+            <p>
+                HTML
+            </p>
+
+            <p>
+                CSS
+            </p>
+
+            <p>
+                JavaScript
+            </p>
+
+            <p>
+                Python
+            </p>
+
+            <p>
+                MySQL
+            </p>
+
+            <p>
+                Cybersecurity
+            </p>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📍 Accra, Ghana
+            </p>
+
+            <p>
+                📧 info@techhubghana.com
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 TechHub Ghana. All Rights Reserved.
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     MAIN JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
+
+
+
+<!-- =====================================================
+     TUTORIAL SEARCH
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const input =
+            document.getElementById(
+                "tutorialSearch"
+            );
+
+
+        const searchButton =
+            document.getElementById(
+                "tutorialSearchBtn"
+            );
+
+
+        const tutorials =
+            document.querySelectorAll(
+                ".tutorial"
+            );
+
+
+        if (!input) {
+            return;
+        }
+
+
+
+        /* ==============================================
+           SEARCH FUNCTION
+        ============================================== */
+
+        function searchTutorials() {
+
+
+            const keyword =
+                input.value
+                    .toLowerCase()
+                    .trim();
+
+
+            tutorials.forEach(
+                function (tutorial) {
+
+
+                    const title =
+                        (
+                            tutorial.dataset.title ||
+                            ""
+                        ).toLowerCase();
+
+
+                    const content =
+                        tutorial.innerText
+                            .toLowerCase();
+
+
+                    if (
+                        keyword === "" ||
+                        title.includes(keyword) ||
+                        content.includes(keyword)
+                    ) {
+
+                        tutorial.style.display = "";
+
+                    }
+
+                    else {
+
+                        tutorial.style.display = "none";
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* SEARCH WHILE TYPING */
+
+        input.addEventListener(
+            "input",
+            searchTutorials
+        );
+
+
+
+        /* SEARCH BUTTON */
+
+        if (searchButton) {
+
+            searchButton.addEventListener(
+                "click",
+                searchTutorials
+            );
+
+        }
+
+
+    }
+);
+
+</script>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        const form =
+            document.getElementById(
+                "newsletterForm"
+            );
+
+
+        if (!form) {
+            return;
+        }
+
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    document.getElementById(
+                        "newsletterEmail"
+                    ).value.trim();
+
+
+                if (!email) {
+                    return;
+                }
+
+
+                alert(
+                    "✅ Thank you for subscribing to TechHub Ghana!"
+                );
+
+
+                form.reset();
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+                    </html>
