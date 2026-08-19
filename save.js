@@ -1,32 +1,51 @@
-function saveArticle(){
+/* =========================================================
+   TECHHUB GHANA
+   SAVE ARTICLE SYSTEM
+========================================================= */
+
+function saveArticle(article) {
+
+    if (!article || !article.title) {
+        alert("Unable to save this article.");
+        return;
+    }
+
+    let savedArticles =
+        JSON.parse(
+            localStorage.getItem("savedArticles")
+        ) || [];
 
 
-let article = {
-
-title:"Artificial Intelligence Is Transforming Education",
-
-description:"AI tools are changing how students learn.",
-
-image:"images/ai-news.jpg",
-
-link:"ai-education.html"
-
-};
+    // Prevent duplicates
+    const alreadySaved =
+        savedArticles.some(
+            saved => saved.link === article.link
+        );
 
 
-let saved = JSON.parse(localStorage.getItem("savedArticles")) || [];
+    if (alreadySaved) {
+
+        alert("This article is already saved 🔖");
+
+        return;
+    }
 
 
-saved.push(article);
+    savedArticles.push({
+        title: article.title,
+        description: article.description || "",
+        image: article.image || "images/logo.png",
+        link: article.link,
+        date: article.date || new Date().toLocaleDateString()
+    });
 
 
-localStorage.setItem(
-"savedArticles",
-JSON.stringify(saved)
-);
+    localStorage.setItem(
+        "savedArticles",
+        JSON.stringify(savedArticles)
+    );
 
 
-alert("Article saved successfully 🔖");
-
+    alert("Article saved successfully 🔖");
 
 }
