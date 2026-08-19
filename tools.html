@@ -3,288 +3,261 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta
-    name="description"
-    content="Free digital tools from TechHub Ghana">
+    <title>QR Code Generator | TechHub Ghana</title>
 
-<title>Tools | TechHub Ghana</title>
+    <meta
+        name="description"
+        content="Free QR Code Generator from TechHub Ghana."
+    >
 
-<link rel="stylesheet" href="style.css">
-
-<link
-    rel="preconnect"
-    href="https://fonts.googleapis.com">
-
-<link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
-
-<link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
+
 <body>
 
-<header>
 
-<div class="top-bar">
+<header class="main-header">
 
-<div class="logo">
+    <div class="top-bar">
 
-<img
-    src="images/logo.png"
-    alt="TechHub Ghana Logo">
+        <a href="index.html" class="logo">
 
-<div>
+            <img
+                src="images/logo.png"
+                alt="TechHub Ghana Logo"
+            >
 
-<h1>TechHub Ghana</h1>
+            <div class="logo-text">
 
-<p>
-Technology News • Tutorials • Digital Tools
-</p>
+                <h1>TechHub Ghana</h1>
 
-</div>
+                <p>
+                    Technology • Learning • Innovation
+                </p>
 
-</div>
+            </div>
 
-</div>
-
-
-<button
-    class="menu-btn"
-    onclick="toggleMenu()"
-    aria-expanded="false">
-
-☰
-
-</button>
+        </a>
 
 
-<nav id="navMenu">
+        <div class="search-box">
 
-<a href="index.html">Home</a>
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search TechHub Ghana..."
+            >
 
-<a href="news.html">News</a>
+            <button
+                type="button"
+                id="searchBtn"
+            >
+                🔍
+            </button>
 
-<a href="tutorials.html">Tutorials</a>
+        </div>
 
-<a class="active" href="tools.html">Tools</a>
 
-<a href="gpa.html">GPA</a>
+        <button
+            type="button"
+            id="darkModeBtn"
+        >
+            🌙
+        </button>
 
-<a href="qr-generator.html">QR Generator</a>
+    </div>
 
-<a href="ai-assistant.html">AI Assistant</a>
 
-<a href="about.html">About</a>
+    <button
+        type="button"
+        class="menu-btn"
+        id="menuBtn"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
 
-<a href="contact.html">Contact</a>
 
-</nav>
+    <nav id="navMenu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="ghana-tech.html">
+            🇬🇭 Ghana Tech
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="tools.html">
+            Tools
+        </a>
+
+        <a href="gpa.html">
+            GPA
+        </a>
+
+        <a
+            href="qr-generator.html"
+            class="active"
+        >
+            QR Generator
+        </a>
+
+        <a href="ai-assistant.html">
+            AI Assistant
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
 
 </header>
 
 
-<section class="tools-hero">
-
-<span>🛠️ TECHHUB GHANA TOOLS</span>
-
-<h1>
-Free Digital Tools
-</h1>
-
-<p>
-Useful tools designed to help students, developers
-and everyday technology users.
-</p>
-
-</section>
-
-
 <section class="section">
 
-<h2>
-🛠️ Our Tools
-</h2>
+    <div class="article-page">
 
-<div class="card-grid">
+        <h1>
+            🔳 QR Code Generator
+        </h1>
 
-
-<div class="tool-card">
-
-<div class="icon">🎓</div>
-
-<h3>GPA Calculator</h3>
-
-<p>
-Calculate your GPA using course grades
-and credit hours.
-</p>
-
-<a href="gpa.html">
-Open Tool →
-</a>
-
-</div>
+        <p>
+            Enter a website link, text, email address
+            or phone number.
+        </p>
 
 
-<div class="tool-card">
-
-<div class="icon">🔳</div>
-
-<h3>QR Code Generator</h3>
-
-<p>
-Generate QR codes for websites, text,
-emails and phone numbers.
-</p>
-
-<a href="qr-generator.html">
-Open Tool →
-</a>
-
-</div>
+        <input
+            type="text"
+            id="qrText"
+            placeholder="https://example.com"
+            style="
+                width:100%;
+                padding:14px;
+                margin:20px 0;
+                border:1px solid #d9dee7;
+                border-radius:8px;
+                outline:none;
+            "
+        >
 
 
-<div class="tool-card">
-
-<div class="icon">🤖</div>
-
-<h3>AI Assistant</h3>
-
-<p>
-Get technology, programming and learning
-assistance.
-</p>
-
-<a href="ai-assistant.html">
-Open Tool →
-</a>
-
-</div>
+        <button
+            type="button"
+            id="generateQRBtn"
+            class="read-btn"
+        >
+            Generate QR Code
+        </button>
 
 
-<div class="tool-card">
+        <div
+            id="qrcode"
+            style="
+                margin-top:30px;
+                text-align:center;
+            "
+        ></div>
 
-<div class="icon">🔐</div>
-
-<h3>Password Generator</h3>
-
-<p>
-Create strong passwords for your online accounts.
-</p>
-
-<a href="password-generator.html">
-Open Tool →
-</a>
-
-</div>
-
-
-<div class="tool-card">
-
-<div class="icon">🎂</div>
-
-<h3>Age Calculator</h3>
-
-<p>
-Calculate your age quickly and accurately.
-</p>
-
-<a href="age-calculator.html">
-Open Tool →
-</a>
-
-</div>
-
-
-<div class="tool-card">
-
-<div class="icon">🚀</div>
-
-<h3>More Tools</h3>
-
-<p>
-More useful student and technology tools
-will be added soon.
-</p>
-
-<a href="#">
-Coming Soon
-</a>
-
-</div>
-
-
-</div>
+    </div>
 
 </section>
 
 
 <footer>
 
-<div class="footer-grid">
-
-<div>
-
-<h3>TechHub Ghana</h3>
-
-<p>
-Technology • Innovation • Learning
-</p>
-
-<p>
-Free technology resources, tutorials,
-news and digital tools.
-</p>
-
-</div>
-
-
-<div>
-
-<h3>Quick Links</h3>
-
-<p><a href="index.html">Home</a></p>
-<p><a href="news.html">News</a></p>
-<p><a href="tutorials.html">Tutorials</a></p>
-<p><a href="tools.html">Tools</a></p>
-
-</div>
-
-
-<div>
-
-<h3>Tools</h3>
-
-<p><a href="gpa.html">GPA Calculator</a></p>
-<p><a href="qr-generator.html">QR Generator</a></p>
-<p><a href="ai-assistant.html">AI Assistant</a></p>
-
-</div>
-
-</div>
-
-<hr>
-
-<p class="copyright">
-© 2026 TechHub Ghana. All Rights Reserved.
-</p>
+    <p class="copyright">
+        © 2026 TechHub Ghana. All Rights Reserved.
+    </p>
 
 </footer>
 
 
 <script src="script.js"></script>
 
-</body>
 
-    </html>
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const input =
+            document.getElementById("qrText");
+
+        const button =
+            document.getElementById(
+                "generateQRBtn"
+            );
+
+        const qr =
+            document.getElementById("qrcode");
+
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const text =
+                    input.value.trim();
+
+
+                if (!text) {
+
+                    alert(
+                        "Please enter text or a URL."
+                    );
+
+                    input.focus();
+
+                    return;
+
+                }
+
+
+                qr.innerHTML = `
+
+                    <img
+                        src="https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(text)}&size=250x250"
+                        alt="Generated QR Code"
+                        width="250"
+                        height="250"
+                    >
+
+                `;
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
