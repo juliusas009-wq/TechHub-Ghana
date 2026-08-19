@@ -1,115 +1,330 @@
-document.getElementById("loginForm")
-.addEventListener("submit", function(e){
-
-e.preventDefault();
-
-
-let email = document.getElementById("loginEmail").value;
-
-let password = document.getElementById("loginPassword").value;
+/* =========================================================
+   TECHHUB GHANA
+   LOGIN • SIGNUP • DASHBOARD SYSTEM
+========================================================= */
 
 
+/* =========================================================
+   LOGIN SYSTEM
+========================================================= */
 
-let savedEmail = localStorage.getItem("userEmail");
+const loginForm = document.getElementById("loginForm");
 
-let savedPassword = localStorage.getItem("userPassword");
+if (loginForm) {
+
+    loginForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const emailInput =
+            document.getElementById("loginEmail");
+
+        const passwordInput =
+            document.getElementById("loginPassword");
+
+        if (!emailInput || !passwordInput) {
+            return;
+        }
+
+        const email =
+            emailInput.value.trim();
+
+        const password =
+            passwordInput.value;
+
+        /* Check empty fields */
+
+        if (!email || !password) {
+
+            alert("Please enter your email and password.");
+
+            return;
+        }
 
 
+        /* Get saved account */
 
-if(email === savedEmail && password === savedPassword){
+        const savedEmail =
+            localStorage.getItem("userEmail");
 
-alert("Login successful!");
+        const savedPassword =
+            localStorage.getItem("userPassword");
 
-window.location.href="dashboard.html";
 
+        /* Check whether account exists */
+
+        if (!savedEmail || !savedPassword) {
+
+            alert(
+                "No account found. Please create an account first."
+            );
+
+            return;
+        }
+
+
+        /* Check login details */
+
+        if (
+            email === savedEmail &&
+            password === savedPassword
+        ) {
+
+            /* Create login session */
+
+            localStorage.setItem(
+                "isLoggedIn",
+                "true"
+            );
+
+
+            alert("Login successful!");
+
+
+            window.location.href =
+                "dashboard.html";
+
+        } else {
+
+            alert(
+                "Incorrect email or password."
+            );
+
+        }
+
+    });
 
 }
 
-else{
 
-alert("Incorrect email or password");
+
+/* =========================================================
+   SIGNUP SYSTEM
+========================================================= */
+
+const signupForm =
+    document.getElementById("signupForm");
+
+
+if (signupForm) {
+
+    signupForm.addEventListener(
+        "submit",
+        function (e) {
+
+            e.preventDefault();
+
+
+            const usernameInput =
+                document.getElementById("username");
+
+            const emailInput =
+                document.getElementById("email");
+
+            const passwordInput =
+                document.getElementById("password");
+
+
+            if (
+                !usernameInput ||
+                !emailInput ||
+                !passwordInput
+            ) {
+
+                return;
+
+            }
+
+
+            const username =
+                usernameInput.value.trim();
+
+            const email =
+                emailInput.value.trim();
+
+            const password =
+                passwordInput.value;
+
+
+            /* Validate fields */
+
+            if (
+                !username ||
+                !email ||
+                !password
+            ) {
+
+                alert(
+                    "Please complete all fields."
+                );
+
+                return;
+            }
+
+
+            /* Validate email */
+
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+            if (!emailPattern.test(email)) {
+
+                alert(
+                    "Please enter a valid email address."
+                );
+
+                return;
+            }
+
+
+            /* Check password length */
+
+            if (password.length < 6) {
+
+                alert(
+                    "Password must be at least 6 characters long."
+                );
+
+                return;
+            }
+
+
+            /* Check if an account already exists */
+
+            const existingEmail =
+                localStorage.getItem("userEmail");
+
+
+            if (
+                existingEmail &&
+                existingEmail.toLowerCase() ===
+                email.toLowerCase()
+            ) {
+
+                alert(
+                    "An account with this email already exists."
+                );
+
+                return;
+            }
+
+
+            /* Save account */
+
+            localStorage.setItem(
+                "username",
+                username
+            );
+
+            localStorage.setItem(
+                "userEmail",
+                email
+            );
+
+            localStorage.setItem(
+                "userPassword",
+                password
+            );
+
+
+            /* Account is not automatically logged in */
+
+            localStorage.removeItem(
+                "isLoggedIn"
+            );
+
+
+            alert(
+                "Account created successfully!"
+            );
+
+
+            window.location.href =
+                "login.html";
+
+        }
+    );
 
 }
 
 
-});
 
-// SIGNUP SYSTEM
+/* =========================================================
+   DASHBOARD USER NAME
+========================================================= */
 
-const signupForm = document.getElementById("signupForm");
-
-
-if(signupForm){
-
-
-signupForm.addEventListener("submit", function(e){
+const displayName =
+    document.getElementById("displayName");
 
 
-e.preventDefault();
+if (displayName) {
+
+    const isLoggedIn =
+        localStorage.getItem("isLoggedIn");
+
+    const username =
+        localStorage.getItem("username");
 
 
-let username = document.getElementById("username").value;
+    /* Protect dashboard */
 
-let email = document.getElementById("email").value;
+    if (isLoggedIn !== "true") {
 
-let password = document.getElementById("password").value;
+        alert(
+            "Please log in to access your dashboard."
+        );
 
+        window.location.href =
+            "login.html";
 
+    } else {
 
-localStorage.setItem("username", username);
+        if (username) {
 
-localStorage.setItem("userEmail", email);
+            displayName.textContent =
+                username;
 
-localStorage.setItem("userPassword", password);
+        } else {
 
+            displayName.textContent =
+                "User";
 
+        }
 
-alert("Account created successfully!");
-
-
-window.location.href="login.html";
-
-
-});
-
-
-}
-
-// DISPLAY USER NAME
-
-const displayName = document.getElementById("displayName");
-
-
-if(displayName){
-
-let username = localStorage.getItem("username");
-
-
-if(username){
-
-displayName.textContent = username;
-
-}
+    }
 
 }
 
 
 
-// LOGOUT FUNCTION
+/* =========================================================
+   LOGOUT SYSTEM
+========================================================= */
 
-function logout(){
+function logout() {
 
-localStorage.removeItem("userEmail");
+    /* Remove login session only */
 
-localStorage.removeItem("userPassword");
-
-localStorage.removeItem("username");
-
-
-alert("You have logged out");
+    localStorage.removeItem(
+        "isLoggedIn"
+    );
 
 
-window.location.href="login.html";
+    alert(
+        "You have been logged out."
+    );
 
+
+    window.location.href =
+        "login.html";
 
 }
+
+
+
+/* =========================================================
+   MAKE LOGOUT AVAILABLE TO HTML
+========================================================= */
+
+window.logout = logout;
