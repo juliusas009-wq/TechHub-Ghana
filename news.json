@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-19T21:50:46.020104+00:00",
+  "updated": "2026-08-19T22:22:36.294094+00:00",
   "articles": [
+    {
+      "title": "OpenAI seeks to one-up Anthropic with new customer privacy protections",
+      "summary": "A competition is developing between OpenAI and Anthropic over who can provide the best privacy protections for enterprise customer data.",
+      "link": "https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/",
+      "date": "Wed, 19 Aug 2026 22:10:46 +0000",
+      "source": "TechCrunch",
+      "category": "Artificial Intelligence"
+    },
+    {
+      "title": "Cognition CEO denies report that SpaceX tried to acquire the startup",
+      "summary": "SpaceX was reportedly in talks to buy AI coding startup Cognition. SpaceX has already acquired Cursor as it races to catch up to rivals like OpenAI and Anthropic in enterprise AI.",
+      "link": "https://techcrunch.com/2026/08/19/cognition-ceo-denies-report-that-spacex-tried-to-acquire-the-startup/",
+      "date": "Wed, 19 Aug 2026 21:51:23 +0000",
+      "source": "TechCrunch",
+      "category": "Artificial Intelligence"
+    },
     {
       "title": "Travis Kalanick kicks off another round of VC bashing: ‘1% are helpful’",
       "summary": "After raising $1.7 billion for his new robotics company Atoms, Travis Kalanick is introspective about the role VCs have played in his career.",
@@ -142,22 +158,6 @@
       "summary": "Companies including Tesla and Base Power are vying for a piece of the rapidly growing market for home batteries. One technology has made it all possible.",
       "link": "https://techcrunch.com/2026/08/19/home-batteries-are-suddenly-cheap-and-everywhere-heres-why/",
       "date": "Wed, 19 Aug 2026 13:40:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "CareCloud confirms 3.7M patients had their medical records stolen in data breach",
-      "summary": "The cyberattack at CareCloud resulted in one of the largest reported data breaches in the U.S. healthcare industry this year.",
-      "link": "https://techcrunch.com/2026/08/19/carecloud-confirms-3-7m-patients-had-their-medical-records-stolen-in-data-breach/",
-      "date": "Wed, 19 Aug 2026 13:04:10 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "AI isn’t close to curing cancer. This startup says it knows what it will take.",
-      "summary": "It's the data, stupid.",
-      "link": "https://techcrunch.com/2026/08/19/ai-isnt-close-to-curing-cancer-this-startup-says-it-knows-what-it-will-take/",
-      "date": "Wed, 19 Aug 2026 12:00:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
