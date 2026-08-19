@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-19T22:22:36.294094+00:00",
+  "updated": "2026-08-19T22:50:40.924845+00:00",
   "articles": [
+    {
+      "title": "Waymo’s cheaper, next-gen robotaxi is now open to all riders in these three cities",
+      "summary": "The next-generation robotaxi, called the Waymo Ojai, is central to the company's push towards mass scale, and eventually, profitability.",
+      "link": "https://techcrunch.com/2026/08/19/waymos-cheaper-next-gen-robotaxi-is-now-open-to-all-riders-in-these-three-cities/",
+      "date": "Wed, 19 Aug 2026 22:25:01 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "OpenAI seeks to one-up Anthropic with new customer privacy protections",
       "summary": "A competition is developing between OpenAI and Anthropic over who can provide the best privacy protections for enterprise customer data.",
@@ -150,14 +158,6 @@
       "summary": "Volunteer at TechCrunch Disrupt 2026 and get an insider's view of how world-class tech events get built and more.",
       "link": "https://techcrunch.com/2026/08/19/the-founders-secret-weapon-work-at-techcrunch-disrupt-2026-and-learn-how-the-pros-do-it/",
       "date": "Wed, 19 Aug 2026 14:02:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Home batteries are suddenly cheap and everywhere. Here’s why.",
-      "summary": "Companies including Tesla and Base Power are vying for a piece of the rapidly growing market for home batteries. One technology has made it all possible.",
-      "link": "https://techcrunch.com/2026/08/19/home-batteries-are-suddenly-cheap-and-everywhere-heres-why/",
-      "date": "Wed, 19 Aug 2026 13:40:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
