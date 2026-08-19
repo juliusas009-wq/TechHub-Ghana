@@ -1,10 +1,10 @@
 /* =========================================================
    TECHHUB GHANA
-   COMPLETE MASTER JAVASCRIPT
+   MASTER JAVASCRIPT
+   Version: 2026
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
-
 
     /* =====================================================
        MOBILE NAVIGATION
@@ -13,33 +13,33 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menuBtn");
     const navMenu = document.getElementById("navMenu");
 
-
     if (menuBtn && navMenu) {
 
         menuBtn.addEventListener("click", function (event) {
 
             event.stopPropagation();
 
-            navMenu.classList.toggle("show");
-
-            const isOpen =
-                navMenu.classList.contains("show");
+            const isOpen = navMenu.classList.toggle("show");
 
             menuBtn.setAttribute(
                 "aria-expanded",
                 isOpen ? "true" : "false"
             );
 
-            menuBtn.innerHTML =
-                isOpen ? "✕" : "☰";
+            menuBtn.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
 
+            menuBtn.textContent = isOpen ? "✕" : "☰";
         });
 
 
-        /* Close menu after clicking a link */
+        /* Close menu when clicking a link */
 
-        const navLinks =
-            navMenu.querySelectorAll("a");
+        const navLinks = navMenu.querySelectorAll("a");
 
         navLinks.forEach(function (link) {
 
@@ -52,14 +52,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     "false"
                 );
 
-                menuBtn.innerHTML = "☰";
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
 
+                menuBtn.textContent = "☰";
             });
 
         });
 
 
-        /* Close when clicking outside */
+        /* Close menu when clicking outside */
 
         document.addEventListener("click", function (event) {
 
@@ -75,8 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     "false"
                 );
 
-                menuBtn.innerHTML = "☰";
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
 
+                menuBtn.textContent = "☰";
             }
 
         });
@@ -90,8 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (navMenu) {
 
-        let currentPage =
-            window.location.pathname
+        let currentPage = window.location.pathname
             .split("/")
             .pop()
             .toLowerCase();
@@ -100,28 +107,24 @@ document.addEventListener("DOMContentLoaded", function () {
             currentPage = "index.html";
         }
 
-        const links =
-            navMenu.querySelectorAll("a");
+        const links = navMenu.querySelectorAll("a");
 
         links.forEach(function (link) {
 
-            const href =
-                link.getAttribute("href");
+            const href = link.getAttribute("href");
 
             if (!href) return;
 
-            const linkPage =
-                href
+            const linkPage = href
                 .split("/")
                 .pop()
+                .split("#")[0]
                 .toLowerCase();
 
             link.classList.remove("active");
 
             if (linkPage === currentPage) {
-
                 link.classList.add("active");
-
             }
 
         });
@@ -146,6 +149,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (darkBtn) {
             darkBtn.textContent = "☀️";
+            darkBtn.setAttribute(
+                "aria-label",
+                "Switch to light mode"
+            );
         }
 
     }
@@ -153,27 +160,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (darkBtn) {
 
-        darkBtn.addEventListener(
-            "click",
-            function () {
+        darkBtn.addEventListener("click", function () {
 
+            const isDark =
                 document.body.classList.toggle("dark");
 
-                const isDark =
-                    document.body.classList.contains("dark");
+            localStorage.setItem(
+                "theme",
+                isDark ? "dark" : "light"
+            );
 
+            darkBtn.textContent =
+                isDark ? "☀️" : "🌙";
 
-                localStorage.setItem(
-                    "theme",
-                    isDark ? "dark" : "light"
-                );
+            darkBtn.setAttribute(
+                "aria-label",
+                isDark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
+            );
 
-
-                darkBtn.textContent =
-                    isDark ? "☀️" : "🌙";
-
-            }
-        );
+        });
 
     }
 
@@ -185,7 +192,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput =
         document.getElementById("siteSearch");
 
+    /*
+       Support both IDs because older pages may use
+       searchBtn while newer pages use siteSearchBtn.
+    */
+
     const searchBtn =
+        document.getElementById("siteSearchBtn") ||
         document.getElementById("searchBtn");
 
 
@@ -196,13 +209,35 @@ document.addEventListener("DOMContentLoaded", function () {
         const keyword =
             searchInput.value.trim().toLowerCase();
 
-        if (!keyword) return;
+        if (!keyword) {
+
+            alert("Please enter something to search.");
+
+            searchInput.focus();
+
+            return;
+        }
 
 
         const searchableElements =
             document.querySelectorAll(
-                ".news-card, .tool-card, .card, .tutorial, .article-page"
+                ".news-card, .tool-card, .card, .tutorial, .article-page, article"
             );
+
+
+        /*
+           If there are no searchable cards on the page,
+           send the user to the News page.
+        */
+
+        if (searchableElements.length === 0) {
+
+            window.location.href =
+                "news.html?search=" +
+                encodeURIComponent(keyword);
+
+            return;
+        }
 
 
         let found = false;
@@ -231,8 +266,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!found) {
 
             alert(
-                "No results found for: " + keyword
+                'No results found for "' +
+                keyword +
+                '".'
             );
+
+            searchableElements.forEach(function (element) {
+                element.style.display = "";
+            });
 
         }
 
@@ -256,6 +297,8 @@ document.addEventListener("DOMContentLoaded", function () {
             function (event) {
 
                 if (event.key === "Enter") {
+
+                    event.preventDefault();
 
                     performSearch();
 
@@ -281,7 +324,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         today.textContent =
             date.toLocaleDateString(
-                "en-US",
+                "en-GH",
                 {
                     weekday: "long",
                     year: "numeric",
@@ -310,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         topButton.type = "button";
 
-        topButton.innerHTML = "⬆";
+        topButton.innerHTML = "↑";
 
         topButton.setAttribute(
             "aria-label",
@@ -322,21 +365,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    /*
+       Initial state
+    */
+
+    topButton.style.display =
+        window.scrollY > 300
+            ? "flex"
+            : "none";
+
+
     window.addEventListener(
         "scroll",
         function () {
 
-            if (window.scrollY > 300) {
-
-                topButton.style.display =
-                    "block";
-
-            } else {
-
-                topButton.style.display =
-                    "none";
-
-            }
+            topButton.style.display =
+                window.scrollY > 300
+                    ? "flex"
+                    : "none";
 
         }
     );
@@ -360,9 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================================== */
 
     const heroImage =
-        document.querySelector(
-            ".hero-image img"
-        );
+        document.querySelector(".hero-image img");
 
 
     const heroImages = [
@@ -373,30 +417,75 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
 
-    if (heroImage && heroImages.length > 1) {
+    if (
+        heroImage &&
+        heroImages.length > 1
+    ) {
 
         let currentImage = 0;
 
 
+        /*
+           Only start the slider if the first image
+           actually has a valid-looking source.
+        */
+
+        if (!heroImage.getAttribute("src")) {
+            heroImage.src = heroImages[0];
+        }
+
+
         setInterval(function () {
 
-            currentImage++;
-
-            if (
-                currentImage >=
-                heroImages.length
-            ) {
-
-                currentImage = 0;
-
-            }
+            currentImage =
+                (currentImage + 1) %
+                heroImages.length;
 
 
-            heroImage.src =
-                heroImages[currentImage];
+            heroImage.style.opacity = "0";
+
+
+            setTimeout(function () {
+
+                heroImage.src =
+                    heroImages[currentImage];
+
+                heroImage.style.opacity = "1";
+
+            }, 250);
 
         }, 5000);
 
     }
+
+
+    /* =====================================================
+       ESCAPE KEY
+       Close mobile menu
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                navMenu &&
+                menuBtn
+            ) {
+
+                navMenu.classList.remove("show");
+
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuBtn.textContent = "☰";
+
+            }
+
+        }
+    );
 
 });
