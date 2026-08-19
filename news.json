@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-19T14:31:47.769174+00:00",
+  "updated": "2026-08-19T15:29:56.356803+00:00",
   "articles": [
+    {
+      "title": "Sachin Bansal’s fintech Navi raises first outside capital with $100M Prosus investment",
+      "summary": "The investment comes amid Navi plans to go public.",
+      "link": "https://techcrunch.com/2026/08/19/sachin-bansals-fintech-navi-raises-first-outside-capital-with-100m-prosus-investment/",
+      "date": "Wed, 19 Aug 2026 15:01:41 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Amazon makes its AI-powered Alexa+ free on Fire TV, no Prime required",
+      "summary": "Amazon is making its AI-powered Alexa+ assistant free on all compatible Fire TV devices in the U.S., automatically upgrading users whether or not they subscribe to Prime.",
+      "link": "https://techcrunch.com/2026/08/19/amazon-makes-its-ai-powered-alexa-free-on-fire-tv-no-prime-required/",
+      "date": "Wed, 19 Aug 2026 15:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Amazon’s Prime Air is taking off in nearly 500 U.S. cities",
+      "summary": "Amazon is significantly expanding its Prime Air drone delivery service, with plans to reach nearly 500 U.S. cities by the end of 2026.",
+      "link": "https://techcrunch.com/2026/08/19/amazons-prime-air-is-taking-off-in-nearly-500-u-s-cities/",
+      "date": "Wed, 19 Aug 2026 14:57:58 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Calendly throws its hat into meeting note-taker circus",
       "summary": "Calendly is also releasing a meeting scheduling assistant called Callie.",
@@ -134,30 +158,6 @@
       "summary": "This is the latest large-scale DDoS attack to hit the social networking site this year.",
       "link": "https://techcrunch.com/2026/08/18/bluesky-says-its-recent-outage-was-caused-by-another-ddos-attack/",
       "date": "Tue, 18 Aug 2026 15:59:48 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Peacock is raising prices across all of its streaming plans",
-      "summary": "\"These price changes allow Peacock to continue to create the best experience for its viewers, remain competitive in the marketplace, and deliver unique content across all genres,\" the company wrote on a support page.",
-      "link": "https://techcrunch.com/2026/08/18/peacock-is-raising-prices-across-all-of-its-streaming-plans/",
-      "date": "Tue, 18 Aug 2026 15:26:31 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Anthro Energy breaks ground on factory that could pave the road to solid-state batteries",
-      "summary": "Battery materials startup Anthro Energy has broken ground on a Louisville factory to make electrolytes, including those for solid-state batteries.",
-      "link": "https://techcrunch.com/2026/08/18/anthro-energy-breaks-ground-on-factory-that-could-pave-the-road-to-solid-state-batteries/",
-      "date": "Tue, 18 Aug 2026 14:00:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Warp’s new system is an out-of-the-box software factory for AI development",
-      "summary": "On Tuesday, Warp introduced Warp Factories, a new infrastructure system designed to make building AI software factories as easy as possible.",
-      "link": "https://techcrunch.com/2026/08/18/warps-new-system-is-an-out-of-the-box-software-factory-for-ai-development/",
-      "date": "Tue, 18 Aug 2026 14:00:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
