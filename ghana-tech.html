@@ -1,982 +1,969 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="TechHub Ghana — Ghana technology news, startups, digital innovation, AI, cybersecurity, programming and emerging technology."
+    >
+
+    <meta
+        name="keywords"
+        content="Ghana technology, Ghana tech news, TechHub Ghana, AI Ghana, cybersecurity Ghana, startups Ghana, programming Ghana"
+    >
+
+    <meta name="author" content="TechHub Ghana">
 
     <title>Ghana Tech News | TechHub Ghana</title>
 
-    <meta name="description"
-          content="Latest Ghana technology news, digital innovation, fintech, AI, cybersecurity, startups and technology opportunities.">
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =====================================================
+         MAIN TECHHUB CSS
+         Change this filename only if your stylesheet
+         uses a different name.
+    ====================================================== -->
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- =====================================================
+         GHANA TECH CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="ghana-tech.css">
 </head>
 
 <body>
 
-<!-- =====================================================
+<!-- =========================================================
      HEADER
-===================================================== -->
+========================================================= -->
 
 <header>
 
     <div class="top-bar">
 
-        <div class="logo">
+        <!-- LOGO -->
 
-            <img src="images/logo.png"
-                 alt="TechHub Ghana Logo">
+        <a href="index.html" class="logo">
+
+            <img
+                src="images/logo.png"
+                alt="TechHub Ghana Logo"
+                onerror="this.style.display='none'"
+            >
 
             <div>
-
                 <h1>TechHub Ghana</h1>
 
                 <p>
-                    Technology News • Tutorials • Digital Tools
+                    Technology • Innovation • Digital Ghana
                 </p>
-
             </div>
 
-        </div>
+        </a>
 
+
+        <!-- HEADER SEARCH -->
 
         <div class="search-box">
 
             <input
-                type="text"
-                id="ghanaSearch"
-                placeholder="Search Ghana Tech..."
-                aria-label="Search Ghana technology news">
+                type="search"
+                id="headerSearch"
+                placeholder="Search TechHub Ghana..."
+                autocomplete="off"
+            >
 
-            <button id="ghanaSearchBtn" type="button">
-                🔍
+            <button
+                type="button"
+                id="headerSearchBtn"
+                aria-label="Search"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
             </button>
 
         </div>
 
+
+        <!-- DARK MODE -->
+
+        <button
+            type="button"
+            id="darkModeBtn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+        >
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
     </div>
 
 
-    <nav>
+    <!-- MOBILE MENU BUTTON -->
 
-        <a href="index.html">Home</a>
+    <button
+        type="button"
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+    >
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
-        <a href="news.html">News</a>
 
-        <a href="ghana-tech.html" class="active">
-            🇬🇭 Ghana Tech
+    <!-- NAVIGATION -->
+
+    <nav id="mainNav">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
         </a>
 
-        <a href="tutorials.html">Tutorials</a>
+        <a href="news.html">
+            <i class="fa-solid fa-newspaper"></i>
+            Tech News
+        </a>
 
-        <a href="tools.html">Tools</a>
+        <a href="ghana-tech.html" class="active">
+            <i class="fa-solid fa-flag"></i>
+            Ghana Tech
+        </a>
 
-        <a href="about.html">About</a>
+        <a href="ai-assistant.html">
+            <i class="fa-solid fa-robot"></i>
+            AI
+        </a>
 
-        <a href="contact.html">Contact</a>
+        <a href="tutorials.html">
+            <i class="fa-solid fa-code"></i>
+            Programming
+        </a>
+
+        <a href="tools.html">
+            <i class="fa-solid fa-toolbox"></i>
+            Tools
+        </a>
+
+        <a href="about.html">
+            <i class="fa-solid fa-circle-info"></i>
+            About
+        </a>
+
+        <a href="contact.html">
+            <i class="fa-solid fa-envelope"></i>
+            Contact
+        </a>
 
     </nav>
 
 </header>
 
 
-<!-- =====================================================
+<!-- =========================================================
      BREAKING NEWS
-===================================================== -->
+========================================================= -->
 
-<div class="breaking-news">
+<section class="breaking-news" aria-label="Breaking news">
 
-    <marquee>
+    <div class="breaking-label">
+        <i class="fa-solid fa-bolt"></i>
+        BREAKING
+    </div>
 
-        🇬🇭 Ghana Tech • Digital Ghana • FinTech • AI • Cybersecurity • Startups • Innovation
+    <div class="breaking-content">
 
-    </marquee>
+        <span id="breakingNewsText">
+            Ghana's technology ecosystem continues to grow with new
+            digital innovations, startups and opportunities.
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DATE
+========================================================= -->
+
+<div class="today-date">
+
+    <i class="fa-regular fa-calendar"></i>
+
+    <span id="todayDate">
+        Loading date...
+    </span>
 
 </div>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- =========================================================
+     MAIN
+========================================================= -->
 
-<section class="ghana-page-hero">
-
-    <div class="ghana-hero-content">
-
-        <span class="ghana-label">
-            🇬🇭 GHANA TECHNOLOGY
-        </span>
-
-        <h1>
-            Ghana Tech
-        </h1>
-
-        <h2>
-            Technology shaping Ghana's digital future
-        </h2>
-
-        <p>
-
-            Discover technology stories, digital innovation,
-            artificial intelligence, fintech, cybersecurity,
-            startups and opportunities transforming Ghana.
-
-        </p>
+<main class="ghana-tech-page">
 
 
-        <div class="ghana-hero-buttons">
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-            <a href="#ghana-news" class="ghana-primary-btn">
-                Explore Ghana Tech
-            </a>
+    <section class="ghana-tech-hero">
 
-            <a href="tools.html" class="ghana-secondary-btn">
-                Explore Digital Tools
-            </a>
+        <div class="ghana-tech-hero-content">
+
+            <span class="ghana-badge">
+                🇬🇭 GHANA TECH
+            </span>
+
+            <h1>
+                Ghana's Technology
+                <br>
+                & Digital Future
+            </h1>
+
+            <p>
+                Stay updated with the latest technology news,
+                startups, artificial intelligence, cybersecurity,
+                fintech, programming and digital innovation
+                happening across Ghana.
+            </p>
+
+
+            <div class="ghana-hero-buttons">
+
+                <a
+                    href="#ghanaNews"
+                    class="ghana-primary-btn"
+                >
+                    <i class="fa-solid fa-newspaper"></i>
+                    Explore Ghana Tech
+                </a>
+
+                <a
+                    href="#ghanaTopics"
+                    class="ghana-secondary-btn"
+                >
+                    <i class="fa-solid fa-compass"></i>
+                    Explore Topics
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
+
+        <div class="ghana-tech-hero-image">
+
+            <img
+                src="images/ghana-tech.jpg"
+                alt="Technology and digital innovation in Ghana"
+                loading="eager"
+                onerror="this.src='images/ai-news.jpg'"
+            >
+
+        </div>
+
+    </section>
 
 
-    <div class="ghana-hero-image">
+    <!-- =====================================================
+         GHANA TECH STATS
+    ====================================================== -->
 
-        <img
-            src="images/ghana-tech.jpg"
-            alt="Technology and digital innovation in Ghana"
-            onerror="this.src='images/ai-news.jpg'">
+    <section
+        class="ghana-stats"
+        aria-label="Ghana technology statistics"
+    >
 
-    </div>
+        <article class="ghana-stat">
 
-</section>
+            <div class="ghana-stat-icon">
+                🇬🇭
+            </div>
 
+            <strong id="ghanaNewsCount">
+                0
+            </strong>
 
-<!-- =====================================================
-     QUICK STATS
-===================================================== -->
+            <p>
+                Ghana Tech Stories
+            </p>
 
-<section class="ghana-stats">
-
-    <div class="ghana-stat-card">
-
-        <span>💳</span>
-
-        <strong>FinTech</strong>
-
-        <p>Digital payments & mobile money</p>
-
-    </div>
+        </article>
 
 
-    <div class="ghana-stat-card">
+        <article class="ghana-stat">
 
-        <span>🤖</span>
+            <div class="ghana-stat-icon">
+                🤖
+            </div>
 
-        <strong>Artificial Intelligence</strong>
+            <strong>
+                AI
+            </strong>
 
-        <p>AI adoption and innovation</p>
+            <p>
+                Artificial Intelligence
+            </p>
 
-    </div>
-
-
-    <div class="ghana-stat-card">
-
-        <span>🔐</span>
-
-        <strong>Cybersecurity</strong>
-
-        <p>Digital safety and protection</p>
-
-    </div>
+        </article>
 
 
-    <div class="ghana-stat-card">
+        <article class="ghana-stat">
 
-        <span>🚀</span>
+            <div class="ghana-stat-icon">
+                💳
+            </div>
 
-        <strong>Startups</strong>
+            <strong>
+                FinTech
+            </strong>
 
-        <p>Ghana's growing tech ecosystem</p>
+            <p>
+                Digital Finance
+            </p>
 
-    </div>
-
-</section>
+        </article>
 
 
-<!-- =====================================================
-     SEARCH + FILTER
-===================================================== -->
+        <article class="ghana-stat">
 
-<section class="ghana-section" id="ghana-news">
+            <div class="ghana-stat-icon">
+                🚀
+            </div>
 
-    <div class="ghana-section-heading">
+            <strong>
+                Startups
+            </strong>
 
-        <span>GHANA TECH NEWS</span>
+            <p>
+                Ghana Innovation
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <!-- =====================================================
+         SEARCH + CATEGORY FILTERS
+    ====================================================== -->
+
+    <section
+        class="ghana-news-controls"
+        aria-label="Search Ghana technology news"
+    >
 
         <h2>
-            Latest Ghana Technology Stories
+            Latest Ghana Tech News
         </h2>
 
-        <p>
 
-            Explore technology topics affecting Ghana's
-            businesses, students, developers and digital users.
-
-        </p>
-
-    </div>
-
-
-    <div class="ghana-tools">
+        <!-- NEWS SEARCH -->
 
         <div class="ghana-search">
 
             <input
                 type="search"
-                id="ghanaNewsSearch"
-                placeholder="Search articles...">
+                id="ghanaSearch"
+                placeholder="Search Ghana technology news..."
+                autocomplete="off"
+                aria-label="Search Ghana technology news"
+            >
+
+            <button
+                type="button"
+                id="ghanaSearchBtn"
+                aria-label="Search news"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
 
         </div>
 
 
-        <div class="ghana-category-buttons">
+        <!-- CATEGORY FILTERS -->
+
+        <div
+            class="ghana-category-buttons"
+            id="ghanaCategoryButtons"
+            role="group"
+            aria-label="News categories"
+        >
 
             <button
+                type="button"
                 class="ghana-filter active"
-                data-category="all">
-
+                data-category="All"
+            >
                 All
-
             </button>
 
             <button
+                type="button"
                 class="ghana-filter"
-                data-category="fintech">
-
-                💳 FinTech
-
+                data-category="Ghana Technology"
+            >
+                🇬🇭 Ghana Tech
             </button>
 
             <button
+                type="button"
                 class="ghana-filter"
-                data-category="ai">
-
+                data-category="Artificial Intelligence"
+            >
                 🤖 AI
-
             </button>
 
             <button
+                type="button"
                 class="ghana-filter"
-                data-category="cybersecurity">
-
+                data-category="Cybersecurity"
+            >
                 🔐 Cybersecurity
-
             </button>
 
             <button
+                type="button"
                 class="ghana-filter"
-                data-category="startups">
+                data-category="FinTech"
+            >
+                💳 FinTech
+            </button>
 
+            <button
+                type="button"
+                class="ghana-filter"
+                data-category="Startups"
+            >
                 🚀 Startups
-
             </button>
 
             <button
+                type="button"
                 class="ghana-filter"
-                data-category="education">
-
-                🎓 Education
-
+                data-category="Programming"
+            >
+                💻 Programming
             </button>
 
             <button
+                type="button"
                 class="ghana-filter"
-                data-category="digital">
-
-                🌐 Digital Ghana
-
+                data-category="Digital Economy"
+            >
+                📈 Digital Economy
             </button>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <p
+    <!-- SEARCH STATUS -->
+
+    <div
+        class="ghana-search-message"
         id="ghanaSearchMessage"
-        class="ghana-search-message">
-
-        Showing all Ghana Tech stories.
-
-    </p>
+        aria-live="polite"
+    ></div>
 
 
-    <!-- =================================================
+    <!-- =====================================================
          FEATURED STORY
-    ================================================= -->
+    ====================================================== -->
 
-    <article
-        class="ghana-featured-card"
-        data-category="digital"
-        data-title="Ghana's Digital Transformation">
+    <section
+        class="ghana-featured"
+        id="ghanaFeatured"
+        aria-label="Featured Ghana technology story"
+    >
 
         <div class="ghana-featured-image">
 
             <img
+                id="featuredImage"
                 src="images/ghana-tech.jpg"
-                alt="Ghana digital transformation"
-                onerror="this.src='images/web-news.jpg'">
+                alt="Featured Ghana technology story"
+                loading="lazy"
+                onerror="this.src='images/ai-news.jpg'"
+            >
 
         </div>
 
 
         <div class="ghana-featured-content">
 
-            <span class="ghana-category">
-                🇬🇭 Digital Ghana
+            <span id="featuredCategory">
+                🇬🇭 Ghana Technology
             </span>
 
-            <h2>
-                Ghana's Digital Transformation Continues
+            <h2 id="featuredTitle">
+                Ghana's Digital Technology Ecosystem Is Entering
+                a New Era
             </h2>
 
-            <p>
-
-                Ghana continues to embrace digital services,
-                fintech, artificial intelligence, e-government,
-                digital education and technology-driven businesses.
-
+            <p id="featuredDescription">
+                Discover how technology, artificial intelligence,
+                fintech and digital innovation are changing
+                opportunities for people and businesses in Ghana.
             </p>
 
-            <div class="ghana-article-meta">
 
-                <span>📅 2026</span>
+            <div class="article-info">
 
-                <span>🇬🇭 Ghana</span>
+                <span id="featuredDate">
+                    <i class="fa-regular fa-calendar"></i>
+                    Today
+                </span>
+
+                <span id="featuredAuthor">
+                    <i class="fa-regular fa-user"></i>
+                    TechHub Ghana
+                </span>
 
             </div>
 
 
             <a
-                href="#digital-transformation"
-                class="ghana-read-btn">
-
-                Read Story →
-
+                href="#ghanaNews"
+                class="read-btn"
+                id="featuredReadBtn"
+            >
+                Read More
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
 
         </div>
 
-    </article>
+    </section>
 
 
-    <!-- =================================================
+    <!-- =====================================================
          NEWS GRID
-    ================================================= -->
+    ====================================================== -->
 
-    <div class="ghana-news-grid">
+    <section
+        class="ghana-news-section"
+        id="ghanaNews"
+    >
+
+        <div class="ghana-news-section-heading">
+
+            <h2>
+                Ghana Technology Stories
+            </h2>
+
+            <p>
+                Latest stories covering technology and digital
+                innovation in Ghana.
+            </p>
+
+        </div>
 
 
-        <!-- ARTICLE 1 -->
+        <!-- DYNAMIC NEWS WILL LOAD HERE -->
 
-        <article
-            class="ghana-news-card"
-            data-category="fintech"
-            data-title="Mobile Money Continues To Transform Payments">
+        <div
+            class="ghana-news-grid"
+            id="ghanaNewsGrid"
+        >
 
-            <img
-                src="images/mobile-money.jpg"
-                alt="Mobile money technology in Ghana"
-                onerror="this.src='images/cloud-news.jpg'">
+            <!--
+                JavaScript will insert news cards here.
+            -->
 
-            <div class="ghana-news-content">
+        </div>
 
-                <span class="ghana-category">
-                    💳 FinTech
-                </span>
 
-                <h3>
-                    Mobile Money Continues To Transform Payments
-                </h3>
+        <!-- NO RESULTS -->
 
-                <p>
+        <div
+            class="no-ghana-news"
+            id="noGhanaNews"
+        >
 
-                    Mobile money continues to play an important
-                    role in Ghana's digital payments ecosystem.
+            <div style="font-size: 45px; margin-bottom: 15px;">
+                🔎
+            </div>
 
-                </p>
+            <h3>
+                No stories found
+            </h3>
 
-                <div class="ghana-card-footer">
+            <p>
+                Try another search term or select a different
+                category.
+            </p>
 
-                    <span>🇬🇭 Ghana Tech</span>
+        </div>
 
-                    <a href="#mobile-money">
-                        Read →
-                    </a>
+    </section>
 
-                </div>
+
+    <!-- =====================================================
+         TRENDING TOPICS
+    ====================================================== -->
+
+    <section class="ghana-trending">
+
+        <div class="ghana-trending-box">
+
+            <h2>
+                <i class="fa-solid fa-fire"></i>
+                Trending in Ghana Tech
+            </h2>
+
+
+            <div class="ghana-trending-grid">
+
+                <a
+                    href="#"
+                    data-trending="Artificial Intelligence"
+                >
+                    <span>01</span>
+                    <span>
+                        Artificial Intelligence in Ghana
+                    </span>
+                </a>
+
+                <a
+                    href="#"
+                    data-trending="FinTech"
+                >
+                    <span>02</span>
+                    <span>
+                        Ghana FinTech & Mobile Money
+                    </span>
+                </a>
+
+                <a
+                    href="#"
+                    data-trending="Cybersecurity"
+                >
+                    <span>03</span>
+                    <span>
+                        Cybersecurity & Online Safety
+                    </span>
+                </a>
+
+                <a
+                    href="#"
+                    data-trending="Startups"
+                >
+                    <span>04</span>
+                    <span>
+                        Ghanaian Technology Startups
+                    </span>
+                </a>
+
+                <a
+                    href="#"
+                    data-trending="Digital Economy"
+                >
+                    <span>05</span>
+                    <span>
+                        Ghana Digital Economy
+                    </span>
+                </a>
+
+                <a
+                    href="#"
+                    data-trending="Programming"
+                >
+                    <span>06</span>
+                    <span>
+                        Programming & Software Development
+                    </span>
+                </a>
 
             </div>
 
-        </article>
+        </div>
+
+    </section>
 
 
-        <!-- ARTICLE 2 -->
+    <!-- =====================================================
+         TECHNOLOGY TOPICS
+    ====================================================== -->
 
-        <article
-            class="ghana-news-card"
-            data-category="ai"
-            data-title="Artificial Intelligence In Ghana">
+    <section
+        class="ghana-topics"
+        id="ghanaTopics"
+    >
 
-            <img
-                src="images/ai-news.jpg"
-                alt="Artificial intelligence technology">
+        <h2>
+            Explore Ghana Tech Topics
+        </h2>
 
-            <div class="ghana-news-content">
 
-                <span class="ghana-category">
-                    🤖 Artificial Intelligence
-                </span>
+        <div class="ghana-topic-grid">
+
+
+            <!-- AI -->
+
+            <article class="ghana-topic-card">
+
+                <span>🤖</span>
 
                 <h3>
-                    Artificial Intelligence In Ghana
+                    Artificial Intelligence
                 </h3>
 
                 <p>
-
-                    AI is creating new opportunities in education,
-                    business, agriculture, healthcare and software.
-
+                    AI tools, developments, applications,
+                    education and opportunities in Ghana.
                 </p>
 
-                <div class="ghana-card-footer">
-
-                    <span>🤖 AI</span>
-
-                    <a href="#artificial-intelligence">
-                        Read →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
+            </article>
 
 
-        <!-- ARTICLE 3 -->
+            <!-- FINTECH -->
 
-        <article
-            class="ghana-news-card"
-            data-category="cybersecurity"
-            data-title="Cybersecurity Becomes More Important">
+            <article class="ghana-topic-card">
 
-            <img
-                src="images/cyber-news.jpg"
-                alt="Cybersecurity">
-
-            <div class="ghana-news-content">
-
-                <span class="ghana-category">
-                    🔐 Cybersecurity
-                </span>
+                <span>💳</span>
 
                 <h3>
-                    Cybersecurity Becomes More Important
+                    FinTech
                 </h3>
 
                 <p>
-
-                    As more Ghanaians move online, protecting
-                    accounts, payments and personal information
-                    becomes increasingly important.
-
+                    Mobile money, digital banking, payments
+                    and financial technology.
                 </p>
 
-                <div class="ghana-card-footer">
-
-                    <span>🔐 Security</span>
-
-                    <a href="#cybersecurity">
-                        Read →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
+            </article>
 
 
-        <!-- ARTICLE 4 -->
+            <!-- CYBERSECURITY -->
 
-        <article
-            class="ghana-news-card"
-            data-category="startups"
-            data-title="Ghana's Technology Startup Ecosystem">
+            <article class="ghana-topic-card">
 
-            <img
-                src="images/startup.jpg"
-                alt="Technology startup"
-                onerror="this.src='images/web-news.jpg'">
-
-            <div class="ghana-news-content">
-
-                <span class="ghana-category">
-                    🚀 Startups
-                </span>
+                <span>🔐</span>
 
                 <h3>
-                    Ghana's Technology Startup Ecosystem
+                    Cybersecurity
                 </h3>
 
                 <p>
-
-                    Young entrepreneurs are building digital
-                    products and services for Ghana and other
-                    African markets.
-
+                    Online security, scams, privacy,
+                    cybercrime awareness and protection.
                 </p>
 
-                <div class="ghana-card-footer">
-
-                    <span>🚀 Innovation</span>
-
-                    <a href="#startups">
-                        Read →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
+            </article>
 
 
-        <!-- ARTICLE 5 -->
+            <!-- STARTUPS -->
 
-        <article
-            class="ghana-news-card"
-            data-category="education"
-            data-title="Technology Is Changing Education">
+            <article class="ghana-topic-card">
 
-            <img
-                src="images/education-tech.jpg"
-                alt="Technology in education"
-                onerror="this.src='images/ai-news.jpg'">
-
-            <div class="ghana-news-content">
-
-                <span class="ghana-category">
-                    🎓 Education
-                </span>
+                <span>🚀</span>
 
                 <h3>
-                    Technology Is Changing Education
+                    Startups
                 </h3>
 
                 <p>
-
-                    Online learning, digital classrooms and
-                    programming education are creating new
-                    opportunities for Ghanaian students.
-
+                    Ghanaian startups, entrepreneurs,
+                    innovation and technology businesses.
                 </p>
 
-                <div class="ghana-card-footer">
-
-                    <span>🎓 EdTech</span>
-
-                    <a href="#education">
-                        Read →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
+            </article>
 
 
-        <!-- ARTICLE 6 -->
+            <!-- PROGRAMMING -->
 
-        <article
-            class="ghana-news-card"
-            data-category="digital"
-            data-title="Digital Services In Ghana">
+            <article class="ghana-topic-card">
 
-            <img
-                src="images/web-news.jpg"
-                alt="Digital services">
-
-            <div class="ghana-news-content">
-
-                <span class="ghana-category">
-                    🌐 Digital Ghana
-                </span>
+                <span>💻</span>
 
                 <h3>
-                    Growth Of Digital Services In Ghana
+                    Programming
                 </h3>
 
                 <p>
-
-                    Digital platforms are making it easier for
-                    people and businesses to access services,
-                    communicate and work online.
-
+                    Web development, software engineering,
+                    Python, JavaScript and coding.
                 </p>
 
-                <div class="ghana-card-footer">
-
-                    <span>🌐 Digital</span>
-
-                    <a href="#digital-services">
-                        Read →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-    </div>
+            </article>
 
 
-    <div
-        id="ghanaNoResults"
-        class="ghana-no-results">
+            <!-- DIGITAL ECONOMY -->
 
-        <div>🔎</div>
+            <article class="ghana-topic-card">
+
+                <span>📈</span>
+
+                <h3>
+                    Digital Economy
+                </h3>
+
+                <p>
+                    Digital businesses, e-commerce,
+                    jobs and Ghana's technology economy.
+                </p>
+
+            </article>
+
+
+            <!-- TELECOM -->
+
+            <article class="ghana-topic-card">
+
+                <span>📱</span>
+
+                <h3>
+                    Telecom & Mobile
+                </h3>
+
+                <p>
+                    Mobile networks, smartphones, internet
+                    services and telecommunications.
+                </p>
+
+            </article>
+
+
+            <!-- EDUCATION -->
+
+            <article class="ghana-topic-card">
+
+                <span>🎓</span>
+
+                <h3>
+                    EdTech
+                </h3>
+
+                <p>
+                    Technology in education, online learning
+                    and digital student tools.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SOURCE / DISCLAIMER
+    ====================================================== -->
+
+    <section class="ghana-source-note">
 
         <h3>
-            No Ghana Tech stories found
+            <i class="fa-solid fa-circle-info"></i>
+            About Ghana Tech News
         </h3>
 
         <p>
-            Try another keyword or category.
+            TechHub Ghana brings together technology stories,
+            digital trends and innovation relevant to Ghana.
+            News content should be verified with the original
+            publisher before making important decisions.
         </p>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =====================================================
-     TRENDING GHANA TECH
-===================================================== -->
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
 
-<section class="ghana-section">
-
-    <div class="ghana-section-heading">
-
-        <span>TRENDING</span>
+    <section class="ghana-newsletter">
 
         <h2>
-            What Ghanaians Are Talking About
-        </h2>
-
-    </div>
-
-
-    <div class="ghana-trending-grid">
-
-        <a href="#artificial-intelligence">
-            🤖 Artificial Intelligence
-        </a>
-
-        <a href="#mobile-money">
-            💳 Mobile Money
-        </a>
-
-        <a href="#cybersecurity">
-            🔐 Cybersecurity
-        </a>
-
-        <a href="#startups">
-            🚀 Ghanaian Startups
-        </a>
-
-        <a href="#education">
-            🎓 Digital Education
-        </a>
-
-        <a href="#digital-services">
-            🌐 Digital Ghana
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     TECHNOLOGY OPPORTUNITIES
-===================================================== -->
-
-<section class="ghana-section">
-
-    <div class="ghana-section-heading">
-
-        <span>OPPORTUNITIES</span>
-
-        <h2>
-            Technology Opportunities For Young Ghanaians
+            Stay Ahead of Ghana Tech
         </h2>
 
         <p>
-
-            Technology is not only about consuming information.
-            It can also create skills, jobs, businesses and
-            income opportunities.
-
-        </p>
-
-    </div>
-
-
-    <div class="ghana-opportunity-grid">
-
-
-        <div>
-
-            <span>💻</span>
-
-            <h3>
-                Programming
-            </h3>
-
-            <p>
-                Learn Python, JavaScript, web development
-                and software engineering.
-            </p>
-
-            <a href="tutorials.html">
-                Learn →
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <span>🌐</span>
-
-            <h3>
-                Web Development
-            </h3>
-
-            <p>
-                Build websites and digital platforms
-                for individuals and businesses.
-            </p>
-
-            <a href="tutorials.html">
-                Learn →
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <span>🔐</span>
-
-            <h3>
-                Cybersecurity
-            </h3>
-
-            <p>
-                Learn how to protect systems, accounts,
-                networks and digital information.
-            </p>
-
-            <a href="tutorials.html">
-                Learn →
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <span>📊</span>
-
-            <h3>
-                Data & AI
-            </h3>
-
-            <p>
-                Develop skills in data analysis,
-                machine learning and artificial intelligence.
-            </p>
-
-            <a href="tutorials.html">
-                Learn →
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <span>📱</span>
-
-            <h3>
-                Digital Business
-            </h3>
-
-            <p>
-                Use technology to create online services,
-                products and businesses.
-            </p>
-
-            <a href="tools.html">
-                Explore Tools →
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <span>🚀</span>
-
-            <h3>
-                Startups
-            </h3>
-
-            <p>
-                Turn technology ideas into useful products
-                for Ghanaian and African users.
-            </p>
-
-            <a href="#startups">
-                Explore →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     DIGITAL SAFETY
-===================================================== -->
-
-<section class="ghana-security">
-
-    <div>
-
-        <span>
-            🔐 DIGITAL SAFETY
-        </span>
-
-        <h2>
-            Stay Safe In Ghana's Digital Economy
-        </h2>
-
-        <p>
-
-            As more services move online, protecting your
-            accounts and personal information is essential.
-
+            Get important technology stories and digital
+            opportunities delivered to your inbox.
         </p>
 
 
-        <div class="ghana-security-grid">
+        <form id="ghanaNewsletterForm">
 
-            <div>
-                🔑
-                <strong>
-                    Use strong passwords
-                </strong>
-            </div>
+            <input
+                type="email"
+                id="ghanaNewsletterEmail"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required
+                aria-label="Email address"
+            >
 
-            <div>
-                📱
-                <strong>
-                    Enable 2FA
-                </strong>
-            </div>
+            <button type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+                Subscribe
+            </button>
 
-            <div>
-                🚫
-                <strong>
-                    Avoid suspicious links
-                </strong>
-            </div>
-
-            <div>
-                💳
-                <strong>
-                    Protect payment details
-                </strong>
-            </div>
-
-        </div>
+        </form>
 
 
-        <a href="tutorials.html"
-           class="ghana-security-btn">
+        <p
+            id="ghanaNewsletterMessage"
+            aria-live="polite"
+            style="margin-top: 15px; margin-bottom: 0;"
+        ></p>
 
-            Learn Digital Safety →
+    </section>
 
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     NEWSLETTER
-===================================================== -->
-
-<section class="newsletter">
-
-    <h2>
-        Stay Updated With Ghana Tech 🇬🇭
-    </h2>
-
-    <p>
-
-        Get technology news, digital opportunities,
-        tutorials and useful tools from TechHub Ghana.
-
-    </p>
+</main>
 
 
-    <form>
-
-        <input
-            type="email"
-            placeholder="Enter your email"
-            required>
-
-        <button type="submit">
-            Subscribe
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
     <div class="footer-grid">
 
+
+        <!-- ABOUT -->
 
         <div>
 
@@ -985,7 +972,9 @@
             </h3>
 
             <p>
-                Technology • Innovation • Learning
+                Your platform for technology news,
+                digital innovation and useful technology
+                resources in Ghana.
             </p>
 
             <p>
@@ -995,38 +984,7 @@
         </div>
 
 
-        <div>
-
-            <h3>
-                Ghana Tech
-            </h3>
-
-            <p>
-                <a href="#ghana-news">
-                    Ghana Tech News
-                </a>
-            </p>
-
-            <p>
-                <a href="#startups">
-                    Startups
-                </a>
-            </p>
-
-            <p>
-                <a href="#cybersecurity">
-                    Cybersecurity
-                </a>
-            </p>
-
-            <p>
-                <a href="#artificial-intelligence">
-                    Artificial Intelligence
-                </a>
-            </p>
-
-        </div>
-
+        <!-- QUICK LINKS -->
 
         <div>
 
@@ -1042,13 +1000,13 @@
 
             <p>
                 <a href="news.html">
-                    News
+                    Tech News
                 </a>
             </p>
 
             <p>
-                <a href="tutorials.html">
-                    Tutorials
+                <a href="ghana-tech.html">
+                    Ghana Tech
                 </a>
             </p>
 
@@ -1061,18 +1019,75 @@
         </div>
 
 
+        <!-- TOPICS -->
+
         <div>
 
             <h3>
-                Contact
+                Topics
             </h3>
 
             <p>
-                Ghana 🇬🇭
+                <a href="#ghanaTopics">
+                    Artificial Intelligence
+                </a>
             </p>
 
             <p>
-                info@techhubghana.com
+                <a href="#ghanaTopics">
+                    Cybersecurity
+                </a>
+            </p>
+
+            <p>
+                <a href="#ghanaTopics">
+                    FinTech
+                </a>
+            </p>
+
+            <p>
+                <a href="#ghanaTopics">
+                    Startups
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- SOCIAL -->
+
+        <div>
+
+            <h3>
+                Follow TechHub Ghana
+            </h3>
+
+            <p>
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                    Facebook
+                </a>
+            </p>
+
+            <p>
+                <a href="#" aria-label="X">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    X / Twitter
+                </a>
+            </p>
+
+            <p>
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    Instagram
+                </a>
+            </p>
+
+            <p>
+                <a href="#" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                    TikTok
+                </a>
             </p>
 
         </div>
@@ -1083,24 +1098,37 @@
     <hr>
 
 
-    <p class="copyright">
+    <div class="copyright">
 
-        © 2026 TechHub Ghana. All Rights Reserved.
+        <p>
+            © <span id="copyrightYear"></span>
+            TechHub Ghana. All rights reserved.
+        </p>
 
-    </p>
+    </div>
 
 </footer>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button
+    type="button"
+    id="topBtn"
+    aria-label="Back to top"
+    title="Back to top"
+>
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+<!-- =========================================================
+     GHANA TECH JAVASCRIPT
+========================================================= -->
 
 <script src="ghana-tech.js"></script>
 
-<script src="save.js"></script>
-
-
 </body>
-
-  </html>
+                    </html>
