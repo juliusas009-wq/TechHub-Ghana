@@ -3,25 +3,27 @@
    MASTER STYLESHEET
    VERSION 2026
    ---------------------------------------------------------
-   Designed for:
+   Complete responsive stylesheet for:
    Home
-   Tech News
-   Ghana Technology
+   News
    Tutorials
    Tools
    AI Assistant
    GPA Calculator
    QR Generator
    Password Generator
+   Articles
    About
    Contact
-   Login / Signup
-   ========================================================= */
+   Login
+   Signup
+   Dashboard
+========================================================= */
 
 
 /* =========================================================
    1. DESIGN SYSTEM
-   ========================================================= */
+========================================================= */
 
 :root {
 
@@ -36,8 +38,13 @@
 
     /* STATUS */
     --success: #16a34a;
+    --success-light: #dcfce7;
+
     --danger: #dc2626;
+    --danger-light: #fee2e2;
+
     --warning: #f59e0b;
+    --warning-light: #fef3c7;
 
     /* TEXT */
     --text: #172033;
@@ -92,13 +99,12 @@
 
     /* CONTAINER */
     --container: 1400px;
-
 }
 
 
 /* =========================================================
    2. RESET
-   ========================================================= */
+========================================================= */
 
 *,
 *::before,
@@ -165,6 +171,12 @@ img {
     max-width: 100%;
 }
 
+video,
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
 ul,
 ol {
     padding-left: 20px;
@@ -178,17 +190,35 @@ ol {
 
 /* =========================================================
    3. ACCESSIBILITY
-   ========================================================= */
+========================================================= */
 
 :focus-visible {
     outline: 3px solid rgba(7, 86, 214, 0.35);
     outline-offset: 3px;
 }
 
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border: 0;
+}
+
 
 /* =========================================================
    4. GLOBAL CONTAINER
-   ========================================================= */
+========================================================= */
 
 .container {
     width: min(92%, var(--container));
@@ -198,11 +228,12 @@ ol {
 
 /* =========================================================
    5. HEADER
-   ========================================================= */
+========================================================= */
 
 .main-header {
     position: sticky;
     top: 0;
+
     z-index: 9999;
 
     width: 100%;
@@ -227,7 +258,7 @@ ol {
 
 /* =========================================================
    6. TOP BAR
-   ========================================================= */
+========================================================= */
 
 .top-bar {
     width: min(92%, var(--container));
@@ -235,10 +266,13 @@ ol {
     min-height: 78px;
 
     margin: 0 auto;
+
     padding: 10px 0;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 24px;
@@ -247,15 +281,17 @@ ol {
 
 /* =========================================================
    7. LOGO
-   ========================================================= */
+========================================================= */
 
 .logo {
     display: flex;
+
     align-items: center;
 
     gap: 12px;
 
     min-width: 0;
+
     flex-shrink: 0;
 }
 
@@ -297,6 +333,7 @@ ol {
     color: var(--text-light);
 
     font-size: 10px;
+
     font-weight: 500;
 
     letter-spacing: 0.3px;
@@ -307,15 +344,17 @@ ol {
 
 /* =========================================================
    8. SEARCH
-   ========================================================= */
+========================================================= */
 
 .search-box {
     width: 100%;
+
     max-width: 440px;
 
     margin-left: auto;
 
     display: flex;
+
     align-items: stretch;
 
     flex-shrink: 1;
@@ -323,6 +362,7 @@ ol {
 
 .search-box input {
     width: 100%;
+
     min-width: 0;
 
     height: 46px;
@@ -340,6 +380,7 @@ ol {
     outline: none;
 
     background: var(--surface);
+
     color: var(--text);
 
     font-size: 13px;
@@ -363,17 +404,22 @@ ol {
 
 .search-box button {
     width: 52px;
+
     min-width: 52px;
+
     height: 46px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius:
         0 var(--radius-sm) var(--radius-sm) 0;
 
     background: var(--primary);
+
     color: var(--white);
 
     font-size: 17px;
@@ -394,20 +440,24 @@ ol {
 
 /* =========================================================
    9. DARK MODE BUTTON
-   ========================================================= */
+========================================================= */
 
 #darkModeBtn {
     width: 44px;
     height: 44px;
+
     min-width: 44px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 50%;
 
     background: var(--primary);
+
     color: var(--white);
 
     font-size: 18px;
@@ -419,13 +469,16 @@ ol {
 
 #darkModeBtn:hover {
     background: var(--primary-dark);
-    transform: rotate(10deg) scale(1.05);
+
+    transform:
+        rotate(10deg)
+        scale(1.05);
 }
 
 
 /* =========================================================
    10. MOBILE MENU BUTTON
-   ========================================================= */
+========================================================= */
 
 .menu-btn {
     display: none;
@@ -436,14 +489,17 @@ ol {
     flex-shrink: 0;
 
     align-items: center;
+
     justify-content: center;
 
     border-radius: var(--radius-sm);
 
     background: var(--primary);
+
     color: var(--white);
 
     font-size: 23px;
+
     line-height: 1;
 
     transition:
@@ -453,6 +509,7 @@ ol {
 
 .menu-btn:hover {
     background: var(--primary-dark);
+
     transform: scale(1.04);
 }
 
@@ -463,13 +520,15 @@ ol {
 
 /* =========================================================
    11. NAVIGATION
-   ========================================================= */
+========================================================= */
 
 #navMenu {
     width: 100%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     flex-wrap: wrap;
@@ -487,6 +546,7 @@ ol {
     color: var(--white);
 
     font-size: 13px;
+
     font-weight: 600;
 
     transition:
@@ -511,6 +571,7 @@ ol {
     background: var(--accent);
 
     transform: scaleX(0);
+
     transform-origin: center;
 
     transition:
@@ -530,22 +591,32 @@ ol {
 
 /* =========================================================
    12. BREAKING NEWS
-   ========================================================= */
+========================================================= */
 
 .breaking-news {
     width: 100%;
+
     min-height: 38px;
 
     display: flex;
+
     align-items: center;
 
     background: var(--accent);
+
     color: #111827;
 
     font-size: 12px;
+
     font-weight: 700;
 
     overflow: hidden;
+}
+
+.breaking-news marquee {
+    width: 100%;
+
+    line-height: 38px;
 }
 
 .today-date {
@@ -556,20 +627,20 @@ ol {
     white-space: nowrap;
 
     font-size: 12px;
+
     font-weight: 800;
 }
 
 
 /* =========================================================
-   13. HERO / FEATURED NEWS
-   ========================================================= */
+   13. HERO
+========================================================= */
 
 .hero,
 .featured-news {
     width: min(92%, var(--container));
 
-    margin:
-        48px auto 55px;
+    margin: 48px auto 55px;
 
     display: grid;
 
@@ -582,9 +653,6 @@ ol {
     gap:
         clamp(30px, 5vw, 65px);
 }
-
-
-/* HERO TEXT */
 
 .hero-text,
 .featured-content {
@@ -607,16 +675,15 @@ ol {
     border-radius: var(--radius-pill);
 
     background: var(--primary-light);
+
     color: var(--primary);
 
     font-size: 11px;
+
     font-weight: 800;
 
     letter-spacing: 0.3px;
 }
-
-
-/* HERO TITLE */
 
 .hero-text h2,
 .featured-content h1,
@@ -637,9 +704,6 @@ ol {
     letter-spacing: -1.5px;
 }
 
-
-/* HERO DESCRIPTION */
-
 .hero-text p,
 .featured-content p {
     max-width: 680px;
@@ -654,7 +718,9 @@ ol {
 }
 
 
-/* HERO BUTTONS */
+/* =========================================================
+   14. HERO BUTTONS
+========================================================= */
 
 .hero-buttons {
     display: flex;
@@ -672,6 +738,7 @@ ol {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 0 22px;
@@ -681,9 +748,11 @@ ol {
     border-radius: var(--radius-sm);
 
     background: var(--primary);
+
     color: var(--white);
 
     font-size: 13px;
+
     font-weight: 700;
 
     transition:
@@ -712,13 +781,14 @@ ol {
 
 .hero-buttons a:nth-child(2):hover {
     background: var(--primary);
+
     color: var(--white);
 }
 
 
 /* =========================================================
-   14. HERO / FEATURED IMAGE
-   ========================================================= */
+   15. HERO IMAGE
+========================================================= */
 
 .hero-image,
 .featured-image {
@@ -753,6 +823,7 @@ ol {
     width: 100%;
 
     min-height: 320px;
+
     max-height: 480px;
 
     object-fit: cover;
@@ -766,8 +837,8 @@ ol {
 
 
 /* =========================================================
-   15. GENERAL SECTIONS
-   ========================================================= */
+   16. GENERAL SECTIONS
+========================================================= */
 
 .section {
     width: min(92%, var(--container));
@@ -806,8 +877,8 @@ ol {
 
 
 /* =========================================================
-   16. TRENDING
-   ========================================================= */
+   17. TRENDING
+========================================================= */
 
 .trending-section {
     width: min(92%, var(--container));
@@ -863,6 +934,7 @@ ol {
     color: var(--text-secondary);
 
     font-size: 12px;
+
     font-weight: 600;
 
     transition:
@@ -890,6 +962,7 @@ ol {
     color: var(--primary);
 
     font-size: 13px;
+
     font-weight: 700;
 }
 
@@ -899,8 +972,8 @@ ol {
 
 
 /* =========================================================
-   17. BUTTON SYSTEM
-   ========================================================= */
+   18. BUTTON SYSTEM
+========================================================= */
 
 .read-btn,
 .btn,
@@ -910,6 +983,7 @@ ol {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 0 18px;
@@ -919,9 +993,11 @@ ol {
     border-radius: var(--radius-sm);
 
     background: var(--primary);
+
     color: var(--white);
 
     font-size: 13px;
+
     font-weight: 700;
 
     transition:
@@ -940,10 +1016,18 @@ ol {
     box-shadow: var(--shadow-xs);
 }
 
+.read-btn.disabled {
+    background: var(--text-muted);
+
+    pointer-events: none;
+
+    cursor: not-allowed;
+}
+
 
 /* =========================================================
-   18. CARD GRID
-   ========================================================= */
+   19. CARD GRID
+========================================================= */
 
 .card-grid,
 .cards {
@@ -957,8 +1041,8 @@ ol {
 
 
 /* =========================================================
-   19. GENERAL / TOOL CARDS
-   ========================================================= */
+   20. GENERAL CARDS
+========================================================= */
 
 .tool-card,
 .card {
@@ -999,6 +1083,7 @@ ol {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border-radius: 18px;
@@ -1034,6 +1119,7 @@ ol {
     color: var(--primary);
 
     font-size: 13px;
+
     font-weight: 700;
 }
 
@@ -1043,8 +1129,8 @@ ol {
 
 
 /* =========================================================
-   20. CATEGORY BUTTONS
-   ========================================================= */
+   21. CATEGORY BUTTONS
+========================================================= */
 
 .category-buttons {
     display: flex;
@@ -1072,6 +1158,7 @@ ol {
     color: var(--text-secondary);
 
     font-size: 12px;
+
     font-weight: 700;
 
     transition:
@@ -1094,8 +1181,8 @@ ol {
 
 
 /* =========================================================
-   21. NEWS LAYOUT
-   ========================================================= */
+   22. NEWS LAYOUT
+========================================================= */
 
 .news-layout {
     display: grid;
@@ -1115,8 +1202,8 @@ ol {
 
 
 /* =========================================================
-   22. NEWS CARD
-   ========================================================= */
+   23. NEWS CARD
+========================================================= */
 
 .news-card {
     display: flex;
@@ -1152,6 +1239,7 @@ ol {
 
 .news-card img {
     width: 220px;
+
     height: 145px;
 
     flex-shrink: 0;
@@ -1163,9 +1251,22 @@ ol {
     background: var(--surface-alt);
 }
 
-.news-card-content {
+.news-card-content,
+.news-content {
     min-width: 0;
+
     flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.news-card .category,
+.news-card .category-badge {
+    width: fit-content;
+
+    margin-bottom: 8px;
 }
 
 .news-card h3 {
@@ -1188,10 +1289,26 @@ ol {
     line-height: 1.7;
 }
 
+.news-card small {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.news-card-actions {
+    margin-top: auto;
+}
+
 
 /* =========================================================
-   23. SIDEBAR
-   ========================================================= */
+   24. SIDEBAR
+========================================================= */
 
 aside {
     height: fit-content;
@@ -1222,6 +1339,7 @@ aside h3 {
 
 aside ul {
     margin: 0;
+
     padding: 0;
 
     list-style: none;
@@ -1242,6 +1360,7 @@ aside a {
     color: var(--text-secondary);
 
     font-size: 13px;
+
     font-weight: 600;
 
     transition:
@@ -1254,8 +1373,8 @@ aside a:hover {
 
 
 /* =========================================================
-   24. TUTORIAL GRID
-   ========================================================= */
+   25. TUTORIALS
+========================================================= */
 
 .tutorial-grid {
     display: grid;
@@ -1298,6 +1417,7 @@ aside a:hover {
 
 .tutorial img {
     width: 100%;
+
     height: 200px;
 
     object-fit: cover;
@@ -1315,9 +1435,11 @@ aside a:hover {
     border-radius: var(--radius-pill);
 
     background: var(--primary-light);
+
     color: var(--primary);
 
     font-size: 10px;
+
     font-weight: 800;
 }
 
@@ -1353,8 +1475,8 @@ aside a:hover {
 
 
 /* =========================================================
-   25. ARTICLE
-   ========================================================= */
+   26. ARTICLE
+========================================================= */
 
 .article-page {
     width: min(92%, 1000px);
@@ -1372,6 +1494,18 @@ aside a:hover {
     box-shadow: var(--shadow-md);
 }
 
+.article-image {
+    width: 100%;
+
+    max-height: 520px;
+
+    object-fit: cover;
+
+    border-radius: var(--radius-md);
+
+    background: var(--surface-alt);
+}
+
 .article-page h1 {
     margin: 20px 0 15px;
 
@@ -1387,6 +1521,10 @@ aside a:hover {
     margin: 32px 0 14px;
 
     color: var(--primary);
+
+    font-size: 25px;
+
+    line-height: 1.3;
 }
 
 .article-page h3 {
@@ -1410,18 +1548,8 @@ aside a:hover {
 
 .article-page li {
     margin-bottom: 9px;
-}
 
-.article-image {
-    width: 100%;
-
-    max-height: 520px;
-
-    object-fit: cover;
-
-    border-radius: var(--radius-md);
-
-    background: var(--surface-alt);
+    color: var(--text-secondary);
 }
 
 .article-info {
@@ -1442,8 +1570,8 @@ aside a:hover {
 
 
 /* =========================================================
-   26. AI ASSISTANT
-   ========================================================= */
+   27. AI ASSISTANT
+========================================================= */
 
 .ai-section {
     width: min(92%, 1000px);
@@ -1491,6 +1619,7 @@ aside a:hover {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 10px;
@@ -1525,6 +1654,7 @@ aside a:hover {
     outline: none;
 
     background: var(--surface);
+
     color: var(--text);
 
     line-height: 1.7;
@@ -1567,9 +1697,11 @@ aside a:hover {
     border-radius: var(--radius-sm);
 
     background: var(--primary);
+
     color: var(--white);
 
     font-size: 12px;
+
     font-weight: 700;
 
     transition:
@@ -1599,6 +1731,7 @@ aside a:hover {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 15px;
@@ -1616,9 +1749,11 @@ aside a:hover {
     border-radius: var(--radius-sm);
 
     background: var(--primary-light);
+
     color: var(--primary);
 
     font-size: 12px;
+
     font-weight: 700;
 
     transition:
@@ -1628,6 +1763,7 @@ aside a:hover {
 
 #copyBtn:hover {
     background: var(--primary);
+
     color: var(--white);
 }
 
@@ -1660,22 +1796,25 @@ aside a:hover {
 
     border-radius: var(--radius-sm);
 
-    background: #fee2e2;
+    background: var(--danger-light);
+
     color: var(--danger);
 
     font-size: 12px;
+
     font-weight: 700;
 }
 
 .clear-btn:hover {
     background: var(--danger);
+
     color: var(--white);
 }
 
 
 /* =========================================================
-   27. LOGIN / SIGNUP
-   ========================================================= */
+   28. LOGIN / SIGNUP
+========================================================= */
 
 .login-section {
     min-height: 70vh;
@@ -1683,6 +1822,7 @@ aside a:hover {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 55px 20px;
@@ -1710,6 +1850,8 @@ aside a:hover {
     color: var(--primary);
 
     text-align: center;
+
+    font-size: 30px;
 }
 
 .login-box > p {
@@ -1732,15 +1874,18 @@ aside a:hover {
     margin: 10px 0 6px;
 
     font-size: 13px;
+
     font-weight: 700;
 }
 
-.login-box input {
+.login-box input,
+.login-box select,
+.login-box textarea {
     width: 100%;
 
-    height: 46px;
+    min-height: 46px;
 
-    padding: 0 14px;
+    padding: 10px 14px;
 
     border: 1px solid var(--border);
 
@@ -1749,10 +1894,18 @@ aside a:hover {
     outline: none;
 
     background: var(--surface);
+
     color: var(--text);
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
 }
 
-.login-box input:focus {
+.login-box input:focus,
+.login-box select:focus,
+.login-box textarea:focus {
     border-color: var(--primary);
 
     box-shadow:
@@ -1767,13 +1920,20 @@ aside a:hover {
     border-radius: var(--radius-sm);
 
     background: var(--primary);
+
     color: var(--white);
 
     font-weight: 700;
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
 }
 
 .login-box button:hover {
     background: var(--primary-dark);
+
+    transform: translateY(-2px);
 }
 
 .login-box a {
@@ -1784,8 +1944,8 @@ aside a:hover {
 
 
 /* =========================================================
-   28. NEWSLETTER
-   ========================================================= */
+   29. NEWSLETTER
+========================================================= */
 
 .newsletter {
     width: min(92%, var(--container));
@@ -1831,6 +1991,7 @@ aside a:hover {
     display: flex;
 
     justify-content: center;
+
     align-items: center;
 
     gap: 10px;
@@ -1864,6 +2025,7 @@ aside a:hover {
     border-radius: var(--radius-sm);
 
     background: var(--accent);
+
     color: #111827;
 
     font-weight: 800;
@@ -1881,8 +2043,8 @@ aside a:hover {
 
 
 /* =========================================================
-   29. FOOTER
-   ========================================================= */
+   30. FOOTER
+========================================================= */
 
 footer {
     margin-top: 80px;
@@ -1959,28 +2121,32 @@ footer hr {
 
 
 /* =========================================================
-   30. BACK TO TOP
-   ========================================================= */
+   31. BACK TO TOP
+========================================================= */
 
 #topBtn {
     position: fixed;
 
     right: 20px;
+
     bottom: 20px;
 
     z-index: 9998;
 
     width: 46px;
+
     height: 46px;
 
     display: none;
 
     align-items: center;
+
     justify-content: center;
 
     border-radius: 50%;
 
     background: var(--primary);
+
     color: var(--white);
 
     font-size: 20px;
@@ -2001,8 +2167,8 @@ footer hr {
 
 
 /* =========================================================
-   31. TABLES
-   ========================================================= */
+   32. TABLES
+========================================================= */
 
 .table-wrapper {
     width: 100%;
@@ -2051,8 +2217,8 @@ tbody tr:hover {
 
 
 /* =========================================================
-   32. FORMS
-   ========================================================= */
+   33. FORMS
+========================================================= */
 
 input,
 textarea,
@@ -2073,30 +2239,35 @@ textarea::placeholder {
 
 
 /* =========================================================
-   33. BADGES
-   ========================================================= */
+   34. BADGES
+========================================================= */
 
 .badge,
-.category-badge {
+.category-badge,
+.category {
     display: inline-flex;
 
     align-items: center;
+
+    width: fit-content;
 
     padding: 5px 10px;
 
     border-radius: var(--radius-pill);
 
     background: var(--primary-light);
+
     color: var(--primary);
 
     font-size: 10px;
+
     font-weight: 800;
 }
 
 
 /* =========================================================
-   34. LOADING / EMPTY STATES
-   ========================================================= */
+   35. LOADING / EMPTY / ERROR
+========================================================= */
 
 .loading,
 .empty-state {
@@ -2107,8 +2278,14 @@ textarea::placeholder {
     color: var(--text-light);
 }
 
+.loading p,
+.empty-state p {
+    font-size: 13px;
+}
+
 .spinner {
     width: 38px;
+
     height: 38px;
 
     margin: 0 auto 15px;
@@ -2123,25 +2300,60 @@ textarea::placeholder {
         spin 0.8s linear infinite;
 }
 
+.error-box {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: var(--surface);
+
+    border: 1px solid #fecaca;
+
+    border-radius: var(--radius-md);
+
+    color: var(--danger);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.error-box h3 {
+    margin-bottom: 8px;
+
+    color: var(--danger);
+}
+
+.error-box p {
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
 
 /* =========================================================
-   35. DARK MODE
-   ========================================================= */
+   36. DARK MODE
+========================================================= */
 
 body.dark {
     --background: #020617;
+
     --surface: #0f172a;
+
     --surface-alt: #111c31;
 
     --text: #f8fafc;
+
     --text-secondary: #cbd5e1;
+
     --text-light: #94a3b8;
+
     --text-muted: #64748b;
 
     --border: #26354d;
+
     --border-light: #1e2b42;
 
     background: var(--background);
+
     color: var(--text);
 }
 
@@ -2269,6 +2481,17 @@ body.dark .tutorial .category {
 }
 
 
+/* BADGES */
+
+body.dark .badge,
+body.dark .category-badge,
+body.dark .category {
+    background: #172554;
+
+    color: #60a5fa;
+}
+
+
 /* SECONDARY BUTTON */
 
 body.dark .hero-buttons a:nth-child(2) {
@@ -2290,7 +2513,8 @@ body.dark .news-card p,
 body.dark .tool-card p,
 body.dark .card p,
 body.dark .tutorial > p,
-body.dark .article-page p {
+body.dark .article-page p,
+body.dark .article-page li {
     color: #cbd5e1;
 }
 
@@ -2308,7 +2532,9 @@ body.dark .article-page h3 {
 
 body.dark #userText,
 body.dark .ai-result,
-body.dark .login-box input {
+body.dark .login-box input,
+body.dark .login-box select,
+body.dark .login-box textarea {
     background: #111c31;
 
     color: #ffffff;
@@ -2375,24 +2601,24 @@ body.dark select {
 }
 
 
-/* BADGES */
+/* ERROR */
 
-body.dark .badge,
-body.dark .category-badge {
-    background: #172554;
+body.dark .error-box {
+    background: #0f172a;
 
-    color: #60a5fa;
+    border-color: #7f1d1d;
 }
 
 
 /* =========================================================
-   36. MOBILE NAVIGATION
-   ========================================================= */
+   37. MOBILE NAVIGATION
+========================================================= */
 
 @media (max-width: 768px) {
 
     .main-header {
         position: sticky;
+
         top: 0;
     }
 
@@ -2420,6 +2646,7 @@ body.dark .category-badge {
 
     .logo img {
         width: 47px;
+
         height: 47px;
     }
 
@@ -2466,6 +2693,7 @@ body.dark .category-badge {
         flex-direction: column;
 
         align-items: stretch;
+
         justify-content: flex-start;
 
         max-height: 0;
@@ -2494,7 +2722,6 @@ body.dark .category-badge {
 
         visibility: visible;
     }
-
 
     #navMenu a {
         width: 100%;
@@ -2547,6 +2774,7 @@ body.dark .category-badge {
     .hero-text p,
     .featured-content p {
         margin-left: auto;
+
         margin-right: auto;
 
         font-size: 14px;
@@ -2654,8 +2882,8 @@ body.dark .category-badge {
 
 
 /* =========================================================
-   37. SMALL PHONES
-   ========================================================= */
+   38. SMALL PHONES
+========================================================= */
 
 @media (max-width: 480px) {
 
@@ -2665,6 +2893,7 @@ body.dark .category-badge {
 
     .logo img {
         width: 43px;
+
         height: 43px;
     }
 
@@ -2678,6 +2907,7 @@ body.dark .category-badge {
 
     .menu-btn {
         width: 43px;
+
         height: 43px;
     }
 
@@ -2723,8 +2953,16 @@ body.dark .category-badge {
 
     /* NEWS */
 
+    .news-card {
+        padding: 14px;
+    }
+
     .news-card img {
         height: 190px;
+    }
+
+    .news-card h3 {
+        font-size: 17px;
     }
 
 
@@ -2736,6 +2974,10 @@ body.dark .category-badge {
 
     .article-page h1 {
         font-size: 25px;
+    }
+
+    .article-page h2 {
+        font-size: 22px;
     }
 
 
@@ -2757,6 +2999,17 @@ body.dark .category-badge {
         align-items: flex-start;
 
         flex-direction: column;
+    }
+
+
+    /* LOGIN */
+
+    .login-section {
+        padding: 35px 15px;
+    }
+
+    .login-box {
+        padding: 25px 20px;
     }
 
 
@@ -2794,13 +3047,14 @@ body.dark .category-badge {
 
 
 /* =========================================================
-   38. VERY SMALL PHONES
-   ========================================================= */
+   39. VERY SMALL PHONES
+========================================================= */
 
 @media (max-width: 360px) {
 
     .logo img {
         width: 40px;
+
         height: 40px;
     }
 
@@ -2810,6 +3064,7 @@ body.dark .category-badge {
 
     .menu-btn {
         width: 40px;
+
         height: 40px;
     }
 
@@ -2829,15 +3084,26 @@ body.dark .category-badge {
 
     .search-box button {
         width: 48px;
+
         min-width: 48px;
+    }
+
+    .article-page {
+        width: 94%;
+
+        padding: 16px;
+    }
+
+    .login-box {
+        padding: 22px 16px;
     }
 
 }
 
 
 /* =========================================================
-   39. TABLET
-   ========================================================= */
+   40. TABLET
+========================================================= */
 
 @media (min-width: 769px) and (max-width: 1050px) {
 
@@ -2878,8 +3144,8 @@ body.dark .category-badge {
 
 
 /* =========================================================
-   40. LARGE SCREENS
-   ========================================================= */
+   41. LARGE SCREENS
+========================================================= */
 
 @media (min-width: 1600px) {
 
@@ -2899,8 +3165,8 @@ body.dark .category-badge {
 
 
 /* =========================================================
-   41. REDUCED MOTION
-   ========================================================= */
+   42. REDUCED MOTION
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -2922,8 +3188,8 @@ body.dark .category-badge {
 
 
 /* =========================================================
-   42. ANIMATIONS
-   ========================================================= */
+   43. ANIMATIONS
+========================================================= */
 
 @keyframes fadeUp {
 
@@ -2954,8 +3220,8 @@ body.dark .category-badge {
 
 
 /* =========================================================
-   43. CUSTOM SCROLLBAR
-   ========================================================= */
+   44. CUSTOM SCROLLBAR
+========================================================= */
 
 ::-webkit-scrollbar {
     width: 9px;
@@ -2981,8 +3247,59 @@ body.dark::-webkit-scrollbar-track {
 
 
 /* =========================================================
-   44. PRINT
-   ========================================================= */
+   45. IMAGE / MEDIA SAFETY
+========================================================= */
+
+img {
+    max-width: 100%;
+}
+
+video,
+iframe {
+    max-width: 100%;
+}
+
+figure {
+    max-width: 100%;
+}
+
+figcaption {
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   46. TEXT UTILITIES
+========================================================= */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-muted {
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   47. PRINT
+========================================================= */
 
 @media print {
 
@@ -3019,79 +3336,5 @@ body.dark::-webkit-scrollbar-track {
 
 
 /* =========================================================
-   45. IMAGE / MEDIA SAFETY
-   ========================================================= */
-
-img {
-    max-width: 100%;
-}
-
-video,
-iframe {
-    max-width: 100%;
-}
-
-figure {
-    max-width: 100%;
-}
-
-figcaption {
-    color: var(--text-light);
-
-    font-size: 12px;
-
-    margin-top: 8px;
-}
-
-
-/* =========================================================
-   46. TEXT UTILITIES
-   ========================================================= */
-
-.text-center {
-    text-align: center;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-primary {
-    color: var(--primary);
-}
-
-.text-muted {
-    color: var(--text-light);
-}
-
-
-/* =========================================================
-   47. VISUALLY HIDDEN
-   ========================================================= */
-
-.visually-hidden {
-    position: absolute;
-
-    width: 1px;
-    height: 1px;
-
-    padding: 0;
-    margin: -1px;
-
-    overflow: hidden;
-
-    clip: rect(0, 0, 0, 0);
-
-    white-space: nowrap;
-
-    border: 0;
-}
-
-
-/* =========================================================
-   END OF TECHHUB GHANA MASTER STYLESHEET
-   ========================================================= */
+   48. END OF TECHHUB GHANA MASTER STYLESHEET
+========================================================= */
