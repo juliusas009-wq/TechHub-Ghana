@@ -3,7 +3,9 @@
 
 <head>
 
-    <!-- ================= BASIC SEO ================= -->
+    <!-- =====================================================
+         BASIC SEO
+    ====================================================== -->
 
     <meta charset="UTF-8">
 
@@ -11,10 +13,10 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Learn the importance of cybersecurity, common online threats and practical ways to protect your personal information and devices.">
+          content="Learn important cybersecurity tips, common online threats, phishing, malware, password security and practical ways to stay safe online with TechHub Ghana.">
 
     <meta name="keywords"
-          content="cybersecurity Ghana, online safety, cybersecurity tips, internet security, TechHub Ghana, phishing, malware, passwords">
+          content="cybersecurity Ghana, online safety, cybersecurity tips, internet security, phishing, malware, password security, TechHub Ghana">
 
     <meta name="author"
           content="TechHub Ghana">
@@ -23,23 +25,27 @@
           content="index, follow">
 
 
-    <!-- ================= PAGE TITLE ================= -->
+    <!-- =====================================================
+         PAGE TITLE
+    ====================================================== -->
 
     <title>
         Cybersecurity Tips: How to Stay Safe Online | TechHub Ghana
     </title>
 
 
-    <!-- ================= OPEN GRAPH ================= -->
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
 
     <meta property="og:type"
           content="article">
 
     <meta property="og:title"
-          content="Cybersecurity Tips: How to Stay Safe Online">
+          content="Cybersecurity Tips: How to Stay Safe Online | TechHub Ghana">
 
     <meta property="og:description"
-          content="Discover common cybersecurity threats and practical ways to protect yourself online.">
+          content="Discover common cybersecurity threats and practical ways to protect your accounts, devices and personal information online.">
 
     <meta property="og:image"
           content="images/cyber-news.jpg">
@@ -48,7 +54,9 @@
           content="TechHub Ghana">
 
 
-    <!-- ================= TWITTER CARD ================= -->
+    <!-- =====================================================
+         TWITTER / X CARD
+    ====================================================== -->
 
     <meta name="twitter:card"
           content="summary_large_image">
@@ -63,7 +71,9 @@
           content="images/cyber-news.jpg">
 
 
-    <!-- ================= FONTS ================= -->
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -72,23 +82,40 @@
           href="https://fonts.gstatic.com"
           crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
 
-    <!-- ================= STYLESHEET ================= -->
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         MAIN STYLESHEET
+    ====================================================== -->
 
     <link rel="stylesheet"
           href="style.css">
 
 
-    <!-- ================= ICON ================= -->
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
 
     <link rel="icon"
+          type="image/png"
           href="images/logo.png">
 
 
-    <!-- ================= STRUCTURED DATA ================= -->
+    <!-- =====================================================
+         STRUCTURED DATA
+    ====================================================== -->
 
     <script type="application/ld+json">
 
@@ -119,8 +146,7 @@
         },
 
         "datePublished": "2026-07-01",
-
-        "dateModified": "2026-07-01"
+        "dateModified": "2026-08-19"
     }
 
     </script>
@@ -133,9 +159,9 @@
 
 <!-- =====================================================
      HEADER
-===================================================== -->
+====================================================== -->
 
-<header>
+<header class="main-header">
 
     <div class="top-bar">
 
@@ -147,8 +173,10 @@
             <a href="index.html"
                aria-label="TechHub Ghana Home">
 
-                <img src="images/logo.png"
-                     alt="TechHub Ghana Logo">
+                <img
+                    src="images/logo.png"
+                    alt="TechHub Ghana Logo"
+                    loading="eager">
 
             </a>
 
@@ -168,30 +196,34 @@
         </div>
 
 
-
         <!-- SEARCH -->
 
-        <form class="search-box"
-              role="search"
-              action="news.html">
+        <form
+            class="search-box"
+            role="search"
+            action="news.html"
+            method="get">
 
-            <label for="site-search"
-                   class="sr-only">
+            <label
+                for="site-search"
+                class="sr-only">
 
                 Search TechHub Ghana
 
             </label>
+
 
             <input
                 id="site-search"
                 type="search"
                 name="q"
                 placeholder="Search technology news..."
-                autocomplete="off"
-            >
+                autocomplete="off">
 
-            <button type="submit"
-                    aria-label="Search">
+
+            <button
+                type="submit"
+                aria-label="Search">
 
                 🔍
 
@@ -202,11 +234,11 @@
     </div>
 
 
-
-    <!-- MOBILE MENU -->
+    <!-- MOBILE MENU BUTTON -->
 
     <button
         class="menu-btn"
+        type="button"
         onclick="toggleMenu()"
         aria-label="Open navigation menu"
         aria-controls="navMenu"
@@ -217,19 +249,22 @@
     </button>
 
 
-
     <!-- NAVIGATION -->
 
-    <nav id="navMenu"
-         aria-label="Main navigation">
+    <nav
+        id="navMenu"
+        aria-label="Main navigation">
 
         <a href="index.html">
             Home
         </a>
 
-        <a href="news.html"
-           class="active">
+        <a
+            href="news.html"
+            class="active">
+
             News
+
         </a>
 
         <a href="tutorials.html">
@@ -238,6 +273,18 @@
 
         <a href="tools.html">
             Tools
+        </a>
+
+        <a href="gpa.html">
+            GPA
+        </a>
+
+        <a href="qr-generator.html">
+            QR Generator
+        </a>
+
+        <a href="ai-assistant.html">
+            AI Assistant
         </a>
 
         <a href="about.html">
@@ -253,44 +300,50 @@
 </header>
 
 
-
 <!-- =====================================================
      BREAKING NEWS
-===================================================== -->
+====================================================== -->
 
-<div class="breaking-news">
+<section class="breaking-news">
 
-    <div class="today-date"
-         id="today">
+    <div
+        class="today-date"
+        id="today">
     </div>
+
 
     <marquee
         behavior="scroll"
         direction="left">
 
-        📢 TechHub Ghana • Cybersecurity • Online Safety •
-        Digital Protection • Technology • Learning
+        🔐 Cybersecurity • Online Safety • Phishing • Malware •
+        Password Security • Digital Protection • Technology • Learning
 
     </marquee>
 
-</div>
-
+</section>
 
 
 <!-- =====================================================
-     BREADCRUMB
-===================================================== -->
+     ARTICLE CONTAINER
+====================================================== -->
 
-<div class="article-container">
+<main class="article-container">
 
-    <nav class="breadcrumb"
-         aria-label="Breadcrumb">
+
+    <!-- =================================================
+         BREADCRUMB
+    ================================================== -->
+
+    <nav
+        class="breadcrumb"
+        aria-label="Breadcrumb">
 
         <a href="index.html">
             Home
         </a>
 
-        <span>
+        <span aria-hidden="true">
             →
         </span>
 
@@ -298,7 +351,7 @@
             News
         </a>
 
-        <span>
+        <span aria-hidden="true">
             →
         </span>
 
@@ -309,12 +362,11 @@
     </nav>
 
 
-
     <!-- =================================================
          ARTICLE
-    ================================================= -->
+    ================================================== -->
 
-    <main class="article-page">
+    <article class="article-page">
 
 
         <!-- CATEGORY -->
@@ -324,7 +376,6 @@
             🔒 CYBERSECURITY
 
         </span>
-
 
 
         <!-- TITLE -->
@@ -337,8 +388,7 @@
         </h1>
 
 
-
-        <!-- INTRO -->
+        <!-- LEAD -->
 
         <p class="article-lead">
 
@@ -349,8 +399,7 @@
         </p>
 
 
-
-        <!-- ARTICLE INFORMATION -->
+        <!-- ARTICLE META -->
 
         <div class="article-meta">
 
@@ -395,7 +444,6 @@
         </div>
 
 
-
         <!-- FEATURED IMAGE -->
 
         <figure class="article-hero">
@@ -403,8 +451,7 @@
             <img
                 src="images/cyber-news.jpg"
                 alt="Cybersecurity and online protection"
-                loading="eager"
-            >
+                loading="eager">
 
             <figcaption>
 
@@ -416,7 +463,6 @@
         </figure>
 
 
-
         <!-- SHARE -->
 
         <div class="article-share">
@@ -425,12 +471,14 @@
                 Share:
             </span>
 
+
             <a
                 href="https://wa.me/?text=Cybersecurity%20Tips%20-%20TechHub%20Ghana"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Share on WhatsApp">
+                aria-label="Share this article on WhatsApp">
 
+                <i class="fa-brands fa-whatsapp"></i>
                 WhatsApp
 
             </a>
@@ -447,10 +495,9 @@
         </div>
 
 
-
         <!-- =================================================
              TABLE OF CONTENTS
-        ================================================= -->
+        ================================================== -->
 
         <aside class="article-toc">
 
@@ -485,6 +532,12 @@
                 </li>
 
                 <li>
+                    <a href="#two-factor">
+                        Two-Factor Authentication
+                    </a>
+                </li>
+
+                <li>
                     <a href="#future">
                         The Future of Cybersecurity
                     </a>
@@ -495,15 +548,16 @@
         </aside>
 
 
-
         <!-- =================================================
              ARTICLE CONTENT
-        ================================================= -->
+        ================================================== -->
 
-        <article>
+        <div class="article-content">
 
 
-            <!-- INTRODUCTION -->
+            <!-- =================================================
+                 WHY CYBERSECURITY MATTERS
+            ================================================== -->
 
             <section id="importance">
 
@@ -548,8 +602,9 @@
             </section>
 
 
-
-            <!-- THREATS -->
+            <!-- =================================================
+                 COMMON THREATS
+            ================================================== -->
 
             <section id="threats">
 
@@ -569,11 +624,14 @@
                 <div class="security-list">
 
 
+                    <!-- MALWARE -->
+
                     <div class="security-item">
 
                         <span class="security-icon">
                             🦠
                         </span>
+
 
                         <div>
 
@@ -594,12 +652,14 @@
                     </div>
 
 
+                    <!-- PHISHING -->
 
                     <div class="security-item">
 
                         <span class="security-icon">
                             🎣
                         </span>
+
 
                         <div>
 
@@ -620,12 +680,14 @@
                     </div>
 
 
+                    <!-- PASSWORDS -->
 
                     <div class="security-item">
 
                         <span class="security-icon">
                             🔑
                         </span>
+
 
                         <div>
 
@@ -645,12 +707,14 @@
                     </div>
 
 
+                    <!-- APPLICATIONS -->
 
                     <div class="security-item">
 
                         <span class="security-icon">
                             📱
                         </span>
+
 
                         <div>
 
@@ -671,12 +735,14 @@
                     </div>
 
 
+                    <!-- NETWORKS -->
 
                     <div class="security-item">
 
                         <span class="security-icon">
                             🌐
                         </span>
+
 
                         <div>
 
@@ -701,8 +767,9 @@
             </section>
 
 
-
-            <!-- STAY SAFE -->
+            <!-- =================================================
+                 STAY SAFE
+            ================================================== -->
 
             <section id="stay-safe">
 
@@ -726,41 +793,42 @@
                         🛡️ Essential Security Tips
                     </h3>
 
+
                     <ul>
 
                         <li>
-                            ✅ Use strong and unique passwords.
+                            Use strong and unique passwords.
                         </li>
 
                         <li>
-                            ✅ Enable two-factor authentication
-                            whenever available.
+                            Enable two-factor authentication whenever
+                            available.
                         </li>
 
                         <li>
-                            ✅ Keep your phone, computer and applications
+                            Keep your phone, computer and applications
                             updated.
                         </li>
 
                         <li>
-                            ✅ Avoid clicking suspicious links.
+                            Avoid clicking suspicious links.
                         </li>
 
                         <li>
-                            ✅ Download applications from trusted sources.
+                            Download applications from trusted sources.
                         </li>
 
                         <li>
-                            ✅ Avoid sharing sensitive information
+                            Avoid sharing sensitive information
                             unnecessarily.
                         </li>
 
                         <li>
-                            ✅ Be careful when using public Wi-Fi.
+                            Be careful when using public Wi-Fi.
                         </li>
 
                         <li>
-                            ✅ Back up important files regularly.
+                            Back up important files regularly.
                         </li>
 
                     </ul>
@@ -770,8 +838,9 @@
             </section>
 
 
-
-            <!-- PASSWORDS -->
+            <!-- =================================================
+                 PASSWORD SECURITY
+            ================================================== -->
 
             <section id="passwords">
 
@@ -803,6 +872,7 @@
                         💡 TechHub Tip
                     </strong>
 
+
                     <p>
 
                         Consider using a reputable password manager
@@ -816,10 +886,11 @@
             </section>
 
 
+            <!-- =================================================
+                 TWO FACTOR AUTHENTICATION
+            ================================================== -->
 
-            <!-- TWO FACTOR -->
-
-            <section>
+            <section id="two-factor">
 
                 <h2>
                     Enable Two-Factor Authentication
@@ -850,6 +921,7 @@
                         ⚠️ Important
                     </strong>
 
+
                     <p>
 
                         Never share authentication codes with
@@ -862,8 +934,9 @@
             </section>
 
 
-
-            <!-- FUTURE -->
+            <!-- =================================================
+                 FUTURE
+            ================================================== -->
 
             <section id="future">
 
@@ -902,14 +975,16 @@
             </section>
 
 
-
-            <!-- FINAL MESSAGE -->
+            <!-- =================================================
+                 CONCLUSION
+            ================================================== -->
 
             <div class="article-conclusion">
 
                 <h2>
                     🔐 Stay Safe. Stay Smart.
                 </h2>
+
 
                 <p>
 
@@ -921,26 +996,27 @@
 
             </div>
 
-
-        </article>
-
+        </div>
 
 
         <!-- =================================================
              AUTHOR BOX
-        ================================================= -->
+        ================================================== -->
 
         <div class="author-box">
 
             <img
                 src="images/logo.png"
-                alt="TechHub Ghana">
+                alt="TechHub Ghana Logo"
+                loading="lazy">
+
 
             <div>
 
                 <h3>
                     TechHub Ghana
                 </h3>
+
 
                 <p>
 
@@ -955,10 +1031,9 @@
         </div>
 
 
-
         <!-- =================================================
              RELATED ARTICLES
-        ================================================= -->
+        ================================================== -->
 
         <section class="related-section">
 
@@ -970,13 +1045,17 @@
             <div class="related-grid">
 
 
-                <a href="ai-news.html"
-                   class="related-card">
+                <!-- AI -->
+
+                <a
+                    href="news.html"
+                    class="related-card">
 
                     <img
-                        src="images/tech1.jpg"
+                        src="images/ai-news.jpg"
                         alt="Artificial Intelligence"
                         loading="lazy">
+
 
                     <div>
 
@@ -984,13 +1063,17 @@
                             🤖 Artificial Intelligence
                         </span>
 
+
                         <h3>
-                            How AI Is Changing Education
+                            Artificial Intelligence and Technology
                         </h3>
 
+
                         <p>
-                            Discover how artificial intelligence
-                            is transforming the way students learn.
+
+                            Explore the latest developments in
+                            artificial intelligence and digital technology.
+
                         </p>
 
                     </div>
@@ -998,14 +1081,17 @@
                 </a>
 
 
+                <!-- PROGRAMMING -->
 
-                <a href="programming.html"
-                   class="related-card">
+                <a
+                    href="tutorials.html"
+                    class="related-card">
 
                     <img
-                        src="images/tech2.jpg"
+                        src="images/web-news.jpg"
                         alt="Web development"
                         loading="lazy">
+
 
                     <div>
 
@@ -1013,13 +1099,17 @@
                             💻 Programming
                         </span>
 
+
                         <h3>
-                            Learn HTML, CSS and JavaScript
+                            Learn Programming and Web Development
                         </h3>
 
+
                         <p>
-                            Start building modern websites with
-                            essential web technologies.
+
+                            Explore HTML, CSS, JavaScript, Python,
+                            Java and other programming tutorials.
+
                         </p>
 
                     </div>
@@ -1027,14 +1117,17 @@
                 </a>
 
 
+                <!-- CLOUD -->
 
-                <a href="cloud.html"
-                   class="related-card">
+                <a
+                    href="cloud.html"
+                    class="related-card">
 
                     <img
-                        src="images/hero.jpg"
+                        src="images/cloud-news.jpg"
                         alt="Cloud computing"
                         loading="lazy">
+
 
                     <div>
 
@@ -1042,13 +1135,17 @@
                             ☁️ Cloud Computing
                         </span>
 
+
                         <h3>
                             Understanding Cloud Technology
                         </h3>
 
+
                         <p>
-                            Learn the basics of modern cloud
-                            computing and digital services.
+
+                            Learn how cloud computing is changing
+                            modern businesses and digital services.
+
                         </p>
 
                     </div>
@@ -1060,13 +1157,15 @@
         </section>
 
 
-
-        <!-- BACK TO NEWS -->
+        <!-- =================================================
+             BACK TO NEWS
+        ================================================== -->
 
         <div class="article-back">
 
-            <a href="news.html"
-               class="read-btn">
+            <a
+                href="news.html"
+                class="read-btn">
 
                 ← Back To Technology News
 
@@ -1074,21 +1173,60 @@
 
         </div>
 
+    </article>
 
-    </main>
+</main>
 
-</div>
 
+<!-- =====================================================
+     NEWSLETTER
+====================================================== -->
+
+<section class="newsletter">
+
+    <h2>
+        📩 Stay Updated
+    </h2>
+
+
+    <p>
+
+        Get the latest technology news, tutorials,
+        cybersecurity tips and digital tools.
+
+    </p>
+
+
+    <form>
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            aria-label="Email address"
+            required>
+
+
+        <button type="submit">
+
+            Subscribe
+
+        </button>
+
+    </form>
+
+</section>
 
 
 <!-- =====================================================
      FOOTER
-===================================================== -->
+====================================================== -->
 
 <footer>
 
     <div class="footer-grid">
 
+
+        <!-- ABOUT -->
 
         <div>
 
@@ -1096,9 +1234,11 @@
                 TechHub Ghana
             </h3>
 
+
             <p>
                 Technology • Learning • Innovation
             </p>
+
 
             <p>
 
@@ -1110,6 +1250,7 @@
         </div>
 
 
+        <!-- QUICK LINKS -->
 
         <div>
 
@@ -1117,11 +1258,13 @@
                 Quick Links
             </h3>
 
+
             <p>
                 <a href="index.html">
                     Home
                 </a>
             </p>
+
 
             <p>
                 <a href="news.html">
@@ -1129,11 +1272,13 @@
                 </a>
             </p>
 
+
             <p>
                 <a href="tutorials.html">
                     Tutorials
                 </a>
             </p>
+
 
             <p>
                 <a href="tools.html">
@@ -1141,9 +1286,24 @@
                 </a>
             </p>
 
+
+            <p>
+                <a href="about.html">
+                    About
+                </a>
+            </p>
+
+
+            <p>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </p>
+
         </div>
 
 
+        <!-- POPULAR -->
 
         <div>
 
@@ -1151,11 +1311,13 @@
                 Popular
             </h3>
 
+
             <p>
                 <a href="ai-assistant.html">
                     🤖 AI Assistant
                 </a>
             </p>
+
 
             <p>
                 <a href="gpa.html">
@@ -1163,21 +1325,24 @@
                 </a>
             </p>
 
+
             <p>
                 <a href="qr-generator.html">
                     📱 QR Generator
                 </a>
             </p>
 
+
             <p>
                 <a href="tutorials.html">
-                    💻 Programming
+                    💻 Programming Tutorials
                 </a>
             </p>
 
         </div>
 
 
+        <!-- CONTACT -->
 
         <div>
 
@@ -1185,9 +1350,11 @@
                 Contact
             </h3>
 
+
             <p>
                 🇬🇭 Ghana
             </p>
+
 
             <p>
                 <a href="contact.html">
@@ -1213,126 +1380,172 @@
 </footer>
 
 
-
 <!-- =====================================================
      SCROLL TO TOP
-===================================================== -->
+====================================================== -->
 
 <button
     id="topBtn"
-    onclick="window.scrollTo({top:0,behavior:'smooth'})"
-    aria-label="Scroll to top">
+    type="button"
+    aria-label="Scroll to top"
+    onclick="window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })">
 
     ↑
 
 </button>
 
 
+<!-- =====================================================
+     MAIN JAVASCRIPT
+====================================================== -->
+
+<script src="script.js"></script>
+
 
 <!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
+     PAGE-SPECIFIC JAVASCRIPT
+====================================================== -->
 
 <script>
 
-    /* ===============================
-       MOBILE MENU
-    =============================== */
-
-    function toggleMenu(){
-
-        const nav =
-            document.getElementById("navMenu");
-
-        const button =
-            document.querySelector(".menu-btn");
-
-        nav.classList.toggle("show");
-
-        const isOpen =
-            nav.classList.contains("show");
-
-        button.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
-
-    }
-
-
-
-    /* ===============================
-       COPY ARTICLE LINK
-    =============================== */
-
-    function copyArticleLink(){
-
-        navigator.clipboard.writeText(
-            window.location.href
-        ).then(function(){
-
-            alert(
-                "Article link copied!"
-            );
-
-        }).catch(function(){
-
-            alert(
-                "Unable to copy the link."
-            );
-
-        });
-
-    }
-
-
-
-    /* ===============================
+    /* =====================================================
        TODAY'S DATE
-    =============================== */
+    ====================================================== */
 
-    const today =
+    const todayElement =
         document.getElementById("today");
 
-    if(today){
 
-        const date =
-            new Date();
+    if (todayElement) {
 
-        today.textContent =
-            date.toLocaleDateString(
+        const currentDate = new Date();
+
+
+        todayElement.textContent =
+            currentDate.toLocaleDateString(
                 "en-GH",
                 {
-                    weekday:"long",
-                    year:"numeric",
-                    month:"long",
-                    day:"numeric"
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
                 }
             );
 
     }
 
 
+    /* =====================================================
+       COPY ARTICLE LINK
+    ====================================================== */
 
-    /* ===============================
-       SCROLL TO TOP
-    =============================== */
+    function copyArticleLink() {
 
-    const topBtn =
+        const url =
+            window.location.href;
+
+
+        if (
+            navigator.clipboard &&
+            window.isSecureContext
+        ) {
+
+            navigator.clipboard
+                .writeText(url)
+                .then(function () {
+
+                    alert(
+                        "Article link copied!"
+                    );
+
+                })
+                .catch(function () {
+
+                    alert(
+                        "Unable to copy the link."
+                    );
+
+                });
+
+        } else {
+
+            const textArea =
+                document.createElement("textarea");
+
+
+            textArea.value = url;
+
+            textArea.style.position =
+                "fixed";
+
+            textArea.style.opacity =
+                "0";
+
+
+            document.body.appendChild(
+                textArea
+            );
+
+
+            textArea.focus();
+
+            textArea.select();
+
+
+            try {
+
+                document.execCommand("copy");
+
+                alert(
+                    "Article link copied!"
+                );
+
+            } catch (error) {
+
+                alert(
+                    "Unable to copy the link."
+                );
+
+            }
+
+
+            document.body.removeChild(
+                textArea
+            );
+
+        }
+
+    }
+
+
+    /* =====================================================
+       SCROLL TO TOP BUTTON
+    ====================================================== */
+
+    const topButton =
         document.getElementById("topBtn");
+
 
     window.addEventListener(
         "scroll",
-        function(){
+        function () {
 
-            if(window.scrollY > 400){
+            if (!topButton) {
+                return;
+            }
 
-                topBtn.style.display =
+
+            if (window.scrollY > 400) {
+
+                topButton.style.display =
                     "flex";
 
-            }else{
+            } else {
 
-                topBtn.style.display =
+                topButton.style.display =
                     "none";
 
             }
@@ -1345,4 +1558,4 @@
 
 </body>
 
-          </html>
+            </html>
