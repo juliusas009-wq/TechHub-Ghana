@@ -1,10 +1,10 @@
 /* =========================================================
    TECHHUB GHANA
-   COMPLETE CLEAN MAIN STYLESHEET
+   FINAL CLEAN MASTER STYLESHEET
 ========================================================= */
 
 /* =========================================================
-   RESET
+   1. RESET & BASE
 ========================================================= */
 
 * {
@@ -20,9 +20,10 @@ html {
 body {
     font-family: "Poppins", Arial, sans-serif;
     background: #f4f7fb;
-    color: #222;
+    color: #1f2937;
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -39,21 +40,35 @@ button,
 input,
 textarea,
 select {
-    font-family: inherit;
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul,
+ol {
+    margin: 0;
+}
+
+::selection {
+    background: #0056d2;
+    color: #fff;
 }
 
 
 /* =========================================================
-   HEADER
+   2. HEADER
 ========================================================= */
 
 header {
     width: 100%;
-    background: #fff;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
     position: sticky;
     top: 0;
     z-index: 999;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .top-bar {
@@ -63,26 +78,26 @@ header {
     padding: 15px 0;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 25px;
 }
 
 
 /* =========================================================
-   LOGO
+   3. LOGO
 ========================================================= */
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 14px;
     min-width: 0;
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
     object-fit: contain;
     border-radius: 10px;
 }
@@ -90,18 +105,19 @@ header {
 .logo h1 {
     color: #0056d2;
     font-size: 30px;
-    line-height: 1.2;
+    line-height: 1.15;
+    font-weight: 800;
 }
 
 .logo p {
-    color: #666;
-    font-size: 13px;
     margin-top: 4px;
+    color: #64748b;
+    font-size: 13px;
 }
 
 
 /* =========================================================
-   SEARCH
+   4. SEARCH
 ========================================================= */
 
 .search-box {
@@ -112,16 +128,20 @@ header {
 
 .search-box input {
     width: 100%;
+    min-width: 0;
+
     padding: 12px 15px;
 
-    border: 1px solid #ddd;
-    border-right: none;
-
-    border-radius: 7px 0 0 7px;
+    border: 1px solid #d9dee7;
+    border-right: 0;
+    border-radius: 8px 0 0 8px;
 
     outline: none;
-    background: #fff;
-    color: #222;
+
+    background: #ffffff;
+    color: #1f2937;
+
+    transition: 0.25s;
 }
 
 .search-box input:focus {
@@ -132,14 +152,13 @@ header {
     width: 58px;
     min-width: 58px;
 
-    border: none;
-    border-radius: 0 7px 7px 0;
+    border: 0;
+    border-radius: 0 8px 8px 0;
 
     background: #0056d2;
-    color: #fff;
+    color: #ffffff;
 
-    cursor: pointer;
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 .search-box button:hover {
@@ -148,10 +167,12 @@ header {
 
 
 /* =========================================================
-   NAVIGATION
+   5. NAVIGATION
 ========================================================= */
 
 nav {
+    width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,13 +182,14 @@ nav {
 }
 
 nav a {
-    color: white;
-    padding: 15px 22px;
+    color: #ffffff;
 
-    font-size: 15px;
+    padding: 14px 20px;
+
+    font-size: 14px;
     font-weight: 600;
 
-    transition: 0.3s;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 nav a:hover,
@@ -177,49 +199,52 @@ nav a.active {
 
 
 /* =========================================================
-   MOBILE MENU
+   6. MOBILE MENU BUTTON
 ========================================================= */
 
 .menu-btn {
     display: none;
 
-    width: 45px;
-    height: 45px;
+    width: 44px;
+    height: 44px;
 
     margin: 10px auto;
 
-    border: none;
+    border: 0;
     border-radius: 8px;
 
     background: #0056d2;
-    color: white;
+    color: #ffffff;
 
-    font-size: 24px;
-    cursor: pointer;
+    font-size: 23px;
 }
 
 
 /* =========================================================
-   BREAKING NEWS
+   7. BREAKING NEWS
 ========================================================= */
 
 .breaking-news {
+    width: 100%;
+
+    padding: 9px 0;
+
     background: #ffcc00;
-    color: #111;
+    color: #111111;
 
-    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
 
-    font-weight: 600;
     overflow: hidden;
 }
 
 .breaking-news marquee {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
 /* =========================================================
-   DATE
+   8. DATE
 ========================================================= */
 
 .today-date {
@@ -228,14 +253,15 @@ nav a.active {
 
     margin: 10px auto 5px;
 
-    color: #444;
+    color: #64748b;
+
     font-size: 13px;
     font-weight: 600;
 }
 
 
 /* =========================================================
-   HERO
+   9. GENERAL HERO
 ========================================================= */
 
 .hero {
@@ -251,31 +277,38 @@ nav a.active {
     align-items: center;
 }
 
+.hero-text {
+    min-width: 0;
+}
+
 .hero-text h2 {
+    margin-bottom: 20px;
+
     color: #0056d2;
 
-    font-size: clamp(35px, 5vw, 52px);
+    font-size: clamp(34px, 5vw, 52px);
     line-height: 1.15;
-
-    margin-bottom: 20px;
 }
 
 .hero-text p {
-    color: #555;
-    font-size: 17px;
+    max-width: 700px;
+
     margin-bottom: 28px;
+
+    color: #64748b;
+    font-size: 17px;
 }
 
 .tag {
     display: inline-block;
 
-    background: #ff4d4d;
-    color: white;
-
-    padding: 7px 17px;
     margin-bottom: 18px;
+    padding: 7px 17px;
 
     border-radius: 30px;
+
+    background: #ef4444;
+    color: #ffffff;
 
     font-size: 12px;
     font-weight: 700;
@@ -283,41 +316,49 @@ nav a.active {
 
 
 /* =========================================================
-   HERO BUTTONS
+   10. HERO BUTTONS
 ========================================================= */
 
-.hero-buttons {
+.hero-buttons,
+.ghana-hero-buttons {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
-.hero-buttons a {
-    padding: 13px 25px;
-    border-radius: 7px;
-    font-weight: 600;
+.hero-buttons a,
+.ghana-hero-buttons a {
+    display: inline-block;
 
-    transition: 0.3s;
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    transition: 0.25s;
 }
 
 .hero-buttons a:first-child {
     background: #0056d2;
-    color: white;
+    color: #ffffff;
 }
 
 .hero-buttons a:last-child {
-    background: white;
+    background: #ffffff;
     color: #0056d2;
     border: 2px solid #0056d2;
 }
 
-.hero-buttons a:hover {
+.hero-buttons a:hover,
+.ghana-hero-buttons a:hover {
     transform: translateY(-3px);
 }
 
 
 /* =========================================================
-   HERO IMAGE
+   11. HERO IMAGE
 ========================================================= */
 
 .hero-image img {
@@ -333,7 +374,7 @@ nav a.active {
 
 
 /* =========================================================
-   GENERAL SECTION
+   12. GENERAL SECTION
 ========================================================= */
 
 .section {
@@ -344,87 +385,96 @@ nav a.active {
 }
 
 .section > h2 {
-    color: #0056d2;
-
-    font-size: 32px;
-
     margin-bottom: 30px;
-
     padding-left: 15px;
 
     border-left: 6px solid #0056d2;
+
+    color: #0056d2;
+    font-size: 32px;
 }
 
 
 /* =========================================================
-   CARD GRID
+   13. CARD GRID
 ========================================================= */
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
     gap: 25px;
 }
 
 
 /* =========================================================
-   TOOL CARDS
+   14. TOOL CARDS
 ========================================================= */
 
 .tool-card {
-    background: white;
-
     padding: 30px 25px;
+
+    background: #ffffff;
 
     border-radius: 13px;
 
     text-align: center;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
 
     transition: 0.3s;
 }
 
 .tool-card:hover {
     transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.11);
 }
 
 .tool-card .icon {
-    font-size: 50px;
     margin-bottom: 15px;
+    font-size: 48px;
 }
 
 .tool-card h3 {
-    color: #0056d2;
     margin-bottom: 10px;
+    color: #0056d2;
 }
 
 .tool-card p {
-    color: #666;
-    font-size: 14px;
     margin-bottom: 20px;
+    color: #64748b;
+    font-size: 14px;
 }
 
 .tool-card a {
     display: inline-block;
 
-    background: #0056d2;
-    color: white;
-
     padding: 10px 20px;
 
-    border-radius: 6px;
+    border-radius: 7px;
+
+    background: #0056d2;
+    color: #ffffff;
 
     font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.tool-card a:hover {
+    background: #003d99;
 }
 
 
 /* =========================================================
-   NEWS LAYOUT
+   15. NEWS LAYOUT
 ========================================================= */
 
 .news-layout {
     display: grid;
+
     grid-template-columns: 2fr 1fr;
 
     gap: 30px;
@@ -436,21 +486,22 @@ nav a.active {
 
 
 /* =========================================================
-   NEWS CARD
+   16. NEWS CARD
 ========================================================= */
 
 .news-card {
     display: flex;
+
     gap: 20px;
 
-    background: white;
-
-    padding: 18px;
     margin-bottom: 20px;
+    padding: 18px;
+
+    background: #ffffff;
 
     border-radius: 11px;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 
     transition: 0.3s;
 }
@@ -463,44 +514,48 @@ nav a.active {
     width: 220px;
     height: 145px;
 
+    flex-shrink: 0;
+
     object-fit: cover;
 
     border-radius: 9px;
-    flex-shrink: 0;
 }
 
 .news-card h3 {
-    color: #0056d2;
-    font-size: 20px;
     margin-bottom: 9px;
+
+    color: #0056d2;
+
+    font-size: 20px;
+    line-height: 1.35;
 }
 
 .news-card p {
-    color: #555;
+    color: #64748b;
     font-size: 14px;
 }
 
 
 /* =========================================================
-   SIDEBAR
+   17. SIDEBAR
 ========================================================= */
 
 aside {
-    background: white;
+    position: sticky;
+    top: 125px;
 
     padding: 25px;
 
+    background: #ffffff;
+
     border-radius: 11px;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-
-    position: sticky;
-    top: 130px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
 aside h3 {
-    color: #0056d2;
     margin-bottom: 15px;
+    color: #0056d2;
 }
 
 aside ul {
@@ -510,16 +565,20 @@ aside ul {
 aside li {
     padding: 13px 0;
 
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #e5e7eb;
 
-    color: #444;
+    color: #475569;
 
-    cursor: pointer;
+    transition: 0.2s;
+}
+
+aside li:hover {
+    color: #0056d2;
 }
 
 
 /* =========================================================
-   TUTORIALS
+   18. TUTORIALS
 ========================================================= */
 
 .tutorial-grid {
@@ -532,12 +591,13 @@ aside li {
 }
 
 .tutorial {
-    background: white;
-
-    border-radius: 11px;
     overflow: hidden;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+
+    border-radius: 11px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
 
     transition: 0.3s;
 }
@@ -555,12 +615,13 @@ aside li {
 
 .tutorial h3 {
     padding: 18px;
+
     color: #0056d2;
 }
 
 
 /* =========================================================
-   NEWSLETTER
+   19. NEWSLETTER
 ========================================================= */
 
 .newsletter {
@@ -568,20 +629,19 @@ aside li {
     max-width: 1400px;
 
     margin: 70px auto;
-
     padding: 55px 25px;
 
     text-align: center;
 
     background: #0056d2;
-    color: white;
+    color: #ffffff;
 
     border-radius: 16px;
 }
 
 .newsletter h2 {
-    font-size: 34px;
     margin-bottom: 12px;
+    font-size: 34px;
 }
 
 .newsletter p {
@@ -591,6 +651,7 @@ aside li {
 .newsletter form {
     display: flex;
     justify-content: center;
+
     gap: 12px;
     flex-wrap: wrap;
 }
@@ -601,43 +662,41 @@ aside li {
 
     padding: 14px 16px;
 
-    border: none;
+    border: 0;
     border-radius: 7px;
 
     outline: none;
 }
 
 .newsletter button {
-    background: #ffcc00;
-    color: #222;
-
-    border: none;
-
     padding: 14px 25px;
 
+    border: 0;
     border-radius: 7px;
 
-    font-weight: 700;
+    background: #ffcc00;
+    color: #111111;
 
-    cursor: pointer;
+    font-weight: 700;
 }
 
 
 /* =========================================================
-   FOOTER
+   20. FOOTER
 ========================================================= */
 
 footer {
-    background: #0f172a;
-    color: white;
-
     margin-top: 70px;
-
     padding: 60px 5% 25px;
+
+    background: #0f172a;
+    color: #ffffff;
 }
 
 .footer-grid {
+    width: 100%;
     max-width: 1400px;
+
     margin: auto;
 
     display: grid;
@@ -649,18 +708,23 @@ footer {
 }
 
 .footer-grid h3 {
-    color: #38bdf8;
     margin-bottom: 15px;
+    color: #38bdf8;
 }
 
 .footer-grid p {
+    margin-bottom: 9px;
     color: #cbd5e1;
     font-size: 14px;
-    margin-bottom: 9px;
 }
 
 .footer-grid a {
     color: #cbd5e1;
+    transition: 0.2s;
+}
+
+.footer-grid a:hover {
+    color: #ffffff;
 }
 
 footer hr {
@@ -668,20 +732,21 @@ footer hr {
 
     margin: 35px auto 20px;
 
-    border: none;
-
-    border-top: 1px solid rgba(255,255,255,0.15);
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .copyright {
     text-align: center;
+
     color: #94a3b8;
+
     font-size: 13px;
 }
 
 
 /* =========================================================
-   ARTICLE PAGE
+   21. ARTICLE PAGE
 ========================================================= */
 
 .article-page {
@@ -689,34 +754,32 @@ footer hr {
     max-width: 1000px;
 
     margin: 50px auto;
-
-    background: white;
-
     padding: 35px;
+
+    background: #ffffff;
 
     border-radius: 14px;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
 }
 
 .article-page h1 {
+    margin: 25px 0 15px;
+
     color: #0056d2;
 
     font-size: 38px;
-
     line-height: 1.25;
-
-    margin: 25px 0 15px;
 }
 
 .article-page h2 {
-    color: #0056d2;
     margin: 30px 0 15px;
+    color: #0056d2;
 }
 
 .article-page p {
-    color: #444;
     margin-bottom: 18px;
+    color: #475569;
 }
 
 .article-page ul {
@@ -742,9 +805,9 @@ footer hr {
     gap: 20px;
     flex-wrap: wrap;
 
-    color: #777;
-
     margin-bottom: 25px;
+
+    color: #64748b;
 
     font-size: 14px;
 }
@@ -753,41 +816,48 @@ footer hr {
     display: inline-block;
 
     margin-top: 15px;
-
     padding: 11px 20px;
-
-    background: #0056d2;
-    color: white;
 
     border-radius: 7px;
 
+    background: #0056d2;
+    color: #ffffff;
+
     font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.read-btn:hover {
+    background: #003d99;
+    transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   FEATURED NEWS
+   22. FEATURED NEWS
 ========================================================= */
 
 .featured-news {
     display: flex;
-    gap: 30px;
 
-    background: white;
+    gap: 30px;
 
     padding: 25px;
 
+    background: #ffffff;
+
     border-radius: 15px;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .featured-news img {
     width: 50%;
 
-    border-radius: 12px;
-
     object-fit: cover;
+
+    border-radius: 12px;
 }
 
 .featured-content {
@@ -795,13 +865,13 @@ footer hr {
 }
 
 .featured-content h1 {
-    font-size: 32px;
     margin: 10px 0;
+    font-size: 32px;
 }
 
 
 /* =========================================================
-   TRENDING
+   23. TRENDING
 ========================================================= */
 
 .trending-section {
@@ -812,18 +882,18 @@ footer hr {
 }
 
 .trending-box {
-    background: white;
-
     padding: 30px;
+
+    background: #ffffff;
 
     border-radius: 16px;
 
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
 }
 
 .trending-box h2 {
-    color: #0056d2;
     margin-bottom: 20px;
+    color: #0056d2;
 }
 
 .trending-list {
@@ -834,6 +904,7 @@ footer hr {
 .trending-item {
     display: flex;
     align-items: center;
+
     gap: 14px;
 
     padding: 18px 5px;
@@ -842,31 +913,33 @@ footer hr {
 
     font-size: 18px;
 
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 .trending-item:hover {
-    color: #0056d2;
     padding-left: 12px;
+    color: #0056d2;
 }
 
 
 /* =========================================================
-   GHANA TECH NEWS PAGE
+   24. GHANA TECH PAGE
 ========================================================= */
-
-/* Page hero */
 
 .ghana-tech-page {
     width: 100%;
 }
+
+
+/* =========================================================
+   25. GHANA TECH HERO
+========================================================= */
 
 .ghana-tech-hero {
     width: 90%;
     max-width: 1400px;
 
     margin: 40px auto;
-
     padding: 55px;
 
     display: grid;
@@ -877,20 +950,19 @@ footer hr {
 
     align-items: center;
 
-    background:
-        linear-gradient(
-            135deg,
-            #0056d2,
-            #003d99
-        );
+    background: linear-gradient(
+        135deg,
+        #0056d2,
+        #003d99
+    );
 
-    color: white;
+    color: #ffffff;
 
     border-radius: 22px;
 
     overflow: hidden;
 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 .ghana-tech-hero-content {
@@ -900,30 +972,30 @@ footer hr {
 .ghana-badge {
     display: inline-block;
 
-    background: #ffcc00;
-    color: #111;
-
     padding: 8px 18px;
 
     border-radius: 30px;
+
+    background: #ffcc00;
+    color: #111111;
 
     font-size: 13px;
     font-weight: 800;
 }
 
 .ghana-tech-hero h1 {
+    margin: 18px 0;
+
     font-size: 48px;
     line-height: 1.15;
-
-    margin: 18px 0;
 }
 
 .ghana-tech-hero p {
+    max-width: 680px;
+
     color: #e5efff;
 
     font-size: 17px;
-
-    max-width: 680px;
 }
 
 .ghana-tech-hero-image img {
@@ -934,53 +1006,31 @@ footer hr {
 
     border-radius: 16px;
 
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 
 /* =========================================================
-   GHANA HERO BUTTONS
+   26. GHANA HERO BUTTONS
 ========================================================= */
 
 .ghana-hero-buttons {
-    display: flex;
-
-    gap: 12px;
-
-    flex-wrap: wrap;
-
     margin-top: 30px;
-}
-
-.ghana-hero-buttons a {
-    display: inline-block;
-
-    padding: 13px 22px;
-
-    border-radius: 8px;
-
-    font-weight: 700;
-
-    transition: 0.3s;
 }
 
 .ghana-primary-btn {
     background: #ffcc00;
-    color: #111;
+    color: #111111;
 }
 
 .ghana-secondary-btn {
-    border: 2px solid white;
-    color: white;
-}
-
-.ghana-hero-buttons a:hover {
-    transform: translateY(-3px);
+    border: 2px solid #ffffff;
+    color: #ffffff;
 }
 
 
 /* =========================================================
-   GHANA STATS
+   27. GHANA STATS
 ========================================================= */
 
 .ghana-stats {
@@ -998,22 +1048,22 @@ footer hr {
 }
 
 .ghana-stat {
-    background: white;
-
     padding: 25px;
 
     text-align: center;
 
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    background: #ffffff;
 
     border: 1px solid #edf0f5;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
 .ghana-stat-icon {
-    font-size: 34px;
     margin-bottom: 8px;
+    font-size: 34px;
 }
 
 .ghana-stat strong {
@@ -1025,13 +1075,13 @@ footer hr {
 }
 
 .ghana-stat p {
-    color: #666;
+    color: #64748b;
     font-size: 13px;
 }
 
 
 /* =========================================================
-   GHANA NEWS CONTROLS
+   28. GHANA NEWS CONTROLS
 ========================================================= */
 
 .ghana-news-controls {
@@ -1042,11 +1092,11 @@ footer hr {
 }
 
 .ghana-news-controls h2 {
+    margin-bottom: 20px;
+
     color: #0056d2;
 
     font-size: 32px;
-
-    margin-bottom: 20px;
 }
 
 .ghana-search {
@@ -1059,75 +1109,72 @@ footer hr {
 
 .ghana-search input {
     width: 100%;
+    min-width: 0;
 
     padding: 14px 17px;
 
-    border: 1px solid #ddd;
-
-    border-right: none;
+    border: 1px solid #d9dee7;
+    border-right: 0;
 
     border-radius: 8px 0 0 8px;
 
     outline: none;
 
-    background: white;
+    background: #ffffff;
+    color: #1f2937;
+}
+
+.ghana-search input:focus {
+    border-color: #0056d2;
 }
 
 .ghana-search button {
     width: 60px;
+    min-width: 60px;
 
-    border: none;
-
+    border: 0;
     border-radius: 0 8px 8px 0;
 
     background: #0056d2;
-
-    color: white;
-
-    cursor: pointer;
+    color: #ffffff;
 }
 
 .ghana-category-buttons {
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 10px;
 }
 
 .ghana-filter {
-    border: none;
-
-    background: white;
-    color: #333;
-
     padding: 10px 17px;
 
+    border: 0;
     border-radius: 30px;
 
-    cursor: pointer;
+    background: #ffffff;
+    color: #334155;
 
     font-weight: 600;
 
-    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
 
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 .ghana-filter:hover {
     color: #0056d2;
-
     transform: translateY(-2px);
 }
 
 .ghana-filter.active {
     background: #0056d2;
-    color: white;
+    color: #ffffff;
 }
 
 
 /* =========================================================
-   SEARCH RESULT MESSAGE
+   29. GHANA SEARCH MESSAGE
 ========================================================= */
 
 .ghana-search-message {
@@ -1143,7 +1190,7 @@ footer hr {
 
 
 /* =========================================================
-   FEATURED GHANA STORY
+   30. GHANA FEATURED STORY
 ========================================================= */
 
 .ghana-featured {
@@ -1156,19 +1203,18 @@ footer hr {
 
     grid-template-columns: 1fr 1fr;
 
-    background: white;
+    overflow: hidden;
+
+    background: #ffffff;
 
     border-radius: 18px;
 
-    overflow: hidden;
-
-    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 .ghana-featured-image img {
     width: 100%;
     height: 100%;
-
     min-height: 360px;
 
     object-fit: cover;
@@ -1182,29 +1228,26 @@ footer hr {
     color: #0056d2;
 
     font-size: 13px;
-
     font-weight: 800;
 }
 
 .ghana-featured-content h2 {
+    margin: 14px 0;
+
     color: #0056d2;
 
     font-size: 32px;
-
     line-height: 1.25;
-
-    margin: 14px 0;
 }
 
 .ghana-featured-content p {
-    color: #555;
-
     margin-bottom: 20px;
+    color: #64748b;
 }
 
 
 /* =========================================================
-   GHANA NEWS GRID
+   31. GHANA NEWS SECTION
 ========================================================= */
 
 .ghana-news-section {
@@ -1220,14 +1263,12 @@ footer hr {
 
 .ghana-news-section-heading h2 {
     color: #0056d2;
-
     font-size: 32px;
 }
 
 .ghana-news-section-heading p {
-    color: #666;
-
     margin-top: 5px;
+    color: #64748b;
 }
 
 .ghana-news-grid {
@@ -1239,14 +1280,19 @@ footer hr {
     gap: 25px;
 }
 
+
+/* =========================================================
+   32. GHANA NEWS CARD
+========================================================= */
+
 .ghana-news-card {
-    background: white;
+    overflow: hidden;
+
+    background: #ffffff;
 
     border-radius: 15px;
 
-    overflow: hidden;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
 
     transition: 0.3s;
 }
@@ -1254,7 +1300,7 @@ footer hr {
 .ghana-news-card:hover {
     transform: translateY(-7px);
 
-    box-shadow: 0 14px 30px rgba(0,0,0,0.13);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
 .ghana-news-card img {
@@ -1271,62 +1317,58 @@ footer hr {
 .ghana-category {
     display: inline-block;
 
-    background: #eaf2ff;
-    color: #0056d2;
-
     padding: 5px 10px;
 
     border-radius: 20px;
 
-    font-size: 11px;
+    background: #eaf2ff;
+    color: #0056d2;
 
+    font-size: 11px;
     font-weight: 800;
 }
 
 .ghana-news-content h3 {
+    margin: 12px 0;
+
     color: #0056d2;
 
     font-size: 19px;
-
     line-height: 1.35;
-
-    margin: 12px 0;
 }
 
 .ghana-news-content p {
-    color: #555;
-
+    color: #64748b;
     font-size: 14px;
 }
 
 .ghana-card-footer {
     display: flex;
-
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     gap: 10px;
 
     margin-top: 20px;
     padding-top: 15px;
 
-    border-top: 1px solid #eee;
+    border-top: 1px solid #e5e7eb;
 }
 
 .ghana-card-footer span {
-    color: #888;
+    color: #94a3b8;
     font-size: 12px;
 }
 
 .ghana-card-footer a {
     color: #0056d2;
-    font-weight: 700;
     font-size: 13px;
+    font-weight: 700;
 }
 
 
 /* =========================================================
-   NO RESULTS
+   33. GHANA NO RESULTS
 ========================================================= */
 
 .no-ghana-news {
@@ -1336,13 +1378,13 @@ footer hr {
 
     padding: 50px 20px;
 
-    background: white;
+    background: #ffffff;
 
     border-radius: 14px;
 
     text-align: center;
 
-    color: #777;
+    color: #64748b;
 }
 
 .no-ghana-news.show {
@@ -1351,7 +1393,7 @@ footer hr {
 
 
 /* =========================================================
-   GHANA TRENDING
+   34. GHANA TRENDING
 ========================================================= */
 
 .ghana-trending {
@@ -1362,19 +1404,18 @@ footer hr {
 }
 
 .ghana-trending-box {
-    background: white;
-
     padding: 35px;
+
+    background: #ffffff;
 
     border-radius: 16px;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
 }
 
 .ghana-trending-box h2 {
-    color: #0056d2;
-
     margin-bottom: 25px;
+    color: #0056d2;
 }
 
 .ghana-trending-grid {
@@ -1388,7 +1429,6 @@ footer hr {
 
 .ghana-trending-grid a {
     display: flex;
-
     align-items: center;
 
     gap: 12px;
@@ -1401,19 +1441,19 @@ footer hr {
 
     font-weight: 600;
 
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
 .ghana-trending-grid a:hover {
     background: #0056d2;
-    color: white;
+    color: #ffffff;
 
     transform: translateY(-3px);
 }
 
 
 /* =========================================================
-   GHANA TOPICS
+   35. GHANA TOPICS
 ========================================================= */
 
 .ghana-topics {
@@ -1424,9 +1464,8 @@ footer hr {
 }
 
 .ghana-topics h2 {
-    color: #0056d2;
-
     margin-bottom: 25px;
+    color: #0056d2;
 }
 
 .ghana-topic-grid {
@@ -1439,13 +1478,13 @@ footer hr {
 }
 
 .ghana-topic-card {
-    background: white;
-
     padding: 25px;
+
+    background: #ffffff;
 
     border-radius: 14px;
 
-    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
 
     transition: 0.3s;
 }
@@ -1459,20 +1498,18 @@ footer hr {
 }
 
 .ghana-topic-card h3 {
-    color: #0056d2;
-
     margin: 10px 0;
+    color: #0056d2;
 }
 
 .ghana-topic-card p {
-    color: #666;
-
+    color: #64748b;
     font-size: 13px;
 }
 
 
 /* =========================================================
-   GHANA NEWSLETTER
+   36. GHANA NEWSLETTER
 ========================================================= */
 
 .ghana-newsletter {
@@ -1485,33 +1522,30 @@ footer hr {
 
     text-align: center;
 
-    background:
-        linear-gradient(
-            135deg,
-            #0056d2,
-            #003d99
-        );
+    background: linear-gradient(
+        135deg,
+        #0056d2,
+        #003d99
+    );
 
-    color: white;
+    color: #ffffff;
 
     border-radius: 20px;
 }
 
 .ghana-newsletter h2 {
-    font-size: 32px;
-
     margin-bottom: 10px;
+    font-size: 32px;
 }
 
 .ghana-newsletter p {
-    color: #e5efff;
-
     margin-bottom: 25px;
+    color: #e5efff;
 }
 
 
 /* =========================================================
-   GHANA SOURCE NOTE
+   37. GHANA SOURCE NOTE
 ========================================================= */
 
 .ghana-source-note {
@@ -1519,31 +1553,27 @@ footer hr {
     max-width: 1100px;
 
     margin: 50px auto;
-
     padding: 25px;
 
-    background: #eef4ff;
-
     border-left: 5px solid #0056d2;
-
     border-radius: 10px;
+
+    background: #eef4ff;
 }
 
 .ghana-source-note h3 {
-    color: #0056d2;
-
     margin-bottom: 8px;
+    color: #0056d2;
 }
 
 .ghana-source-note p {
-    color: #555;
-
+    color: #475569;
     font-size: 13px;
 }
 
 
 /* =========================================================
-   AI ASSISTANT
+   38. AI ASSISTANT
 ========================================================= */
 
 .ai-section {
@@ -1551,18 +1581,18 @@ footer hr {
 }
 
 .ai-container {
-    background: white;
-
     padding: 30px;
+
+    background: #ffffff;
 
     border-radius: 15px;
 
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.07);
 }
 
 .ai-header {
-    text-align: center;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .ai-header h2 {
@@ -1571,43 +1601,51 @@ footer hr {
 
 .ai-input-box textarea {
     width: 100%;
-
     min-height: 220px;
 
     padding: 16px;
 
-    border: 1px solid #ddd;
-
+    border: 1px solid #d9dee7;
     border-radius: 10px;
 
-    resize: vertical;
-
     outline: none;
+
+    resize: vertical;
+}
+
+.ai-input-box textarea:focus {
+    border-color: #0056d2;
 }
 
 .ai-actions {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+
     margin: 20px 0;
 }
 
 .ai-btn {
-    border: none;
-
-    background: #0056d2;
-    color: white;
-
     padding: 12px 18px;
 
+    border: 0;
     border-radius: 7px;
 
-    cursor: pointer;
+    background: #0056d2;
+    color: #ffffff;
 
     font-weight: 600;
+
+    transition: 0.25s;
+}
+
+.ai-btn:hover {
+    background: #003d99;
 }
 
 .ai-result-box {
+    overflow: hidden;
+
     background: #f8fafc;
 
     border: 1px solid #e2e8f0;
@@ -1617,9 +1655,8 @@ footer hr {
 
 .result-header {
     display: flex;
-
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     padding: 15px 18px;
 
@@ -1642,38 +1679,47 @@ footer hr {
 
 
 /* =========================================================
-   DARK MODE
+   39. DARK MODE
 ========================================================= */
 
 body.dark {
-    background: #111827;
+    background: #0f172a;
     color: #f3f4f6;
 }
 
 body.dark header {
-    background: #1f2937;
+    background: #1e293b;
 }
 
 body.dark .logo p {
     color: #cbd5e1;
 }
 
-body.dark .search-box input {
-    background: #374151;
-    color: white;
-    border-color: #4b5563;
+body.dark .search-box input,
+body.dark .ghana-search input {
+    background: #334155;
+    color: #ffffff;
+    border-color: #475569;
 }
 
 body.dark nav {
-    background: #0f172a;
+    background: #020617;
 }
 
-body.dark .hero-text p {
-    color: #d1d5db;
+body.dark .hero-text p,
+body.dark .news-card p,
+body.dark .tool-card p,
+body.dark aside li,
+body.dark .article-page p,
+body.dark .ghana-news-content p,
+body.dark .ghana-featured-content p,
+body.dark .ghana-topic-card p {
+    color: #cbd5e1;
 }
 
 body.dark .hero-buttons a:last-child {
-    background: #1f2937;
+    background: #1e293b;
+    color: #60a5fa;
 }
 
 body.dark .tool-card,
@@ -1683,44 +1729,20 @@ body.dark .tutorial,
 body.dark .article-page,
 body.dark .featured-news,
 body.dark .trending-box,
-body.dark .ai-container {
-    background: #1f2937;
-    color: #f3f4f6;
-}
-
-body.dark .tool-card p,
-body.dark .news-card p,
-body.dark aside li,
-body.dark .article-page p,
-body.dark .tutorial p,
-body.dark .trending-item {
-    color: #d1d5db;
-}
-
-
-/* Ghana Tech dark mode */
-
+body.dark .ai-container,
 body.dark .ghana-stat,
 body.dark .ghana-featured,
 body.dark .ghana-news-card,
 body.dark .ghana-trending-box,
 body.dark .ghana-topic-card,
 body.dark .no-ghana-news {
-    background: #1f2937;
-
+    background: #1e293b;
     color: #f3f4f6;
 }
 
-body.dark .ghana-stat p,
-body.dark .ghana-news-content p,
-body.dark .ghana-featured-content p,
-body.dark .ghana-topic-card p {
-    color: #d1d5db;
-}
-
 body.dark .ghana-filter {
-    background: #374151;
-    color: white;
+    background: #334155;
+    color: #ffffff;
 }
 
 body.dark .ghana-filter.active {
@@ -1728,8 +1750,8 @@ body.dark .ghana-filter.active {
 }
 
 body.dark .ghana-trending-grid a {
-    background: #374151;
-    color: white;
+    background: #334155;
+    color: #ffffff;
 }
 
 body.dark .ghana-category {
@@ -1745,15 +1767,37 @@ body.dark .ghana-source-note p {
     color: #dbeafe;
 }
 
-body.dark .ghana-search input {
-    background: #374151;
-    color: white;
-    border-color: #4b5563;
+body.dark .ghana-card-footer {
+    border-color: #334155;
+}
+
+body.dark .ai-result-box {
+    background: #0f172a;
+    border-color: #334155;
+}
+
+body.dark .result-header {
+    background: #172554;
+    border-color: #1e3a5f;
+}
+
+body.dark .ai-input-box textarea {
+    background: #334155;
+    color: #ffffff;
+    border-color: #475569;
+}
+
+body.dark .trending-item {
+    border-color: #334155;
+}
+
+body.dark aside li {
+    border-color: #334155;
 }
 
 
 /* =========================================================
-   DARK MODE BUTTON
+   40. DARK MODE BUTTON
 ========================================================= */
 
 #darkModeBtn {
@@ -1762,18 +1806,23 @@ body.dark .ghana-search input {
 
     margin-left: 10px;
 
-    border: none;
+    border: 0;
     border-radius: 50%;
 
     background: #0056d2;
-    color: white;
+    color: #ffffff;
 
-    cursor: pointer;
+    transition: 0.25s;
+}
+
+#darkModeBtn:hover {
+    background: #003d99;
+    transform: rotate(15deg);
 }
 
 
 /* =========================================================
-   BACK TO TOP
+   41. BACK TO TOP
 ========================================================= */
 
 #topBtn {
@@ -1782,27 +1831,32 @@ body.dark .ghana-search input {
     right: 20px;
     bottom: 20px;
 
-    width: 45px;
-    height: 45px;
+    z-index: 1000;
 
     display: none;
 
-    border: none;
+    width: 45px;
+    height: 45px;
+
+    border: 0;
     border-radius: 50%;
 
     background: #0056d2;
-    color: white;
+    color: #ffffff;
 
-    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 
-    z-index: 1000;
+    transition: 0.25s;
+}
 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+#topBtn:hover {
+    background: #003d99;
+    transform: translateY(-3px);
 }
 
 
 /* =========================================================
-   ANIMATIONS
+   42. ANIMATIONS
 ========================================================= */
 
 .hero,
@@ -1830,7 +1884,7 @@ body.dark .ghana-search input {
 
 
 /* =========================================================
-   SCROLLBAR
+   43. SCROLLBAR
 ========================================================= */
 
 ::-webkit-scrollbar {
@@ -1846,9 +1900,13 @@ body.dark .ghana-search input {
     background: #e5e7eb;
 }
 
+body.dark ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
 
 /* =========================================================
-   TABLET
+   44. TABLET
 ========================================================= */
 
 @media (max-width: 992px) {
@@ -1859,7 +1917,6 @@ body.dark .ghana-search input {
     }
 
     .hero-text p {
-        max-width: 700px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -1904,7 +1961,7 @@ body.dark .ghana-search input {
 
 
 /* =========================================================
-   MOBILE
+   45. MOBILE
 ========================================================= */
 
 @media (max-width: 768px) {
@@ -1915,9 +1972,12 @@ body.dark .ghana-search input {
 
     .top-bar {
         width: 92%;
+
         flex-direction: column;
-        text-align: center;
+
         gap: 15px;
+
+        text-align: center;
     }
 
     .logo {
@@ -1943,8 +2003,8 @@ body.dark .ghana-search input {
 
     nav {
         display: none;
+
         flex-direction: column;
-        width: 100%;
     }
 
     nav.show {
@@ -1953,8 +2013,10 @@ body.dark .ghana-search input {
 
     nav a {
         width: 100%;
-        text-align: center;
+
         padding: 12px;
+
+        text-align: center;
     }
 
     .hero {
@@ -1976,6 +2038,7 @@ body.dark .ghana-search input {
     }
 
     .hero-buttons a {
+        width: 100%;
         text-align: center;
     }
 
@@ -2007,8 +2070,10 @@ body.dark .ghana-search input {
 
     .article-page {
         width: 92%;
-        padding: 22px;
+
         margin: 30px auto;
+
+        padding: 22px;
     }
 
     .article-page h1 {
@@ -2021,10 +2086,11 @@ body.dark .ghana-search input {
     }
 
 
-    /* GHANA TECH */
+    /* GHANA TECH MOBILE */
 
     .ghana-tech-hero {
         width: 94%;
+
         padding: 28px;
 
         text-align: center;
@@ -2039,8 +2105,8 @@ body.dark .ghana-search input {
     }
 
     .ghana-hero-buttons {
-        justify-content: center;
         flex-direction: column;
+        justify-content: center;
     }
 
     .ghana-hero-buttons a {
@@ -2054,7 +2120,8 @@ body.dark .ghana-search input {
 
     .ghana-stats {
         width: 94%;
-        grid-template-columns: 1fr 1fr;
+
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .ghana-news-controls {
@@ -2117,7 +2184,7 @@ body.dark .ghana-search input {
 
 
 /* =========================================================
-   SMALL PHONES
+   46. SMALL PHONES
 ========================================================= */
 
 @media (max-width: 480px) {
@@ -2203,4 +2270,24 @@ body.dark .ghana-search input {
     .ghana-newsletter h2 {
         font-size: 27px;
     }
-   }
+}
+
+
+/* =========================================================
+   47. ACCESSIBILITY / REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
