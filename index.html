@@ -2,24 +2,71 @@
 <html lang="en">
 <head>
 
+    <!-- =====================================================
+         BASIC DOCUMENT SETUP
+    ====================================================== -->
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color"
+          content="#0b5cff">
+
     <meta name="description"
-          content="TechHub Ghana - Technology News, Tutorials, Programming and Free Digital Tools.">
+          content="TechHub Ghana — Technology news, programming tutorials, AI, cybersecurity, web development and free digital tools for students and digital users in Ghana.">
 
     <meta name="keywords"
-          content="Ghana technology, AI, programming, Python, JavaScript, cybersecurity, tutorials">
+          content="TechHub Ghana, Ghana technology, technology news Ghana, AI Ghana, programming tutorials, Python, JavaScript, cybersecurity, web development, digital tools, Ghana students">
 
     <meta name="author"
           content="TechHub Ghana">
 
-    <title>TechHub Ghana | Technology News & Digital Tools</title>
+    <meta name="robots"
+          content="index, follow">
+
+    <link rel="canonical"
+          href="https://juliusas009-wq.github.io/TechHub-Ghana/">
+
+    <title>TechHub Ghana | Technology News, Tutorials & Digital Tools</title>
 
 
-    <!-- ================= FONT ================= -->
+    <!-- =====================================================
+         OPEN GRAPH / SOCIAL SHARING
+    ====================================================== -->
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:title"
+          content="TechHub Ghana | Technology News, Tutorials & Digital Tools">
+
+    <meta property="og:description"
+          content="Technology news, tutorials, AI, programming, cybersecurity and useful free digital tools.">
+
+    <meta property="og:url"
+          content="https://juliusas009-wq.github.io/TechHub-Ghana/">
+
+    <meta property="og:site_name"
+          content="TechHub Ghana">
+
+    <meta property="og:image"
+          content="images/hero.jpg">
+
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link rel="icon"
+          type="image/png"
+          href="images/logo.png">
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -32,7 +79,18 @@
           rel="stylesheet">
 
 
-    <!-- ================= CSS ================= -->
+    <!-- =====================================================
+         FONT AWESOME
+         Icons will work if the CDN is available.
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         MAIN STYLESHEET
+    ====================================================== -->
 
     <link rel="stylesheet"
           href="style.css">
@@ -44,183 +102,457 @@
 
 
 <!-- =====================================================
-     HEADER
-===================================================== -->
+     SKIP LINK
+     Improves keyboard accessibility.
+====================================================== -->
 
-<header>
+<a class="skip-link"
+   href="#main-content">
+
+    Skip to main content
+
+</a>
+
+
+
+<!-- =====================================================
+     SITE HEADER
+====================================================== -->
+
+<header class="site-header"
+        id="siteHeader">
+
+
+    <!-- =================================================
+         TOP HEADER
+    ================================================== -->
 
     <div class="top-bar">
 
 
-        <!-- LOGO -->
+        <!-- BRAND -->
+        <a href="index.html"
+           class="logo"
+           aria-label="TechHub Ghana home">
 
-        <div class="logo">
 
-            <a href="index.html">
+            <div class="logo-image">
 
                 <img src="images/logo.png"
-                     alt="TechHub Ghana Logo">
-
-            </a>
-
-            <div>
-
-                <h1>TechHub Ghana</h1>
-
-                <p>Technology • Learning • Innovation</p>
+                     alt="TechHub Ghana logo"
+                     width="56"
+                     height="56">
 
             </div>
 
-        </div>
+
+            <div class="logo-content">
+
+                <span class="logo-title">
+                    TechHub Ghana
+                </span>
+
+                <span class="logo-tagline">
+                    Technology • Learning • Innovation
+                </span>
+
+            </div>
 
 
-        <!-- SEARCH -->
+        </a>
 
-        <div class="search-box">
+
+
+        <!-- DESKTOP SEARCH -->
+
+        <form class="search-box"
+              id="searchForm"
+              role="search">
+
+            <label for="siteSearch"
+                   class="sr-only">
+
+                Search TechHub Ghana
+
+            </label>
+
 
             <input
                 type="search"
                 id="siteSearch"
-                placeholder="Search technology news..."
+                name="q"
+                placeholder="Search technology, tutorials..."
+                autocomplete="off"
                 aria-label="Search TechHub Ghana">
 
+
             <button
-                type="button"
-                onclick="searchSite()"
+                type="submit"
                 aria-label="Search">
 
-                🔍
+                <i class="fa-solid fa-magnifying-glass"
+                   aria-hidden="true"></i>
 
             </button>
 
-        </div>
+        </form>
+
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            type="button"
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open navigation menu"
+            aria-controls="navMenu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
 
     </div>
 
 
-    <!-- MOBILE MENU BUTTON -->
 
-    <button
-    type="button"
-    class="menu-btn"
-    id="menuBtn"
-    aria-label="Open navigation menu"
-    aria-expanded="false">
-    ☰
-</button>
+    <!-- =================================================
+         NAVIGATION
+    ================================================== -->
 
-<nav id="navMenu">
+    <nav class="main-nav"
+         id="navMenu"
+         aria-label="Main navigation">
 
-    <a href="index.html" class="active">
-        Home
-    </a>
 
-    <a href="ghana-tech.html">
-        🇬🇭 Ghana Tech
-    </a>
+        <div class="nav-inner">
 
-    <a href="news.html">
-        News
-    </a>
 
-    <a href="tutorials.html">
-        Tutorials
-    </a>
+            <a href="index.html"
+               class="active"
+               aria-current="page">
 
-    <a href="tools.html">
-        Tools
-    </a>
+                <i class="fa-solid fa-house"
+                   aria-hidden="true"></i>
 
-    <a href="about.html">
-        About
-    </a>
+                <span>Home</span>
 
-    <a href="contact.html">
-        Contact
-    </a>
+            </a>
 
-</nav>
+
+            <a href="ghana-tech.html">
+
+                <span class="nav-flag">
+                    🇬🇭
+                </span>
+
+                <span>Ghana Tech</span>
+
+            </a>
+
+
+            <a href="news.html">
+
+                <i class="fa-regular fa-newspaper"
+                   aria-hidden="true"></i>
+
+                <span>News</span>
+
+            </a>
+
+
+            <a href="tutorials.html">
+
+                <i class="fa-solid fa-graduation-cap"
+                   aria-hidden="true"></i>
+
+                <span>Tutorials</span>
+
+            </a>
+
+
+            <a href="tools.html">
+
+                <i class="fa-solid fa-toolbox"
+                   aria-hidden="true"></i>
+
+                <span>Tools</span>
+
+            </a>
+
+
+            <a href="about.html">
+
+                <i class="fa-solid fa-circle-info"
+                   aria-hidden="true"></i>
+
+                <span>About</span>
+
+            </a>
+
+
+            <a href="contact.html">
+
+                <i class="fa-solid fa-envelope"
+                   aria-hidden="true"></i>
+
+                <span>Contact</span>
+
+            </a>
+
+
+        </div>
+
+    </nav>
+
 </header>
 
 
 
 <!-- =====================================================
-     BREAKING NEWS
-===================================================== -->
+     BREAKING / SITE UPDATE BAR
+====================================================== -->
 
-<div class="breaking-news">
-
-    <div class="today-date"
-         id="today">
-    </div>
-
-    <marquee>
-
-        📢 Welcome to TechHub Ghana •
-        Technology News •
-        Programming Tutorials •
-        Free Digital Tools •
-        Artificial Intelligence •
-        Cybersecurity •
-        Web Development •
-        Database Tutorials
-
-    </marquee>
-
-</div>
+<section class="breaking-news"
+         aria-label="TechHub Ghana latest updates">
 
 
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
+    <div class="breaking-inner">
 
 
-    <div class="hero-text">
+        <div class="today-date"
+             id="today">
 
-        <span class="tag">
-            🚀 TECHHUB GHANA
-        </span>
+            <i class="fa-regular fa-calendar"
+               aria-hidden="true"></i>
 
+            <span>Loading date...</span>
 
-        <h2>
-            Technology Made Simple
-        </h2>
-
-
-        <p>
-
-            Learn programming, Artificial Intelligence,
-            database management, cybersecurity and
-            web development through easy tutorials
-            and powerful free digital tools.
-
-        </p>
+        </div>
 
 
-        <div class="hero-buttons">
+        <div class="breaking-label">
 
-            <a href="tools.html">
-                Explore Tools
-            </a>
+            <i class="fa-solid fa-bolt"
+               aria-hidden="true"></i>
 
-            <a href="news.html">
-                Latest News
-            </a>
+            <span>Tech Update</span>
+
+        </div>
+
+
+        <div class="breaking-content"
+             aria-label="TechHub Ghana highlights">
+
+
+            <div class="breaking-track">
+
+                <span>
+                    Technology News
+                </span>
+
+                <span>
+                    Programming Tutorials
+                </span>
+
+                <span>
+                    Free Digital Tools
+                </span>
+
+                <span>
+                    Artificial Intelligence
+                </span>
+
+                <span>
+                    Cybersecurity
+                </span>
+
+                <span>
+                    Web Development
+                </span>
+
+                <span>
+                    Database Tutorials
+                </span>
+
+            </div>
 
         </div>
 
     </div>
 
+</section>
 
 
-    <div class="hero-image">
 
-        <img
-            src="images/hero.jpg"
-            alt="Technology and innovation">
+<!-- =====================================================
+     MAIN CONTENT
+====================================================== -->
+
+<main id="main-content">
+
+
+
+<!-- =====================================================
+     HERO SECTION
+====================================================== -->
+
+<section class="hero"
+         aria-labelledby="hero-title">
+
+
+    <div class="hero-content">
+
+
+        <div class="hero-text">
+
+
+            <span class="eyebrow">
+
+                <span class="eyebrow-dot"></span>
+
+                TECHHUB GHANA
+
+            </span>
+
+
+            <h1 id="hero-title">
+
+                Technology
+                <span>Made Simple.</span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Discover technology news, learn programming,
+                explore Artificial Intelligence, improve your
+                cybersecurity knowledge and use powerful free
+                digital tools — all in one place.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+
+                <a href="tools.html"
+                   class="btn btn-primary">
+
+                    <i class="fa-solid fa-toolbox"
+                       aria-hidden="true"></i>
+
+                    <span>Explore Tools</span>
+
+                </a>
+
+
+                <a href="news.html"
+                   class="btn btn-secondary">
+
+                    <i class="fa-regular fa-newspaper"
+                       aria-hidden="true"></i>
+
+                    <span>Latest News</span>
+
+                </a>
+
+
+            </div>
+
+
+            <div class="hero-stats">
+
+
+                <div class="hero-stat">
+
+                    <strong>Free</strong>
+
+                    <span>Digital Tools</span>
+
+                </div>
+
+
+                <div class="hero-stat">
+
+                    <strong>Practical</strong>
+
+                    <span>Tutorials</span>
+
+                </div>
+
+
+                <div class="hero-stat">
+
+                    <strong>Ghana</strong>
+
+                    <span>Focused</span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="hero-image-wrapper">
+
+
+            <div class="hero-image">
+
+
+                <img
+                    src="images/hero.jpg"
+                    alt="Technology, innovation and digital learning"
+                    width="900"
+                    height="600"
+                    loading="eager">
+
+
+                <div class="hero-image-overlay"></div>
+
+
+                <div class="hero-floating-card hero-card-one">
+
+                    <div class="floating-icon">
+
+                        <i class="fa-solid fa-microchip"
+                           aria-hidden="true"></i>
+
+                    </div>
+
+                    <div>
+
+                        <strong>Technology</strong>
+
+                        <span>Learn & Explore</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-floating-card hero-card-two">
+
+                    <span class="pulse-dot"></span>
+
+                    <span>Ghana Tech</span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
 
     </div>
 
@@ -230,100 +562,139 @@
 
 <!-- =====================================================
      TRENDING TOPICS
-===================================================== -->
+====================================================== -->
 
-<section class="trending-section">
-
-    <div class="trending-box">
-
-
-        <h2>
-            🔥 Trending
-        </h2>
+<section class="trending-section"
+         aria-labelledby="trending-title">
 
 
-        <div class="trending-list">
+    <div class="section-container">
 
 
-            <!-- AI -->
-
-            <a href="ai-assistant.html"
-               class="trending-item">
-
-                <span>🤖</span>
-
-                <span>
-                    AI Assistant
-                </span>
-
-            </a>
+        <div class="trending-box">
 
 
-            <!-- GPA -->
-
-            <a href="gpa.html"
-               class="trending-item">
-
-                <span>🎓</span>
-
-                <span>
-                    GPA Calculator
-                </span>
-
-            </a>
+            <div class="trending-heading">
 
 
-            <!-- QR -->
+                <div class="trending-icon">
 
-            <a href="qr-generator.html"
-               class="trending-item">
+                    <i class="fa-solid fa-fire"
+                       aria-hidden="true"></i>
 
-                <span>📱</span>
-
-                <span>
-                    QR Generator
-                </span>
-
-            </a>
+                </div>
 
 
-            <!-- PYTHON -->
+                <div>
 
-            <a href="tutorials.html#python"
-               class="trending-item">
+                    <span class="section-kicker">
+                        What's trending
+                    </span>
 
-                <span>🐍</span>
+                    <h2 id="trending-title">
+                        Popular Right Now
+                    </h2>
 
-                <span>
-                    Learn Python
-                </span>
-
-            </a>
+                </div>
 
 
-            <!-- MYSQL -->
+            </div>
 
-            <a href="tutorials.html#mysql"
-               class="trending-item">
 
-                <span>🗄️</span>
 
-                <span>
-                    MySQL Basics
-                </span>
+            <div class="trending-list">
+
+
+                <a href="ai-assistant.html"
+                   class="trending-item">
+
+                    <span class="trending-item-icon">
+                        🤖
+                    </span>
+
+                    <span>AI Assistant</span>
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </a>
+
+
+                <a href="gpa.html"
+                   class="trending-item">
+
+                    <span class="trending-item-icon">
+                        🎓
+                    </span>
+
+                    <span>GPA Calculator</span>
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </a>
+
+
+                <a href="qr-generator.html"
+                   class="trending-item">
+
+                    <span class="trending-item-icon">
+                        📱
+                    </span>
+
+                    <span>QR Generator</span>
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </a>
+
+
+                <a href="tutorials.html#python"
+                   class="trending-item">
+
+                    <span class="trending-item-icon">
+                        🐍
+                    </span>
+
+                    <span>Learn Python</span>
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </a>
+
+
+                <a href="tutorials.html#mysql"
+                   class="trending-item">
+
+                    <span class="trending-item-icon">
+                        🗄️
+                    </span>
+
+                    <span>MySQL Basics</span>
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </a>
+
+
+            </div>
+
+
+            <a href="news.html"
+               class="view-more">
+
+                <span>View Technology News</span>
+
+                <i class="fa-solid fa-arrow-right"
+                   aria-hidden="true"></i>
 
             </a>
 
 
         </div>
-
-
-        <a href="news.html"
-           class="view-more">
-
-            View More News →
-
-        </a>
 
     </div>
 
@@ -332,117 +703,246 @@
 
 
 <!-- =====================================================
-     QUICK TOOLS
-===================================================== -->
+     POPULAR TOOLS
+====================================================== -->
 
-<section class="section">
-
-
-    <h2>
-        🛠️ Popular Tools
-    </h2>
+<section class="section"
+         aria-labelledby="tools-title">
 
 
-    <div class="card-grid">
+    <div class="section-container">
 
 
-        <!-- GPA -->
+        <div class="section-heading">
 
-        <div class="tool-card">
 
-            <div class="icon">
-                🎓
+            <div>
+
+                <span class="section-kicker">
+                    Useful & free
+                </span>
+
+                <h2 id="tools-title">
+                    Popular Tools
+                </h2>
+
             </div>
 
-            <h3>
-                GPA Calculator
-            </h3>
 
-            <p>
-                Calculate your semester GPA quickly
-                and easily.
-            </p>
+            <a href="tools.html"
+               class="section-link">
 
-            <a href="gpa.html">
-                Open Tool →
+                View All Tools
+
+                <i class="fa-solid fa-arrow-right"
+                   aria-hidden="true"></i>
+
             </a>
+
 
         </div>
 
 
 
-        <!-- QR -->
+        <div class="card-grid">
 
-        <div class="tool-card">
 
-            <div class="icon">
-                📱
-            </div>
+            <!-- GPA -->
 
-            <h3>
-                QR Generator
-            </h3>
+            <article class="tool-card">
 
-            <p>
-                Create QR codes instantly for links,
-                text and information.
-            </p>
 
-            <a href="qr-generator.html">
-                Open Tool →
-            </a>
+                <div class="tool-card-top">
+
+
+                    <div class="icon">
+
+                        <span>🎓</span>
+
+                    </div>
+
+
+                    <span class="tool-label">
+                        Student
+                    </span>
+
+
+                </div>
+
+
+                <h3>
+                    GPA Calculator
+                </h3>
+
+
+                <p>
+                    Calculate your semester GPA quickly
+                    using your course grades and credit hours.
+                </p>
+
+
+                <a href="gpa.html"
+                   class="card-action">
+
+                    Open Tool
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </a>
+
+
+            </article>
+
+
+
+            <!-- QR -->
+
+            <article class="tool-card">
+
+
+                <div class="tool-card-top">
+
+
+                    <div class="icon">
+
+                        <span>📱</span>
+
+                    </div>
+
+
+                    <span class="tool-label">
+                        Generator
+                    </span>
+
+
+                </div>
+
+
+                <h3>
+                    QR Generator
+                </h3>
+
+
+                <p>
+                    Create QR codes instantly for links,
+                    text, contact details and more.
+                </p>
+
+
+                <a href="qr-generator.html"
+                   class="card-action">
+
+                    Open Tool
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </a>
+
+
+            </article>
+
+
+
+            <!-- AI -->
+
+            <article class="tool-card">
+
+
+                <div class="tool-card-top">
+
+
+                    <div class="icon">
+
+                        <span>🤖</span>
+
+                    </div>
+
+
+                    <span class="tool-label">
+                        AI
+                    </span>
+
+
+                </div>
+
+
+                <h3>
+                    AI Assistant
+                </h3>
+
+
+                <p>
+                    Improve writing, summarize text,
+                    fix grammar and make your work clearer.
+                </p>
+
+
+                <a href="ai-assistant.html"
+                   class="card-action">
+
+                    Try AI Assistant
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </a>
+
+
+            </article>
+
+
+
+            <!-- PASSWORD -->
+
+            <article class="tool-card">
+
+
+                <div class="tool-card-top">
+
+
+                    <div class="icon">
+
+                        <span>🔐</span>
+
+                    </div>
+
+
+                    <span class="tool-label">
+                        Security
+                    </span>
+
+
+                </div>
+
+
+                <h3>
+                    Password Generator
+                </h3>
+
+
+                <p>
+                    Generate strong passwords for
+                    accounts and online services.
+                </p>
+
+
+                <a href="password-generator.html"
+                   class="card-action">
+
+                    Generate Password
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </a>
+
+
+            </article>
+
 
         </div>
-
-
-
-        <!-- AI -->
-
-        <div class="tool-card">
-
-            <div class="icon">
-                🤖
-            </div>
-
-            <h3>
-                AI Assistant
-            </h3>
-
-            <p>
-                Get help with writing, learning,
-                grammar and summaries.
-            </p>
-
-            <a href="ai-assistant.html">
-                Open Tool →
-            </a>
-
-        </div>
-
-
-
-        <!-- PASSWORD -->
-
-        <div class="tool-card">
-
-            <div class="icon">
-                🔐
-            </div>
-
-            <h3>
-                Password Generator
-            </h3>
-
-            <p>
-                Generate strong and secure passwords.
-            </p>
-
-            <a href="password-generator.html">
-                Open Tool →
-            </a>
-
-        </div>
-
 
     </div>
 
@@ -452,105 +952,38 @@
 
 <!-- =====================================================
      LATEST TECHNOLOGY NEWS
-===================================================== -->
+====================================================== -->
 
-<section class="section">
-
-
-    <h2>
-        📰 Latest Technology News
-    </h2>
+<section class="section section-alt"
+         aria-labelledby="news-title">
 
 
-    <div class="news-layout">
+    <div class="section-container">
 
 
-        <div class="news-left">
+        <div class="section-heading">
 
 
-            <!-- NEWS 1 -->
+            <div>
+
+                <span class="section-kicker">
+                    Stay informed
+                </span>
+
+                <h2 id="news-title">
+                    Latest Technology News
+                </h2>
+
+            </div>
+
 
             <a href="news.html"
-               class="news-card">
+               class="section-link">
 
-                <img
-                    src="images/tech1.jpg"
-                    alt="Artificial Intelligence">
+                View All News
 
-                <div>
-
-                    <h3>
-                        Artificial Intelligence in Education
-                    </h3>
-
-                    <p>
-
-                        AI is transforming how students
-                        learn through intelligent assistants,
-                        digital tools and adaptive learning
-                        systems.
-
-                    </p>
-
-                </div>
-
-            </a>
-
-
-
-            <!-- NEWS 2 -->
-
-            <a href="news.html"
-               class="news-card">
-
-                <img
-                    src="images/tech2.jpg"
-                    alt="Web Development">
-
-                <div>
-
-                    <h3>
-                        Learn HTML, CSS & JavaScript
-                    </h3>
-
-                    <p>
-
-                        Start building modern websites
-                        from scratch with beginner-friendly
-                        programming tutorials.
-
-                    </p>
-
-                </div>
-
-            </a>
-
-
-
-            <!-- NEWS 3 -->
-
-            <a href="news.html"
-               class="news-card">
-
-                <img
-                    src="images/tech3.jpg"
-                    alt="Cybersecurity">
-
-                <div>
-
-                    <h3>
-                        Cybersecurity Essentials
-                    </h3>
-
-                    <p>
-
-                        Learn simple cybersecurity practices
-                        that can help protect your accounts,
-                        devices and personal information.
-
-                    </p>
-
-                </div>
+                <i class="fa-solid fa-arrow-right"
+                   aria-hidden="true"></i>
 
             </a>
 
@@ -559,53 +992,323 @@
 
 
 
-        <!-- SIDEBAR -->
-
-        <aside>
+        <div class="news-layout">
 
 
-            <h3>
-                🔥 Popular
-            </h3>
+            <div class="news-left">
 
 
-            <ul>
+                <!-- NEWS 1 -->
 
-                <li>
-                    <a href="ai-assistant.html">
-                        🤖 AI Assistant
-                    </a>
-                </li>
-
-                <li>
-                    <a href="gpa.html">
-                        🎓 GPA Calculator
-                    </a>
-                </li>
-
-                <li>
-                    <a href="qr-generator.html">
-                        📱 QR Generator
-                    </a>
-                </li>
-
-                <li>
-                    <a href="tutorials.html#python">
-                        🐍 Learn Python
-                    </a>
-                </li>
-
-                <li>
-                    <a href="tutorials.html#mysql">
-                        🗄️ MySQL Basics
-                    </a>
-                </li>
-
-            </ul>
+                <a href="news.html"
+                   class="news-card">
 
 
-        </aside>
+                    <div class="news-image">
 
+                        <img
+                            src="images/tech1.jpg"
+                            alt="Artificial Intelligence in education"
+                            width="600"
+                            height="400"
+                            loading="lazy">
+
+                        <span class="news-category">
+                            Artificial Intelligence
+                        </span>
+
+                    </div>
+
+
+                    <div class="news-content">
+
+
+                        <span class="news-meta">
+                            Technology
+                        </span>
+
+
+                        <h3>
+                            Artificial Intelligence in Education
+                        </h3>
+
+
+                        <p>
+                            Discover how AI is changing
+                            learning through intelligent
+                            assistants, digital tools and
+                            adaptive learning systems.
+                        </p>
+
+
+                        <span class="read-more">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-right"
+                               aria-hidden="true"></i>
+
+                        </span>
+
+
+                    </div>
+
+
+                </a>
+
+
+
+                <!-- NEWS 2 -->
+
+                <a href="news.html"
+                   class="news-card">
+
+
+                    <div class="news-image">
+
+                        <img
+                            src="images/tech2.jpg"
+                            alt="Web development using HTML CSS and JavaScript"
+                            width="600"
+                            height="400"
+                            loading="lazy">
+
+                        <span class="news-category">
+                            Web Development
+                        </span>
+
+                    </div>
+
+
+                    <div class="news-content">
+
+
+                        <span class="news-meta">
+                            Programming
+                        </span>
+
+
+                        <h3>
+                            Learn HTML, CSS & JavaScript
+                        </h3>
+
+
+                        <p>
+                            Start building modern websites
+                            from scratch with practical
+                            beginner-friendly tutorials.
+                        </p>
+
+
+                        <span class="read-more">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-right"
+                               aria-hidden="true"></i>
+
+                        </span>
+
+
+                    </div>
+
+
+                </a>
+
+
+
+                <!-- NEWS 3 -->
+
+                <a href="news.html"
+                   class="news-card">
+
+
+                    <div class="news-image">
+
+                        <img
+                            src="images/tech3.jpg"
+                            alt="Cybersecurity protection"
+                            width="600"
+                            height="400"
+                            loading="lazy">
+
+                        <span class="news-category">
+                            Cybersecurity
+                        </span>
+
+                    </div>
+
+
+                    <div class="news-content">
+
+
+                        <span class="news-meta">
+                            Security
+                        </span>
+
+
+                        <h3>
+                            Cybersecurity Essentials
+                        </h3>
+
+
+                        <p>
+                            Learn practical cybersecurity
+                            habits that can help protect your
+                            accounts, devices and personal data.
+                        </p>
+
+
+                        <span class="read-more">
+
+                            Read More
+
+                            <i class="fa-solid fa-arrow-right"
+                               aria-hidden="true"></i>
+
+                        </span>
+
+
+                    </div>
+
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="news-sidebar"
+                   aria-label="Popular TechHub Ghana content">
+
+
+                <div class="sidebar-heading">
+
+                    <span>
+                        🔥
+                    </span>
+
+                    <h3>
+                        Popular
+                    </h3>
+
+                </div>
+
+
+                <ul>
+
+
+                    <li>
+
+                        <a href="ai-assistant.html">
+
+                            <span>🤖</span>
+
+                            <span>
+                                AI Assistant
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"
+                               aria-hidden="true"></i>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="gpa.html">
+
+                            <span>🎓</span>
+
+                            <span>
+                                GPA Calculator
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"
+                               aria-hidden="true"></i>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="qr-generator.html">
+
+                            <span>📱</span>
+
+                            <span>
+                                QR Generator
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"
+                               aria-hidden="true"></i>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="tutorials.html#python">
+
+                            <span>🐍</span>
+
+                            <span>
+                                Learn Python
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"
+                               aria-hidden="true"></i>
+
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="tutorials.html#mysql">
+
+                            <span>🗄️</span>
+
+                            <span>
+                                MySQL Basics
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"
+                               aria-hidden="true"></i>
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+                <a href="ghana-tech.html"
+                   class="sidebar-cta">
+
+                    <span>Explore Ghana Tech</span>
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </a>
+
+
+            </aside>
+
+
+        </div>
 
     </div>
 
@@ -614,86 +1317,230 @@
 
 
 <!-- =====================================================
-     LATEST TUTORIALS
-===================================================== -->
+     TUTORIALS
+====================================================== -->
 
-<section class="section">
-
-
-    <h2>
-        🚀 Latest Tutorials
-    </h2>
+<section class="section"
+         aria-labelledby="tutorials-title">
 
 
-    <div class="tutorial-grid">
+    <div class="section-container">
 
 
-        <!-- HTML -->
-
-        <a href="tutorials.html#html"
-           class="tutorial">
-
-            <img
-                src="images/tech1.jpg"
-                alt="HTML tutorial">
-
-            <h3>
-                HTML for Beginners →
-            </h3>
-
-        </a>
+        <div class="section-heading">
 
 
+            <div>
 
-        <!-- CSS -->
+                <span class="section-kicker">
+                    Learn by doing
+                </span>
 
-        <a href="tutorials.html#css"
-           class="tutorial">
+                <h2 id="tutorials-title">
+                    Latest Tutorials
+                </h2>
 
-            <img
-                src="images/tech2.jpg"
-                alt="CSS tutorial">
+            </div>
 
-            <h3>
-                CSS Masterclass →
-            </h3>
 
-        </a>
+            <a href="tutorials.html"
+               class="section-link">
+
+                View All Tutorials
+
+                <i class="fa-solid fa-arrow-right"
+                   aria-hidden="true"></i>
+
+            </a>
+
+
+        </div>
 
 
 
-        <!-- JAVASCRIPT -->
-
-        <a href="tutorials.html#javascript"
-           class="tutorial">
-
-            <img
-                src="images/tech3.jpg"
-                alt="JavaScript tutorial">
-
-            <h3>
-                JavaScript Essentials →
-            </h3>
-
-        </a>
+        <div class="tutorial-grid">
 
 
+            <!-- HTML -->
 
-        <!-- PYTHON -->
+            <a href="tutorials.html#html"
+               class="tutorial">
 
-        <a href="tutorials.html#python"
-           class="tutorial">
 
-            <img
-                src="images/hero.jpg"
-                alt="Python programming">
+                <div class="tutorial-image">
 
-            <h3>
-                Python Programming →
-            </h3>
+                    <img
+                        src="images/tech1.jpg"
+                        alt="HTML programming tutorial"
+                        width="600"
+                        height="400"
+                        loading="lazy">
 
-        </a>
+                    <span class="tutorial-badge">
+                        Beginner
+                    </span>
 
+                </div>
+
+
+                <div class="tutorial-content">
+
+                    <span>
+                        Web Development
+                    </span>
+
+                    <h3>
+                        HTML for Beginners
+                    </h3>
+
+                    <strong>
+                        Start Learning
+                        <i class="fa-solid fa-arrow-right"
+                           aria-hidden="true"></i>
+                    </strong>
+
+                </div>
+
+
+            </a>
+
+
+
+            <!-- CSS -->
+
+            <a href="tutorials.html#css"
+               class="tutorial">
+
+
+                <div class="tutorial-image">
+
+                    <img
+                        src="images/tech2.jpg"
+                        alt="CSS web design tutorial"
+                        width="600"
+                        height="400"
+                        loading="lazy">
+
+                    <span class="tutorial-badge">
+                        Beginner
+                    </span>
+
+                </div>
+
+
+                <div class="tutorial-content">
+
+                    <span>
+                        Web Design
+                    </span>
+
+                    <h3>
+                        CSS Masterclass
+                    </h3>
+
+                    <strong>
+                        Start Learning
+                        <i class="fa-solid fa-arrow-right"
+                           aria-hidden="true"></i>
+                    </strong>
+
+                </div>
+
+
+            </a>
+
+
+
+            <!-- JAVASCRIPT -->
+
+            <a href="tutorials.html#javascript"
+               class="tutorial">
+
+
+                <div class="tutorial-image">
+
+                    <img
+                        src="images/tech3.jpg"
+                        alt="JavaScript programming tutorial"
+                        width="600"
+                        height="400"
+                        loading="lazy">
+
+                    <span class="tutorial-badge">
+                        Intermediate
+                    </span>
+
+                </div>
+
+
+                <div class="tutorial-content">
+
+                    <span>
+                        Programming
+                    </span>
+
+                    <h3>
+                        JavaScript Essentials
+                    </h3>
+
+                    <strong>
+                        Start Learning
+                        <i class="fa-solid fa-arrow-right"
+                           aria-hidden="true"></i>
+                    </strong>
+
+                </div>
+
+
+            </a>
+
+
+
+            <!-- PYTHON -->
+
+            <a href="tutorials.html#python"
+               class="tutorial">
+
+
+                <div class="tutorial-image">
+
+                    <img
+                        src="images/hero.jpg"
+                        alt="Python programming tutorial"
+                        width="600"
+                        height="400"
+                        loading="lazy">
+
+                    <span class="tutorial-badge">
+                        Beginner
+                    </span>
+
+                </div>
+
+
+                <div class="tutorial-content">
+
+                    <span>
+                        Programming
+                    </span>
+
+                    <h3>
+                        Python Programming
+                    </h3>
+
+                    <strong>
+                        Start Learning
+                        <i class="fa-solid fa-arrow-right"
+                           aria-hidden="true"></i>
+                    </strong>
+
+                </div>
+
+
+            </a>
+
+
+        </div>
 
     </div>
 
@@ -703,97 +1550,185 @@
 
 <!-- =====================================================
      POPULAR TECHNOLOGIES
-===================================================== -->
+====================================================== -->
 
-<section class="section">
-
-
-    <h2>
-        📈 Popular Technologies
-    </h2>
+<section class="section section-alt"
+         aria-labelledby="technologies-title">
 
 
-    <div class="card-grid">
+    <div class="section-container">
 
 
-        <a href="tutorials.html#python"
-           class="tool-card">
+        <div class="section-heading">
 
-            <div class="icon">
-                🐍
+
+            <div>
+
+                <span class="section-kicker">
+                    Build your skills
+                </span>
+
+                <h2 id="technologies-title">
+                    Popular Technologies
+                </h2>
+
             </div>
 
-            <h3>
-                Python
-            </h3>
 
-            <p>
-                Learn Python programming from beginner
-                to advanced concepts.
-            </p>
+            <a href="tutorials.html"
+               class="section-link">
 
-        </a>
+                Explore Tutorials
+
+                <i class="fa-solid fa-arrow-right"
+                   aria-hidden="true"></i>
+
+            </a>
 
 
-
-        <a href="tutorials.html#javascript"
-           class="tool-card">
-
-            <div class="icon">
-                🟨
-            </div>
-
-            <h3>
-                JavaScript
-            </h3>
-
-            <p>
-                Build interactive websites and web
-                applications.
-            </p>
-
-        </a>
+        </div>
 
 
 
-        <a href="tutorials.html#html"
-           class="tool-card">
-
-            <div class="icon">
-                🌐
-            </div>
-
-            <h3>
-                HTML & CSS
-            </h3>
-
-            <p>
-                Learn the foundation of modern
-                website development.
-            </p>
-
-        </a>
+        <div class="card-grid">
 
 
+            <a href="tutorials.html#python"
+               class="tool-card technology-card">
 
-        <a href="tutorials.html#mysql"
-           class="tool-card">
 
-            <div class="icon">
-                🗄️
-            </div>
+                <div class="icon">
+                    🐍
+                </div>
 
-            <h3>
-                MySQL
-            </h3>
 
-            <p>
-                Learn databases, SQL commands,
-                queries and database design.
-            </p>
+                <h3>
+                    Python
+                </h3>
 
-        </a>
 
+                <p>
+                    Learn Python programming from
+                    beginner fundamentals to advanced concepts.
+                </p>
+
+
+                <span class="card-action">
+
+                    Learn Python
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </span>
+
+
+            </a>
+
+
+
+            <a href="tutorials.html#javascript"
+               class="tool-card technology-card">
+
+
+                <div class="icon">
+                    🟨
+                </div>
+
+
+                <h3>
+                    JavaScript
+                </h3>
+
+
+                <p>
+                    Build interactive websites and
+                    modern web applications.
+                </p>
+
+
+                <span class="card-action">
+
+                    Learn JavaScript
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </span>
+
+
+            </a>
+
+
+
+            <a href="tutorials.html#html"
+               class="tool-card technology-card">
+
+
+                <div class="icon">
+                    🌐
+                </div>
+
+
+                <h3>
+                    HTML & CSS
+                </h3>
+
+
+                <p>
+                    Master the foundations of modern
+                    website development and design.
+                </p>
+
+
+                <span class="card-action">
+
+                    Learn Web Development
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </span>
+
+
+            </a>
+
+
+
+            <a href="tutorials.html#mysql"
+               class="tool-card technology-card">
+
+
+                <div class="icon">
+                    🗄️
+                </div>
+
+
+                <h3>
+                    MySQL
+                </h3>
+
+
+                <p>
+                    Learn databases, SQL queries,
+                    database design and management.
+                </p>
+
+
+                <span class="card-action">
+
+                    Learn MySQL
+
+                    <i class="fa-solid fa-arrow-right"
+                       aria-hidden="true"></i>
+
+                </span>
+
+
+            </a>
+
+
+        </div>
 
     </div>
 
@@ -803,74 +1738,114 @@
 
 <!-- =====================================================
      WHY TECHHUB GHANA
-===================================================== -->
+====================================================== -->
 
-<section class="section">
-
-
-    <h2>
-        💡 Why TechHub Ghana?
-    </h2>
+<section class="section"
+         aria-labelledby="why-title">
 
 
-    <div class="card-grid">
+    <div class="section-container">
 
 
-        <div class="tool-card">
+        <div class="section-heading centered-heading">
 
-            <div class="icon">
-                🎓
+
+            <div>
+
+                <span class="section-kicker">
+                    Why choose us
+                </span>
+
+                <h2 id="why-title">
+                    Why TechHub Ghana?
+                </h2>
+
+                <p>
+                    Built to make technology easier to
+                    understand, learn and use.
+                </p>
+
             </div>
-
-            <h3>
-                Student Friendly
-            </h3>
-
-            <p>
-                Simple explanations and practical
-                examples designed for students.
-            </p>
 
         </div>
 
 
 
-        <div class="tool-card">
+        <div class="card-grid why-grid">
 
-            <div class="icon">
-                🛠️
-            </div>
 
-            <h3>
-                Free Digital Tools
-            </h3>
+            <article class="tool-card">
 
-            <p>
-                Useful tools that make studying,
-                programming and everyday tasks easier.
-            </p>
+
+                <div class="icon">
+                    🎓
+                </div>
+
+
+                <h3>
+                    Student Friendly
+                </h3>
+
+
+                <p>
+                    Simple explanations, practical
+                    examples and useful resources designed
+                    to make learning easier.
+                </p>
+
+
+            </article>
+
+
+
+            <article class="tool-card">
+
+
+                <div class="icon">
+                    🛠️
+                </div>
+
+
+                <h3>
+                    Free Digital Tools
+                </h3>
+
+
+                <p>
+                    Useful tools for studying,
+                    programming, productivity and everyday
+                    digital tasks.
+                </p>
+
+
+            </article>
+
+
+
+            <article class="tool-card">
+
+
+                <div class="icon">
+                    🇬🇭
+                </div>
+
+
+                <h3>
+                    Built for Ghana
+                </h3>
+
+
+                <p>
+                    Technology resources created with
+                    Ghanaian students and digital users
+                    in mind.
+                </p>
+
+
+            </article>
+
 
         </div>
-
-
-
-        <div class="tool-card">
-
-            <div class="icon">
-                🇬🇭
-            </div>
-
-            <h3>
-                Built for Ghana
-            </h3>
-
-            <p>
-                Technology resources designed with
-                Ghanaian students and digital users in mind.
-            </p>
-
-        </div>
-
 
     </div>
 
@@ -880,50 +1855,102 @@
 
 <!-- =====================================================
      NEWSLETTER
-===================================================== -->
+====================================================== -->
 
-<section class="newsletter">
-
-
-    <h2>
-        📩 Stay Updated
-    </h2>
+<section class="newsletter"
+         aria-labelledby="newsletter-title">
 
 
-    <p>
-
-        Get the latest technology news,
-        tutorials and digital tools from
-        TechHub Ghana.
-
-    </p>
+    <div class="newsletter-inner">
 
 
-    <form
-        onsubmit="subscribeNewsletter(event)">
+        <div class="newsletter-icon">
 
-        <input
-            type="email"
-            id="newsletterEmail"
-            placeholder="Enter your email"
-            required>
+            <i class="fa-regular fa-envelope"
+               aria-hidden="true"></i>
 
-        <button type="submit">
-            Subscribe
-        </button>
+        </div>
 
-    </form>
 
+        <div class="newsletter-content">
+
+
+            <span class="section-kicker">
+                Stay in the loop
+            </span>
+
+
+            <h2 id="newsletter-title">
+                Get TechHub Ghana Updates
+            </h2>
+
+
+            <p>
+                Receive technology news, useful tutorials
+                and new digital tools when they are available.
+            </p>
+
+
+        </div>
+
+
+        <form
+            class="newsletter-form"
+            id="newsletterForm">
+
+
+            <label for="newsletterEmail"
+                   class="sr-only">
+
+                Email address
+
+            </label>
+
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                name="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required>
+
+
+            <button type="submit">
+
+                <span>Subscribe</span>
+
+                <i class="fa-solid fa-arrow-right"
+                   aria-hidden="true"></i>
+
+            </button>
+
+
+        </form>
+
+
+        <p class="newsletter-note">
+
+            No spam. Unsubscribe anytime.
+
+        </p>
+
+
+    </div>
 
 </section>
 
 
 
+</main>
+
+
+
 <!-- =====================================================
      FOOTER
-===================================================== -->
+====================================================== -->
 
-<footer>
+<footer class="site-footer">
 
 
     <div class="footer-grid">
@@ -931,20 +1958,38 @@
 
         <!-- ABOUT -->
 
-        <div>
+        <div class="footer-column footer-about">
 
-            <h3>
-                TechHub Ghana
-            </h3>
 
-            <p>
+            <a href="index.html"
+               class="footer-brand">
+
+
+                <img
+                    src="images/logo.png"
+                    alt="TechHub Ghana logo"
+                    width="50"
+                    height="50">
+
+
+                <span>
+                    TechHub Ghana
+                </span>
+
+
+            </a>
+
+
+            <p class="footer-tagline">
                 Technology • Learning • Innovation
             </p>
 
+
             <p>
                 Your platform for technology news,
-                tutorials and useful digital tools.
+                practical tutorials and useful digital tools.
             </p>
+
 
         </div>
 
@@ -952,47 +1997,54 @@
 
         <!-- QUICK LINKS -->
 
-        <div>
+        <div class="footer-column">
+
 
             <h3>
-                Quick Links
+                Explore
             </h3>
 
-            <p>
-                <a href="index.html">
-                    Home
-                </a>
-            </p>
 
-            <p>
-                <a href="news.html">
-                    News
-                </a>
-            </p>
+            <ul>
 
-            <p>
-                <a href="tutorials.html">
-                    Tutorials
-                </a>
-            </p>
 
-            <p>
-                <a href="tools.html">
-                    Tools
-                </a>
-            </p>
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
 
-            <p>
-                <a href="about.html">
-                    About
-                </a>
-            </p>
 
-            <p>
-                <a href="contact.html">
-                    Contact
-                </a>
-            </p>
+                <li>
+                    <a href="ghana-tech.html">
+                        Ghana Tech
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="news.html">
+                        Technology News
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="tutorials.html">
+                        Tutorials
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="tools.html">
+                        Digital Tools
+                    </a>
+                </li>
+
+
+            </ul>
+
 
         </div>
 
@@ -1000,55 +2052,95 @@
 
         <!-- TOOLS -->
 
-        <div>
+        <div class="footer-column">
+
 
             <h3>
                 Popular Tools
             </h3>
 
-            <p>
-                <a href="gpa.html">
-                    GPA Calculator
-                </a>
-            </p>
 
-            <p>
-                <a href="qr-generator.html">
-                    QR Generator
-                </a>
-            </p>
+            <ul>
 
-            <p>
-                <a href="ai-assistant.html">
-                    AI Assistant
-                </a>
-            </p>
 
-            <p>
-                <a href="password-generator.html">
-                    Password Generator
-                </a>
-            </p>
+                <li>
+                    <a href="gpa.html">
+                        GPA Calculator
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="qr-generator.html">
+                        QR Generator
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="ai-assistant.html">
+                        AI Assistant
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="password-generator.html">
+                        Password Generator
+                    </a>
+                </li>
+
+
+            </ul>
+
 
         </div>
 
 
 
-        <!-- CONTACT -->
+        <!-- COMPANY -->
 
-        <div>
+        <div class="footer-column">
+
 
             <h3>
-                Contact
+                TechHub Ghana
             </h3>
 
-            <p>
-                📧 info@techhubghana.com
-            </p>
 
-            <p>
-                🇬🇭 Ghana
-            </p>
+            <ul>
+
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="ghana-tech.html">
+                        Ghana Technology
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="tutorials.html#python">
+                        Learn Python
+                    </a>
+                </li>
+
+
+            </ul>
+
 
         </div>
 
@@ -1056,15 +2148,33 @@
     </div>
 
 
-    <hr>
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
 
 
-    <p class="copyright">
+        <p>
 
-        © 2026 TechHub Ghana.
-        All Rights Reserved.
+            © <span id="footerYear">2026</span>
+            TechHub Ghana.
+            All Rights Reserved.
 
-    </p>
+        </p>
+
+
+        <a href="#top"
+           class="back-to-top-link">
+
+            Back to top
+
+            <i class="fa-solid fa-arrow-up"
+               aria-hidden="true"></i>
+
+        </a>
+
+
+    </div>
 
 
 </footer>
@@ -1072,15 +2182,18 @@
 
 
 <!-- =====================================================
-     BACK TO TOP
-===================================================== -->
+     BACK TO TOP BUTTON
+====================================================== -->
 
 <button
+    type="button"
     id="topBtn"
-    title="Back to top"
-    onclick="window.scrollTo({top:0, behavior:'smooth'})">
+    class="top-btn"
+    aria-label="Back to top"
+    title="Back to top">
 
-    ↑
+    <i class="fa-solid fa-arrow-up"
+       aria-hidden="true"></i>
 
 </button>
 
@@ -1088,189 +2201,347 @@
 
 <!-- =====================================================
      JAVASCRIPT
-===================================================== -->
+     
+     IMPORTANT:
+     Main functionality should eventually live inside
+     script.js so every page can share the same system.
+====================================================== -->
 
 <script src="script.js"></script>
 
 
 <script>
 
-
 /* =====================================================
-   MOBILE MENU
+   TECHHUB GHANA — HOMEPAGE FUNCTIONALITY
 ===================================================== */
 
-function toggleMenu(){
+document.addEventListener("DOMContentLoaded", function () {
 
-    const nav =
+
+    /* =================================================
+       MOBILE NAVIGATION
+    ================================================== */
+
+    const menuBtn =
+        document.getElementById("menuBtn");
+
+    const navMenu =
         document.getElementById("navMenu");
 
-    nav.classList.toggle("show");
 
-}
+    if (menuBtn && navMenu) {
 
+        menuBtn.addEventListener(
+            "click",
+            function () {
 
+                const isOpen =
+                    navMenu.classList.toggle("show");
 
-/* =====================================================
-   DATE
-===================================================== */
+                menuBtn.classList.toggle(
+                    "active",
+                    isOpen
+                );
 
-function displayDate(){
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    String(isOpen)
+                );
 
-    const dateElement =
-        document.getElementById("today");
+                menuBtn.setAttribute(
+                    "aria-label",
+                    isOpen
+                        ? "Close navigation menu"
+                        : "Open navigation menu"
+                );
 
-    if(!dateElement) return;
-
-    const today =
-        new Date();
-
-    dateElement.textContent =
-        today.toLocaleDateString(
-            "en-GH",
-            {
-                weekday:"long",
-                year:"numeric",
-                month:"long",
-                day:"numeric"
             }
         );
 
-}
 
-displayDate();
+        /* Close menu after selecting a link */
 
+        navMenu.querySelectorAll("a").forEach(
+            function (link) {
 
+                link.addEventListener(
+                    "click",
+                    function () {
 
-/* =====================================================
-   SEARCH
-===================================================== */
+                        navMenu.classList.remove("show");
 
-function searchSite(){
+                        menuBtn.classList.remove("active");
 
-    const input =
-        document.getElementById("siteSearch");
+                        menuBtn.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
 
-    if(!input) return;
+                        menuBtn.setAttribute(
+                            "aria-label",
+                            "Open navigation menu"
+                        );
 
-    const query =
-        input.value.trim();
+                    }
+                );
 
-    if(!query){
-
-        alert("Please enter something to search.");
-
-        return;
+            }
+        );
 
     }
 
 
-    /*
-       Send the search to news page.
-       news.html can later be connected to
-       a full search system.
-    */
 
-    window.location.href =
-        "news.html?search=" +
-        encodeURIComponent(query);
+    /* =================================================
+       CURRENT DATE
+    ================================================== */
 
-}
+    const todayElement =
+        document.getElementById("today");
 
 
+    if (todayElement) {
 
-/* SEARCH WITH ENTER KEY */
+        const date =
+            new Date();
 
-const searchInput =
-    document.getElementById("siteSearch");
 
-if(searchInput){
+        todayElement.innerHTML =
+            `
+                <i class="fa-regular fa-calendar"
+                   aria-hidden="true"></i>
 
-    searchInput.addEventListener(
+                <span>
+                    ${date.toLocaleDateString(
+                        "en-GH",
+                        {
+                            weekday: "long",
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric"
+                        }
+                    )}
+                </span>
+            `;
+
+    }
+
+
+
+    /* =================================================
+       SEARCH
+    ================================================== */
+
+    const searchForm =
+        document.getElementById("searchForm");
+
+    const searchInput =
+        document.getElementById("siteSearch");
+
+
+    if (searchForm && searchInput) {
+
+        searchForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const query =
+                    searchInput.value.trim();
+
+
+                if (!query) {
+
+                    searchInput.focus();
+
+                    return;
+
+                }
+
+
+                window.location.href =
+                    "news.html?search=" +
+                    encodeURIComponent(query);
+
+            }
+        );
+
+    }
+
+
+
+    /* =================================================
+       NEWSLETTER
+       
+       This currently provides frontend feedback only.
+       We will connect it to a real service when the
+       newsletter/backend system is configured.
+    ================================================== */
+
+    const newsletterForm =
+        document.getElementById("newsletterForm");
+
+
+    if (newsletterForm) {
+
+        newsletterForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const emailInput =
+                    document.getElementById(
+                        "newsletterEmail"
+                    );
+
+
+                const email =
+                    emailInput.value.trim();
+
+
+                if (!email) {
+
+                    emailInput.focus();
+
+                    return;
+
+                }
+
+
+                alert(
+                    "Thank you for subscribing to TechHub Ghana!"
+                );
+
+
+                newsletterForm.reset();
+
+            }
+        );
+
+    }
+
+
+
+    /* =================================================
+       BACK TO TOP
+    ================================================== */
+
+    const topBtn =
+        document.getElementById("topBtn");
+
+
+    if (topBtn) {
+
+
+        function updateTopButton() {
+
+            if (window.scrollY > 500) {
+
+                topBtn.classList.add("show");
+
+            } else {
+
+                topBtn.classList.remove("show");
+
+            }
+
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            updateTopButton,
+            {
+                passive: true
+            }
+        );
+
+
+        topBtn.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo(
+                    {
+                        top: 0,
+                        behavior: "smooth"
+                    }
+                );
+
+            }
+        );
+
+
+        updateTopButton();
+
+    }
+
+
+
+    /* =================================================
+       FOOTER YEAR
+    ================================================== */
+
+    const footerYear =
+        document.getElementById("footerYear");
+
+
+    if (footerYear) {
+
+        footerYear.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+
+    /* =================================================
+       CLOSE MOBILE MENU WITH ESCAPE
+    ================================================== */
+
+    document.addEventListener(
         "keydown",
-        function(event){
+        function (event) {
 
-            if(event.key === "Enter"){
+            if (
+                event.key === "Escape" &&
+                navMenu &&
+                navMenu.classList.contains("show")
+            ) {
 
-                searchSite();
+                navMenu.classList.remove("show");
+
+                if (menuBtn) {
+
+                    menuBtn.classList.remove("active");
+
+                    menuBtn.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuBtn.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                }
 
             }
 
         }
     );
 
-}
 
-
-
-/* =====================================================
-   NEWSLETTER
-===================================================== */
-
-function subscribeNewsletter(event){
-
-    event.preventDefault();
-
-    const email =
-        document.getElementById("newsletterEmail").value.trim();
-
-    if(!email){
-
-        alert("Please enter your email.");
-
-        return;
-
-    }
-
-
-    alert(
-        "Thank you for subscribing to TechHub Ghana!"
-    );
-
-
-    document.getElementById(
-        "newsletterEmail"
-    ).value = "";
-
-}
-
-
-
-/* =====================================================
-   BACK TO TOP BUTTON
-===================================================== */
-
-const topButton =
-    document.getElementById("topBtn");
-
-
-window.addEventListener(
-    "scroll",
-    function(){
-
-        if(window.scrollY > 400){
-
-            topButton.style.display =
-                "block";
-
-        }else{
-
-            topButton.style.display =
-                "none";
-
-        }
-
-    }
-);
-
-
-/* Initial state */
-
-topButton.style.display = "none";
-
+});
 
 </script>
 
 
 </body>
-    </html>
+                </html>
