@@ -1,50 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live News | TechHub Ghana</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Live Technology News | TechHub Ghana</title>
+
+    <meta
+        name="description"
+        content="Read the latest automatically updated technology news from TechHub Ghana."
+    >
+
+    <meta
+        name="theme-color"
+        content="#0756d6"
+    >
 
     <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
 </head>
+
 
 <body>
 
-<header>
 
-<div class="top-bar">
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-<div class="logo">
+<header class="main-header">
 
-<img src="images/logo.png" alt="TechHub Ghana">
+    <div class="top-bar">
 
-<div>
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="TechHub Ghana Home"
+        >
 
-<h1>TechHub Ghana</h1>
+            <img
+                src="images/logo.png"
+                alt="TechHub Ghana Logo"
+            >
 
-<p>Live Technology News</p>
+            <div>
 
-</div>
+                <h1>
+                    TechHub Ghana
+                </h1>
 
-</div>
+                <p>
+                    Live Technology News
+                </p>
 
-</div>
+            </div>
+
+        </a>
+
+
+        <div class="header-right">
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search technology news..."
+                    aria-label="Search technology news"
+                >
+
+                <button
+                    type="button"
+                    id="searchBtn"
+                    aria-label="Search"
+                >
+
+                    <i class="fas fa-search"></i>
+
+                </button>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open navigation menu"
+                aria-controls="navMenu"
+                aria-expanded="false"
+                onclick="toggleMenu()"
+            >
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <nav
+        id="navMenu"
+        aria-label="Main navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a
+            href="news.html"
+            class="active"
+        >
+            News
+        </a>
+
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="tools.html">
+            Tools
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
 
 </header>
 
-<section class="section">
 
-<h2>📰 Live Technology News</h2>
+<!-- =====================================================
+     LIVE NEWS BAR
+===================================================== -->
 
-<div id="newsContainer" class="news-left">
+<section
+    class="breaking-news"
+    aria-label="Live news status"
+>
 
-<p>Loading latest news...</p>
+    <div class="today-date">
 
-</div>
+        <i class="fas fa-circle"></i>
+        LIVE
+
+    </div>
+
+
+    <div class="breaking-track">
+
+        <div class="breaking-content">
+
+            Automatically updated technology news
+
+        </div>
+
+    </div>
 
 </section>
 
-<script type="module" src="live-news.js"></script>
+
+<!-- =====================================================
+     LIVE NEWS
+===================================================== -->
+
+<main>
+
+    <section class="section live-news-page">
+
+        <div class="page-heading">
+
+            <span class="category-badge">
+                <i class="fas fa-bolt"></i>
+                LIVE UPDATES
+            </span>
+
+            <h2>
+                📰 Live Technology News
+            </h2>
+
+            <p class="section-intro">
+
+                Stay updated with the latest technology,
+                artificial intelligence, cybersecurity,
+                programming and digital innovation news.
+
+            </p>
+
+        </div>
+
+
+        <div class="news-layout">
+
+
+            <!-- NEWS CONTAINER -->
+
+            <div
+                id="newsContainer"
+                class="news-left"
+                aria-live="polite"
+            >
+
+                <div class="loading">
+
+                    <div class="spinner"></div>
+
+                    <p>
+                        Loading latest technology news...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR -->
+
+            <aside class="sidebar">
+
+
+                <div class="widget">
+
+                    <h3>
+                        🔥 Trending Topics
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            🤖 Artificial Intelligence
+                        </li>
+
+                        <li>
+                            🔒 Cybersecurity
+                        </li>
+
+                        <li>
+                            💻 Programming
+                        </li>
+
+                        <li>
+                            ☁️ Cloud Computing
+                        </li>
+
+                        <li>
+                            📱 Mobile Technology
+                        </li>
+
+                        <li>
+                            🌐 Web Development
+                        </li>
+
+                        <li>
+                            🇬🇭 Ghana Technology
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="widget">
+
+                    <h3>
+                        📈 Popular Technologies
+                    </h3>
+
+
+                    <div class="tags">
+
+                        <span>AI</span>
+
+                        <span>Python</span>
+
+                        <span>JavaScript</span>
+
+                        <span>HTML</span>
+
+                        <span>CSS</span>
+
+                        <span>Firebase</span>
+
+                        <span>GitHub</span>
+
+                        <span>Cloud</span>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         NEWSLETTER
+    ================================================= -->
+
+    <section class="newsletter">
+
+        <h2>
+            Stay Updated
+        </h2>
+
+        <p>
+
+            Get the latest technology news,
+            tutorials and digital updates from
+            TechHub Ghana.
+
+        </p>
+
+
+        <form id="newsletterForm">
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                aria-label="Email address"
+                autocomplete="email"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <h3>
+                TechHub Ghana
+            </h3>
+
+            <p>
+                Technology • Innovation • Learning
+            </p>
+
+            <p>
+                Your trusted source for technology news,
+                tutorials and digital innovation.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
+
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
+
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
+
+            <p>
+                <a href="tools.html">
+                    Tools
+                </a>
+            </p>
+
+            <p>
+                <a href="about.html">
+                    About
+                </a>
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Categories
+            </h3>
+
+            <p>Artificial Intelligence</p>
+
+            <p>Programming</p>
+
+            <p>Cybersecurity</p>
+
+            <p>Cloud Computing</p>
+
+            <p>Ghana Technology</p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                📧 info@techhubghana.com
+            </p>
+
+            <p>
+                📍 Accra, Ghana
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 TechHub Ghana.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button
+    id="topBtn"
+    type="button"
+    aria-label="Back to top"
+>
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+<script src="script.js"></script>
+
+<script
+    type="module"
+    src="live-news.js"
+></script>
+
 
 </body>
-</html>
+
+                </html>
