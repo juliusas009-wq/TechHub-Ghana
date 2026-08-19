@@ -1,68 +1,39 @@
-/* ==========================================
-   TECH HUB V2 - script.js
-========================================== */
+/* =========================================================
+   TECHHUB GHANA
+   MASTER JAVASCRIPT
+========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    /* ==========================
-       DARK MODE
-    ========================== */
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
 
-    const darkBtn = document.getElementById("darkModeBtn");
+    const menuBtn = document.querySelector(".menu-btn");
+    const navMenu = document.getElementById("navMenu");
 
-    if (darkBtn) {
+    if (menuBtn && navMenu) {
 
-        // Restore previous theme
-        if (localStorage.getItem("theme") === "dark") {
-            document.body.classList.add("dark");
-            darkBtn.textContent = "☀️";
-        }
+        menuBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
 
-        darkBtn.addEventListener("click", function () {
+            const isOpen = navMenu.classList.contains("show");
 
-            document.body.classList.toggle("dark");
+            menuBtn.setAttribute("aria-expanded", isOpen);
 
-            if (document.body.classList.contains("dark")) {
-                localStorage.setItem("theme", "dark");
-                darkBtn.textContent = "☀️";
-            } else {
-                localStorage.setItem("theme", "light");
-                darkBtn.textContent = "🌙";
-            }
-
+            menuBtn.textContent = isOpen ? "✕" : "☰";
         });
 
-    }
+        // Close menu when a link is clicked
+        navMenu.querySelectorAll("a").forEach(link => {
 
-    /* ==========================
-       SEARCH
-    ========================== */
+            link.addEventListener("click", () => {
 
-    const searchInput = document.querySelector(".search-box input");
+                navMenu.classList.remove("show");
 
-    if (searchInput) {
+                menuBtn.textContent = "☰";
 
-        searchInput.addEventListener("keyup", function () {
-
-            const value = this.value.toLowerCase();
-
-            const cards = document.querySelectorAll(
-                ".tool-card, .news-card, .tutorial"
-            );
-
-            cards.forEach(card => {
-
-                const text = card.innerText.toLowerCase();
-
-                if (text.includes(value)) {
-
-                    card.style.display = "";
-
-                } else {
-
-                    card.style.display = "none";
-
-                }
+                menuBtn.setAttribute("aria-expanded", "false");
 
             });
 
@@ -70,152 +41,292 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    /* ==========================
-       BUTTON HOVER EFFECT
-    ========================== */
 
-    const buttons = document.querySelectorAll("button");
+    /* =====================================================
+       DARK MODE
+    ===================================================== */
 
-    buttons.forEach(btn => {
+    const darkBtn = document.getElementById("darkModeBtn");
 
-        btn.addEventListener("mouseenter", function () {
+    function applyTheme(theme) {
 
-            btn.style.transform = "scale(1.05)";
+        if (theme === "dark") {
 
-        });
+            document.body.classList.add("dark");
 
-        btn.addEventListener("mouseleave", function () {
+            if (darkBtn) {
+                darkBtn.textContent = "☀️";
+                darkBtn.setAttribute("aria-label", "Switch to light mode");
+            }
 
-            btn.style.transform = "scale(1)";
+        } else {
 
-        });
+            document.body.classList.remove("dark");
 
-    });
-
-});
-
-
-/* ==========================
-   HERO IMAGE SLIDER
-========================== */
-
-const heroImages = [
-
-    "images/hero.jpg",
-    "images/tech1.jpg",
-    "images/tech2.jpg",
-    "images/tech3.jpg"
-
-];
-
-let currentImage = 0;
-
-const heroImage = document.querySelector(".hero-image img");
-
-if (heroImage) {
-
-    setInterval(function () {
-
-        currentImage++;
-
-        if (currentImage >= heroImages.length) {
-
-            currentImage = 0;
+            if (darkBtn) {
+                darkBtn.textContent = "🌙";
+                darkBtn.setAttribute("aria-label", "Switch to dark mode");
+            }
 
         }
 
-        heroImage.src = heroImages[currentImage];
-
-    }, 5000);
-
-}
+    }
 
 
-/* ==========================
-   LIVE DATE
-========================== */
+    const savedTheme = localStorage.getItem("theme") || "light";
 
-function updateDate() {
+    applyTheme(savedTheme);
 
-    const date = new Date();
 
-    const options = {
+    if (darkBtn) {
 
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric"
+        darkBtn.addEventListener("click", () => {
 
-    };
+            const newTheme =
+                document.body.classList.contains("dark")
+                    ? "light"
+                    : "dark";
 
-    const element = document.getElementById("today");
+            localStorage.setItem("theme", newTheme);
 
-    if (element) {
+            applyTheme(newTheme);
 
-        element.innerHTML = date.toLocaleDateString("en-US", options);
+        });
 
     }
 
-}
 
-updateDate();
+    /* =====================================================
+       GLOBAL SEARCH
+    ===================================================== */
 
+    const searchInput = document.querySelector(
+        ".search-box input:not(#tutorialSearch)"
+    );
 
-/* ==========================
-   BACK TO TOP BUTTON
-========================== */
+    if (searchInput) {
 
-const topButton = document.createElement("button");
+        searchInput.addEventListener("input", function () {
 
-topButton.innerHTML = "⬆";
+            const value = this.value.toLowerCase().trim();
 
-topButton.id = "topBtn";
+            const cards = document.querySelectorAll(
+                ".tool-card, .news-card, .tutorial, .ghana-news-card"
+            );
 
-document.body.appendChild(topButton);
+            cards.forEach(card => {
 
-topButton.style.position = "fixed";
-topButton.style.bottom = "20px";
-topButton.style.right = "20px";
-topButton.style.display = "none";
-topButton.style.padding = "15px";
-topButton.style.border = "none";
-topButton.style.borderRadius = "50%";
-topButton.style.background = "#0056d2";
-topButton.style.color = "white";
-topButton.style.cursor = "pointer";
-topButton.style.fontSize = "18px";
+                const text = card.textContent.toLowerCase();
 
-window.addEventListener("scroll", function () {
+                card.style.display =
+                    !value || text.includes(value)
+                        ? ""
+                        : "none";
 
-    if (window.scrollY > 300) {
+            });
 
-        topButton.style.display = "block";
-
-    } else {
-
-        topButton.style.display = "none";
+        });
 
     }
+
+
+    /* =====================================================
+       HERO IMAGE SLIDER
+    ===================================================== */
+
+    const heroImage =
+        document.querySelector(".hero-image img");
+
+    const heroImages = [
+        "images/hero.jpg",
+        "images/tech1.jpg",
+        "images/tech2.jpg",
+        "images/tech3.jpg"
+    ];
+
+    let currentImage = 0;
+
+    if (heroImage && heroImages.length > 1) {
+
+        setInterval(() => {
+
+            currentImage =
+                (currentImage + 1) % heroImages.length;
+
+            heroImage.style.opacity = "0";
+
+            setTimeout(() => {
+
+                heroImage.src = heroImages[currentImage];
+
+                heroImage.style.opacity = "1";
+
+            }, 250);
+
+        }, 5000);
+
+    }
+
+
+    /* =====================================================
+       LIVE DATE
+    ===================================================== */
+
+    const todayElement =
+        document.getElementById("today");
+
+    if (todayElement) {
+
+        const today = new Date();
+
+        todayElement.textContent =
+            today.toLocaleDateString("en-US", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
+
+    }
+
+
+    /* =====================================================
+       BACK TO TOP
+    ===================================================== */
+
+    const topButton =
+        document.getElementById("topBtn");
+
+    if (topButton) {
+
+        window.addEventListener("scroll", () => {
+
+            topButton.classList.toggle(
+                "show",
+                window.scrollY > 400
+            );
+
+        });
+
+        topButton.addEventListener("click", () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+    }
+
+
+    /* =====================================================
+       NEWSLETTER
+    ===================================================== */
+
+    document.querySelectorAll(".newsletter form, .ghana-newsletter form")
+        .forEach(form => {
+
+            form.addEventListener("submit", event => {
+
+                event.preventDefault();
+
+                const email =
+                    form.querySelector("input[type='email']");
+
+                if (!email || !email.value.trim()) {
+                    return;
+                }
+
+                alert(
+                    "Thank you for subscribing to TechHub Ghana! 📩"
+                );
+
+                email.value = "";
+
+            });
+
+        });
 
 });
 
-topButton.addEventListener("click", function () {
 
-    window.scrollTo({
+/* =========================================================
+   BACK TO TOP CREATION
+========================================================= */
 
-        top: 0,
-        behavior: "smooth"
+function createBackToTop() {
+
+    if (document.getElementById("topBtn")) {
+        return;
+    }
+
+    const button = document.createElement("button");
+
+    button.id = "topBtn";
+    button.type = "button";
+    button.innerHTML = "↑";
+    button.setAttribute("aria-label", "Back to top");
+
+    document.body.appendChild(button);
+
+    button.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
 
     });
 
-});
+    window.addEventListener("scroll", () => {
 
-function toggleMenu(){
+        button.classList.toggle(
+            "show",
+            window.scrollY > 400
+        );
 
-let menu = document.getElementById("navMenu");
+    });
+
+}
 
 
-menu.classList.toggle("show");
+document.addEventListener(
+    "DOMContentLoaded",
+    createBackToTop
+);
 
+
+/* =========================================================
+   GLOBAL MOBILE MENU FUNCTION
+   Keeps onclick="toggleMenu()" working
+========================================================= */
+
+function toggleMenu() {
+
+    const menu =
+        document.getElementById("navMenu");
+
+    const button =
+        document.querySelector(".menu-btn");
+
+    if (!menu) return;
+
+    menu.classList.toggle("show");
+
+    if (button) {
+
+        const isOpen =
+            menu.classList.contains("show");
+
+        button.textContent =
+            isOpen ? "✕" : "☰";
+
+        button.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    }
 
 }
