@@ -1,14 +1,34 @@
 /* =========================================================
    TECHHUB GHANA
-   SAVE ARTICLE SYSTEM
+   SAVED ARTICLES
 ========================================================= */
 
-function saveArticle(article) {
+function saveArticle(article = null) {
 
-    if (!article || !article.title) {
-        alert("Unable to save this article.");
-        return;
+    /* Default article */
+
+    if (!article) {
+
+        article = {
+
+            title:
+                "Artificial Intelligence Is Transforming Education",
+
+            description:
+                "AI tools are changing how students learn.",
+
+            image:
+                "images/ai-news.jpg",
+
+            link:
+                "ai-education.html"
+
+        };
+
     }
+
+
+    /* Get existing saved articles */
 
     let savedArticles =
         JSON.parse(
@@ -16,28 +36,30 @@ function saveArticle(article) {
         ) || [];
 
 
-    // Prevent duplicates
+    /* Prevent duplicates */
+
     const alreadySaved =
-        savedArticles.some(
-            saved => saved.link === article.link
-        );
+        savedArticles.some(function (saved) {
+
+            return saved.link === article.link;
+
+        });
 
 
     if (alreadySaved) {
 
-        alert("This article is already saved 🔖");
+        alert(
+            "This article is already saved 🔖"
+        );
 
         return;
+
     }
 
 
-    savedArticles.push({
-        title: article.title,
-        description: article.description || "",
-        image: article.image || "images/logo.png",
-        link: article.link,
-        date: article.date || new Date().toLocaleDateString()
-    });
+    /* Save article */
+
+    savedArticles.push(article);
 
 
     localStorage.setItem(
@@ -46,6 +68,41 @@ function saveArticle(article) {
     );
 
 
-    alert("Article saved successfully 🔖");
+    alert(
+        "Article saved successfully 🔖"
+    );
+
+}
+
+
+/* =========================================================
+   REMOVE SAVED ARTICLE
+========================================================= */
+
+function removeSavedArticle(index) {
+
+    let savedArticles =
+        JSON.parse(
+            localStorage.getItem("savedArticles")
+        ) || [];
+
+
+    savedArticles.splice(index, 1);
+
+
+    localStorage.setItem(
+        "savedArticles",
+        JSON.stringify(savedArticles)
+    );
+
+
+    if (
+        typeof loadSavedArticles ===
+        "function"
+    ) {
+
+        loadSavedArticles();
+
+    }
 
 }
