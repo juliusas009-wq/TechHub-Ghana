@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-19T15:29:56.356803+00:00",
+  "updated": "2026-08-19T16:00:06.489005+00:00",
   "articles": [
+    {
+      "title": "TerraPower’s nuclear reactor has a secret weapon for powering AI data centers",
+      "summary": "TerraPower's nuclear power plant possesses a strategic advantage over competitors, especially when chasing after data center deals.",
+      "link": "https://techcrunch.com/2026/08/19/terrapowers-nuclear-reactor-has-a-secret-weapon-for-powering-ai-data-centers/",
+      "date": "Wed, 19 Aug 2026 15:44:53 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Rivian spinout Also raises another $150 million",
+      "summary": "The round, led by Prysm Capital, will fund the company's expansion beyond pedal-assist electric bikes and commercial cargo quads to autonomous delivery vehicles.",
+      "link": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
+      "date": "Wed, 19 Aug 2026 15:39:47 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Sachin Bansal’s fintech Navi raises first outside capital with $100M Prosus investment",
       "summary": "The investment comes amid Navi plans to go public.",
@@ -142,22 +158,6 @@
       "summary": "A new feature added to Comcast's newest routers can detect if there is motion inside your home without needing traditional motion sensors.",
       "link": "https://techcrunch.com/2026/08/18/comcast-adds-motion-sensing-to-millions-of-its-newer-routers-with-a-privacy-catch/",
       "date": "Tue, 18 Aug 2026 16:39:05 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Why Apple’s camera-equipped AirPods may not be the ‘pervert pods’ consumers fear",
-      "summary": "Apple’s leaked camera-equipped AirPods might avoid the privacy pitfalls of other AI wearables by preventing users from recording photos and videos.",
-      "link": "https://techcrunch.com/2026/08/18/why-apples-camera-equipped-airpods-may-not-be-the-pervert-pods-consumers-fear/",
-      "date": "Tue, 18 Aug 2026 16:19:10 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Bluesky says its recent outage was caused by another DDoS attack",
-      "summary": "This is the latest large-scale DDoS attack to hit the social networking site this year.",
-      "link": "https://techcrunch.com/2026/08/18/bluesky-says-its-recent-outage-was-caused-by-another-ddos-attack/",
-      "date": "Tue, 18 Aug 2026 15:59:48 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
