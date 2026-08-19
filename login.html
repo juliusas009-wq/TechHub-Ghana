@@ -3,12 +3,34 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>Login | TechHub Ghana</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="style.css">
+    <meta name="description"
+          content="Login to your TechHub Ghana account to access your dashboard and personalized features.">
+
+    <meta name="author"
+          content="TechHub Ghana">
+
+    <title>Login | TechHub Ghana</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link rel="icon"
+          href="images/logo.png">
 
 </head>
 
@@ -16,136 +38,492 @@
 <body>
 
 
-<header>
+<!-- ================= HEADER ================= -->
 
-<div class="top-bar">
+<header class="main-header">
 
-<div class="logo">
+    <div class="top-bar">
 
-<img src="images/logo.png" alt="TechHub Ghana Logo">
+        <div class="logo">
 
-<div>
+            <a href="index.html"
+               aria-label="TechHub Ghana Home">
 
-<h1>TechHub Ghana</h1>
+                <img src="images/logo.png"
+                     alt="TechHub Ghana Logo">
 
-<p>Technology • Learning • Innovation</p>
+            </a>
 
-</div>
+            <div>
 
-</div>
+                <h1>
+                    TechHub Ghana
+                </h1>
 
-</div>
+                <p>
+                    Technology • Learning • Innovation
+                </p>
+
+            </div>
+
+        </div>
 
 
-<nav>
+        <!-- SEARCH -->
 
-<a href="index.html">Home</a>
+        <form class="search-box"
+              role="search"
+              action="news.html">
 
-<a href="news.html">News</a>
+            <label for="site-search"
+                   class="sr-only">
 
-<a href="tutorials.html">Tutorials</a>
+                Search TechHub Ghana
 
-<a href="tools.html">Tools</a>
+            </label>
 
-<a href="about.html">About</a>
+            <input
+                id="site-search"
+                type="search"
+                name="q"
+                placeholder="Search technology..."
+                autocomplete="off">
 
-<a href="contact.html">Contact</a>
+            <button type="submit"
+                    aria-label="Search">
 
-</nav>
+                🔍
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- MOBILE MENU BUTTON -->
+
+    <button
+        class="menu-btn"
+        type="button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+        aria-controls="navMenu"
+        aria-expanded="false">
+
+        ☰
+
+    </button>
+
+
+    <!-- NAVIGATION -->
+
+    <nav id="navMenu"
+         aria-label="Main navigation">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="tools.html">
+            Tools
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a href="login.html"
+           class="active">
+            Login
+        </a>
+
+    </nav>
 
 </header>
 
 
+<!-- ================= BREAKING NEWS ================= -->
 
+<div class="breaking-news">
 
-<section class="login-section">
-
-
-<div class="login-box">
-
-
-<h2>Login</h2>
-
-
-<p>
-Welcome back to TechHub Ghana
-</p>
-
-
-
-<form id="loginForm">
-
-
-<label>
-Email
-</label>
-
-<input 
-type="email" 
-id="loginEmail"
-placeholder="Enter your email"
-required>
-
-
-
-<label>
-Password
-</label>
-
-<input 
-type="password"
-id="loginPassword"
-placeholder="Enter your password"
-required>
-
-
-
-<button type="submit">
-Login
-</button>
-
-
-
-</form>
-
-
-
-<p>
-
-Don't have an account?
-
-<a href="signup.html">
-Create Account
-</a>
-
-</p>
-
-
+    <marquee>
+        📢 TechHub Ghana • Technology • Learning • Innovation • Digital Tools
+    </marquee>
 
 </div>
 
 
-</section>
+<!-- ================= LOGIN ================= -->
+
+<main class="login-section">
+
+    <div class="login-box">
+
+        <div class="login-logo">
+
+            <img
+                src="images/logo.png"
+                alt="TechHub Ghana">
+
+        </div>
 
 
+        <h2>
+            Welcome Back 👋
+        </h2>
 
 
+        <p class="login-subtitle">
+            Login to your TechHub Ghana account
+        </p>
+
+
+        <form id="loginForm"
+              novalidate>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="loginEmail">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    name="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="form-group">
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    name="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required>
+
+            </div>
+
+
+            <!-- ERROR MESSAGE -->
+
+            <p id="loginError"
+               class="form-error"
+               role="alert"
+               aria-live="polite">
+            </p>
+
+
+            <!-- LOGIN BUTTON -->
+
+            <button
+                type="submit"
+                class="login-btn">
+
+                🔐 Login
+
+            </button>
+
+
+        </form>
+
+
+        <!-- SIGNUP -->
+
+        <div class="login-footer">
+
+            <p>
+                Don't have an account?
+            </p>
+
+            <a href="signup.html">
+                Create an Account →
+            </a>
+
+        </div>
+
+
+        <!-- BACK HOME -->
+
+        <a href="index.html"
+           class="back-home">
+
+            ← Back to TechHub Ghana
+
+        </a>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<p class="copyright">
+    <div class="footer-grid">
 
-© 2026 TechHub Ghana. All Rights Reserved.
 
-</p>
+        <div>
+
+            <h3>
+                TechHub Ghana
+            </h3>
+
+            <p>
+                Technology • Learning • Innovation
+            </p>
+
+            <p>
+                Your platform for technology news,
+                tutorials and digital tools.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
+
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
+
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
+
+            <p>
+                <a href="tools.html">
+                    Digital Tools
+                </a>
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Account
+            </h3>
+
+            <p>
+                <a href="login.html">
+                    Login
+                </a>
+            </p>
+
+            <p>
+                <a href="signup.html">
+                    Create Account
+                </a>
+            </p>
+
+            <p>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                🇬🇭 Ghana
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact TechHub Ghana
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 TechHub Ghana.
+        All Rights Reserved.
+
+    </p>
 
 </footer>
 
 
+<!-- ================= JAVASCRIPT ================= -->
 
 <script src="dashboard.js"></script>
 
 
+<script>
+
+    /* ===============================
+       MOBILE MENU
+    =============================== */
+
+    function toggleMenu() {
+
+        const nav =
+            document.getElementById("navMenu");
+
+        const button =
+            document.querySelector(".menu-btn");
+
+        nav.classList.toggle("show");
+
+        const isOpen =
+            nav.classList.contains("show");
+
+        button.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    }
+
+
+    /* ===============================
+       LOGIN
+    =============================== */
+
+    const loginForm =
+        document.getElementById("loginForm");
+
+
+    if (loginForm) {
+
+        loginForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    document
+                    .getElementById("loginEmail")
+                    .value
+                    .trim()
+                    .toLowerCase();
+
+
+                const password =
+                    document
+                    .getElementById("loginPassword")
+                    .value;
+
+
+                const savedEmail =
+                    localStorage.getItem("userEmail");
+
+
+                const savedPassword =
+                    localStorage.getItem("userPassword");
+
+
+                const error =
+                    document.getElementById("loginError");
+
+
+                /* Clear previous error */
+
+                error.textContent = "";
+
+
+                /* Check account */
+
+                if (
+                    email === savedEmail &&
+                    password === savedPassword
+                ) {
+
+                    /*
+                     * Store login status.
+                     * dashboard.js can use this to protect
+                     * the dashboard page.
+                     */
+
+                    localStorage.setItem(
+                        "loggedIn",
+                        "true"
+                    );
+
+
+                    window.location.href =
+                        "dashboard.html";
+
+                    return;
+
+                }
+
+
+                /* Incorrect credentials */
+
+                error.textContent =
+                    "Incorrect email or password.";
+
+            }
+        );
+
+    }
+
+</script>
+
+
 </body>
 
-</html>
+  </html>
