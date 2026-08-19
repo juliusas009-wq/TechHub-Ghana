@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-19T12:42:44.131609+00:00",
+  "updated": "2026-08-19T13:42:22.439120+00:00",
   "articles": [
+    {
+      "title": "Home batteries are suddenly cheap and everywhere. Here’s why.",
+      "summary": "Companies including Tesla and Base Power are vying for a piece of the rapidly growing market for home batteries. One technology has made it all possible.",
+      "link": "https://techcrunch.com/2026/08/19/home-batteries-are-suddenly-cheap-and-everywhere-heres-why/",
+      "date": "Wed, 19 Aug 2026 13:40:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "CareCloud confirms 3.7M patients had their medical records stolen in data breach",
+      "summary": "The cyberattack at CareCloud resulted in one of the largest reported data breaches in the U.S. healthcare industry this year.",
+      "link": "https://techcrunch.com/2026/08/19/carecloud-confirms-3-7m-patients-had-their-medical-records-stolen-in-data-breach/",
+      "date": "Wed, 19 Aug 2026 13:04:10 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "AI isn’t close to curing cancer. This startup says it knows what it will take.",
       "summary": "It's the data, stupid.",
@@ -142,22 +158,6 @@
       "summary": "Perplexity's India revenue rose about 60% after the Airtel offer ended for new users, even as downloads declined.",
       "link": "https://techcrunch.com/2026/08/18/perplexitys-free-ai-offer-left-it-with-millions-more-users-in-india/",
       "date": "Tue, 18 Aug 2026 13:45:40 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Apple’s new macOS update reportedly contains a video of AirPods with a camera",
-      "summary": "A video in a macOS Tahoe release candidate version shows a user wearing AirPods, looking at a book, and talking to Siri.",
-      "link": "https://techcrunch.com/2026/08/18/apples-new-macos-update-reportedly-contains-a-video-of-airpods-with-a-camera/",
-      "date": "Tue, 18 Aug 2026 13:28:51 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Daniel Ek’s body-scanning startup Neko Health opens first US office, in New York",
-      "summary": "The scanning and bloodwork health startup founded by Spotify's founder will officially launch in New York in about a month.",
-      "link": "https://techcrunch.com/2026/08/18/daniel-eks-body-scanning-startup-neko-health-opens-first-us-office-in-new-york/",
-      "date": "Tue, 18 Aug 2026 13:00:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
