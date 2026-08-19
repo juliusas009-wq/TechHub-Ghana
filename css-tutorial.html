@@ -2,444 +2,271 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>CSS Tutorial | TechHub Ghana</title>
 
     <meta name="description"
           content="Learn CSS from beginner to advanced with practical examples at TechHub Ghana.">
 
-    <meta name="keywords"
-          content="CSS tutorial, learn CSS, web design, Flexbox, CSS Grid, responsive design, TechHub Ghana">
-
-    <meta name="author"
-          content="TechHub Ghana">
-
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<!-- ================= HEADER ================= -->
 
 <header class="main-header">
 
-    <!-- TOP BAR -->
     <div class="top-bar">
 
-        <!-- LOGO -->
         <a href="index.html" class="logo">
 
-            <img
-                src="images/logo.png"
-                alt="TechHub Ghana Logo">
+            <img src="images/logo.png"
+                 alt="TechHub Ghana Logo">
 
             <div class="logo-text">
 
-                <h1>
-                    TechHub Ghana
-                </h1>
+                <h1>TechHub Ghana</h1>
 
-                <p>
-                    Technology • Tutorials • Digital Tools
-                </p>
+                <p>Technology • Tutorials • Digital Tools</p>
 
             </div>
 
         </a>
 
+        <div class="header-right">
 
-        <!-- SEARCH -->
-        <div class="search-box">
+            <div class="search-box">
 
-            <input
-                type="search"
-                id="tutorialSearch"
-                placeholder="Search tutorials..."
-                aria-label="Search tutorials">
+                <input
+                    type="search"
+                    id="tutorialSearch"
+                    placeholder="Search tutorials..."
+                    aria-label="Search tutorials">
+
+                <button
+                    type="button"
+                    id="tutorialSearchBtn"
+                    aria-label="Search tutorials">
+                    🔍
+                </button>
+
+            </div>
 
             <button
+                class="menu-btn"
+                id="menuBtn"
                 type="button"
-                id="tutorialSearchBtn"
-                aria-label="Search">
-
-                <i class="fas fa-search"></i>
-
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
             </button>
 
         </div>
 
-
-        <!-- MOBILE MENU -->
-        <button
-            class="menu-btn"
-            id="menuBtn"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false">
-
-            ☰
-
-        </button>
-
     </div>
 
-
-    <!-- NAVIGATION -->
     <nav id="navMenu">
 
-        <a href="index.html">
-            Home
-        </a>
+        <a href="index.html">Home</a>
 
-        <a href="ghana-tech.html">
-            🇬🇭 Ghana Tech
-        </a>
+        <a href="ghana-tech.html">🇬🇭 Ghana Tech</a>
 
-        <a href="news.html">
-            News
-        </a>
+        <a href="news.html">News</a>
 
-        <a href="tutorials.html"
-           class="active">
-            Tutorials
-        </a>
+        <a href="tutorials.html" class="active">Tutorials</a>
 
-        <a href="tools.html">
-            Tools
-        </a>
+        <a href="tools.html">Tools</a>
 
-        <a href="gpa.html">
-            GPA
-        </a>
+        <a href="gpa.html">GPA</a>
 
-        <a href="qr-generator.html">
-            QR Generator
-        </a>
+        <a href="qr-generator.html">QR Generator</a>
 
-        <a href="ai-assistant.html">
-            AI Assistant
-        </a>
+        <a href="ai-assistant.html">AI Assistant</a>
 
-        <a href="about.html">
-            About
-        </a>
+        <a href="about.html">About</a>
 
-        <a href="contact.html">
-            Contact
-        </a>
+        <a href="contact.html">Contact</a>
 
     </nav>
 
 </header>
 
 
-<!-- =====================================================
-     BREAKING NEWS
-===================================================== -->
+<!-- ================= BREAKING NEWS ================= -->
 
 <section class="breaking-news">
 
-    <div class="breaking-label">
-        LIVE
-    </div>
-
     <marquee>
-
-        🎨 Learn CSS • Web Design • Responsive Websites •
-        Flexbox • Grid • Animations • Modern UI Design
-
+        🎨 Learn CSS • Web Design • Responsive Websites • Flexbox • Grid • Animations • Modern UI Design
     </marquee>
 
 </section>
 
 
-<!-- =====================================================
-     CSS TUTORIAL
-===================================================== -->
+<!-- ================= TUTORIAL ================= -->
 
 <main class="tutorial-page">
 
-    <!-- TUTORIAL HEADER -->
-    <section class="tutorial-header">
+    <section class="section">
 
-        <span class="category">
-            🎨 CSS TUTORIAL
-        </span>
+        <div class="tutorial-header">
 
-        <h2>
-            CSS Tutorial for Beginners
-        </h2>
-
-        <p>
-            Learn how to design beautiful, responsive and modern
-            websites using Cascading Style Sheets (CSS).
-        </p>
-
-    </section>
-
-
-    <!-- TUTORIAL CONTENT -->
-    <article class="tutorial-content">
-
-
-        <!-- =================================================
-             LESSON 1
-        ================================================== -->
-
-        <section>
+            <span class="category">
+                🎨 CSS TUTORIAL
+            </span>
 
             <h2>
-                1. What is CSS?
+                CSS Tutorial for Beginners
             </h2>
 
             <p>
-                CSS stands for
-                <strong>Cascading Style Sheets</strong>.
-                It is used to control the appearance and layout
-                of HTML websites.
+                Learn how to design beautiful, responsive and modern websites
+                using Cascading Style Sheets (CSS).
+            </p>
+
+        </div>
+
+
+        <article class="tutorial-content">
+
+            <h2>1. What is CSS?</h2>
+
+            <p>
+                CSS stands for <strong>Cascading Style Sheets</strong>.
+                It is used to control the appearance and layout of HTML websites.
             </p>
 
             <p>
-                HTML creates the structure of a website, while CSS
-                makes that website beautiful and easier to use.
+                HTML creates the structure of a website, while CSS makes that
+                website beautiful.
             </p>
-
 
             <div class="code-box">
-
-<pre><code>h1 {
+                <pre><code>h1 {
     color: blue;
 }</code></pre>
-
             </div>
 
-
             <p>
-                The code above changes the color of an HTML heading
-                to blue.
+                The code above changes the color of an HTML heading to blue.
             </p>
 
-        </section>
 
-
-        <!-- =================================================
-             LESSON 2
-        ================================================== -->
-
-        <section>
-
-            <h2>
-                2. How to Add CSS to HTML
-            </h2>
+            <h2>2. How to Add CSS to HTML</h2>
 
             <p>
                 There are three main ways to add CSS to a webpage:
             </p>
 
             <ul>
-
                 <li>Inline CSS</li>
                 <li>Internal CSS</li>
                 <li>External CSS</li>
-
             </ul>
 
-
-            <h3>
-                Inline CSS
-            </h3>
+            <h3>Inline CSS</h3>
 
             <div class="code-box">
-
-<pre><code>&lt;h1 style="color: blue;"&gt;
+                <pre><code>&lt;h1 style="color: blue;"&gt;
     Hello World
 &lt;/h1&gt;</code></pre>
-
             </div>
 
-
-            <h3>
-                Internal CSS
-            </h3>
+            <h3>Internal CSS</h3>
 
             <div class="code-box">
-
-<pre><code>&lt;style&gt;
+                <pre><code>&lt;style&gt;
 
 h1 {
     color: blue;
 }
 
 &lt;/style&gt;</code></pre>
-
             </div>
 
-
-            <h3>
-                External CSS
-            </h3>
+            <h3>External CSS</h3>
 
             <div class="code-box">
-
-<pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
-
+                <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
             </div>
 
-
             <p>
-                External CSS is commonly used for professional
-                websites because one CSS file can control many
-                HTML pages.
+                External CSS is commonly used for professional websites because
+                one CSS file can control many HTML pages.
             </p>
 
-        </section>
 
-
-        <!-- =================================================
-             LESSON 3
-        ================================================== -->
-
-        <section>
-
-            <h2>
-                3. CSS Selectors
-            </h2>
+            <h2>3. CSS Selectors</h2>
 
             <p>
                 Selectors tell CSS which HTML element should be styled.
             </p>
 
-
-            <h3>
-                Element Selector
-            </h3>
+            <h3>Element Selector</h3>
 
             <div class="code-box">
-
-<pre><code>p {
+                <pre><code>p {
     color: green;
 }</code></pre>
-
             </div>
 
-
-            <h3>
-                Class Selector
-            </h3>
+            <h3>Class Selector</h3>
 
             <div class="code-box">
-
-<pre><code>.card {
+                <pre><code>.card {
     background: white;
 }</code></pre>
-
             </div>
 
-
-            <h3>
-                ID Selector
-            </h3>
+            <h3>ID Selector</h3>
 
             <div class="code-box">
-
-<pre><code>#header {
+                <pre><code>#header {
     background: black;
 }</code></pre>
-
             </div>
 
-        </section>
 
-
-        <!-- =================================================
-             LESSON 4
-        ================================================== -->
-
-        <section>
-
-            <h2>
-                4. CSS Colors
-            </h2>
+            <h2>4. CSS Colors</h2>
 
             <p>
-                CSS allows you to change text, background and
-                border colors.
+                CSS allows you to change text, background and border colors.
             </p>
 
-
             <div class="code-box">
-
-<pre><code>h1 {
+                <pre><code>h1 {
     color: red;
 }
 
 body {
     background-color: #f5f5f5;
 }</code></pre>
-
             </div>
 
-        </section>
 
-
-        <!-- =================================================
-             LESSON 5
-        ================================================== -->
-
-        <section>
-
-            <h2>
-                5. CSS Fonts
-            </h2>
-
+            <h2>5. CSS Fonts</h2>
 
             <div class="code-box">
-
-<pre><code>body {
+                <pre><code>body {
     font-family: Arial, sans-serif;
 }
 
 h1 {
     font-size: 40px;
 }</code></pre>
-
             </div>
 
-        </section>
 
-
-        <!-- =================================================
-             LESSON 6
-        ================================================== -->
-
-        <section>
-
-            <h2>
-                6. CSS Box Model
-            </h2>
+            <h2>6. CSS Box Model</h2>
 
             <p>
                 Every HTML element can be thought of as a box.
@@ -447,138 +274,79 @@ h1 {
             </p>
 
             <ul>
-
                 <li>Content</li>
                 <li>Padding</li>
                 <li>Border</li>
                 <li>Margin</li>
-
             </ul>
 
-
             <div class="code-box">
-
-<pre><code>.card {
+                <pre><code>.card {
     padding: 20px;
     margin: 20px;
     border: 1px solid #ccc;
 }</code></pre>
-
             </div>
 
-        </section>
 
-
-        <!-- =================================================
-             LESSON 7
-        ================================================== -->
-
-        <section>
-
-            <h2>
-                7. CSS Flexbox
-            </h2>
+            <h2>7. CSS Flexbox</h2>
 
             <p>
-                Flexbox is useful for arranging elements
-                horizontally or vertically.
+                Flexbox is useful for arranging elements horizontally or vertically.
             </p>
 
-
             <div class="code-box">
-
-<pre><code>.container {
+                <pre><code>.container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }</code></pre>
-
             </div>
 
-        </section>
 
-
-        <!-- =================================================
-             LESSON 8
-        ================================================== -->
-
-        <section>
-
-            <h2>
-                8. CSS Grid
-            </h2>
+            <h2>8. CSS Grid</h2>
 
             <p>
-                CSS Grid is useful for creating layouts
-                with rows and columns.
+                CSS Grid is useful for creating layouts with rows and columns.
             </p>
 
-
             <div class="code-box">
-
-<pre><code>.container {
+                <pre><code>.container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }</code></pre>
-
             </div>
 
-        </section>
 
-
-        <!-- =================================================
-             LESSON 9
-        ================================================== -->
-
-        <section>
-
-            <h2>
-                9. Responsive Design
-            </h2>
+            <h2>9. Responsive Design</h2>
 
             <p>
-                Responsive design makes websites work properly
-                on phones, tablets and computers.
+                Responsive design makes websites work properly on phones,
+                tablets and computers.
             </p>
 
-
             <div class="code-box">
-
-<pre><code>@media (max-width: 768px) {
+                <pre><code>@media (max-width: 768px) {
 
     .container {
         grid-template-columns: 1fr;
     }
 
 }</code></pre>
-
             </div>
 
-        </section>
 
-
-        <!-- =================================================
-             LESSON 10
-        ================================================== -->
-
-        <section>
-
-            <h2>
-                10. CSS Hover Effects
-            </h2>
+            <h2>10. CSS Hover Effects</h2>
 
             <p>
-                The <strong>:hover</strong> selector allows you
-                to change an element when the user moves the
-                mouse over it.
+                The <strong>:hover</strong> selector allows you to change an element
+                when the user moves the mouse over it.
             </p>
 
-
             <div class="code-box">
-
-<pre><code>button {
+                <pre><code>button {
     background: blue;
     color: white;
     padding: 10px 20px;
@@ -587,30 +355,17 @@ h1 {
 button:hover {
     background: black;
 }</code></pre>
-
             </div>
 
-        </section>
 
-
-        <!-- =================================================
-             PRACTICAL PROJECT
-        ================================================== -->
-
-        <section>
-
-            <h2>
-                11. Practical CSS Project
-            </h2>
+            <h2>11. Practical CSS Project</h2>
 
             <p>
                 Let's create a simple technology card.
             </p>
 
-
             <div class="code-box">
-
-<pre><code>&lt;div class="card"&gt;
+                <pre><code>&lt;div class="card"&gt;
 
     &lt;h2&gt;TechHub Ghana&lt;/h2&gt;
 
@@ -623,24 +378,17 @@ button:hover {
     &lt;/button&gt;
 
 &lt;/div&gt;</code></pre>
-
             </div>
 
-
-            <p>
-                CSS:
-            </p>
-
+            <p>CSS:</p>
 
             <div class="code-box">
-
-<pre><code>.card {
+                <pre><code>.card {
     width: 300px;
     padding: 20px;
     background: white;
     border-radius: 10px;
-    box-shadow:
-        0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .card h2 {
@@ -655,106 +403,61 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
 }</code></pre>
+            </div>
+
+
+            <div class="tutorial-exercise">
+
+                <h2>📝 CSS Practice Exercise</h2>
+
+                <p>
+                    Create a webpage containing:
+                </p>
+
+                <ol>
+                    <li>A heading called "My Technology Website"</li>
+                    <li>A paragraph describing your website</li>
+                    <li>A blue button called "Learn More"</li>
+                    <li>A card with padding and a border</li>
+                    <li>A responsive layout</li>
+                </ol>
+
+                <p>
+                    <strong>Challenge:</strong>
+                    Try to make the button change color when the mouse moves over it.
+                </p>
 
             </div>
 
-        </section>
 
+            <div class="tutorial-navigation">
 
-        <!-- =================================================
-             EXERCISE
-        ================================================== -->
+                <a href="html-tutorial.html" class="read-btn">
+                    ← HTML Tutorial
+                </a>
 
-        <section class="tutorial-exercise">
+                <a href="javascript-tutorial.html" class="read-btn">
+                    JavaScript Tutorial →
+                </a>
 
-            <h2>
-                📝 CSS Practice Exercise
-            </h2>
+            </div>
 
-            <p>
-                Create a webpage containing:
-            </p>
+        </article>
 
-            <ol>
-
-                <li>
-                    A heading called
-                    "My Technology Website"
-                </li>
-
-                <li>
-                    A paragraph describing your website
-                </li>
-
-                <li>
-                    A blue button called "Learn More"
-                </li>
-
-                <li>
-                    A card with padding and a border
-                </li>
-
-                <li>
-                    A responsive layout
-                </li>
-
-            </ol>
-
-
-            <p>
-                <strong>Challenge:</strong>
-                Try to make the button change color when the
-                mouse moves over it.
-            </p>
-
-        </section>
-
-
-        <!-- =================================================
-             TUTORIAL NAVIGATION
-        ================================================== -->
-
-        <div class="tutorial-navigation">
-
-            <a
-                href="html-tutorial.html"
-                class="read-btn">
-
-                ← HTML Tutorial
-
-            </a>
-
-
-            <a
-                href="javascript-tutorial.html"
-                class="read-btn">
-
-                JavaScript Tutorial →
-
-            </a>
-
-        </div>
-
-
-    </article>
+    </section>
 
 </main>
 
 
-<!-- =====================================================
-     NEWSLETTER
-===================================================== -->
+<!-- ================= NEWSLETTER ================= -->
 
 <section class="newsletter">
 
-    <h2>
-        Stay Updated
-    </h2>
+    <h2>Stay Updated</h2>
 
     <p>
         Receive new tutorials, technology news and digital tools.
     </p>
-
 
     <form id="newsletterForm">
 
@@ -762,7 +465,6 @@ button:hover {
             type="email"
             id="newsletterEmail"
             placeholder="Enter your email"
-            aria-label="Email address"
             required>
 
         <button type="submit">
@@ -774,147 +476,57 @@ button:hover {
 </section>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
     <div class="footer-grid">
 
-
-        <!-- COMPANY -->
-
         <div>
 
-            <h3>
-                TechHub Ghana
-            </h3>
+            <h3>TechHub Ghana</h3>
 
             <p>
-                Technology • Innovation • Learning
-            </p>
-
-            <p>
-                Your trusted source for technology
-                tutorials, news and digital tools.
+                Technology • Learning • Innovation
             </p>
 
         </div>
 
-
-        <!-- QUICK LINKS -->
-
         <div>
 
-            <h3>
-                Quick Links
-            </h3>
+            <h3>Quick Links</h3>
 
-            <p>
-                <a href="index.html">
-                    Home
-                </a>
-            </p>
-
-            <p>
-                <a href="news.html">
-                    News
-                </a>
-            </p>
-
-            <p>
-                <a href="tutorials.html">
-                    Tutorials
-                </a>
-            </p>
-
-            <p>
-                <a href="tools.html">
-                    Tools
-                </a>
-            </p>
-
-            <p>
-                <a href="ai-assistant.html">
-                    AI Assistant
-                </a>
-            </p>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="news.html">News</a></p>
+            <p><a href="tutorials.html">Tutorials</a></p>
+            <p><a href="tools.html">Tools</a></p>
 
         </div>
 
-
-        <!-- TUTORIALS -->
-
         <div>
 
-            <h3>
-                Tutorials
-            </h3>
+            <h3>Tutorials</h3>
 
-            <p>
-                <a href="html-tutorial.html">
-                    HTML
-                </a>
-            </p>
-
-            <p>
-                <a href="css-tutorial.html">
-                    CSS
-                </a>
-            </p>
-
-            <p>
-                <a href="javascript-tutorial.html">
-                    JavaScript
-                </a>
-            </p>
-
-            <p>
-                <a href="python-tutorial.html">
-                    Python
-                </a>
-            </p>
-
-            <p>
-                <a href="mysql-tutorial.html">
-                    MySQL
-                </a>
-            </p>
-
-            <p>
-                <a href="cybersecurity-tutorial.html">
-                    Cybersecurity
-                </a>
-            </p>
+            <p><a href="html-tutorial.html">HTML</a></p>
+            <p><a href="css-tutorial.html">CSS</a></p>
+            <p><a href="python-tutorial.html">Python</a></p>
+            <p><a href="java-tutorial.html">Java</a></p>
+            <p><a href="mysql-tutorial.html">MySQL</a></p>
 
         </div>
 
-
-        <!-- CONTACT -->
-
         <div>
 
-            <h3>
-                Contact
-            </h3>
+            <h3>Contact</h3>
 
-            <p>
-                📍 Accra, Ghana
-            </p>
-
-            <p>
-                📧 info@techhubghana.com
-            </p>
+            <p>📍 Accra, Ghana</p>
+            <p>📧 info@techhubghana.com</p>
 
         </div>
-
 
     </div>
 
-
     <hr>
-
 
     <p class="copyright">
         © 2026 TechHub Ghana. All Rights Reserved.
@@ -923,13 +535,7 @@ button:hover {
 </footer>
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script src="script.js"></script>
 
-
 </body>
-
     </html>
