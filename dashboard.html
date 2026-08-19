@@ -3,12 +3,74 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =====================================================
+         BASIC META
+    ====================================================== -->
 
-<title>Dashboard | TechHub Ghana</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="style.css">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Your personal TechHub Ghana dashboard for accessing saved news, tutorials and digital tools.">
+
+    <meta name="author"
+          content="TechHub Ghana">
+
+    <meta name="robots"
+          content="noindex, nofollow">
+
+
+    <!-- =====================================================
+         PAGE TITLE
+    ====================================================== -->
+
+    <title>
+        Dashboard | TechHub Ghana
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         MAIN STYLESHEET
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link rel="icon"
+          type="image/png"
+          href="images/logo.png">
 
 </head>
 
@@ -16,175 +78,792 @@
 <body>
 
 
-<header>
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
-<div class="top-bar">
+<header class="main-header">
 
-<div class="logo">
+    <div class="top-bar">
 
-<img src="images/logo.png" alt="TechHub Ghana Logo">
 
-<div>
+        <!-- LOGO -->
 
-<h1>TechHub Ghana</h1>
+        <div class="logo">
 
-<p>Technology • Learning • Innovation</p>
+            <a
+                href="index.html"
+                aria-label="TechHub Ghana Home">
 
-</div>
+                <img
+                    src="images/logo.png"
+                    alt="TechHub Ghana Logo"
+                    loading="eager">
 
-</div>
+            </a>
 
-</div>
 
-<button class="menu-btn" onclick="toggleMenu()">
-☰
-</button>
-    <nav id="navMenu">
+            <div>
 
-<a href="index.html">Home</a>
+                <h1>
+                    TechHub Ghana
+                </h1>
 
-<a href="news.html">News</a>
+                <p>
+                    Technology • Learning • Innovation
+                </p>
 
-<a href="tutorials.html">Tutorials</a>
+            </div>
 
-<a href="tools.html">Tools</a>
+        </div>
 
-<a class="active" href="dashboard.html">Dashboard</a>
 
-</nav>
+        <!-- SEARCH -->
+
+        <form
+            class="search-box"
+            role="search"
+            action="news.html"
+            method="get">
+
+            <label
+                for="dashboard-search"
+                class="sr-only">
+
+                Search TechHub Ghana
+
+            </label>
+
+
+            <input
+                id="dashboard-search"
+                type="search"
+                name="q"
+                placeholder="Search technology news..."
+                autocomplete="off">
+
+
+            <button
+                type="submit"
+                aria-label="Search">
+
+                🔍
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <button
+        class="menu-btn"
+        type="button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+        aria-controls="navMenu"
+        aria-expanded="false">
+
+        ☰
+
+    </button>
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+        id="navMenu"
+        aria-label="Main navigation">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="tools.html">
+            Tools
+        </a>
+
+        <a
+            href="dashboard.html"
+            class="active">
+
+            Dashboard
+
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
 
 </header>
 
 
+<!-- =====================================================
+     BREAKING NEWS
+====================================================== -->
 
+<section class="breaking-news">
 
-<section class="dashboard-section">
+    <marquee
+        behavior="scroll"
+        direction="left">
 
+        📊 TechHub Ghana Dashboard • Saved News • Tutorials •
+        Digital Tools • Technology • Learning
 
-<div class="dashboard-box">
-
-
-<h1>
-Welcome, <span id="displayName">User</span> 👋
-</h1>
-
-
-<p>
-Your personal TechHub Ghana dashboard
-</p>
-
-
-
-<div class="dashboard-cards">
-
-
-
-<div class="dashboard-card">
-
-<h3>
-📰 Saved News
-</h3>
-
-<p>
-View your favorite technology articles.
-</p>
-
-<button>
-Open
-</button>
-
-</div>
-
-
-
-
-
-<div class="dashboard-card">
-
-<h3>
-📚 My Tutorials
-</h3>
-
-<p>
-Access your learning materials.
-</p>
-
-<button>
-Open
-</button>
-
-</div>
-
-
-
-
-
-<div class="dashboard-card">
-
-<h3>
-🛠 My Tools
-</h3>
-
-<p>
-Quick access to TechHub tools.
-</p>
-
-<a href="tools.html">
-<button>
-Open
-</button>
-</a>
-
-</div>
-
-
-
-
-
-<div class="dashboard-card">
-
-<h3>
-⚙ Account Settings
-</h3>
-
-<p>
-Manage your profile information.
-</p>
-
-<button onclick="logout()">
-Logout
-</button>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
+    </marquee>
 
 </section>
 
 
+<!-- =====================================================
+     DASHBOARD
+====================================================== -->
 
+<main class="dashboard-section">
+
+    <div class="dashboard-box">
+
+
+        <!-- =================================================
+             DASHBOARD HEADER
+        ================================================== -->
+
+        <div class="dashboard-header">
+
+            <span class="category">
+                👤 MY DASHBOARD
+            </span>
+
+
+            <h1>
+
+                Welcome,
+                <span id="displayName">
+                    User
+                </span>
+                👋
+
+            </h1>
+
+
+            <p>
+                Your personal TechHub Ghana dashboard.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             DASHBOARD CARDS
+        ================================================== -->
+
+        <div class="dashboard-cards">
+
+
+            <!-- =================================================
+                 SAVED NEWS
+            ================================================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    📰
+                </div>
+
+
+                <h3>
+                    Saved News
+                </h3>
+
+
+                <p>
+                    View your favorite technology articles
+                    and saved news stories.
+                </p>
+
+
+                <a
+                    href="news.html"
+                    class="read-btn">
+
+                    Open News →
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 TUTORIALS
+            ================================================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    📚
+                </div>
+
+
+                <h3>
+                    My Tutorials
+                </h3>
+
+
+                <p>
+                    Continue learning with TechHub Ghana
+                    programming and technology tutorials.
+                </p>
+
+
+                <a
+                    href="tutorials.html"
+                    class="read-btn">
+
+                    Open Tutorials →
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 TOOLS
+            ================================================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    🛠️
+                </div>
+
+
+                <h3>
+                    My Tools
+                </h3>
+
+
+                <p>
+                    Quickly access calculators, generators,
+                    AI tools and other digital utilities.
+                </p>
+
+
+                <a
+                    href="tools.html"
+                    class="read-btn">
+
+                    Open Tools →
+
+                </a>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACCOUNT
+            ================================================== -->
+
+            <div class="dashboard-card">
+
+                <div class="dashboard-icon">
+                    ⚙️
+                </div>
+
+
+                <h3>
+                    Account Settings
+                </h3>
+
+
+                <p>
+                    Manage your dashboard session and
+                    account information.
+                </p>
+
+
+                <button
+                    type="button"
+                    class="read-btn logout-btn"
+                    onclick="logout()">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             QUICK ACCESS
+        ================================================== -->
+
+        <div class="dashboard-quick-links">
+
+            <h2>
+                ⚡ Quick Access
+            </h2>
+
+
+            <div class="quick-links-grid">
+
+
+                <a href="ai-assistant.html">
+
+                    🤖
+                    <span>
+                        AI Assistant
+                    </span>
+
+                </a>
+
+
+                <a href="gpa.html">
+
+                    🎓
+                    <span>
+                        GPA Calculator
+                    </span>
+
+                </a>
+
+
+                <a href="qr-generator.html">
+
+                    📱
+                    <span>
+                        QR Generator
+                    </span>
+
+                </a>
+
+
+                <a href="password-generator.html">
+
+                    🔐
+                    <span>
+                        Password Generator
+                    </span>
+
+                </a>
+
+
+                <a href="tutorials.html">
+
+                    💻
+                    <span>
+                        Programming
+                    </span>
+
+                </a>
+
+
+                <a href="news.html">
+
+                    📰
+                    <span>
+                        Latest News
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     NEWSLETTER
+====================================================== -->
+
+<section class="newsletter">
+
+    <h2>
+        📩 Stay Updated
+    </h2>
+
+
+    <p>
+
+        Get the latest technology news, tutorials
+        and digital tools from TechHub Ghana.
+
+    </p>
+
+
+    <form>
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            aria-label="Email address"
+            required>
+
+
+        <button type="submit">
+
+            Subscribe
+
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
 <footer>
 
-<p class="copyright">
+    <div class="footer-grid">
 
-© 2026 TechHub Ghana. All Rights Reserved.
 
-</p>
+        <!-- BRAND -->
+
+        <div>
+
+            <h3>
+                TechHub Ghana
+            </h3>
+
+
+            <p>
+                Technology • Learning • Innovation
+            </p>
+
+
+            <p>
+
+                Your platform for technology news,
+                tutorials and useful digital tools.
+
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
+
+
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
+
+
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
+
+
+            <p>
+                <a href="tools.html">
+                    Tools
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- POPULAR -->
+
+        <div>
+
+            <h3>
+                Popular Tools
+            </h3>
+
+
+            <p>
+                <a href="ai-assistant.html">
+                    🤖 AI Assistant
+                </a>
+            </p>
+
+
+            <p>
+                <a href="gpa.html">
+                    🎓 GPA Calculator
+                </a>
+            </p>
+
+
+            <p>
+                <a href="qr-generator.html">
+                    📱 QR Generator
+                </a>
+            </p>
+
+
+            <p>
+                <a href="password-generator.html">
+                    🔐 Password Generator
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+
+            <p>
+                🇬🇭 Ghana
+            </p>
+
+
+            <p>
+                <a href="contact.html">
+                    Contact TechHub Ghana
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 TechHub Ghana.
+        All Rights Reserved.
+
+    </p>
 
 </footer>
 
 
+<!-- =====================================================
+     SCROLL TO TOP
+====================================================== -->
+
+<button
+    id="topBtn"
+    type="button"
+    aria-label="Scroll to top"
+    onclick="window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })">
+
+    ↑
+
+</button>
+
+
+<!-- =====================================================
+     MAIN SITE JAVASCRIPT
+====================================================== -->
+
+<script src="script.js"></script>
+
+
+<!-- =====================================================
+     DASHBOARD JAVASCRIPT
+====================================================== -->
 
 <script src="dashboard.js"></script>
 
 
+<script>
+
+    /* =====================================================
+       DISPLAY USER NAME
+    ====================================================== */
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+            const displayName =
+                document.getElementById("displayName");
+
+
+            if (!displayName) {
+                return;
+            }
+
+
+            /*
+             * Try common localStorage names.
+             * This allows the dashboard to work with
+             * an existing login system.
+             */
+
+            const savedName =
+                localStorage.getItem("userName") ||
+                localStorage.getItem("username") ||
+                localStorage.getItem("displayName");
+
+
+            if (savedName) {
+
+                displayName.textContent =
+                    savedName;
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       MOBILE MENU FALLBACK
+    ====================================================== */
+
+    function toggleMenu() {
+
+        const nav =
+            document.getElementById("navMenu");
+
+        const button =
+            document.querySelector(".menu-btn");
+
+
+        if (!nav) {
+            return;
+        }
+
+
+        nav.classList.toggle("show");
+
+
+        const isOpen =
+            nav.classList.contains("show");
+
+
+        if (button) {
+
+            button.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+        }
+
+    }
+
+
+    /* =====================================================
+       LOGOUT FALLBACK
+    ====================================================== */
+
+    function logout() {
+
+        /*
+         * Remove common dashboard/login values.
+         * If dashboard.js already handles logout,
+         * its function will take precedence.
+         */
+
+        try {
+
+            localStorage.removeItem("userName");
+            localStorage.removeItem("username");
+            localStorage.removeItem("displayName");
+            localStorage.removeItem("loggedIn");
+
+        } catch (error) {
+
+            console.warn(
+                "Could not clear local storage.",
+                error
+            );
+
+        }
+
+
+        window.location.href =
+            "index.html";
+
+    }
+
+
+    /* =====================================================
+       SCROLL TO TOP
+    ====================================================== */
+
+    const topBtn =
+        document.getElementById("topBtn");
+
+
+    window.addEventListener(
+        "scroll",
+        function () {
+
+            if (!topBtn) {
+                return;
+            }
+
+
+            if (window.scrollY > 400) {
+
+                topBtn.style.display =
+                    "flex";
+
+            } else {
+
+                topBtn.style.display =
+                    "none";
+
+            }
+
+        }
+    );
+
+</script>
+
+
 </body>
 
-</html>
+                        </html>
