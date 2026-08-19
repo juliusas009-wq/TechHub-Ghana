@@ -1,148 +1,1402 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- =====================================================
+         BASIC SEO
+    ===================================================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPA Calculator | Student Tech Hub</title>
-    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Calculate your GPA quickly and easily with the TechHub Ghana GPA Calculator. Enter your course marks and credit hours to calculate your GPA out of 4.00.">
+
+    <meta name="keywords"
+          content="GPA calculator Ghana, university GPA calculator, student GPA calculator, TechHub Ghana, CGPA calculator">
+
+    <meta name="author"
+          content="TechHub Ghana">
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <!-- =====================================================
+         PAGE TITLE
+    ===================================================== -->
+
+    <title>
+        GPA Calculator | TechHub Ghana
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ===================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ===================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         MAIN STYLESHEET
+    ===================================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- =====================================================
+         FAVICON
+    ===================================================== -->
+
+    <link rel="icon"
+          href="images/logo.png"
+          type="image/png">
+
 </head>
+
+
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">💻 Student Tech Hub</div>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="tools.html">Tools</a>
-            <a href="fashion.html">Fashion</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="top-bar">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <a href="index.html"
+               aria-label="TechHub Ghana Home">
+
+                <img src="images/logo.png"
+                     alt="TechHub Ghana Logo">
+
+            </a>
+
+
+            <div>
+
+                <h1>
+                    TechHub Ghana
+                </h1>
+
+                <p>
+                    Technology News • Tutorials • Digital Tools
+                </p>
+
+            </div>
+
         </div>
-    </nav>
 
-    <!-- GPA Calculator -->
-    <div class="container">
 
-        <h1>🎓 GPA Calculator</h1>
-        <p>Enter your marks and credit hours for each course.</p>
 
-        <table>
-            <tr>
-                <th>Course</th>
-                <th>Mark (%)</th>
-                <th>Credit Hour</th>
-            </tr>
+        <!-- SEARCH -->
 
-            <tr>
-                <td>Course 1</td>
-                <td><input type="number" id="mark1" min="0" max="100"></td>
-                <td><input type="number" id="credit1" min="1" value="3"></td>
-            </tr>
+        <form class="search-box"
+              role="search"
+              action="news.html">
 
-            <tr>
-                <td>Course 2</td>
-                <td><input type="number" id="mark2" min="0" max="100"></td>
-                <td><input type="number" id="credit2" min="1" value="3"></td>
-            </tr>
+            <label for="gpaSearch"
+                   class="sr-only">
 
-            <tr>
-                <td>Course 3</td>
-                <td><input type="number" id="mark3" min="0" max="100"></td>
-                <td><input type="number" id="credit3" min="1" value="3"></td>
-            </tr>
+                Search TechHub Ghana
 
-            <tr>
-                <td>Course 4</td>
-                <td><input type="number" id="mark4" min="0" max="100"></td>
-                <td><input type="number" id="credit4" min="1" value="3"></td>
-            </tr>
+            </label>
 
-            <tr>
-                <td>Course 5</td>
-                <td><input type="number" id="mark5" min="0" max="100"></td>
-                <td><input type="number" id="credit5" min="1" value="3"></td>
-            </tr>
+            <input
+                type="search"
+                id="gpaSearch"
+                name="q"
+                placeholder="Search technology..."
+                autocomplete="off"
+            >
 
-            <tr>
-                <td>Course 6</td>
-                <td><input type="number" id="mark6" min="0" max="100"></td>
-                <td><input type="number" id="credit6" min="1" value="3"></td>
-            </tr>
+            <button type="submit"
+                    aria-label="Search">
 
-            <tr>
-                <td>Course 7</td>
-                <td><input type="number" id="mark7" min="0" max="100"></td>
-                <td><input type="number" id="credit7" min="1" value="3"></td>
-            </tr>
+                🔍
 
-            <tr>
-                <td>Course 8</td>
-                <td><input type="number" id="mark8" min="0" max="100"></td>
-                <td><input type="number" id="credit8" min="1" value="3"></td>
-            </tr>
+            </button>
 
-        </table>
-
-        <br>
-
-        <button onclick="calculateGPA()">Calculate GPA</button>
-
-        <h2 id="result"></h2>
+        </form>
 
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 TechHub Ghana. All Rights Reserved.</p>
-    </footer>
+
+
+    <!-- MOBILE MENU BUTTON -->
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+        aria-controls="navMenu"
+        aria-expanded="false">
+
+        ☰
+
+    </button>
+
+
+
+    <!-- NAVIGATION -->
+
+    <nav id="navMenu"
+         aria-label="Main navigation">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="tools.html">
+            Tools
+        </a>
+
+        <a href="gpa.html"
+           class="active">
+            GPA
+        </a>
+
+        <a href="qr-generator.html">
+            QR Generator
+        </a>
+
+        <a href="ai-assistant.html">
+            AI Assistant
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     BREAKING NEWS
+===================================================== -->
+
+<section class="breaking-news">
+
+    <div class="today-date"
+         id="today">
+    </div>
+
+    <marquee>
+
+        🎓 TechHub Ghana • GPA Calculator • Student Tools •
+        Technology • Learning • Innovation
+
+    </marquee>
+
+</section>
+
+
+
+<!-- =====================================================
+     GPA HERO
+===================================================== -->
+
+<section class="tool-hero">
+
+    <div>
+
+        <span class="category">
+            🎓 STUDENT TOOL
+        </span>
+
+        <h2>
+            GPA Calculator
+        </h2>
+
+        <p>
+            Calculate your Grade Point Average quickly using
+            your course marks and credit hours.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GPA CALCULATOR
+===================================================== -->
+
+<section class="section">
+
+    <div class="calculator-container">
+
+
+        <!-- INTRODUCTION -->
+
+        <div class="calculator-header">
+
+            <h2>
+                🎓 Calculate Your GPA
+            </h2>
+
+            <p>
+                Enter the mark and credit hour for each course.
+                The calculator will calculate your GPA on a
+                4.00 scale.
+            </p>
+
+        </div>
+
+
+
+        <!-- GRADING SCALE -->
+
+        <div class="info-box">
+
+            <h3>
+                📊 Grading Scale
+            </h3>
+
+            <div class="grading-scale">
+
+                <div>
+                    <strong>80–100</strong>
+                    <span>A • 4.00</span>
+                </div>
+
+                <div>
+                    <strong>75–79</strong>
+                    <span>B+ • 3.50</span>
+                </div>
+
+                <div>
+                    <strong>70–74</strong>
+                    <span>B • 3.00</span>
+                </div>
+
+                <div>
+                    <strong>65–69</strong>
+                    <span>C+ • 2.50</span>
+                </div>
+
+                <div>
+                    <strong>60–64</strong>
+                    <span>C • 2.00</span>
+                </div>
+
+                <div>
+                    <strong>55–59</strong>
+                    <span>D+ • 1.50</span>
+                </div>
+
+                <div>
+                    <strong>50–54</strong>
+                    <span>D • 1.00</span>
+                </div>
+
+                <div>
+                    <strong>0–49</strong>
+                    <span>F • 0.00</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- GPA FORM -->
+
+        <form id="gpaForm">
+
+            <div class="gpa-table-wrapper">
+
+                <table class="gpa-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Course
+                            </th>
+
+                            <th>
+                                Mark (%)
+                            </th>
+
+                            <th>
+                                Credit Hours
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <!-- COURSE 1 -->
+
+                        <tr>
+
+                            <td>
+                                Course 1
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="mark1"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="e.g. 75"
+                                    required
+                                >
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="credit1"
+                                    min="1"
+                                    max="20"
+                                    step="1"
+                                    value="3"
+                                    required
+                                >
+                            </td>
+
+                        </tr>
+
+
+                        <!-- COURSE 2 -->
+
+                        <tr>
+
+                            <td>
+                                Course 2
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="mark2"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="e.g. 75"
+                                    required
+                                >
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="credit2"
+                                    min="1"
+                                    max="20"
+                                    step="1"
+                                    value="3"
+                                    required
+                                >
+                            </td>
+
+                        </tr>
+
+
+                        <!-- COURSE 3 -->
+
+                        <tr>
+
+                            <td>
+                                Course 3
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="mark3"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="e.g. 75"
+                                    required
+                                >
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="credit3"
+                                    min="1"
+                                    max="20"
+                                    step="1"
+                                    value="3"
+                                    required
+                                >
+                            </td>
+
+                        </tr>
+
+
+                        <!-- COURSE 4 -->
+
+                        <tr>
+
+                            <td>
+                                Course 4
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="mark4"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="e.g. 75"
+                                    required
+                                >
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="credit4"
+                                    min="1"
+                                    max="20"
+                                    step="1"
+                                    value="3"
+                                    required
+                                >
+                            </td>
+
+                        </tr>
+
+
+                        <!-- COURSE 5 -->
+
+                        <tr>
+
+                            <td>
+                                Course 5
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="mark5"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="e.g. 75"
+                                    required
+                                >
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="credit5"
+                                    min="1"
+                                    max="20"
+                                    step="1"
+                                    value="3"
+                                    required
+                                >
+                            </td>
+
+                        </tr>
+
+
+                        <!-- COURSE 6 -->
+
+                        <tr>
+
+                            <td>
+                                Course 6
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="mark6"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="e.g. 75"
+                                    required
+                                >
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="credit6"
+                                    min="1"
+                                    max="20"
+                                    step="1"
+                                    value="3"
+                                    required
+                                >
+                            </td>
+
+                        </tr>
+
+
+                        <!-- COURSE 7 -->
+
+                        <tr>
+
+                            <td>
+                                Course 7
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="mark7"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="e.g. 75"
+                                    required
+                                >
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="credit7"
+                                    min="1"
+                                    max="20"
+                                    step="1"
+                                    value="3"
+                                    required
+                                >
+                            </td>
+
+                        </tr>
+
+
+                        <!-- COURSE 8 -->
+
+                        <tr>
+
+                            <td>
+                                Course 8
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="mark8"
+                                    min="0"
+                                    max="100"
+                                    step="0.01"
+                                    placeholder="e.g. 75"
+                                    required
+                                >
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    id="credit8"
+                                    min="1"
+                                    max="20"
+                                    step="1"
+                                    value="3"
+                                    required
+                                >
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- BUTTONS -->
+
+            <div class="calculator-actions">
+
+                <button
+                    type="submit"
+                    class="read-btn">
+
+                    🧮 Calculate GPA
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    onclick="resetGPA()">
+
+                    🔄 Reset
+
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <!-- =================================================
+             RESULT
+        ================================================= -->
+
+        <div
+            id="result"
+            class="gpa-result"
+            aria-live="polite">
+
+        </div>
+
+
+        <!-- =================================================
+             INFORMATION
+        ================================================= -->
+
+        <div class="highlight-box">
+
+            <h3>
+                💡 How the GPA is calculated
+            </h3>
+
+            <p>
+                For each course, the grade point is multiplied
+                by the course credit hours. The total points are
+                then divided by the total number of credit hours.
+            </p>
+
+            <p>
+                <strong>
+                    GPA = Total Grade Points ÷ Total Credit Hours
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     OTHER TOOLS
+===================================================== -->
+
+<section class="section">
+
+    <h2>
+        🛠️ More TechHub Ghana Tools
+    </h2>
+
+    <p class="section-intro">
+        Explore more useful tools for students and technology
+        enthusiasts.
+    </p>
+
+
+    <div class="tutorial-grid">
+
+
+        <div class="tutorial">
+
+            <h3>
+                📱 QR Generator
+            </h3>
+
+            <p>
+                Generate QR codes quickly and easily.
+            </p>
+
+            <a href="qr-generator.html"
+               class="read-btn">
+
+                Open Tool →
+
+            </a>
+
+        </div>
+
+
+
+        <div class="tutorial">
+
+            <h3>
+                🤖 AI Assistant
+            </h3>
+
+            <p>
+                Explore the TechHub Ghana AI Assistant.
+            </p>
+
+            <a href="ai-assistant.html"
+               class="read-btn">
+
+                Open AI →
+
+            </a>
+
+        </div>
+
+
+
+        <div class="tutorial">
+
+            <h3>
+                🛠️ All Tools
+            </h3>
+
+            <p>
+                View all available TechHub Ghana digital tools.
+            </p>
+
+            <a href="tools.html"
+               class="read-btn">
+
+                View Tools →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+    <h2>
+        📩 Stay Updated
+    </h2>
+
+    <p>
+        Get technology news, tutorials and useful digital tools.
+    </p>
+
+    <form>
+
+        <input
+            type="email"
+            placeholder="Enter your email"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <h3>
+                TechHub Ghana
+            </h3>
+
+            <p>
+                Technology • Learning • Innovation
+            </p>
+
+            <p>
+                Your platform for technology news,
+                tutorials and useful digital tools.
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
+
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
+
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
+
+            <p>
+                <a href="tools.html">
+                    Tools
+                </a>
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Student Tools
+            </h3>
+
+            <p>
+                <a href="gpa.html">
+                    🎓 GPA Calculator
+                </a>
+            </p>
+
+            <p>
+                <a href="qr-generator.html">
+                    📱 QR Generator
+                </a>
+            </p>
+
+            <p>
+                <a href="ai-assistant.html">
+                    🤖 AI Assistant
+                </a>
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                🇬🇭 Ghana
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact TechHub Ghana
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 TechHub Ghana.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
-function getGradePoint(mark){
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
-    if(mark >= 80) return 4.0;
-    if(mark >= 75) return 3.5;
-    if(mark >= 70) return 3.0;
-    if(mark >= 65) return 2.5;
-    if(mark >= 60) return 2.0;
-    if(mark >= 55) return 1.5;
-    if(mark >= 50) return 1.0;
+function toggleMenu() {
 
-    return 0.0;
+    const nav =
+        document.getElementById("navMenu");
 
-}
+    const button =
+        document.getElementById("menuBtn");
 
-function calculateGPA(){
+    if (!nav) return;
 
-    let totalPoints = 0;
-    let totalCredits = 0;
+    nav.classList.toggle("show");
 
-    for(let i = 1; i <= 8; i++){
+    if (button) {
 
-        let mark = Number(document.getElementById("mark"+i).value);
-        let credit = Number(document.getElementById("credit"+i).value);
+        const isOpen =
+            nav.classList.contains("show");
 
-        if(mark === "" || mark < 0 || mark > 100){
-
-            alert("Please enter valid marks (0 - 100).");
-            return;
-
-        }
-
-        totalPoints += getGradePoint(mark) * credit;
-        totalCredits += credit;
+        button.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
 
     }
 
-    let gpa = totalPoints / totalCredits;
+}
 
-    document.getElementById("result").innerHTML =
-    "🎉 Your GPA is: <strong>" + gpa.toFixed(2) + "</strong> / 4.00";
+
+
+/* =====================================================
+   GPA GRADE POINT
+===================================================== */
+
+function getGradePoint(mark) {
+
+    if (mark >= 80) return 4.00;
+
+    if (mark >= 75) return 3.50;
+
+    if (mark >= 70) return 3.00;
+
+    if (mark >= 65) return 2.50;
+
+    if (mark >= 60) return 2.00;
+
+    if (mark >= 55) return 1.50;
+
+    if (mark >= 50) return 1.00;
+
+    return 0.00;
 
 }
 
+
+
+/* =====================================================
+   GPA CALCULATOR
+===================================================== */
+
+const gpaForm =
+    document.getElementById("gpaForm");
+
+
+if (gpaForm) {
+
+    gpaForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            let totalPoints = 0;
+
+            let totalCredits = 0;
+
+
+            for (
+                let i = 1;
+                i <= 8;
+                i++
+            ) {
+
+                const markInput =
+                    document.getElementById(
+                        "mark" + i
+                    );
+
+                const creditInput =
+                    document.getElementById(
+                        "credit" + i
+                    );
+
+
+                if (
+                    !markInput ||
+                    !creditInput
+                ) {
+
+                    continue;
+
+                }
+
+
+                const mark =
+                    parseFloat(
+                        markInput.value
+                    );
+
+                const credit =
+                    parseFloat(
+                        creditInput.value
+                    );
+
+
+                /* Validate mark */
+
+                if (
+                    Number.isNaN(mark) ||
+                    mark < 0 ||
+                    mark > 100
+                ) {
+
+                    alert(
+                        "Please enter a valid mark between 0 and 100 for Course " +
+                        i +
+                        "."
+                    );
+
+                    markInput.focus();
+
+                    return;
+
+                }
+
+
+                /* Validate credit */
+
+                if (
+                    Number.isNaN(credit) ||
+                    credit <= 0
+                ) {
+
+                    alert(
+                        "Please enter a valid credit hour for Course " +
+                        i +
+                        "."
+                    );
+
+                    creditInput.focus();
+
+                    return;
+
+                }
+
+
+                const gradePoint =
+                    getGradePoint(mark);
+
+
+                totalPoints +=
+                    gradePoint * credit;
+
+
+                totalCredits +=
+                    credit;
+
+            }
+
+
+            /* Prevent division by zero */
+
+            if (totalCredits <= 0) {
+
+                alert(
+                    "Please enter valid credit hours."
+                );
+
+                return;
+
+            }
+
+
+            const gpa =
+                totalPoints / totalCredits;
+
+
+            const result =
+                document.getElementById(
+                    "result"
+                );
+
+
+            result.innerHTML = `
+
+                <div class="result-card">
+
+                    <span class="result-icon">
+                        🎉
+                    </span>
+
+                    <h2>
+                        Your GPA
+                    </h2>
+
+                    <div class="gpa-number">
+                        ${gpa.toFixed(2)}
+                    </div>
+
+                    <p>
+                        out of 4.00
+                    </p>
+
+                    <p class="result-message">
+                        ${getGPAMessage(gpa)}
+                    </p>
+
+                </div>
+
+            `;
+
+
+            result.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   GPA MESSAGE
+===================================================== */
+
+function getGPAMessage(gpa) {
+
+    if (gpa >= 3.75) {
+
+        return "Excellent performance! Keep it up. 🏆";
+
+    }
+
+    if (gpa >= 3.00) {
+
+        return "Very good performance. Keep improving! 👏";
+
+    }
+
+    if (gpa >= 2.50) {
+
+        return "Good performance. There is room to improve. 📚";
+
+    }
+
+    if (gpa >= 2.00) {
+
+        return "Keep working hard and aim higher. 💪";
+
+    }
+
+    if (gpa >= 1.00) {
+
+        return "Keep studying and seek help where necessary. 📖";
+
+    }
+
+    return "Keep working hard. You can improve your results. 💪";
+
+}
+
+
+
+/* =====================================================
+   RESET GPA
+===================================================== */
+
+function resetGPA() {
+
+    const form =
+        document.getElementById(
+            "gpaForm"
+        );
+
+    const result =
+        document.getElementById(
+            "result"
+        );
+
+
+    if (form) {
+
+        form.reset();
+
+    }
+
+
+    /* Restore default credit hours */
+
+    for (
+        let i = 1;
+        i <= 8;
+        i++
+    ) {
+
+        const credit =
+            document.getElementById(
+                "credit" + i
+            );
+
+
+        if (credit) {
+
+            credit.value = 3;
+
+        }
+
+    }
+
+
+    if (result) {
+
+        result.innerHTML = "";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   TODAY'S DATE
+===================================================== */
+
+const today =
+    document.getElementById(
+        "today"
+    );
+
+
+if (today) {
+
+    const date =
+        new Date();
+
+
+    today.textContent =
+        date.toLocaleDateString(
+            "en-GH",
+            {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            }
+        );
+
+}
+
+
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+
+const newsletterForms =
+    document.querySelectorAll(
+        ".newsletter form"
+    );
+
+
+newsletterForms.forEach(
+    function (form) {
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+                const email =
+                    form.querySelector(
+                        'input[type="email"]'
+                    );
+
+
+                if (
+                    email &&
+                    email.value.trim()
+                ) {
+
+                    alert(
+                        "Thank you for subscribing to TechHub Ghana!"
+                    );
+
+                    form.reset();
+
+                }
+
+            }
+        );
+
+    }
+);
+
 </script>
 
+
 </body>
-</html>
+
+    </html>
