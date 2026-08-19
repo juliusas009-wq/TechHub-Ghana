@@ -3,215 +3,372 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<meta
-    name="description"
-    content="Free QR Code Generator by TechHub Ghana">
+    <meta
+        name="description"
+        content="Free QR Code Generator by TechHub Ghana. Create QR codes for websites, text, phone numbers and email addresses."
+    >
 
-<title>QR Code Generator | TechHub Ghana</title>
+    <meta
+        name="theme-color"
+        content="#0b5ed7"
+    >
 
-<link rel="stylesheet" href="style.css">
+    <title>QR Code Generator | TechHub Ghana</title>
 
-<link
-    rel="preconnect"
-    href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css">
 
-<link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
 
-<link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
 
 </head>
 
+
 <body>
 
-<header>
 
-<div class="top-bar">
+<header class="main-header">
 
-<div class="logo">
-
-<img
-    src="images/logo.png"
-    alt="TechHub Ghana Logo">
-
-<div>
-
-<h1>TechHub Ghana</h1>
-
-<p>
-Technology News • Tutorials • Digital Tools
-</p>
-
-</div>
-
-</div>
-
-</div>
+    <div class="top-bar">
 
 
-<button
-    class="menu-btn"
-    onclick="toggleMenu()"
-    aria-label="Open menu"
-    aria-expanded="false">
+        <a href="index.html" class="logo">
 
-☰
+            <img
+                src="images/logo.png"
+                alt="TechHub Ghana Logo"
+            >
 
-</button>
+            <div class="logo-text">
+
+                <h1>
+                    TechHub Ghana
+                </h1>
+
+                <p>
+                    Technology • Tutorials • Digital Tools
+                </p>
+
+            </div>
+
+        </a>
 
 
-<nav id="navMenu">
+        <div class="search-box">
 
-<a href="index.html">Home</a>
+            <input
+                type="search"
+                id="siteSearch"
+                placeholder="Search TechHub Ghana..."
+                aria-label="Search TechHub Ghana"
+            >
 
-<a href="news.html">News</a>
+            <button
+                type="button"
+                id="siteSearchBtn"
+                aria-label="Search"
+            >
+                <i class="fas fa-search"></i>
+            </button>
 
-<a href="tutorials.html">Tutorials</a>
+        </div>
 
-<a class="active" href="tools.html">Tools</a>
 
-<a href="gpa.html">GPA</a>
+        <button
+            type="button"
+            id="darkModeBtn"
+            class="dark-mode-btn"
+            aria-label="Toggle dark mode"
+        >
+            🌙
+        </button>
 
-<a href="ai-assistant.html">AI Assistant</a>
+    </div>
 
-<a href="about.html">About</a>
 
-<a href="contact.html">Contact</a>
+    <button
+        type="button"
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
 
-</nav>
+
+    <nav id="navMenu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="ghana-tech.html">
+            🇬🇭 Ghana Tech
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="tools.html">
+            Tools
+        </a>
+
+        <a href="gpa.html">
+            GPA
+        </a>
+
+        <a
+            href="qr-generator.html"
+            class="active"
+        >
+            QR Generator
+        </a>
+
+        <a href="ai-assistant.html">
+            AI Assistant
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
 
 </header>
 
 
 <main>
 
+
 <section class="tool-page">
 
-<div class="tool-header">
 
-<span class="tool-badge">🛠️ FREE DIGITAL TOOL</span>
+    <div class="tool-header">
 
-<h1>QR Code Generator</h1>
-
-<p>
-Create a QR code for websites, text, phone numbers,
-emails and other information.
-</p>
-
-</div>
+        <span class="tool-badge">
+            🛠️ FREE DIGITAL TOOL
+        </span>
 
 
-<div class="qr-generator-card">
-
-<label for="qrText">
-Enter your content
-</label>
-
-<textarea
-    id="qrText"
-    placeholder="https://example.com"
-    rows="4"></textarea>
+        <h1>
+            QR Code Generator
+        </h1>
 
 
-<button
-    id="generateQR"
-    class="primary-btn">
+        <p>
+            Create a QR code for websites, text,
+            phone numbers, emails and other information.
+        </p>
 
-Generate QR Code
-
-</button>
-
-
-<div
-    id="qrcode"
-    class="qr-result">
-
-<p>
-Your QR code will appear here.
-</p>
-
-</div>
+    </div>
 
 
-<div
-    id="qrActions"
-    class="qr-actions"
-    hidden>
+    <div class="qr-generator-card">
 
-<button
-    id="downloadQR"
-    class="secondary-btn">
 
-Download QR Code
+        <label for="qrText">
+            Enter your content
+        </label>
 
-</button>
 
-</div>
+        <textarea
+            id="qrText"
+            placeholder="https://example.com"
+            rows="4"
+            maxlength="2000"
+            aria-label="QR code content"
+        ></textarea>
 
-</div>
+
+        <button
+            type="button"
+            id="generateQR"
+            class="primary-btn"
+        >
+            Generate QR Code
+        </button>
+
+
+        <div
+            id="qrcode"
+            class="qr-result"
+            aria-live="polite"
+        >
+
+            <p>
+                Your QR code will appear here.
+            </p>
+
+        </div>
+
+
+        <div
+            id="qrActions"
+            class="qr-actions"
+            hidden
+        >
+
+            <button
+                type="button"
+                id="downloadQR"
+                class="secondary-btn"
+            >
+                Download QR Code
+            </button>
+
+        </div>
+
+    </div>
 
 </section>
+
 
 </main>
 
 
 <footer>
 
-<div class="footer-grid">
 
-<div>
+    <div class="footer-grid">
 
-<h3>TechHub Ghana</h3>
 
-<p>
-Technology • Innovation • Learning
-</p>
+        <div>
 
-<p>
-Free technology resources and digital tools
-for students and everyday users.
-</p>
+            <h3>
+                TechHub Ghana
+            </h3>
 
-</div>
+            <p>
+                Technology • Learning • Innovation
+            </p>
 
-<div>
+            <p>
+                Free technology resources and digital
+                tools for students and everyday users.
+            </p>
 
-<h3>Quick Links</h3>
+        </div>
 
-<p><a href="index.html">Home</a></p>
-<p><a href="news.html">News</a></p>
-<p><a href="tutorials.html">Tutorials</a></p>
-<p><a href="tools.html">Tools</a></p>
 
-</div>
+        <div>
 
-<div>
+            <h3>
+                Quick Links
+            </h3>
 
-<h3>Tools</h3>
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
 
-<p><a href="gpa.html">GPA Calculator</a></p>
-<p><a href="qr-generator.html">QR Generator</a></p>
-<p><a href="ai-assistant.html">AI Assistant</a></p>
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
 
-</div>
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
 
-</div>
+            <p>
+                <a href="tools.html">
+                    Tools
+                </a>
+            </p>
 
-<hr>
+        </div>
 
-<p class="copyright">
-© 2026 TechHub Ghana. All Rights Reserved.
-</p>
+
+        <div>
+
+            <h3>
+                Tools
+            </h3>
+
+            <p>
+                <a href="gpa.html">
+                    GPA Calculator
+                </a>
+            </p>
+
+            <p>
+                <a href="qr-generator.html">
+                    QR Generator
+                </a>
+            </p>
+
+            <p>
+                <a href="ai-assistant.html">
+                    AI Assistant
+                </a>
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                <a href="contact.html">
+                    Contact Us
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+        © 2026 TechHub Ghana. All Rights Reserved.
+    </p>
 
 </footer>
 
@@ -221,84 +378,209 @@ for students and everyday users.
 
 <script>
 
-const qrInput =
-document.getElementById("qrText");
+/* =====================================================
+   TECHHUB GHANA QR GENERATOR
+===================================================== */
 
-const qrButton =
-document.getElementById("generateQR");
-
-const qrResult =
-document.getElementById("qrcode");
-
-const qrActions =
-document.getElementById("qrActions");
-
-const downloadButton =
-document.getElementById("downloadQR");
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
 
-qrButton.addEventListener("click", () => {
-
-    const text =
-        qrInput.value.trim();
+        const qrInput =
+            document.getElementById("qrText");
 
 
-    if (!text) {
+        const qrButton =
+            document.getElementById("generateQR");
 
-        alert(
-            "Please enter text, a URL, email or phone number."
+
+        const qrResult =
+            document.getElementById("qrcode");
+
+
+        const qrActions =
+            document.getElementById("qrActions");
+
+
+        const downloadButton =
+            document.getElementById("downloadQR");
+
+
+        if (
+            !qrInput ||
+            !qrButton ||
+            !qrResult
+        ) {
+            return;
+        }
+
+
+        /* =================================================
+           GENERATE QR CODE
+        ================================================= */
+
+        qrButton.addEventListener(
+            "click",
+            function () {
+
+
+                const text =
+                    qrInput.value.trim();
+
+
+                if (!text) {
+
+                    alert(
+                        "Please enter text, a URL, email or phone number."
+                    );
+
+                    qrInput.focus();
+
+                    return;
+                }
+
+
+                const qrURL =
+                    "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="
+                    +
+                    encodeURIComponent(text);
+
+
+                qrResult.innerHTML = `
+
+                    <img
+                        id="generatedQR"
+                        src="${qrURL}"
+                        alt="Generated QR Code"
+                        width="300"
+                        height="300"
+                    >
+
+                    <p>
+                        QR code generated successfully.
+                    </p>
+
+                `;
+
+
+                if (qrActions) {
+
+                    qrActions.hidden = false;
+
+                }
+
+            }
         );
 
-        qrInput.focus();
 
-        return;
+        /* =================================================
+           DOWNLOAD QR CODE
+        ================================================= */
+
+        if (downloadButton) {
+
+            downloadButton.addEventListener(
+                "click",
+                async function () {
+
+
+                    const qr =
+                        document.getElementById(
+                            "generatedQR"
+                        );
+
+
+                    if (!qr) {
+
+                        alert(
+                            "Generate a QR code first."
+                        );
+
+                        return;
+
+                    }
+
+
+                    try {
+
+
+                        const response =
+                            await fetch(qr.src);
+
+
+                        if (!response.ok) {
+
+                            throw new Error(
+                                "Unable to download QR code."
+                            );
+
+                        }
+
+
+                        const blob =
+                            await response.blob();
+
+
+                        const blobURL =
+                            URL.createObjectURL(blob);
+
+
+                        const link =
+                            document.createElement("a");
+
+
+                        link.href =
+                            blobURL;
+
+
+                        link.download =
+                            "techhub-ghana-qr-code.png";
+
+
+                        document.body.appendChild(
+                            link
+                        );
+
+
+                        link.click();
+
+
+                        link.remove();
+
+
+                        URL.revokeObjectURL(
+                            blobURL
+                        );
+
+
+                    }
+
+                    catch (error) {
+
+                        /*
+                           Fallback: open the QR image
+                           if browser blocks direct download.
+                        */
+
+                        window.open(
+                            qr.src,
+                            "_blank"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
     }
-
-
-    const qrURL =
-        "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="
-        + encodeURIComponent(text);
-
-
-    qrResult.innerHTML = `
-
-        <img
-            id="generatedQR"
-            src="${qrURL}"
-            alt="Generated QR Code">
-
-    `;
-
-
-    qrActions.hidden = false;
-
-});
-
-
-downloadButton.addEventListener("click", () => {
-
-    const qr =
-        document.getElementById("generatedQR");
-
-    if (!qr) return;
-
-
-    const link =
-        document.createElement("a");
-
-    link.href = qr.src;
-
-    link.download =
-        "techhub-ghana-qr-code.png";
-
-    link.target = "_blank";
-
-    link.click();
-
-});
+);
 
 </script>
 
+
 </body>
 
-    </html>
+</html>
