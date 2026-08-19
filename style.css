@@ -2712,3 +2712,181 @@ input:focus-visible {
     }
 
 }
+
+/* =========================================================
+   FINAL MOBILE WIDTH / ZOOM FIX
+   TechHub Ghana
+========================================================= */
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+/* Prevent any child element from forcing the page wider */
+.site-header,
+.main-nav,
+.breaking-news,
+.hero,
+.section,
+.newsletter,
+.site-footer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* Important: grid/flex children must be allowed to shrink */
+.top-bar,
+.nav-inner,
+.breaking-inner,
+.hero-content,
+.section-container,
+.news-layout,
+.news-left,
+.news-sidebar,
+.newsletter-inner,
+.footer-grid,
+.footer-bottom {
+    min-width: 0;
+}
+
+/* Images can NEVER create horizontal overflow */
+img {
+    max-width: 100%;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .section-container,
+    .top-bar,
+    .nav-inner,
+    .breaking-inner,
+    .hero-content {
+        width: calc(100% - 28px);
+        max-width: calc(100% - 28px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Header */
+    .top-bar {
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .logo {
+        min-width: 0;
+        max-width: calc(100% - 56px);
+    }
+
+    .logo-content {
+        min-width: 0;
+    }
+
+    .logo-title {
+        white-space: nowrap;
+    }
+
+    /* Hero */
+    .hero-content {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero-text,
+    .hero-image-wrapper {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        min-width: 0;
+        object-fit: cover;
+    }
+
+    /* Cards */
+    .card-grid,
+    .tutorial-grid,
+    .why-grid {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .tool-card,
+    .tutorial,
+    .technology-card {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* News */
+    .news-layout,
+    .news-card,
+    .news-content {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .news-card {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Newsletter */
+    .newsletter-inner {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    /* Footer */
+    .footer-grid,
+    .footer-bottom {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+}
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .section-container,
+    .top-bar,
+    .nav-inner,
+    .breaking-inner,
+    .hero-content {
+        width: calc(100% - 22px);
+        max-width: calc(100% - 22px);
+    }
+
+    .hero-image,
+    .hero-image img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
