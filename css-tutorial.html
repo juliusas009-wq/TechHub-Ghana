@@ -58,28 +58,38 @@ placeholder="Search tutorials...">
 </div>
 
 
-<button class="menu-btn" onclick="toggleMenu()">
+<header>
 
-☰
+    <div class="top-bar">
 
-</button>
+        <!-- Logo/search here -->
 
+    </div>
 
-<nav id="navMenu">
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        ☰
+    </button>
 
-<a href="index.html">Home</a>
+    <nav id="navMenu">
 
-<a href="news.html">News</a>
+        <a href="index.html">Home</a>
+        <a href="ghana-tech.html">🇬🇭 Ghana Tech</a>
+        <a href="news.html">News</a>
+        <a href="tutorials.html">Tutorials</a>
+        <a href="tools.html">Tools</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
 
-<a class="active" href="tutorials.html">Tutorials</a>
+    </nav>
 
-<a href="tools.html">Tools</a>
+</header>
 
-<a href="about.html">About</a>
-
-<a href="contact.html">Contact</a>
-
-</nav>
+<script src="script.js"></script>
 
 </header>
 
