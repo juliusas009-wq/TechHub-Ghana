@@ -1,2547 +1,2714 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+/* =========================================================
+   TECHHUB GHANA
+   COMPLETE MASTER STYLESHEET
+   Matched to the supplied index.html
+========================================================= */
+
+
+/* =========================================================
+   1. RESET & GLOBAL SETTINGS
+========================================================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+::selection {
+    background: #0b5cff;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   2. CSS VARIABLES
+========================================================= */
+
+:root {
+
+    /* Main colors */
+    --primary: #0b5cff;
+    --primary-dark: #0848c7;
+    --primary-light: #eaf2ff;
+
+    --secondary: #00a86b;
+    --secondary-dark: #087f55;
+
+    --accent: #ffb703;
+    --danger: #ef4444;
+
+    /* Text */
+    --text: #172033;
+    --text-dark: #0f172a;
+    --text-light: #667085;
+    --text-muted: #98a2b3;
+    --white: #ffffff;
+
+    /* Background */
+    --background: #f4f7fb;
+    --surface: #ffffff;
+    --surface-alt: #eef3f9;
+
+    /* Borders */
+    --border: #e5eaf1;
+    --border-dark: #d4dbe5;
+
+    /* Effects */
+    --shadow-sm: 0 4px 15px rgba(15, 23, 42, 0.06);
+    --shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 20px 55px rgba(15, 23, 42, 0.12);
+
+    --radius-sm: 10px;
+    --radius: 16px;
+    --radius-lg: 24px;
 
-    <!-- =====================================================
-         BASIC DOCUMENT SETUP
-    ====================================================== -->
+    --container: 1180px;
 
-    <meta charset="UTF-8">
+    --transition: 0.25s ease;
+}
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color"
-          content="#0b5cff">
+/* =========================================================
+   3. ACCESSIBILITY
+========================================================= */
 
-    <meta name="description"
-          content="TechHub Ghana — Technology news, programming tutorials, AI, cybersecurity, web development and free digital tools for students and digital users in Ghana.">
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 
-    <meta name="keywords"
-          content="TechHub Ghana, Ghana technology, technology news Ghana, AI Ghana, programming tutorials, Python, JavaScript, cybersecurity, web development, digital tools, Ghana students">
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 20px;
+    z-index: 9999;
 
-    <meta name="author"
-          content="TechHub Ghana">
+    padding: 12px 18px;
 
-    <meta name="robots"
-          content="index, follow">
+    background: var(--primary);
+    color: #fff;
 
-    <link rel="canonical"
-          href="https://juliusas009-wq.github.io/TechHub-Ghana/">
+    border-radius: 8px;
 
-    <title>TechHub Ghana | Technology News, Tutorials & Digital Tools</title>
+    font-size: 14px;
+    font-weight: 600;
 
+    transition: top var(--transition);
+}
 
-    <!-- =====================================================
-         OPEN GRAPH / SOCIAL SHARING
-    ====================================================== -->
+.skip-link:focus {
+    top: 20px;
+}
 
-    <meta property="og:type"
-          content="website">
 
-    <meta property="og:title"
-          content="TechHub Ghana | Technology News, Tutorials & Digital Tools">
+/* =========================================================
+   4. GENERAL CONTAINERS
+========================================================= */
 
-    <meta property="og:description"
-          content="Technology news, tutorials, AI, programming, cybersecurity and useful free digital tools.">
-
-    <meta property="og:url"
-          content="https://juliusas009-wq.github.io/TechHub-Ghana/">
-
-    <meta property="og:site_name"
-          content="TechHub Ghana">
-
-    <meta property="og:image"
-          content="images/hero.jpg">
-
-
-    <!-- =====================================================
-         FAVICON
-    ====================================================== -->
-
-    <link rel="icon"
-          type="image/png"
-          href="images/logo.png">
-
-
-    <!-- =====================================================
-         GOOGLE FONT
-    ====================================================== -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-
-    <!-- =====================================================
-         FONT AWESOME
-         Icons will work if the CDN is available.
-    ====================================================== -->
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
-    <!-- =====================================================
-         MAIN STYLESHEET
-    ====================================================== -->
-
-    <link rel="stylesheet"
-          href="style.css">
-
-</head>
-
-
-<body id="top">
-
-
-<!-- =====================================================
-     SKIP LINK
-     Improves keyboard accessibility.
-====================================================== -->
-
-<a class="skip-link"
-   href="#main-content">
-
-    Skip to main content
-
-</a>
-
-
-
-<!-- =====================================================
-     SITE HEADER
-====================================================== -->
-
-<header class="site-header"
-        id="siteHeader">
-
-
-    <!-- =================================================
-         TOP HEADER
-    ================================================== -->
-
-    <div class="top-bar">
-
-
-        <!-- BRAND -->
-        <a href="index.html"
-           class="logo"
-           aria-label="TechHub Ghana home">
-
-
-            <div class="logo-image">
-
-                <img src="images/logo.png"
-                     alt="TechHub Ghana logo"
-                     width="56"
-                     height="56">
-
-            </div>
-
-
-            <div class="logo-content">
-
-                <span class="logo-title">
-                    TechHub Ghana
-                </span>
-
-                <span class="logo-tagline">
-                    Technology • Learning • Innovation
-                </span>
-
-            </div>
-
-
-        </a>
-
-
-
-        <!-- DESKTOP SEARCH -->
-
-        <form class="search-box"
-              id="searchForm"
-              role="search">
-
-            <label for="siteSearch"
-                   class="sr-only">
-
-                Search TechHub Ghana
-
-            </label>
-
-
-            <input
-                type="search"
-                id="siteSearch"
-                name="q"
-                placeholder="Search technology, tutorials..."
-                autocomplete="off"
-                aria-label="Search TechHub Ghana">
-
-
-            <button
-                type="submit"
-                aria-label="Search">
-
-                <i class="fa-solid fa-magnifying-glass"
-                   aria-hidden="true"></i>
-
-            </button>
-
-        </form>
-
-
-
-        <!-- MOBILE MENU BUTTON -->
-
-        <button
-            type="button"
-            class="menu-btn"
-            id="menuBtn"
-            aria-label="Open navigation menu"
-            aria-controls="navMenu"
-            aria-expanded="false">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-
-    </div>
-
-
-
-    <!-- =================================================
-         NAVIGATION
-    ================================================== -->
-
-    <nav class="main-nav"
-         id="navMenu"
-         aria-label="Main navigation">
-
-
-        <div class="nav-inner">
-
-
-            <a href="index.html"
-               class="active"
-               aria-current="page">
-
-                <i class="fa-solid fa-house"
-                   aria-hidden="true"></i>
-
-                <span>Home</span>
-
-            </a>
-
-
-            <a href="ghana-tech.html">
-
-                <span class="nav-flag">
-                    🇬🇭
-                </span>
-
-                <span>Ghana Tech</span>
-
-            </a>
-
-
-            <a href="news.html">
-
-                <i class="fa-regular fa-newspaper"
-                   aria-hidden="true"></i>
-
-                <span>News</span>
-
-            </a>
-
-
-            <a href="tutorials.html">
-
-                <i class="fa-solid fa-graduation-cap"
-                   aria-hidden="true"></i>
-
-                <span>Tutorials</span>
-
-            </a>
-
-
-            <a href="tools.html">
-
-                <i class="fa-solid fa-toolbox"
-                   aria-hidden="true"></i>
-
-                <span>Tools</span>
-
-            </a>
-
-
-            <a href="about.html">
-
-                <i class="fa-solid fa-circle-info"
-                   aria-hidden="true"></i>
-
-                <span>About</span>
-
-            </a>
-
-
-            <a href="contact.html">
-
-                <i class="fa-solid fa-envelope"
-                   aria-hidden="true"></i>
-
-                <span>Contact</span>
-
-            </a>
-
-
-        </div>
-
-    </nav>
-
-</header>
-
-
-
-<!-- =====================================================
-     BREAKING / SITE UPDATE BAR
-====================================================== -->
-
-<section class="breaking-news"
-         aria-label="TechHub Ghana latest updates">
-
-
-    <div class="breaking-inner">
-
-
-        <div class="today-date"
-             id="today">
-
-            <i class="fa-regular fa-calendar"
-               aria-hidden="true"></i>
-
-            <span>Loading date...</span>
-
-        </div>
-
-
-        <div class="breaking-label">
-
-            <i class="fa-solid fa-bolt"
-               aria-hidden="true"></i>
-
-            <span>Tech Update</span>
-
-        </div>
-
-
-        <div class="breaking-content"
-             aria-label="TechHub Ghana highlights">
-
-
-            <div class="breaking-track">
-
-                <span>
-                    Technology News
-                </span>
-
-                <span>
-                    Programming Tutorials
-                </span>
-
-                <span>
-                    Free Digital Tools
-                </span>
-
-                <span>
-                    Artificial Intelligence
-                </span>
-
-                <span>
-                    Cybersecurity
-                </span>
-
-                <span>
-                    Web Development
-                </span>
-
-                <span>
-                    Database Tutorials
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     MAIN CONTENT
-====================================================== -->
-
-<main id="main-content">
-
-
-
-<!-- =====================================================
-     HERO SECTION
-====================================================== -->
-
-<section class="hero"
-         aria-labelledby="hero-title">
-
-
-    <div class="hero-content">
-
-
-        <div class="hero-text">
-
-
-            <span class="eyebrow">
-
-                <span class="eyebrow-dot"></span>
-
-                TECHHUB GHANA
-
-            </span>
-
-
-            <h1 id="hero-title">
-
-                Technology
-                <span>Made Simple.</span>
-
-            </h1>
-
-
-            <p class="hero-description">
-
-                Discover technology news, learn programming,
-                explore Artificial Intelligence, improve your
-                cybersecurity knowledge and use powerful free
-                digital tools — all in one place.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-
-                <a href="tools.html"
-                   class="btn btn-primary">
-
-                    <i class="fa-solid fa-toolbox"
-                       aria-hidden="true"></i>
-
-                    <span>Explore Tools</span>
-
-                </a>
-
-
-                <a href="news.html"
-                   class="btn btn-secondary">
-
-                    <i class="fa-regular fa-newspaper"
-                       aria-hidden="true"></i>
-
-                    <span>Latest News</span>
-
-                </a>
-
-
-            </div>
-
-
-            <div class="hero-stats">
-
-
-                <div class="hero-stat">
-
-                    <strong>Free</strong>
-
-                    <span>Digital Tools</span>
-
-                </div>
-
-
-                <div class="hero-stat">
-
-                    <strong>Practical</strong>
-
-                    <span>Tutorials</span>
-
-                </div>
-
-
-                <div class="hero-stat">
-
-                    <strong>Ghana</strong>
-
-                    <span>Focused</span>
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-
-        <div class="hero-image-wrapper">
-
-
-            <div class="hero-image">
-
-
-                <img
-                    src="images/hero.jpg"
-                    alt="Technology, innovation and digital learning"
-                    width="900"
-                    height="600"
-                    loading="eager">
-
-
-                <div class="hero-image-overlay"></div>
-
-
-                <div class="hero-floating-card hero-card-one">
-
-                    <div class="floating-icon">
-
-                        <i class="fa-solid fa-microchip"
-                           aria-hidden="true"></i>
-
-                    </div>
-
-                    <div>
-
-                        <strong>Technology</strong>
-
-                        <span>Learn & Explore</span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="hero-floating-card hero-card-two">
-
-                    <span class="pulse-dot"></span>
-
-                    <span>Ghana Tech</span>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     TRENDING TOPICS
-====================================================== -->
-
-<section class="trending-section"
-         aria-labelledby="trending-title">
-
-
-    <div class="section-container">
-
-
-        <div class="trending-box">
-
-
-            <div class="trending-heading">
-
-
-                <div class="trending-icon">
-
-                    <i class="fa-solid fa-fire"
-                       aria-hidden="true"></i>
-
-                </div>
-
-
-                <div>
-
-                    <span class="section-kicker">
-                        What's trending
-                    </span>
-
-                    <h2 id="trending-title">
-                        Popular Right Now
-                    </h2>
-
-                </div>
-
-
-            </div>
-
-
-
-            <div class="trending-list">
-
-
-                <a href="ai-assistant.html"
-                   class="trending-item">
-
-                    <span class="trending-item-icon">
-                        🤖
-                    </span>
-
-                    <span>AI Assistant</span>
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </a>
-
-
-                <a href="gpa.html"
-                   class="trending-item">
-
-                    <span class="trending-item-icon">
-                        🎓
-                    </span>
-
-                    <span>GPA Calculator</span>
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </a>
-
-
-                <a href="qr-generator.html"
-                   class="trending-item">
-
-                    <span class="trending-item-icon">
-                        📱
-                    </span>
-
-                    <span>QR Generator</span>
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </a>
-
-
-                <a href="tutorials.html#python"
-                   class="trending-item">
-
-                    <span class="trending-item-icon">
-                        🐍
-                    </span>
-
-                    <span>Learn Python</span>
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </a>
-
-
-                <a href="tutorials.html#mysql"
-                   class="trending-item">
-
-                    <span class="trending-item-icon">
-                        🗄️
-                    </span>
-
-                    <span>MySQL Basics</span>
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </a>
-
-
-            </div>
-
-
-            <a href="news.html"
-               class="view-more">
-
-                <span>View Technology News</span>
-
-                <i class="fa-solid fa-arrow-right"
-                   aria-hidden="true"></i>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     POPULAR TOOLS
-====================================================== -->
-
-<section class="section"
-         aria-labelledby="tools-title">
-
-
-    <div class="section-container">
-
-
-        <div class="section-heading">
-
-
-            <div>
-
-                <span class="section-kicker">
-                    Useful & free
-                </span>
-
-                <h2 id="tools-title">
-                    Popular Tools
-                </h2>
-
-            </div>
-
-
-            <a href="tools.html"
-               class="section-link">
-
-                View All Tools
-
-                <i class="fa-solid fa-arrow-right"
-                   aria-hidden="true"></i>
-
-            </a>
-
-
-        </div>
-
-
-
-        <div class="card-grid">
-
-
-            <!-- GPA -->
-
-            <article class="tool-card">
-
-
-                <div class="tool-card-top">
-
-
-                    <div class="icon">
-
-                        <span>🎓</span>
-
-                    </div>
-
-
-                    <span class="tool-label">
-                        Student
-                    </span>
-
-
-                </div>
-
-
-                <h3>
-                    GPA Calculator
-                </h3>
-
-
-                <p>
-                    Calculate your semester GPA quickly
-                    using your course grades and credit hours.
-                </p>
-
-
-                <a href="gpa.html"
-                   class="card-action">
-
-                    Open Tool
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </a>
-
-
-            </article>
-
-
-
-            <!-- QR -->
-
-            <article class="tool-card">
-
-
-                <div class="tool-card-top">
-
-
-                    <div class="icon">
-
-                        <span>📱</span>
-
-                    </div>
-
-
-                    <span class="tool-label">
-                        Generator
-                    </span>
-
-
-                </div>
-
-
-                <h3>
-                    QR Generator
-                </h3>
-
-
-                <p>
-                    Create QR codes instantly for links,
-                    text, contact details and more.
-                </p>
-
-
-                <a href="qr-generator.html"
-                   class="card-action">
-
-                    Open Tool
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </a>
-
-
-            </article>
-
-
-
-            <!-- AI -->
-
-            <article class="tool-card">
-
-
-                <div class="tool-card-top">
-
-
-                    <div class="icon">
-
-                        <span>🤖</span>
-
-                    </div>
-
-
-                    <span class="tool-label">
-                        AI
-                    </span>
-
-
-                </div>
-
-
-                <h3>
-                    AI Assistant
-                </h3>
-
-
-                <p>
-                    Improve writing, summarize text,
-                    fix grammar and make your work clearer.
-                </p>
-
-
-                <a href="ai-assistant.html"
-                   class="card-action">
-
-                    Try AI Assistant
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </a>
-
-
-            </article>
-
-
-
-            <!-- PASSWORD -->
-
-            <article class="tool-card">
-
-
-                <div class="tool-card-top">
-
-
-                    <div class="icon">
-
-                        <span>🔐</span>
-
-                    </div>
-
-
-                    <span class="tool-label">
-                        Security
-                    </span>
-
-
-                </div>
-
-
-                <h3>
-                    Password Generator
-                </h3>
-
-
-                <p>
-                    Generate strong passwords for
-                    accounts and online services.
-                </p>
-
-
-                <a href="password-generator.html"
-                   class="card-action">
-
-                    Generate Password
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </a>
-
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     LATEST TECHNOLOGY NEWS
-====================================================== -->
-
-<section class="section section-alt"
-         aria-labelledby="news-title">
-
-
-    <div class="section-container">
-
-
-        <div class="section-heading">
-
-
-            <div>
-
-                <span class="section-kicker">
-                    Stay informed
-                </span>
-
-                <h2 id="news-title">
-                    Latest Technology News
-                </h2>
-
-            </div>
-
-
-            <a href="news.html"
-               class="section-link">
-
-                View All News
-
-                <i class="fa-solid fa-arrow-right"
-                   aria-hidden="true"></i>
-
-            </a>
-
-
-        </div>
-
-
-
-        <div class="news-layout">
-
-
-            <div class="news-left">
-
-
-                <!-- NEWS 1 -->
-
-                <a href="news.html"
-                   class="news-card">
-
-
-                    <div class="news-image">
-
-                        <img
-                            src="images/tech1.jpg"
-                            alt="Artificial Intelligence in education"
-                            width="600"
-                            height="400"
-                            loading="lazy">
-
-                        <span class="news-category">
-                            Artificial Intelligence
-                        </span>
-
-                    </div>
-
-
-                    <div class="news-content">
-
-
-                        <span class="news-meta">
-                            Technology
-                        </span>
-
-
-                        <h3>
-                            Artificial Intelligence in Education
-                        </h3>
-
-
-                        <p>
-                            Discover how AI is changing
-                            learning through intelligent
-                            assistants, digital tools and
-                            adaptive learning systems.
-                        </p>
-
-
-                        <span class="read-more">
-
-                            Read More
-
-                            <i class="fa-solid fa-arrow-right"
-                               aria-hidden="true"></i>
-
-                        </span>
-
-
-                    </div>
-
-
-                </a>
-
-
-
-                <!-- NEWS 2 -->
-
-                <a href="news.html"
-                   class="news-card">
-
-
-                    <div class="news-image">
-
-                        <img
-                            src="images/tech2.jpg"
-                            alt="Web development using HTML CSS and JavaScript"
-                            width="600"
-                            height="400"
-                            loading="lazy">
-
-                        <span class="news-category">
-                            Web Development
-                        </span>
-
-                    </div>
-
-
-                    <div class="news-content">
-
-
-                        <span class="news-meta">
-                            Programming
-                        </span>
-
-
-                        <h3>
-                            Learn HTML, CSS & JavaScript
-                        </h3>
-
-
-                        <p>
-                            Start building modern websites
-                            from scratch with practical
-                            beginner-friendly tutorials.
-                        </p>
-
-
-                        <span class="read-more">
-
-                            Read More
-
-                            <i class="fa-solid fa-arrow-right"
-                               aria-hidden="true"></i>
-
-                        </span>
-
-
-                    </div>
-
-
-                </a>
-
-
-
-                <!-- NEWS 3 -->
-
-                <a href="news.html"
-                   class="news-card">
-
-
-                    <div class="news-image">
-
-                        <img
-                            src="images/tech3.jpg"
-                            alt="Cybersecurity protection"
-                            width="600"
-                            height="400"
-                            loading="lazy">
-
-                        <span class="news-category">
-                            Cybersecurity
-                        </span>
-
-                    </div>
-
-
-                    <div class="news-content">
-
-
-                        <span class="news-meta">
-                            Security
-                        </span>
-
-
-                        <h3>
-                            Cybersecurity Essentials
-                        </h3>
-
-
-                        <p>
-                            Learn practical cybersecurity
-                            habits that can help protect your
-                            accounts, devices and personal data.
-                        </p>
-
-
-                        <span class="read-more">
-
-                            Read More
-
-                            <i class="fa-solid fa-arrow-right"
-                               aria-hidden="true"></i>
-
-                        </span>
-
-
-                    </div>
-
-
-                </a>
-
-
-            </div>
-
-
-
-            <!-- SIDEBAR -->
-
-            <aside class="news-sidebar"
-                   aria-label="Popular TechHub Ghana content">
-
-
-                <div class="sidebar-heading">
-
-                    <span>
-                        🔥
-                    </span>
-
-                    <h3>
-                        Popular
-                    </h3>
-
-                </div>
-
-
-                <ul>
-
-
-                    <li>
-
-                        <a href="ai-assistant.html">
-
-                            <span>🤖</span>
-
-                            <span>
-                                AI Assistant
-                            </span>
-
-                            <i class="fa-solid fa-chevron-right"
-                               aria-hidden="true"></i>
-
-                        </a>
-
-                    </li>
-
-
-                    <li>
-
-                        <a href="gpa.html">
-
-                            <span>🎓</span>
-
-                            <span>
-                                GPA Calculator
-                            </span>
-
-                            <i class="fa-solid fa-chevron-right"
-                               aria-hidden="true"></i>
-
-                        </a>
-
-                    </li>
-
-
-                    <li>
-
-                        <a href="qr-generator.html">
-
-                            <span>📱</span>
-
-                            <span>
-                                QR Generator
-                            </span>
-
-                            <i class="fa-solid fa-chevron-right"
-                               aria-hidden="true"></i>
-
-                        </a>
-
-                    </li>
-
-
-                    <li>
-
-                        <a href="tutorials.html#python">
-
-                            <span>🐍</span>
-
-                            <span>
-                                Learn Python
-                            </span>
-
-                            <i class="fa-solid fa-chevron-right"
-                               aria-hidden="true"></i>
-
-                        </a>
-
-                    </li>
-
-
-                    <li>
-
-                        <a href="tutorials.html#mysql">
-
-                            <span>🗄️</span>
-
-                            <span>
-                                MySQL Basics
-                            </span>
-
-                            <i class="fa-solid fa-chevron-right"
-                               aria-hidden="true"></i>
-
-                        </a>
-
-                    </li>
-
-
-                </ul>
-
-
-                <a href="ghana-tech.html"
-                   class="sidebar-cta">
-
-                    <span>Explore Ghana Tech</span>
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </a>
-
-
-            </aside>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     TUTORIALS
-====================================================== -->
-
-<section class="section"
-         aria-labelledby="tutorials-title">
-
-
-    <div class="section-container">
-
-
-        <div class="section-heading">
-
-
-            <div>
-
-                <span class="section-kicker">
-                    Learn by doing
-                </span>
-
-                <h2 id="tutorials-title">
-                    Latest Tutorials
-                </h2>
-
-            </div>
-
-
-            <a href="tutorials.html"
-               class="section-link">
-
-                View All Tutorials
-
-                <i class="fa-solid fa-arrow-right"
-                   aria-hidden="true"></i>
-
-            </a>
-
-
-        </div>
-
-
-
-        <div class="tutorial-grid">
-
-
-            <!-- HTML -->
-
-            <a href="tutorials.html#html"
-               class="tutorial">
-
-
-                <div class="tutorial-image">
-
-                    <img
-                        src="images/tech1.jpg"
-                        alt="HTML programming tutorial"
-                        width="600"
-                        height="400"
-                        loading="lazy">
-
-                    <span class="tutorial-badge">
-                        Beginner
-                    </span>
-
-                </div>
-
-
-                <div class="tutorial-content">
-
-                    <span>
-                        Web Development
-                    </span>
-
-                    <h3>
-                        HTML for Beginners
-                    </h3>
-
-                    <strong>
-                        Start Learning
-                        <i class="fa-solid fa-arrow-right"
-                           aria-hidden="true"></i>
-                    </strong>
-
-                </div>
-
-
-            </a>
-
-
-
-            <!-- CSS -->
-
-            <a href="tutorials.html#css"
-               class="tutorial">
-
-
-                <div class="tutorial-image">
-
-                    <img
-                        src="images/tech2.jpg"
-                        alt="CSS web design tutorial"
-                        width="600"
-                        height="400"
-                        loading="lazy">
-
-                    <span class="tutorial-badge">
-                        Beginner
-                    </span>
-
-                </div>
-
-
-                <div class="tutorial-content">
-
-                    <span>
-                        Web Design
-                    </span>
-
-                    <h3>
-                        CSS Masterclass
-                    </h3>
-
-                    <strong>
-                        Start Learning
-                        <i class="fa-solid fa-arrow-right"
-                           aria-hidden="true"></i>
-                    </strong>
-
-                </div>
-
-
-            </a>
-
-
-
-            <!-- JAVASCRIPT -->
-
-            <a href="tutorials.html#javascript"
-               class="tutorial">
-
-
-                <div class="tutorial-image">
-
-                    <img
-                        src="images/tech3.jpg"
-                        alt="JavaScript programming tutorial"
-                        width="600"
-                        height="400"
-                        loading="lazy">
-
-                    <span class="tutorial-badge">
-                        Intermediate
-                    </span>
-
-                </div>
-
-
-                <div class="tutorial-content">
-
-                    <span>
-                        Programming
-                    </span>
-
-                    <h3>
-                        JavaScript Essentials
-                    </h3>
-
-                    <strong>
-                        Start Learning
-                        <i class="fa-solid fa-arrow-right"
-                           aria-hidden="true"></i>
-                    </strong>
-
-                </div>
-
-
-            </a>
-
-
-
-            <!-- PYTHON -->
-
-            <a href="tutorials.html#python"
-               class="tutorial">
-
-
-                <div class="tutorial-image">
-
-                    <img
-                        src="images/hero.jpg"
-                        alt="Python programming tutorial"
-                        width="600"
-                        height="400"
-                        loading="lazy">
-
-                    <span class="tutorial-badge">
-                        Beginner
-                    </span>
-
-                </div>
-
-
-                <div class="tutorial-content">
-
-                    <span>
-                        Programming
-                    </span>
-
-                    <h3>
-                        Python Programming
-                    </h3>
-
-                    <strong>
-                        Start Learning
-                        <i class="fa-solid fa-arrow-right"
-                           aria-hidden="true"></i>
-                    </strong>
-
-                </div>
-
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     POPULAR TECHNOLOGIES
-====================================================== -->
-
-<section class="section section-alt"
-         aria-labelledby="technologies-title">
-
-
-    <div class="section-container">
-
-
-        <div class="section-heading">
-
-
-            <div>
-
-                <span class="section-kicker">
-                    Build your skills
-                </span>
-
-                <h2 id="technologies-title">
-                    Popular Technologies
-                </h2>
-
-            </div>
-
-
-            <a href="tutorials.html"
-               class="section-link">
-
-                Explore Tutorials
-
-                <i class="fa-solid fa-arrow-right"
-                   aria-hidden="true"></i>
-
-            </a>
-
-
-        </div>
-
-
-
-        <div class="card-grid">
-
-
-            <a href="tutorials.html#python"
-               class="tool-card technology-card">
-
-
-                <div class="icon">
-                    🐍
-                </div>
-
-
-                <h3>
-                    Python
-                </h3>
-
-
-                <p>
-                    Learn Python programming from
-                    beginner fundamentals to advanced concepts.
-                </p>
-
-
-                <span class="card-action">
-
-                    Learn Python
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </span>
-
-
-            </a>
-
-
-
-            <a href="tutorials.html#javascript"
-               class="tool-card technology-card">
-
-
-                <div class="icon">
-                    🟨
-                </div>
-
-
-                <h3>
-                    JavaScript
-                </h3>
-
-
-                <p>
-                    Build interactive websites and
-                    modern web applications.
-                </p>
-
-
-                <span class="card-action">
-
-                    Learn JavaScript
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </span>
-
-
-            </a>
-
-
-
-            <a href="tutorials.html#html"
-               class="tool-card technology-card">
-
-
-                <div class="icon">
-                    🌐
-                </div>
-
-
-                <h3>
-                    HTML & CSS
-                </h3>
-
-
-                <p>
-                    Master the foundations of modern
-                    website development and design.
-                </p>
-
-
-                <span class="card-action">
-
-                    Learn Web Development
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </span>
-
-
-            </a>
-
-
-
-            <a href="tutorials.html#mysql"
-               class="tool-card technology-card">
-
-
-                <div class="icon">
-                    🗄️
-                </div>
-
-
-                <h3>
-                    MySQL
-                </h3>
-
-
-                <p>
-                    Learn databases, SQL queries,
-                    database design and management.
-                </p>
-
-
-                <span class="card-action">
-
-                    Learn MySQL
-
-                    <i class="fa-solid fa-arrow-right"
-                       aria-hidden="true"></i>
-
-                </span>
-
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     WHY TECHHUB GHANA
-====================================================== -->
-
-<section class="section"
-         aria-labelledby="why-title">
-
-
-    <div class="section-container">
-
-
-        <div class="section-heading centered-heading">
-
-
-            <div>
-
-                <span class="section-kicker">
-                    Why choose us
-                </span>
-
-                <h2 id="why-title">
-                    Why TechHub Ghana?
-                </h2>
-
-                <p>
-                    Built to make technology easier to
-                    understand, learn and use.
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="card-grid why-grid">
-
-
-            <article class="tool-card">
-
-
-                <div class="icon">
-                    🎓
-                </div>
-
-
-                <h3>
-                    Student Friendly
-                </h3>
-
-
-                <p>
-                    Simple explanations, practical
-                    examples and useful resources designed
-                    to make learning easier.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="tool-card">
-
-
-                <div class="icon">
-                    🛠️
-                </div>
-
-
-                <h3>
-                    Free Digital Tools
-                </h3>
-
-
-                <p>
-                    Useful tools for studying,
-                    programming, productivity and everyday
-                    digital tasks.
-                </p>
-
-
-            </article>
-
-
-
-            <article class="tool-card">
-
-
-                <div class="icon">
-                    🇬🇭
-                </div>
-
-
-                <h3>
-                    Built for Ghana
-                </h3>
-
-
-                <p>
-                    Technology resources created with
-                    Ghanaian students and digital users
-                    in mind.
-                </p>
-
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     NEWSLETTER
-====================================================== -->
-
-<section class="newsletter"
-         aria-labelledby="newsletter-title">
-
-
-    <div class="newsletter-inner">
-
-
-        <div class="newsletter-icon">
-
-            <i class="fa-regular fa-envelope"
-               aria-hidden="true"></i>
-
-        </div>
-
-
-        <div class="newsletter-content">
-
-
-            <span class="section-kicker">
-                Stay in the loop
-            </span>
-
-
-            <h2 id="newsletter-title">
-                Get TechHub Ghana Updates
-            </h2>
-
-
-            <p>
-                Receive technology news, useful tutorials
-                and new digital tools when they are available.
-            </p>
-
-
-        </div>
-
-
-        <form
-            class="newsletter-form"
-            id="newsletterForm">
-
-
-            <label for="newsletterEmail"
-                   class="sr-only">
-
-                Email address
-
-            </label>
-
-
-            <input
-                type="email"
-                id="newsletterEmail"
-                name="email"
-                placeholder="Enter your email address"
-                autocomplete="email"
-                required>
-
-
-            <button type="submit">
-
-                <span>Subscribe</span>
-
-                <i class="fa-solid fa-arrow-right"
-                   aria-hidden="true"></i>
-
-            </button>
-
-
-        </form>
-
-
-        <p class="newsletter-note">
-
-            No spam. Unsubscribe anytime.
-
-        </p>
-
-
-    </div>
-
-</section>
-
-
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-====================================================== -->
-
-<footer class="site-footer">
-
-
-    <div class="footer-grid">
-
-
-        <!-- ABOUT -->
-
-        <div class="footer-column footer-about">
-
-
-            <a href="index.html"
-               class="footer-brand">
-
-
-                <img
-                    src="images/logo.png"
-                    alt="TechHub Ghana logo"
-                    width="50"
-                    height="50">
-
-
-                <span>
-                    TechHub Ghana
-                </span>
-
-
-            </a>
-
-
-            <p class="footer-tagline">
-                Technology • Learning • Innovation
-            </p>
-
-
-            <p>
-                Your platform for technology news,
-                practical tutorials and useful digital tools.
-            </p>
-
-
-        </div>
-
-
-
-        <!-- QUICK LINKS -->
-
-        <div class="footer-column">
-
-
-            <h3>
-                Explore
-            </h3>
-
-
-            <ul>
-
-
-                <li>
-                    <a href="index.html">
-                        Home
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="ghana-tech.html">
-                        Ghana Tech
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="news.html">
-                        Technology News
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="tutorials.html">
-                        Tutorials
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="tools.html">
-                        Digital Tools
-                    </a>
-                </li>
-
-
-            </ul>
-
-
-        </div>
-
-
-
-        <!-- TOOLS -->
-
-        <div class="footer-column">
-
-
-            <h3>
-                Popular Tools
-            </h3>
-
-
-            <ul>
-
-
-                <li>
-                    <a href="gpa.html">
-                        GPA Calculator
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="qr-generator.html">
-                        QR Generator
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="ai-assistant.html">
-                        AI Assistant
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="password-generator.html">
-                        Password Generator
-                    </a>
-                </li>
-
-
-            </ul>
-
-
-        </div>
-
-
-
-        <!-- COMPANY -->
-
-        <div class="footer-column">
-
-
-            <h3>
-                TechHub Ghana
-            </h3>
-
-
-            <ul>
-
-
-                <li>
-                    <a href="about.html">
-                        About Us
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="contact.html">
-                        Contact
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="ghana-tech.html">
-                        Ghana Technology
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="tutorials.html#python">
-                        Learn Python
-                    </a>
-                </li>
-
-
-            </ul>
-
-
-        </div>
-
-
-    </div>
-
-
-
-    <!-- FOOTER BOTTOM -->
-
-    <div class="footer-bottom">
-
-
-        <p>
-
-            © <span id="footerYear">2026</span>
-            TechHub Ghana.
-            All Rights Reserved.
-
-        </p>
-
-
-        <a href="#top"
-           class="back-to-top-link">
-
-            Back to top
-
-            <i class="fa-solid fa-arrow-up"
-               aria-hidden="true"></i>
-
-        </a>
-
-
-    </div>
-
-
-</footer>
-
-
-
-<!-- =====================================================
-     BACK TO TOP BUTTON
-====================================================== -->
-
-<button
-    type="button"
-    id="topBtn"
-    class="top-btn"
-    aria-label="Back to top"
-    title="Back to top">
-
-    <i class="fa-solid fa-arrow-up"
-       aria-hidden="true"></i>
-
-</button>
-
-
-
-<!-- =====================================================
-     JAVASCRIPT
-     
-     IMPORTANT:
-     Main functionality should eventually live inside
-     script.js so every page can share the same system.
-====================================================== -->
-
-<script src="script.js"></script>
-
-
-<script>
-
-/* =====================================================
-   TECHHUB GHANA — HOMEPAGE FUNCTIONALITY
-===================================================== */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-
-    /* =================================================
-       MOBILE NAVIGATION
-    ================================================== */
-
-    const menuBtn =
-        document.getElementById("menuBtn");
-
-    const navMenu =
-        document.getElementById("navMenu");
-
-
-    if (menuBtn && navMenu) {
-
-        menuBtn.addEventListener(
-            "click",
-            function () {
-
-                const isOpen =
-                    navMenu.classList.toggle("show");
-
-                menuBtn.classList.toggle(
-                    "active",
-                    isOpen
-                );
-
-                menuBtn.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
-
-                menuBtn.setAttribute(
-                    "aria-label",
-                    isOpen
-                        ? "Close navigation menu"
-                        : "Open navigation menu"
-                );
-
-            }
-        );
-
-
-        /* Close menu after selecting a link */
-
-        navMenu.querySelectorAll("a").forEach(
-            function (link) {
-
-                link.addEventListener(
-                    "click",
-                    function () {
-
-                        navMenu.classList.remove("show");
-
-                        menuBtn.classList.remove("active");
-
-                        menuBtn.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                        menuBtn.setAttribute(
-                            "aria-label",
-                            "Open navigation menu"
-                        );
-
-                    }
-                );
-
-            }
-        );
-
-    }
-
-
-
-    /* =================================================
-       CURRENT DATE
-    ================================================== */
-
-    const todayElement =
-        document.getElementById("today");
-
-
-    if (todayElement) {
-
-        const date =
-            new Date();
-
-
-        todayElement.innerHTML =
-            `
-                <i class="fa-regular fa-calendar"
-                   aria-hidden="true"></i>
-
-                <span>
-                    ${date.toLocaleDateString(
-                        "en-GH",
-                        {
-                            weekday: "long",
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric"
-                        }
-                    )}
-                </span>
-            `;
-
-    }
-
-
-
-    /* =================================================
-       SEARCH
-    ================================================== */
-
-    const searchForm =
-        document.getElementById("searchForm");
-
-    const searchInput =
-        document.getElementById("siteSearch");
-
-
-    if (searchForm && searchInput) {
-
-        searchForm.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-
-                const query =
-                    searchInput.value.trim();
-
-
-                if (!query) {
-
-                    searchInput.focus();
-
-                    return;
-
-                }
-
-
-                window.location.href =
-                    "news.html?search=" +
-                    encodeURIComponent(query);
-
-            }
-        );
-
-    }
-
-
-
-    /* =================================================
-       NEWSLETTER
-       
-       This currently provides frontend feedback only.
-       We will connect it to a real service when the
-       newsletter/backend system is configured.
-    ================================================== */
-
-    const newsletterForm =
-        document.getElementById("newsletterForm");
-
-
-    if (newsletterForm) {
-
-        newsletterForm.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-
-                const emailInput =
-                    document.getElementById(
-                        "newsletterEmail"
-                    );
-
-
-                const email =
-                    emailInput.value.trim();
-
-
-                if (!email) {
-
-                    emailInput.focus();
-
-                    return;
-
-                }
-
-
-                alert(
-                    "Thank you for subscribing to TechHub Ghana!"
-                );
-
-
-                newsletterForm.reset();
-
-            }
-        );
-
-    }
-
-
-
-    /* =================================================
-       BACK TO TOP
-    ================================================== */
-
-    const topBtn =
-        document.getElementById("topBtn");
-
-
-    if (topBtn) {
-
-
-        function updateTopButton() {
-
-            if (window.scrollY > 500) {
-
-                topBtn.classList.add("show");
-
-            } else {
-
-                topBtn.classList.remove("show");
-
-            }
-
-        }
-
-
-        window.addEventListener(
-            "scroll",
-            updateTopButton,
-            {
-                passive: true
-            }
-        );
-
-
-        topBtn.addEventListener(
-            "click",
-            function () {
-
-                window.scrollTo(
-                    {
-                        top: 0,
-                        behavior: "smooth"
-                    }
-                );
-
-            }
-        );
-
-
-        updateTopButton();
-
-    }
-
-
-
-    /* =================================================
-       FOOTER YEAR
-    ================================================== */
-
-    const footerYear =
-        document.getElementById("footerYear");
-
-
-    if (footerYear) {
-
-        footerYear.textContent =
-            new Date().getFullYear();
-
-    }
-
-
-
-    /* =================================================
-       CLOSE MOBILE MENU WITH ESCAPE
-    ================================================== */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (
-                event.key === "Escape" &&
-                navMenu &&
-                navMenu.classList.contains("show")
-            ) {
-
-                navMenu.classList.remove("show");
-
-                if (menuBtn) {
-
-                    menuBtn.classList.remove("active");
-
-                    menuBtn.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                    menuBtn.setAttribute(
-                        "aria-label",
-                        "Open navigation menu"
-                    );
-
-                }
-
-            }
-
-        }
+.section-container {
+    width: min(
+        calc(100% - 40px),
+        var(--container)
     );
 
+    margin: 0 auto;
+}
 
-});
+.section {
+    padding: 85px 0;
+}
 
-</script>
+.section-alt {
+    background: var(--surface-alt);
+}
 
 
-</body>
-                </html>
+/* =========================================================
+   5. SITE HEADER
+========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================================================
+   6. TOP BAR
+========================================================= */
+
+.top-bar {
+    width: min(
+        calc(100% - 40px),
+        var(--container)
+    );
+
+    min-height: 82px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   7. LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: max-content;
+}
+
+.logo-image {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: var(--primary-light);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.logo-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.logo-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    color: var(--text-dark);
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.logo-tagline {
+    margin-top: 3px;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   8. SEARCH BOX
+========================================================= */
+
+.search-box {
+    width: min(420px, 42vw);
+
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    background: #f7f9fc;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    overflow: hidden;
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background var(--transition);
+}
+
+.search-box:focus-within {
+    background: #fff;
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 4px rgba(11, 92, 255, 0.10);
+}
+
+.search-box input {
+    flex: 1;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 16px;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 13px;
+}
+
+.search-box input::placeholder {
+    color: #98a2b3;
+}
+
+.search-box button {
+    width: 48px;
+    height: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--primary);
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+.search-box button:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+
+/* =========================================================
+   9. MOBILE MENU BUTTON
+========================================================= */
+
+.menu-btn {
+    width: 44px;
+    height: 44px;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    transition: var(--transition);
+}
+
+.menu-btn span {
+    width: 21px;
+    height: 2px;
+
+    display: block;
+
+    background: var(--text-dark);
+
+    border-radius: 10px;
+
+    transition: transform var(--transition),
+                opacity var(--transition);
+}
+
+.menu-btn:hover {
+    border-color: var(--primary);
+}
+
+.menu-btn.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   10. MAIN NAVIGATION
+========================================================= */
+
+.main-nav {
+    border-top: 1px solid #f0f2f5;
+    background: #fff;
+}
+
+.nav-inner {
+    width: min(
+        calc(100% - 40px),
+        var(--container)
+    );
+
+    min-height: 50px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+}
+
+.nav-inner a {
+    position: relative;
+
+    min-height: 50px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #475467;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition:
+        color var(--transition),
+        background var(--transition);
+}
+
+.nav-inner a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    right: 14px;
+    bottom: 0;
+
+    height: 3px;
+
+    background: var(--primary);
+
+    border-radius: 5px 5px 0 0;
+
+    transform: scaleX(0);
+
+    transition: transform var(--transition);
+}
+
+.nav-inner a:hover {
+    color: var(--primary);
+    background: #f7f9fc;
+}
+
+.nav-inner a:hover::after,
+.nav-inner a.active::after {
+    transform: scaleX(1);
+}
+
+.nav-inner a.active {
+    color: var(--primary);
+}
+
+.nav-inner i {
+    font-size: 13px;
+}
+
+.nav-flag {
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   11. BREAKING NEWS / UPDATE BAR
+========================================================= */
+
+.breaking-news {
+    background: #0f172a;
+    color: #fff;
+
+    overflow: hidden;
+}
+
+.breaking-inner {
+    width: min(
+        calc(100% - 40px),
+        var(--container)
+    );
+
+    min-height: 42px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.today-date {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    min-width: max-content;
+
+    color: #d8dee9;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.breaking-label {
+    min-width: max-content;
+
+    padding: 6px 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    background: var(--primary);
+
+    border-radius: 5px;
+
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.breaking-content {
+    flex: 1;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+}
+
+.breaking-track {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 30px;
+
+    animation: ticker 30s linear infinite;
+}
+
+.breaking-track span {
+    position: relative;
+
+    color: #cbd5e1;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.breaking-track span::before {
+    content: "•";
+
+    margin-right: 12px;
+
+    color: var(--primary);
+}
+
+@keyframes ticker {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =========================================================
+   12. HERO SECTION
+========================================================= */
+
+.hero {
+    position: relative;
+
+    padding: 80px 0;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(11, 92, 255, 0.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f4f8ff 100%
+        );
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: -130px;
+    top: -120px;
+
+    background: rgba(11, 92, 255, 0.05);
+
+    border-radius: 50%;
+}
+
+.hero-content {
+    width: min(
+        calc(100% - 40px),
+        var(--container)
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(400px, 0.9fr);
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.eyebrow-dot {
+    width: 8px;
+    height: 8px;
+
+    background: var(--secondary);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 5px rgba(0, 168, 107, 0.10);
+}
+
+.hero h1 {
+    max-width: 650px;
+
+    color: var(--text-dark);
+
+    font-size: clamp(
+        42px,
+        5vw,
+        70px
+    );
+
+    font-weight: 800;
+
+    line-height: 1.08;
+
+    letter-spacing: -2.5px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: var(--primary);
+}
+
+.hero-description {
+    max-width: 630px;
+
+    margin-top: 24px;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   13. BUTTONS
+========================================================= */
+
+.btn {
+    min-height: 48px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        background var(--transition),
+        border-color var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+
+    box-shadow:
+        0 8px 20px rgba(11, 92, 255, 0.22);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+
+    box-shadow:
+        0 12px 25px rgba(11, 92, 255, 0.30);
+}
+
+.btn-secondary {
+    background: #fff;
+
+    color: var(--text-dark);
+
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   14. HERO STATS
+========================================================= */
+
+.hero-stats {
+    margin-top: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 30px;
+}
+
+.hero-stat {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stat:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    top: 4px;
+    right: -16px;
+
+    width: 1px;
+    height: 38px;
+
+    background: var(--border-dark);
+}
+
+.hero-stat strong {
+    color: var(--text-dark);
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.hero-stat span {
+    color: var(--text-muted);
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   15. HERO IMAGE
+========================================================= */
+
+.hero-image-wrapper {
+    position: relative;
+}
+
+.hero-image {
+    position: relative;
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: #dce6f5;
+
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+
+    object-fit: cover;
+
+    transition: transform 0.7s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.04);
+}
+
+.hero-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(15, 23, 42, 0.02),
+            rgba(15, 23, 42, 0.38)
+        );
+}
+
+.hero-floating-card {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: var(--shadow);
+
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+.hero-card-one {
+    left: 24px;
+    bottom: 25px;
+
+    padding: 12px 15px;
+
+    gap: 11px;
+
+    border-radius: 13px;
+}
+
+.floating-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    border-radius: 10px;
+}
+
+.hero-card-one strong,
+.hero-card-one span {
+    display: block;
+}
+
+.hero-card-one strong {
+    color: var(--text-dark);
+
+    font-size: 12px;
+}
+
+.hero-card-one span {
+    color: var(--text-light);
+
+    font-size: 10px;
+}
+
+.hero-card-two {
+    top: 24px;
+    right: 24px;
+
+    padding: 9px 13px;
+
+    gap: 7px;
+
+    border-radius: 30px;
+
+    color: var(--text-dark);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+
+    background: var(--secondary);
+
+    border-radius: 50%;
+
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 8px rgba(0, 168, 107, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 168, 107, 0);
+    }
+}
+
+
+/* =========================================================
+   16. TRENDING SECTION
+========================================================= */
+
+.trending-section {
+    padding: 35px 0 0;
+}
+
+.trending-box {
+    display: grid;
+
+    grid-template-columns: 210px 1fr auto;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 18px 20px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.trending-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.trending-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff4db;
+
+    color: #e89a00;
+
+    border-radius: 11px;
+}
+
+.section-kicker {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+}
+
+.trending-heading h2 {
+    color: var(--text-dark);
+
+    font-size: 15px;
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.trending-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.trending-item {
+    min-height: 36px;
+
+    padding: 0 11px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: #f9fafb;
+
+    color: #475467;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.trending-item:hover {
+    background: var(--primary-light);
+
+    border-color: #c8d9ff;
+
+    color: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+.trending-item-icon {
+    font-size: 14px;
+}
+
+.trending-item i {
+    font-size: 8px;
+}
+
+.view-more {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   17. SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+    margin-bottom: 32px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.section-heading h2 {
+    color: var(--text-dark);
+
+    font-size: clamp(25px, 3vw, 34px);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.8px;
+}
+
+.section-heading p {
+    max-width: 600px;
+
+    margin-top: 10px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+}
+
+.section-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding-bottom: 5px;
+
+    color: var(--primary);
+
+    border-bottom: 1px solid transparent;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: var(--transition);
+}
+
+.section-link:hover {
+    border-color: var(--primary);
+}
+
+.centered-heading {
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.centered-heading p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   18. CARD GRID
+========================================================= */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   19. TOOL CARDS
+========================================================= */
+
+.tool-card {
+    position: relative;
+
+    min-width: 0;
+
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.tool-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #cbdcff;
+
+    box-shadow: var(--shadow);
+}
+
+.tool-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary-light);
+
+    border-radius: 13px;
+
+    font-size: 24px;
+}
+
+.tool-label {
+    padding: 5px 8px;
+
+    background: #f1f5f9;
+
+    color: #667085;
+
+    border-radius: 5px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tool-card h3 {
+    margin-bottom: 8px;
+
+    color: var(--text-dark);
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.tool-card p {
+    margin-bottom: 20px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+.card-action {
+    margin-top: auto;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--primary);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: gap var(--transition);
+}
+
+.tool-card:hover .card-action {
+    gap: 11px;
+}
+
+
+/* =========================================================
+   20. NEWS LAYOUT
+========================================================= */
+
+.news-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        300px;
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+.news-left {
+    display: grid;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   21. NEWS CARDS
+========================================================= */
+
+.news-card {
+    display: grid;
+
+    grid-template-columns: 270px minmax(0, 1fr);
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.news-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
+}
+
+.news-image {
+    position: relative;
+
+    min-height: 190px;
+
+    overflow: hidden;
+
+    background: #dfe6ef;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 190px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-category {
+    position: absolute;
+
+    left: 12px;
+    top: 12px;
+
+    padding: 5px 8px;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    border-radius: 5px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-meta {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--primary);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.news-content h3 {
+    margin-bottom: 8px;
+
+    color: var(--text-dark);
+
+    font-size: 18px;
+    font-weight: 800;
+
+    line-height: 1.35;
+}
+
+.news-content p {
+    margin-bottom: 13px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--primary);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.news-card:hover .read-more {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   22. NEWS SIDEBAR
+========================================================= */
+
+.news-sidebar {
+    padding: 20px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebar-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding-bottom: 14px;
+
+    margin-bottom: 4px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.sidebar-heading span {
+    font-size: 18px;
+}
+
+.sidebar-heading h3 {
+    color: var(--text-dark);
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.news-sidebar li {
+    border-bottom: 1px solid #edf0f4;
+}
+
+.news-sidebar li:last-child {
+    border-bottom: 0;
+}
+
+.news-sidebar li a {
+    min-height: 55px;
+
+    display: grid;
+
+    grid-template-columns: 25px 1fr 12px;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #475467;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.news-sidebar li a:hover {
+    padding-left: 4px;
+
+    color: var(--primary);
+}
+
+.news-sidebar li a > span:first-child {
+    font-size: 15px;
+}
+
+.news-sidebar li a i {
+    color: #98a2b3;
+
+    font-size: 8px;
+}
+
+.sidebar-cta {
+    min-height: 42px;
+
+    margin-top: 15px;
+    padding: 0 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--primary);
+
+    border-radius: 8px;
+
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.sidebar-cta:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   23. TUTORIAL GRID
+========================================================= */
+
+.tutorial-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.tutorial {
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.tutorial:hover {
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow);
+}
+
+.tutorial-image {
+    position: relative;
+
+    height: 190px;
+
+    overflow: hidden;
+
+    background: #dce4ef;
+}
+
+.tutorial-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.tutorial:hover .tutorial-image img {
+    transform: scale(1.06);
+}
+
+.tutorial-badge {
+    position: absolute;
+
+    left: 12px;
+    top: 12px;
+
+    padding: 5px 8px;
+
+    background: #fff;
+
+    color: var(--primary);
+
+    border-radius: 5px;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+.tutorial-content {
+    padding: 17px;
+}
+
+.tutorial-content > span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--primary);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.tutorial-content h3 {
+    margin-bottom: 15px;
+
+    color: var(--text-dark);
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.tutorial-content strong {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--primary);
+
+    font-size: 10px;
+}
+
+.tutorial:hover .tutorial-content strong {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   24. TECHNOLOGY CARDS
+========================================================= */
+
+.technology-card {
+    min-height: 270px;
+}
+
+.technology-card .icon {
+    margin-bottom: 20px;
+}
+
+.technology-card h3 {
+    font-size: 18px;
+}
+
+.technology-card p {
+    flex: 1;
+}
+
+
+/* =========================================================
+   25. WHY TECHHUB
+========================================================= */
+
+.why-grid {
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+.why-grid .tool-card {
+    text-align: center;
+}
+
+.why-grid .icon {
+    margin: 0 auto 18px;
+}
+
+
+/* =========================================================
+   26. NEWSLETTER
+========================================================= */
+
+.newsletter {
+    padding: 65px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b5cff 0%,
+            #0645bf 100%
+        );
+
+    color: #fff;
+}
+
+.newsletter-inner {
+    width: min(
+        100%,
+        900px
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        auto minmax(0, 1fr)
+        minmax(300px, 390px);
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+.newsletter-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.13);
+
+    border: 1px solid rgba(255,255,255,0.18);
+
+    border-radius: 16px;
+
+    font-size: 23px;
+}
+
+.newsletter .section-kicker {
+    color: #bcd2ff;
+}
+
+.newsletter-content h2 {
+    margin-bottom: 6px;
+
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.newsletter-content p {
+    color: #dce8ff;
+
+    font-size: 11px;
+}
+
+.newsletter-form {
+    min-height: 48px;
+
+    display: flex;
+
+    background: #fff;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+}
+
+.newsletter-form input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 0 14px;
+
+    border: 0;
+    outline: 0;
+
+    color: var(--text);
+
+    font-size: 11px;
+}
+
+.newsletter-form button {
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    border: 0;
+
+    background: #0f172a;
+
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    background: #020617;
+}
+
+.newsletter-note {
+    grid-column: 2 / -1;
+
+    margin-top: -8px;
+
+    color: #bcd2ff;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   27. FOOTER
+========================================================= */
+
+.site-footer {
+    padding: 65px 20px 0;
+
+    background: #0b1220;
+
+    color: #cbd5e1;
+}
+
+.footer-grid {
+    width: min(
+        100%,
+        var(--container)
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 45px;
+
+    padding-bottom: 50px;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: #fff;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.footer-brand img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+}
+
+.footer-tagline {
+    margin-top: 9px;
+
+    color: #7da6ff !important;
+
+    font-size: 9px !important;
+    font-weight: 600 !important;
+}
+
+.footer-about > p:last-child {
+    max-width: 310px;
+
+    margin-top: 13px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+.footer-column h3 {
+    margin-bottom: 18px;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.footer-column ul {
+    display: grid;
+
+    gap: 10px;
+}
+
+.footer-column li a {
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+.footer-column li a:hover {
+    color: #fff;
+
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    width: min(
+        100%,
+        var(--container)
+    );
+
+    min-height: 65px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-bottom p {
+    color: #64748b;
+
+    font-size: 9px;
+}
+
+.back-to-top-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.back-to-top-link:hover {
+    color: #fff;
+}
+
+
+/* =========================================================
+   28. BACK TO TOP BUTTON
+========================================================= */
+
+.top-btn {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 900;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    box-shadow:
+        0 8px 25px rgba(11, 92, 255, 0.30);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity var(--transition),
+        visibility var(--transition),
+        transform var(--transition),
+        background var(--transition);
+}
+
+.top-btn.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.top-btn:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   29. FOCUS STATES
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(11, 92, 255, 0.28);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   30. TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .hero-content {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(350px, 0.9fr);
+
+        gap: 40px;
+    }
+
+    .card-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .tutorial-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .trending-box {
+        grid-template-columns:
+            190px 1fr;
+    }
+
+    .view-more {
+        grid-column: 2;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   31. TABLET / SMALL LAPTOP NAV
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .top-bar {
+        min-height: 72px;
+    }
+
+    .search-box {
+        width: 280px;
+    }
+
+    .nav-inner a {
+        padding: 0 11px;
+
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-image {
+        max-width: 700px;
+
+        min-height: 430px;
+
+        margin: 0 auto;
+    }
+
+    .hero-image img {
+        min-height: 430px;
+    }
+
+    .news-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .news-sidebar {
+        order: -1;
+    }
+
+    .newsletter-inner {
+        grid-template-columns:
+            auto 1fr;
+
+        max-width: 700px;
+    }
+
+    .newsletter-form {
+        grid-column: 1 / -1;
+    }
+
+    .newsletter-note {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* =========================================================
+   32. MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .section-container,
+    .top-bar,
+    .nav-inner,
+    .breaking-inner,
+    .hero-content {
+        width: min(
+            calc(100% - 28px),
+            var(--container)
+        );
+    }
+
+    .top-bar {
+        gap: 12px;
+    }
+
+    .logo-image {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-title {
+        font-size: 17px;
+    }
+
+    .logo-tagline {
+        display: none;
+    }
+
+    .search-box {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .main-nav.show {
+        display: block;
+
+        animation: menuDrop 0.25s ease;
+    }
+
+    @keyframes menuDrop {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .nav-inner {
+        padding: 8px 0 12px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 2px;
+    }
+
+    .nav-inner a {
+        min-height: 45px;
+
+        justify-content: flex-start;
+
+        padding: 0 14px;
+
+        border-radius: 8px;
+    }
+
+    .nav-inner a::after {
+        display: none;
+    }
+
+    .nav-inner a.active {
+        background: var(--primary-light);
+    }
+
+    .breaking-inner {
+        min-height: 40px;
+
+        gap: 8px;
+    }
+
+    .today-date {
+        display: none;
+    }
+
+    .breaking-label {
+        padding: 5px 9px;
+
+        font-size: 9px;
+    }
+
+    .breaking-track {
+        gap: 20px;
+    }
+
+    .breaking-track span {
+        font-size: 9px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(
+            39px,
+            12vw,
+            55px
+        );
+
+        letter-spacing: -1.8px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-image {
+        min-height: 350px;
+
+        border-radius: 20px;
+    }
+
+    .hero-image img {
+        min-height: 350px;
+    }
+
+    .hero-card-one {
+        left: 14px;
+        bottom: 14px;
+    }
+
+    .hero-card-two {
+        top: 14px;
+        right: 14px;
+    }
+
+    .trending-section {
+        padding-top: 20px;
+    }
+
+    .trending-box {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .view-more {
+        grid-column: auto;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-bottom: 24px;
+    }
+
+    .section-link {
+        align-self: flex-start;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tutorial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-card {
+        grid-template-columns: 1fr;
+    }
+
+    .news-image,
+    .news-image img {
+        min-height: 220px;
+
+        height: 220px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        min-height: 85px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   33. SMALL MOBILE PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .section-container,
+    .top-bar,
+    .nav-inner,
+    .breaking-inner,
+    .hero-content {
+        width: calc(100% - 22px);
+    }
+
+    .logo-title {
+        font-size: 16px;
+    }
+
+    .logo-image {
+        width: 42px;
+        height: 42px;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-stats {
+        gap: 18px;
+    }
+
+    .hero-stat:not(:last-child)::after {
+        right: -10px;
+    }
+
+    .hero-image {
+        min-height: 280px;
+    }
+
+    .hero-image img {
+        min-height: 280px;
+    }
+
+    .hero-floating-card {
+        transform: scale(0.88);
+
+        transform-origin: bottom left;
+    }
+
+    .hero-card-two {
+        transform-origin: top right;
+    }
+
+    .trending-list {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .trending-item {
+        justify-content: space-between;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .tool-card {
+        padding: 19px;
+    }
+
+    .news-content {
+        padding: 17px;
+    }
+
+    .newsletter {
+        padding: 50px 14px;
+    }
+
+    .newsletter-inner {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .newsletter-icon {
+        margin: 0 auto;
+    }
+
+    .newsletter-form,
+    .newsletter-note {
+        grid-column: auto;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+
+        min-height: auto;
+
+        background: transparent;
+
+        overflow: visible;
+
+        gap: 8px;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        height: 46px;
+
+        border-radius: 8px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+        height: 46px;
+
+        justify-content: center;
+
+        border-radius: 8px;
+    }
+
+    .top-btn {
+        right: 14px;
+        bottom: 14px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   34. VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .logo-title {
+        font-size: 14px;
+    }
+
+    .menu-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .trending-list {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-stat:not(:last-child)::after {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   35. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+/* =========================================================
+   36. PRINT
+========================================================= */
+
+@media print {
+
+    .site-header,
+    .breaking-news,
+    .top-btn,
+    .newsletter,
+    .site-footer {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    .section {
+        padding: 20px 0;
+    }
+
+}
