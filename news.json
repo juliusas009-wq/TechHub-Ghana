@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-20T17:57:44.295604+00:00",
+  "updated": "2026-08-20T18:48:57.219855+00:00",
   "articles": [
+    {
+      "title": "Linkdaze’s smart calendar is built to run a household, not just track a schedule",
+      "summary": "Linkdaze's smart digital calendar stands out for not putting its features behind a paywall, including an AI meal planner tool.",
+      "link": "https://techcrunch.com/2026/08/20/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/",
+      "date": "Thu, 20 Aug 2026 18:20:35 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Grok keeps sending gibberish responses to users",
       "summary": "Affected users told TechCrunch they were using Grok Lite, and noticed the issues as early as Wednesday morning.",
@@ -152,14 +160,6 @@
       "date": "Wed, 19 Aug 2026 22:25:01 +0000",
       "source": "TechCrunch",
       "category": "Technology"
-    },
-    {
-      "title": "OpenAI seeks to one-up Anthropic with new customer privacy protections",
-      "summary": "A competition is developing between OpenAI and Anthropic over who can provide the best privacy protections for enterprise customer data.",
-      "link": "https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/",
-      "date": "Wed, 19 Aug 2026 22:10:46 +0000",
-      "source": "TechCrunch",
-      "category": "Artificial Intelligence"
     },
     {
       "title": "Debates over AI consciousness are a trap",
