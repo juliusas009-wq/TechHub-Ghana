@@ -1,8 +1,24 @@
 {
-  "updated": "2026-08-20T17:27:07.832481+00:00",
+  "updated": "2026-08-20T17:57:44.295604+00:00",
   "articles": [
     {
-      "title": "A third of webpages published since ChatGPT’s launch show signs of AI authorship, study finds",
+      "title": "Grok keeps sending gibberish responses to users",
+      "summary": "Affected users told TechCrunch they were using Grok Lite, and noticed the issues as early as Wednesday morning.",
+      "link": "https://techcrunch.com/2026/08/20/grok-keeps-sending-gibberish-responses-to-users/",
+      "date": "Thu, 20 Aug 2026 17:32:16 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "The investor’s guide to TechCrunch Disrupt 2026: Everything you need to know",
+      "summary": "Year after year, investors who've explored the Expo Halls, met founders, and learned from peers have proven why you need to be on the ground at Disrupt this year.",
+      "link": "https://techcrunch.com/2026/08/20/the-investors-guide-to-techcrunch-disrupt-2026-everything-you-need-to-know/",
+      "date": "Thu, 20 Aug 2026 17:27:47 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "A third of web pages published since ChatGPT’s launch show signs of AI authorship, study finds",
       "summary": "ChatGPT and other AI models are now authoring and editing much of the new web.",
       "link": "https://techcrunch.com/2026/08/20/a-third-of-webpages-published-since-chatgpts-launch-show-signs-of-ai-authorship-study-finds/",
       "date": "Thu, 20 Aug 2026 17:18:58 +0000",
@@ -144,22 +160,6 @@
       "date": "Wed, 19 Aug 2026 22:10:46 +0000",
       "source": "TechCrunch",
       "category": "Artificial Intelligence"
-    },
-    {
-      "title": "Cognition CEO denies report that SpaceX tried to acquire the startup",
-      "summary": "SpaceX was reportedly in talks to buy AI coding startup Cognition. SpaceX has already acquired Cursor as it races to catch up to rivals like OpenAI and Anthropic in enterprise AI.",
-      "link": "https://techcrunch.com/2026/08/19/cognition-ceo-denies-report-that-spacex-tried-to-acquire-the-startup/",
-      "date": "Wed, 19 Aug 2026 21:51:23 +0000",
-      "source": "TechCrunch",
-      "category": "Artificial Intelligence"
-    },
-    {
-      "title": "Travis Kalanick kicks off another round of VC bashing: ‘1% are helpful’",
-      "summary": "After raising $1.7 billion for his new robotics company Atoms, Travis Kalanick is introspective about the role VCs have played in his career.",
-      "link": "https://techcrunch.com/2026/08/19/travis-kalanick-kicks-off-another-round-of-vc-bashing-1-are-helpful/",
-      "date": "Wed, 19 Aug 2026 21:48:24 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
     },
     {
       "title": "Debates over AI consciousness are a trap",
