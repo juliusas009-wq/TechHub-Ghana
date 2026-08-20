@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-20T23:26:32.805757+00:00",
+  "updated": "2026-08-20T23:50:54.640396+00:00",
   "articles": [
+    {
+      "title": "Learn what VCs actually want, from a founder who’s raised $1B",
+      "summary": "Investors want founders who understand the financial reality of their business. Messy data, misunderstood metrics, or waiting until you’re nearly out of cash to start fundraising can cost founders leverage, valuation, and even a term sheet. In this episode of Build Mode, host Isabelle Johannessen sits down with Sasha Orloff, founder and CEO of Puzzle [&#8230;]",
+      "link": "https://techcrunch.com/video/learn-what-vcs-actually-want-from-a-founder-whos-raised-1b/",
+      "date": "Thu, 20 Aug 2026 23:32:27 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "OpenAI is gaining on Anthropic with business users, new data indicates",
       "summary": "Businesses are willing to flop back and forth as each lab releases new models, volatility that should give both companies' investors pause about how \"sticky\" enterprise AI spending really is.",
@@ -149,14 +157,6 @@
       "title": "Patreon launches 30 new creator features, including short-form Clips and revamped discovery",
       "summary": "Patreon is overhauling how creators get discovered, adding short-form Clips, topic-based communities, and a revamped recommendation system designed to give smaller creators more visibility.",
       "link": "https://techcrunch.com/2026/08/20/patreon-launches-30-new-creator-features-including-short-form-clips-and-revamped-discovery/",
-      "date": "Thu, 20 Aug 2026 16:00:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Inertia Enterprises finds a way to make its fusion fuel fast",
-      "summary": "Fusion power startup Inertia Enterprises reduced the fuel filling process from a week to just a few hours. It's one of 10 hurdles the company must overcome to make a profitable power plant.",
-      "link": "https://techcrunch.com/2026/08/20/inertia-enterprises-finds-a-way-to-make-its-fusion-fuel-fast/",
       "date": "Thu, 20 Aug 2026 16:00:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
