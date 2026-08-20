@@ -3141,3 +3141,206 @@ body {
     }
 
        }
+
+/* =========================================================
+   MOBILE PAGE BOUNDARY LINES
+   Keeps the page visually framed without causing overflow
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+body {
+    position: relative;
+}
+
+/* Left and right page lines */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(11, 92, 255, 0.14);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+body::before {
+    left: 10px;
+}
+
+body::after {
+    right: 10px;
+}
+
+
+/* =========================================================
+   IMPORTANT MOBILE WIDTH FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow-x: hidden !important;
+    }
+
+    /* Prevent sections from becoming wider than the phone */
+    main,
+    header,
+    footer,
+    section,
+    nav,
+    .site-header,
+    .top-bar,
+    .main-nav,
+    .breaking-news,
+    .breaking-inner,
+    .hero,
+    .hero-content,
+    .hero-text,
+    .hero-image-wrapper,
+    .hero-image,
+    .section,
+    .section-container,
+    .news-layout,
+    .news-left,
+    .news-sidebar,
+    .card-grid,
+    .tutorial-grid,
+    .newsletter,
+    .newsletter-inner,
+    .footer-grid {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       HERO — FORCE MOBILE STACK
+    ====================================================== */
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: cover;
+    }
+
+
+    /* =====================================================
+       NAVIGATION
+    ====================================================== */
+
+    .main-nav {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .nav-inner {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       PAGE CONTENT
+    ====================================================== */
+
+    .section-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .news-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .tutorial-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    /* =====================================================
+       IMAGES
+    ====================================================== */
+
+    img {
+        max-width: 100% !important;
+        height: auto;
+    }
+
+
+    /* =====================================================
+       PAGE BOUNDARY LINES
+    ====================================================== */
+
+    body::before {
+        left: 8px;
+    }
+
+    body::after {
+        right: 8px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .section-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    body::before {
+        left: 6px;
+    }
+
+    body::after {
+        right: 6px;
+    }
+
+}
