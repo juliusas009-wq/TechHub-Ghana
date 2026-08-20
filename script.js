@@ -2,41 +2,35 @@
    TECHHUB GHANA
    MASTER JAVASCRIPT
    Version: 2026
+   Clean Mobile + Desktop Version
 ========================================================= */
+
+"use strict";
 
 document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
-       MOBILE NAVIGATION
+       ELEMENTS
     ===================================================== */
 
     const menuBtn = document.getElementById("menuBtn");
     const navMenu = document.getElementById("navMenu");
+    const searchForm = document.getElementById("searchForm");
+    const searchInput = document.getElementById("siteSearch");
+    const darkBtn = document.getElementById("darkModeBtn");
+    const today = document.getElementById("today");
+    const topBtn = document.getElementById("topBtn");
+    const footerYear = document.getElementById("footerYear");
+    const newsletterForm = document.getElementById("newsletterForm");
 
-    function closeMobileMenu() {
 
-        if (!menuBtn || !navMenu) return;
-
-        navMenu.classList.remove("show");
-        menuBtn.classList.remove("active");
-
-        menuBtn.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        menuBtn.setAttribute(
-            "aria-label",
-            "Open navigation menu"
-        );
-
-        document.body.classList.remove("menu-open");
-    }
-
+    /* =====================================================
+       MOBILE NAVIGATION
+       ===================================================== */
 
     function openMobileMenu() {
 
-        if (!menuBtn || !navMenu) return;
+        if (!navMenu || !menuBtn) return;
 
         navMenu.classList.add("show");
         menuBtn.classList.add("active");
@@ -55,285 +49,105 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    function closeMobileMenu() {
+
+        if (!navMenu || !menuBtn) return;
+
+        navMenu.classList.remove("show");
+        menuBtn.classList.remove("active");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuBtn.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+
+        document.body.classList.remove("menu-open");
+    }
+
+
+    function toggleMobileMenu() {
+
+        if (!navMenu || !menuBtn) return;
+
+        const isOpen =
+            navMenu.classList.contains("show");
+
+        if (isOpen) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+
+
     if (menuBtn && navMenu) {
 
-        menuBtn.addEventListener("click", function (event) {
+        menuBtn.addEventListener(
+            "click",
+            function (event) {
 
-            event.preventDefault();
-            event.stopPropagation();
+                event.preventDefault();
+                event.stopPropagation();
 
-            const isOpen =
-                navMenu.classList.contains("show");
+                toggleMobileMenu();
 
-            if (isOpen) {
-                closeMobileMenu();
-            } else {
-                openMobileMenu();
             }
+        );
 
-        });
 
+        /* Close when clicking navigation link */
 
-        /* Close after selecting a navigation link */
+        const navLinks =
+            navMenu.querySelectorAll("a");
 
-        navMenu.querySelectorAll("a").forEach(function (link) {
+        navLinks.forEach(function (link) {
 
-            link.addEventListener("click", function () {
-                closeMobileMenu();
-            });
+            link.addEventListener(
+                "click",
+                function () {
+
+                    closeMobileMenu();
+
+                }
+            );
 
         });
 
 
         /* Close when clicking outside */
 
-        document.addEventListener("click", function (event) {
+        document.addEventListener(
+            "click",
+            function (event) {
 
-            if (
-                navMenu.classList.contains("show") &&
-                !navMenu.contains(event.target) &&
-                !menuBtn.contains(event.target)
-            ) {
+                if (
+                    navMenu.classList.contains("show") &&
+                    !navMenu.contains(event.target) &&
+                    !menuBtn.contains(event.target)
+                ) {
 
-                closeMobileMenu();
+                    closeMobileMenu();
+
+                }
 
             }
-
-        });
+        );
 
 
         /* Close with Escape */
 
-        document.addEventListener("keydown", function (event) {
-
-            if (event.key === "Escape") {
-                closeMobileMenu();
-            }
-
-        });
-
-    }
-
-
-    /* =====================================================
-       ACTIVE NAVIGATION LINK
-    ===================================================== */
-
-    if (navMenu) {
-
-        let currentPage =
-            window.location.pathname
-                .split("/")
-                .pop()
-                .toLowerCase();
-
-        if (!currentPage) {
-            currentPage = "index.html";
-        }
-
-
-        navMenu.querySelectorAll("a").forEach(function (link) {
-
-            const href =
-                link.getAttribute("href");
-
-            if (!href) return;
-
-
-            const linkPage =
-                href
-                    .split("/")
-                    .pop()
-                    .split("#")[0]
-                    .toLowerCase();
-
-
-            link.classList.remove("active");
-
-
-            if (linkPage === currentPage) {
-                link.classList.add("active");
-            }
-
-        });
-
-    }
-
-
-    /* =====================================================
-       DARK MODE
-    ===================================================== */
-
-    const darkBtn =
-        document.getElementById("darkModeBtn");
-
-    const savedTheme =
-        localStorage.getItem("theme");
-
-
-    if (savedTheme === "dark") {
-
-        document.body.classList.add("dark");
-
-        if (darkBtn) {
-
-            darkBtn.textContent = "☀️";
-
-            darkBtn.setAttribute(
-                "aria-label",
-                "Switch to light mode"
-            );
-
-        }
-
-    }
-
-
-    if (darkBtn) {
-
-        darkBtn.addEventListener("click", function () {
-
-            const isDark =
-                document.body.classList.toggle("dark");
-
-
-            localStorage.setItem(
-                "theme",
-                isDark ? "dark" : "light"
-            );
-
-
-            darkBtn.textContent =
-                isDark ? "☀️" : "🌙";
-
-
-            darkBtn.setAttribute(
-                "aria-label",
-                isDark
-                    ? "Switch to light mode"
-                    : "Switch to dark mode"
-            );
-
-        });
-
-    }
-
-
-    /* =====================================================
-       SITE SEARCH
-    ===================================================== */
-
-    const searchInput =
-        document.getElementById("siteSearch");
-
-
-    const searchBtn =
-        document.getElementById("siteSearchBtn") ||
-        document.getElementById("searchBtn");
-
-
-    function performSearch() {
-
-        if (!searchInput) return;
-
-
-        const keyword =
-            searchInput.value.trim().toLowerCase();
-
-
-        if (!keyword) {
-
-            alert("Please enter something to search.");
-
-            searchInput.focus();
-
-            return;
-
-        }
-
-
-        const searchableElements =
-            document.querySelectorAll(
-                ".news-card, .tool-card, .card, .tutorial, .article-page, article"
-            );
-
-
-        if (searchableElements.length === 0) {
-
-            window.location.href =
-                "news.html?search=" +
-                encodeURIComponent(keyword);
-
-            return;
-
-        }
-
-
-        let found = false;
-
-
-        searchableElements.forEach(function (element) {
-
-            const text =
-                element.innerText.toLowerCase();
-
-
-            if (text.includes(keyword)) {
-
-                element.style.display = "";
-
-                found = true;
-
-            } else {
-
-                element.style.display = "none";
-
-            }
-
-        });
-
-
-        if (!found) {
-
-            alert(
-                'No results found for "' +
-                keyword +
-                '".'
-            );
-
-
-            searchableElements.forEach(function (element) {
-
-                element.style.display = "";
-
-            });
-
-        }
-
-    }
-
-
-    if (searchBtn) {
-
-        searchBtn.addEventListener(
-            "click",
-            performSearch
-        );
-
-    }
-
-
-    if (searchInput) {
-
-        searchInput.addEventListener(
+        document.addEventListener(
             "keydown",
             function (event) {
 
-                if (event.key === "Enter") {
+                if (event.key === "Escape") {
 
-                    event.preventDefault();
-
-                    performSearch();
+                    closeMobileMenu();
 
                 }
 
@@ -344,38 +158,237 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       LIVE DATE
+       ACTIVE NAVIGATION
     ===================================================== */
 
-    const today =
-        document.getElementById("today");
+    if (navMenu) {
+
+        let currentPage =
+            window.location.pathname
+                .split("/")
+                .pop()
+                .toLowerCase();
 
 
-    if (today) {
+        if (
+            !currentPage ||
+            currentPage === ""
+        ) {
 
-        const date = new Date();
+            currentPage = "index.html";
+
+        }
 
 
-        today.innerHTML = `
+        const navLinks =
+            navMenu.querySelectorAll("a");
 
-            <i
-                class="fa-regular fa-calendar"
-                aria-hidden="true"
-            ></i>
 
-            <span>
-                ${date.toLocaleDateString(
-                    "en-GH",
-                    {
-                        weekday: "long",
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric"
-                    }
-                )}
-            </span>
+        navLinks.forEach(function (link) {
 
-        `;
+            const href =
+                link.getAttribute("href");
+
+
+            if (!href) return;
+
+
+            let linkPage =
+                href
+                    .split("/")
+                    .pop()
+                    .split("#")[0]
+                    .toLowerCase();
+
+
+            if (
+                !linkPage ||
+                linkPage === ""
+            ) {
+
+                linkPage = "index.html";
+
+            }
+
+
+            link.classList.remove("active");
+
+
+            if (
+                linkPage === currentPage
+            ) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       SEARCH
+    ===================================================== */
+
+    if (searchForm && searchInput) {
+
+        searchForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const query =
+                    searchInput.value.trim();
+
+
+                if (!query) {
+
+                    searchInput.focus();
+
+                    return;
+
+                }
+
+
+                window.location.href =
+                    "news.html?search=" +
+                    encodeURIComponent(query);
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       DATE
+    ===================================================== */
+
+    function updateDate() {
+
+        if (!today) return;
+
+
+        const date =
+            new Date();
+
+
+        const formattedDate =
+            date.toLocaleDateString(
+                "en-GH",
+                {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                }
+            );
+
+
+        /*
+           Keep the calendar icon if the
+           homepage already contains one.
+        */
+
+        const dateSpan =
+            today.querySelector("span");
+
+
+        if (dateSpan) {
+
+            dateSpan.textContent =
+                formattedDate;
+
+        } else {
+
+            today.textContent =
+                formattedDate;
+
+        }
+
+    }
+
+
+    updateDate();
+
+
+    /* =====================================================
+       FOOTER YEAR
+    ===================================================== */
+
+    if (footerYear) {
+
+        footerYear.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* =====================================================
+       DARK MODE
+    ===================================================== */
+
+    if (darkBtn) {
+
+        const savedTheme =
+            localStorage.getItem("theme");
+
+
+        if (savedTheme === "dark") {
+
+            document.body.classList.add("dark");
+
+            darkBtn.setAttribute(
+                "aria-label",
+                "Switch to light mode"
+            );
+
+            darkBtn.setAttribute(
+                "title",
+                "Switch to light mode"
+            );
+
+        }
+
+
+        darkBtn.addEventListener(
+            "click",
+            function () {
+
+                const isDark =
+                    document.body.classList.toggle(
+                        "dark"
+                    );
+
+
+                localStorage.setItem(
+                    "theme",
+                    isDark
+                        ? "dark"
+                        : "light"
+                );
+
+
+                darkBtn.setAttribute(
+                    "aria-label",
+                    isDark
+                        ? "Switch to light mode"
+                        : "Switch to dark mode"
+                );
+
+
+                darkBtn.setAttribute(
+                    "title",
+                    isDark
+                        ? "Switch to light mode"
+                        : "Switch to dark mode"
+                );
+
+            }
+        );
 
     }
 
@@ -384,73 +397,99 @@ document.addEventListener("DOMContentLoaded", function () {
        BACK TO TOP
     ===================================================== */
 
-    let topButton =
-        document.getElementById("topBtn");
-
-
-    if (!topButton) {
-
-        topButton =
-            document.createElement("button");
-
-        topButton.id = "topBtn";
-
-        topButton.type = "button";
-
-        topButton.innerHTML =
-            '<i class="fa-solid fa-arrow-up"></i>';
-
-        topButton.setAttribute(
-            "aria-label",
-            "Back to top"
-        );
-
-        document.body.appendChild(topButton);
-
-    }
-
-
     function updateTopButton() {
 
-        if (window.scrollY > 300) {
+        if (!topBtn) return;
 
-            topButton.classList.add("show");
+
+        if (window.scrollY > 400) {
+
+            topBtn.classList.add("show");
 
         } else {
 
-            topButton.classList.remove("show");
+            topBtn.classList.remove("show");
 
         }
 
     }
 
 
-    window.addEventListener(
-        "scroll",
-        updateTopButton,
-        {
-            passive: true
-        }
-    );
+    if (topBtn) {
+
+        updateTopButton();
 
 
-    topButton.addEventListener(
-        "click",
-        function () {
-
-            window.scrollTo({
-
-                top: 0,
-
-                behavior: "smooth"
-
-            });
-
-        }
-    );
+        window.addEventListener(
+            "scroll",
+            updateTopButton,
+            {
+                passive: true
+            }
+        );
 
 
-    updateTopButton();
+        topBtn.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       NEWSLETTER
+    ===================================================== */
+
+    if (newsletterForm) {
+
+        newsletterForm.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const emailInput =
+                    newsletterForm.querySelector(
+                        'input[type="email"]'
+                    );
+
+
+                if (!emailInput) return;
+
+
+                const email =
+                    emailInput.value.trim();
+
+
+                if (!email) {
+
+                    emailInput.focus();
+
+                    return;
+
+                }
+
+
+                alert(
+                    "Thanks for subscribing to TechHub Ghana. Newsletter delivery will be connected soon."
+                );
+
+
+                newsletterForm.reset();
+
+            }
+        );
+
+    }
 
 
     /* =====================================================
@@ -458,7 +497,9 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================================== */
 
     const heroImage =
-        document.querySelector(".hero-image img");
+        document.querySelector(
+            ".hero-image img"
+        );
 
 
     const heroImages = [
@@ -477,27 +518,215 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentImage = 0;
 
 
-        setInterval(function () {
+        /*
+           Only run the slider if the image
+           exists.
+        */
+
+        let sliderInterval;
+
+
+        function changeHeroImage() {
 
             currentImage =
-                (currentImage + 1) %
+                (
+                    currentImage + 1
+                ) %
                 heroImages.length;
 
 
             heroImage.style.opacity = "0";
 
 
-            setTimeout(function () {
+            setTimeout(
+                function () {
 
-                heroImage.src =
-                    heroImages[currentImage];
+                    heroImage.src =
+                        heroImages[currentImage];
 
-                heroImage.style.opacity = "1";
 
-            }, 250);
+                    heroImage.style.opacity =
+                        "1";
 
-        }, 5000);
+                },
+                250
+            );
+
+        }
+
+
+        sliderInterval =
+            setInterval(
+                changeHeroImage,
+                5000
+            );
+
+
+        /*
+           Stop unnecessary work if page
+           is hidden.
+        */
+
+        document.addEventListener(
+            "visibilitychange",
+            function () {
+
+                if (
+                    document.hidden &&
+                    sliderInterval
+                ) {
+
+                    clearInterval(
+                        sliderInterval
+                    );
+
+                    sliderInterval = null;
+
+                } else if (
+                    !document.hidden &&
+                    !sliderInterval
+                ) {
+
+                    sliderInterval =
+                        setInterval(
+                            changeHeroImage,
+                            5000
+                        );
+
+                }
+
+            }
+        );
 
     }
+
+
+    /* =====================================================
+       PREVENT ACCIDENTAL HORIZONTAL SCROLL
+    ===================================================== */
+
+    document.documentElement.style.overflowX =
+        "hidden";
+
+    document.body.style.overflowX =
+        "hidden";
+
+
+    /* =====================================================
+       MOBILE RESIZE
+       Close navigation when returning to desktop.
+    ===================================================== */
+
+    window.addEventListener(
+        "resize",
+        function () {
+
+            if (
+                window.innerWidth > 768
+            ) {
+
+                closeMobileMenu();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       SMOOTH INTERNAL LINKS
+    ===================================================== */
+
+    const internalLinks =
+        document.querySelectorAll(
+            'a[href^="#"]'
+        );
+
+
+    internalLinks.forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function (event) {
+
+                    const targetId =
+                        link.getAttribute(
+                            "href"
+                        );
+
+
+                    if (
+                        !targetId ||
+                        targetId === "#"
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    const target =
+                        document.querySelector(
+                            targetId
+                        );
+
+
+                    if (!target) return;
+
+
+                    event.preventDefault();
+
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+
+                    closeMobileMenu();
+
+                }
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       IMAGE ERROR PROTECTION
+    ===================================================== */
+
+    const images =
+        document.querySelectorAll(
+            "img"
+        );
+
+
+    images.forEach(
+        function (image) {
+
+            image.addEventListener(
+                "error",
+                function () {
+
+                    image.classList.add(
+                        "image-error"
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    /* =====================================================
+       PAGE READY
+    ===================================================== */
+
+    document.body.classList.add(
+        "page-ready"
+    );
 
 });
