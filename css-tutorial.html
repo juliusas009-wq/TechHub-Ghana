@@ -2,351 +2,1049 @@
 <html lang="en">
 
 <head>
+
+    <!-- =========================================================
+         BASIC DOCUMENT SETUP
+    ========================================================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b5cff"
+    >
+
+    <meta
+        name="description"
+        content="Learn CSS from beginner to advanced with practical examples, responsive design, Flexbox, Grid and modern web design at TechHub Ghana."
+    >
+
+    <meta
+        name="keywords"
+        content="CSS tutorial Ghana, learn CSS, CSS beginners, Flexbox, CSS Grid, responsive design, TechHub Ghana"
+    >
+
+    <meta
+        name="author"
+        content="TechHub Ghana"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
     <title>CSS Tutorial | TechHub Ghana</title>
 
-    <meta name="description"
-          content="Learn CSS from beginner to advanced with practical examples at TechHub Ghana.">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- =========================================================
+         GOOGLE FONT
+    ========================================================== -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         MAIN STYLESHEET
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =========================================================
+         PAGE SIDE SPACING
+         MATCHED TO CONTACT PAGE
+    ========================================================== -->
+
+    <style>
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ====================================================== */
+
+        main {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .section {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tutorial-page {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tutorial-content {
+            width: 100%;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           HEADER LOGO
+           SAME AS CONTACT PAGE
+        ====================================================== */
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            max-width: 56px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            min-width: 0;
+        }
+
+        .logo-text h1,
+        .logo-text p {
+            display: block;
+        }
+
+        .logo-text h1 {
+            white-space: nowrap;
+        }
+
+        .logo-text p {
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           CODE BLOCKS
+        ====================================================== */
+
+        .code-box {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .code-box pre {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+
+        /* =====================================================
+           TUTORIAL NAVIGATION
+        ====================================================== */
+
+        .tutorial-navigation {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        .newsletter {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .footer-grid,
+        .copyright {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           MOBILE — 768px
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            main {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .section,
+            .tutorial-page {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .tutorial-content {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .top-bar {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .logo {
+                gap: 9px;
+                max-width: calc(100% - 58px);
+            }
+
+            .logo img {
+                width: 44px;
+                height: 44px;
+                min-width: 44px;
+                max-width: 44px;
+            }
+
+            .logo-text {
+                min-width: 0;
+                overflow: hidden;
+            }
+
+            .logo-text h1 {
+                font-size: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .logo-text p {
+                font-size: 0.58rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .code-box {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            footer {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONES — 480px
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            main {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .top-bar {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .logo {
+                gap: 8px;
+            }
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                max-width: 40px;
+            }
+
+            .logo-text h1 {
+                font-size: 0.92rem;
+            }
+
+            .logo-text p {
+                font-size: 0.52rem;
+            }
+
+            footer {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
-<body>
 
-<!-- ================= HEADER ================= -->
+<body id="top">
 
-<header class="main-header">
 
-    <div class="top-bar">
+    <!-- =========================================================
+         SKIP LINK
+    ========================================================== -->
 
-        <a href="index.html" class="logo">
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to main content
+    </a>
 
-            <img src="images/logo.png"
-                 alt="TechHub Ghana Logo">
 
-            <div class="logo-text">
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
 
-                <h1>TechHub Ghana</h1>
+    <header
+        class="main-header"
+        id="siteHeader"
+    >
 
-                <p>Technology • Tutorials • Digital Tools</p>
+        <div class="top-bar">
 
-            </div>
 
-        </a>
+            <!-- LOGO -->
 
-        <div class="header-right">
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="TechHub Ghana home"
+            >
 
-            <div class="search-box">
+                <img
+                    src="images/logo.png"
+                    alt="TechHub Ghana logo"
+                    width="56"
+                    height="56"
+                    decoding="async"
+                >
 
-                <input
-                    type="search"
-                    id="tutorialSearch"
-                    placeholder="Search tutorials..."
-                    aria-label="Search tutorials">
+                <div class="logo-text">
+
+                    <h1>
+                        TechHub Ghana
+                    </h1>
+
+                    <p>
+                        Technology • Tutorials • Digital Tools
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- HEADER RIGHT -->
+
+            <div class="header-right">
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <label
+                        for="tutorialSearch"
+                        class="sr-only"
+                    >
+                        Search tutorials
+                    </label>
+
+                    <input
+                        type="search"
+                        id="tutorialSearch"
+                        placeholder="Search tutorials..."
+                        autocomplete="off"
+                        aria-label="Search tutorials"
+                    >
+
+                    <button
+                        type="button"
+                        id="tutorialSearchBtn"
+                        aria-label="Search tutorials"
+                    >
+
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                            aria-hidden="true"
+                        ></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- DARK MODE -->
 
                 <button
                     type="button"
-                    id="tutorialSearchBtn"
-                    aria-label="Search tutorials">
-                    🔍
+                    id="darkModeBtn"
+                    class="dark-mode-btn"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="navMenu"
+                    aria-expanded="false"
+                >
+                    ☰
                 </button>
 
             </div>
 
-            <button
-                class="menu-btn"
-                id="menuBtn"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false">
-                ☰
-            </button>
-
-        </div>
-
-    </div>
-
-    <nav id="navMenu">
-
-        <a href="index.html">Home</a>
-
-        <a href="ghana-tech.html">🇬🇭 Ghana Tech</a>
-
-        <a href="news.html">News</a>
-
-        <a href="tutorials.html" class="active">Tutorials</a>
-
-        <a href="tools.html">Tools</a>
-
-        <a href="gpa.html">GPA</a>
-
-        <a href="qr-generator.html">QR Generator</a>
-
-        <a href="ai-assistant.html">AI Assistant</a>
-
-        <a href="about.html">About</a>
-
-        <a href="contact.html">Contact</a>
-
-    </nav>
-
-</header>
-
-
-<!-- ================= BREAKING NEWS ================= -->
-
-<section class="breaking-news">
-
-    <marquee>
-        🎨 Learn CSS • Web Design • Responsive Websites • Flexbox • Grid • Animations • Modern UI Design
-    </marquee>
-
-</section>
-
-
-<!-- ================= TUTORIAL ================= -->
-
-<main class="tutorial-page">
-
-    <section class="section">
-
-        <div class="tutorial-header">
-
-            <span class="category">
-                🎨 CSS TUTORIAL
-            </span>
-
-            <h2>
-                CSS Tutorial for Beginners
-            </h2>
-
-            <p>
-                Learn how to design beautiful, responsive and modern websites
-                using Cascading Style Sheets (CSS).
-            </p>
-
         </div>
 
 
-        <article class="tutorial-content">
+        <!-- =====================================================
+             NAVIGATION
+        ====================================================== -->
 
-            <h2>1. What is CSS?</h2>
+        <nav
+            id="navMenu"
+            aria-label="Main navigation"
+        >
 
-            <p>
-                CSS stands for <strong>Cascading Style Sheets</strong>.
-                It is used to control the appearance and layout of HTML websites.
-            </p>
+            <a href="index.html">
 
-            <p>
-                HTML creates the structure of a website, while CSS makes that
-                website beautiful.
-            </p>
+                <i
+                    class="fa-solid fa-house"
+                    aria-hidden="true"
+                ></i>
 
-            <div class="code-box">
-                <pre><code>h1 {
+                Home
+
+            </a>
+
+
+            <a href="ghana-tech.html">
+
+                🇬🇭 Ghana Tech
+
+            </a>
+
+
+            <a href="news.html">
+
+                <i
+                    class="fa-regular fa-newspaper"
+                    aria-hidden="true"
+                ></i>
+
+                News
+
+            </a>
+
+
+            <a
+                href="tutorials.html"
+                class="active"
+                aria-current="page"
+            >
+
+                <i
+                    class="fa-solid fa-graduation-cap"
+                    aria-hidden="true"
+                ></i>
+
+                Tutorials
+
+            </a>
+
+
+            <a href="tools.html">
+
+                <i
+                    class="fa-solid fa-toolbox"
+                    aria-hidden="true"
+                ></i>
+
+                Tools
+
+            </a>
+
+
+            <a href="gpa.html">
+                🎓 GPA
+            </a>
+
+
+            <a href="qr-generator.html">
+                📱 QR Generator
+            </a>
+
+
+            <a href="ai-assistant.html">
+                🤖 AI Assistant
+            </a>
+
+
+            <a href="about.html">
+
+                <i
+                    class="fa-solid fa-circle-info"
+                    aria-hidden="true"
+                ></i>
+
+                About
+
+            </a>
+
+
+            <a href="contact.html">
+
+                <i
+                    class="fa-solid fa-envelope"
+                    aria-hidden="true"
+                ></i>
+
+                Contact
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         BREAKING / UPDATE BAR
+    ========================================================== -->
+
+    <section
+        class="breaking-news"
+        aria-label="TechHub Ghana latest updates"
+    >
+
+        <div class="breaking-inner">
+
+            <div class="breaking-label">
+
+                <i
+                    class="fa-solid fa-bolt"
+                    aria-hidden="true"
+                ></i>
+
+                Tech Update
+
+            </div>
+
+
+            <div class="breaking-content">
+
+                <div class="breaking-track">
+
+                    <span>
+                        🎨 CSS
+                    </span>
+
+                    <span>
+                        Web Design
+                    </span>
+
+                    <span>
+                        Responsive Websites
+                    </span>
+
+                    <span>
+                        Flexbox
+                    </span>
+
+                    <span>
+                        CSS Grid
+                    </span>
+
+                    <span>
+                        Animations
+                    </span>
+
+                    <span>
+                        Modern UI Design
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main id="main-content">
+
+        <section class="section">
+
+            <div class="tutorial-page">
+
+
+                <!-- =================================================
+                     TUTORIAL HEADER
+                ================================================== -->
+
+                <div class="tutorial-header">
+
+                    <span class="category">
+                        🎨 CSS TUTORIAL
+                    </span>
+
+                    <h2>
+                        CSS Tutorial for Beginners
+                    </h2>
+
+                    <p>
+                        Learn how to design beautiful, responsive and modern
+                        websites using Cascading Style Sheets (CSS).
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     TUTORIAL CONTENT
+                ================================================== -->
+
+                <article
+                    class="tutorial-content"
+                >
+
+                    <h2>
+                        1. What is CSS?
+                    </h2>
+
+                    <p>
+                        CSS stands for
+                        <strong>Cascading Style Sheets</strong>.
+                        It is used to control the appearance and layout
+                        of HTML websites.
+                    </p>
+
+                    <p>
+                        HTML creates the structure of a website, while CSS
+                        makes that website beautiful and easier to use.
+                    </p>
+
+
+                    <div class="code-box">
+
+                        <pre><code>h1 {
     color: blue;
 }</code></pre>
-            </div>
 
-            <p>
-                The code above changes the color of an HTML heading to blue.
-            </p>
+                    </div>
 
 
-            <h2>2. How to Add CSS to HTML</h2>
+                    <p>
+                        The code above changes the color of an HTML heading
+                        to blue.
+                    </p>
 
-            <p>
-                There are three main ways to add CSS to a webpage:
-            </p>
 
-            <ul>
-                <li>Inline CSS</li>
-                <li>Internal CSS</li>
-                <li>External CSS</li>
-            </ul>
+                    <!-- =================================================
+                         SECTION 2
+                    ================================================== -->
 
-            <h3>Inline CSS</h3>
+                    <h2>
+                        2. How to Add CSS to HTML
+                    </h2>
 
-            <div class="code-box">
-                <pre><code>&lt;h1 style="color: blue;"&gt;
+                    <p>
+                        There are three main ways to add CSS to a webpage:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Inline CSS
+                        </li>
+
+                        <li>
+                            Internal CSS
+                        </li>
+
+                        <li>
+                            External CSS
+                        </li>
+
+                    </ul>
+
+
+                    <h3>
+                        Inline CSS
+                    </h3>
+
+                    <div class="code-box">
+
+                        <pre><code>&lt;h1 style="color: blue;"&gt;
     Hello World
 &lt;/h1&gt;</code></pre>
-            </div>
 
-            <h3>Internal CSS</h3>
+                    </div>
 
-            <div class="code-box">
-                <pre><code>&lt;style&gt;
+
+                    <h3>
+                        Internal CSS
+                    </h3>
+
+                    <div class="code-box">
+
+                        <pre><code>&lt;style&gt;
 
 h1 {
     color: blue;
 }
 
 &lt;/style&gt;</code></pre>
-            </div>
 
-            <h3>External CSS</h3>
-
-            <div class="code-box">
-                <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
-            </div>
-
-            <p>
-                External CSS is commonly used for professional websites because
-                one CSS file can control many HTML pages.
-            </p>
+                    </div>
 
 
-            <h2>3. CSS Selectors</h2>
+                    <h3>
+                        External CSS
+                    </h3>
 
-            <p>
-                Selectors tell CSS which HTML element should be styled.
-            </p>
+                    <div class="code-box">
 
-            <h3>Element Selector</h3>
+                        <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
 
-            <div class="code-box">
-                <pre><code>p {
+                    </div>
+
+
+                    <p>
+                        External CSS is commonly used for professional websites
+                        because one CSS file can control many HTML pages.
+                    </p>
+
+
+                    <!-- =================================================
+                         SECTION 3
+                    ================================================== -->
+
+                    <h2>
+                        3. CSS Selectors
+                    </h2>
+
+                    <p>
+                        Selectors tell CSS which HTML element should be styled.
+                    </p>
+
+
+                    <h3>
+                        Element Selector
+                    </h3>
+
+                    <div class="code-box">
+
+                        <pre><code>p {
     color: green;
 }</code></pre>
-            </div>
 
-            <h3>Class Selector</h3>
+                    </div>
 
-            <div class="code-box">
-                <pre><code>.card {
+
+                    <h3>
+                        Class Selector
+                    </h3>
+
+                    <div class="code-box">
+
+                        <pre><code>.card {
     background: white;
 }</code></pre>
-            </div>
 
-            <h3>ID Selector</h3>
+                    </div>
 
-            <div class="code-box">
-                <pre><code>#header {
+
+                    <h3>
+                        ID Selector
+                    </h3>
+
+                    <div class="code-box">
+
+                        <pre><code>#header {
     background: black;
 }</code></pre>
-            </div>
+
+                    </div>
 
 
-            <h2>4. CSS Colors</h2>
+                    <!-- =================================================
+                         SECTION 4
+                    ================================================== -->
 
-            <p>
-                CSS allows you to change text, background and border colors.
-            </p>
+                    <h2>
+                        4. CSS Colors
+                    </h2>
 
-            <div class="code-box">
-                <pre><code>h1 {
+                    <p>
+                        CSS allows you to change text, background and border
+                        colors.
+                    </p>
+
+                    <div class="code-box">
+
+                        <pre><code>h1 {
     color: red;
 }
 
 body {
     background-color: #f5f5f5;
 }</code></pre>
-            </div>
+
+                    </div>
 
 
-            <h2>5. CSS Fonts</h2>
+                    <!-- =================================================
+                         SECTION 5
+                    ================================================== -->
 
-            <div class="code-box">
-                <pre><code>body {
+                    <h2>
+                        5. CSS Fonts
+                    </h2>
+
+                    <div class="code-box">
+
+                        <pre><code>body {
     font-family: Arial, sans-serif;
 }
 
 h1 {
     font-size: 40px;
 }</code></pre>
-            </div>
+
+                    </div>
 
 
-            <h2>6. CSS Box Model</h2>
+                    <!-- =================================================
+                         SECTION 6
+                    ================================================== -->
 
-            <p>
-                Every HTML element can be thought of as a box.
-                The CSS box model contains:
-            </p>
+                    <h2>
+                        6. CSS Box Model
+                    </h2>
 
-            <ul>
-                <li>Content</li>
-                <li>Padding</li>
-                <li>Border</li>
-                <li>Margin</li>
-            </ul>
+                    <p>
+                        Every HTML element can be thought of as a box.
+                        The CSS box model contains:
+                    </p>
 
-            <div class="code-box">
-                <pre><code>.card {
+                    <ul>
+
+                        <li>
+                            Content
+                        </li>
+
+                        <li>
+                            Padding
+                        </li>
+
+                        <li>
+                            Border
+                        </li>
+
+                        <li>
+                            Margin
+                        </li>
+
+                    </ul>
+
+
+                    <div class="code-box">
+
+                        <pre><code>.card {
     padding: 20px;
     margin: 20px;
     border: 1px solid #ccc;
 }</code></pre>
-            </div>
+
+                    </div>
 
 
-            <h2>7. CSS Flexbox</h2>
+                    <!-- =================================================
+                         SECTION 7
+                    ================================================== -->
 
-            <p>
-                Flexbox is useful for arranging elements horizontally or vertically.
-            </p>
+                    <h2>
+                        7. CSS Flexbox
+                    </h2>
 
-            <div class="code-box">
-                <pre><code>.container {
+                    <p>
+                        Flexbox is useful for arranging elements horizontally
+                        or vertically.
+                    </p>
+
+                    <div class="code-box">
+
+                        <pre><code>.container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }</code></pre>
-            </div>
+
+                    </div>
 
 
-            <h2>8. CSS Grid</h2>
+                    <!-- =================================================
+                         SECTION 8
+                    ================================================== -->
 
-            <p>
-                CSS Grid is useful for creating layouts with rows and columns.
-            </p>
+                    <h2>
+                        8. CSS Grid
+                    </h2>
 
-            <div class="code-box">
-                <pre><code>.container {
+                    <p>
+                        CSS Grid is useful for creating layouts with rows
+                        and columns.
+                    </p>
+
+                    <div class="code-box">
+
+                        <pre><code>.container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }</code></pre>
-            </div>
+
+                    </div>
 
 
-            <h2>9. Responsive Design</h2>
+                    <!-- =================================================
+                         SECTION 9
+                    ================================================== -->
 
-            <p>
-                Responsive design makes websites work properly on phones,
-                tablets and computers.
-            </p>
+                    <h2>
+                        9. Responsive Design
+                    </h2>
 
-            <div class="code-box">
-                <pre><code>@media (max-width: 768px) {
+                    <p>
+                        Responsive design makes websites work properly on
+                        phones, tablets and computers.
+                    </p>
+
+                    <div class="code-box">
+
+                        <pre><code>@media (max-width: 768px) {
 
     .container {
         grid-template-columns: 1fr;
     }
 
 }</code></pre>
-            </div>
+
+                    </div>
 
 
-            <h2>10. CSS Hover Effects</h2>
+                    <!-- =================================================
+                         SECTION 10
+                    ================================================== -->
 
-            <p>
-                The <strong>:hover</strong> selector allows you to change an element
-                when the user moves the mouse over it.
-            </p>
+                    <h2>
+                        10. CSS Hover Effects
+                    </h2>
 
-            <div class="code-box">
-                <pre><code>button {
+                    <p>
+                        The <strong>:hover</strong> selector allows you to
+                        change an element when the user moves the mouse
+                        over it.
+                    </p>
+
+                    <div class="code-box">
+
+                        <pre><code>button {
     background: blue;
     color: white;
     padding: 10px 20px;
@@ -355,17 +1053,26 @@ h1 {
 button:hover {
     background: black;
 }</code></pre>
-            </div>
+
+                    </div>
 
 
-            <h2>11. Practical CSS Project</h2>
+                    <!-- =================================================
+                         SECTION 11
+                    ================================================== -->
 
-            <p>
-                Let's create a simple technology card.
-            </p>
+                    <h2>
+                        11. Practical CSS Project
+                    </h2>
 
-            <div class="code-box">
-                <pre><code>&lt;div class="card"&gt;
+                    <p>
+                        Let's create a simple technology card.
+                    </p>
+
+
+                    <div class="code-box">
+
+                        <pre><code>&lt;div class="card"&gt;
 
     &lt;h2&gt;TechHub Ghana&lt;/h2&gt;
 
@@ -378,12 +1085,18 @@ button:hover {
     &lt;/button&gt;
 
 &lt;/div&gt;</code></pre>
-            </div>
 
-            <p>CSS:</p>
+                    </div>
 
-            <div class="code-box">
-                <pre><code>.card {
+
+                    <p>
+                        CSS:
+                    </p>
+
+
+                    <div class="code-box">
+
+                        <pre><code>.card {
     width: 300px;
     padding: 20px;
     background: white;
@@ -403,139 +1116,292 @@ button:hover {
     border-radius: 5px;
     cursor: pointer;
 }</code></pre>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PRACTICE EXERCISE
+                    ================================================== -->
+
+                    <div class="tutorial-exercise">
+
+                        <h2>
+                            📝 CSS Practice Exercise
+                        </h2>
+
+                        <p>
+                            Create a webpage containing:
+                        </p>
+
+                        <ol>
+
+                            <li>
+                                A heading called
+                                "My Technology Website"
+                            </li>
+
+                            <li>
+                                A paragraph describing your website
+                            </li>
+
+                            <li>
+                                A blue button called
+                                "Learn More"
+                            </li>
+
+                            <li>
+                                A card with padding and a border
+                            </li>
+
+                            <li>
+                                A responsive layout
+                            </li>
+
+                        </ol>
+
+                        <p>
+
+                            <strong>Challenge:</strong>
+
+                            Try to make the button change color when
+                            the mouse moves over it.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         TUTORIAL NAVIGATION
+                    ================================================== -->
+
+                    <div class="tutorial-navigation">
+
+                        <a
+                            href="html-tutorial.html"
+                            class="read-btn"
+                        >
+
+                            <i
+                                class="fa-solid fa-arrow-left"
+                                aria-hidden="true"
+                            ></i>
+
+                            HTML Tutorial
+
+                        </a>
+
+
+                        <a
+                            href="javascript-tutorial.html"
+                            class="read-btn"
+                        >
+
+                            JavaScript Tutorial
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
             </div>
 
+        </section>
 
-            <div class="tutorial-exercise">
-
-                <h2>📝 CSS Practice Exercise</h2>
-
-                <p>
-                    Create a webpage containing:
-                </p>
-
-                <ol>
-                    <li>A heading called "My Technology Website"</li>
-                    <li>A paragraph describing your website</li>
-                    <li>A blue button called "Learn More"</li>
-                    <li>A card with padding and a border</li>
-                    <li>A responsive layout</li>
-                </ol>
-
-                <p>
-                    <strong>Challenge:</strong>
-                    Try to make the button change color when the mouse moves over it.
-                </p>
-
-            </div>
+    </main>
 
 
-            <div class="tutorial-navigation">
+    <!-- =========================================================
+         NEWSLETTER
+    ========================================================== -->
 
-                <a href="html-tutorial.html" class="read-btn">
-                    ← HTML Tutorial
-                </a>
+    <section class="newsletter">
 
-                <a href="javascript-tutorial.html" class="read-btn">
-                    JavaScript Tutorial →
-                </a>
+        <h2>
+            📩 Stay Updated
+        </h2>
 
-            </div>
+        <p>
+            Receive new tutorials, technology news and digital tools.
+        </p>
 
-        </article>
+
+        <form id="newsletterForm">
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email"
+                autocomplete="email"
+                aria-label="Email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
 
     </section>
 
-</main>
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="footer-grid">
 
 
-<!-- ================= NEWSLETTER ================= -->
+            <!-- BRAND -->
 
-<section class="newsletter">
+            <div>
 
-    <h2>Stay Updated</h2>
+                <h3>
+                    TechHub Ghana
+                </h3>
 
-    <p>
-        Receive new tutorials, technology news and digital tools.
-    </p>
+                <p>
+                    Technology • Learning • Innovation
+                </p>
 
-    <form id="newsletterForm">
+                <p>
+                    Free technology resources, tutorials,
+                    news and digital tools.
+                </p>
 
-        <input
-            type="email"
-            id="newsletterEmail"
-            placeholder="Enter your email"
-            required>
-
-        <button type="submit">
-            Subscribe
-        </button>
-
-    </form>
-
-</section>
+            </div>
 
 
-<!-- ================= FOOTER ================= -->
+            <!-- QUICK LINKS -->
 
-<footer>
+            <div>
 
-    <div class="footer-grid">
+                <h3>
+                    Quick Links
+                </h3>
 
-        <div>
+                <p>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </p>
 
-            <h3>TechHub Ghana</h3>
+                <p>
+                    <a href="ghana-tech.html">
+                        Ghana Tech
+                    </a>
+                </p>
 
-            <p>
-                Technology • Learning • Innovation
-            </p>
+                <p>
+                    <a href="news.html">
+                        News
+                    </a>
+                </p>
+
+                <p>
+                    <a href="tutorials.html">
+                        Tutorials
+                    </a>
+                </p>
+
+                <p>
+                    <a href="tools.html">
+                        Tools
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- POPULAR TOOLS -->
+
+            <div>
+
+                <h3>
+                    Popular Tools
+                </h3>
+
+                <p>
+                    <a href="gpa.html">
+                        GPA Calculator
+                    </a>
+                </p>
+
+                <p>
+                    <a href="qr-generator.html">
+                        QR Generator
+                    </a>
+                </p>
+
+                <p>
+                    <a href="ai-assistant.html">
+                        AI Assistant
+                    </a>
+                </p>
+
+                <p>
+                    <a href="password-generator.html">
+                        Password Generator
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    📧
+                    <a href="mailto:juliusas009@gmail.com">
+                        Email Us
+                    </a>
+                </p>
+
+                <p>
+                    📱
+                    <a href="tel:+233534057748">
+                        Call Us
+                    </a>
+                </p>
+
+            </div>
 
         </div>
 
-        <div>
 
-            <h3>Quick Links</h3>
-
-            <p><a href="index.html">Home</a></p>
-            <p><a href="news.html">News</a></p>
-            <p><a href="tutorials.html">Tutorials</a></p>
-            <p><a href="tools.html">Tools</a></p>
-
-        </div>
-
-        <div>
-
-            <h3>Tutorials</h3>
-
-            <p><a href="html-tutorial.html">HTML</a></p>
-            <p><a href="css-tutorial.html">CSS</a></p>
-            <p><a href="python-tutorial.html">Python</a></p>
-            <p><a href="java-tutorial.html">Java</a></p>
-            <p><a href="mysql-tutorial.html">MySQL</a></p>
-
-        </div>
-
-        <div>
-
-            <h3>Contact</h3>
-
-            <p>📍 Accra, Ghana</p>
-            <p>📧 info@techhubghana.com</p>
-
-        </div>
-
-    </div>
-
-    <hr>
-
-    <p class="copyright">
-        © 2026 TechHub Ghana. All Rights Reserved.
-    </p>
-
-</footer>
+        <hr>
 
 
-<script src="script.js"></script>
+        <p class="copyright">
+            © 2026 TechHub Ghana.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script src="script.js" defer></script>
 
 </body>
+
     </html>
