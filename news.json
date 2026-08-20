@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-20T19:57:55.686799+00:00",
+  "updated": "2026-08-20T20:35:33.327667+00:00",
   "articles": [
+    {
+      "title": "Someone targeted security researchers using a fake crypto conference as a lure",
+      "summary": "A hacker pretending to work for a leading cryptocurrency news website targeted several cybersecurity professionals using Google Docs as a way to deliver malware.",
+      "link": "https://techcrunch.com/2026/08/20/someone-targeted-security-researchers-using-a-fake-crypto-conference-as-a-lure/",
+      "date": "Thu, 20 Aug 2026 20:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Cybersecurity"
+    },
     {
       "title": "Mark buys a castle",
       "summary": "Mark Zuckerberg just bought a cozy abode somewhat close to Meta’s international headquarters in Ireland.",
@@ -150,14 +158,6 @@
       "summary": "a16z’s Borderless Founder network initiative supports immigrant and international founders. \"Having one foot in your home country, and one foot in Silicon Valley\" is an advantage, the firm believes.",
       "link": "https://techcrunch.com/2026/08/20/for-a16z-ai-gives-foreign-founders-an-advantage/",
       "date": "Thu, 20 Aug 2026 13:00:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "US says hackers are targeting vulnerable water systems with the help of AI",
-      "summary": "Hackers are targeting internet-connected Siemens controllers used in water facilities around the United States.",
-      "link": "https://techcrunch.com/2026/08/20/us-says-hackers-are-targeting-vulnerable-water-systems-with-the-help-of-ai/",
-      "date": "Thu, 20 Aug 2026 12:43:19 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
