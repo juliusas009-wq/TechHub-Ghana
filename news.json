@@ -1,6 +1,54 @@
 {
-  "updated": "2026-08-20T15:31:46.300700+00:00",
+  "updated": "2026-08-20T16:33:26.575679+00:00",
   "articles": [
+    {
+      "title": "Senators demand answers from TikTok over experiment that disabled safeguards",
+      "summary": "The safeguard was designed to prevent users from being overwhelmed by harmful content, but TikTok wanted to determine whether it made the app less engaging.",
+      "link": "https://techcrunch.com/2026/08/20/senators-demand-answers-from-tiktok-over-experiment-that-disabled-safeguards/",
+      "date": "Thu, 20 Aug 2026 16:22:19 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Meta brings Pocket, an app that lets you vibe-code and share games, to US users",
+      "summary": "Meta is bringing Pocket, its experimental AI-powered app for creating and sharing interactive games, to users across the U.S. after quietly testing it in Brazil.",
+      "link": "https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users/",
+      "date": "Thu, 20 Aug 2026 16:07:26 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "The 2026 Startup Battlefield 200 is here — see who made the cut",
+      "summary": "We’re thrilled to unveil the 2026 Startup Battlefield 200, our annual handpicked list of the 200 most promising early-stage startups from around the world.",
+      "link": "https://techcrunch.com/2026/08/20/the-2026-startup-battlefield-200-is-here-see-who-made-the-cut/",
+      "date": "Thu, 20 Aug 2026 16:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Patreon launches 30 new creator features, including short-form Clips and revamped discovery",
+      "summary": "Patreon is overhauling how creators get discovered, adding short-form Clips, topic-based communities, and a revamped recommendation system designed to give smaller creators more visibility.",
+      "link": "https://techcrunch.com/2026/08/20/patreon-launches-30-new-creator-features-including-short-form-clips-and-revamped-discovery/",
+      "date": "Thu, 20 Aug 2026 16:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Inertia Enterprises finds a way to make its fusion fuel fast",
+      "summary": "Fusion power startup Inertia Enterprises reduced the fuel filling process from a week to just a few hours. It's one of ten hurdles the company must overcome to make a profitable power plant.",
+      "link": "https://techcrunch.com/2026/08/20/inertia-enterprises-finds-a-way-to-make-its-fusion-fuel-fast/",
+      "date": "Thu, 20 Aug 2026 16:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "There are less than 48 hours to save up to $300 on your TechCrunch Disrupt 2026 ticket",
+      "summary": "If you’ve been circling around Disrupt, then now’s the best time to lock in your pass and start getting ready to join the rest of the startup community gathering in San Francisco from October 13-15 at Moscone West!",
+      "link": "https://techcrunch.com/2026/08/20/there-are-less-than-48-hours-to-save-up-to-300-on-your-techcrunch-disrupt-2026-ticket/",
+      "date": "Thu, 20 Aug 2026 15:53:49 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Apollo Atomics wants to make nuclear power cheaper by shrinking an overlooked part",
       "summary": "Y Combinator alumnus Apollo Atomics is shrinking a key nuclear reactor part, which promises to slash the cost of electricity below natural gas.",
@@ -19,7 +67,7 @@
     },
     {
       "title": "For a16z, AI gives foreign founders an advantage",
-      "summary": "a16z’s Borderless Founder network initiative supports immigrant and international founders. 'Having one foot in your home country, and one foot in Silicon Valley,\" is an advantage, the firm believes.",
+      "summary": "a16z’s Borderless Founder network initiative supports immigrant and international founders. \"Having one foot in your home country, and one foot in Silicon Valley\" is an advantage, the firm believes.",
       "link": "https://techcrunch.com/2026/08/20/for-a16z-ai-gives-foreign-founders-an-advantage/",
       "date": "Thu, 20 Aug 2026 13:00:00 +0000",
       "source": "TechCrunch",
@@ -35,7 +83,7 @@
     },
     {
       "title": "Meta AI’s new Mac app wants you to talk to your apps",
-      "summary": "Meta said its Muse Spark model is powering the dictation feature.",
+      "summary": "The company said that the dictation feature works across all apps, just like other tools such as Wispr Flow, Superwhisper, and Monologue.",
       "link": "https://techcrunch.com/2026/08/20/meta-ais-new-mac-app-wants-you-to-talk-to-your-apps/",
       "date": "Thu, 20 Aug 2026 12:11:57 +0000",
       "source": "TechCrunch",
@@ -43,7 +91,7 @@
     },
     {
       "title": "Binance now lets AI agents trade, but keeping them in check is largely up to users",
-      "summary": "Binance's Agent OS works with tools including ChatGPT, Claude Code, and Cursor.",
+      "summary": "Binance's Agent OS works with tools such as ChatGPT, Claude Code, and Cursor.",
       "link": "https://techcrunch.com/2026/08/20/binance-now-lets-ai-agents-trade-but-keeping-them-in-check-is-largely-up-to-users/",
       "date": "Thu, 20 Aug 2026 09:30:00 +0000",
       "source": "TechCrunch",
@@ -114,51 +162,11 @@
       "category": "Technology"
     },
     {
-      "title": "AI was supposed to win people over by now — it hasn’t",
-      "summary": "As AI becomes harder to avoid, consumers are growing more wary of the technology — and Silicon Valley is discovering that widespread adoption doesn’t necessarily lead to acceptance.",
-      "link": "https://techcrunch.com/2026/08/19/ai-was-supposed-to-win-people-over-by-now-it-hasnt/",
-      "date": "Wed, 19 Aug 2026 19:11:40 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Google packs Search and Gemini with new AI study tools",
-      "summary": "The launch of the new study features marks Google's latest effort to make Gemini the AI assistant that students turn to when learning and studying, as it continues to compete with companies like OpenAI.",
-      "link": "https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/",
-      "date": "Wed, 19 Aug 2026 19:00:00 +0000",
-      "source": "TechCrunch",
-      "category": "Artificial Intelligence"
-    },
-    {
-      "title": "Researchers say OpenAI revoked their access to limited cyber program",
-      "summary": "The idea behind OpenAI's Trusted Access for Cyber program is to give trusted defenders better models so they can report bugs and vulnerabilities to companies, with the aim of getting flaws patched faster.",
-      "link": "https://techcrunch.com/2026/08/19/researchers-complain-that-openai-revoked-their-access-to-limited-cyber-program/",
-      "date": "Wed, 19 Aug 2026 18:46:14 +0000",
-      "source": "TechCrunch",
-      "category": "Artificial Intelligence"
-    },
-    {
-      "title": "Meet the startup helping Wall Street put a price on AI compute",
-      "summary": "The AI buildout shows no signs of slowing. And&#160;with&#160;hundreds of&#160;billions of dollars a year going into data centers and GPUs,&#160;compute has&#160;become the single biggest cost for anyone building AI products. But for all that spending, there still&#160;isn’t&#160;a straightforward way to put a price on&#160;compute&#160;— or&#160;for firms to hedge their exposure when the price&#160;changes.&#160; Silicon Data [&#8230;]",
-      "link": "https://techcrunch.com/video/meet-the-startup-helping-wall-street-put-a-price-on-ai-compute/",
-      "date": "Wed, 19 Aug 2026 17:26:48 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "T-Mobile ‘chopped a cable’ to expel Chinese hackers from its network",
-      "summary": "The U.S. phone provider escaped a large-scale breach of its network after identifying Chinese-backed hackers early on.",
-      "link": "https://techcrunch.com/2026/08/19/t-mobile-chopped-a-cable-to-expel-chinese-hackers-from-its-network/",
-      "date": "Wed, 19 Aug 2026 17:26:32 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Time’s running out! Save $300 on your TechCrunch Disrupt 2026 pass until August 21",
-      "summary": "If you’ve been circling around Disrupt, then now’s the best time to lock in your pass and start getting ready to join the rest of the startup community gathering in San Francisco from October 13-15 at Moscone West!",
-      "link": "https://techcrunch.com/2026/08/19/times-running-out-save-300-on-your-techcrunch-disrupt-2026-pass-until-august-21/",
-      "date": "Wed, 19 Aug 2026 16:16:18 +0000",
-      "source": "TechCrunch",
+      "title": "Debates over AI consciousness are a trap",
+      "summary": "“Runaway” AI, “rogue” agents, and “autonomous” actors—the current rhetoric would have you believe that AI agents are not only awake and aware, but angry at their creators. Prominent tech leaders such as Demis Hassabis, Dario Amodei, and Sam Altman push for regulation of these seemingly “superhuman” systems, while a separate faction, led by policy organizations&#8230;",
+      "link": "https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/",
+      "date": "Thu, 20 Aug 2026 15:42:39 +0000",
+      "source": "MIT Technology Review",
       "category": "Technology"
     },
     {
@@ -229,14 +237,6 @@
       "title": "The role of the astronaut is in flux",
       "summary": "When the four astronauts on board NASA’s Artemis II swung around the moon earlier this year, they set a new record for the farthest humans have ever ventured from Earth, surpassing the distance set by Apollo 13 in 1972 by some 4,000 miles.&#160; While no space mission can live up to the historic touchdown of&#8230;",
       "link": "https://www.technologyreview.com/2026/08/18/1141614/book-review-astronaut-role-in-flux/",
-      "date": "Tue, 18 Aug 2026 09:00:00 +0000",
-      "source": "MIT Technology Review",
-      "category": "Technology"
-    },
-    {
-      "title": "AI’s recursive self-improvement might not come so quickly after all",
-      "summary": "The AI industry’s boldest promise right now is that AI will soon improve itself, with almost no need for human oversight. LLMs can already write code, generate synthetic data for training, and optimize the computer chips they run on. Forecasts of explosive AI progress predict that what researchers call recursive self-improvement is on the horizon.&#160;&#8230;",
-      "link": "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/",
       "date": "Tue, 18 Aug 2026 09:00:00 +0000",
       "source": "MIT Technology Review",
       "category": "Technology"
