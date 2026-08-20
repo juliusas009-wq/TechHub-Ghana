@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-20T13:44:57.343496+00:00",
+  "updated": "2026-08-20T14:34:29.534053+00:00",
   "articles": [
+    {
+      "title": "Apollo Atomics wants to make nuclear power cheaper by shrinking an overlooked part",
+      "summary": "Y Combinator alumnus Apollo Atomics is shrinking a key nuclear reactor part, which promises to slash the cost of electricity below natural gas.",
+      "link": "https://techcrunch.com/2026/08/20/apollo-atomics-wants-to-make-nuclear-power-cheaper-by-shrinking-an-overlooked-part/",
+      "date": "Thu, 20 Aug 2026 13:45:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "AI data giant Alation confirms cyberattack",
       "summary": "The data search and AI giant confirmed unauthorized access to its systems during an incident on Tuesday, and said it was investigating the breach.",
@@ -150,14 +158,6 @@
       "summary": "If you’ve been circling around Disrupt, then now’s the best time to lock in your pass and start getting ready to join the rest of the startup community gathering in San Francisco from October 13-15 at Moscone West!",
       "link": "https://techcrunch.com/2026/08/19/times-running-out-save-300-on-your-techcrunch-disrupt-2026-pass-until-august-21/",
       "date": "Wed, 19 Aug 2026 16:16:18 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "TerraPower’s nuclear reactor has a secret weapon for powering AI data centers",
-      "summary": "TerraPower's nuclear power plant possesses a strategic advantage over competitors, especially when chasing after data center deals.",
-      "link": "https://techcrunch.com/2026/08/19/terrapowers-nuclear-reactor-has-a-secret-weapon-for-powering-ai-data-centers/",
-      "date": "Wed, 19 Aug 2026 15:44:53 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
