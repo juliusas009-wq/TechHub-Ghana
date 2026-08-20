@@ -1,7 +1,7 @@
 /* =========================================================
    TECHHUB GHANA
-   COMPLETE MASTER STYLESHEET
-   Matched to the supplied index.html
+   FINAL MASTER STYLESHEET
+   Version: 2026
 ========================================================= */
 
 
@@ -20,19 +20,37 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 90px;
-}
-
-body {
-    font-family: "Poppins", Arial, sans-serif;
-    background: #f4f7fb;
-    color: #172033;
-    line-height: 1.6;
+    width: 100%;
     overflow-x: hidden;
 }
 
-img {
+body {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    font-family: "Poppins", Arial, sans-serif;
+
+    background: #f4f7fb;
+    color: #172033;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+img,
+video,
+iframe,
+svg,
+canvas {
     display: block;
     max-width: 100%;
+}
+
+img {
+    height: auto;
 }
 
 a {
@@ -41,7 +59,9 @@ a {
 }
 
 button,
-input {
+input,
+textarea,
+select {
     font: inherit;
 }
 
@@ -49,7 +69,8 @@ button {
     cursor: pointer;
 }
 
-ul {
+ul,
+ol {
     list-style: none;
 }
 
@@ -65,14 +86,16 @@ ul {
 
 :root {
 
-    /* Main colors */
+    /* Primary */
     --primary: #0b5cff;
     --primary-dark: #0848c7;
     --primary-light: #eaf2ff;
 
+    /* Secondary */
     --secondary: #00a86b;
     --secondary-dark: #087f55;
 
+    /* Accent */
     --accent: #ffb703;
     --danger: #ef4444;
 
@@ -81,6 +104,7 @@ ul {
     --text-dark: #0f172a;
     --text-light: #667085;
     --text-muted: #98a2b3;
+
     --white: #ffffff;
 
     /* Background */
@@ -92,42 +116,91 @@ ul {
     --border: #e5eaf1;
     --border-dark: #d4dbe5;
 
-    /* Effects */
-    --shadow-sm: 0 4px 15px rgba(15, 23, 42, 0.06);
-    --shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
-    --shadow-lg: 0 20px 55px rgba(15, 23, 42, 0.12);
+    /* Shadows */
+    --shadow-sm:
+        0 4px 15px rgba(15, 23, 42, 0.06);
 
+    --shadow:
+        0 10px 35px rgba(15, 23, 42, 0.08);
+
+    --shadow-lg:
+        0 20px 55px rgba(15, 23, 42, 0.12);
+
+    /* Radius */
     --radius-sm: 10px;
     --radius: 16px;
     --radius-lg: 24px;
 
+    /* Layout */
     --container: 1180px;
+    --page-gap: 18px;
 
+    /* Transition */
     --transition: 0.25s ease;
 }
 
 
 /* =========================================================
-   3. ACCESSIBILITY
+   3. PAGE BOUNDARY
+   Small visual line on both sides of the website
+========================================================= */
+
+body::before,
+body::after {
+    content: "";
+
+    position: fixed;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background: rgba(11, 92, 255, 0.13);
+
+    pointer-events: none;
+
+    z-index: 9999;
+}
+
+body::before {
+    left: var(--page-gap);
+}
+
+body::after {
+    right: var(--page-gap);
+}
+
+
+/* =========================================================
+   4. ACCESSIBILITY
 ========================================================= */
 
 .sr-only {
     position: absolute;
+
     width: 1px;
     height: 1px;
+
     padding: 0;
     margin: -1px;
+
     overflow: hidden;
+
     clip: rect(0, 0, 0, 0);
+
     white-space: nowrap;
+
     border: 0;
 }
 
 .skip-link {
     position: fixed;
+
     top: -100px;
     left: 20px;
-    z-index: 9999;
+
+    z-index: 99999;
 
     padding: 12px 18px;
 
@@ -148,7 +221,7 @@ ul {
 
 
 /* =========================================================
-   4. GENERAL CONTAINERS
+   5. GLOBAL CONTAINERS
 ========================================================= */
 
 .section-container {
@@ -157,7 +230,8 @@ ul {
         var(--container)
     );
 
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section {
@@ -170,15 +244,19 @@ ul {
 
 
 /* =========================================================
-   5. SITE HEADER
+   6. HEADER
 ========================================================= */
 
 .site-header {
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
 
-    background: rgba(255, 255, 255, 0.96);
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.97);
 
     border-bottom: 1px solid var(--border);
 
@@ -188,7 +266,7 @@ ul {
 
 
 /* =========================================================
-   6. TOP BAR
+   7. TOP BAR
 ========================================================= */
 
 .top-bar {
@@ -197,41 +275,47 @@ ul {
         var(--container)
     );
 
-    min-height: 82px;
+    min-height: 76px;
 
     margin: 0 auto;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 25px;
 }
 
 
 /* =========================================================
-   7. LOGO
+   8. LOGO
 ========================================================= */
 
 .logo {
     display: flex;
+
     align-items: center;
-    gap: 12px;
+
+    gap: 10px;
 
     min-width: max-content;
 }
 
 .logo-image {
-    width: 52px;
-    height: 52px;
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     overflow: hidden;
 
-    border-radius: 14px;
+    border-radius: 11px;
 
     background: var(--primary-light);
 
@@ -247,39 +331,50 @@ ul {
 
 .logo-content {
     display: flex;
+
     flex-direction: column;
+
+    min-width: 0;
 }
 
 .logo-title {
     color: var(--text-dark);
 
-    font-size: 20px;
+    font-size: 19px;
+
     font-weight: 800;
-    line-height: 1.2;
+
+    line-height: 1.15;
+
+    white-space: nowrap;
 }
 
 .logo-tagline {
-    margin-top: 3px;
+    margin-top: 2px;
 
     color: var(--text-light);
 
-    font-size: 10px;
+    font-size: 9px;
+
     font-weight: 500;
 
-    letter-spacing: 0.3px;
+    letter-spacing: 0.25px;
+
+    white-space: nowrap;
 }
 
 
 /* =========================================================
-   8. SEARCH BOX
+   9. SEARCH
 ========================================================= */
 
 .search-box {
-    width: min(420px, 42vw);
+    width: min(400px, 42vw);
 
-    height: 44px;
+    height: 42px;
 
     display: flex;
+
     align-items: center;
 
     background: #f7f9fc;
@@ -311,7 +406,7 @@ ul {
     width: 100%;
     height: 100%;
 
-    padding: 0 16px;
+    padding: 0 15px;
 
     border: 0;
     outline: 0;
@@ -320,7 +415,7 @@ ul {
 
     color: var(--text);
 
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .search-box input::placeholder {
@@ -328,7 +423,7 @@ ul {
 }
 
 .search-box button {
-    width: 48px;
+    width: 46px;
     height: 100%;
 
     border: 0;
@@ -344,25 +439,29 @@ ul {
 
 .search-box button:hover {
     background: var(--primary);
+
     color: #fff;
 }
 
 
 /* =========================================================
-   9. MOBILE MENU BUTTON
+   10. MOBILE MENU BUTTON
 ========================================================= */
 
 .menu-btn {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
 
     display: none;
 
     flex-direction: column;
+
     align-items: center;
     justify-content: center;
 
     gap: 5px;
+
+    flex-shrink: 0;
 
     border: 1px solid var(--border);
 
@@ -374,7 +473,7 @@ ul {
 }
 
 .menu-btn span {
-    width: 21px;
+    width: 20px;
     height: 2px;
 
     display: block;
@@ -383,8 +482,9 @@ ul {
 
     border-radius: 10px;
 
-    transition: transform var(--transition),
-                opacity var(--transition);
+    transition:
+        transform var(--transition),
+        opacity var(--transition);
 }
 
 .menu-btn:hover {
@@ -405,11 +505,14 @@ ul {
 
 
 /* =========================================================
-   10. MAIN NAVIGATION
+   11. MAIN NAVIGATION
 ========================================================= */
 
 .main-nav {
+    width: 100%;
+
     border-top: 1px solid #f0f2f5;
+
     background: #fff;
 }
 
@@ -419,33 +522,36 @@ ul {
         var(--container)
     );
 
-    min-height: 50px;
+    min-height: 48px;
 
     margin: 0 auto;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    gap: 4px;
+    gap: 3px;
 }
 
 .nav-inner a {
     position: relative;
 
-    min-height: 50px;
+    min-height: 48px;
 
-    padding: 0 18px;
+    padding: 0 16px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    gap: 8px;
+    gap: 7px;
 
     color: #475467;
 
-    font-size: 13px;
+    font-size: 12px;
+
     font-weight: 600;
 
     transition:
@@ -458,8 +564,8 @@ ul {
 
     position: absolute;
 
-    left: 14px;
-    right: 14px;
+    left: 12px;
+    right: 12px;
     bottom: 0;
 
     height: 3px;
@@ -475,6 +581,7 @@ ul {
 
 .nav-inner a:hover {
     color: var(--primary);
+
     background: #f7f9fc;
 }
 
@@ -488,20 +595,23 @@ ul {
 }
 
 .nav-inner i {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .nav-flag {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 
 /* =========================================================
-   11. BREAKING NEWS / UPDATE BAR
+   12. BREAKING NEWS
 ========================================================= */
 
 .breaking-news {
+    width: 100%;
+
     background: #0f172a;
+
     color: #fff;
 
     overflow: hidden;
@@ -513,36 +623,40 @@ ul {
         var(--container)
     );
 
-    min-height: 42px;
+    min-height: 40px;
 
     margin: 0 auto;
 
     display: flex;
+
     align-items: center;
 
-    gap: 14px;
+    gap: 12px;
 }
 
 .today-date {
+    min-width: max-content;
+
     display: flex;
+
     align-items: center;
 
-    gap: 7px;
-
-    min-width: max-content;
+    gap: 6px;
 
     color: #d8dee9;
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 500;
 }
 
 .breaking-label {
     min-width: max-content;
 
-    padding: 6px 12px;
+    padding: 5px 11px;
 
     display: flex;
+
     align-items: center;
 
     gap: 6px;
@@ -553,15 +667,19 @@ ul {
 
     color: #fff;
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 700;
 
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+
+    letter-spacing: 0.4px;
 }
 
 .breaking-content {
     flex: 1;
+
+    min-width: 0;
 
     overflow: hidden;
 
@@ -570,9 +688,12 @@ ul {
 
 .breaking-track {
     display: inline-flex;
+
     align-items: center;
 
-    gap: 30px;
+    gap: 28px;
+
+    white-space: nowrap;
 
     animation: ticker 30s linear infinite;
 }
@@ -582,14 +703,15 @@ ul {
 
     color: #cbd5e1;
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 500;
 }
 
 .breaking-track span::before {
     content: "•";
 
-    margin-right: 12px;
+    margin-right: 11px;
 
     color: var(--primary);
 }
@@ -606,13 +728,13 @@ ul {
 
 
 /* =========================================================
-   12. HERO SECTION
+   13. HERO
 ========================================================= */
 
 .hero {
     position: relative;
 
-    padding: 80px 0;
+    padding: 75px 0;
 
     background:
         radial-gradient(
@@ -646,6 +768,10 @@ ul {
 }
 
 .hero-content {
+    position: relative;
+
+    z-index: 1;
+
     width: min(
         calc(100% - 40px),
         var(--container)
@@ -657,32 +783,33 @@ ul {
 
     grid-template-columns:
         minmax(0, 1fr)
-        minmax(400px, 0.9fr);
+        minmax(380px, 0.9fr);
 
     align-items: center;
 
-    gap: 70px;
+    gap: 60px;
 }
 
 .hero-text {
-    position: relative;
-    z-index: 2;
+    min-width: 0;
 }
 
 .eyebrow {
     display: inline-flex;
+
     align-items: center;
 
     gap: 8px;
 
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 
     color: var(--primary);
 
-    font-size: 12px;
+    font-size: 11px;
+
     font-weight: 800;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.4px;
 }
 
 .eyebrow-dot {
@@ -703,16 +830,16 @@ ul {
     color: var(--text-dark);
 
     font-size: clamp(
-        42px,
+        40px,
         5vw,
-        70px
+        66px
     );
 
     font-weight: 800;
 
     line-height: 1.08;
 
-    letter-spacing: -2.5px;
+    letter-spacing: -2.4px;
 }
 
 .hero h1 span {
@@ -722,45 +849,48 @@ ul {
 }
 
 .hero-description {
-    max-width: 630px;
+    max-width: 620px;
 
-    margin-top: 24px;
+    margin-top: 22px;
 
     color: var(--text-light);
 
-    font-size: 16px;
+    font-size: 15px;
 
     line-height: 1.8;
 }
 
 .hero-buttons {
-    margin-top: 30px;
+    margin-top: 28px;
 
     display: flex;
+
     flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 11px;
 }
 
 
 /* =========================================================
-   13. BUTTONS
+   14. BUTTONS
 ========================================================= */
 
 .btn {
-    min-height: 48px;
+    min-height: 46px;
 
-    padding: 0 20px;
+    padding: 0 19px;
 
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
-    gap: 9px;
+    gap: 8px;
 
     border-radius: 10px;
 
-    font-size: 13px;
+    font-size: 12px;
+
     font-weight: 700;
 
     transition:
@@ -776,6 +906,7 @@ ul {
 
 .btn-primary {
     background: var(--primary);
+
     color: #fff;
 
     box-shadow:
@@ -799,27 +930,30 @@ ul {
 
 .btn-secondary:hover {
     border-color: var(--primary);
+
     color: var(--primary);
 }
 
 
 /* =========================================================
-   14. HERO STATS
+   15. HERO STATS
 ========================================================= */
 
 .hero-stats {
-    margin-top: 40px;
+    margin-top: 36px;
 
     display: flex;
+
     flex-wrap: wrap;
 
-    gap: 30px;
+    gap: 28px;
 }
 
 .hero-stat {
     position: relative;
 
     display: flex;
+
     flex-direction: column;
 }
 
@@ -829,10 +963,10 @@ ul {
     position: absolute;
 
     top: 4px;
-    right: -16px;
+    right: -15px;
 
     width: 1px;
-    height: 38px;
+    height: 36px;
 
     background: var(--border-dark);
 }
@@ -840,34 +974,38 @@ ul {
 .hero-stat strong {
     color: var(--text-dark);
 
-    font-size: 15px;
+    font-size: 14px;
+
     font-weight: 800;
 }
 
 .hero-stat span {
     color: var(--text-muted);
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 500;
 }
 
 
 /* =========================================================
-   15. HERO IMAGE
+   16. HERO IMAGE
 ========================================================= */
 
 .hero-image-wrapper {
     position: relative;
+
+    min-width: 0;
 }
 
 .hero-image {
     position: relative;
 
-    min-height: 500px;
+    min-height: 470px;
 
     overflow: hidden;
 
-    border-radius: 28px;
+    border-radius: 24px;
 
     background: #dce6f5;
 
@@ -876,8 +1014,7 @@ ul {
 
 .hero-image img {
     width: 100%;
-    height: 100%;
-    min-height: 500px;
+    height: 470px;
 
     object-fit: cover;
 
@@ -905,33 +1042,35 @@ ul {
     position: absolute;
 
     display: flex;
+
     align-items: center;
 
     background: rgba(255, 255, 255, 0.96);
 
     backdrop-filter: blur(10px);
 
-    box-shadow: var(--shadow);
-
     border: 1px solid rgba(255,255,255,0.6);
+
+    box-shadow: var(--shadow);
 }
 
 .hero-card-one {
-    left: 24px;
-    bottom: 25px;
+    left: 22px;
+    bottom: 22px;
 
-    padding: 12px 15px;
+    padding: 11px 14px;
 
-    gap: 11px;
+    gap: 10px;
 
-    border-radius: 13px;
+    border-radius: 12px;
 }
 
 .floating-icon {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -939,7 +1078,7 @@ ul {
 
     color: var(--primary);
 
-    border-radius: 10px;
+    border-radius: 9px;
 }
 
 .hero-card-one strong,
@@ -950,20 +1089,20 @@ ul {
 .hero-card-one strong {
     color: var(--text-dark);
 
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .hero-card-one span {
     color: var(--text-light);
 
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .hero-card-two {
-    top: 24px;
-    right: 24px;
+    top: 22px;
+    right: 22px;
 
-    padding: 9px 13px;
+    padding: 8px 12px;
 
     gap: 7px;
 
@@ -971,7 +1110,8 @@ ul {
 
     color: var(--text-dark);
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 700;
 }
 
@@ -988,37 +1128,43 @@ ul {
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.5);
+        box-shadow:
+            0 0 0 0 rgba(0, 168, 107, 0.5);
     }
 
     70% {
-        box-shadow: 0 0 0 8px rgba(0, 168, 107, 0);
+        box-shadow:
+            0 0 0 8px rgba(0, 168, 107, 0);
     }
 
     100% {
-        box-shadow: 0 0 0 0 rgba(0, 168, 107, 0);
+        box-shadow:
+            0 0 0 0 rgba(0, 168, 107, 0);
     }
 }
 
 
 /* =========================================================
-   16. TRENDING SECTION
+   17. TRENDING
 ========================================================= */
 
 .trending-section {
-    padding: 35px 0 0;
+    padding: 32px 0 0;
 }
 
 .trending-box {
     display: grid;
 
-    grid-template-columns: 210px 1fr auto;
+    grid-template-columns:
+        200px
+        minmax(0, 1fr)
+        auto;
 
     align-items: center;
 
-    gap: 22px;
+    gap: 20px;
 
-    padding: 18px 20px;
+    padding: 17px 19px;
 
     background: #fff;
 
@@ -1031,18 +1177,20 @@ ul {
 
 .trending-heading {
     display: flex;
+
     align-items: center;
 
-    gap: 12px;
+    gap: 11px;
 }
 
 .trending-icon {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
 
     flex-shrink: 0;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1050,7 +1198,7 @@ ul {
 
     color: #e89a00;
 
-    border-radius: 11px;
+    border-radius: 10px;
 }
 
 .section-kicker {
@@ -1060,17 +1208,20 @@ ul {
 
     color: var(--primary);
 
-    font-size: 10px;
+    font-size: 9px;
+
     font-weight: 800;
 
     text-transform: uppercase;
-    letter-spacing: 1.1px;
+
+    letter-spacing: 1px;
 }
 
 .trending-heading h2 {
     color: var(--text-dark);
 
-    font-size: 15px;
+    font-size: 14px;
+
     font-weight: 800;
 
     line-height: 1.2;
@@ -1078,20 +1229,22 @@ ul {
 
 .trending-list {
     display: flex;
+
     flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 7px;
 }
 
 .trending-item {
-    min-height: 36px;
+    min-height: 34px;
 
-    padding: 0 11px;
+    padding: 0 10px;
 
     display: flex;
+
     align-items: center;
 
-    gap: 7px;
+    gap: 6px;
 
     border: 1px solid var(--border);
 
@@ -1101,7 +1254,8 @@ ul {
 
     color: #475467;
 
-    font-size: 10px;
+    font-size: 9px;
+
     font-weight: 600;
 
     transition: var(--transition);
@@ -1118,7 +1272,7 @@ ul {
 }
 
 .trending-item-icon {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .trending-item i {
@@ -1127,13 +1281,15 @@ ul {
 
 .view-more {
     display: flex;
+
     align-items: center;
 
-    gap: 7px;
+    gap: 6px;
 
     color: var(--primary);
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 700;
 
     white-space: nowrap;
@@ -1145,13 +1301,14 @@ ul {
 
 
 /* =========================================================
-   17. SECTION HEADINGS
+   18. SECTION HEADINGS
 ========================================================= */
 
 .section-heading {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 
     display: flex;
+
     align-items: flex-end;
     justify-content: space-between;
 
@@ -1161,30 +1318,35 @@ ul {
 .section-heading h2 {
     color: var(--text-dark);
 
-    font-size: clamp(25px, 3vw, 34px);
+    font-size: clamp(
+        24px,
+        3vw,
+        33px
+    );
 
     font-weight: 800;
 
     line-height: 1.2;
 
-    letter-spacing: -0.8px;
+    letter-spacing: -0.7px;
 }
 
 .section-heading p {
     max-width: 600px;
 
-    margin-top: 10px;
+    margin-top: 9px;
 
     color: var(--text-light);
 
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .section-link {
     display: inline-flex;
+
     align-items: center;
 
-    gap: 8px;
+    gap: 7px;
 
     padding-bottom: 5px;
 
@@ -1192,7 +1354,8 @@ ul {
 
     border-bottom: 1px solid transparent;
 
-    font-size: 12px;
+    font-size: 11px;
+
     font-weight: 700;
 
     white-space: nowrap;
@@ -1206,6 +1369,7 @@ ul {
 
 .centered-heading {
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -1218,7 +1382,7 @@ ul {
 
 
 /* =========================================================
-   18. CARD GRID
+   19. CARD GRID
 ========================================================= */
 
 .card-grid {
@@ -1227,12 +1391,12 @@ ul {
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 18px;
+    gap: 17px;
 }
 
 
 /* =========================================================
-   19. TOOL CARDS
+   20. TOOL CARDS
 ========================================================= */
 
 .tool-card {
@@ -1240,9 +1404,10 @@ ul {
 
     min-width: 0;
 
-    padding: 22px;
+    padding: 21px;
 
     display: flex;
+
     flex-direction: column;
 
     background: #fff;
@@ -1260,7 +1425,7 @@ ul {
 }
 
 .tool-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 
     border-color: #cbdcff;
 
@@ -1269,27 +1434,30 @@ ul {
 
 .tool-card-top {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 10px;
 
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     background: var(--primary-light);
 
-    border-radius: 13px;
+    border-radius: 12px;
 
-    font-size: 24px;
+    font-size: 23px;
 }
 
 .tool-label {
@@ -1301,28 +1469,31 @@ ul {
 
     border-radius: 5px;
 
-    font-size: 9px;
+    font-size: 8px;
+
     font-weight: 700;
 
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+
+    letter-spacing: 0.4px;
 }
 
 .tool-card h3 {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 
     color: var(--text-dark);
 
-    font-size: 17px;
+    font-size: 16px;
+
     font-weight: 800;
 }
 
 .tool-card p {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
     color: var(--text-light);
 
-    font-size: 12px;
+    font-size: 11px;
 
     line-height: 1.7;
 }
@@ -1331,25 +1502,27 @@ ul {
     margin-top: auto;
 
     display: inline-flex;
+
     align-items: center;
 
-    gap: 7px;
+    gap: 6px;
 
     color: var(--primary);
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 700;
 
     transition: gap var(--transition);
 }
 
 .tool-card:hover .card-action {
-    gap: 11px;
+    gap: 10px;
 }
 
 
 /* =========================================================
-   20. NEWS LAYOUT
+   21. NEWS LAYOUT
 ========================================================= */
 
 .news-layout {
@@ -1357,9 +1530,9 @@ ul {
 
     grid-template-columns:
         minmax(0, 1fr)
-        300px;
+        290px;
 
-    gap: 24px;
+    gap: 23px;
 
     align-items: start;
 }
@@ -1367,18 +1540,24 @@ ul {
 .news-left {
     display: grid;
 
-    gap: 18px;
+    gap: 17px;
+
+    min-width: 0;
 }
 
 
 /* =========================================================
-   21. NEWS CARDS
+   22. NEWS CARDS
 ========================================================= */
 
 .news-card {
     display: grid;
 
-    grid-template-columns: 270px minmax(0, 1fr);
+    grid-template-columns:
+        260px
+        minmax(0, 1fr);
+
+    min-width: 0;
 
     overflow: hidden;
 
@@ -1404,7 +1583,7 @@ ul {
 .news-image {
     position: relative;
 
-    min-height: 190px;
+    min-height: 185px;
 
     overflow: hidden;
 
@@ -1415,7 +1594,7 @@ ul {
     width: 100%;
     height: 100%;
 
-    min-height: 190px;
+    min-height: 185px;
 
     object-fit: cover;
 
@@ -1429,8 +1608,8 @@ ul {
 .news-category {
     position: absolute;
 
-    left: 12px;
-    top: 12px;
+    left: 11px;
+    top: 11px;
 
     padding: 5px 8px;
 
@@ -1441,13 +1620,16 @@ ul {
     border-radius: 5px;
 
     font-size: 8px;
+
     font-weight: 700;
 
     text-transform: uppercase;
 }
 
 .news-content {
-    padding: 20px;
+    min-width: 0;
+
+    padding: 19px;
 }
 
 .news-meta {
@@ -1457,43 +1639,48 @@ ul {
 
     color: var(--primary);
 
-    font-size: 9px;
+    font-size: 8px;
+
     font-weight: 700;
 
     text-transform: uppercase;
+
     letter-spacing: 0.5px;
 }
 
 .news-content h3 {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 
     color: var(--text-dark);
 
-    font-size: 18px;
+    font-size: 17px;
+
     font-weight: 800;
 
     line-height: 1.35;
 }
 
 .news-content p {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 
     color: var(--text-light);
 
-    font-size: 11px;
+    font-size: 10px;
 
     line-height: 1.7;
 }
 
 .read-more {
     display: inline-flex;
+
     align-items: center;
 
-    gap: 7px;
+    gap: 6px;
 
     color: var(--primary);
 
-    font-size: 10px;
+    font-size: 9px;
+
     font-weight: 700;
 }
 
@@ -1503,11 +1690,11 @@ ul {
 
 
 /* =========================================================
-   22. NEWS SIDEBAR
+   23. NEWS SIDEBAR
 ========================================================= */
 
 .news-sidebar {
-    padding: 20px;
+    padding: 19px;
 
     background: #fff;
 
@@ -1520,11 +1707,12 @@ ul {
 
 .sidebar-heading {
     display: flex;
+
     align-items: center;
 
-    gap: 9px;
+    gap: 8px;
 
-    padding-bottom: 14px;
+    padding-bottom: 13px;
 
     margin-bottom: 4px;
 
@@ -1532,13 +1720,14 @@ ul {
 }
 
 .sidebar-heading span {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .sidebar-heading h3 {
     color: var(--text-dark);
 
-    font-size: 17px;
+    font-size: 16px;
+
     font-weight: 800;
 }
 
@@ -1551,11 +1740,14 @@ ul {
 }
 
 .news-sidebar li a {
-    min-height: 55px;
+    min-height: 53px;
 
     display: grid;
 
-    grid-template-columns: 25px 1fr 12px;
+    grid-template-columns:
+        24px
+        minmax(0, 1fr)
+        12px;
 
     align-items: center;
 
@@ -1563,7 +1755,8 @@ ul {
 
     color: #475467;
 
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 600;
 
     transition: var(--transition);
@@ -1576,7 +1769,7 @@ ul {
 }
 
 .news-sidebar li a > span:first-child {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .news-sidebar li a i {
@@ -1586,12 +1779,14 @@ ul {
 }
 
 .sidebar-cta {
-    min-height: 42px;
+    min-height: 40px;
 
-    margin-top: 15px;
-    padding: 0 13px;
+    margin-top: 14px;
+
+    padding: 0 12px;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -1601,7 +1796,8 @@ ul {
 
     color: #fff;
 
-    font-size: 10px;
+    font-size: 9px;
+
     font-weight: 700;
 
     transition: var(--transition);
@@ -1615,7 +1811,7 @@ ul {
 
 
 /* =========================================================
-   23. TUTORIAL GRID
+   24. TUTORIAL GRID
 ========================================================= */
 
 .tutorial-grid {
@@ -1624,7 +1820,7 @@ ul {
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 18px;
+    gap: 17px;
 }
 
 .tutorial {
@@ -1652,7 +1848,7 @@ ul {
 .tutorial-image {
     position: relative;
 
-    height: 190px;
+    height: 185px;
 
     overflow: hidden;
 
@@ -1675,8 +1871,8 @@ ul {
 .tutorial-badge {
     position: absolute;
 
-    left: 12px;
-    top: 12px;
+    left: 11px;
+    top: 11px;
 
     padding: 5px 8px;
 
@@ -1687,13 +1883,14 @@ ul {
     border-radius: 5px;
 
     font-size: 8px;
+
     font-weight: 800;
 
     text-transform: uppercase;
 }
 
 .tutorial-content {
-    padding: 17px;
+    padding: 16px;
 }
 
 .tutorial-content > span {
@@ -1703,30 +1900,33 @@ ul {
 
     color: var(--primary);
 
-    font-size: 9px;
+    font-size: 8px;
+
     font-weight: 700;
 
     text-transform: uppercase;
 }
 
 .tutorial-content h3 {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
     color: var(--text-dark);
 
-    font-size: 16px;
+    font-size: 15px;
+
     font-weight: 800;
 }
 
 .tutorial-content strong {
     display: inline-flex;
+
     align-items: center;
 
-    gap: 7px;
+    gap: 6px;
 
     color: var(--primary);
 
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .tutorial:hover .tutorial-content strong {
@@ -1735,19 +1935,19 @@ ul {
 
 
 /* =========================================================
-   24. TECHNOLOGY CARDS
+   25. TECHNOLOGY CARDS
 ========================================================= */
 
 .technology-card {
-    min-height: 270px;
+    min-height: 265px;
 }
 
 .technology-card .icon {
-    margin-bottom: 20px;
+    margin-bottom: 19px;
 }
 
 .technology-card h3 {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .technology-card p {
@@ -1756,7 +1956,7 @@ ul {
 
 
 /* =========================================================
-   25. WHY TECHHUB
+   26. WHY TECHHUB
 ========================================================= */
 
 .why-grid {
@@ -1773,16 +1973,16 @@ ul {
 }
 
 .why-grid .icon {
-    margin: 0 auto 18px;
+    margin: 0 auto 17px;
 }
 
 
 /* =========================================================
-   26. NEWSLETTER
+   27. NEWSLETTER
 ========================================================= */
 
 .newsletter {
-    padding: 65px 20px;
+    padding: 60px 20px;
 
     background:
         linear-gradient(
@@ -1805,19 +2005,21 @@ ul {
     display: grid;
 
     grid-template-columns:
-        auto minmax(0, 1fr)
-        minmax(300px, 390px);
+        auto
+        minmax(0, 1fr)
+        minmax(280px, 390px);
 
     align-items: center;
 
-    gap: 22px;
+    gap: 20px;
 }
 
 .newsletter-icon {
-    width: 60px;
-    height: 60px;
+    width: 58px;
+    height: 58px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1825,9 +2027,9 @@ ul {
 
     border: 1px solid rgba(255,255,255,0.18);
 
-    border-radius: 16px;
+    border-radius: 15px;
 
-    font-size: 23px;
+    font-size: 22px;
 }
 
 .newsletter .section-kicker {
@@ -1835,20 +2037,21 @@ ul {
 }
 
 .newsletter-content h2 {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 
-    font-size: 23px;
+    font-size: 22px;
+
     font-weight: 800;
 }
 
 .newsletter-content p {
     color: #dce8ff;
 
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .newsletter-form {
-    min-height: 48px;
+    min-height: 46px;
 
     display: flex;
 
@@ -1864,23 +2067,24 @@ ul {
 
     min-width: 0;
 
-    padding: 0 14px;
+    padding: 0 13px;
 
     border: 0;
     outline: 0;
 
     color: var(--text);
 
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .newsletter-form button {
-    padding: 0 16px;
+    padding: 0 15px;
 
     display: flex;
+
     align-items: center;
 
-    gap: 7px;
+    gap: 6px;
 
     border: 0;
 
@@ -1888,7 +2092,8 @@ ul {
 
     color: #fff;
 
-    font-size: 10px;
+    font-size: 9px;
+
     font-weight: 700;
 
     transition: var(--transition);
@@ -1901,20 +2106,20 @@ ul {
 .newsletter-note {
     grid-column: 2 / -1;
 
-    margin-top: -8px;
+    margin-top: -7px;
 
     color: #bcd2ff;
 
-    font-size: 9px;
+    font-size: 8px;
 }
 
 
 /* =========================================================
-   27. FOOTER
+   28. FOOTER
 ========================================================= */
 
 .site-footer {
-    padding: 65px 20px 0;
+    padding: 60px 20px 0;
 
     background: #0b1220;
 
@@ -1937,72 +2142,77 @@ ul {
         1fr
         1fr;
 
-    gap: 45px;
+    gap: 42px;
 
-    padding-bottom: 50px;
+    padding-bottom: 45px;
 }
 
 .footer-brand {
     display: inline-flex;
+
     align-items: center;
 
-    gap: 10px;
+    gap: 9px;
 
     color: #fff;
 
-    font-size: 18px;
+    font-size: 17px;
+
     font-weight: 800;
 }
 
 .footer-brand img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
 
     object-fit: contain;
 
-    border-radius: 10px;
+    border-radius: 9px;
 }
 
 .footer-tagline {
-    margin-top: 9px;
+    margin-top: 8px;
 
     color: #7da6ff !important;
 
-    font-size: 9px !important;
+    font-size: 8px !important;
+
     font-weight: 600 !important;
 }
 
 .footer-about > p:last-child {
     max-width: 310px;
 
-    margin-top: 13px;
+    margin-top: 12px;
 
     color: #94a3b8;
 
-    font-size: 11px;
+    font-size: 10px;
 
     line-height: 1.8;
 }
 
 .footer-column h3 {
-    margin-bottom: 18px;
+    margin-bottom: 17px;
 
     color: #fff;
 
-    font-size: 13px;
+    font-size: 12px;
+
     font-weight: 800;
 }
 
 .footer-column ul {
     display: grid;
 
-    gap: 10px;
+    gap: 9px;
 }
 
 .footer-column li a {
     color: #94a3b8;
 
-    font-size: 10px;
+    font-size: 9px;
+
     font-weight: 500;
 
     transition: var(--transition);
@@ -2020,11 +2230,12 @@ ul {
         var(--container)
     );
 
-    min-height: 65px;
+    min-height: 62px;
 
     margin: 0 auto;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -2036,18 +2247,20 @@ ul {
 .footer-bottom p {
     color: #64748b;
 
-    font-size: 9px;
+    font-size: 8px;
 }
 
 .back-to-top-link {
     display: inline-flex;
+
     align-items: center;
 
-    gap: 7px;
+    gap: 6px;
 
     color: #94a3b8;
 
-    font-size: 10px;
+    font-size: 9px;
+
     font-weight: 600;
 
     transition: var(--transition);
@@ -2059,21 +2272,22 @@ ul {
 
 
 /* =========================================================
-   28. BACK TO TOP BUTTON
+   29. BACK TO TOP
 ========================================================= */
 
 .top-btn {
     position: fixed;
 
-    right: 22px;
+    right: 25px;
     bottom: 22px;
 
     z-index: 900;
 
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -2089,6 +2303,7 @@ ul {
         0 8px 25px rgba(11, 92, 255, 0.30);
 
     opacity: 0;
+
     visibility: hidden;
 
     transform: translateY(15px);
@@ -2102,6 +2317,7 @@ ul {
 
 .top-btn.show {
     opacity: 1;
+
     visibility: visible;
 
     transform: translateY(0);
@@ -2115,19 +2331,22 @@ ul {
 
 
 /* =========================================================
-   29. FOCUS STATES
+   30. FOCUS
 ========================================================= */
 
 a:focus-visible,
 button:focus-visible,
-input:focus-visible {
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
     outline: 3px solid rgba(11, 92, 255, 0.28);
+
     outline-offset: 3px;
 }
 
 
 /* =========================================================
-   30. TABLET
+   31. TABLET
 ========================================================= */
 
 @media (max-width: 1050px) {
@@ -2135,7 +2354,7 @@ input:focus-visible {
     .hero-content {
         grid-template-columns:
             minmax(0, 1fr)
-            minmax(350px, 0.9fr);
+            minmax(330px, 0.9fr);
 
         gap: 40px;
     }
@@ -2152,7 +2371,8 @@ input:focus-visible {
 
     .trending-box {
         grid-template-columns:
-            190px 1fr;
+            180px
+            minmax(0, 1fr);
     }
 
     .view-more {
@@ -2163,38 +2383,37 @@ input:focus-visible {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
-
 }
 
 
 /* =========================================================
-   31. TABLET / SMALL LAPTOP NAV
+   32. SMALL LAPTOP / TABLET NAV
 ========================================================= */
 
 @media (max-width: 850px) {
 
     .top-bar {
-        min-height: 72px;
+        min-height: 70px;
     }
 
     .search-box {
-        width: 280px;
+        width: 270px;
     }
 
     .nav-inner a {
-        padding: 0 11px;
+        padding: 0 10px;
 
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .hero {
-        padding: 65px 0;
+        padding: 62px 0;
     }
 
     .hero-content {
         grid-template-columns: 1fr;
 
-        gap: 40px;
+        gap: 38px;
     }
 
     .hero-text {
@@ -2217,13 +2436,13 @@ input:focus-visible {
     .hero-image {
         max-width: 700px;
 
-        min-height: 430px;
+        min-height: 420px;
 
         margin: 0 auto;
     }
 
     .hero-image img {
-        min-height: 430px;
+        height: 420px;
     }
 
     .news-layout {
@@ -2236,7 +2455,8 @@ input:focus-visible {
 
     .newsletter-inner {
         grid-template-columns:
-            auto 1fr;
+            auto
+            minmax(0, 1fr);
 
         max-width: 700px;
     }
@@ -2248,54 +2468,109 @@ input:focus-visible {
     .newsletter-note {
         grid-column: 1 / -1;
     }
-
 }
 
 
 /* =========================================================
-   32. MOBILE NAVIGATION
+   33. MOBILE — 700PX
 ========================================================= */
 
 @media (max-width: 700px) {
+
+    :root {
+        --page-gap: 8px;
+    }
+
+    body::before {
+        left: 8px;
+    }
+
+    body::after {
+        right: 8px;
+    }
 
     .section-container,
     .top-bar,
     .nav-inner,
     .breaking-inner,
     .hero-content {
-        width: min(
-            calc(100% - 28px),
-            var(--container)
-        );
+        width: calc(100% - 28px);
+
+        max-width: var(--container);
+
+        margin-left: auto;
+        margin-right: auto;
     }
 
+
+    /* Header */
+
     .top-bar {
-        gap: 12px;
+        min-height: 68px;
+
+        gap: 10px;
+    }
+
+
+    /* Smaller logo */
+
+    .logo {
+        min-width: 0;
+
+        max-width: calc(100% - 55px);
+
+        flex: 1;
     }
 
     .logo-image {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
     }
 
     .logo-title {
-        font-size: 17px;
+        max-width: 100%;
+
+        font-size: 16px;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
     }
 
     .logo-tagline {
         display: none;
     }
 
+
+    /* Search */
+
     .search-box {
         display: none;
     }
 
+
+    /* Hamburger */
+
     .menu-btn {
         display: flex;
+
+        width: 42px;
+        height: 42px;
+
+        flex: 0 0 42px;
     }
+
+
+    /* Navigation */
 
     .main-nav {
         display: none;
+
+        border-top: 1px solid var(--border);
     }
 
     .main-nav.show {
@@ -2305,6 +2580,7 @@ input:focus-visible {
     }
 
     @keyframes menuDrop {
+
         from {
             opacity: 0;
             transform: translateY(-8px);
@@ -2317,7 +2593,9 @@ input:focus-visible {
     }
 
     .nav-inner {
-        padding: 8px 0 12px;
+        width: 100%;
+
+        padding: 8px 14px 12px;
 
         flex-direction: column;
 
@@ -2327,11 +2605,13 @@ input:focus-visible {
     }
 
     .nav-inner a {
-        min-height: 45px;
+        width: 100%;
+
+        min-height: 44px;
 
         justify-content: flex-start;
 
-        padding: 0 14px;
+        padding: 0 13px;
 
         border-radius: 8px;
     }
@@ -2344,8 +2624,15 @@ input:focus-visible {
         background: var(--primary-light);
     }
 
+
+    /* Breaking news */
+
     .breaking-inner {
-        min-height: 40px;
+        width: 100%;
+
+        min-height: 39px;
+
+        padding: 0 14px;
 
         gap: 8px;
     }
@@ -2355,60 +2642,107 @@ input:focus-visible {
     }
 
     .breaking-label {
-        padding: 5px 9px;
+        padding: 5px 8px;
 
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .breaking-track {
-        gap: 20px;
+        gap: 18px;
     }
 
     .breaking-track span {
         font-size: 9px;
     }
 
+
+    /* Sections */
+
     .section {
-        padding: 60px 0;
+        padding: 58px 0;
     }
 
+
+    /* Hero */
+
     .hero {
-        padding: 55px 0;
+        padding: 52px 0;
+
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: calc(100% - 28px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 28px;
+    }
+
+    .hero-text {
+        width: 100%;
+
+        text-align: center;
     }
 
     .hero h1 {
+        max-width: 100%;
+
         font-size: clamp(
-            39px,
-            12vw,
-            55px
+            36px,
+            11vw,
+            52px
         );
 
-        letter-spacing: -1.8px;
+        letter-spacing: -1.7px;
     }
 
     .hero-description {
-        font-size: 13px;
+        max-width: 100%;
+
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+
+        gap: 22px;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+
+        min-width: 0;
     }
 
     .hero-image {
-        min-height: 350px;
+        width: 100%;
 
-        border-radius: 20px;
+        min-height: 340px;
+
+        border-radius: 19px;
     }
 
     .hero-image img {
-        min-height: 350px;
+        width: 100%;
+
+        height: 340px;
+
+        min-height: 340px;
+
+        object-fit: cover;
     }
 
-    .hero-card-one {
-        left: 14px;
-        bottom: 14px;
-    }
 
-    .hero-card-two {
-        top: 14px;
-        right: 14px;
-    }
+    /* Trending */
 
     .trending-section {
         padding-top: 20px;
@@ -2417,24 +2751,30 @@ input:focus-visible {
     .trending-box {
         grid-template-columns: 1fr;
 
-        gap: 16px;
+        gap: 15px;
     }
 
     .view-more {
         grid-column: auto;
     }
 
+
+    /* Headings */
+
     .section-heading {
         align-items: flex-start;
 
         flex-direction: column;
 
-        margin-bottom: 24px;
+        margin-bottom: 23px;
     }
 
     .section-link {
         align-self: flex-start;
     }
+
+
+    /* Cards */
 
     .card-grid {
         grid-template-columns: 1fr;
@@ -2448,16 +2788,35 @@ input:focus-visible {
         grid-template-columns: 1fr;
     }
 
-    .news-card {
+
+    /* News */
+
+    .news-layout {
         grid-template-columns: 1fr;
     }
 
-    .news-image,
-    .news-image img {
-        min-height: 220px;
+    .news-card {
+        display: block;
+    }
+
+    .news-image {
+        width: 100%;
 
         height: 220px;
+
+        min-height: 220px;
     }
+
+    .news-image img {
+        width: 100%;
+
+        height: 220px;
+
+        min-height: 220px;
+    }
+
+
+    /* Footer */
 
     .footer-grid {
         grid-template-columns: 1fr;
@@ -2466,7 +2825,7 @@ input:focus-visible {
     }
 
     .footer-bottom {
-        min-height: 85px;
+        min-height: 82px;
 
         flex-direction: column;
 
@@ -2474,59 +2833,104 @@ input:focus-visible {
 
         text-align: center;
     }
-
 }
 
 
 /* =========================================================
-   33. SMALL MOBILE PHONES
+   34. SMALL MOBILE — 480PX
 ========================================================= */
 
 @media (max-width: 480px) {
 
+    :root {
+        --page-gap: 6px;
+    }
+
+    body::before {
+        left: 6px;
+    }
+
+    body::after {
+        right: 6px;
+    }
+
     .section-container,
-    .top-bar,
-    .nav-inner,
-    .breaking-inner,
     .hero-content {
-        width: calc(100% - 22px);
+        width: calc(100% - 24px);
+    }
+
+    .top-bar {
+        width: calc(100% - 24px);
+
+        padding: 8px 0;
+    }
+
+
+    /* Logo */
+
+    .logo-image {
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
     }
 
     .logo-title {
-        font-size: 16px;
+        font-size: 15px;
     }
 
-    .logo-image {
-        width: 42px;
-        height: 42px;
+
+    /* Menu */
+
+    .menu-btn {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
     }
+
+
+    /* Hero */
 
     .hero {
         padding: 45px 0;
     }
 
     .hero h1 {
-        font-size: 39px;
+        font-size: 37px;
 
-        letter-spacing: -1.5px;
+        line-height: 1.08;
+    }
+
+    .hero-description {
+        font-size: 12px;
     }
 
     .hero-buttons {
-        width: 100%;
-
         flex-direction: column;
     }
 
-    .btn {
+    .hero-buttons .btn {
         width: 100%;
     }
 
     .hero-stats {
-        gap: 18px;
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 8px;
+    }
+
+    .hero-stat {
+        text-align: center;
     }
 
     .hero-stat:not(:last-child)::after {
-        right: -10px;
+        right: -5px;
+
+        height: 30px;
     }
 
     .hero-image {
@@ -2534,18 +2938,34 @@ input:focus-visible {
     }
 
     .hero-image img {
+        height: 280px;
+
         min-height: 280px;
     }
 
-    .hero-floating-card {
+
+    /* Floating cards */
+
+    .hero-card-one {
+        left: 10px;
+        bottom: 10px;
+
         transform: scale(0.88);
 
         transform-origin: bottom left;
     }
 
     .hero-card-two {
+        top: 10px;
+        right: 10px;
+
+        transform: scale(0.88);
+
         transform-origin: top right;
     }
+
+
+    /* Trending */
 
     .trending-list {
         display: grid;
@@ -2557,20 +2977,25 @@ input:focus-visible {
         justify-content: space-between;
     }
 
+
+    /* Headings */
+
     .section-heading h2 {
-        font-size: 26px;
+        font-size: 25px;
     }
+
+
+    /* Cards */
 
     .tool-card {
-        padding: 19px;
+        padding: 18px;
     }
 
-    .news-content {
-        padding: 17px;
-    }
+
+    /* Newsletter */
 
     .newsletter {
-        padding: 50px 14px;
+        padding: 48px 14px;
     }
 
     .newsletter-inner {
@@ -2581,11 +3006,6 @@ input:focus-visible {
 
     .newsletter-icon {
         margin: 0 auto;
-    }
-
-    .newsletter-form,
-    .newsletter-note {
-        grid-column: auto;
     }
 
     .newsletter-form {
@@ -2602,33 +3022,41 @@ input:focus-visible {
 
     .newsletter-form input {
         width: 100%;
-        height: 46px;
+
+        height: 45px;
 
         border-radius: 8px;
     }
 
     .newsletter-form button {
         width: 100%;
-        height: 46px;
+
+        height: 45px;
 
         justify-content: center;
 
         border-radius: 8px;
     }
 
+    .newsletter-note {
+        text-align: center;
+    }
+
+
+    /* Back to top */
+
     .top-btn {
         right: 14px;
         bottom: 14px;
 
-        width: 40px;
-        height: 40px;
+        width: 39px;
+        height: 39px;
     }
-
 }
 
 
 /* =========================================================
-   34. VERY SMALL DEVICES
+   35. VERY SMALL PHONES — 360PX
 ========================================================= */
 
 @media (max-width: 360px) {
@@ -2637,37 +3065,60 @@ input:focus-visible {
         font-size: 14px;
     }
 
+    .logo-image {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
     .menu-btn {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
+
+        flex-basis: 38px;
     }
 
     .hero h1 {
-        font-size: 34px;
+        font-size: 33px;
     }
 
     .hero-description {
-        font-size: 12px;
-    }
-
-    .trending-list {
-        grid-template-columns: 1fr;
+        font-size: 11px;
     }
 
     .hero-stats {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .hero-stat:not(:last-child)::after {
         display: none;
     }
 
+    .trending-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 
 /* =========================================================
-   35. REDUCED MOTION
+   36. DESKTOP NAVIGATION
+========================================================= */
+
+@media (min-width: 701px) {
+
+    .menu-btn {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+    }
+}
+
+
+/* =========================================================
+   37. REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2680,16 +3131,18 @@ input:focus-visible {
     *::before,
     *::after {
         animation-duration: 0.01ms !important;
+
         animation-iteration-count: 1 !important;
+
         transition-duration: 0.01ms !important;
+
         scroll-behavior: auto !important;
     }
-
 }
 
 
 /* =========================================================
-   36. PRINT
+   38. PRINT
 ========================================================= */
 
 @media print {
@@ -2704,1538 +3157,16 @@ input:focus-visible {
 
     body {
         background: #fff;
+
         color: #000;
+    }
+
+    body::before,
+    body::after {
+        display: none;
     }
 
     .section {
         padding: 20px 0;
     }
-
-}
-
-/* =========================================================
-   FINAL MOBILE WIDTH / ZOOM FIX
-   TechHub Ghana
-========================================================= */
-
-html {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    overflow-x: hidden;
-}
-
-/* Prevent any child element from forcing the page wider */
-.site-header,
-.main-nav,
-.breaking-news,
-.hero,
-.section,
-.newsletter,
-.site-footer {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-}
-
-/* Important: grid/flex children must be allowed to shrink */
-.top-bar,
-.nav-inner,
-.breaking-inner,
-.hero-content,
-.section-container,
-.news-layout,
-.news-left,
-.news-sidebar,
-.newsletter-inner,
-.footer-grid,
-.footer-bottom {
-    min-width: 0;
-}
-
-/* Images can NEVER create horizontal overflow */
-img {
-    max-width: 100%;
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-
-    .section-container,
-    .top-bar,
-    .nav-inner,
-    .breaking-inner,
-    .hero-content {
-        width: calc(100% - 28px);
-        max-width: calc(100% - 28px);
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Header */
-    .top-bar {
-        min-width: 0;
-        overflow: hidden;
-    }
-
-    .logo {
-        min-width: 0;
-        max-width: calc(100% - 56px);
-    }
-
-    .logo-content {
-        min-width: 0;
-    }
-
-    .logo-title {
-        white-space: nowrap;
-    }
-
-    /* Hero */
-    .hero-content {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .hero-text,
-    .hero-image-wrapper {
-        width: 100%;
-        min-width: 0;
-    }
-
-    .hero-image {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-    .hero-image img {
-        width: 100%;
-        max-width: 100%;
-        height: 100%;
-        min-width: 0;
-        object-fit: cover;
-    }
-
-    /* Cards */
-    .card-grid,
-    .tutorial-grid,
-    .why-grid {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-    .tool-card,
-    .tutorial,
-    .technology-card {
-        min-width: 0;
-        max-width: 100%;
-    }
-
-    /* News */
-    .news-layout,
-    .news-card,
-    .news-content {
-        min-width: 0;
-        max-width: 100%;
-    }
-
-    .news-card {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    /* Newsletter */
-    .newsletter-inner {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-    /* Footer */
-    .footer-grid,
-    .footer-bottom {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-}
-
-/* =========================================================
-   EXTRA SMALL PHONES
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .section-container,
-    .top-bar,
-    .nav-inner,
-    .breaking-inner,
-    .hero-content {
-        width: calc(100% - 22px);
-        max-width: calc(100% - 22px);
-    }
-
-    .hero-image,
-    .hero-image img {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-/* =========================================================
-   TECHHUB GHANA
-   FINAL MOBILE LAYOUT FIX
-========================================================= */
-
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-* {
-    max-width: 100%;
-}
-
-
-/* =========================================================
-   MOBILE HERO
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .hero {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .hero-content {
-        width: 100%;
-        max-width: 100%;
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        gap: 30px;
-    }
-
-    .hero-text {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        order: 1;
-    }
-
-    .hero-image-wrapper {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        order: 2;
-    }
-
-    .hero-image {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .hero-image img {
-        display: block;
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        min-width: 0 !important;
-        object-fit: cover;
-    }
-
-
-    /* =====================================================
-       MOBILE NAVIGATION
-    ====================================================== */
-
-    .main-nav {
-        display: none;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .main-nav.show {
-        display: block;
-    }
-
-    .nav-inner {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .nav-inner a {
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-    /* =====================================================
-       HAMBURGER BUTTON
-    ====================================================== */
-
-    .menu-btn {
-        display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-
-        width: 46px;
-        height: 46px;
-
-        flex-shrink: 0;
-
-        cursor: pointer;
-    }
-
-    .menu-btn span {
-        display: block !important;
-
-        width: 22px;
-        height: 2px;
-
-        border-radius: 2px;
-
-        transition:
-            transform 0.25s ease,
-            opacity 0.25s ease;
-    }
-
-
-    /* Hamburger → X */
-
-    .menu-btn.active span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    .menu-btn.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-btn.active span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
-
-
-    /* =====================================================
-       TOP BAR
-    ====================================================== */
-
-    .top-bar {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .logo {
-        min-width: 0;
-        max-width: calc(100% - 60px);
-    }
-
-
-    /* =====================================================
-       BREAKING BAR
-    ====================================================== */
-
-    .breaking-news,
-    .breaking-inner,
-    .breaking-content {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-
-    /* =====================================================
-       SECTIONS
-    ====================================================== */
-
-    .section-container {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-    .card-grid,
-    .tutorial-grid,
-    .news-layout {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-
-    /* =====================================================
-       NEWS
-    ====================================================== */
-
-    .news-left,
-    .news-sidebar {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-
-    /* =====================================================
-       NEWSLETTER
-    ====================================================== */
-
-    .newsletter,
-    .newsletter-inner,
-    .newsletter-content,
-    .newsletter-form {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .hero-content {
-        gap: 24px;
-    }
-
-    .hero h1 {
-        font-size: clamp(2rem, 9vw, 3rem);
-        line-height: 1.1;
-    }
-
-    .hero-description {
-        font-size: 0.95rem;
-        line-height: 1.7;
-    }
-
-    .hero-image img {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    .menu-btn {
-        width: 44px;
-        height: 44px;
-    }
-
-       }
-
-/* =========================================================
-   MOBILE PAGE BOUNDARY LINES
-   Keeps the page visually framed without causing overflow
-========================================================= */
-
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important;
-}
-
-body {
-    position: relative;
-}
-
-/* Left and right page lines */
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: rgba(11, 92, 255, 0.14);
-    pointer-events: none;
-    z-index: 9999;
-}
-
-body::before {
-    left: 10px;
-}
-
-body::after {
-    right: 10px;
-}
-
-
-/* =========================================================
-   IMPORTANT MOBILE WIDTH FIX
-========================================================= */
-
-@media (max-width: 768px) {
-
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        overflow-x: hidden !important;
-    }
-
-    /* Prevent sections from becoming wider than the phone */
-    main,
-    header,
-    footer,
-    section,
-    nav,
-    .site-header,
-    .top-bar,
-    .main-nav,
-    .breaking-news,
-    .breaking-inner,
-    .hero,
-    .hero-content,
-    .hero-text,
-    .hero-image-wrapper,
-    .hero-image,
-    .section,
-    .section-container,
-    .news-layout,
-    .news-left,
-    .news-sidebar,
-    .card-grid,
-    .tutorial-grid,
-    .newsletter,
-    .newsletter-inner,
-    .footer-grid {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-    }
-
-
-    /* =====================================================
-       HERO — FORCE MOBILE STACK
-    ====================================================== */
-
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .hero-text {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .hero-image-wrapper {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .hero-image {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .hero-image img {
-        display: block;
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        object-fit: cover;
-    }
-
-
-    /* =====================================================
-       NAVIGATION
-    ====================================================== */
-
-    .main-nav {
-        width: 100%;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .nav-inner {
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-    /* =====================================================
-       PAGE CONTENT
-    ====================================================== */
-
-    .section-container {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .news-layout {
-        grid-template-columns: 1fr !important;
-    }
-
-    .card-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .tutorial-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-
-    /* =====================================================
-       IMAGES
-    ====================================================== */
-
-    img {
-        max-width: 100% !important;
-        height: auto;
-    }
-
-
-    /* =====================================================
-       PAGE BOUNDARY LINES
-    ====================================================== */
-
-    body::before {
-        left: 8px;
-    }
-
-    body::after {
-        right: 8px;
-    }
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .section-container {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    body::before {
-        left: 6px;
-    }
-
-    body::after {
-        right: 6px;
-    }
-
-}
-
-/* =========================================================
-   TECHHUB GHANA
-   FINAL MOBILE OVERFLOW + RESPONSIVE FIX
-   IMPORTANT: PLACE THIS AT THE VERY END OF style.css
-========================================================= */
-
-
-/* =========================================================
-   1. GLOBAL WIDTH PROTECTION
-========================================================= */
-
-html {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important;
-}
-
-body {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0 !important;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden !important;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
-
-/* Prevent long text/elements from creating horizontal overflow */
-
-img,
-video,
-iframe,
-svg,
-canvas {
-    max-width: 100%;
-}
-
-img {
-    height: auto;
-}
-
-
-/* =========================================================
-   2. MOBILE FIX
-========================================================= */
-
-@media screen and (max-width: 768px) {
-
-    /* -----------------------------------------------------
-       BODY
-    ----------------------------------------------------- */
-
-    body {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        overflow-x: hidden !important;
-    }
-
-
-    /* -----------------------------------------------------
-       HEADER
-    ----------------------------------------------------- */
-
-    .site-header {
-        width: 100% !important;
-        max-width: 100% !important;
-        overflow: visible !important;
-    }
-
-
-    .top-bar {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-
-        padding: 10px 14px !important;
-
-        gap: 10px !important;
-    }
-
-
-    /* -----------------------------------------------------
-       LOGO
-    ----------------------------------------------------- */
-
-    .logo {
-        display: flex !important;
-        align-items: center !important;
-
-        width: auto !important;
-        max-width: calc(100% - 60px) !important;
-        min-width: 0 !important;
-
-        flex: 1 1 auto !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .logo-image {
-        width: 44px !important;
-        height: 44px !important;
-        min-width: 44px !important;
-        max-width: 44px !important;
-
-        flex: 0 0 44px !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .logo-image img {
-        width: 44px !important;
-        height: 44px !important;
-
-        min-width: 44px !important;
-        max-width: 44px !important;
-
-        min-height: 44px !important;
-        max-height: 44px !important;
-
-        object-fit: contain !important;
-    }
-
-
-    .logo-content {
-        min-width: 0 !important;
-        max-width: 100% !important;
-        overflow: hidden !important;
-    }
-
-
-    .logo-title {
-        display: block !important;
-
-        max-width: 100% !important;
-
-        font-size: 1rem !important;
-
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-    }
-
-
-    .logo-tagline {
-        display: block !important;
-
-        max-width: 100% !important;
-
-        font-size: 0.55rem !important;
-
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-    }
-
-
-    /* -----------------------------------------------------
-       SEARCH
-    ----------------------------------------------------- */
-
-    .search-box {
-        display: none !important;
-    }
-
-
-    /* -----------------------------------------------------
-       HAMBURGER BUTTON
-    ----------------------------------------------------- */
-
-    .menu-btn {
-        display: flex !important;
-
-        width: 46px !important;
-        height: 46px !important;
-
-        min-width: 46px !important;
-        max-width: 46px !important;
-
-        flex: 0 0 46px !important;
-
-        align-items: center !important;
-        justify-content: center !important;
-
-        flex-direction: column !important;
-
-        gap: 5px !important;
-
-        padding: 0 !important;
-
-        border: 1px solid #dbe2ea !important;
-        border-radius: 12px !important;
-
-        background: #ffffff !important;
-
-        cursor: pointer !important;
-
-        position: relative !important;
-        z-index: 10001 !important;
-    }
-
-
-    .menu-btn span {
-        display: block !important;
-
-        width: 23px !important;
-        height: 3px !important;
-
-        min-width: 23px !important;
-
-        background: #111827 !important;
-
-        border-radius: 5px !important;
-
-        transition:
-            transform 0.25s ease,
-            opacity 0.25s ease !important;
-    }
-
-
-    /* Hamburger → X */
-
-    .menu-btn.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg) !important;
-    }
-
-    .menu-btn.active span:nth-child(2) {
-        opacity: 0 !important;
-    }
-
-    .menu-btn.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg) !important;
-    }
-
-
-    /* -----------------------------------------------------
-       NAVIGATION
-    ----------------------------------------------------- */
-
-    .main-nav {
-        display: none !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .main-nav.show {
-        display: block !important;
-    }
-
-
-    .nav-inner {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        align-items: stretch !important;
-
-        gap: 0 !important;
-
-        padding: 8px 12px !important;
-    }
-
-
-    .nav-inner a {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-height: 48px !important;
-
-        display: flex !important;
-        align-items: center !important;
-
-        padding: 12px 14px !important;
-
-        margin: 0 !important;
-
-        border-radius: 8px !important;
-
-        white-space: nowrap !important;
-    }
-
-
-    /* -----------------------------------------------------
-       MAIN CONTENT
-    ----------------------------------------------------- */
-
-    main {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-
-        overflow-x: hidden !important;
-    }
-
-
-    section,
-    article,
-    aside,
-    header,
-    footer,
-    nav,
-    div {
-        min-width: 0;
-    }
-
-
-    /* -----------------------------------------------------
-       CONTAINERS
-    ----------------------------------------------------- */
-
-    .section-container,
-    .newsletter-inner,
-    .breaking-inner,
-    .footer-grid {
-        width: calc(100% - 24px) !important;
-        max-width: 100% !important;
-
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-
-
-    /* =====================================================
-       IMPORTANT HERO FIX
-       
-       This is the main problem visible in your screenshot.
-       Desktop two-column hero must become one column.
-    ===================================================== */
-
-    .hero {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .hero-content {
-        width: calc(100% - 24px) !important;
-        max-width: 100% !important;
-
-        margin-left: auto !important;
-        margin-right: auto !important;
-
-        display: grid !important;
-
-        grid-template-columns: minmax(0, 1fr) !important;
-
-        gap: 28px !important;
-    }
-
-
-    .hero-text {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-    }
-
-
-    .hero-image-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-    }
-
-
-    .hero-image {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .hero-image img {
-        display: block !important;
-
-        width: 100% !important;
-        max-width: 100% !important;
-
-        height: auto !important;
-
-        object-fit: cover !important;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO TEXT
-    ----------------------------------------------------- */
-
-    .hero h1 {
-        max-width: 100% !important;
-
-        overflow-wrap: break-word !important;
-        word-wrap: break-word !important;
-    }
-
-
-    .hero-description {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        overflow-wrap: break-word !important;
-    }
-
-
-    .hero-buttons {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        gap: 10px !important;
-    }
-
-
-    .hero-buttons .btn {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-
-    .hero-stats {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        display: grid !important;
-
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-
-        gap: 8px !important;
-    }
-
-
-    .hero-stat {
-        min-width: 0 !important;
-
-        overflow: hidden !important;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO FLOATING CARDS
-    ----------------------------------------------------- */
-
-    .hero-floating-card {
-        max-width: calc(100% - 20px) !important;
-
-        min-width: 0 !important;
-    }
-
-
-    /* -----------------------------------------------------
-       BREAKING NEWS
-    ----------------------------------------------------- */
-
-    .breaking-news {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .breaking-inner {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        display: flex !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .breaking-content {
-        min-width: 0 !important;
-        max-width: 100% !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .breaking-track {
-        max-width: none !important;
-        white-space: nowrap !important;
-    }
-
-
-    /* -----------------------------------------------------
-       TRENDING
-    ----------------------------------------------------- */
-
-    .trending-box {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .trending-list {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        display: grid !important;
-
-        grid-template-columns: 1fr !important;
-    }
-
-
-    .trending-item {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-    }
-
-
-    /* -----------------------------------------------------
-       CARD GRIDS
-    ----------------------------------------------------- */
-
-    .card-grid,
-    .tutorial-grid,
-    .news-layout {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-    }
-
-
-    .card-grid {
-        display: grid !important;
-
-        grid-template-columns: 1fr !important;
-    }
-
-
-    .tutorial-grid {
-        display: grid !important;
-
-        grid-template-columns: 1fr !important;
-    }
-
-
-    .news-layout {
-        display: grid !important;
-
-        grid-template-columns: 1fr !important;
-
-        gap: 24px !important;
-    }
-
-
-    .news-left {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-    }
-
-
-    .news-sidebar {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-    }
-
-
-    /* -----------------------------------------------------
-       CARDS
-    ----------------------------------------------------- */
-
-    .tool-card,
-    .news-card,
-    .tutorial,
-    .technology-card {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .news-card {
-        display: block !important;
-    }
-
-
-    .news-image {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .news-image img,
-    .tutorial-image img {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        height: auto !important;
-
-        object-fit: cover !important;
-    }
-
-
-    /* -----------------------------------------------------
-       SECTION HEADINGS
-    ----------------------------------------------------- */
-
-    .section-heading {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-
-        flex-wrap: wrap !important;
-
-        gap: 12px !important;
-    }
-
-
-    .section-heading > div {
-        min-width: 0 !important;
-        max-width: 100% !important;
-    }
-
-
-    .section-heading h2 {
-        max-width: 100% !important;
-
-        overflow-wrap: break-word !important;
-    }
-
-
-    .section-link {
-        max-width: 100% !important;
-    }
-
-
-    /* -----------------------------------------------------
-       NEWSLETTER
-    ----------------------------------------------------- */
-
-    .newsletter {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .newsletter-inner {
-        width: calc(100% - 24px) !important;
-        max-width: 100% !important;
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        align-items: stretch !important;
-    }
-
-
-    .newsletter-content {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-    }
-
-
-    .newsletter-form {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        display: flex !important;
-
-        flex-direction: column !important;
-
-        gap: 10px !important;
-    }
-
-
-    .newsletter-form input,
-    .newsletter-form button {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-    }
-
-
-    /* -----------------------------------------------------
-       FOOTER
-    ----------------------------------------------------- */
-
-    .site-footer {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        overflow: hidden !important;
-    }
-
-
-    .footer-grid {
-        width: calc(100% - 24px) !important;
-        max-width: 100% !important;
-
-        display: grid !important;
-
-        grid-template-columns: 1fr !important;
-
-        gap: 30px !important;
-    }
-
-
-    .footer-column {
-        width: 100% !important;
-        max-width: 100% !important;
-
-        min-width: 0 !important;
-    }
-
-
-    .footer-bottom {
-        width: calc(100% - 24px) !important;
-        max-width: 100% !important;
-
-        margin-left: auto !important;
-        margin-right: auto !important;
-
-        flex-direction: column !important;
-
-        gap: 12px !important;
-
-        text-align: center !important;
-    }
-
-
-    /* -----------------------------------------------------
-       TOP BUTTON
-    ----------------------------------------------------- */
-
-    .top-btn {
-        right: 14px !important;
-        bottom: 18px !important;
-    }
-
-
-    /* -----------------------------------------------------
-       PREVENT LONG WORDS / URLS
-    ----------------------------------------------------- */
-
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    a,
-    span,
-    li {
-        overflow-wrap: break-word !important;
-    }
-
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media screen and (max-width: 480px) {
-
-    .top-bar {
-        padding: 9px 12px !important;
-    }
-
-
-    .hero-content,
-    .section-container,
-    .newsletter-inner,
-    .footer-grid,
-    .footer-bottom {
-        width: calc(100% - 20px) !important;
-    }
-
-
-    .logo-image {
-        width: 40px !important;
-        height: 40px !important;
-        min-width: 40px !important;
-        max-width: 40px !important;
-        flex-basis: 40px !important;
-    }
-
-
-    .logo-image img {
-        width: 40px !important;
-        height: 40px !important;
-        min-width: 40px !important;
-        max-width: 40px !important;
-        min-height: 40px !important;
-        max-height: 40px !important;
-    }
-
-
-    .logo-title {
-        font-size: 0.92rem !important;
-    }
-
-
-    .logo-tagline {
-        font-size: 0.5rem !important;
-    }
-
-
-    .menu-btn {
-        width: 44px !important;
-        height: 44px !important;
-        min-width: 44px !important;
-        max-width: 44px !important;
-        flex-basis: 44px !important;
-    }
-
-
-    .hero-stats {
-        grid-template-columns: 1fr !important;
-    }
-
-
-    .hero h1 {
-        font-size: clamp(2rem, 10vw, 3rem) !important;
-
-        line-height: 1.08 !important;
-    }
-
-}
-
-
-/* =========================================================
-   DESKTOP
-   Make sure desktop navigation remains normal.
-========================================================= */
-
-@media screen and (min-width: 769px) {
-
-    .menu-btn {
-        display: none !important;
-    }
-
-
-    .main-nav {
-        display: block !important;
-    }
-
-}
+   }
