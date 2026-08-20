@@ -3,6 +3,10 @@
 
 <head>
 
+    <!-- =====================================================
+         BASIC DOCUMENT SETTINGS
+    ====================================================== -->
+
     <meta charset="UTF-8">
 
     <meta
@@ -19,7 +23,7 @@
 
     <meta
         name="keywords"
-        content="TechHub Ghana, Ghana technology news, technology news Ghana, AI news, cybersecurity news, programming news, cloud computing, digital innovation"
+        content="TechHub Ghana, Ghana technology news, AI news, cybersecurity news, programming news, cloud computing, digital innovation"
     >
 
     <meta
@@ -32,19 +36,17 @@
         content="#0756d6"
     >
 
-    <!-- Prevent duplicate indexing issues -->
-    <link
-        rel="canonical"
-        href="news.html"
-    >
+    <!-- =====================================================
+         STYLES
+    ====================================================== -->
 
-    <!-- Main CSS -->
     <link
         rel="stylesheet"
         href="style.css"
     >
 
     <!-- Google Fonts -->
+
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -62,6 +64,7 @@
     >
 
     <!-- Font Awesome -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -87,12 +90,14 @@
         <a
             href="index.html"
             class="logo"
-            aria-label="TechHub Ghana Home"
+            aria-label="TechHub Ghana home"
         >
 
             <img
                 src="images/logo.png"
-                alt="TechHub Ghana Logo"
+                alt="TechHub Ghana logo"
+                width="55"
+                height="55"
             >
 
             <div class="logo-text">
@@ -119,12 +124,20 @@
 
             <div class="search-box">
 
+                <label
+                    for="searchInput"
+                    class="sr-only"
+                >
+                    Search technology news
+                </label>
+
                 <input
                     type="search"
                     id="searchInput"
                     placeholder="Search technology news..."
                     aria-label="Search technology news"
                     autocomplete="off"
+                    spellcheck="false"
                 >
 
                 <button
@@ -189,16 +202,14 @@
 
             <i class="fas fa-home"></i>
 
-            Home
+            <span>Home</span>
 
         </a>
 
 
-        <a
-            href="ghana-tech.html"
-        >
+        <a href="ghana-tech.html">
 
-            🇬🇭 Ghana Tech
+            <span>🇬🇭 Ghana Tech</span>
 
         </a>
 
@@ -211,7 +222,7 @@
 
             <i class="fas fa-newspaper"></i>
 
-            News
+            <span>News</span>
 
         </a>
 
@@ -220,7 +231,7 @@
 
             <i class="fas fa-graduation-cap"></i>
 
-            Tutorials
+            <span>Tutorials</span>
 
         </a>
 
@@ -229,7 +240,7 @@
 
             <i class="fas fa-toolbox"></i>
 
-            Tools
+            <span>Tools</span>
 
         </a>
 
@@ -238,7 +249,7 @@
 
             <i class="fas fa-calculator"></i>
 
-            GPA
+            <span>GPA</span>
 
         </a>
 
@@ -247,7 +258,7 @@
 
             <i class="fas fa-qrcode"></i>
 
-            QR Generator
+            <span>QR Generator</span>
 
         </a>
 
@@ -256,7 +267,7 @@
 
             <i class="fas fa-robot"></i>
 
-            AI Assistant
+            <span>AI Assistant</span>
 
         </a>
 
@@ -265,7 +276,7 @@
 
             <i class="fas fa-circle-info"></i>
 
-            About
+            <span>About</span>
 
         </a>
 
@@ -274,7 +285,7 @@
 
             <i class="fas fa-envelope"></i>
 
-            Contact
+            <span>Contact</span>
 
         </a>
 
@@ -284,7 +295,7 @@
 
 
 <!-- =====================================================
-     BREAKING NEWS
+     LIVE / BREAKING NEWS BAR
 ===================================================== -->
 
 <section
@@ -296,7 +307,7 @@
 
         <i class="fas fa-bolt"></i>
 
-        LIVE
+        <span>LIVE</span>
 
     </div>
 
@@ -309,7 +320,9 @@
             aria-live="polite"
         >
 
-            📢 Loading latest technology news...
+            <span>
+                📢 Loading latest technology news...
+            </span>
 
         </div>
 
@@ -326,7 +339,7 @@
 
 
 <!-- =====================================================
-     HERO NEWS
+     HERO SECTION
 ===================================================== -->
 
 <section class="news-hero">
@@ -343,6 +356,7 @@
                 src="images/ai-news.jpg"
                 alt="Artificial Intelligence transforming education"
                 loading="eager"
+                fetchpriority="high"
             >
 
         </div>
@@ -380,7 +394,7 @@
                 class="hero-btn"
             >
 
-                Read Full Story
+                <span>Read Full Story</span>
 
                 <i class="fas fa-arrow-right"></i>
 
@@ -400,7 +414,10 @@
 
         <!-- CYBERSECURITY -->
 
-        <article class="mini-card">
+        <article
+            class="mini-card"
+            data-category="Cybersecurity"
+        >
 
             <img
                 src="images/cyber-news.jpg"
@@ -441,7 +458,10 @@
 
         <!-- PROGRAMMING -->
 
-        <article class="mini-card">
+        <article
+            class="mini-card"
+            data-category="Programming"
+        >
 
             <img
                 src="images/web-news.jpg"
@@ -482,7 +502,10 @@
 
         <!-- CLOUD -->
 
-        <article class="mini-card">
+        <article
+            class="mini-card"
+            data-category="Cloud Computing"
+        >
 
             <img
                 src="images/cloud-news.jpg"
@@ -534,6 +557,8 @@
     id="latest-news"
 >
 
+
+    <!-- SECTION HEADING -->
 
     <div class="section-heading">
 
@@ -642,7 +667,7 @@
 
 
         <!-- =================================================
-             NEWS CONTAINER
+             NEWS ARTICLES
         ================================================== -->
 
         <div
@@ -651,9 +676,6 @@
             aria-live="polite"
             aria-busy="true"
         >
-
-
-            <!-- LOADING -->
 
             <div class="loading">
 
@@ -755,44 +777,28 @@
 
                 <div class="tags">
 
-                    <span>
-                        AI
-                    </span>
+                    <span>AI</span>
 
-                    <span>
-                        Python
-                    </span>
+                    <span>Python</span>
 
-                    <span>
-                        JavaScript
-                    </span>
+                    <span>JavaScript</span>
 
-                    <span>
-                        HTML
-                    </span>
+                    <span>HTML</span>
 
-                    <span>
-                        CSS
-                    </span>
+                    <span>CSS</span>
 
-                    <span>
-                        Firebase
-                    </span>
+                    <span>Firebase</span>
 
-                    <span>
-                        GitHub
-                    </span>
+                    <span>GitHub</span>
 
-                    <span>
-                        Cloud
-                    </span>
+                    <span>Cloud</span>
 
                 </div>
 
             </div>
 
 
-            <!-- QUICK LINKS -->
+            <!-- QUICK ACCESS -->
 
             <div class="widget">
 
@@ -806,27 +812,46 @@
                 <ul>
 
                     <li>
+
                         <a href="tutorials.html">
+
                             📚 Tutorials
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="tools.html">
+
                             🛠️ Digital Tools
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="ai-assistant.html">
+
                             🤖 AI Assistant
+
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="ghana-tech.html">
+
                             🇬🇭 Ghana Tech
+
                         </a>
+
                     </li>
 
                 </ul>
@@ -912,7 +937,7 @@
                     class="read-btn"
                 >
 
-                    Read More
+                    <span>Read More</span>
 
                     <i class="fas fa-arrow-right"></i>
 
@@ -968,7 +993,7 @@
                     class="read-btn"
                 >
 
-                    Read More
+                    <span>Read More</span>
 
                     <i class="fas fa-arrow-right"></i>
 
@@ -993,7 +1018,10 @@
     <div class="newsletter-content">
 
 
-        <span class="newsletter-icon">
+        <span
+            class="newsletter-icon"
+            aria-hidden="true"
+        >
 
             📩
 
@@ -1022,6 +1050,16 @@
         >
 
             <div class="newsletter-form">
+
+                <label
+                    for="newsletterEmail"
+                    class="sr-only"
+                >
+
+                    Email address
+
+                </label>
+
 
                 <input
                     type="email"
@@ -1076,24 +1114,18 @@
         <div class="footer-column">
 
             <h3>
-
                 TechHub Ghana
-
             </h3>
 
 
             <p>
-
                 Technology • Innovation • Learning
-
             </p>
 
 
             <p>
-
                 Your trusted source for technology
                 news, tutorials and digital tools.
-
             </p>
 
         </div>
@@ -1104,75 +1136,49 @@
         <div class="footer-column">
 
             <h3>
-
                 Quick Links
-
             </h3>
 
 
             <p>
-
                 <a href="index.html">
-
                     Home
-
                 </a>
-
             </p>
 
 
             <p>
-
                 <a href="news.html">
-
                     News
-
                 </a>
-
             </p>
 
 
             <p>
-
                 <a href="tutorials.html">
-
                     Tutorials
-
                 </a>
-
             </p>
 
 
             <p>
-
                 <a href="tools.html">
-
                     Tools
-
                 </a>
-
             </p>
 
 
             <p>
-
                 <a href="gpa.html">
-
                     GPA Calculator
-
                 </a>
-
             </p>
 
 
             <p>
-
                 <a href="ai-assistant.html">
-
                     AI Assistant
-
                 </a>
-
             </p>
 
         </div>
@@ -1183,51 +1189,37 @@
         <div class="footer-column">
 
             <h3>
-
                 Categories
-
             </h3>
 
 
             <p>
-
                 Artificial Intelligence
-
             </p>
 
 
             <p>
-
                 Programming
-
             </p>
 
 
             <p>
-
                 Cybersecurity
-
             </p>
 
 
             <p>
-
                 Cloud Computing
-
             </p>
 
 
             <p>
-
                 Ghana Technology
-
             </p>
 
 
             <p>
-
                 Mobile Technology
-
             </p>
 
         </div>
@@ -1238,75 +1230,49 @@
         <div class="footer-column">
 
             <h3>
-
                 Tutorials
-
             </h3>
 
 
             <p>
-
                 <a href="html-tutorial.html">
-
                     HTML
-
                 </a>
-
             </p>
 
 
             <p>
-
                 <a href="css-tutorial.html">
-
                     CSS
-
                 </a>
-
             </p>
 
 
             <p>
-
                 <a href="javascript-tutorial.html">
-
                     JavaScript
-
                 </a>
-
             </p>
 
 
             <p>
-
                 <a href="python-tutorial.html">
-
                     Python
-
                 </a>
-
             </p>
 
 
             <p>
-
                 <a href="mysql-tutorial.html">
-
                     MySQL
-
                 </a>
-
             </p>
 
 
             <p>
-
                 <a href="cybersecurity-tutorial.html">
-
                     Cybersecurity
-
                 </a>
-
             </p>
 
         </div>
@@ -1317,23 +1283,17 @@
         <div class="footer-column">
 
             <h3>
-
                 Contact
-
             </h3>
 
 
             <p>
-
                 📧 info@techhubghana.com
-
             </p>
 
 
             <p>
-
                 📍 Accra, Ghana
-
             </p>
 
         </div>
@@ -1371,15 +1331,13 @@
 
 
 <!-- =====================================================
-     MAIN JAVASCRIPT
+     JAVASCRIPT
 ===================================================== -->
 
 <script src="script.js"></script>
 
 
-<!-- =====================================================
-     LIVE NEWS
-===================================================== -->
+<!-- LIVE NEWS -->
 
 <script
     type="module"
@@ -1388,17 +1346,16 @@
 
 
 <!-- =====================================================
-     NEWS PAGE JAVASCRIPT
+     NEWS PAGE FUNCTIONALITY
 ===================================================== -->
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-
-    /* =================================================
-       NEWS SEARCH
-    ================================================= */
+    /* =====================================================
+       ELEMENTS
+    ====================================================== */
 
     const searchInput =
         document.getElementById("searchInput");
@@ -1406,33 +1363,67 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchBtn =
         document.getElementById("searchBtn");
 
+    const newsContainer =
+        document.getElementById("newsContainer");
 
-    function searchNews() {
+    const filterContainer =
+        document.getElementById("newsFilters");
 
-        if (!searchInput) {
-            return;
-        }
+    const newsletterForm =
+        document.getElementById("newsletterForm");
+
+    const newsletterEmail =
+        document.getElementById("newsletterEmail");
+
+    const newsletterMessage =
+        document.getElementById("newsletterMessage");
+
+    const topBtn =
+        document.getElementById("topBtn");
 
 
-        const keyword =
-            searchInput.value
-                .trim()
-                .toLowerCase();
+    /* =====================================================
+       NEWS SEARCH
+    ====================================================== */
+
+    let currentSearch = "";
 
 
-        const newsContainer =
-            document.getElementById("newsContainer");
-
+    function getNewsArticles() {
 
         if (!newsContainer) {
-            return;
+            return [];
         }
 
-
-        const articles =
+        return Array.from(
             newsContainer.querySelectorAll(
                 "article, .news-card, .news-item"
-            );
+            )
+        );
+
+    }
+
+
+    function getArticleCategory(article) {
+
+        const category =
+            article.dataset.category ||
+            article.querySelector(
+                ".category, .category-badge, .news-category"
+            )?.textContent ||
+            "";
+
+        return category
+            .trim()
+            .toLowerCase();
+
+    }
+
+
+    function filterNews() {
+
+        const articles =
+            getNewsArticles();
 
 
         if (!articles.length) {
@@ -1440,20 +1431,131 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        articles.forEach(function (article) {
+        const activeButton =
+            filterContainer?.querySelector(
+                "button.active"
+            );
 
-            const text =
+
+        const selectedCategory =
+            activeButton?.dataset.category
+            ?.trim()
+            .toLowerCase() || "all";
+
+
+        let visibleCount = 0;
+
+
+        articles.forEach(article => {
+
+            const articleText =
                 article.textContent
                     .toLowerCase();
 
 
-            article.style.display =
-                keyword === "" ||
-                text.includes(keyword)
-                    ? ""
-                    : "none";
+            const articleCategory =
+                getArticleCategory(article);
+
+
+            const matchesSearch =
+                !currentSearch ||
+                articleText.includes(
+                    currentSearch
+                );
+
+
+            const matchesCategory =
+                selectedCategory === "all" ||
+                articleCategory.includes(
+                    selectedCategory
+                );
+
+
+            const visible =
+                matchesSearch &&
+                matchesCategory;
+
+
+            article.hidden = !visible;
+
+
+            if (visible) {
+                visibleCount++;
+            }
 
         });
+
+
+        updateNoResults(visibleCount);
+
+    }
+
+
+    function updateNoResults(visibleCount) {
+
+        if (!newsContainer) {
+            return;
+        }
+
+
+        let noResults =
+            document.getElementById(
+                "newsNoResults"
+            );
+
+
+        if (
+            visibleCount === 0 &&
+            getNewsArticles().length > 0
+        ) {
+
+            if (!noResults) {
+
+                noResults =
+                    document.createElement(
+                        "div"
+                    );
+
+                noResults.id =
+                    "newsNoResults";
+
+                noResults.className =
+                    "no-results";
+
+                noResults.innerHTML = `
+                    <i class="fas fa-search"></i>
+                    <h3>No news found</h3>
+                    <p>
+                        Try another search term
+                        or choose a different category.
+                    </p>
+                `;
+
+                newsContainer.appendChild(
+                    noResults
+                );
+
+            }
+
+            noResults.hidden = false;
+
+        } else if (noResults) {
+
+            noResults.hidden = true;
+
+        }
+
+    }
+
+
+    function performSearch() {
+
+        currentSearch =
+            searchInput?.value
+                .trim()
+                .toLowerCase() || "";
+
+        filterNews();
 
     }
 
@@ -1462,19 +1564,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         searchInput.addEventListener(
             "input",
-            searchNews
+            performSearch
         );
 
 
         searchInput.addEventListener(
             "keydown",
-            function (event) {
+            event => {
 
                 if (event.key === "Enter") {
 
                     event.preventDefault();
 
-                    searchNews();
+                    performSearch();
 
                 }
 
@@ -1488,159 +1590,107 @@ document.addEventListener("DOMContentLoaded", function () {
 
         searchBtn.addEventListener(
             "click",
-            searchNews
+            performSearch
         );
 
     }
 
 
-    /* =================================================
-       CATEGORY FILTER
-    ================================================= */
-
-    const filterContainer =
-        document.getElementById("newsFilters");
-
+    /* =====================================================
+       CATEGORY FILTERS
+    ====================================================== */
 
     if (filterContainer) {
 
-        filterContainer
-            .querySelectorAll("button")
-            .forEach(function (button) {
+        filterContainer.addEventListener(
+            "click",
+            event => {
 
-                button.addEventListener(
-                    "click",
-                    function () {
-
-                        const category =
-                            this.dataset.category;
+                const button =
+                    event.target.closest(
+                        "button[data-category]"
+                    );
 
 
-                        filterContainer
-                            .querySelectorAll("button")
-                            .forEach(function (btn) {
-
-                                btn.classList.remove(
-                                    "active"
-                                );
-
-                                btn.setAttribute(
-                                    "aria-pressed",
-                                    "false"
-                                );
-
-                            });
+                if (!button) {
+                    return;
+                }
 
 
-                        this.classList.add(
+                filterContainer
+                    .querySelectorAll(
+                        "button[data-category]"
+                    )
+                    .forEach(btn => {
+
+                        btn.classList.remove(
                             "active"
                         );
 
-
-                        this.setAttribute(
+                        btn.setAttribute(
                             "aria-pressed",
-                            "true"
+                            "false"
                         );
 
+                    });
 
-                        filterNewsCards(
-                            category
-                        );
 
-                    }
+                button.classList.add(
+                    "active"
+                );
+
+
+                button.setAttribute(
+                    "aria-pressed",
+                    "true"
+                );
+
+
+                filterNews();
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       HANDLE DYNAMIC NEWS
+       
+       live-news.js adds news after the page loads.
+       MutationObserver makes search/filter work
+       with those dynamically inserted articles.
+    ====================================================== */
+
+    if (newsContainer) {
+
+        const observer =
+            new MutationObserver(() => {
+
+                filterNews();
+
+                newsContainer.setAttribute(
+                    "aria-busy",
+                    "false"
                 );
 
             });
 
-    }
 
-
-    function filterNewsCards(category) {
-
-        const newsContainer =
-            document.getElementById(
-                "newsContainer"
-            );
-
-
-        if (!newsContainer) {
-            return;
-        }
-
-
-        const articles =
-            newsContainer.querySelectorAll(
-                "article, .news-card, .news-item"
-            );
-
-
-        if (!articles.length) {
-            return;
-        }
-
-
-        articles.forEach(function (article) {
-
-            if (category === "all") {
-
-                article.style.display = "";
-
-                return;
-
+        observer.observe(
+            newsContainer,
+            {
+                childList: true,
+                subtree: true
             }
-
-
-            const articleCategory =
-                (
-                    article.dataset.category ||
-                    article.querySelector(
-                        ".category, .category-badge, .news-category"
-                    )?.textContent ||
-                    ""
-                )
-                .trim()
-                .toLowerCase();
-
-
-            const wantedCategory =
-                category
-                    .trim()
-                    .toLowerCase();
-
-
-            article.style.display =
-                articleCategory.includes(
-                    wantedCategory
-                )
-                    ? ""
-                    : "none";
-
-        });
+        );
 
     }
 
 
-    /* =================================================
+    /* =====================================================
        NEWSLETTER
-    ================================================= */
-
-    const newsletterForm =
-        document.getElementById(
-            "newsletterForm"
-        );
-
-
-    const newsletterEmail =
-        document.getElementById(
-            "newsletterEmail"
-        );
-
-
-    const newsletterMessage =
-        document.getElementById(
-            "newsletterMessage"
-        );
-
+    ====================================================== */
 
     if (
         newsletterForm &&
@@ -1649,7 +1699,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         newsletterForm.addEventListener(
             "submit",
-            function (event) {
+            event => {
 
                 event.preventDefault();
 
@@ -1661,38 +1711,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (!email) {
 
-                    if (newsletterMessage) {
+                    showNewsletterMessage(
+                        "Please enter your email address."
+                    );
 
-                        newsletterMessage.textContent =
-                            "Please enter your email address.";
-
-                    }
-
-                    return;
-
-                }
-
-
-                if (!newsletterEmail.checkValidity()) {
-
-                    if (newsletterMessage) {
-
-                        newsletterMessage.textContent =
-                            "Please enter a valid email address.";
-
-                    }
+                    newsletterEmail.focus();
 
                     return;
 
                 }
 
 
-                if (newsletterMessage) {
+                if (
+                    !newsletterEmail.checkValidity()
+                ) {
 
-                    newsletterMessage.textContent =
-                        "✅ Thank you for subscribing to TechHub Ghana!";
+                    showNewsletterMessage(
+                        "Please enter a valid email address."
+                    );
+
+                    newsletterEmail.focus();
+
+                    return;
 
                 }
+
+
+                showNewsletterMessage(
+                    "✅ Thank you for subscribing to TechHub Ghana!"
+                );
 
 
                 newsletterForm.reset();
@@ -1703,56 +1750,76 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =================================================
+    function showNewsletterMessage(message) {
+
+        if (!newsletterMessage) {
+            return;
+        }
+
+
+        newsletterMessage.textContent =
+            message;
+
+    }
+
+
+    /* =====================================================
        BACK TO TOP
-    ================================================= */
-
-    const topBtn =
-        document.getElementById(
-            "topBtn"
-        );
-
+    ====================================================== */
 
     if (topBtn) {
 
+        function updateTopButton() {
+
+            if (window.scrollY > 400) {
+
+                topBtn.classList.add(
+                    "show"
+                );
+
+            } else {
+
+                topBtn.classList.remove(
+                    "show"
+                );
+
+            }
+
+        }
+
+
         window.addEventListener(
             "scroll",
-            function () {
-
-                if (window.scrollY > 400) {
-
-                    topBtn.classList.add(
-                        "show"
-                    );
-
-                } else {
-
-                    topBtn.classList.remove(
-                        "show"
-                    );
-
-                }
-
+            updateTopButton,
+            {
+                passive: true
             }
         );
 
 
         topBtn.addEventListener(
             "click",
-            function () {
+            () => {
 
                 window.scrollTo({
-
                     top: 0,
-
                     behavior: "smooth"
-
                 });
 
             }
         );
 
+
+        updateTopButton();
+
     }
+
+
+    /* =====================================================
+       INITIAL FILTER
+    ====================================================== */
+
+    filterNews();
 
 });
 
@@ -1761,4 +1828,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </body>
 
-                    </html>
+    </html>
