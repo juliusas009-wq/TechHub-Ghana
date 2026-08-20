@@ -3170,3 +3170,403 @@ select:focus-visible {
         padding: 20px 0;
     }
    }
+/* =========================================================
+   TECHHUB GHANA — ARTICLE PAGE SPACING
+   SPACING ONLY
+========================================================= */
+
+/* ---------------------------------------------------------
+   GLOBAL PAGE SIDE SPACING
+--------------------------------------------------------- */
+
+main,
+.article-container,
+.section,
+.news-hero,
+.newsletter {
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------------------------------------------------------
+   ARTICLE CONTAINER
+--------------------------------------------------------- */
+
+.article-container {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+
+/* ---------------------------------------------------------
+   ARTICLE CONTENT
+--------------------------------------------------------- */
+
+.article-page {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ---------------------------------------------------------
+   ARTICLE TITLE
+--------------------------------------------------------- */
+
+.article-title {
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   ARTICLE INTRO
+--------------------------------------------------------- */
+
+.article-lead {
+    margin-bottom: 24px;
+}
+
+
+/* ---------------------------------------------------------
+   ARTICLE META
+--------------------------------------------------------- */
+
+.article-meta {
+    margin-top: 20px;
+    margin-bottom: 28px;
+}
+
+
+/* ---------------------------------------------------------
+   FEATURED IMAGE
+--------------------------------------------------------- */
+
+.article-hero {
+    margin: 0 0 32px 0;
+}
+
+
+/* ---------------------------------------------------------
+   SHARE AREA
+--------------------------------------------------------- */
+
+.article-share {
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+
+
+/* ---------------------------------------------------------
+   TABLE OF CONTENTS
+--------------------------------------------------------- */
+
+.article-toc {
+    margin-top: 28px;
+    margin-bottom: 36px;
+}
+
+
+/* ---------------------------------------------------------
+   ARTICLE SECTIONS
+--------------------------------------------------------- */
+
+.article-page > article > section {
+    margin-bottom: 42px;
+}
+
+.article-page > article > section h2 {
+    margin-bottom: 16px;
+}
+
+.article-page > article > section p {
+    margin-bottom: 16px;
+}
+
+
+/* ---------------------------------------------------------
+   LIST SPACING
+--------------------------------------------------------- */
+
+.article-page ul {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    padding-left: 24px;
+}
+
+.article-page li {
+    margin-bottom: 10px;
+}
+
+
+/* ---------------------------------------------------------
+   HIGHLIGHT / TIPS BOXES
+--------------------------------------------------------- */
+
+.highlight-box,
+.tips-box {
+    margin-top: 24px;
+    margin-bottom: 28px;
+}
+
+
+/* ---------------------------------------------------------
+   CONCLUSION
+--------------------------------------------------------- */
+
+.article-conclusion {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+/* ---------------------------------------------------------
+   AUTHOR BOX
+--------------------------------------------------------- */
+
+.author-box {
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
+
+
+/* ---------------------------------------------------------
+   RELATED ARTICLES
+--------------------------------------------------------- */
+
+.related-section {
+    margin-top: 44px;
+    margin-bottom: 40px;
+}
+
+.related-section h2 {
+    margin-bottom: 22px;
+}
+
+
+/* ---------------------------------------------------------
+   BACK TO NEWS
+--------------------------------------------------------- */
+
+.article-back {
+    margin-top: 36px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .article-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Give the page comfortable space from phone edges */
+
+    .article-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    /* Keep article from touching screen edges */
+
+    .article-page {
+        width: 100%;
+    }
+
+
+    /* Breadcrumb */
+
+    .breadcrumb {
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-bottom: 20px;
+    }
+
+
+    /* Article title */
+
+    .article-title {
+        margin-top: 14px;
+        margin-bottom: 18px;
+    }
+
+
+    /* Lead paragraph */
+
+    .article-lead {
+        margin-bottom: 22px;
+    }
+
+
+    /* Meta information */
+
+    .article-meta {
+        margin-top: 18px;
+        margin-bottom: 24px;
+    }
+
+
+    /* Hero image */
+
+    .article-hero {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 28px;
+    }
+
+
+    /* Share buttons */
+
+    .article-share {
+        margin-top: 18px;
+        margin-bottom: 28px;
+    }
+
+
+    /* Table of contents */
+
+    .article-toc {
+        margin-top: 24px;
+        margin-bottom: 32px;
+    }
+
+
+    /* Article sections */
+
+    .article-page > article > section {
+        margin-bottom: 36px;
+    }
+
+
+    /* Section headings */
+
+    .article-page > article > section h2 {
+        margin-bottom: 14px;
+    }
+
+
+    /* Paragraph spacing */
+
+    .article-page > article > section p {
+        margin-bottom: 14px;
+    }
+
+
+    /* Highlight boxes */
+
+    .highlight-box,
+    .tips-box {
+        margin-top: 20px;
+        margin-bottom: 24px;
+    }
+
+
+    /* Author */
+
+    .author-box {
+        margin-top: 36px;
+        margin-bottom: 36px;
+    }
+
+
+    /* Related */
+
+    .related-section {
+        margin-top: 36px;
+        margin-bottom: 32px;
+    }
+
+
+    /* Back button */
+
+    .article-back {
+        margin-top: 30px;
+        margin-bottom: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .article-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .breadcrumb {
+        margin-bottom: 18px;
+    }
+
+
+    .article-title {
+        margin-bottom: 16px;
+    }
+
+
+    .article-meta {
+        margin-bottom: 22px;
+    }
+
+
+    .article-hero {
+        margin-bottom: 24px;
+    }
+
+
+    .article-share {
+        margin-bottom: 24px;
+    }
+
+
+    .article-toc {
+        margin-top: 22px;
+        margin-bottom: 28px;
+    }
+
+
+    .article-page > article > section {
+        margin-bottom: 32px;
+    }
+
+
+    .article-page ul {
+        padding-left: 20px;
+    }
+
+
+    .author-box {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+
+    .related-section {
+        margin-top: 32px;
+    }
+
+}
