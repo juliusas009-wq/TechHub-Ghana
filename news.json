@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-20T12:45:46.558796+00:00",
+  "updated": "2026-08-20T13:44:57.343496+00:00",
   "articles": [
+    {
+      "title": "AI data giant Alation confirms cyberattack",
+      "summary": "The data search and AI giant confirmed unauthorized access to its systems during an incident on Tuesday, and said it was investigating the breach.",
+      "link": "https://techcrunch.com/2026/08/20/ai-data-giant-alation-confirms-cyberattack/",
+      "date": "Thu, 20 Aug 2026 13:01:24 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "For a16z, AI gives foreign founders an advantage",
+      "summary": "a16z’s Borderless Founder network initiative supports immigrant and international founders. 'Having one foot in your home country, and one foot in Silicon Valley,\" is an advantage, the firm believes.",
+      "link": "https://techcrunch.com/2026/08/20/for-a16z-ai-gives-foreign-founders-an-advantage/",
+      "date": "Thu, 20 Aug 2026 13:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "US says hackers are targeting vulnerable water systems with the help of AI",
       "summary": "Hackers are targeting internet-connected Siemens controllers used in water facilities around the United States.",
@@ -142,22 +158,6 @@
       "summary": "TerraPower's nuclear power plant possesses a strategic advantage over competitors, especially when chasing after data center deals.",
       "link": "https://techcrunch.com/2026/08/19/terrapowers-nuclear-reactor-has-a-secret-weapon-for-powering-ai-data-centers/",
       "date": "Wed, 19 Aug 2026 15:44:53 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Rivian spinout Also raises another $150M",
-      "summary": "The round, led by Prysm Capital, will fund the company's expansion beyond pedal-assist electric bikes and commercial cargo quads to autonomous delivery vehicles.",
-      "link": "https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/",
-      "date": "Wed, 19 Aug 2026 15:39:47 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Sachin Bansal’s fintech Navi raises first outside capital with $100M Prosus investment",
-      "summary": "The investment comes amid Navi plans to go public.",
-      "link": "https://techcrunch.com/2026/08/19/sachin-bansals-fintech-navi-raises-first-outside-capital-with-100m-prosus-investment/",
-      "date": "Wed, 19 Aug 2026 15:01:41 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
