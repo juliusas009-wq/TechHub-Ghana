@@ -5,93 +5,123 @@
 
     <!-- =====================================================
          BASIC META
-    ===================================================== -->
+    ====================================================== -->
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description"
-          content="Learn HTML from beginner to practical level with TechHub Ghana. Learn HTML structure, headings, paragraphs, links, images, lists, tables, forms, semantic HTML and more.">
+    <meta
+        name="description"
+        content="Learn HTML from beginner to practical level with TechHub Ghana. Learn HTML structure, headings, paragraphs, links, images, lists, tables, forms, semantic HTML and more."
+    >
 
-    <meta name="keywords"
-          content="HTML tutorial, learn HTML, HTML Ghana, web development, programming, TechHub Ghana">
+    <meta
+        name="keywords"
+        content="HTML tutorial, learn HTML, HTML Ghana, web development, programming, TechHub Ghana"
+    >
 
-    <meta name="author"
-          content="TechHub Ghana">
+    <meta
+        name="author"
+        content="TechHub Ghana"
+    >
 
-    <meta name="robots"
-          content="index, follow">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-
-    <!-- =====================================================
-         PAGE TITLE
-    ===================================================== -->
-
-    <title>
-        HTML Tutorial for Beginners | TechHub Ghana
-    </title>
+    <title>HTML Tutorial for Beginners | TechHub Ghana</title>
 
 
     <!-- =====================================================
          OPEN GRAPH
-    ===================================================== -->
+    ====================================================== -->
 
-    <meta property="og:type"
-          content="article">
+    <meta
+        property="og:type"
+        content="article"
+    >
 
-    <meta property="og:title"
-          content="HTML Tutorial for Beginners | TechHub Ghana">
+    <meta
+        property="og:title"
+        content="HTML Tutorial for Beginners | TechHub Ghana"
+    >
 
-    <meta property="og:description"
-          content="Learn HTML from beginner to practical level with TechHub Ghana.">
+    <meta
+        property="og:description"
+        content="Learn HTML from beginner to practical level with TechHub Ghana."
+    >
 
-    <meta property="og:image"
-          content="images/logo.png">
+    <meta
+        property="og:image"
+        content="images/logo.png"
+    >
 
-    <meta property="og:site_name"
-          content="TechHub Ghana">
+    <meta
+        property="og:site_name"
+        content="TechHub Ghana"
+    >
 
 
     <!-- =====================================================
-         FONTS
-    ===================================================== -->
+         GOOGLE FONT
+    ====================================================== -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"
+    >
 
 
     <!-- =====================================================
-         MAIN STYLESHEET
-    ===================================================== -->
+         FONT AWESOME
+    ====================================================== -->
 
-    <link rel="stylesheet"
-          href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         MAIN TECHHUB STYLESHEET
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 
     <!-- =====================================================
          FAVICON
-    ===================================================== -->
+    ====================================================== -->
 
-    <link rel="icon"
-          href="images/logo.png"
-          type="image/png">
+    <link
+        rel="icon"
+        href="images/logo.png"
+        type="image/png"
+    >
 
 
     <!-- =====================================================
-         PAGE-SPECIFIC STYLES
-         These styles are isolated so they do not interfere
-         with the main TechHub Ghana stylesheet.
-    ===================================================== -->
+         TUTORIAL PAGE STYLES
+    ====================================================== -->
 
     <style>
 
@@ -100,39 +130,89 @@
         ================================================= */
 
         .tutorial-page {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px 60px;
         }
 
 
         /* =================================================
-           COURSE HEADER
+           TUTORIAL HERO
         ================================================= */
 
         .tutorial-intro {
-            background: linear-gradient(
-                135deg,
-                #2563eb,
-                #1d4ed8
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #1d4ed8
+                );
 
             color: #ffffff;
-            padding: 45px 35px;
-            border-radius: 16px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+            padding: 50px 45px;
+
+            border-radius: 18px;
+
+            margin-bottom: 35px;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.12);
+
+            overflow: hidden;
+
+            position: relative;
         }
+
+
+        .tutorial-intro::after {
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            right: -80px;
+            top: -80px;
+
+            pointer-events: none;
+        }
+
 
         .tutorial-intro h1 {
             margin: 0 0 15px;
-            font-size: clamp(2rem, 4vw, 3rem);
+
+            font-size:
+                clamp(2rem, 5vw, 3.2rem);
+
+            line-height: 1.2;
+
+            position: relative;
+
+            z-index: 1;
         }
 
+
         .tutorial-intro p {
-            max-width: 800px;
-            line-height: 1.8;
+            max-width: 850px;
+
             margin: 0;
+
+            line-height: 1.8;
+
+            font-size: 1rem;
+
+            color: rgba(255,255,255,0.94);
+
+            position: relative;
+
+            z-index: 1;
         }
 
 
@@ -142,44 +222,77 @@
 
         .tutorial-layout {
             display: grid;
-            grid-template-columns: 280px minmax(0, 1fr);
+
+            grid-template-columns:
+                minmax(230px, 280px)
+                minmax(0, 1fr);
+
             gap: 30px;
+
             align-items: start;
         }
 
 
         /* =================================================
-           SIDEBAR
+           LESSON SIDEBAR
         ================================================= */
 
         .lesson-sidebar {
             background: #ffffff;
-            padding: 25px;
-            border-radius: 14px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+            padding: 24px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.08);
+
             position: sticky;
+
             top: 20px;
+
+            border: 1px solid #e5e7eb;
         }
+
 
         .lesson-sidebar h3 {
             margin: 0 0 18px;
+
             color: #111827;
+
+            font-size: 1.1rem;
         }
+
 
         .lesson-sidebar a {
             display: block;
+
             padding: 10px 12px;
-            margin-bottom: 5px;
+
+            margin-bottom: 4px;
+
             color: #374151;
+
             text-decoration: none;
+
             border-radius: 8px;
-            font-size: 0.92rem;
-            transition: 0.2s ease;
+
+            font-size: 0.9rem;
+
+            line-height: 1.4;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
         }
+
 
         .lesson-sidebar a:hover {
             background: #eff6ff;
+
             color: #2563eb;
+
             transform: translateX(3px);
         }
 
@@ -190,41 +303,80 @@
 
         .lesson-content {
             background: #ffffff;
-            padding: 40px;
-            border-radius: 14px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+
+            padding: 42px;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.08);
+
+            border: 1px solid #e5e7eb;
+
             min-width: 0;
+
+            overflow: hidden;
         }
 
-        .lesson-content h1 {
+
+        .lesson-content > h1 {
             margin-top: 0;
+
             color: #111827;
+
+            font-size:
+                clamp(1.8rem, 4vw, 2.5rem);
         }
+
 
         .lesson-content h2 {
-            margin-top: 45px;
-            margin-bottom: 15px;
+            margin-top: 50px;
+
+            margin-bottom: 16px;
+
             color: #111827;
+
+            line-height: 1.3;
+
             scroll-margin-top: 30px;
         }
 
+
         .lesson-content h2:first-of-type {
-            margin-top: 20px;
+            margin-top: 25px;
         }
 
+
         .lesson-content h3 {
-            margin-top: 25px;
+            margin-top: 28px;
+
             color: #1f2937;
         }
 
+
         .lesson-content p {
             line-height: 1.8;
+
             color: #4b5563;
+
+            margin-bottom: 15px;
         }
+
+
+        .lesson-content ul,
+        .lesson-content ol {
+            padding-left: 25px;
+
+            margin-bottom: 20px;
+        }
+
 
         .lesson-content li {
             margin-bottom: 8px;
+
             line-height: 1.7;
+
+            color: #374151;
         }
 
 
@@ -234,20 +386,39 @@
 
         .code-box {
             background: #111827;
+
             color: #f9fafb;
+
             padding: 20px;
-            border-radius: 10px;
+
+            border-radius: 12px;
+
             overflow-x: auto;
-            margin: 20px 0;
+
+            margin: 22px 0;
+
             border: 1px solid #1f2937;
+
+            -webkit-overflow-scrolling: touch;
         }
+
 
         .code-box pre {
             margin: 0;
+
             white-space: pre;
-            font-family: Consolas, Monaco, "Courier New", monospace;
+
+            font-family:
+                Consolas,
+                Monaco,
+                "Courier New",
+                monospace;
+
             font-size: 0.9rem;
+
             line-height: 1.7;
+
+            min-width: max-content;
         }
 
 
@@ -257,14 +428,26 @@
 
         .exercise {
             background: #f8fafc;
+
             border-left: 5px solid #2563eb;
+
             padding: 20px;
-            margin: 25px 0;
-            border-radius: 8px;
+
+            margin: 28px 0;
+
+            border-radius: 10px;
         }
+
 
         .exercise h3 {
             margin-top: 0;
+
+            color: #111827;
+        }
+
+
+        .exercise p:last-child {
+            margin-bottom: 0;
         }
 
 
@@ -276,10 +459,20 @@
             margin-top: 15px;
         }
 
+
         .answer summary {
             cursor: pointer;
+
             font-weight: 600;
+
             color: #2563eb;
+
+            user-select: none;
+        }
+
+
+        .answer summary:hover {
+            color: #1d4ed8;
         }
 
 
@@ -289,41 +482,117 @@
 
         .lesson-nav {
             display: flex;
+
             justify-content: space-between;
+
             gap: 15px;
-            margin-top: 45px;
-            padding-top: 25px;
-            border-top: 1px solid #e5e7eb;
+
+            margin-top: 50px;
+
+            padding-top: 28px;
+
+            border-top:
+                1px solid #e5e7eb;
         }
+
 
         .lesson-nav a {
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
+
             text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 8px;
+
+            padding: 13px 20px;
+
+            border-radius: 9px;
+
             background: #2563eb;
+
             color: #ffffff;
+
             font-weight: 600;
-            transition: 0.2s ease;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
         }
+
 
         .lesson-nav a:hover {
             background: #1d4ed8;
+
             transform: translateY(-2px);
         }
 
 
         /* =================================================
-           MOBILE
+           DARK MODE SUPPORT
         ================================================= */
 
-        @media (max-width: 900px) {
+        body.dark-mode .lesson-sidebar,
+        body.dark-mode .lesson-content {
+            background: #111827;
+
+            border-color: #1f2937;
+        }
+
+
+        body.dark-mode .lesson-sidebar h3,
+        body.dark-mode .lesson-content h1,
+        body.dark-mode .lesson-content h2,
+        body.dark-mode .lesson-content h3 {
+            color: #f9fafb;
+        }
+
+
+        body.dark-mode .lesson-sidebar a {
+            color: #d1d5db;
+        }
+
+
+        body.dark-mode .lesson-sidebar a:hover {
+            background: #1f2937;
+
+            color: #60a5fa;
+        }
+
+
+        body.dark-mode .lesson-content p,
+        body.dark-mode .lesson-content li {
+            color: #d1d5db;
+        }
+
+
+        body.dark-mode .exercise {
+            background: #1f2937;
+
+            border-left-color: #60a5fa;
+        }
+
+
+        body.dark-mode .exercise h3 {
+            color: #f9fafb;
+        }
+
+
+        body.dark-mode .lesson-nav {
+            border-top-color: #374151;
+        }
+
+
+        /* =================================================
+           TABLET
+        ================================================= */
+
+        @media (max-width: 1000px) {
 
             .tutorial-layout {
                 grid-template-columns: 1fr;
             }
+
 
             .lesson-sidebar {
                 position: static;
@@ -332,41 +601,128 @@
         }
 
 
-        @media (max-width: 600px) {
+        /* =================================================
+           MOBILE
+        ================================================= */
+
+        @media (max-width: 768px) {
 
             .tutorial-page {
-                margin: 25px auto;
-                padding: 0 15px;
+                padding:
+                    25px 12px 45px;
             }
+
 
             .tutorial-intro {
-                padding: 30px 20px;
-                border-radius: 12px;
+                padding:
+                    32px 22px;
+
+                border-radius: 14px;
+
+                margin-bottom: 25px;
             }
 
-            .lesson-content {
-                padding: 22px 18px;
-                border-radius: 12px;
+
+            .tutorial-intro h1 {
+                font-size:
+                    clamp(1.8rem, 8vw, 2.4rem);
             }
+
+
+            .tutorial-intro p {
+                font-size: 0.92rem;
+
+                line-height: 1.7;
+            }
+
 
             .lesson-sidebar {
-                padding: 20px;
+                padding: 18px;
+
+                border-radius: 12px;
             }
+
+
+            .lesson-content {
+                padding:
+                    25px 18px;
+
+                border-radius: 12px;
+            }
+
+
+            .lesson-content h2 {
+                margin-top: 40px;
+            }
+
 
             .code-box {
+                margin-left: 0;
+
+                margin-right: 0;
+
                 padding: 15px;
+
+                border-radius: 9px;
             }
 
+
             .code-box pre {
-                font-size: 0.8rem;
+                font-size: 0.78rem;
+
+                line-height: 1.6;
             }
+
 
             .lesson-nav {
                 flex-direction: column;
             }
 
+
             .lesson-nav a {
                 width: 100%;
+            }
+
+        }
+
+
+        /* =================================================
+           SMALL PHONES
+        ================================================= */
+
+        @media (max-width: 480px) {
+
+            .tutorial-page {
+                padding-left: 10px;
+
+                padding-right: 10px;
+            }
+
+
+            .tutorial-intro {
+                padding:
+                    27px 18px;
+            }
+
+
+            .lesson-content {
+                padding:
+                    22px 15px;
+            }
+
+
+            .lesson-sidebar a {
+                font-size: 0.86rem;
+
+                padding:
+                    9px 10px;
+            }
+
+
+            .exercise {
+                padding: 16px;
+
+                border-left-width: 4px;
             }
 
         }
@@ -379,28 +735,31 @@
 <body>
 
 
-<!-- =====================================================
+<!-- =========================================================
      HEADER
-===================================================== -->
+========================================================= -->
 
-<header class="main-header">
+<header>
 
     <div class="top-bar">
 
-        <!-- LOGO -->
 
-        <div class="logo">
+        <!-- =================================================
+             STANDARD TECHHUB LOGO
+        ================================================= -->
 
-            <a href="index.html"
-               aria-label="TechHub Ghana Home">
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="TechHub Ghana Home"
+        >
 
-                <img
-                    src="images/logo.png"
-                    alt="TechHub Ghana Logo"
-                    loading="eager"
-                >
-
-            </a>
+            <img
+                src="images/logo.png"
+                alt="TechHub Ghana Logo"
+                loading="eager"
+                onerror="this.style.display='none'"
+            >
 
             <div>
 
@@ -409,110 +768,169 @@
                 </h1>
 
                 <p>
-                    Technology News • Tutorials • Digital Tools
+                    Technology • Innovation • Digital Ghana
                 </p>
 
             </div>
 
-        </div>
+        </a>
 
 
-        <!-- SEARCH -->
+        <!-- =================================================
+             HEADER SEARCH
+        ================================================= -->
 
         <form
             class="search-box"
             action="news.html"
             method="get"
-            role="search">
+            role="search"
+        >
 
             <label
-                for="tutorial-search"
-                class="sr-only">
-
+                for="tutorialSearch"
+                class="sr-only"
+            >
                 Search TechHub Ghana
-
             </label>
 
             <input
-                id="tutorial-search"
                 type="search"
+                id="tutorialSearch"
                 name="q"
-                placeholder="Search technology..."
+                placeholder="Search TechHub Ghana..."
                 autocomplete="off"
             >
 
             <button
                 type="submit"
-                aria-label="Search">
+                aria-label="Search"
+            >
 
-                🔍
+                <i class="fa-solid fa-magnifying-glass"></i>
 
             </button>
 
         </form>
 
+
+        <!-- =================================================
+             DARK MODE
+        ================================================= -->
+
+        <button
+            type="button"
+            id="darkModeBtn"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+        >
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
     </div>
 
 
-    <!-- MOBILE MENU BUTTON -->
+    <!-- =====================================================
+         MOBILE MENU BUTTON
+    ====================================================== -->
 
     <button
-        class="menu-btn"
         type="button"
-        onclick="toggleMenu()"
+        class="menu-btn"
+        id="menuBtn"
         aria-label="Open navigation menu"
-        aria-controls="navMenu"
-        aria-expanded="false">
+        aria-expanded="false"
+        aria-controls="mainNav"
+    >
 
-        ☰
+        <i class="fa-solid fa-bars"></i>
 
     </button>
 
 
-    <!-- NAVIGATION -->
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
     <nav
-        id="navMenu"
-        aria-label="Main navigation">
+        id="mainNav"
+        aria-label="Main navigation"
+    >
 
         <a href="index.html">
+
+            <i class="fa-solid fa-house"></i>
+
             Home
+
         </a>
 
+
         <a href="news.html">
-            News
+
+            <i class="fa-solid fa-newspaper"></i>
+
+            Tech News
+
         </a>
+
+
+        <a href="ghana-tech.html">
+
+            <i class="fa-solid fa-flag"></i>
+
+            Ghana Tech
+
+        </a>
+
+
+        <a href="ai-assistant.html">
+
+            <i class="fa-solid fa-robot"></i>
+
+            AI
+
+        </a>
+
 
         <a
             href="tutorials.html"
-            class="active">
+            class="active"
+        >
 
-            Tutorials
+            <i class="fa-solid fa-code"></i>
+
+            Programming
 
         </a>
+
 
         <a href="tools.html">
+
+            <i class="fa-solid fa-toolbox"></i>
+
             Tools
+
         </a>
 
-        <a href="gpa.html">
-            GPA
-        </a>
-
-        <a href="qr-generator.html">
-            QR Generator
-        </a>
-
-        <a href="ai-assistant.html">
-            AI Assistant
-        </a>
 
         <a href="about.html">
+
+            <i class="fa-solid fa-circle-info"></i>
+
             About
+
         </a>
 
+
         <a href="contact.html">
+
+            <i class="fa-solid fa-envelope"></i>
+
             Contact
+
         </a>
 
     </nav>
@@ -520,34 +938,48 @@
 </header>
 
 
-<!-- =====================================================
+<!-- =========================================================
      BREAKING NEWS
-===================================================== -->
+========================================================= -->
 
-<section class="breaking-news">
+<section
+    class="breaking-news"
+    aria-label="Breaking technology news"
+>
 
-    <marquee
-        behavior="scroll"
-        direction="left">
+    <div class="breaking-label">
 
-        🌐 HTML • Web Development • CSS • JavaScript •
-        Programming • Website Design • TechHub Ghana
+        <i class="fa-solid fa-bolt"></i>
 
-    </marquee>
+        BREAKING
+
+    </div>
+
+
+    <div class="breaking-content">
+
+        <span>
+
+            🌐 HTML • Web Development • CSS • JavaScript •
+            Programming • Website Design • TechHub Ghana
+
+        </span>
+
+    </div>
 
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      MAIN CONTENT
-===================================================== -->
+========================================================= -->
 
 <main class="tutorial-page">
 
 
-    <!-- =================================================
+    <!-- =====================================================
          COURSE INTRO
-    ================================================= -->
+    ====================================================== -->
 
     <section class="tutorial-intro">
 
@@ -566,24 +998,26 @@
     </section>
 
 
-    <!-- =================================================
+    <!-- =====================================================
          COURSE LAYOUT
-    ================================================= -->
+    ====================================================== -->
 
     <div class="tutorial-layout">
 
 
         <!-- =================================================
-             SIDEBAR
+             LESSON SIDEBAR
         ================================================= -->
 
         <aside
             class="lesson-sidebar"
-            aria-label="HTML course lessons">
+            aria-label="HTML course lessons"
+        >
 
             <h3>
                 🌐 HTML Course
             </h3>
+
 
             <a href="#introduction">
                 1. What is HTML?
@@ -663,6 +1097,7 @@
                 🌐 HTML for Beginners
             </h1>
 
+
             <p>
 
                 Welcome to the TechHub Ghana HTML Tutorial.
@@ -682,6 +1117,7 @@
                 1. What is HTML?
             </h2>
 
+
             <p>
 
                 HTML stands for
@@ -692,6 +1128,7 @@
 
             </p>
 
+
             <p>
 
                 HTML tells the browser what different parts of a
@@ -699,6 +1136,7 @@
                 links, tables and forms.
 
             </p>
+
 
             <div class="exercise">
 
@@ -730,12 +1168,14 @@
                 2. Basic HTML Structure
             </h2>
 
+
             <p>
 
                 Every normal HTML page starts with a basic
                 document structure.
 
             </p>
+
 
             <div class="code-box">
 
@@ -759,9 +1199,11 @@
 
             </div>
 
+
             <p>
                 The important parts are:
             </p>
+
 
             <ul>
 
@@ -801,9 +1243,11 @@
                 3. HTML Headings
             </h2>
 
+
             <p>
                 HTML provides six levels of headings.
             </p>
+
 
             <div class="code-box">
 
@@ -820,6 +1264,7 @@
 &lt;h6&gt;Sixth Heading&lt;/h6&gt;</pre>
 
             </div>
+
 
             <p>
 
@@ -839,12 +1284,14 @@
                 4. Paragraphs
             </h2>
 
+
             <p>
 
                 The <strong>&lt;p&gt;</strong> element is used
                 to create paragraphs.
 
             </p>
+
 
             <div class="code-box">
 
@@ -867,12 +1314,14 @@ Learn programming and technology with us.
                 5. HTML Links
             </h2>
 
+
             <p>
 
                 Links allow users to move from one webpage
                 to another.
 
             </p>
+
 
             <div class="code-box">
 
@@ -882,6 +1331,7 @@ Learn programming and technology with us.
 
             </div>
 
+
             <p>
 
                 The <strong>href</strong> attribute specifies
@@ -889,9 +1339,11 @@ Learn programming and technology with us.
 
             </p>
 
+
             <h3>
                 Link to another page
             </h3>
+
 
             <div class="code-box">
 
@@ -910,12 +1362,14 @@ Learn programming and technology with us.
                 6. HTML Images
             </h2>
 
+
             <p>
 
                 The <strong>&lt;img&gt;</strong> element displays
                 an image.
 
             </p>
+
 
             <div class="code-box">
 
@@ -925,6 +1379,7 @@ Learn programming and technology with us.
 &gt;</pre>
 
             </div>
+
 
             <p>
 
@@ -945,9 +1400,11 @@ Learn programming and technology with us.
                 7. HTML Lists
             </h2>
 
+
             <h3>
                 Unordered List
             </h3>
+
 
             <div class="code-box">
 
@@ -963,9 +1420,11 @@ Learn programming and technology with us.
 
             </div>
 
+
             <h3>
                 Ordered List
             </h3>
+
 
             <div class="code-box">
 
@@ -990,12 +1449,14 @@ Learn programming and technology with us.
                 8. HTML Tables
             </h2>
 
+
             <p>
 
                 Tables are useful for displaying information
                 in rows and columns.
 
             </p>
+
 
             <div class="code-box">
 
@@ -1024,6 +1485,7 @@ Learn programming and technology with us.
 &lt;/table&gt;</pre>
 
             </div>
+
 
             <ul>
 
@@ -1058,12 +1520,14 @@ Learn programming and technology with us.
                 9. HTML Forms
             </h2>
 
+
             <p>
 
                 Forms allow websites to collect information
                 from users.
 
             </p>
+
 
             <div class="code-box">
 
@@ -1101,9 +1565,11 @@ Learn programming and technology with us.
 
             </div>
 
+
             <h3>
                 Common input types
             </h3>
+
 
             <ul>
 
@@ -1127,12 +1593,14 @@ Learn programming and technology with us.
                 10. Semantic HTML
             </h2>
 
+
             <p>
 
                 Semantic elements describe the meaning of
                 different sections of a webpage.
 
             </p>
+
 
             <div class="code-box">
 
@@ -1158,6 +1626,7 @@ Learn programming and technology with us.
 
             </div>
 
+
             <p>
 
                 Semantic HTML improves website structure,
@@ -1174,12 +1643,14 @@ Learn programming and technology with us.
                 11. HTML Attributes
             </h2>
 
+
             <p>
 
                 Attributes provide additional information
                 about HTML elements.
 
             </p>
+
 
             <div class="code-box">
 
@@ -1192,9 +1663,11 @@ Learn programming and technology with us.
 
             </div>
 
+
             <p>
                 Common attributes include:
             </p>
+
 
             <ul>
 
@@ -1217,12 +1690,14 @@ Learn programming and technology with us.
                 12. HTML Comments
             </h2>
 
+
             <p>
 
                 Comments are notes written inside HTML code
                 that are not displayed as webpage content.
 
             </p>
+
 
             <div class="code-box">
 
@@ -1239,9 +1714,11 @@ Learn programming and technology with us.
                 13. Audio and Video
             </h2>
 
+
             <h3>
                 Audio
             </h3>
+
 
             <div class="code-box">
 
@@ -1256,9 +1733,11 @@ Learn programming and technology with us.
 
             </div>
 
+
             <h3>
                 Video
             </h3>
+
 
             <div class="code-box">
 
@@ -1282,6 +1761,7 @@ Learn programming and technology with us.
                 14. Practical Exercises
             </h2>
 
+
             <div class="exercise">
 
                 <h3>
@@ -1295,8 +1775,11 @@ Learn programming and technology with us.
                 <ul>
 
                     <li>Your name</li>
+
                     <li>Your school</li>
+
                     <li>Your course</li>
+
                     <li>A short paragraph about yourself</li>
 
                 </ul>
@@ -1349,9 +1832,13 @@ Learn programming and technology with us.
                 <ul>
 
                     <li>Name</li>
+
                     <li>Email</li>
+
                     <li>Password</li>
+
                     <li>Gender</li>
+
                     <li>Submit button</li>
 
                 </ul>
@@ -1507,6 +1994,7 @@ Learn programming and technology with us.
                 16. HTML Mini Project
             </h2>
 
+
             <p>
 
                 Create a simple personal profile webpage.
@@ -1515,15 +2003,23 @@ Learn programming and technology with us.
 
             </p>
 
+
             <ul>
 
                 <li>A page title</li>
+
                 <li>Your name</li>
+
                 <li>Your profile image</li>
+
                 <li>A short biography</li>
+
                 <li>Your skills</li>
+
                 <li>Your education</li>
+
                 <li>Your hobbies</li>
+
                 <li>A contact form</li>
 
             </ul>
@@ -1532,6 +2028,7 @@ Learn programming and technology with us.
             <h3>
                 Example Project Structure
             </h3>
+
 
             <div class="code-box">
 
@@ -1583,8 +2080,11 @@ Learn programming and technology with us.
         &lt;ul&gt;
 
             &lt;li&gt;HTML&lt;/li&gt;
+
             &lt;li&gt;Python&lt;/li&gt;
+
             &lt;li&gt;SQL&lt;/li&gt;
+
             &lt;li&gt;JavaScript&lt;/li&gt;
 
         &lt;/ul&gt;
@@ -1632,11 +2132,20 @@ Learn programming and technology with us.
             <div class="lesson-nav">
 
                 <a href="tutorials.html">
-                    ← Tutorials
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    &nbsp; Tutorials
+
                 </a>
 
+
                 <a href="css-tutorial.html">
-                    Next: CSS →
+
+                    Next: CSS &nbsp;
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
                 </a>
 
             </div>
@@ -1649,14 +2158,16 @@ Learn programming and technology with us.
 </main>
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
     <div class="footer-grid">
 
+
+        <!-- ABOUT -->
 
         <div>
 
@@ -1665,16 +2176,19 @@ Learn programming and technology with us.
             </h3>
 
             <p>
-                Technology • Innovation • Learning
+                Your platform for technology news,
+                digital innovation and useful technology
+                resources in Ghana.
             </p>
 
             <p>
-                Your trusted source for technology tutorials,
-                news and digital tools.
+                🇬🇭 Built for Ghana's digital generation.
             </p>
 
         </div>
 
+
+        <!-- QUICK LINKS -->
 
         <div>
 
@@ -1690,13 +2204,13 @@ Learn programming and technology with us.
 
             <p>
                 <a href="news.html">
-                    News
+                    Tech News
                 </a>
             </p>
 
             <p>
-                <a href="tutorials.html">
-                    Tutorials
+                <a href="ghana-tech.html">
+                    Ghana Tech
                 </a>
             </p>
 
@@ -1708,6 +2222,8 @@ Learn programming and technology with us.
 
         </div>
 
+
+        <!-- COURSES -->
 
         <div>
 
@@ -1754,6 +2270,8 @@ Learn programming and technology with us.
         </div>
 
 
+        <!-- CONTACT -->
+
         <div>
 
             <h3>
@@ -1782,63 +2300,175 @@ Learn programming and technology with us.
     <hr>
 
 
-    <p class="copyright">
+    <div class="copyright">
 
-        © 2026 TechHub Ghana.
-        All Rights Reserved.
+        <p>
 
-    </p>
+            ©
+            <span id="copyrightYear">
+                2026
+            </span>
+
+            TechHub Ghana.
+            All rights reserved.
+
+        </p>
+
+    </div>
 
 </footer>
 
 
-<!-- =====================================================
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button
+    type="button"
+    id="topBtn"
+    aria-label="Back to top"
+    title="Back to top"
+>
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<!-- =========================================================
      MAIN JAVASCRIPT
-===================================================== -->
+========================================================= -->
 
 <script src="script.js"></script>
 
 
-<!-- =====================================================
-     FALLBACK MOBILE MENU
-     Only used if script.js does not already provide it.
-===================================================== -->
+<!-- =========================================================
+     TUTORIAL PAGE FALLBACK JAVASCRIPT
+========================================================= -->
 
 <script>
 
-    if (typeof toggleMenu !== "function") {
+document.addEventListener("DOMContentLoaded", function () {
 
-        function toggleMenu() {
+    /* ================================================
+       MOBILE MENU
+    ================================================= */
 
-            const nav =
-                document.getElementById("navMenu");
+    const menuBtn =
+        document.getElementById("menuBtn");
 
-            const button =
-                document.querySelector(".menu-btn");
+    const mainNav =
+        document.getElementById("mainNav");
 
-            if (!nav) return;
 
-            nav.classList.toggle("show");
+    if (menuBtn && mainNav) {
 
-            const isOpen =
-                nav.classList.contains("show");
+        menuBtn.addEventListener(
+            "click",
+            function () {
 
-            if (button) {
+                mainNav.classList.toggle("show");
 
-                button.setAttribute(
+                const isOpen =
+                    mainNav.classList.contains("show");
+
+                menuBtn.setAttribute(
                     "aria-expanded",
                     String(isOpen)
                 );
 
             }
+        );
 
-        }
+
+        /* Close menu after clicking a link */
+
+        mainNav.querySelectorAll("a").forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        mainNav.classList.remove("show");
+
+                        menuBtn.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+                );
+
+            }
+        );
 
     }
+
+
+    /* ================================================
+       COPYRIGHT YEAR
+    ================================================= */
+
+    const copyrightYear =
+        document.getElementById("copyrightYear");
+
+
+    if (copyrightYear) {
+
+        copyrightYear.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+    /* ================================================
+       BACK TO TOP
+    ================================================= */
+
+    const topBtn =
+        document.getElementById("topBtn");
+
+
+    if (topBtn) {
+
+        window.addEventListener(
+            "scroll",
+            function () {
+
+                if (window.scrollY > 400) {
+
+                    topBtn.classList.add("show");
+
+                } else {
+
+                    topBtn.classList.remove("show");
+
+                }
+
+            }
+        );
+
+
+        topBtn.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+});
 
 </script>
 
 
 </body>
 
-    </html>
+                    </html>
