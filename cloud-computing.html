@@ -3,169 +3,671 @@
 
 <head>
 
+    <!-- =========================================================
+         BASIC DOCUMENT SETUP
+    ========================================================== -->
+
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
 
-    <title>Cloud Computing Powers Modern Businesses | TechHub Ghana</title>
+    <meta
+        name="theme-color"
+        content="#0b5cff"
+    >
 
-    <meta name="description"
-          content="Learn how cloud computing is transforming modern businesses, education, data storage, applications and digital services.">
+    <title>
+        Cloud Computing Powers Modern Businesses | TechHub Ghana
+    </title>
 
-    <meta name="keywords"
-          content="Cloud Computing, Cloud Technology, Technology Ghana, TechHub Ghana, Data Storage, Digital Transformation">
+    <meta
+        name="description"
+        content="Learn how cloud computing is transforming modern businesses, education, data storage, applications and digital services."
+    >
 
-    <meta name="author"
-          content="TechHub Ghana">
+    <meta
+        name="keywords"
+        content="Cloud Computing, Cloud Technology, Technology Ghana, TechHub Ghana, Data Storage, Digital Transformation"
+    >
 
-    <meta name="robots"
-          content="index, follow">
+    <meta
+        name="author"
+        content="TechHub Ghana"
+    >
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <!-- =========================================================
+         GOOGLE FONT
+    ========================================================== -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         MAIN STYLESHEET
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =========================================================
+         PAGE SAFETY + SIDE SPACING
+    ========================================================== -->
+
+    <style>
+
+        /* =====================================================
+           BASIC SAFETY
+        ====================================================== */
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =====================================================
+           STANDARD TECHHUB GHANA LOGO
+        ====================================================== */
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            text-decoration: none;
+        }
+
+
+        .logo-image {
+            width: 56px;
+            height: 56px;
+
+            min-width: 56px;
+            max-width: 56px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+
+        .logo-image img {
+            display: block;
+
+            width: 56px !important;
+            height: 56px !important;
+
+            max-width: 56px !important;
+            max-height: 56px !important;
+
+            object-fit: contain;
+        }
+
+
+        .logo-content {
+            min-width: 0;
+        }
+
+
+        .logo-title,
+        .logo-tagline {
+            display: block;
+        }
+
+
+        .logo-title {
+            white-space: nowrap;
+        }
+
+
+        .logo-tagline {
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           ARTICLE SIDE SPACING
+        ====================================================== */
+
+        main {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+
+        .article-page {
+            width: 100%;
+            max-width: 1000px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .newsletter {
+            width: calc(100% - 30px);
+            max-width: 1370px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+
+            /* HEADER SIDE SPACE */
+
+            .top-bar {
+                width: 100%;
+                max-width: 100%;
+
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+
+            .logo {
+                gap: 9px;
+                max-width: calc(100% - 58px);
+            }
+
+
+            .logo-image {
+                width: 44px;
+                height: 44px;
+
+                min-width: 44px;
+                max-width: 44px;
+            }
+
+
+            .logo-image img {
+                width: 44px !important;
+                height: 44px !important;
+
+                max-width: 44px !important;
+                max-height: 44px !important;
+            }
+
+
+            .logo-title {
+                font-size: 1rem;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+
+            .logo-tagline {
+                font-size: 0.58rem;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+
+            /* MAIN CONTENT */
+
+            main {
+                width: 100%;
+                max-width: 100%;
+
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+
+            .article-page {
+                width: 100%;
+                max-width: 100%;
+
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+
+            /* ARTICLE IMAGE */
+
+            .article-image {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+
+
+            /* NEWSLETTER */
+
+            .newsletter {
+                width: calc(100% - 20px);
+                max-width: 100%;
+
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONES
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            .top-bar {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+
+            .logo-image {
+                width: 40px;
+                height: 40px;
+
+                min-width: 40px;
+                max-width: 40px;
+            }
+
+
+            .logo-image img {
+                width: 40px !important;
+                height: 40px !important;
+
+                max-width: 40px !important;
+                max-height: 40px !important;
+            }
+
+
+            .logo-title {
+                font-size: 0.92rem;
+            }
+
+
+            .logo-tagline {
+                font-size: 0.52rem;
+            }
+
+
+            main {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+
+            .newsletter {
+                width: calc(100% - 20px);
+            }
+
+        }
+
+    </style>
 
 </head>
 
 
-<body>
+<body id="top">
 
 
-<!-- =====================================================
+<!-- =========================================================
      HEADER
-===================================================== -->
+========================================================= -->
 
-<header class="main-header">
+<header
+    class="main-header"
+    id="siteHeader"
+>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
 
     <div class="top-bar">
 
-        <!-- LOGO -->
 
-        <div class="logo">
+        <!-- =================================================
+             STANDARD TECHHUB GHANA LOGO
+        ================================================== -->
 
-            <a href="index.html">
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="TechHub Ghana home"
+        >
 
-                <img src="images/logo.png"
-                     alt="TechHub Ghana Logo">
+            <div class="logo-image">
 
-            </a>
-
-            <div>
-
-                <h1>TechHub Ghana</h1>
-
-                <p>
-                    Technology News • Tutorials • Digital Tools
-                </p>
+                <img
+                    src="images/logo.png"
+                    alt="TechHub Ghana logo"
+                    width="56"
+                    height="56"
+                    decoding="async"
+                >
 
             </div>
 
-        </div>
+
+            <div class="logo-content">
+
+                <span class="logo-title">
+                    TechHub Ghana
+                </span>
+
+                <span class="logo-tagline">
+                    Technology • Learning • Innovation
+                </span>
+
+            </div>
+
+        </a>
 
 
-        <!-- SEARCH -->
+        <!-- =================================================
+             SEARCH
+        ================================================== -->
 
-        <div class="search-box">
+        <form
+            class="search-box"
+            id="searchForm"
+            role="search"
+        >
+
+            <label
+                for="siteSearch"
+                class="sr-only"
+            >
+                Search TechHub Ghana
+            </label>
+
 
             <input
                 type="search"
                 id="siteSearch"
-                placeholder="Search TechHub Ghana..."
-                aria-label="Search TechHub Ghana">
+                name="q"
+                placeholder="Search technology, tutorials..."
+                autocomplete="off"
+                aria-label="Search TechHub Ghana"
+            >
+
 
             <button
-                type="button"
-                aria-label="Search">
+                type="submit"
+                aria-label="Search"
+            >
 
-                🔍
+                <i
+                    class="fa-solid fa-magnifying-glass"
+                    aria-hidden="true"
+                ></i>
 
             </button>
 
-        </div>
+        </form>
+
+
+        <!-- =================================================
+             MOBILE MENU
+        ================================================== -->
+
+        <button
+            type="button"
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open navigation menu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
 
     </div>
 
 
-    <!-- MOBILE MENU BUTTON -->
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
-    <button
-        class="menu-btn"
-        type="button"
-        onclick="toggleMenu()"
-        aria-label="Open navigation menu"
-        aria-controls="navMenu"
-        aria-expanded="false">
+    <nav
+        class="main-nav"
+        id="navMenu"
+        aria-label="Main navigation"
+    >
 
-        ☰
-
-    </button>
+        <div class="nav-inner">
 
 
-    <!-- NAVIGATION -->
+            <a href="index.html">
 
-    <nav id="navMenu">
+                <i
+                    class="fa-solid fa-house"
+                    aria-hidden="true"
+                ></i>
 
-        <a href="index.html">
-            Home
-        </a>
+                <span>
+                    Home
+                </span>
 
-        <a href="news.html">
-            News
-        </a>
+            </a>
 
-        <a href="tutorials.html">
-            Tutorials
-        </a>
 
-        <a href="tools.html">
-            Tools
-        </a>
+            <a href="ghana-tech.html">
 
-        <a href="gpa.html">
-            GPA
-        </a>
+                <span
+                    class="nav-flag"
+                    aria-hidden="true"
+                >
+                    🇬🇭
+                </span>
 
-        <a href="qr-generator.html">
-            QR Generator
-        </a>
+                <span>
+                    Ghana Tech
+                </span>
 
-        <a href="ai-assistant.html">
-            AI Assistant
-        </a>
+            </a>
 
-        <a href="about.html">
-            About
-        </a>
 
-        <a href="contact.html">
-            Contact
-        </a>
+            <a href="news.html">
+
+                <i
+                    class="fa-regular fa-newspaper"
+                    aria-hidden="true"
+                ></i>
+
+                <span>
+                    News
+                </span>
+
+            </a>
+
+
+            <a href="tutorials.html">
+
+                <i
+                    class="fa-solid fa-graduation-cap"
+                    aria-hidden="true"
+                ></i>
+
+                <span>
+                    Tutorials
+                </span>
+
+            </a>
+
+
+            <a href="tools.html">
+
+                <i
+                    class="fa-solid fa-toolbox"
+                    aria-hidden="true"
+                ></i>
+
+                <span>
+                    Tools
+                </span>
+
+            </a>
+
+
+            <a href="gpa.html">
+
+                <i
+                    class="fa-solid fa-calculator"
+                    aria-hidden="true"
+                ></i>
+
+                <span>
+                    GPA
+                </span>
+
+            </a>
+
+
+            <a href="qr-generator.html">
+
+                <i
+                    class="fa-solid fa-qrcode"
+                    aria-hidden="true"
+                ></i>
+
+                <span>
+                    QR Generator
+                </span>
+
+            </a>
+
+
+            <a href="ai-assistant.html">
+
+                <i
+                    class="fa-solid fa-robot"
+                    aria-hidden="true"
+                ></i>
+
+                <span>
+                    AI Assistant
+                </span>
+
+            </a>
+
+
+            <a href="about.html">
+
+                <i
+                    class="fa-solid fa-circle-info"
+                    aria-hidden="true"
+                ></i>
+
+                <span>
+                    About
+                </span>
+
+            </a>
+
+
+            <a href="contact.html">
+
+                <i
+                    class="fa-solid fa-envelope"
+                    aria-hidden="true"
+                ></i>
+
+                <span>
+                    Contact
+                </span>
+
+            </a>
+
+        </div>
 
     </nav>
 
 </header>
 
 
-<!-- =====================================================
+<!-- =========================================================
      BREAKING NEWS
-===================================================== -->
+========================================================= -->
 
-<section class="breaking-news"
-         aria-label="Breaking technology news">
+<section
+    class="breaking-news"
+    aria-label="Breaking technology news"
+>
 
     <marquee>
 
@@ -177,9 +679,9 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      ARTICLE
-===================================================== -->
+========================================================= -->
 
 <main>
 
@@ -229,7 +731,9 @@
             class="article-image"
             src="images/cloud-news.jpg"
             alt="Cloud computing technology and digital cloud services"
-            loading="lazy">
+            loading="lazy"
+            decoding="async"
+        >
 
 
         <!-- INTRODUCTION -->
@@ -258,9 +762,7 @@
         <!-- WHAT IS CLOUD COMPUTING -->
 
         <h2>
-
             What Is Cloud Computing?
-
         </h2>
 
 
@@ -284,7 +786,9 @@
 
         <div class="info-box">
 
-            <strong>💡 Key Point</strong>
+            <strong>
+                💡 Key Point
+            </strong>
 
             <p>
 
@@ -300,9 +804,7 @@
         <!-- BENEFITS -->
 
         <h2>
-
             Benefits of Cloud Computing
-
         </h2>
 
 
@@ -348,9 +850,7 @@
         <!-- CLOUD SERVICES -->
 
         <h2>
-
             Common Types of Cloud Services
-
         </h2>
 
 
@@ -363,9 +863,7 @@
 
 
         <h3>
-
             Infrastructure as a Service (IaaS)
-
         </h3>
 
 
@@ -378,9 +876,7 @@
 
 
         <h3>
-
             Platform as a Service (PaaS)
-
         </h3>
 
 
@@ -393,9 +889,7 @@
 
 
         <h3>
-
             Software as a Service (SaaS)
-
         </h3>
 
 
@@ -411,9 +905,7 @@
         <!-- EDUCATION -->
 
         <h2>
-
             Cloud Computing in Education
-
         </h2>
 
 
@@ -437,7 +929,9 @@
 
         <div class="info-box">
 
-            <strong>🎓 For Students</strong>
+            <strong>
+                🎓 For Students
+            </strong>
 
             <p>
 
@@ -453,9 +947,7 @@
         <!-- BUSINESS -->
 
         <h2>
-
             Cloud Computing for Businesses
-
         </h2>
 
 
@@ -480,9 +972,7 @@
         <!-- SECURITY -->
 
         <h2>
-
             Cloud Security
-
         </h2>
 
 
@@ -506,7 +996,9 @@
 
         <div class="info-box">
 
-            <strong>🔐 Security Tip</strong>
+            <strong>
+                🔐 Security Tip
+            </strong>
 
             <p>
 
@@ -523,9 +1015,7 @@
         <!-- FUTURE -->
 
         <h2>
-
             The Future of Cloud Technology
-
         </h2>
 
 
@@ -560,9 +1050,7 @@
         <!-- CONCLUSION -->
 
         <h2>
-
             Conclusion
-
         </h2>
 
 
@@ -586,20 +1074,24 @@
         </p>
 
 
-        <!-- BACK TO NEWS -->
+        <!-- ARTICLE NAVIGATION -->
 
         <div class="article-navigation">
 
-            <a href="news.html"
-               class="read-btn">
+            <a
+                href="news.html"
+                class="read-btn"
+            >
 
                 ← Back to News
 
             </a>
 
 
-            <a href="tutorials.html"
-               class="read-btn">
+            <a
+                href="tutorials.html"
+                class="read-btn"
+            >
 
                 Explore Tutorials →
 
@@ -613,17 +1105,16 @@
 </main>
 
 
-<!-- =====================================================
+<!-- =========================================================
      NEWSLETTER
-===================================================== -->
+========================================================= -->
 
 <section class="newsletter">
 
     <h2>
-
         📩 Stay Updated
-
     </h2>
+
 
     <p>
 
@@ -633,13 +1124,17 @@
     </p>
 
 
-    <form>
+    <form id="newsletterForm">
 
         <input
             type="email"
+            id="newsletterEmail"
             placeholder="Enter your email"
             aria-label="Email address"
-            required>
+            autocomplete="email"
+            required
+        >
+
 
         <button type="submit">
 
@@ -652,9 +1147,9 @@
 </section>
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================= -->
 
 <footer>
 
@@ -691,11 +1186,20 @@
                 Quick Links
             </h3>
 
+
             <p>
                 <a href="index.html">
                     Home
                 </a>
             </p>
+
+
+            <p>
+                <a href="ghana-tech.html">
+                    Ghana Tech
+                </a>
+            </p>
+
 
             <p>
                 <a href="news.html">
@@ -703,11 +1207,13 @@
                 </a>
             </p>
 
+
             <p>
                 <a href="tutorials.html">
                     Tutorials
                 </a>
             </p>
+
 
             <p>
                 <a href="tools.html">
@@ -715,11 +1221,13 @@
                 </a>
             </p>
 
+
             <p>
                 <a href="about.html">
                     About
                 </a>
             </p>
+
 
             <p>
                 <a href="contact.html">
@@ -738,11 +1246,13 @@
                 Tutorials
             </h3>
 
+
             <p>
                 <a href="html-tutorial.html">
                     HTML
                 </a>
             </p>
+
 
             <p>
                 <a href="css-tutorial.html">
@@ -750,11 +1260,13 @@
                 </a>
             </p>
 
+
             <p>
                 <a href="javascript-tutorial.html">
                     JavaScript
                 </a>
             </p>
+
 
             <p>
                 <a href="python-tutorial.html">
@@ -762,17 +1274,20 @@
                 </a>
             </p>
 
+
             <p>
                 <a href="java-tutorial.html">
                     Java
                 </a>
             </p>
 
+
             <p>
                 <a href="mysql-tutorial.html">
                     MySQL
                 </a>
             </p>
+
 
             <p>
                 <a href="cybersecurity-tutorial.html">
@@ -791,16 +1306,17 @@
                 Contact
             </h3>
 
+
             <p>
                 📍 Accra, Ghana
             </p>
+
 
             <p>
                 📧 info@techhubghana.com
             </p>
 
         </div>
-
 
     </div>
 
@@ -817,13 +1333,13 @@
 </footer>
 
 
-<!-- =====================================================
+<!-- =========================================================
      MAIN JAVASCRIPT
-===================================================== -->
+========================================================= -->
 
 <script src="script.js"></script>
 
 
 </body>
 
-  </html>
+            </html>
