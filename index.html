@@ -167,15 +167,11 @@
 
 
     <!-- =========================================================
-         MOBILE SAFETY OVERRIDES
-         
-         These protect the homepage from oversized images,
-         horizontal overflow and mobile layout problems.
+         BASIC MOBILE SAFETY
     ========================================================== -->
 
     <style>
 
-        /* Prevent accidental horizontal scrolling */
         html,
         body {
             width: 100%;
@@ -184,16 +180,18 @@
         }
 
 
-        /* Keep all images responsive */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+
         img {
             max-width: 100%;
             height: auto;
         }
 
-
-        /* =====================================================
-           LOGO SAFETY
-        ====================================================== */
 
         .logo {
             display: inline-flex;
@@ -209,19 +207,24 @@
             height: 56px;
             min-width: 56px;
             max-width: 56px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             overflow: hidden;
         }
 
 
         .logo-image img {
             display: block;
+
             width: 56px !important;
             height: 56px !important;
+
             max-width: 56px !important;
             max-height: 56px !important;
+
             object-fit: contain;
         }
 
@@ -247,27 +250,47 @@
         }
 
 
-        /* =====================================================
-           HERO IMAGE SAFETY
-        ====================================================== */
+        .hero-image {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
 
         .hero-image img {
             display: block;
+
             width: 100%;
-            height: auto;
             max-width: 100%;
+
+            height: auto;
+
             object-fit: cover;
         }
 
 
-        /* =====================================================
-           MOBILE
-        ====================================================== */
-
         @media (max-width: 768px) {
+
+            /* =================================================
+               PAGE SAFETY
+            ================================================== */
+
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+
+            /* =================================================
+               TOP BAR
+            ================================================== */
 
             .top-bar {
                 width: 100%;
+                max-width: 100%;
+
                 padding-left: 16px;
                 padding-right: 16px;
             }
@@ -282,6 +305,7 @@
             .logo-image {
                 width: 44px;
                 height: 44px;
+
                 min-width: 44px;
                 max-width: 44px;
             }
@@ -290,6 +314,7 @@
             .logo-image img {
                 width: 44px !important;
                 height: 44px !important;
+
                 max-width: 44px !important;
                 max-height: 44px !important;
             }
@@ -297,6 +322,7 @@
 
             .logo-title {
                 font-size: 1rem;
+
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
@@ -304,67 +330,260 @@
 
             .logo-tagline {
                 font-size: 0.58rem;
+
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
 
 
-            .search-box {
-                width: 100%;
-            }
-
+            /* =================================================
+               MOBILE HERO
+            ================================================== */
 
             .hero {
+                width: 100%;
+                max-width: 100%;
                 overflow: hidden;
             }
 
 
             .hero-content {
                 width: 100%;
+                max-width: 100%;
+
+                display: grid !important;
+
+                grid-template-columns: 1fr !important;
+
+                gap: 30px;
             }
 
 
             .hero-text {
                 width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
+
+                order: 1;
             }
 
 
             .hero-image-wrapper {
                 width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
+
+                order: 2;
             }
 
 
             .hero-image {
                 width: 100%;
+                max-width: 100%;
+
                 overflow: hidden;
             }
 
 
-            .hero-floating-card {
-                max-width: calc(100% - 24px);
+            .hero-image img {
+                display: block;
+
+                width: 100% !important;
+                max-width: 100% !important;
+
+                height: auto !important;
+
+                min-width: 0 !important;
+
+                object-fit: cover;
+            }
+
+
+            .hero-content,
+            .hero-text,
+            .hero-image-wrapper,
+            .hero-image {
+                min-width: 0;
+            }
+
+
+            /* =================================================
+               MOBILE MENU
+            ================================================== */
+
+            .main-nav {
+                display: none;
+
+                width: 100%;
+                max-width: 100%;
+            }
+
+
+            .main-nav.show {
+                display: block;
+            }
+
+
+            .nav-inner {
+                width: 100%;
+                max-width: 100%;
+
+                display: flex;
+
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+
+            .nav-inner a {
+                width: 100%;
+                max-width: 100%;
+            }
+
+
+            /* =================================================
+               HAMBURGER
+            ================================================== */
+
+            .menu-btn {
+                display: flex !important;
+
+                flex-direction: column;
+
+                justify-content: center;
+
+                align-items: center;
+
+                gap: 5px;
+
+                width: 46px;
+                height: 46px;
+
+                padding: 0;
+
+                flex-shrink: 0;
+
+                cursor: pointer;
+            }
+
+
+            .menu-btn span {
+                display: block !important;
+
+                width: 22px;
+                height: 2px;
+
+                border-radius: 2px;
+
+                transition:
+                    transform 0.25s ease,
+                    opacity 0.25s ease;
+            }
+
+
+            .menu-btn.active span:nth-child(1) {
+                transform:
+                    translateY(7px)
+                    rotate(45deg);
+            }
+
+
+            .menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+
+            .menu-btn.active span:nth-child(3) {
+                transform:
+                    translateY(-7px)
+                    rotate(-45deg);
+            }
+
+
+            /* =================================================
+               BREAKING NEWS
+            ================================================== */
+
+            .breaking-news,
+            .breaking-inner,
+            .breaking-content {
+                width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
             }
 
 
             .breaking-inner {
-                width: 100%;
                 overflow: hidden;
             }
 
 
+            /* =================================================
+               SECTIONS
+            ================================================== */
+
             .section-container {
                 width: 100%;
                 max-width: 100%;
+
+                min-width: 0;
             }
 
 
-            .newsletter-inner {
+            .card-grid,
+            .tutorial-grid,
+            .news-layout {
+                width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
+            }
+
+
+            /* =================================================
+               NEWS
+            ================================================== */
+
+            .news-left,
+            .news-sidebar {
+                width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
+            }
+
+
+            /* =================================================
+               NEWSLETTER
+            ================================================== */
+
+            .newsletter {
                 width: 100%;
                 max-width: 100%;
             }
 
 
+            .newsletter-inner,
+            .newsletter-content,
+            .newsletter-form {
+                width: 100%;
+                max-width: 100%;
+
+                min-width: 0;
+            }
+
+
+            /* =================================================
+               FOOTER
+            ================================================== */
+
             .footer-grid {
                 width: 100%;
+                max-width: 100%;
             }
 
         }
@@ -384,6 +603,7 @@
             .logo-image {
                 width: 40px;
                 height: 40px;
+
                 min-width: 40px;
                 max-width: 40px;
             }
@@ -392,6 +612,7 @@
             .logo-image img {
                 width: 40px !important;
                 height: 40px !important;
+
                 max-width: 40px !important;
                 max-height: 40px !important;
             }
@@ -404,6 +625,29 @@
 
             .logo-tagline {
                 font-size: 0.52rem;
+            }
+
+
+            .hero-content {
+                gap: 24px;
+            }
+
+
+            .hero h1 {
+                font-size: clamp(2rem, 9vw, 3rem);
+                line-height: 1.1;
+            }
+
+
+            .hero-description {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+
+
+            .hero-image img {
+                width: 100% !important;
+                height: auto !important;
             }
 
 
@@ -435,6 +679,12 @@
 
             .newsletter-form button {
                 width: 100%;
+            }
+
+
+            .menu-btn {
+                width: 44px;
+                height: 44px;
             }
 
         }
@@ -597,7 +847,9 @@
                         aria-hidden="true"
                     ></i>
 
-                    <span>Home</span>
+                    <span>
+                        Home
+                    </span>
 
                 </a>
 
@@ -611,7 +863,9 @@
                         🇬🇭
                     </span>
 
-                    <span>Ghana Tech</span>
+                    <span>
+                        Ghana Tech
+                    </span>
 
                 </a>
 
@@ -623,7 +877,9 @@
                         aria-hidden="true"
                     ></i>
 
-                    <span>News</span>
+                    <span>
+                        News
+                    </span>
 
                 </a>
 
@@ -635,7 +891,9 @@
                         aria-hidden="true"
                     ></i>
 
-                    <span>Tutorials</span>
+                    <span>
+                        Tutorials
+                    </span>
 
                 </a>
 
@@ -647,7 +905,9 @@
                         aria-hidden="true"
                     ></i>
 
-                    <span>Tools</span>
+                    <span>
+                        Tools
+                    </span>
 
                 </a>
 
@@ -659,7 +919,9 @@
                         aria-hidden="true"
                     ></i>
 
-                    <span>About</span>
+                    <span>
+                        About
+                    </span>
 
                 </a>
 
@@ -671,7 +933,9 @@
                         aria-hidden="true"
                     ></i>
 
-                    <span>Contact</span>
+                    <span>
+                        Contact
+                    </span>
 
                 </a>
 
@@ -806,7 +1070,9 @@
                     <h1 id="hero-title">
 
                         Technology
-                        <span>Made Simple.</span>
+                        <span>
+                            Made Simple.
+                        </span>
 
                     </h1>
 
@@ -901,7 +1167,6 @@
 
                         </div>
 
-
                     </div>
 
                 </div>
@@ -930,7 +1195,9 @@
                         ></div>
 
 
-                        <div class="hero-floating-card hero-card-one">
+                        <div
+                            class="hero-floating-card hero-card-one"
+                        >
 
                             <div class="floating-icon">
 
@@ -957,7 +1224,9 @@
                         </div>
 
 
-                        <div class="hero-floating-card hero-card-two">
+                        <div
+                            class="hero-floating-card hero-card-two"
+                        >
 
                             <span
                                 class="pulse-dot"
@@ -1220,7 +1489,9 @@
                         <div class="tool-card-top">
 
                             <div class="icon">
-                                <span aria-hidden="true">🎓</span>
+                                <span aria-hidden="true">
+                                    🎓
+                                </span>
                             </div>
 
                             <span class="tool-label">
@@ -1260,7 +1531,9 @@
                         <div class="tool-card-top">
 
                             <div class="icon">
-                                <span aria-hidden="true">📱</span>
+                                <span aria-hidden="true">
+                                    📱
+                                </span>
                             </div>
 
                             <span class="tool-label">
@@ -1300,7 +1573,9 @@
                         <div class="tool-card-top">
 
                             <div class="icon">
-                                <span aria-hidden="true">🤖</span>
+                                <span aria-hidden="true">
+                                    🤖
+                                </span>
                             </div>
 
                             <span class="tool-label">
@@ -1340,7 +1615,9 @@
                         <div class="tool-card-top">
 
                             <div class="icon">
-                                <span aria-hidden="true">🔐</span>
+                                <span aria-hidden="true">
+                                    🔐
+                                </span>
                             </div>
 
                             <span class="tool-label">
@@ -1373,7 +1650,6 @@
                         </a>
 
                     </article>
-
 
                 </div>
 
@@ -1628,7 +1904,9 @@
 
                                 <a href="ai-assistant.html">
 
-                                    <span aria-hidden="true">🤖</span>
+                                    <span aria-hidden="true">
+                                        🤖
+                                    </span>
 
                                     <span>
                                         AI Assistant
@@ -1648,7 +1926,9 @@
 
                                 <a href="gpa.html">
 
-                                    <span aria-hidden="true">🎓</span>
+                                    <span aria-hidden="true">
+                                        🎓
+                                    </span>
 
                                     <span>
                                         GPA Calculator
@@ -1668,7 +1948,9 @@
 
                                 <a href="qr-generator.html">
 
-                                    <span aria-hidden="true">📱</span>
+                                    <span aria-hidden="true">
+                                        📱
+                                    </span>
 
                                     <span>
                                         QR Generator
@@ -1688,7 +1970,9 @@
 
                                 <a href="tutorials.html#python">
 
-                                    <span aria-hidden="true">🐍</span>
+                                    <span aria-hidden="true">
+                                        🐍
+                                    </span>
 
                                     <span>
                                         Learn Python
@@ -1708,7 +1992,9 @@
 
                                 <a href="tutorials.html#mysql">
 
-                                    <span aria-hidden="true">🗄️</span>
+                                    <span aria-hidden="true">
+                                        🗄️
+                                    </span>
 
                                     <span>
                                         MySQL Basics
@@ -1722,7 +2008,6 @@
                                 </a>
 
                             </li>
-
 
                         </ul>
 
@@ -1744,7 +2029,6 @@
                         </a>
 
                     </aside>
-
 
                 </div>
 
@@ -1995,7 +2279,6 @@
 
                     </a>
 
-
                 </div>
 
             </div>
@@ -2055,7 +2338,10 @@
                         class="tool-card technology-card"
                     >
 
-                        <div class="icon" aria-hidden="true">
+                        <div
+                            class="icon"
+                            aria-hidden="true"
+                        >
                             🐍
                         </div>
 
@@ -2087,7 +2373,10 @@
                         class="tool-card technology-card"
                     >
 
-                        <div class="icon" aria-hidden="true">
+                        <div
+                            class="icon"
+                            aria-hidden="true"
+                        >
                             🟨
                         </div>
 
@@ -2119,7 +2408,10 @@
                         class="tool-card technology-card"
                     >
 
-                        <div class="icon" aria-hidden="true">
+                        <div
+                            class="icon"
+                            aria-hidden="true"
+                        >
                             🌐
                         </div>
 
@@ -2151,7 +2443,10 @@
                         class="tool-card technology-card"
                     >
 
-                        <div class="icon" aria-hidden="true">
+                        <div
+                            class="icon"
+                            aria-hidden="true"
+                        >
                             🗄️
                         </div>
 
@@ -2176,7 +2471,6 @@
                         </span>
 
                     </a>
-
 
                 </div>
 
@@ -2287,7 +2581,6 @@
 
                     </article>
 
-
                 </div>
 
             </div>
@@ -2381,7 +2674,6 @@
             </div>
 
         </section>
-
 
     </main>
 
@@ -2559,7 +2851,6 @@
 
             </div>
 
-
         </div>
 
 
@@ -2597,7 +2888,6 @@
 
         </div>
 
-
     </footer>
 
 
@@ -2625,346 +2915,11 @@
          MAIN JAVASCRIPT
     ========================================================== -->
 
-    <script src="script.js" defer></script>
-
-
-    <!-- =========================================================
-         HOMEPAGE FUNCTIONALITY
-    ========================================================== -->
-
-    <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-
-
-            /* =====================================================
-               MOBILE NAVIGATION
-            ====================================================== */
-
-            const menuBtn =
-                document.getElementById("menuBtn");
-
-            const navMenu =
-                document.getElementById("navMenu");
-
-
-            function closeMobileMenu() {
-
-                if (!navMenu || !menuBtn) {
-                    return;
-                }
-
-                navMenu.classList.remove("show");
-
-                menuBtn.classList.remove("active");
-
-                menuBtn.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuBtn.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-                document.body.classList.remove(
-                    "menu-open"
-                );
-
-            }
-
-
-            if (menuBtn && navMenu) {
-
-                menuBtn.addEventListener(
-                    "click",
-                    function () {
-
-                        const isOpen =
-                            navMenu.classList.toggle("show");
-
-
-                        menuBtn.classList.toggle(
-                            "active",
-                            isOpen
-                        );
-
-
-                        menuBtn.setAttribute(
-                            "aria-expanded",
-                            String(isOpen)
-                        );
-
-
-                        menuBtn.setAttribute(
-                            "aria-label",
-                            isOpen
-                                ? "Close navigation menu"
-                                : "Open navigation menu"
-                        );
-
-
-                        document.body.classList.toggle(
-                            "menu-open",
-                            isOpen
-                        );
-
-                    }
-                );
-
-
-                navMenu
-                    .querySelectorAll("a")
-                    .forEach(function (link) {
-
-                        link.addEventListener(
-                            "click",
-                            closeMobileMenu
-                        );
-
-                    });
-
-            }
-
-
-            /* =====================================================
-               CLOSE MENU WITH ESCAPE
-            ====================================================== */
-
-            document.addEventListener(
-                "keydown",
-                function (event) {
-
-                    if (event.key === "Escape") {
-
-                        closeMobileMenu();
-
-                    }
-
-                }
-            );
-
-
-            /* =====================================================
-               CURRENT DATE
-            ====================================================== */
-
-            const todayElement =
-                document.getElementById("today");
-
-
-            if (todayElement) {
-
-                const date =
-                    new Date();
-
-
-                const formattedDate =
-                    date.toLocaleDateString(
-                        "en-GH",
-                        {
-                            weekday: "long",
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric"
-                        }
-                    );
-
-
-                todayElement.innerHTML = `
-
-                    <i
-                        class="fa-regular fa-calendar"
-                        aria-hidden="true"
-                    ></i>
-
-                    <span>
-                        ${formattedDate}
-                    </span>
-
-                `;
-
-            }
-
-
-            /* =====================================================
-               SEARCH
-            ====================================================== */
-
-            const searchForm =
-                document.getElementById("searchForm");
-
-            const searchInput =
-                document.getElementById("siteSearch");
-
-
-            if (searchForm && searchInput) {
-
-                searchForm.addEventListener(
-                    "submit",
-                    function (event) {
-
-                        event.preventDefault();
-
-
-                        const query =
-                            searchInput.value.trim();
-
-
-                        if (!query) {
-
-                            searchInput.focus();
-
-                            return;
-
-                        }
-
-
-                        window.location.href =
-                            "news.html?search=" +
-                            encodeURIComponent(query);
-
-                    }
-                );
-
-            }
-
-
-            /* =====================================================
-               NEWSLETTER
-               
-               Frontend-only for now.
-               It does NOT pretend to store the email.
-            ====================================================== */
-
-            const newsletterForm =
-                document.getElementById("newsletterForm");
-
-
-            if (newsletterForm) {
-
-                newsletterForm.addEventListener(
-                    "submit",
-                    function (event) {
-
-                        event.preventDefault();
-
-
-                        const emailInput =
-                            document.getElementById(
-                                "newsletterEmail"
-                            );
-
-
-                        if (!emailInput) {
-                            return;
-                        }
-
-
-                        const email =
-                            emailInput.value.trim();
-
-
-                        if (!email) {
-
-                            emailInput.focus();
-
-                            return;
-
-                        }
-
-
-                        alert(
-                            "Thanks for subscribing to TechHub Ghana. Newsletter delivery will be connected soon."
-                        );
-
-
-                        newsletterForm.reset();
-
-                    }
-                );
-
-            }
-
-
-            /* =====================================================
-               BACK TO TOP
-            ====================================================== */
-
-            const topBtn =
-                document.getElementById("topBtn");
-
-
-            if (topBtn) {
-
-
-                function updateTopButton() {
-
-                    if (window.scrollY > 500) {
-
-                        topBtn.classList.add("show");
-
-                    } else {
-
-                        topBtn.classList.remove("show");
-
-                    }
-
-                }
-
-
-                window.addEventListener(
-                    "scroll",
-                    updateTopButton,
-                    {
-                        passive: true
-                    }
-                );
-
-
-                topBtn.addEventListener(
-                    "click",
-                    function () {
-
-                        window.scrollTo({
-
-                            top: 0,
-
-                            behavior: "smooth"
-
-                        });
-
-                    }
-                );
-
-
-                updateTopButton();
-
-            }
-
-
-            /* =====================================================
-               FOOTER YEAR
-            ====================================================== */
-
-            const footerYear =
-                document.getElementById("footerYear");
-
-
-            if (footerYear) {
-
-                footerYear.textContent =
-                    new Date().getFullYear();
-
-            }
-
-
-        });
-
-    </script>
-
+    <script
+        src="script.js"
+        defer
+    ></script>
 
 </body>
 
-     </html>
+    </html>
