@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-20T16:33:26.575679+00:00",
+  "updated": "2026-08-20T17:27:07.832481+00:00",
   "articles": [
+    {
+      "title": "A third of webpages published since ChatGPT’s launch show signs of AI authorship, study finds",
+      "summary": "ChatGPT and other AI models are now authoring and editing much of the new web.",
+      "link": "https://techcrunch.com/2026/08/20/a-third-of-webpages-published-since-chatgpts-launch-show-signs-of-ai-authorship-study-finds/",
+      "date": "Thu, 20 Aug 2026 17:18:58 +0000",
+      "source": "TechCrunch",
+      "category": "Artificial Intelligence"
+    },
+    {
+      "title": "Early Cerebras investor Adit Singh joins Mayfield as infrastructure partner",
+      "summary": "At Mayfield, Singh will focus on semiconductor, cybersecurity, and physical AI investments.",
+      "link": "https://techcrunch.com/2026/08/20/early-cerebras-investor-adit-singh-joins-mayfield-as-infrastructure-partner/",
+      "date": "Thu, 20 Aug 2026 17:04:53 +0000",
+      "source": "TechCrunch",
+      "category": "Cybersecurity"
+    },
+    {
+      "title": "Ramp launches its own AI model router, called Router",
+      "summary": "Ramp has launched its own AI model routing service, dubbed Router, that lets users and companies use and switch between various large language models via an API.",
+      "link": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/",
+      "date": "Thu, 20 Aug 2026 16:46:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Senators demand answers from TikTok over experiment that disabled safeguards",
       "summary": "The safeguard was designed to prevent users from being overwhelmed by harmful content, but TikTok wanted to determine whether it made the app less engaging.",
@@ -35,7 +59,7 @@
     },
     {
       "title": "Inertia Enterprises finds a way to make its fusion fuel fast",
-      "summary": "Fusion power startup Inertia Enterprises reduced the fuel filling process from a week to just a few hours. It's one of ten hurdles the company must overcome to make a profitable power plant.",
+      "summary": "Fusion power startup Inertia Enterprises reduced the fuel filling process from a week to just a few hours. It's one of 10 hurdles the company must overcome to make a profitable power plant.",
       "link": "https://techcrunch.com/2026/08/20/inertia-enterprises-finds-a-way-to-make-its-fusion-fuel-fast/",
       "date": "Thu, 20 Aug 2026 16:00:00 +0000",
       "source": "TechCrunch",
@@ -134,30 +158,6 @@
       "summary": "After raising $1.7 billion for his new robotics company Atoms, Travis Kalanick is introspective about the role VCs have played in his career.",
       "link": "https://techcrunch.com/2026/08/19/travis-kalanick-kicks-off-another-round-of-vc-bashing-1-are-helpful/",
       "date": "Wed, 19 Aug 2026 21:48:24 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Rillet raises $100M Series C at $1B valuation — 2 years after emerging from stealth",
-      "summary": "AI-native account startup Rillet became a unicorn, led by Iconiq, after it doubled its ARR in the past three months, it said.",
-      "link": "https://techcrunch.com/2026/08/19/rillet-raises-100m-series-c-at-1b-valuation-2-years-after-emerging-from-stealth/",
-      "date": "Wed, 19 Aug 2026 20:12:33 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Gwyneth Paltrow allegedly set to throw dinner in honor of Sam Altman",
-      "summary": "The actress' firm Kinship Ventures is an investor in the company.",
-      "link": "https://techcrunch.com/2026/08/19/gwyneth-paltrow-allegedly-set-to-throw-dinner-in-honor-of-sam-altman/",
-      "date": "Wed, 19 Aug 2026 20:04:12 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Gambling on the Little League World Series? Sports bettors have gone too far",
-      "summary": "Have we tried turning off society and turning it back on again?",
-      "link": "https://techcrunch.com/2026/08/19/gambling-on-the-little-league-world-series-sports-bettors-have-gone-too-far/",
-      "date": "Wed, 19 Aug 2026 20:01:02 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
