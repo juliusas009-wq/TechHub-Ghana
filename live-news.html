@@ -3,6 +3,10 @@
 
 <head>
 
+    <!-- =====================================================
+         BASIC DOCUMENT SETTINGS
+    ====================================================== -->
+
     <meta charset="UTF-8">
 
     <meta
@@ -14,7 +18,22 @@
 
     <meta
         name="description"
-        content="Read the latest automatically updated technology news from TechHub Ghana."
+        content="Stay updated with automatically refreshed technology news from TechHub Ghana, covering artificial intelligence, cybersecurity, programming, cloud computing, Ghana technology and digital innovation."
+    >
+
+    <meta
+        name="keywords"
+        content="TechHub Ghana, live technology news, Ghana technology news, AI news, cybersecurity news, programming news, cloud computing news, technology Ghana"
+    >
+
+    <meta
+        name="author"
+        content="TechHub Ghana"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
     >
 
     <meta
@@ -22,7 +41,20 @@
         content="#0756d6"
     >
 
-    <link rel="stylesheet" href="style.css">
+
+    <!-- =====================================================
+         STYLESHEET
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
 
     <link
         rel="preconnect"
@@ -39,6 +71,11 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
 
     <link
         rel="stylesheet"
@@ -57,7 +94,15 @@
 
 <header class="main-header">
 
+
+    <!-- =================================================
+         TOP BAR
+    ================================================== -->
+
     <div class="top-bar">
+
+
+        <!-- LOGO -->
 
         <a
             href="index.html"
@@ -70,14 +115,14 @@
                 alt="TechHub Ghana Logo"
             >
 
-            <div>
+            <div class="logo-text">
 
                 <h1>
                     TechHub Ghana
                 </h1>
 
                 <p>
-                    Live Technology News
+                    Technology • Tutorials • Digital Tools
                 </p>
 
             </div>
@@ -85,7 +130,14 @@
         </a>
 
 
+        <!-- =================================================
+             HEADER ACTIONS
+        ================================================== -->
+
         <div class="header-right">
+
+
+            <!-- SEARCH -->
 
             <div class="search-box">
 
@@ -94,12 +146,14 @@
                     id="searchInput"
                     placeholder="Search technology news..."
                     aria-label="Search technology news"
+                    autocomplete="off"
                 >
 
                 <button
                     type="button"
                     id="searchBtn"
-                    aria-label="Search"
+                    aria-label="Search technology news"
+                    title="Search"
                 >
 
                     <i class="fas fa-search"></i>
@@ -109,6 +163,23 @@
             </div>
 
 
+            <!-- DARK MODE -->
+
+            <button
+                type="button"
+                id="darkModeBtn"
+                class="dark-mode-btn"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode"
+            >
+
+                <i class="fas fa-moon"></i>
+
+            </button>
+
+
+            <!-- MOBILE MENU -->
+
             <button
                 type="button"
                 class="menu-btn"
@@ -116,7 +187,6 @@
                 aria-label="Open navigation menu"
                 aria-controls="navMenu"
                 aria-expanded="false"
-                onclick="toggleMenu()"
             >
 
                 <i class="fas fa-bars"></i>
@@ -128,36 +198,104 @@
     </div>
 
 
+    <!-- =================================================
+         MAIN NAVIGATION
+    ================================================== -->
+
     <nav
         id="navMenu"
         aria-label="Main navigation"
     >
 
         <a href="index.html">
+
+            <i class="fas fa-home"></i>
+
             Home
+
         </a>
+
+
+        <a href="ghana-tech.html">
+
+            🇬🇭 Ghana Tech
+
+        </a>
+
 
         <a
             href="news.html"
-            class="active"
         >
+
+            <i class="fas fa-newspaper"></i>
+
             News
+
         </a>
 
-        <a href="tutorials.html">
+
+        <a
+            href="tutorials.html"
+        >
+
+            <i class="fas fa-graduation-cap"></i>
+
             Tutorials
+
         </a>
+
 
         <a href="tools.html">
+
+            <i class="fas fa-toolbox"></i>
+
             Tools
+
         </a>
+
+
+        <a href="gpa.html">
+
+            <i class="fas fa-calculator"></i>
+
+            GPA
+
+        </a>
+
+
+        <a href="qr-generator.html">
+
+            <i class="fas fa-qrcode"></i>
+
+            QR Generator
+
+        </a>
+
+
+        <a href="ai-assistant.html">
+
+            <i class="fas fa-robot"></i>
+
+            AI Assistant
+
+        </a>
+
 
         <a href="about.html">
+
+            <i class="fas fa-circle-info"></i>
+
             About
+
         </a>
 
+
         <a href="contact.html">
+
+            <i class="fas fa-envelope"></i>
+
             Contact
+
         </a>
 
     </nav>
@@ -171,12 +309,14 @@
 
 <section
     class="breaking-news"
-    aria-label="Live news status"
+    aria-label="Live technology news status"
 >
 
-    <div class="today-date">
+
+    <div class="breaking-label">
 
         <i class="fas fa-circle"></i>
+
         LIVE
 
     </div>
@@ -184,9 +324,15 @@
 
     <div class="breaking-track">
 
-        <div class="breaking-content">
+        <div
+            id="breakingNews"
+            class="breaking-content"
+            aria-live="polite"
+        >
 
-            Automatically updated technology news
+            <span>
+                Loading latest technology news...
+            </span>
 
         </div>
 
@@ -196,49 +342,76 @@
 
 
 <!-- =====================================================
-     LIVE NEWS
+     MAIN CONTENT
 ===================================================== -->
 
 <main>
 
+
+    <!-- =================================================
+         LIVE NEWS HERO
+    ================================================== -->
+
     <section class="section live-news-page">
+
 
         <div class="page-heading">
 
+
             <span class="category-badge">
+
                 <i class="fas fa-bolt"></i>
+
                 LIVE UPDATES
+
             </span>
+
 
             <h2>
                 📰 Live Technology News
             </h2>
 
+
             <p class="section-intro">
 
                 Stay updated with the latest technology,
                 artificial intelligence, cybersecurity,
-                programming and digital innovation news.
+                programming, cloud computing and digital
+                innovation news.
 
             </p>
+
 
         </div>
 
 
+        <!-- =================================================
+             NEWS LAYOUT
+        ================================================== -->
+
         <div class="news-layout">
 
 
-            <!-- NEWS CONTAINER -->
+            <!-- =================================================
+                 NEWS AREA
+            ================================================== -->
 
-            <div
+            <section
                 id="newsContainer"
                 class="news-left"
+                aria-label="Latest technology news"
                 aria-live="polite"
             >
 
+
+                <!-- LOADING STATE -->
+
                 <div class="loading">
 
-                    <div class="spinner"></div>
+                    <div
+                        class="spinner"
+                        aria-hidden="true"
+                    ></div>
 
                     <p>
                         Loading latest technology news...
@@ -246,19 +419,27 @@
 
                 </div>
 
-            </div>
+            </section>
 
 
-            <!-- SIDEBAR -->
+            <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
 
-            <aside class="sidebar">
+            <aside
+                class="sidebar"
+                aria-label="Technology news sidebar"
+            >
 
+
+                <!-- TRENDING -->
 
                 <div class="widget">
 
                     <h3>
                         🔥 Trending Topics
                     </h3>
+
 
                     <ul>
 
@@ -287,13 +468,27 @@
                         </li>
 
                         <li>
+                            📊 Data Science
+                        </li>
+
+                        <li>
+                            🧠 Machine Learning
+                        </li>
+
+                        <li>
                             🇬🇭 Ghana Technology
+                        </li>
+
+                        <li>
+                            🚀 Startups
                         </li>
 
                     </ul>
 
                 </div>
 
+
+                <!-- POPULAR TECHNOLOGIES -->
 
                 <div class="widget">
 
@@ -304,29 +499,157 @@
 
                     <div class="tags">
 
-                        <span>AI</span>
+                        <span>
+                            AI
+                        </span>
 
-                        <span>Python</span>
+                        <span>
+                            Python
+                        </span>
 
-                        <span>JavaScript</span>
+                        <span>
+                            JavaScript
+                        </span>
 
-                        <span>HTML</span>
+                        <span>
+                            HTML
+                        </span>
 
-                        <span>CSS</span>
+                        <span>
+                            CSS
+                        </span>
 
-                        <span>Firebase</span>
+                        <span>
+                            Firebase
+                        </span>
 
-                        <span>GitHub</span>
+                        <span>
+                            GitHub
+                        </span>
 
-                        <span>Cloud</span>
+                        <span>
+                            Cloud
+                        </span>
 
                     </div>
 
                 </div>
 
 
+                <!-- QUICK LINKS -->
+
+                <div class="widget">
+
+                    <h3>
+                        📚 Learn Technology
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            <a href="html-tutorial.html">
+                                HTML Tutorial
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="css-tutorial.html">
+                                CSS Tutorial
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript-tutorial.html">
+                                JavaScript Tutorial
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="python-tutorial.html">
+                                Python Tutorial
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mysql-tutorial.html">
+                                MySQL Tutorial
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cybersecurity-tutorial.html">
+                                Cybersecurity Tutorial
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
             </aside>
 
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         NEWS INFORMATION
+    ================================================== -->
+
+    <section class="section">
+
+
+        <div class="tutorial-content">
+
+
+            <span class="category">
+                <i class="fas fa-circle"></i>
+                LIVE NEWS
+            </span>
+
+
+            <h2>
+                About TechHub Ghana Live News
+            </h2>
+
+
+            <p>
+
+                This page displays automatically updated
+                technology news collected through the
+                TechHub Ghana news system.
+
+            </p>
+
+
+            <p>
+
+                News may include stories about artificial
+                intelligence, cybersecurity, programming,
+                cloud computing, smartphones, software,
+                startups and other areas of technology.
+
+            </p>
+
+
+            <div class="info-box">
+
+                <strong>
+                    💡 Stay Informed
+                </strong>
+
+                <p>
+
+                    Technology changes quickly. Check this
+                    page regularly for the latest stories
+                    and developments.
+
+                </p>
+
+            </div>
 
         </div>
 
@@ -335,39 +658,63 @@
 
     <!-- =================================================
          NEWSLETTER
-    ================================================= -->
+    ================================================== -->
 
     <section class="newsletter">
 
-        <h2>
-            Stay Updated
-        </h2>
 
-        <p>
-
-            Get the latest technology news,
-            tutorials and digital updates from
-            TechHub Ghana.
-
-        </p>
+        <div class="newsletter-content">
 
 
-        <form id="newsletterForm">
+            <span class="newsletter-icon">
+                📩
+            </span>
 
-            <input
-                type="email"
-                name="email"
-                placeholder="Enter your email address"
-                aria-label="Email address"
-                autocomplete="email"
-                required
+
+            <h2>
+                Stay Updated
+            </h2>
+
+
+            <p>
+
+                Get the latest technology news,
+                tutorials, cybersecurity updates
+                and digital tools from TechHub Ghana.
+
+            </p>
+
+
+            <form
+                id="newsletterForm"
+                novalidate
             >
 
-            <button type="submit">
-                Subscribe
-            </button>
+                <div class="newsletter-form">
 
-        </form>
+
+                    <input
+                        type="email"
+                        id="newsletterEmail"
+                        name="email"
+                        placeholder="Enter your email address"
+                        aria-label="Email address"
+                        autocomplete="email"
+                        required
+                    >
+
+
+                    <button type="submit">
+
+                        Subscribe
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
 
     </section>
 
@@ -380,107 +727,181 @@
 
 <footer>
 
+
     <div class="footer-grid">
 
 
-        <div>
+        <!-- =================================================
+             COMPANY
+        ================================================== -->
+
+        <div class="footer-column">
+
 
             <h3>
                 TechHub Ghana
             </h3>
 
+
             <p>
                 Technology • Innovation • Learning
             </p>
 
+
             <p>
-                Your trusted source for technology news,
-                tutorials and digital innovation.
+
+                Your trusted source for technology
+                news, tutorials and digital tools.
+
             </p>
 
         </div>
 
 
-        <div>
+        <!-- =================================================
+             QUICK LINKS
+        ================================================== -->
+
+        <div class="footer-column">
+
 
             <h3>
                 Quick Links
             </h3>
 
+
             <p>
+
                 <a href="index.html">
                     Home
                 </a>
+
             </p>
 
+
             <p>
+
+                <a href="ghana-tech.html">
+                    Ghana Tech
+                </a>
+
+            </p>
+
+
+            <p>
+
                 <a href="news.html">
                     News
                 </a>
+
             </p>
 
+
             <p>
+
+                <a href="live-news.html">
+                    Live News
+                </a>
+
+            </p>
+
+
+            <p>
+
                 <a href="tutorials.html">
                     Tutorials
                 </a>
+
             </p>
 
+
             <p>
+
                 <a href="tools.html">
                     Tools
                 </a>
+
             </p>
 
-            <p>
-                <a href="about.html">
-                    About
-                </a>
-            </p>
 
             <p>
-                <a href="contact.html">
-                    Contact
+
+                <a href="ai-assistant.html">
+                    AI Assistant
                 </a>
+
             </p>
 
         </div>
 
 
-        <div>
+        <!-- =================================================
+             CATEGORIES
+        ================================================== -->
+
+        <div class="footer-column">
+
 
             <h3>
                 Categories
             </h3>
 
-            <p>Artificial Intelligence</p>
 
-            <p>Programming</p>
+            <p>
+                Artificial Intelligence
+            </p>
 
-            <p>Cybersecurity</p>
 
-            <p>Cloud Computing</p>
+            <p>
+                Cybersecurity
+            </p>
 
-            <p>Ghana Technology</p>
+
+            <p>
+                Programming
+            </p>
+
+
+            <p>
+                Cloud Computing
+            </p>
+
+
+            <p>
+                Mobile Technology
+            </p>
+
+
+            <p>
+                Ghana Technology
+            </p>
 
         </div>
 
 
-        <div>
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <div class="footer-column">
+
 
             <h3>
                 Contact
             </h3>
 
-            <p>
-                📧 info@techhubghana.com
-            </p>
 
             <p>
                 📍 Accra, Ghana
             </p>
 
-        </div>
 
+            <p>
+                📧 info@techhubghana.com
+            </p>
+
+
+        </div>
 
     </div>
 
@@ -506,6 +927,7 @@
     id="topBtn"
     type="button"
     aria-label="Back to top"
+    title="Back to top"
 >
 
     <i class="fas fa-arrow-up"></i>
@@ -513,7 +935,16 @@
 </button>
 
 
+<!-- =====================================================
+     MAIN JAVASCRIPT
+===================================================== -->
+
 <script src="script.js"></script>
+
+
+<!-- =====================================================
+     LIVE NEWS JAVASCRIPT
+===================================================== -->
 
 <script
     type="module"
@@ -521,6 +952,127 @@
 ></script>
 
 
+<!-- =====================================================
+     NEWSLETTER FALLBACK
+===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =================================================
+           NEWSLETTER
+        ================================================== */
+
+        const newsletterForm =
+            document.getElementById(
+                "newsletterForm"
+            );
+
+
+        const newsletterEmail =
+            document.getElementById(
+                "newsletterEmail"
+            );
+
+
+        if (
+            newsletterForm &&
+            newsletterEmail
+        ) {
+
+
+            newsletterForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const email =
+                        newsletterEmail.value.trim();
+
+
+                    if (!email) {
+                        return;
+                    }
+
+
+                    if (
+                        !newsletterEmail.checkValidity()
+                    ) {
+
+                        newsletterEmail.reportValidity();
+
+                        return;
+
+                    }
+
+
+                    alert(
+                        "✅ Thank you for subscribing to TechHub Ghana!"
+                    );
+
+
+                    newsletterForm.reset();
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           MOBILE MENU FALLBACK
+           
+           Only runs if script.js does not already
+           handle the menu.
+        ================================================== */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+
+        const navMenu =
+            document.getElementById("navMenu");
+
+
+        if (
+            menuBtn &&
+            navMenu &&
+            typeof window.toggleMenu !== "function"
+        ) {
+
+
+            menuBtn.addEventListener(
+                "click",
+                function () {
+
+                    const isOpen =
+                        navMenu.classList.toggle(
+                            "show"
+                        );
+
+
+                    menuBtn.setAttribute(
+                        "aria-expanded",
+                        String(isOpen)
+                    );
+
+                }
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
 </body>
 
-                </html>
+    </html>
