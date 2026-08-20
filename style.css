@@ -3344,3 +3344,898 @@ body::after {
     }
 
 }
+
+/* =========================================================
+   TECHHUB GHANA
+   FINAL MOBILE OVERFLOW + RESPONSIVE FIX
+   IMPORTANT: PLACE THIS AT THE VERY END OF style.css
+========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL WIDTH PROTECTION
+========================================================= */
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0 !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+
+/* Prevent long text/elements from creating horizontal overflow */
+
+img,
+video,
+iframe,
+svg,
+canvas {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+
+/* =========================================================
+   2. MOBILE FIX
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* -----------------------------------------------------
+       BODY
+    ----------------------------------------------------- */
+
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+    .site-header {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: visible !important;
+    }
+
+
+    .top-bar {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        padding: 10px 14px !important;
+
+        gap: 10px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       LOGO
+    ----------------------------------------------------- */
+
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+
+        width: auto !important;
+        max-width: calc(100% - 60px) !important;
+        min-width: 0 !important;
+
+        flex: 1 1 auto !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .logo-image {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        max-width: 44px !important;
+
+        flex: 0 0 44px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .logo-image img {
+        width: 44px !important;
+        height: 44px !important;
+
+        min-width: 44px !important;
+        max-width: 44px !important;
+
+        min-height: 44px !important;
+        max-height: 44px !important;
+
+        object-fit: contain !important;
+    }
+
+
+    .logo-content {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+
+
+    .logo-title {
+        display: block !important;
+
+        max-width: 100% !important;
+
+        font-size: 1rem !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    .logo-tagline {
+        display: block !important;
+
+        max-width: 100% !important;
+
+        font-size: 0.55rem !important;
+
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+
+    /* -----------------------------------------------------
+       SEARCH
+    ----------------------------------------------------- */
+
+    .search-box {
+        display: none !important;
+    }
+
+
+    /* -----------------------------------------------------
+       HAMBURGER BUTTON
+    ----------------------------------------------------- */
+
+    .menu-btn {
+        display: flex !important;
+
+        width: 46px !important;
+        height: 46px !important;
+
+        min-width: 46px !important;
+        max-width: 46px !important;
+
+        flex: 0 0 46px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        flex-direction: column !important;
+
+        gap: 5px !important;
+
+        padding: 0 !important;
+
+        border: 1px solid #dbe2ea !important;
+        border-radius: 12px !important;
+
+        background: #ffffff !important;
+
+        cursor: pointer !important;
+
+        position: relative !important;
+        z-index: 10001 !important;
+    }
+
+
+    .menu-btn span {
+        display: block !important;
+
+        width: 23px !important;
+        height: 3px !important;
+
+        min-width: 23px !important;
+
+        background: #111827 !important;
+
+        border-radius: 5px !important;
+
+        transition:
+            transform 0.25s ease,
+            opacity 0.25s ease !important;
+    }
+
+
+    /* Hamburger → X */
+
+    .menu-btn.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg) !important;
+    }
+
+    .menu-btn.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+
+    .menu-btn.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg) !important;
+    }
+
+
+    /* -----------------------------------------------------
+       NAVIGATION
+    ----------------------------------------------------- */
+
+    .main-nav {
+        display: none !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .main-nav.show {
+        display: block !important;
+    }
+
+
+    .nav-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        gap: 0 !important;
+
+        padding: 8px 12px !important;
+    }
+
+
+    .nav-inner a {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-height: 48px !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        padding: 12px 14px !important;
+
+        margin: 0 !important;
+
+        border-radius: 8px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* -----------------------------------------------------
+       MAIN CONTENT
+    ----------------------------------------------------- */
+
+    main {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    section,
+    article,
+    aside,
+    header,
+    footer,
+    nav,
+    div {
+        min-width: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTAINERS
+    ----------------------------------------------------- */
+
+    .section-container,
+    .newsletter-inner,
+    .breaking-inner,
+    .footer-grid {
+        width: calc(100% - 24px) !important;
+        max-width: 100% !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    /* =====================================================
+       IMPORTANT HERO FIX
+       
+       This is the main problem visible in your screenshot.
+       Desktop two-column hero must become one column.
+    ===================================================== */
+
+    .hero {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .hero-content {
+        width: calc(100% - 24px) !important;
+        max-width: 100% !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        display: grid !important;
+
+        grid-template-columns: minmax(0, 1fr) !important;
+
+        gap: 28px !important;
+    }
+
+
+    .hero-text {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .hero-image-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .hero-image {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .hero-image img {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        object-fit: cover !important;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO TEXT
+    ----------------------------------------------------- */
+
+    .hero h1 {
+        max-width: 100% !important;
+
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+    }
+
+
+    .hero-description {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-wrap: break-word !important;
+    }
+
+
+    .hero-buttons {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        gap: 10px !important;
+    }
+
+
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+
+    .hero-stats {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+        gap: 8px !important;
+    }
+
+
+    .hero-stat {
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO FLOATING CARDS
+    ----------------------------------------------------- */
+
+    .hero-floating-card {
+        max-width: calc(100% - 20px) !important;
+
+        min-width: 0 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       BREAKING NEWS
+    ----------------------------------------------------- */
+
+    .breaking-news {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .breaking-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .breaking-content {
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .breaking-track {
+        max-width: none !important;
+        white-space: nowrap !important;
+    }
+
+
+    /* -----------------------------------------------------
+       TRENDING
+    ----------------------------------------------------- */
+
+    .trending-box {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .trending-list {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .trending-item {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       CARD GRIDS
+    ----------------------------------------------------- */
+
+    .card-grid,
+    .tutorial-grid,
+    .news-layout {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .card-grid {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .tutorial-grid {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .news-layout {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 24px !important;
+    }
+
+
+    .news-left {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .news-sidebar {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       CARDS
+    ----------------------------------------------------- */
+
+    .tool-card,
+    .news-card,
+    .tutorial,
+    .technology-card {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .news-card {
+        display: block !important;
+    }
+
+
+    .news-image {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .news-image img,
+    .tutorial-image img {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        height: auto !important;
+
+        object-fit: cover !important;
+    }
+
+
+    /* -----------------------------------------------------
+       SECTION HEADINGS
+    ----------------------------------------------------- */
+
+    .section-heading {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        flex-wrap: wrap !important;
+
+        gap: 12px !important;
+    }
+
+
+    .section-heading > div {
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+
+    .section-heading h2 {
+        max-width: 100% !important;
+
+        overflow-wrap: break-word !important;
+    }
+
+
+    .section-link {
+        max-width: 100% !important;
+    }
+
+
+    /* -----------------------------------------------------
+       NEWSLETTER
+    ----------------------------------------------------- */
+
+    .newsletter {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .newsletter-inner {
+        width: calc(100% - 24px) !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+    }
+
+
+    .newsletter-content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .newsletter-form {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        gap: 10px !important;
+    }
+
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+    .site-footer {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .footer-grid {
+        width: calc(100% - 24px) !important;
+        max-width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        gap: 30px !important;
+    }
+
+
+    .footer-column {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .footer-bottom {
+        width: calc(100% - 24px) !important;
+        max-width: 100% !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        flex-direction: column !important;
+
+        gap: 12px !important;
+
+        text-align: center !important;
+    }
+
+
+    /* -----------------------------------------------------
+       TOP BUTTON
+    ----------------------------------------------------- */
+
+    .top-btn {
+        right: 14px !important;
+        bottom: 18px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       PREVENT LONG WORDS / URLS
+    ----------------------------------------------------- */
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
+    span,
+    li {
+        overflow-wrap: break-word !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 480px) {
+
+    .top-bar {
+        padding: 9px 12px !important;
+    }
+
+
+    .hero-content,
+    .section-container,
+    .newsletter-inner,
+    .footer-grid,
+    .footer-bottom {
+        width: calc(100% - 20px) !important;
+    }
+
+
+    .logo-image {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        flex-basis: 40px !important;
+    }
+
+
+    .logo-image img {
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        min-height: 40px !important;
+        max-height: 40px !important;
+    }
+
+
+    .logo-title {
+        font-size: 0.92rem !important;
+    }
+
+
+    .logo-tagline {
+        font-size: 0.5rem !important;
+    }
+
+
+    .menu-btn {
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        max-width: 44px !important;
+        flex-basis: 44px !important;
+    }
+
+
+    .hero-stats {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(2rem, 10vw, 3rem) !important;
+
+        line-height: 1.08 !important;
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP
+   Make sure desktop navigation remains normal.
+========================================================= */
+
+@media screen and (min-width: 769px) {
+
+    .menu-btn {
+        display: none !important;
+    }
+
+
+    .main-nav {
+        display: block !important;
+    }
+
+}
