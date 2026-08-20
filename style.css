@@ -2890,3 +2890,254 @@ img {
         max-width: 100%;
     }
 }
+/* =========================================================
+   TECHHUB GHANA
+   FINAL MOBILE LAYOUT FIX
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   MOBILE HERO
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        order: 1;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        order: 2;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-width: 0 !important;
+        object-fit: cover;
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ====================================================== */
+
+    .main-nav {
+        display: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .main-nav.show {
+        display: block;
+    }
+
+    .nav-inner {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-inner a {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* =====================================================
+       HAMBURGER BUTTON
+    ====================================================== */
+
+    .menu-btn {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        width: 46px;
+        height: 46px;
+
+        flex-shrink: 0;
+
+        cursor: pointer;
+    }
+
+    .menu-btn span {
+        display: block !important;
+
+        width: 22px;
+        height: 2px;
+
+        border-radius: 2px;
+
+        transition:
+            transform 0.25s ease,
+            opacity 0.25s ease;
+    }
+
+
+    /* Hamburger → X */
+
+    .menu-btn.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+
+    /* =====================================================
+       TOP BAR
+    ====================================================== */
+
+    .top-bar {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        min-width: 0;
+        max-width: calc(100% - 60px);
+    }
+
+
+    /* =====================================================
+       BREAKING BAR
+    ====================================================== */
+
+    .breaking-news,
+    .breaking-inner,
+    .breaking-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       SECTIONS
+    ====================================================== */
+
+    .section-container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .card-grid,
+    .tutorial-grid,
+    .news-layout {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       NEWS
+    ====================================================== */
+
+    .news-left,
+    .news-sidebar {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+
+    /* =====================================================
+       NEWSLETTER
+    ====================================================== */
+
+    .newsletter,
+    .newsletter-inner,
+    .newsletter-content,
+    .newsletter-form {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-content {
+        gap: 24px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.1;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .hero-image img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .menu-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+       }
