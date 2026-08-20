@@ -3,21 +3,131 @@
 
 <head>
 
+    <!-- =========================================================
+         BASIC DOCUMENT SETUP
+    ========================================================== -->
+
     <meta charset="UTF-8">
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b5cff"
     >
 
     <meta
         name="description"
+        content="Learn about TechHub Ghana, our mission, technology resources, digital tools and educational goals."
+    >
+
+    <meta
+        name="keywords"
+        content="TechHub Ghana, about TechHub Ghana, Ghana technology, technology learning, digital tools, programming, Ghana tech"
+    >
+
+    <meta
+        name="author"
+        content="TechHub Ghana"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="canonical"
+        href="https://juliusas009-wq.github.io/TechHub-Ghana/about.html"
+    >
+
+    <title>
+        About Us | TechHub Ghana
+    </title>
+
+
+    <!-- =========================================================
+         OPEN GRAPH
+    ========================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="About TechHub Ghana"
+    >
+
+    <meta
+        property="og:description"
         content="Learn about TechHub Ghana, our mission, digital tools, technology resources and educational goals."
     >
 
-    <title>About Us | TechHub Ghana</title>
+    <meta
+        property="og:url"
+        content="https://juliusas009-wq.github.io/TechHub-Ghana/about.html"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        property="og:site_name"
+        content="TechHub Ghana"
+    >
+
+    <meta
+        property="og:image"
+        content="https://juliusas009-wq.github.io/TechHub-Ghana/images/logo.png"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="TechHub Ghana logo"
+    >
+
+
+    <!-- =========================================================
+         TWITTER / X
+    ========================================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="About TechHub Ghana"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Learn about TechHub Ghana, our mission, digital tools and technology resources."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://juliusas009-wq.github.io/TechHub-Ghana/images/logo.png"
+    >
+
+
+    <!-- =========================================================
+         FAVICON
+    ========================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/logo.png"
+    >
+
+
+    <!-- =========================================================
+         GOOGLE FONT
+    ========================================================== -->
 
     <link
         rel="preconnect"
@@ -26,7 +136,7 @@
 
     <link
         rel="preconnect"
-        href="https://fonts.googleapis.com"
+        href="https://fonts.gstatic.com"
         crossorigin
     >
 
@@ -35,316 +145,1072 @@
         rel="stylesheet"
     >
 
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     >
 
+
+    <!-- =========================================================
+         GLOBAL STYLESHEET
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =========================================================
+         ABOUT PAGE RESPONSIVE OVERRIDES
+    ========================================================== -->
+
+    <style>
+
+        /* =====================================================
+           BASIC PAGE SAFETY
+        ====================================================== */
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =====================================================
+           COMMON LOGO
+        ====================================================== */
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            text-decoration: none;
+        }
+
+
+        .logo-image {
+            width: 56px;
+            height: 56px;
+
+            min-width: 56px;
+            max-width: 56px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+
+        .logo-image img {
+            display: block;
+
+            width: 56px !important;
+            height: 56px !important;
+
+            max-width: 56px !important;
+            max-height: 56px !important;
+
+            object-fit: contain;
+        }
+
+
+        .logo-content {
+            min-width: 0;
+        }
+
+
+        .logo-title,
+        .logo-tagline {
+            display: block;
+        }
+
+
+        .logo-title {
+            white-space: nowrap;
+        }
+
+
+        .logo-tagline {
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           ABOUT PAGE
+        ====================================================== */
+
+        .about-page {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+
+        .about-page .section {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        .about-page .article-page {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           FOOTER SAFETY
+        ====================================================== */
+
+        footer {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+
+        .footer-grid {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+
+            /* -----------------------------------------------
+               HEADER
+            ------------------------------------------------ */
+
+            .top-bar {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+
+            .logo {
+                gap: 9px;
+                max-width: calc(100% - 58px);
+            }
+
+
+            .logo-image {
+                width: 44px;
+                height: 44px;
+
+                min-width: 44px;
+                max-width: 44px;
+            }
+
+
+            .logo-image img {
+                width: 44px !important;
+                height: 44px !important;
+
+                max-width: 44px !important;
+                max-height: 44px !important;
+            }
+
+
+            .logo-title {
+                font-size: 1rem;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+
+            .logo-tagline {
+                font-size: 0.58rem;
+
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+
+            /* -----------------------------------------------
+               NAVIGATION
+            ------------------------------------------------ */
+
+            #navMenu {
+                width: 100%;
+                max-width: 100%;
+            }
+
+
+            #navMenu a {
+                max-width: 100%;
+            }
+
+
+            /* -----------------------------------------------
+               ABOUT CONTENT
+            ------------------------------------------------ */
+
+            .about-page {
+                width: 100%;
+                max-width: 100%;
+
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+
+            .about-page .article-page {
+                width: 100%;
+                max-width: 100%;
+
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+
+            .about-page h1 {
+                font-size: clamp(
+                    1.8rem,
+                    7vw,
+                    2.5rem
+                );
+
+                line-height: 1.2;
+            }
+
+
+            .about-page h2 {
+                font-size: 1.35rem;
+                line-height: 1.3;
+            }
+
+
+            .about-page p {
+                line-height: 1.75;
+            }
+
+
+            .about-page ul {
+                padding-left: 20px;
+            }
+
+
+            /* -----------------------------------------------
+               FOOTER
+            ------------------------------------------------ */
+
+            .footer-grid {
+                width: 100%;
+                max-width: 100%;
+
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONES
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            .top-bar {
+                padding: 10px 12px;
+            }
+
+
+            .logo-image {
+                width: 40px;
+                height: 40px;
+
+                min-width: 40px;
+                max-width: 40px;
+            }
+
+
+            .logo-image img {
+                width: 40px !important;
+                height: 40px !important;
+
+                max-width: 40px !important;
+                max-height: 40px !important;
+            }
+
+
+            .logo-title {
+                font-size: 0.92rem;
+            }
+
+
+            .logo-tagline {
+                font-size: 0.52rem;
+            }
+
+
+            .about-page {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+
+            .footer-grid {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
-<body>
+<body id="top">
 
 
-<header class="main-header">
+    <!-- =========================================================
+         SKIP LINK
+    ========================================================== -->
 
-    <div class="top-bar">
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to main content
+    </a>
 
-        <a href="index.html" class="logo">
 
-            <img
-                src="images/logo.png"
-                alt="TechHub Ghana Logo"
+    <!-- =========================================================
+         SITE HEADER
+    ========================================================== -->
+
+    <header
+        class="site-header"
+        id="siteHeader"
+    >
+
+        <!-- =====================================================
+             TOP BAR
+        ====================================================== -->
+
+        <div class="top-bar">
+
+
+            <!-- BRAND / LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="TechHub Ghana home"
             >
 
-            <div class="logo-text">
+                <div class="logo-image">
 
-                <h1>TechHub Ghana</h1>
+                    <img
+                        src="images/logo.png"
+                        alt="TechHub Ghana logo"
+                        width="56"
+                        height="56"
+                        decoding="async"
+                    >
 
-                <p>
-                    Technology • Tutorials • Digital Tools
-                </p>
-
-            </div>
-
-        </a>
+                </div>
 
 
-        <div class="search-box">
+                <div class="logo-content">
 
-            <input
-                type="search"
-                id="siteSearch"
-                placeholder="Search TechHub Ghana..."
-                aria-label="Search TechHub Ghana"
+                    <span class="logo-title">
+                        TechHub Ghana
+                    </span>
+
+                    <span class="logo-tagline">
+                        Technology • Learning • Innovation
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- SEARCH -->
+
+            <form
+                class="search-box"
+                id="searchForm"
+                role="search"
             >
+
+                <label
+                    for="siteSearch"
+                    class="sr-only"
+                >
+                    Search TechHub Ghana
+                </label>
+
+
+                <input
+                    type="search"
+                    id="siteSearch"
+                    name="q"
+                    placeholder="Search technology, tutorials..."
+                    autocomplete="off"
+                    aria-label="Search TechHub Ghana"
+                >
+
+
+                <button
+                    type="submit"
+                    id="siteSearchBtn"
+                    aria-label="Search"
+                >
+
+                    <i
+                        class="fa-solid fa-magnifying-glass"
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
+
+            </form>
+
+
+            <!-- MOBILE MENU -->
 
             <button
                 type="button"
-                id="siteSearchBtn"
-                aria-label="Search"
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open navigation menu"
+                aria-controls="navMenu"
+                aria-expanded="false"
             >
-                <i class="fas fa-search"></i>
+
+                <span></span>
+                <span></span>
+                <span></span>
+
             </button>
 
         </div>
 
 
-        <button
-            type="button"
-            id="darkModeBtn"
-            class="dark-mode-btn"
-            aria-label="Toggle dark mode"
+        <!-- =====================================================
+             NAVIGATION
+        ====================================================== -->
+
+        <nav
+            class="main-nav"
+            id="navMenu"
+            aria-label="Main navigation"
         >
-            🌙
-        </button>
 
-    </div>
+            <div class="nav-inner">
 
+
+                <a href="index.html">
+
+                    <i
+                        class="fa-solid fa-house"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Home
+                    </span>
+
+                </a>
+
+
+                <a href="ghana-tech.html">
+
+                    <span
+                        class="nav-flag"
+                        aria-hidden="true"
+                    >
+                        🇬🇭
+                    </span>
+
+                    <span>
+                        Ghana Tech
+                    </span>
+
+                </a>
+
+
+                <a href="news.html">
+
+                    <i
+                        class="fa-regular fa-newspaper"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        News
+                    </span>
+
+                </a>
+
+
+                <a href="tutorials.html">
+
+                    <i
+                        class="fa-solid fa-graduation-cap"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Tutorials
+                    </span>
+
+                </a>
+
+
+                <a href="tools.html">
+
+                    <i
+                        class="fa-solid fa-toolbox"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Tools
+                    </span>
+
+                </a>
+
+
+                <a href="gpa.html">
+
+                    <i
+                        class="fa-solid fa-calculator"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        GPA
+                    </span>
+
+                </a>
+
+
+                <a href="qr-generator.html">
+
+                    <i
+                        class="fa-solid fa-qrcode"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        QR Generator
+                    </span>
+
+                </a>
+
+
+                <a href="ai-assistant.html">
+
+                    <i
+                        class="fa-solid fa-robot"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        AI Assistant
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="about.html"
+                    class="active"
+                    aria-current="page"
+                >
+
+                    <i
+                        class="fa-solid fa-circle-info"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        About
+                    </span>
+
+                </a>
+
+
+                <a href="contact.html">
+
+                    <i
+                        class="fa-solid fa-envelope"
+                        aria-hidden="true"
+                    ></i>
+
+                    <span>
+                        Contact
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main
+        id="main-content"
+        class="about-page"
+    >
+
+        <section class="section">
+
+            <article class="article-page">
+
+
+                <!-- PAGE BADGE -->
+
+                <span class="tool-badge">
+                    💻 ABOUT TECHHUB GHANA
+                </span>
+
+
+                <!-- PAGE TITLE -->
+
+                <h1>
+                    About TechHub Ghana
+                </h1>
+
+
+                <!-- INTRODUCTION -->
+
+                <p>
+
+                    <strong>TechHub Ghana</strong> is a free online
+                    technology platform created to help students,
+                    beginners and technology enthusiasts learn,
+                    explore and use useful digital tools.
+
+                </p>
+
+
+                <p>
+
+                    Our mission is to make technology learning
+                    simple, practical and accessible. Whether you
+                    want to calculate your GPA, generate QR codes,
+                    improve your writing, learn programming or
+                    explore technology news, TechHub Ghana brings
+                    useful resources together in one place.
+
+                </p>
+
+
+                <!-- MISSION -->
+
+                <h2>
+                    Our Mission
+                </h2>
+
+
+                <p>
+
+                    To empower students and everyday users with
+                    free educational resources, practical technology
+                    knowledge and useful digital tools that improve
+                    learning, productivity and digital skills.
+
+                </p>
+
+
+                <!-- WHAT WE OFFER -->
+
+                <h2>
+                    What We Offer
+                </h2>
+
+
+                <ul>
+
+                    <li>
+                        🎓 GPA Calculator
+                    </li>
+
+                    <li>
+                        🔳 QR Code Generator
+                    </li>
+
+                    <li>
+                        🤖 AI Assistant
+                    </li>
+
+                    <li>
+                        📚 Technology Tutorials
+                    </li>
+
+                    <li>
+                        📰 Technology News
+                    </li>
+
+                    <li>
+                        💻 Programming Resources
+                    </li>
+
+                    <li>
+                        🇬🇭 Ghana Technology Updates
+                    </li>
+
+                </ul>
+
+
+                <!-- WHY CHOOSE US -->
+
+                <h2>
+                    Why Choose TechHub Ghana?
+                </h2>
+
+
+                <ul>
+
+                    <li>
+                        ✅ Free to use
+                    </li>
+
+                    <li>
+                        ✅ Easy to navigate
+                    </li>
+
+                    <li>
+                        ✅ Mobile-friendly
+                    </li>
+
+                    <li>
+                        ✅ Useful digital tools
+                    </li>
+
+                    <li>
+                        ✅ Student-focused resources
+                    </li>
+
+                    <li>
+                        ✅ Regular technology content
+                    </li>
+
+                </ul>
+
+
+                <!-- VISION -->
+
+                <h2>
+                    Our Vision
+                </h2>
+
+
+                <p>
+
+                    We want TechHub Ghana to become a trusted
+                    technology and learning platform for students,
+                    young developers and digital enthusiasts across
+                    Ghana and beyond.
+
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-grid">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-column footer-about">
+
+                <a
+                    href="index.html"
+                    class="footer-brand"
+                >
+
+                    <img
+                        src="images/logo.png"
+                        alt="TechHub Ghana logo"
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <span>
+                        TechHub Ghana
+                    </span>
+
+                </a>
+
+
+                <p class="footer-tagline">
+                    Technology • Learning • Innovation
+                </p>
+
+
+                <p>
+                    Your platform for technology news,
+                    practical tutorials and useful digital tools.
+                </p>
+
+            </div>
+
+
+            <!-- EXPLORE -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ghana-tech.html">
+                            Ghana Tech
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="news.html">
+                            Technology News
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tutorials.html">
+                            Tutorials
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tools.html">
+                            Digital Tools
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- TOOLS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Popular Tools
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <a href="gpa.html">
+                            GPA Calculator
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="qr-generator.html">
+                            QR Generator
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ai-assistant.html">
+                            AI Assistant
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="password-generator.html">
+                            Password Generator
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- TECHHUB -->
+
+            <div class="footer-column">
+
+                <h3>
+                    TechHub Ghana
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ghana-tech.html">
+                            Ghana Technology
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tutorials.html#python">
+                            Learn Python
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             FOOTER BOTTOM
+        ====================================================== -->
+
+        <div class="footer-bottom">
+
+            <p>
+
+                ©
+                <span id="footerYear">
+                    2026
+                </span>
+
+                TechHub Ghana.
+                All Rights Reserved.
+
+            </p>
+
+
+            <a
+                href="#top"
+                class="back-to-top-link"
+            >
+
+                Back to top
+
+                <i
+                    class="fa-solid fa-arrow-up"
+                    aria-hidden="true"
+                ></i>
+
+            </a>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         FLOATING BACK TO TOP
+    ========================================================== -->
 
     <button
         type="button"
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
+        id="topBtn"
+        class="top-btn"
+        aria-label="Back to top"
+        title="Back to top"
     >
-        ☰
+
+        <i
+            class="fa-solid fa-arrow-up"
+            aria-hidden="true"
+        ></i>
+
     </button>
 
 
-    <nav id="navMenu">
-
-        <a href="index.html">Home</a>
-
-        <a href="ghana-tech.html">
-            🇬🇭 Ghana Tech
-        </a>
-
-        <a href="news.html">News</a>
-
-        <a href="tutorials.html">Tutorials</a>
-
-        <a href="tools.html">Tools</a>
-
-        <a href="gpa.html">GPA</a>
-
-        <a href="qr-generator.html">
-            QR Generator
-        </a>
-
-        <a href="ai-assistant.html">
-            AI Assistant
-        </a>
-
-        <a
-            href="about.html"
-            class="active"
-        >
-            About
-        </a>
-
-        <a href="contact.html">Contact</a>
-
-    </nav>
-
-</header>
-
-
-<main>
-
-<section class="section">
-
-    <div class="article-page">
-
-        <span class="tool-badge">
-            💻 ABOUT TECHHUB GHANA
-        </span>
-
-        <h1>
-            About TechHub Ghana
-        </h1>
-
-
-        <p>
-            <strong>TechHub Ghana</strong> is a free online
-            technology platform created to help students,
-            beginners and technology enthusiasts learn,
-            explore and use useful digital tools.
-        </p>
-
-
-        <p>
-            Our mission is to make technology learning
-            simple, practical and accessible. Whether you
-            want to calculate your GPA, generate QR codes,
-            improve your writing, learn programming or
-            explore technology news, TechHub Ghana brings
-            useful resources together in one place.
-        </p>
-
-
-        <h2>Our Mission</h2>
-
-        <p>
-            To empower students and everyday users with
-            free educational resources, practical technology
-            knowledge and useful digital tools that improve
-            learning, productivity and digital skills.
-        </p>
-
-
-        <h2>What We Offer</h2>
-
-        <ul>
-
-            <li>🎓 GPA Calculator</li>
-
-            <li>🔳 QR Code Generator</li>
-
-            <li>🤖 AI Assistant</li>
-
-            <li>📚 Technology Tutorials</li>
-
-            <li>📰 Technology News</li>
-
-            <li>💻 Programming Resources</li>
-
-            <li>🇬🇭 Ghana Technology Updates</li>
-
-        </ul>
-
-
-        <h2>Why Choose TechHub Ghana?</h2>
-
-        <ul>
-
-            <li>✅ Free to use</li>
-
-            <li>✅ Easy to navigate</li>
-
-            <li>✅ Mobile-friendly</li>
-
-            <li>✅ Useful digital tools</li>
-
-            <li>✅ Student-focused resources</li>
-
-            <li>✅ Regular technology content</li>
-
-        </ul>
-
-
-        <h2>Our Vision</h2>
-
-        <p>
-            We want TechHub Ghana to become a trusted
-            technology and learning platform for students,
-            young developers and digital enthusiasts across
-            Ghana and beyond.
-        </p>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<footer>
-
-    <div class="footer-grid">
-
-        <div>
-
-            <h3>TechHub Ghana</h3>
-
-            <p>
-                Technology • Learning • Innovation
-            </p>
-
-            <p>
-                Free technology resources, tutorials,
-                news and digital tools.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h3>Quick Links</h3>
-
-            <p>
-                <a href="index.html">Home</a>
-            </p>
-
-            <p>
-                <a href="news.html">News</a>
-            </p>
-
-            <p>
-                <a href="tutorials.html">Tutorials</a>
-            </p>
-
-            <p>
-                <a href="tools.html">Tools</a>
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h3>Tools</h3>
-
-            <p>
-                <a href="gpa.html">
-                    GPA Calculator
-                </a>
-            </p>
-
-            <p>
-                <a href="qr-generator.html">
-                    QR Generator
-                </a>
-            </p>
-
-            <p>
-                <a href="ai-assistant.html">
-                    AI Assistant
-                </a>
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h3>Contact</h3>
-
-            <p>
-                <a href="contact.html">
-                    Contact TechHub Ghana
-                </a>
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <hr>
-
-
-    <p class="copyright">
-        © 2026 TechHub Ghana. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<script src="script.js"></script>
+    <!-- =========================================================
+         GLOBAL JAVASCRIPT
+    ========================================================== -->
+
+    <script
+        src="script.js"
+        defer
+    ></script>
 
 </body>
 
-</html>
+    </html>
