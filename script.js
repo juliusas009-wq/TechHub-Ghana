@@ -13,78 +13,101 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menuBtn");
     const navMenu = document.getElementById("navMenu");
 
+    function closeMobileMenu() {
+
+        if (!menuBtn || !navMenu) return;
+
+        navMenu.classList.remove("show");
+        menuBtn.classList.remove("active");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuBtn.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+
+        document.body.classList.remove("menu-open");
+    }
+
+
+    function openMobileMenu() {
+
+        if (!menuBtn || !navMenu) return;
+
+        navMenu.classList.add("show");
+        menuBtn.classList.add("active");
+
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        menuBtn.setAttribute(
+            "aria-label",
+            "Close navigation menu"
+        );
+
+        document.body.classList.add("menu-open");
+    }
+
+
     if (menuBtn && navMenu) {
 
         menuBtn.addEventListener("click", function (event) {
 
+            event.preventDefault();
             event.stopPropagation();
 
-            const isOpen = navMenu.classList.toggle("show");
+            const isOpen =
+                navMenu.classList.contains("show");
 
-            menuBtn.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
-            );
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
 
-            menuBtn.setAttribute(
-                "aria-label",
-                isOpen
-                    ? "Close navigation menu"
-                    : "Open navigation menu"
-            );
-
-            menuBtn.textContent = isOpen ? "✕" : "☰";
         });
 
 
-        /* Close menu when clicking a link */
+        /* Close after selecting a navigation link */
 
-        const navLinks = navMenu.querySelectorAll("a");
-
-        navLinks.forEach(function (link) {
+        navMenu.querySelectorAll("a").forEach(function (link) {
 
             link.addEventListener("click", function () {
-
-                navMenu.classList.remove("show");
-
-                menuBtn.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuBtn.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-                menuBtn.textContent = "☰";
+                closeMobileMenu();
             });
 
         });
 
 
-        /* Close menu when clicking outside */
+        /* Close when clicking outside */
 
         document.addEventListener("click", function (event) {
 
             if (
+                navMenu.classList.contains("show") &&
                 !navMenu.contains(event.target) &&
                 !menuBtn.contains(event.target)
             ) {
 
-                navMenu.classList.remove("show");
+                closeMobileMenu();
 
-                menuBtn.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+            }
 
-                menuBtn.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
+        });
 
-                menuBtn.textContent = "☰";
+
+        /* Close with Escape */
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+                closeMobileMenu();
             }
 
         });
@@ -98,30 +121,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (navMenu) {
 
-        let currentPage = window.location.pathname
-            .split("/")
-            .pop()
-            .toLowerCase();
+        let currentPage =
+            window.location.pathname
+                .split("/")
+                .pop()
+                .toLowerCase();
 
         if (!currentPage) {
             currentPage = "index.html";
         }
 
-        const links = navMenu.querySelectorAll("a");
 
-        links.forEach(function (link) {
+        navMenu.querySelectorAll("a").forEach(function (link) {
 
-            const href = link.getAttribute("href");
+            const href =
+                link.getAttribute("href");
 
             if (!href) return;
 
-            const linkPage = href
-                .split("/")
-                .pop()
-                .split("#")[0]
-                .toLowerCase();
+
+            const linkPage =
+                href
+                    .split("/")
+                    .pop()
+                    .split("#")[0]
+                    .toLowerCase();
+
 
             link.classList.remove("active");
+
 
             if (linkPage === currentPage) {
                 link.classList.add("active");
@@ -148,11 +176,14 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.add("dark");
 
         if (darkBtn) {
+
             darkBtn.textContent = "☀️";
+
             darkBtn.setAttribute(
                 "aria-label",
                 "Switch to light mode"
             );
+
         }
 
     }
@@ -165,13 +196,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const isDark =
                 document.body.classList.toggle("dark");
 
+
             localStorage.setItem(
                 "theme",
                 isDark ? "dark" : "light"
             );
 
+
             darkBtn.textContent =
                 isDark ? "☀️" : "🌙";
+
 
             darkBtn.setAttribute(
                 "aria-label",
@@ -192,10 +226,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput =
         document.getElementById("siteSearch");
 
-    /*
-       Support both IDs because older pages may use
-       searchBtn while newer pages use siteSearchBtn.
-    */
 
     const searchBtn =
         document.getElementById("siteSearchBtn") ||
@@ -206,8 +236,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!searchInput) return;
 
+
         const keyword =
             searchInput.value.trim().toLowerCase();
+
 
         if (!keyword) {
 
@@ -216,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
             searchInput.focus();
 
             return;
+
         }
 
 
@@ -225,11 +258,6 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
 
-        /*
-           If there are no searchable cards on the page,
-           send the user to the News page.
-        */
-
         if (searchableElements.length === 0) {
 
             window.location.href =
@@ -237,6 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 encodeURIComponent(keyword);
 
             return;
+
         }
 
 
@@ -247,6 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const text =
                 element.innerText.toLowerCase();
+
 
             if (text.includes(keyword)) {
 
@@ -271,8 +301,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 '".'
             );
 
+
             searchableElements.forEach(function (element) {
+
                 element.style.display = "";
+
             });
 
         }
@@ -322,16 +355,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const date = new Date();
 
-        today.textContent =
-            date.toLocaleDateString(
-                "en-GH",
-                {
-                    weekday: "long",
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric"
-                }
-            );
+
+        today.innerHTML = `
+
+            <i
+                class="fa-regular fa-calendar"
+                aria-hidden="true"
+            ></i>
+
+            <span>
+                ${date.toLocaleDateString(
+                    "en-GH",
+                    {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                    }
+                )}
+            </span>
+
+        `;
 
     }
 
@@ -353,7 +397,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         topButton.type = "button";
 
-        topButton.innerHTML = "↑";
+        topButton.innerHTML =
+            '<i class="fa-solid fa-arrow-up"></i>';
 
         topButton.setAttribute(
             "aria-label",
@@ -365,25 +410,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /*
-       Initial state
-    */
+    function updateTopButton() {
 
-    topButton.style.display =
-        window.scrollY > 300
-            ? "flex"
-            : "none";
+        if (window.scrollY > 300) {
+
+            topButton.classList.add("show");
+
+        } else {
+
+            topButton.classList.remove("show");
+
+        }
+
+    }
 
 
     window.addEventListener(
         "scroll",
-        function () {
-
-            topButton.style.display =
-                window.scrollY > 300
-                    ? "flex"
-                    : "none";
-
+        updateTopButton,
+        {
+            passive: true
         }
     );
 
@@ -393,12 +439,18 @@ document.addEventListener("DOMContentLoaded", function () {
         function () {
 
             window.scrollTo({
+
                 top: 0,
+
                 behavior: "smooth"
+
             });
 
         }
     );
+
+
+    updateTopButton();
 
 
     /* =====================================================
@@ -425,16 +477,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentImage = 0;
 
 
-        /*
-           Only start the slider if the first image
-           actually has a valid-looking source.
-        */
-
-        if (!heroImage.getAttribute("src")) {
-            heroImage.src = heroImages[0];
-        }
-
-
         setInterval(function () {
 
             currentImage =
@@ -457,35 +499,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 5000);
 
     }
-
-
-    /* =====================================================
-       ESCAPE KEY
-       Close mobile menu
-    ===================================================== */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (
-                event.key === "Escape" &&
-                navMenu &&
-                menuBtn
-            ) {
-
-                navMenu.classList.remove("show");
-
-                menuBtn.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuBtn.textContent = "☰";
-
-            }
-
-        }
-    );
 
 });
