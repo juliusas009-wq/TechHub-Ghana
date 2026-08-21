@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-21T16:32:33.288858+00:00",
+  "updated": "2026-08-21T17:27:14.747366+00:00",
   "articles": [
+    {
+      "title": "Why is the DOJ investigating Andreessen Horowitz’s board seats?",
+      "summary": "Andreessen Horowitz has two partners sitting on the boards of companies that now&#160;compete with each other: Ben Horowitz at Databricks and Martin Casado at&#160;Fivetran. Nothing too scandalous on the surface, except&#160;the Department of&#160;Justice&#160;has&#160;reportedly&#160;been investigating the arrangement&#160;for&#160;almost&#160;a&#160;year, dusting&#160;off a 112-year-old antitrust&#160;law&#160;that&#8217;s&#160;rarely used against VCs.&#160; Board conflicts&#160;aren&#8217;t&#160;exactly new, and these companies&#160;weren&#8217;t&#160;necessarily direct competitors when a16z first invested [&#8230;]",
+      "link": "https://techcrunch.com/video/why-is-the-doj-investigating-andreessen-horowitzs-board-seats/",
+      "date": "Fri, 21 Aug 2026 16:53:39 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "US government lab is probing Chinese lidar for security vulnerabilities",
       "summary": "The security review is being performed by the Idaho National Laboratory, and the research is being funded by a company -- or a group of companies -- in the electric and autonomous vehicle industries.",
@@ -150,14 +158,6 @@
       "summary": "Founded in 2022, Castelion set out to manufacture hypersonic weapon systems at a lower cost and at faster speeds than traditional defense primes.",
       "link": "https://techcrunch.com/2026/08/20/castelion-hits-13b-valuation-to-mass-produce-hypersonic-missiles/",
       "date": "Thu, 20 Aug 2026 19:01:41 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Linkdaze’s smart calendar is built to run a household, not just track a schedule",
-      "summary": "Linkdaze's smart digital calendar stands out for not putting its features behind a paywall, including an AI meal planner tool.",
-      "link": "https://techcrunch.com/2026/08/20/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/",
-      "date": "Thu, 20 Aug 2026 18:20:35 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
