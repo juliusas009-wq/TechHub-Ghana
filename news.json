@@ -1,6 +1,30 @@
 {
-  "updated": "2026-08-21T13:43:39.437955+00:00",
+  "updated": "2026-08-21T14:33:24.643220+00:00",
   "articles": [
+    {
+      "title": "Walmart to finally start accepting Apple Pay and Google Pay",
+      "summary": "Are pigs flying? Walmart has finally caved on its refusal to support Apple Pay and Google Pay.",
+      "link": "https://techcrunch.com/2026/08/21/walmart-to-finally-start-accepting-apple-pay-and-google-pay/",
+      "date": "Fri, 21 Aug 2026 14:30:23 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Starcloud raises $250 million for orbital data centers as launch options dry up",
+      "summary": "There's about to be a big fight to secure access to space.",
+      "link": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
+      "date": "Fri, 21 Aug 2026 14:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
+    {
+      "title": "Tesla recalls 3 million cars as part of China-wide push to stop hidden door handles",
+      "summary": "Tesla and eight other automakers will install warning labels that help occupants identify the often hard-to-find manual door releases.",
+      "link": "https://techcrunch.com/2026/08/21/tesla-recalls-3-million-cars-as-part-of-china-wide-push-to-stop-hidden-door-handles/",
+      "date": "Fri, 21 Aug 2026 13:48:26 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Private equity firm Apollo confirms data breach amid hacking wave targeting financial giants",
       "summary": "The private equity giant confirms a breach, weeks after Google researchers said hackers were targeting financial companies.",
@@ -134,30 +158,6 @@
       "summary": "Year after year, investors who've explored the Expo Halls, met founders, and learned from peers have proven why you need to be on the ground at Disrupt this year.",
       "link": "https://techcrunch.com/2026/08/20/the-investors-guide-to-techcrunch-disrupt-2026-everything-you-need-to-know/",
       "date": "Thu, 20 Aug 2026 17:27:47 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "A third of web pages published since ChatGPT’s launch show signs of AI authorship, study finds",
-      "summary": "ChatGPT and other AI models are now authoring and editing much of the new web.",
-      "link": "https://techcrunch.com/2026/08/20/a-third-of-webpages-published-since-chatgpts-launch-show-signs-of-ai-authorship-study-finds/",
-      "date": "Thu, 20 Aug 2026 17:18:58 +0000",
-      "source": "TechCrunch",
-      "category": "Artificial Intelligence"
-    },
-    {
-      "title": "Early Cerebras investor Adit Singh joins Mayfield as infrastructure partner",
-      "summary": "At Mayfield, Singh will focus on semiconductor, cybersecurity, and physical AI investments.",
-      "link": "https://techcrunch.com/2026/08/20/early-cerebras-investor-adit-singh-joins-mayfield-as-infrastructure-partner/",
-      "date": "Thu, 20 Aug 2026 17:04:53 +0000",
-      "source": "TechCrunch",
-      "category": "Cybersecurity"
-    },
-    {
-      "title": "Ramp launches its own AI model router, called Router",
-      "summary": "Ramp has launched its own AI model routing service, dubbed Router, that lets users and companies use and switch between various large language models via an API.",
-      "link": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/",
-      "date": "Thu, 20 Aug 2026 16:46:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
