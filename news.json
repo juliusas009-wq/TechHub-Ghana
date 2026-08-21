@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-21T19:48:03.113330+00:00",
+  "updated": "2026-08-21T20:24:06.813023+00:00",
   "articles": [
+    {
+      "title": "The $225 Pebble Time 2 is a refreshingly fun smartwatch",
+      "summary": "The $225 Pebble Time 2 pairs quirky watch faces and apps with physical buttons, an e-paper display, weeks of battery life, and a playful hacker spirit.",
+      "link": "https://techcrunch.com/2026/08/21/the-225-pebble-time-2-is-a-refreshingly-fun-smartwatch/",
+      "date": "Fri, 21 Aug 2026 19:57:46 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Nvidia just showed that the harness, not the AI model, is now the real hero",
       "summary": "Nvidia research shows that AI agents can perform well, and not go off the deep end, through fine-tuning, even if the AI model isn't that great at the task.",
@@ -152,14 +160,6 @@
       "date": "Thu, 20 Aug 2026 20:53:13 +0000",
       "source": "TechCrunch",
       "category": "Technology"
-    },
-    {
-      "title": "Someone targeted security researchers using a fake crypto conference as a lure",
-      "summary": "A hacker pretending to work for a leading cryptocurrency news website targeted several cybersecurity professionals using Google Docs as a way to deliver malware.",
-      "link": "https://techcrunch.com/2026/08/20/someone-targeted-security-researchers-using-a-fake-crypto-conference-as-a-lure/",
-      "date": "Thu, 20 Aug 2026 20:00:00 +0000",
-      "source": "TechCrunch",
-      "category": "Cybersecurity"
     },
     {
       "title": "The Download: threats from space mirrors and credit for AI drugs",
