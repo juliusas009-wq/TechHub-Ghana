@@ -2,7 +2,7 @@
    TECHHUB GHANA
    MASTER JAVASCRIPT
    Version: 2026
-   Clean Mobile + Desktop Version
+   Global Site Functions
 ========================================================= */
 
 "use strict";
@@ -10,29 +10,35 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
-       ELEMENTS
+       GLOBAL ELEMENTS
     ===================================================== */
 
     const menuBtn = document.getElementById("menuBtn");
     const navMenu = document.getElementById("navMenu");
+
     const searchForm = document.getElementById("searchForm");
     const searchInput = document.getElementById("siteSearch");
+    const searchBtn = document.getElementById("searchBtn");
+
     const darkBtn = document.getElementById("darkModeBtn");
+
     const today = document.getElementById("today");
+
     const topBtn = document.getElementById("topBtn");
+
     const footerYear = document.getElementById("footerYear");
-    const newsletterForm = document.getElementById("newsletterForm");
 
 
     /* =====================================================
        MOBILE NAVIGATION
-       ===================================================== */
+    ===================================================== */
 
     function openMobileMenu() {
 
         if (!navMenu || !menuBtn) return;
 
         navMenu.classList.add("show");
+
         menuBtn.classList.add("active");
 
         menuBtn.setAttribute(
@@ -54,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!navMenu || !menuBtn) return;
 
         navMenu.classList.remove("show");
+
         menuBtn.classList.remove("active");
 
         menuBtn.setAttribute(
@@ -78,12 +85,25 @@ document.addEventListener("DOMContentLoaded", function () {
             navMenu.classList.contains("show");
 
         if (isOpen) {
+
             closeMobileMenu();
+
         } else {
+
             openMobileMenu();
+
         }
+
     }
 
+
+    /* =====================================================
+       MOBILE MENU BUTTON
+       
+       IMPORTANT:
+       Pages should NOT use onclick="toggleMenu()".
+       This file controls the menu.
+    ===================================================== */
 
     if (menuBtn && navMenu) {
 
@@ -92,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
             function (event) {
 
                 event.preventDefault();
+
                 event.stopPropagation();
 
                 toggleMobileMenu();
@@ -100,10 +121,11 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-        /* Close when clicking navigation link */
+        /* Close after clicking navigation link */
 
         const navLinks =
             navMenu.querySelectorAll("a");
+
 
         navLinks.forEach(function (link) {
 
@@ -170,10 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .toLowerCase();
 
 
-        if (
-            !currentPage ||
-            currentPage === ""
-        ) {
+        if (!currentPage) {
 
             currentPage = "index.html";
 
@@ -201,10 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     .toLowerCase();
 
 
-            if (
-                !linkPage ||
-                linkPage === ""
-            ) {
+            if (!linkPage) {
 
                 linkPage = "index.html";
 
@@ -231,6 +247,33 @@ document.addEventListener("DOMContentLoaded", function () {
        SEARCH
     ===================================================== */
 
+    function performSearch() {
+
+        if (!searchInput) return;
+
+
+        const query =
+            searchInput.value.trim();
+
+
+        if (!query) {
+
+            searchInput.focus();
+
+            return;
+
+        }
+
+
+        window.location.href =
+            "news.html?search=" +
+            encodeURIComponent(query);
+
+    }
+
+
+    /* Standard search form */
+
     if (searchForm && searchInput) {
 
         searchForm.addEventListener(
@@ -239,23 +282,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 event.preventDefault();
 
+                performSearch();
 
-                const query =
-                    searchInput.value.trim();
+            }
+        );
+
+    }
 
 
-                if (!query) {
+    /* Search button fallback
 
-                    searchInput.focus();
+       This allows pages such as tools.html
+       to use a search-box div instead of a form.
+    */
 
-                    return;
+    if (
+        searchBtn &&
+        searchInput &&
+        !searchForm
+    ) {
+
+        searchBtn.addEventListener(
+            "click",
+            function () {
+
+                performSearch();
+
+            }
+        );
+
+
+        searchInput.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (event.key === "Enter") {
+
+                    event.preventDefault();
+
+                    performSearch();
 
                 }
-
-
-                window.location.href =
-                    "news.html?search=" +
-                    encodeURIComponent(query);
 
             }
         );
@@ -264,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       DATE
+       TODAY'S DATE
     ===================================================== */
 
     function updateDate() {
@@ -287,11 +354,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             );
 
-
-        /*
-           Keep the calendar icon if the
-           homepage already contains one.
-        */
 
         const dateSpan =
             today.querySelector("span");
@@ -341,17 +403,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
             document.body.classList.add("dark");
 
+        }
+
+
+        function updateDarkModeButton() {
+
+            const isDark =
+                document.body.classList.contains("dark");
+
+
+            darkBtn.textContent =
+                isDark ? "☀️" : "🌙";
+
+
             darkBtn.setAttribute(
                 "aria-label",
-                "Switch to light mode"
+                isDark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
             );
+
 
             darkBtn.setAttribute(
                 "title",
-                "Switch to light mode"
+                isDark
+                    ? "Switch to light mode"
+                    : "Switch to dark mode"
             );
 
         }
+
+
+        updateDarkModeButton();
 
 
         darkBtn.addEventListener(
@@ -372,20 +455,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 );
 
 
-                darkBtn.setAttribute(
-                    "aria-label",
-                    isDark
-                        ? "Switch to light mode"
-                        : "Switch to dark mode"
-                );
-
-
-                darkBtn.setAttribute(
-                    "title",
-                    isDark
-                        ? "Switch to light mode"
-                        : "Switch to dark mode"
-                );
+                updateDarkModeButton();
 
             }
         );
@@ -397,25 +467,22 @@ document.addEventListener("DOMContentLoaded", function () {
        BACK TO TOP
     ===================================================== */
 
-    function updateTopButton() {
+    if (topBtn) {
 
-        if (!topBtn) return;
+        function updateTopButton() {
 
+            if (window.scrollY > 400) {
 
-        if (window.scrollY > 400) {
+                topBtn.classList.add("show");
 
-            topBtn.classList.add("show");
+            } else {
 
-        } else {
+                topBtn.classList.remove("show");
 
-            topBtn.classList.remove("show");
+            }
 
         }
 
-    }
-
-
-    if (topBtn) {
 
         updateTopButton();
 
@@ -446,50 +513,68 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        NEWSLETTER
+       
+       This only handles forms that have:
+       id="newsletterForm"
     ===================================================== */
 
-    if (newsletterForm) {
-
-        newsletterForm.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
+    const newsletterForms =
+        document.querySelectorAll(
+            ".newsletter form"
+        );
 
 
-                const emailInput =
-                    newsletterForm.querySelector(
-                        'input[type="email"]'
+    newsletterForms.forEach(
+        function (form) {
+
+            form.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const emailInput =
+                        form.querySelector(
+                            'input[type="email"]'
+                        );
+
+
+                    if (!emailInput) return;
+
+
+                    const email =
+                        emailInput.value.trim();
+
+
+                    if (!email) {
+
+                        emailInput.focus();
+
+                        return;
+
+                    }
+
+
+                    /*
+                       Temporary subscription message.
+
+                       We will connect this to a real
+                       newsletter service before monetization.
+                    */
+
+                    alert(
+                        "Thank you for subscribing to TechHub Ghana!"
                     );
 
 
-                if (!emailInput) return;
-
-
-                const email =
-                    emailInput.value.trim();
-
-
-                if (!email) {
-
-                    emailInput.focus();
-
-                    return;
+                    form.reset();
 
                 }
+            );
 
-
-                alert(
-                    "Thanks for subscribing to TechHub Ghana. Newsletter delivery will be connected soon."
-                );
-
-
-                newsletterForm.reset();
-
-            }
-        );
-
-    }
+        }
+    );
 
 
     /* =====================================================
@@ -516,12 +601,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ) {
 
         let currentImage = 0;
-
-
-        /*
-           Only run the slider if the image
-           exists.
-        */
 
         let sliderInterval;
 
@@ -555,43 +634,49 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        sliderInterval =
-            setInterval(
-                changeHeroImage,
-                5000
+        function startSlider() {
+
+            if (sliderInterval) return;
+
+
+            sliderInterval =
+                setInterval(
+                    changeHeroImage,
+                    5000
+                );
+
+        }
+
+
+        function stopSlider() {
+
+            if (!sliderInterval) return;
+
+
+            clearInterval(
+                sliderInterval
             );
 
 
-        /*
-           Stop unnecessary work if page
-           is hidden.
-        */
+            sliderInterval = null;
+
+        }
+
+
+        startSlider();
+
 
         document.addEventListener(
             "visibilitychange",
             function () {
 
-                if (
-                    document.hidden &&
-                    sliderInterval
-                ) {
+                if (document.hidden) {
 
-                    clearInterval(
-                        sliderInterval
-                    );
+                    stopSlider();
 
-                    sliderInterval = null;
+                } else {
 
-                } else if (
-                    !document.hidden &&
-                    !sliderInterval
-                ) {
-
-                    sliderInterval =
-                        setInterval(
-                            changeHeroImage,
-                            5000
-                        );
+                    startSlider();
 
                 }
 
@@ -602,11 +687,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       PREVENT ACCIDENTAL HORIZONTAL SCROLL
+       PREVENT HORIZONTAL OVERFLOW
     ===================================================== */
 
     document.documentElement.style.overflowX =
         "hidden";
+
 
     document.body.style.overflowX =
         "hidden";
@@ -614,7 +700,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        MOBILE RESIZE
-       Close navigation when returning to desktop.
     ===================================================== */
 
     window.addEventListener(
@@ -712,6 +797,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     image.classList.add(
                         "image-error"
+                    );
+
+                    console.warn(
+                        "TechHub Ghana image failed to load:",
+                        image.src
                     );
 
                 }
