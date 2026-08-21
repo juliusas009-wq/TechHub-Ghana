@@ -1,6 +1,22 @@
 {
-  "updated": "2026-08-21T12:43:17.022611+00:00",
+  "updated": "2026-08-21T13:43:39.437955+00:00",
   "articles": [
+    {
+      "title": "Private equity firm Apollo confirms data breach amid hacking wave targeting financial giants",
+      "summary": "The private equity giant confirms a breach, weeks after Google researchers said hackers were targeting financial companies.",
+      "link": "https://techcrunch.com/2026/08/21/private-equity-firm-apollo-confirms-data-breach-amid-hacking-wave-targeting-financial-giants/",
+      "date": "Fri, 21 Aug 2026 13:35:23 +0000",
+      "source": "TechCrunch",
+      "category": "Cybersecurity"
+    },
+    {
+      "title": "Senator asks US government watchdog to review how feds use hacking tools",
+      "summary": "Senator Ron Wyden sent a letter to the U.S. federal watchdog requesting a comprehensive review of how the FBI, DEA, ICE's HSI, and the Secret Service use hacking tools and spyware against Americans.",
+      "link": "https://techcrunch.com/2026/08/21/senator-asks-us-federal-watchdog-to-review-how-feds-use-hacking-tools/",
+      "date": "Fri, 21 Aug 2026 13:05:00 +0000",
+      "source": "TechCrunch",
+      "category": "Cybersecurity"
+    },
     {
       "title": "Tesla, Uber, and Waymo all get the OK to operate thousands of robotaxis in Nevada",
       "summary": "Together, these permits would allow up to 8,000 robotaxis to be deployed over the next 12 months.",
@@ -142,22 +158,6 @@
       "summary": "Ramp has launched its own AI model routing service, dubbed Router, that lets users and companies use and switch between various large language models via an API.",
       "link": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/",
       "date": "Thu, 20 Aug 2026 16:46:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Senators demand answers from TikTok over experiment that disabled safeguards",
-      "summary": "The safeguard was designed to prevent users from being overwhelmed by harmful content, but TikTok wanted to determine whether it made the app less engaging.",
-      "link": "https://techcrunch.com/2026/08/20/senators-demand-answers-from-tiktok-over-experiment-that-disabled-safeguards/",
-      "date": "Thu, 20 Aug 2026 16:22:19 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Meta brings Pocket, an app that lets you vibe-code and share games, to US users",
-      "summary": "Meta is bringing Pocket, its experimental AI-powered app for creating and sharing interactive games, to users across the U.S. after quietly testing it in Brazil.",
-      "link": "https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users/",
-      "date": "Thu, 20 Aug 2026 16:07:26 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
