@@ -1,9 +1,17 @@
 {
-  "updated": "2026-08-21T22:22:59.283406+00:00",
+  "updated": "2026-08-21T22:50:44.673393+00:00",
   "articles": [
     {
-      "title": "How AI accounting startup Rillet raised $100M and became a unicorn in 48-hours",
-      "summary": "Rillet CEO Nicholas Koop shared growth numbers at a board meeting and set off a fundraising frenzy from Iconiq, Sequoia and others. Without even trying.",
+      "title": "Nvidia partners with data center developer Cloverleaf",
+      "summary": "Nvidia continues to pour money into data center development — just as AI data centers bring lots of money into Nvidia.",
+      "link": "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/",
+      "date": "Fri, 21 Aug 2026 22:37:38 +0000",
+      "source": "TechCrunch",
+      "category": "Programming"
+    },
+    {
+      "title": "How AI accounting startup Rillet raised $100M and became a unicorn in 48 hours",
+      "summary": "Rillet CEO Nicolas Kopp shared growth numbers at a board meeting and set off a fundraising frenzy from Iconiq, Sequoia and others. Without even trying.",
       "link": "https://techcrunch.com/2026/08/21/how-ai-accounting-startup-rillet-raised-100m-and-became-a-unicorn-in-48-hours/",
       "date": "Fri, 21 Aug 2026 22:10:01 +0000",
       "source": "TechCrunch",
@@ -152,14 +160,6 @@
       "date": "Thu, 20 Aug 2026 23:32:27 +0000",
       "source": "TechCrunch",
       "category": "Technology"
-    },
-    {
-      "title": "OpenAI is gaining on Anthropic with business users, new data indicates",
-      "summary": "Businesses are willing to flop back and forth as each lab releases new models, volatility that should give both companies' investors pause about how \"sticky\" enterprise AI spending really is.",
-      "link": "https://techcrunch.com/2026/08/20/openai-is-gaining-on-anthropic-with-business-users-new-data-indicates/",
-      "date": "Thu, 20 Aug 2026 22:36:37 +0000",
-      "source": "TechCrunch",
-      "category": "Artificial Intelligence"
     },
     {
       "title": "The Download: threats from space mirrors and credit for AI drugs",
