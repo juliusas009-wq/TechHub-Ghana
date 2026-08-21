@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-21T18:44:17.666374+00:00",
+  "updated": "2026-08-21T19:24:44.629681+00:00",
   "articles": [
+    {
+      "title": "Last chance: Save up to $300 on your TechCrunch Disrupt 2026 ticket today",
+      "summary": "If you’ve been circling around Disrupt, then now’s the best time to lock in your pass and start getting ready to join the rest of the startup community gathering in San Francisco from October 13-15 at Moscone West!",
+      "link": "https://techcrunch.com/2026/08/21/last-chance-save-up-to-300-on-your-techcrunch-disrupt-2026-ticket-today/",
+      "date": "Fri, 21 Aug 2026 19:16:15 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Tesla’s solar roof is dead — here’s what went wrong",
       "summary": "Tesla's solar roof was an experiment that never really caught on for the company. But does that mean the concept of roof-integrated solar is dead?",
@@ -150,14 +158,6 @@
       "summary": "Mark Zuckerberg just bought a cozy abode somewhat close to Meta’s international headquarters in Ireland.",
       "link": "https://techcrunch.com/2026/08/20/mark-buys-a-castle/",
       "date": "Thu, 20 Aug 2026 19:55:40 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Google gives publishers a new way to fight AI-driven traffic losses",
-      "summary": "Google is giving publishers a new button that lets readers make them a preferred source across Search, Discover, and Google News, potentially boosting their traffic as AI search sends fewer clicks to the web.",
-      "link": "https://techcrunch.com/2026/08/20/google-gives-publishers-a-new-way-to-fight-ai-driven-traffic-losses/",
-      "date": "Thu, 20 Aug 2026 19:18:21 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
