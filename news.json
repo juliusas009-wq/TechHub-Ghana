@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T11:34:06.627687+00:00",
+  "updated": "2026-08-21T12:43:17.022611+00:00",
   "articles": [
     {
       "title": "Tesla, Uber, and Waymo all get the OK to operate thousands of robotaxis in Nevada",
@@ -162,6 +162,14 @@
       "category": "Technology"
     },
     {
+      "title": "The Download: threats from space mirrors and credit for AI drugs",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. This company’s plans to deploy space mirrors could jeopardize the night sky for many A company that plans to beam sunlight from space to Earth on demand might unintentionally brighten the&#8230;",
+      "link": "https://www.technologyreview.com/2026/08/21/1142762/the-download-space-mirrors-threats-ai-designed-drugs-credit/",
+      "date": "Fri, 21 Aug 2026 12:10:00 +0000",
+      "source": "MIT Technology Review",
+      "category": "Technology"
+    },
+    {
       "title": "Mother tongue",
       "summary": "“Daddy?” Theo curled against my side in bed. “Where do words go when they die?” I’d orchestrated the bedtime routine flawlessly: bath (taken), teeth (brushed), potty (tinkled), books (two), song (one, poorly sung), and snuggle (his chin on my second rib). Now was the moment when our son’s eyelids were supposed to flutter gently closed,&#8230;",
       "link": "https://www.technologyreview.com/2026/08/21/1141726/mother-tongue-fiction/",
@@ -230,14 +238,6 @@
       "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. AI’s recursive self-improvement might not come so quickly after all The AI industry’s boldest promise right now is that AI will soon improve itself, with almost no need for human oversight.&#8230;",
       "link": "https://www.technologyreview.com/2026/08/19/1140195/the-download-ai-recursive-self-improvement-problem-heatwave-causes/",
       "date": "Wed, 19 Aug 2026 12:10:00 +0000",
-      "source": "MIT Technology Review",
-      "category": "Technology"
-    },
-    {
-      "title": "Child-monitoring apps might need a reboot",
-      "summary": "Pam Wisniewski’s digital adolescence showed her the best and the worst of the internet. At 14, she left an abusive home, where she’d been isolated in a fifth-wheel trailer at the end of a seven-­mile dirt road. She moved in with her older sister and taught herself to type on AOL Instant Messenger. Online, she&#8230;",
-      "link": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
-      "date": "Wed, 19 Aug 2026 09:00:00 +0000",
       "source": "MIT Technology Review",
       "category": "Technology"
     }
