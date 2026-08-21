@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-21T17:27:14.747366+00:00",
+  "updated": "2026-08-21T17:57:43.804181+00:00",
   "articles": [
+    {
+      "title": "Waymo hands over documents in NHTSA’s child collision probe",
+      "summary": "The responses to NHTSA's questions so far are redacted entirely, citing \"confidential business information.\"",
+      "link": "https://techcrunch.com/2026/08/21/waymo-hands-over-documents-in-nhtsas-child-collision-probe/",
+      "date": "Fri, 21 Aug 2026 17:49:58 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Why is the DOJ investigating Andreessen Horowitz’s board seats?",
       "summary": "Andreessen Horowitz has two partners sitting on the boards of companies that now&#160;compete with each other: Ben Horowitz at Databricks and Martin Casado at&#160;Fivetran. Nothing too scandalous on the surface, except&#160;the Department of&#160;Justice&#160;has&#160;reportedly&#160;been investigating the arrangement&#160;for&#160;almost&#160;a&#160;year, dusting&#160;off a 112-year-old antitrust&#160;law&#160;that&#8217;s&#160;rarely used against VCs.&#160; Board conflicts&#160;aren&#8217;t&#160;exactly new, and these companies&#160;weren&#8217;t&#160;necessarily direct competitors when a16z first invested [&#8230;]",
@@ -152,14 +160,6 @@
       "date": "Thu, 20 Aug 2026 19:15:05 +0000",
       "source": "TechCrunch",
       "category": "Cloud Computing"
-    },
-    {
-      "title": "Castelion hits $13B valuation to mass-produce hypersonic missiles",
-      "summary": "Founded in 2022, Castelion set out to manufacture hypersonic weapon systems at a lower cost and at faster speeds than traditional defense primes.",
-      "link": "https://techcrunch.com/2026/08/20/castelion-hits-13b-valuation-to-mass-produce-hypersonic-missiles/",
-      "date": "Thu, 20 Aug 2026 19:01:41 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
     },
     {
       "title": "The Download: threats from space mirrors and credit for AI drugs",
