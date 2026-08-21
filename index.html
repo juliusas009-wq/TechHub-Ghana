@@ -167,7 +167,7 @@
 
 
     <!-- =========================================================
-         BASIC MOBILE SAFETY
+         MOBILE SAFETY + SIDE SPACING
     ========================================================== -->
 
     <style>
@@ -190,6 +190,23 @@
         img {
             max-width: 100%;
             height: auto;
+        }
+
+
+        /* =====================================================
+           STANDARD SIDE SPACING
+           Keeps website content away from the phone edges.
+        ====================================================== */
+
+        .hero-content,
+        .section-container,
+        .newsletter-inner,
+        .footer-grid,
+        .footer-bottom {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
 
@@ -284,6 +301,23 @@
 
 
             /* =================================================
+               MOBILE SIDE SPACING
+            ================================================== */
+
+            .hero-content,
+            .section-container,
+            .newsletter-inner,
+            .footer-grid,
+            .footer-bottom {
+                width: calc(100% - 28px);
+                max-width: none;
+
+                margin-left: 14px;
+                margin-right: 14px;
+            }
+
+
+            /* =================================================
                TOP BAR
             ================================================== */
 
@@ -348,9 +382,6 @@
 
 
             .hero-content {
-                width: 100%;
-                max-width: 100%;
-
                 display: grid !important;
 
                 grid-template-columns: 1fr !important;
@@ -519,6 +550,9 @@
 
             .breaking-inner {
                 overflow: hidden;
+
+                padding-left: 14px;
+                padding-right: 14px;
             }
 
 
@@ -527,9 +561,6 @@
             ================================================== */
 
             .section-container {
-                width: 100%;
-                max-width: 100%;
-
                 min-width: 0;
             }
 
@@ -567,7 +598,6 @@
             }
 
 
-            .newsletter-inner,
             .newsletter-content,
             .newsletter-form {
                 width: 100%;
@@ -582,8 +612,7 @@
             ================================================== */
 
             .footer-grid {
-                width: 100%;
-                max-width: 100%;
+                min-width: 0;
             }
 
         }
@@ -594,6 +623,22 @@
         ====================================================== */
 
         @media (max-width: 480px) {
+
+            /* =================================================
+               SMALL PHONE SIDE SPACING
+            ================================================== */
+
+            .hero-content,
+            .section-container,
+            .newsletter-inner,
+            .footer-grid,
+            .footer-bottom {
+                width: calc(100% - 24px);
+
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+
 
             .top-bar {
                 padding: 10px 12px;
@@ -718,15 +763,7 @@
         id="siteHeader"
     >
 
-
-        <!-- =====================================================
-             TOP BAR
-        ====================================================== -->
-
         <div class="top-bar">
-
-
-            <!-- BRAND -->
 
             <a
                 href="index.html"
@@ -761,8 +798,6 @@
 
             </a>
 
-
-            <!-- DESKTOP SEARCH -->
 
             <form
                 class="search-box"
@@ -803,8 +838,6 @@
             </form>
 
 
-            <!-- MOBILE MENU -->
-
             <button
                 type="button"
                 class="menu-btn"
@@ -823,10 +856,6 @@
         </div>
 
 
-        <!-- =====================================================
-             NAVIGATION
-        ====================================================== -->
-
         <nav
             class="main-nav"
             id="navMenu"
@@ -835,108 +864,49 @@
 
             <div class="nav-inner">
 
-
                 <a
                     href="index.html"
                     class="active"
                     aria-current="page"
                 >
-
-                    <i
-                        class="fa-solid fa-house"
-                        aria-hidden="true"
-                    ></i>
-
-                    <span>
-                        Home
-                    </span>
-
+                    <i class="fa-solid fa-house" aria-hidden="true"></i>
+                    <span>Home</span>
                 </a>
 
 
                 <a href="ghana-tech.html">
-
-                    <span
-                        class="nav-flag"
-                        aria-hidden="true"
-                    >
-                        🇬🇭
-                    </span>
-
-                    <span>
-                        Ghana Tech
-                    </span>
-
+                    <span class="nav-flag" aria-hidden="true">🇬🇭</span>
+                    <span>Ghana Tech</span>
                 </a>
 
 
                 <a href="news.html">
-
-                    <i
-                        class="fa-regular fa-newspaper"
-                        aria-hidden="true"
-                    ></i>
-
-                    <span>
-                        News
-                    </span>
-
+                    <i class="fa-regular fa-newspaper" aria-hidden="true"></i>
+                    <span>News</span>
                 </a>
 
 
                 <a href="tutorials.html">
-
-                    <i
-                        class="fa-solid fa-graduation-cap"
-                        aria-hidden="true"
-                    ></i>
-
-                    <span>
-                        Tutorials
-                    </span>
-
+                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                    <span>Tutorials</span>
                 </a>
 
 
                 <a href="tools.html">
-
-                    <i
-                        class="fa-solid fa-toolbox"
-                        aria-hidden="true"
-                    ></i>
-
-                    <span>
-                        Tools
-                    </span>
-
+                    <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
+                    <span>Tools</span>
                 </a>
 
 
                 <a href="about.html">
-
-                    <i
-                        class="fa-solid fa-circle-info"
-                        aria-hidden="true"
-                    ></i>
-
-                    <span>
-                        About
-                    </span>
-
+                    <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                    <span>About</span>
                 </a>
 
 
                 <a href="contact.html">
-
-                    <i
-                        class="fa-solid fa-envelope"
-                        aria-hidden="true"
-                    ></i>
-
-                    <span>
-                        Contact
-                    </span>
-
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <span>Contact</span>
                 </a>
 
             </div>
@@ -957,35 +927,18 @@
 
         <div class="breaking-inner">
 
-
             <div
                 class="today-date"
                 id="today"
             >
-
-                <i
-                    class="fa-regular fa-calendar"
-                    aria-hidden="true"
-                ></i>
-
-                <span>
-                    Loading date...
-                </span>
-
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                <span>Loading date...</span>
             </div>
 
 
             <div class="breaking-label">
-
-                <i
-                    class="fa-solid fa-bolt"
-                    aria-hidden="true"
-                ></i>
-
-                <span>
-                    Tech Update
-                </span>
-
+                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                <span>Tech Update</span>
             </div>
 
 
@@ -996,33 +949,13 @@
 
                 <div class="breaking-track">
 
-                    <span>
-                        Technology News
-                    </span>
-
-                    <span>
-                        Programming Tutorials
-                    </span>
-
-                    <span>
-                        Free Digital Tools
-                    </span>
-
-                    <span>
-                        Artificial Intelligence
-                    </span>
-
-                    <span>
-                        Cybersecurity
-                    </span>
-
-                    <span>
-                        Web Development
-                    </span>
-
-                    <span>
-                        Database Tutorials
-                    </span>
+                    <span>Technology News</span>
+                    <span>Programming Tutorials</span>
+                    <span>Free Digital Tools</span>
+                    <span>Artificial Intelligence</span>
+                    <span>Cybersecurity</span>
+                    <span>Web Development</span>
+                    <span>Database Tutorials</span>
 
                 </div>
 
@@ -1051,59 +984,39 @@
 
             <div class="hero-content">
 
-
                 <div class="hero-text">
 
-
                     <span class="eyebrow">
-
                         <span
                             class="eyebrow-dot"
                             aria-hidden="true"
                         ></span>
-
                         TECHHUB GHANA
-
                     </span>
 
 
                     <h1 id="hero-title">
-
                         Technology
-                        <span>
-                            Made Simple.
-                        </span>
-
+                        <span>Made Simple.</span>
                     </h1>
 
 
                     <p class="hero-description">
-
                         Discover technology news, learn programming,
                         explore Artificial Intelligence, improve your
                         cybersecurity knowledge and use powerful free
                         digital tools — all in one place.
-
                     </p>
 
 
                     <div class="hero-buttons">
 
-
                         <a
                             href="tools.html"
                             class="btn btn-primary"
                         >
-
-                            <i
-                                class="fa-solid fa-toolbox"
-                                aria-hidden="true"
-                            ></i>
-
-                            <span>
-                                Explore Tools
-                            </span>
-
+                            <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
+                            <span>Explore Tools</span>
                         </a>
 
 
@@ -1111,16 +1024,8 @@
                             href="news.html"
                             class="btn btn-secondary"
                         >
-
-                            <i
-                                class="fa-regular fa-newspaper"
-                                aria-hidden="true"
-                            ></i>
-
-                            <span>
-                                Latest News
-                            </span>
-
+                            <i class="fa-regular fa-newspaper" aria-hidden="true"></i>
+                            <span>Latest News</span>
                         </a>
 
                     </div>
@@ -1128,51 +1033,27 @@
 
                     <div class="hero-stats">
 
-
                         <div class="hero-stat">
-
-                            <strong>
-                                Free
-                            </strong>
-
-                            <span>
-                                Digital Tools
-                            </span>
-
+                            <strong>Free</strong>
+                            <span>Digital Tools</span>
                         </div>
 
 
                         <div class="hero-stat">
-
-                            <strong>
-                                Practical
-                            </strong>
-
-                            <span>
-                                Tutorials
-                            </span>
-
+                            <strong>Practical</strong>
+                            <span>Tutorials</span>
                         </div>
 
 
                         <div class="hero-stat">
-
-                            <strong>
-                                Ghana
-                            </strong>
-
-                            <span>
-                                Focused
-                            </span>
-
+                            <strong>Ghana</strong>
+                            <span>Focused</span>
                         </div>
 
                     </div>
 
                 </div>
 
-
-                <!-- HERO IMAGE -->
 
                 <div class="hero-image-wrapper">
 
@@ -1195,47 +1076,29 @@
                         ></div>
 
 
-                        <div
-                            class="hero-floating-card hero-card-one"
-                        >
+                        <div class="hero-floating-card hero-card-one">
 
                             <div class="floating-icon">
-
-                                <i
-                                    class="fa-solid fa-microchip"
-                                    aria-hidden="true"
-                                ></i>
-
+                                <i class="fa-solid fa-microchip" aria-hidden="true"></i>
                             </div>
 
 
                             <div>
-
-                                <strong>
-                                    Technology
-                                </strong>
-
-                                <span>
-                                    Learn & Explore
-                                </span>
-
+                                <strong>Technology</strong>
+                                <span>Learn & Explore</span>
                             </div>
 
                         </div>
 
 
-                        <div
-                            class="hero-floating-card hero-card-two"
-                        >
+                        <div class="hero-floating-card hero-card-two">
 
                             <span
                                 class="pulse-dot"
                                 aria-hidden="true"
                             ></span>
 
-                            <span>
-                                Ghana Tech
-                            </span>
+                            <span>Ghana Tech</span>
 
                         </div>
 
@@ -1261,21 +1124,14 @@
 
                 <div class="trending-box">
 
-
                     <div class="trending-heading">
 
                         <div class="trending-icon">
-
-                            <i
-                                class="fa-solid fa-fire"
-                                aria-hidden="true"
-                            ></i>
-
+                            <i class="fa-solid fa-fire" aria-hidden="true"></i>
                         </div>
 
 
                         <div>
-
                             <span class="section-kicker">
                                 What's trending
                             </span>
@@ -1283,7 +1139,6 @@
                             <h2 id="trending-title">
                                 Popular Right Now
                             </h2>
-
                         </div>
 
                     </div>
@@ -1291,28 +1146,13 @@
 
                     <div class="trending-list">
 
-
                         <a
                             href="ai-assistant.html"
                             class="trending-item"
                         >
-
-                            <span
-                                class="trending-item-icon"
-                                aria-hidden="true"
-                            >
-                                🤖
-                            </span>
-
-                            <span>
-                                AI Assistant
-                            </span>
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <span class="trending-item-icon" aria-hidden="true">🤖</span>
+                            <span>AI Assistant</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
 
@@ -1320,23 +1160,9 @@
                             href="gpa.html"
                             class="trending-item"
                         >
-
-                            <span
-                                class="trending-item-icon"
-                                aria-hidden="true"
-                            >
-                                🎓
-                            </span>
-
-                            <span>
-                                GPA Calculator
-                            </span>
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <span class="trending-item-icon" aria-hidden="true">🎓</span>
+                            <span>GPA Calculator</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
 
@@ -1344,23 +1170,9 @@
                             href="qr-generator.html"
                             class="trending-item"
                         >
-
-                            <span
-                                class="trending-item-icon"
-                                aria-hidden="true"
-                            >
-                                📱
-                            </span>
-
-                            <span>
-                                QR Generator
-                            </span>
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <span class="trending-item-icon" aria-hidden="true">📱</span>
+                            <span>QR Generator</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
 
@@ -1368,23 +1180,9 @@
                             href="tutorials.html#python"
                             class="trending-item"
                         >
-
-                            <span
-                                class="trending-item-icon"
-                                aria-hidden="true"
-                            >
-                                🐍
-                            </span>
-
-                            <span>
-                                Learn Python
-                            </span>
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <span class="trending-item-icon" aria-hidden="true">🐍</span>
+                            <span>Learn Python</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
 
@@ -1392,23 +1190,9 @@
                             href="tutorials.html#mysql"
                             class="trending-item"
                         >
-
-                            <span
-                                class="trending-item-icon"
-                                aria-hidden="true"
-                            >
-                                🗄️
-                            </span>
-
-                            <span>
-                                MySQL Basics
-                            </span>
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <span class="trending-item-icon" aria-hidden="true">🗄️</span>
+                            <span>MySQL Basics</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
                     </div>
@@ -1418,16 +1202,8 @@
                         href="news.html"
                         class="view-more"
                     >
-
-                        <span>
-                            View Technology News
-                        </span>
-
-                        <i
-                            class="fa-solid fa-arrow-right"
-                            aria-hidden="true"
-                        ></i>
-
+                        <span>View Technology News</span>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
 
                 </div>
@@ -1448,19 +1224,14 @@
 
             <div class="section-container">
 
-
                 <div class="section-heading">
 
                     <div>
-
-                        <span class="section-kicker">
-                            Useful & free
-                        </span>
+                        <span class="section-kicker">Useful & free</span>
 
                         <h2 id="tools-title">
                             Popular Tools
                         </h2>
-
                     </div>
 
 
@@ -1468,14 +1239,8 @@
                         href="tools.html"
                         class="section-link"
                     >
-
                         View All Tools
-
-                        <i
-                            class="fa-solid fa-arrow-right"
-                            aria-hidden="true"
-                        ></i>
-
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
 
                 </div>
@@ -1483,26 +1248,19 @@
 
                 <div class="card-grid">
 
-
                     <article class="tool-card">
 
                         <div class="tool-card-top">
 
                             <div class="icon">
-                                <span aria-hidden="true">
-                                    🎓
-                                </span>
+                                <span aria-hidden="true">🎓</span>
                             </div>
 
-                            <span class="tool-label">
-                                Student
-                            </span>
+                            <span class="tool-label">Student</span>
 
                         </div>
 
-                        <h3>
-                            GPA Calculator
-                        </h3>
+                        <h3>GPA Calculator</h3>
 
                         <p>
                             Calculate your semester GPA quickly
@@ -1513,14 +1271,8 @@
                             href="gpa.html"
                             class="card-action"
                         >
-
                             Open Tool
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
                     </article>
@@ -1531,20 +1283,14 @@
                         <div class="tool-card-top">
 
                             <div class="icon">
-                                <span aria-hidden="true">
-                                    📱
-                                </span>
+                                <span aria-hidden="true">📱</span>
                             </div>
 
-                            <span class="tool-label">
-                                Generator
-                            </span>
+                            <span class="tool-label">Generator</span>
 
                         </div>
 
-                        <h3>
-                            QR Generator
-                        </h3>
+                        <h3>QR Generator</h3>
 
                         <p>
                             Create QR codes instantly for links,
@@ -1555,14 +1301,8 @@
                             href="qr-generator.html"
                             class="card-action"
                         >
-
                             Open Tool
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
                     </article>
@@ -1573,20 +1313,14 @@
                         <div class="tool-card-top">
 
                             <div class="icon">
-                                <span aria-hidden="true">
-                                    🤖
-                                </span>
+                                <span aria-hidden="true">🤖</span>
                             </div>
 
-                            <span class="tool-label">
-                                AI
-                            </span>
+                            <span class="tool-label">AI</span>
 
                         </div>
 
-                        <h3>
-                            AI Assistant
-                        </h3>
+                        <h3>AI Assistant</h3>
 
                         <p>
                             Improve writing, summarize text,
@@ -1597,14 +1331,8 @@
                             href="ai-assistant.html"
                             class="card-action"
                         >
-
                             Try AI Assistant
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
                     </article>
@@ -1615,20 +1343,14 @@
                         <div class="tool-card-top">
 
                             <div class="icon">
-                                <span aria-hidden="true">
-                                    🔐
-                                </span>
+                                <span aria-hidden="true">🔐</span>
                             </div>
 
-                            <span class="tool-label">
-                                Security
-                            </span>
+                            <span class="tool-label">Security</span>
 
                         </div>
 
-                        <h3>
-                            Password Generator
-                        </h3>
+                        <h3>Password Generator</h3>
 
                         <p>
                             Generate strong passwords for
@@ -1639,14 +1361,8 @@
                             href="password-generator.html"
                             class="card-action"
                         >
-
                             Generate Password
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
                     </article>
@@ -1669,19 +1385,14 @@
 
             <div class="section-container">
 
-
                 <div class="section-heading">
 
                     <div>
-
-                        <span class="section-kicker">
-                            Stay informed
-                        </span>
+                        <span class="section-kicker">Stay informed</span>
 
                         <h2 id="news-title">
                             Latest Technology News
                         </h2>
-
                     </div>
 
 
@@ -1689,14 +1400,8 @@
                         href="news.html"
                         class="section-link"
                     >
-
                         View All News
-
-                        <i
-                            class="fa-solid fa-arrow-right"
-                            aria-hidden="true"
-                        ></i>
-
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
 
                 </div>
@@ -1704,9 +1409,7 @@
 
                 <div class="news-layout">
 
-
                     <div class="news-left">
-
 
                         <a
                             href="news.html"
@@ -1749,14 +1452,8 @@
                                 </p>
 
                                 <span class="read-more">
-
                                     Read More
-
-                                    <i
-                                        class="fa-solid fa-arrow-right"
-                                        aria-hidden="true"
-                                    ></i>
-
+                                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                                 </span>
 
                             </div>
@@ -1804,14 +1501,8 @@
                                 </p>
 
                                 <span class="read-more">
-
                                     Read More
-
-                                    <i
-                                        class="fa-solid fa-arrow-right"
-                                        aria-hidden="true"
-                                    ></i>
-
+                                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                                 </span>
 
                             </div>
@@ -1859,25 +1550,16 @@
                                 </p>
 
                                 <span class="read-more">
-
                                     Read More
-
-                                    <i
-                                        class="fa-solid fa-arrow-right"
-                                        aria-hidden="true"
-                                    ></i>
-
+                                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                                 </span>
 
                             </div>
 
                         </a>
 
-
                     </div>
 
-
-                    <!-- SIDEBAR -->
 
                     <aside
                         class="news-sidebar"
@@ -1886,9 +1568,7 @@
 
                         <div class="sidebar-heading">
 
-                            <span aria-hidden="true">
-                                🔥
-                            </span>
+                            <span aria-hidden="true">🔥</span>
 
                             <h3>
                                 Popular
@@ -1899,114 +1579,48 @@
 
                         <ul>
 
-
                             <li>
-
                                 <a href="ai-assistant.html">
-
-                                    <span aria-hidden="true">
-                                        🤖
-                                    </span>
-
-                                    <span>
-                                        AI Assistant
-                                    </span>
-
-                                    <i
-                                        class="fa-solid fa-chevron-right"
-                                        aria-hidden="true"
-                                    ></i>
-
+                                    <span aria-hidden="true">🤖</span>
+                                    <span>AI Assistant</span>
+                                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                                 </a>
-
                             </li>
 
 
                             <li>
-
                                 <a href="gpa.html">
-
-                                    <span aria-hidden="true">
-                                        🎓
-                                    </span>
-
-                                    <span>
-                                        GPA Calculator
-                                    </span>
-
-                                    <i
-                                        class="fa-solid fa-chevron-right"
-                                        aria-hidden="true"
-                                    ></i>
-
+                                    <span aria-hidden="true">🎓</span>
+                                    <span>GPA Calculator</span>
+                                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                                 </a>
-
                             </li>
 
 
                             <li>
-
                                 <a href="qr-generator.html">
-
-                                    <span aria-hidden="true">
-                                        📱
-                                    </span>
-
-                                    <span>
-                                        QR Generator
-                                    </span>
-
-                                    <i
-                                        class="fa-solid fa-chevron-right"
-                                        aria-hidden="true"
-                                    ></i>
-
+                                    <span aria-hidden="true">📱</span>
+                                    <span>QR Generator</span>
+                                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                                 </a>
-
                             </li>
 
 
                             <li>
-
                                 <a href="tutorials.html#python">
-
-                                    <span aria-hidden="true">
-                                        🐍
-                                    </span>
-
-                                    <span>
-                                        Learn Python
-                                    </span>
-
-                                    <i
-                                        class="fa-solid fa-chevron-right"
-                                        aria-hidden="true"
-                                    ></i>
-
+                                    <span aria-hidden="true">🐍</span>
+                                    <span>Learn Python</span>
+                                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                                 </a>
-
                             </li>
 
 
                             <li>
-
                                 <a href="tutorials.html#mysql">
-
-                                    <span aria-hidden="true">
-                                        🗄️
-                                    </span>
-
-                                    <span>
-                                        MySQL Basics
-                                    </span>
-
-                                    <i
-                                        class="fa-solid fa-chevron-right"
-                                        aria-hidden="true"
-                                    ></i>
-
+                                    <span aria-hidden="true">🗄️</span>
+                                    <span>MySQL Basics</span>
+                                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
                                 </a>
-
                             </li>
 
                         </ul>
@@ -2016,16 +1630,8 @@
                             href="ghana-tech.html"
                             class="sidebar-cta"
                         >
-
-                            <span>
-                                Explore Ghana Tech
-                            </span>
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <span>Explore Ghana Tech</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </a>
 
                     </aside>
@@ -2048,19 +1654,14 @@
 
             <div class="section-container">
 
-
                 <div class="section-heading">
 
                     <div>
-
-                        <span class="section-kicker">
-                            Learn by doing
-                        </span>
+                        <span class="section-kicker">Learn by doing</span>
 
                         <h2 id="tutorials-title">
                             Latest Tutorials
                         </h2>
-
                     </div>
 
 
@@ -2068,21 +1669,14 @@
                         href="tutorials.html"
                         class="section-link"
                     >
-
                         View All Tutorials
-
-                        <i
-                            class="fa-solid fa-arrow-right"
-                            aria-hidden="true"
-                        ></i>
-
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
 
                 </div>
 
 
                 <div class="tutorial-grid">
-
 
                     <a
                         href="tutorials.html#html"
@@ -2109,23 +1703,15 @@
 
                         <div class="tutorial-content">
 
-                            <span>
-                                Web Development
-                            </span>
+                            <span>Web Development</span>
 
                             <h3>
                                 HTML for Beginners
                             </h3>
 
                             <strong>
-
                                 Start Learning
-
-                                <i
-                                    class="fa-solid fa-arrow-right"
-                                    aria-hidden="true"
-                                ></i>
-
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </strong>
 
                         </div>
@@ -2158,23 +1744,15 @@
 
                         <div class="tutorial-content">
 
-                            <span>
-                                Web Design
-                            </span>
+                            <span>Web Design</span>
 
                             <h3>
                                 CSS Masterclass
                             </h3>
 
                             <strong>
-
                                 Start Learning
-
-                                <i
-                                    class="fa-solid fa-arrow-right"
-                                    aria-hidden="true"
-                                ></i>
-
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </strong>
 
                         </div>
@@ -2207,23 +1785,15 @@
 
                         <div class="tutorial-content">
 
-                            <span>
-                                Programming
-                            </span>
+                            <span>Programming</span>
 
                             <h3>
                                 JavaScript Essentials
                             </h3>
 
                             <strong>
-
                                 Start Learning
-
-                                <i
-                                    class="fa-solid fa-arrow-right"
-                                    aria-hidden="true"
-                                ></i>
-
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </strong>
 
                         </div>
@@ -2256,23 +1826,15 @@
 
                         <div class="tutorial-content">
 
-                            <span>
-                                Programming
-                            </span>
+                            <span>Programming</span>
 
                             <h3>
                                 Python Programming
                             </h3>
 
                             <strong>
-
                                 Start Learning
-
-                                <i
-                                    class="fa-solid fa-arrow-right"
-                                    aria-hidden="true"
-                                ></i>
-
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </strong>
 
                         </div>
@@ -2297,19 +1859,14 @@
 
             <div class="section-container">
 
-
                 <div class="section-heading">
 
                     <div>
-
-                        <span class="section-kicker">
-                            Build your skills
-                        </span>
+                        <span class="section-kicker">Build your skills</span>
 
                         <h2 id="technologies-title">
                             Popular Technologies
                         </h2>
-
                     </div>
 
 
@@ -2317,14 +1874,8 @@
                         href="tutorials.html"
                         class="section-link"
                     >
-
                         Explore Tutorials
-
-                        <i
-                            class="fa-solid fa-arrow-right"
-                            aria-hidden="true"
-                        ></i>
-
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
 
                 </div>
@@ -2332,22 +1883,16 @@
 
                 <div class="card-grid">
 
-
                     <a
                         href="tutorials.html#python"
                         class="tool-card technology-card"
                     >
 
-                        <div
-                            class="icon"
-                            aria-hidden="true"
-                        >
+                        <div class="icon" aria-hidden="true">
                             🐍
                         </div>
 
-                        <h3>
-                            Python
-                        </h3>
+                        <h3>Python</h3>
 
                         <p>
                             Learn Python programming from
@@ -2355,14 +1900,8 @@
                         </p>
 
                         <span class="card-action">
-
                             Learn Python
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </span>
 
                     </a>
@@ -2373,16 +1912,11 @@
                         class="tool-card technology-card"
                     >
 
-                        <div
-                            class="icon"
-                            aria-hidden="true"
-                        >
+                        <div class="icon" aria-hidden="true">
                             🟨
                         </div>
 
-                        <h3>
-                            JavaScript
-                        </h3>
+                        <h3>JavaScript</h3>
 
                         <p>
                             Build interactive websites and
@@ -2390,14 +1924,8 @@
                         </p>
 
                         <span class="card-action">
-
                             Learn JavaScript
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </span>
 
                     </a>
@@ -2408,16 +1936,11 @@
                         class="tool-card technology-card"
                     >
 
-                        <div
-                            class="icon"
-                            aria-hidden="true"
-                        >
+                        <div class="icon" aria-hidden="true">
                             🌐
                         </div>
 
-                        <h3>
-                            HTML & CSS
-                        </h3>
+                        <h3>HTML & CSS</h3>
 
                         <p>
                             Master the foundations of modern
@@ -2425,14 +1948,8 @@
                         </p>
 
                         <span class="card-action">
-
                             Learn Web Development
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </span>
 
                     </a>
@@ -2443,16 +1960,11 @@
                         class="tool-card technology-card"
                     >
 
-                        <div
-                            class="icon"
-                            aria-hidden="true"
-                        >
+                        <div class="icon" aria-hidden="true">
                             🗄️
                         </div>
 
-                        <h3>
-                            MySQL
-                        </h3>
+                        <h3>MySQL</h3>
 
                         <p>
                             Learn databases, SQL queries,
@@ -2460,14 +1972,8 @@
                         </p>
 
                         <span class="card-action">
-
                             Learn MySQL
-
-                            <i
-                                class="fa-solid fa-arrow-right"
-                                aria-hidden="true"
-                            ></i>
-
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </span>
 
                     </a>
@@ -2489,7 +1995,6 @@
         >
 
             <div class="section-container">
-
 
                 <div class="section-heading centered-heading">
 
@@ -2515,13 +2020,9 @@
 
                 <div class="card-grid why-grid">
 
-
                     <article class="tool-card">
 
-                        <div
-                            class="icon"
-                            aria-hidden="true"
-                        >
+                        <div class="icon" aria-hidden="true">
                             🎓
                         </div>
 
@@ -2540,10 +2041,7 @@
 
                     <article class="tool-card">
 
-                        <div
-                            class="icon"
-                            aria-hidden="true"
-                        >
+                        <div class="icon" aria-hidden="true">
                             🛠️
                         </div>
 
@@ -2562,10 +2060,7 @@
 
                     <article class="tool-card">
 
-                        <div
-                            class="icon"
-                            aria-hidden="true"
-                        >
+                        <div class="icon" aria-hidden="true">
                             🇬🇭
                         </div>
 
@@ -2599,14 +2094,11 @@
 
             <div class="newsletter-inner">
 
-
                 <div
                     class="newsletter-icon"
                     aria-hidden="true"
                 >
-
                     <i class="fa-regular fa-envelope"></i>
-
                 </div>
 
 
@@ -2684,11 +2176,7 @@
 
     <footer class="site-footer">
 
-
         <div class="footer-grid">
-
-
-            <!-- ABOUT -->
 
             <div class="footer-column footer-about">
 
@@ -2726,45 +2214,30 @@
             </div>
 
 
-            <!-- EXPLORE -->
-
             <div class="footer-column">
 
-                <h3>
-                    Explore
-                </h3>
-
+                <h3>Explore</h3>
 
                 <ul>
 
                     <li>
-                        <a href="index.html">
-                            Home
-                        </a>
+                        <a href="index.html">Home</a>
                     </li>
 
                     <li>
-                        <a href="ghana-tech.html">
-                            Ghana Tech
-                        </a>
+                        <a href="ghana-tech.html">Ghana Tech</a>
                     </li>
 
                     <li>
-                        <a href="news.html">
-                            Technology News
-                        </a>
+                        <a href="news.html">Technology News</a>
                     </li>
 
                     <li>
-                        <a href="tutorials.html">
-                            Tutorials
-                        </a>
+                        <a href="tutorials.html">Tutorials</a>
                     </li>
 
                     <li>
-                        <a href="tools.html">
-                            Digital Tools
-                        </a>
+                        <a href="tools.html">Digital Tools</a>
                     </li>
 
                 </ul>
@@ -2772,33 +2245,22 @@
             </div>
 
 
-            <!-- TOOLS -->
-
             <div class="footer-column">
 
-                <h3>
-                    Popular Tools
-                </h3>
-
+                <h3>Popular Tools</h3>
 
                 <ul>
 
                     <li>
-                        <a href="gpa.html">
-                            GPA Calculator
-                        </a>
+                        <a href="gpa.html">GPA Calculator</a>
                     </li>
 
                     <li>
-                        <a href="qr-generator.html">
-                            QR Generator
-                        </a>
+                        <a href="qr-generator.html">QR Generator</a>
                     </li>
 
                     <li>
-                        <a href="ai-assistant.html">
-                            AI Assistant
-                        </a>
+                        <a href="ai-assistant.html">AI Assistant</a>
                     </li>
 
                     <li>
@@ -2812,27 +2274,18 @@
             </div>
 
 
-            <!-- TECHHUB -->
-
             <div class="footer-column">
 
-                <h3>
-                    TechHub Ghana
-                </h3>
-
+                <h3>TechHub Ghana</h3>
 
                 <ul>
 
                     <li>
-                        <a href="about.html">
-                            About Us
-                        </a>
+                        <a href="about.html">About Us</a>
                     </li>
 
                     <li>
-                        <a href="contact.html">
-                            Contact
-                        </a>
+                        <a href="contact.html">Contact</a>
                     </li>
 
                     <li>
@@ -2854,21 +2307,13 @@
         </div>
 
 
-        <!-- FOOTER BOTTOM -->
-
         <div class="footer-bottom">
 
-
             <p>
-
                 ©
-                <span id="footerYear">
-                    2026
-                </span>
-
+                <span id="footerYear">2026</span>
                 TechHub Ghana.
                 All Rights Reserved.
-
             </p>
 
 
@@ -2876,14 +2321,11 @@
                 href="#top"
                 class="back-to-top-link"
             >
-
                 Back to top
-
                 <i
                     class="fa-solid fa-arrow-up"
                     aria-hidden="true"
                 ></i>
-
             </a>
 
         </div>
