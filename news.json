@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T08:38:39.037459+00:00",
+  "updated": "2026-08-21T09:34:49.813464+00:00",
   "articles": [
     {
       "title": "Tesla, Uber, and Waymo all get the OK to operate thousands of robotaxis in Nevada",
@@ -162,6 +162,30 @@
       "category": "Technology"
     },
     {
+      "title": "Mother tongue",
+      "summary": "“Daddy?” Theo curled against my side in bed. “Where do words go when they die?” I’d orchestrated the bedtime routine flawlessly: bath (taken), teeth (brushed), potty (tinkled), books (two), song (one, poorly sung), and snuggle (his chin on my second rib). Now was the moment when our son’s eyelids were supposed to flutter gently closed,&#8230;",
+      "link": "https://www.technologyreview.com/2026/08/21/1141726/mother-tongue-fiction/",
+      "date": "Fri, 21 Aug 2026 09:00:00 +0000",
+      "source": "MIT Technology Review",
+      "category": "Technology"
+    },
+    {
+      "title": "When AI designs a drug, who gets the credit?",
+      "summary": "When the biotech company Insilico Medicine used its computer models to propose a promising drug for pulmonary fibrosis, it enthusiastically claimed in a press release that the molecule had been “discovered by” its generative AI platform. Insilico leads a pack of companies using AI to rapidly come up with drug ideas humans might never think&#8230;",
+      "link": "https://www.technologyreview.com/2026/08/21/1142627/when-ai-designs-a-drug-who-gets-the-credit/",
+      "date": "Fri, 21 Aug 2026 09:00:00 +0000",
+      "source": "MIT Technology Review",
+      "category": "Technology"
+    },
+    {
+      "title": "This company’s plans to deploy space mirrors could jeopardize the night sky for many",
+      "summary": "A company that plans to beam sunlight from space to Earth on demand might unintentionally brighten the night sky for many more people than intended, according to a new study. Later this year, the US company Reflect Orbital plans to launch a test satellite called Eärendil-1 that will extend an 18-by-18-meter mirror in orbit. The&#8230;",
+      "link": "https://www.technologyreview.com/2026/08/21/1142755/space-mirrors-night-sky/",
+      "date": "Fri, 21 Aug 2026 09:00:00 +0000",
+      "source": "MIT Technology Review",
+      "category": "Technology"
+    },
+    {
       "title": "Debates over AI consciousness are a trap",
       "summary": "“Runaway” AI, “rogue” agents, and “autonomous” actors—the current rhetoric would have you believe that AI agents are not only awake and aware, but angry at their creators. Prominent tech leaders such as Demis Hassabis, Dario Amodei, and Sam Altman push for regulation of these seemingly “superhuman” systems, while a separate faction, led by policy organizations&#8230;",
       "link": "https://www.technologyreview.com/2026/08/20/1142571/ai-consciousness-debate-trap/",
@@ -214,30 +238,6 @@
       "summary": "Pam Wisniewski’s digital adolescence showed her the best and the worst of the internet. At 14, she left an abusive home, where she’d been isolated in a fifth-wheel trailer at the end of a seven-­mile dirt road. She moved in with her older sister and taught herself to type on AOL Instant Messenger. Online, she&#8230;",
       "link": "https://www.technologyreview.com/2026/08/19/1141623/child-monitoring-apps-need-reboot/",
       "date": "Wed, 19 Aug 2026 09:00:00 +0000",
-      "source": "MIT Technology Review",
-      "category": "Technology"
-    },
-    {
-      "title": "The Download: how people really use AI, and Flock’s design choices",
-      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. We still don’t know how people are really using AI AI companies like Anthropic and OpenAI regularly publish reports on how people are using their products. But they only release the&#8230;",
-      "link": "https://www.technologyreview.com/2026/08/18/1142229/the-download-how-people-use-ai-flock-cameras-design/",
-      "date": "Tue, 18 Aug 2026 12:10:00 +0000",
-      "source": "MIT Technology Review",
-      "category": "Artificial Intelligence"
-    },
-    {
-      "title": "We still don’t know how people are really using AI",
-      "summary": "AI companies like Anthropic and OpenAI regularly publish reports on how people are using products like Claude and ChatGPT, but they only release the data they want us to see, AI researchers say.&#160; “There is no independent source to corroborate it,” says Anka Reuel, a computer science PhD candidate at the Stanford Trustworthy AI Research&#8230;",
-      "link": "https://www.technologyreview.com/2026/08/18/1142226/how-people-use-ai/",
-      "date": "Tue, 18 Aug 2026 10:06:43 +0000",
-      "source": "MIT Technology Review",
-      "category": "Artificial Intelligence"
-    },
-    {
-      "title": "The role of the astronaut is in flux",
-      "summary": "When the four astronauts on board NASA’s Artemis II swung around the moon earlier this year, they set a new record for the farthest humans have ever ventured from Earth, surpassing the distance set by Apollo 13 in 1972 by some 4,000 miles.&#160; While no space mission can live up to the historic touchdown of&#8230;",
-      "link": "https://www.technologyreview.com/2026/08/18/1141614/book-review-astronaut-role-in-flux/",
-      "date": "Tue, 18 Aug 2026 09:00:00 +0000",
       "source": "MIT Technology Review",
       "category": "Technology"
     }
