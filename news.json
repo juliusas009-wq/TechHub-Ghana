@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-21T22:50:44.673393+00:00",
+  "updated": "2026-08-21T23:21:42.576275+00:00",
   "articles": [
+    {
+      "title": "Anthropic’s Opus 4.6 is a smut-machine",
+      "summary": "Anthropic forbids its Claude models from generating sexually explicit content. But a series of tests conducted by TechCrunch found that it didn't take much to get past the restriction.",
+      "link": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/",
+      "date": "Fri, 21 Aug 2026 23:07:25 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Nvidia partners with data center developer Cloverleaf",
       "summary": "Nvidia continues to pour money into data center development — just as AI data centers bring lots of money into Nvidia.",
@@ -150,14 +158,6 @@
       "summary": "Surging demand for AI training data is driving rapid growth for the startup and its rivals.",
       "link": "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/",
       "date": "Fri, 21 Aug 2026 00:13:44 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Learn what VCs actually want, from a founder who’s raised $1B",
-      "summary": "Investors want founders who understand the financial reality of their business. Messy data, misunderstood metrics, or waiting until you’re nearly out of cash to start fundraising can cost founders leverage, valuation, and even a term sheet. In this episode of Build Mode, host Isabelle Johannessen sits down with Sasha Orloff, founder and CEO of Puzzle [&#8230;]",
-      "link": "https://techcrunch.com/video/learn-what-vcs-actually-want-from-a-founder-whos-raised-1b/",
-      "date": "Thu, 20 Aug 2026 23:32:27 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
