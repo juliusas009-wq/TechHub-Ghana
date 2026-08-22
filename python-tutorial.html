@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -10,7 +11,7 @@
     <title>Python Programming Tutorial | TechHub Ghana</title>
 
     <meta name="description"
-          content="Learn Python programming from beginner to practical level with examples, exercises and projects at TechHub Ghana.">
+          content="Learn Python programming from beginner to practical level with examples, exercises, exam questions and projects at TechHub Ghana.">
 
     <meta name="keywords"
           content="Python tutorial, learn Python, Python programming, Python Ghana, programming tutorial, TechHub Ghana">
@@ -20,7 +21,9 @@
 
     <link rel="stylesheet" href="style.css">
 
+
     <!-- Google Fonts -->
+
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
@@ -30,6 +33,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
+
 </head>
 
 
@@ -44,46 +48,86 @@
 
     <div class="top-bar">
 
-        <div class="logo">
 
-            <a href="index.html">
+        <!-- LOGO -->
 
-                <img src="images/logo.png"
-                     alt="TechHub Ghana Logo">
+        <a href="index.html"
+           class="logo">
 
-            </a>
+            <img
+                src="images/logo.png"
+                alt="TechHub Ghana Logo">
 
-            <div>
+            <div class="logo-text">
 
-                <h1>TechHub Ghana</h1>
+                <h1>
+                    TechHub Ghana
+                </h1>
 
                 <p>
-                    Technology News • Tutorials • Digital Tools
+                    Technology • Tutorials • Digital Tools
                 </p>
 
             </div>
+
+        </a>
+
+
+        <!-- HEADER RIGHT -->
+
+        <div class="header-right">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="tutorialSearch"
+                    placeholder="Search tutorials..."
+                    aria-label="Search tutorials">
+
+                <button
+                    type="button"
+                    id="tutorialSearchBtn"
+                    aria-label="Search tutorials">
+
+                    🔍
+
+                </button>
+
+            </div>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+                ☰
+
+            </button>
 
         </div>
 
     </div>
 
 
-    <button
-        class="menu-btn"
-        id="menuBtn"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false">
-
-        ☰
-
-    </button>
-
+    <!-- NAVIGATION -->
 
     <nav id="navMenu">
 
         <a href="index.html">
             Home
+        </a>
+
+        <a href="ghana-tech.html">
+            🇬🇭 Ghana Tech
         </a>
 
         <a href="news.html">
@@ -160,6 +204,7 @@
                 🐍 Python Course
             </h3>
 
+
             <a href="#introduction">
                 1. Introduction
             </a>
@@ -232,31 +277,35 @@
 
 
         <!-- =================================================
-             MAIN CONTENT
+             MAIN LESSON CONTENT
         ================================================== -->
 
         <article class="lesson-content">
 
 
+            <!-- =================================================
+                 COURSE HEADER
+            ================================================== -->
+
             <header>
 
+                <span class="category">
+                    🐍 PYTHON TUTORIAL
+                </span>
+
                 <h1>
-                    🐍 Python Programming
+                    Python Programming Tutorial
                 </h1>
 
                 <p>
-
                     Welcome to the TechHub Ghana Python Programming
                     Tutorial.
-
                 </p>
 
                 <p>
-
                     This course teaches Python from the basics using
                     simple explanations, practical examples,
-                    exercises and projects.
-
+                    exercises, exam questions and projects.
                 </p>
 
             </header>
@@ -273,41 +322,53 @@
                 </h2>
 
                 <p>
-
                     Python is a high-level programming language used
                     to create software, websites, automation tools,
                     artificial intelligence systems, data analysis
                     applications and many other technologies.
-
                 </p>
 
                 <p>
-
                     Python is popular because its syntax is relatively
                     simple and easy to read.
-
                 </p>
 
 
                 <div class="exercise">
 
-                    <strong>Python can be used for:</strong>
+                    <h3>
+                        🐍 What Can Python Be Used For?
+                    </h3>
 
                     <ul>
 
-                        <li>Web development</li>
+                        <li>
+                            Web development
+                        </li>
 
-                        <li>Artificial Intelligence</li>
+                        <li>
+                            Artificial Intelligence
+                        </li>
 
-                        <li>Machine Learning</li>
+                        <li>
+                            Machine Learning
+                        </li>
 
-                        <li>Data Science</li>
+                        <li>
+                            Data Science
+                        </li>
 
-                        <li>Automation</li>
+                        <li>
+                            Automation
+                        </li>
 
-                        <li>Cybersecurity</li>
+                        <li>
+                            Cybersecurity
+                        </li>
 
-                        <li>Software development</li>
+                        <li>
+                            Software development
+                        </li>
 
                     </ul>
 
@@ -327,10 +388,8 @@
                 </h2>
 
                 <p>
-
                     One of the simplest Python programs displays text
                     on the screen.
-
                 </p>
 
 
@@ -342,21 +401,19 @@
 
 
                 <p>
-
                     The <strong>print()</strong> function displays
                     information on the screen.
-
                 </p>
 
 
                 <div class="exercise">
 
-                    <strong>Practice:</strong>
+                    <h3>
+                        📝 Practice
+                    </h3>
 
                     <p>
-
                         Write a Python program that prints:
-
                     </p>
 
 
@@ -382,9 +439,7 @@
                 </h2>
 
                 <p>
-
                     A variable is a name used to store data.
-
                 </p>
 
 
@@ -404,9 +459,7 @@ print(country)</code></pre>
 
 
                 <p>
-
                     In this example:
-
                 </p>
 
                 <ul>
@@ -439,31 +492,47 @@ print(country)</code></pre>
                 </h2>
 
                 <p>
-
                     Python has several important data types.
-
                 </p>
 
 
                 <ul>
 
-                    <li>String</li>
+                    <li>
+                        String
+                    </li>
 
-                    <li>Integer</li>
+                    <li>
+                        Integer
+                    </li>
 
-                    <li>Float</li>
+                    <li>
+                        Float
+                    </li>
 
-                    <li>Complex</li>
+                    <li>
+                        Complex
+                    </li>
 
-                    <li>List</li>
+                    <li>
+                        List
+                    </li>
 
-                    <li>Tuple</li>
+                    <li>
+                        Tuple
+                    </li>
 
-                    <li>Set</li>
+                    <li>
+                        Set
+                    </li>
 
-                    <li>Dictionary</li>
+                    <li>
+                        Dictionary
+                    </li>
 
-                    <li>Boolean</li>
+                    <li>
+                        Boolean
+                    </li>
 
                 </ul>
 
@@ -505,9 +574,7 @@ passed = True             # Boolean</code></pre>
                 </h2>
 
                 <p>
-
                     A string is text surrounded by quotation marks.
-
                 </p>
 
 
@@ -527,9 +594,7 @@ print(len(name))</code></pre>
 
 
                 <p>
-
                     Useful string methods include:
-
                 </p>
 
                 <ul>
@@ -565,9 +630,7 @@ print(len(name))</code></pre>
                 </h2>
 
                 <p>
-
                     A list stores multiple values in one variable.
-
                 </p>
 
 
@@ -587,10 +650,8 @@ print(students[0])</code></pre>
 
 
                 <p>
-
                     Python list indexes start from
                     <strong>0</strong>.
-
                 </p>
 
 
@@ -618,11 +679,9 @@ students[2]  # Kofi</code></pre>
                 </h2>
 
                 <p>
-
                     A tuple is similar to a list, but tuples are
                     immutable, meaning their elements cannot normally
                     be changed after creation.
-
                 </p>
 
 
@@ -650,9 +709,7 @@ print(coordinates[0])</code></pre>
                 </h2>
 
                 <p>
-
                     A set is a collection that stores unique values.
-
                 </p>
 
 
@@ -666,9 +723,7 @@ print(numbers)</code></pre>
 
 
                 <p>
-
                     Duplicate values are automatically removed.
-
                 </p>
 
             </section>
@@ -685,10 +740,8 @@ print(numbers)</code></pre>
                 </h2>
 
                 <p>
-
                     A dictionary stores information using
                     key-value pairs.
-
                 </p>
 
 
@@ -724,9 +777,7 @@ print(student["course"])</code></pre>
                 </h2>
 
                 <p>
-
                     Conditions allow a program to make decisions.
-
                 </p>
 
 
@@ -786,9 +837,7 @@ else:
                 </h2>
 
                 <p>
-
                     Loops allow you to repeat instructions.
-
                 </p>
 
 
@@ -853,10 +902,8 @@ while number <= 5:
                 </h2>
 
                 <p>
-
                     A function is a reusable block of code designed
                     to perform a particular task.
-
                 </p>
 
 
@@ -902,10 +949,8 @@ greet("Julius")</code></pre>
                 </h2>
 
                 <p>
-
                     f-strings make it easy to insert variables
                     inside text.
-
                 </p>
 
 
@@ -945,10 +990,8 @@ print(f"My name is {name} and I am {age} years old.")</code></pre>
                 </h2>
 
                 <p>
-
                     The <strong>input()</strong> function allows a
                     Python program to receive information from a user.
-
                 </p>
 
 
@@ -967,11 +1010,9 @@ print(f"Hello {name}")</code></pre>
 
 
                 <p>
-
                     Input received from <strong>input()</strong> is
                     normally returned as text, so it may need to be
                     converted when performing numerical calculations.
-
                 </p>
 
 
@@ -1009,13 +1050,21 @@ print(age)</code></pre>
 
                     <ul>
 
-                        <li>Your name</li>
+                        <li>
+                            Your name
+                        </li>
 
-                        <li>Your age</li>
+                        <li>
+                            Your age
+                        </li>
 
-                        <li>Your school</li>
+                        <li>
+                            Your school
+                        </li>
 
-                        <li>Your course</li>
+                        <li>
+                            Your course
+                        </li>
 
                     </ul>
 
@@ -1033,16 +1082,12 @@ print(age)</code></pre>
                     </h3>
 
                     <p>
-
                         Create a Python program that checks whether
                         a student passed an examination.
-
                     </p>
 
                     <p>
-
                         The pass mark is <strong>50</strong>.
-
                     </p>
 
                 </div>
@@ -1055,10 +1100,8 @@ print(age)</code></pre>
                     </h3>
 
                     <p>
-
                         Create a list containing five student names
                         and use a loop to print every name.
-
                     </p>
 
                 </div>
@@ -1071,10 +1114,8 @@ print(age)</code></pre>
                     </h3>
 
                     <p>
-
                         Write a Python program that asks a user for
                         two numbers and displays their sum.
-
                     </p>
 
                 </div>
@@ -1093,6 +1134,8 @@ print(age)</code></pre>
                 </h2>
 
 
+                <!-- QUESTION 1 -->
+
                 <div class="exercise">
 
                     <h3>
@@ -1100,9 +1143,7 @@ print(age)</code></pre>
                     </h3>
 
                     <p>
-
                         What is a variable in Python?
-
                     </p>
 
 
@@ -1113,16 +1154,16 @@ print(age)</code></pre>
                         </summary>
 
                         <p>
-
                             A variable is a name used to store data
                             in a program.
-
                         </p>
 
                     </details>
 
                 </div>
 
+
+                <!-- QUESTION 2 -->
 
                 <div class="exercise">
 
@@ -1131,10 +1172,8 @@ print(age)</code></pre>
                     </h3>
 
                     <p>
-
                         Which Python data type is used to store
                         True or False?
-
                     </p>
 
 
@@ -1145,15 +1184,15 @@ print(age)</code></pre>
                         </summary>
 
                         <p>
-
                             <strong>Boolean (bool)</strong>
-
                         </p>
 
                     </details>
 
                 </div>
 
+
+                <!-- QUESTION 3 -->
 
                 <div class="exercise">
 
@@ -1162,10 +1201,8 @@ print(age)</code></pre>
                     </h3>
 
                     <p>
-
                         Write Python code that prints numbers
                         from 1 to 10.
-
                     </p>
 
 
@@ -1189,6 +1226,8 @@ print(age)</code></pre>
                 </div>
 
 
+                <!-- QUESTION 4 -->
+
                 <div class="exercise">
 
                     <h3>
@@ -1196,10 +1235,8 @@ print(age)</code></pre>
                     </h3>
 
                     <p>
-
                         Create a dictionary containing a student's
                         name, age and course.
-
                     </p>
 
 
@@ -1231,6 +1268,8 @@ print(student)</code></pre>
                 </div>
 
 
+                <!-- QUESTION 5 -->
+
                 <div class="exercise">
 
                     <h3>
@@ -1238,10 +1277,8 @@ print(student)</code></pre>
                     </h3>
 
                     <p>
-
                         Which function is used to display information
                         on the screen in Python?
-
                     </p>
 
 
@@ -1252,9 +1289,7 @@ print(student)</code></pre>
                         </summary>
 
                         <p>
-
                             <strong>print()</strong>
-
                         </p>
 
                     </details>
@@ -1275,14 +1310,13 @@ print(student)</code></pre>
                 </h2>
 
                 <p>
-
                     Create a simple student grading system.
-
                 </p>
 
                 <p>
                     The program should:
                 </p>
+
 
                 <ul>
 
@@ -1350,32 +1384,42 @@ print(f"{name} received grade {grade}")</code></pre>
                     </h3>
 
                     <p>
-
                         Improve the grading system by adding:
-
                     </p>
+
 
                     <ul>
 
-                        <li>Student ID</li>
+                        <li>
+                            Student ID
+                        </li>
 
-                        <li>Course name</li>
+                        <li>
+                            Course name
+                        </li>
 
-                        <li>Multiple subjects</li>
+                        <li>
+                            Multiple subjects
+                        </li>
 
-                        <li>Total score</li>
+                        <li>
+                            Total score
+                        </li>
 
-                        <li>Average score</li>
+                        <li>
+                            Average score
+                        </li>
 
-                        <li>Grade calculation</li>
+                        <li>
+                            Grade calculation
+                        </li>
 
                     </ul>
 
-                    <p>
 
+                    <p>
                         Try to build the program yourself before
                         looking for a solution.
-
                     </p>
 
                 </div>
@@ -1387,15 +1431,22 @@ print(f"{name} received grade {grade}")</code></pre>
                  TUTORIAL NAVIGATION
             ================================================== -->
 
-            <div class="lesson-nav">
+            <div class="tutorial-navigation">
 
-                <a href="tutorials.html">
-                    ← Tutorials
+
+                <a href="tutorials.html"
+                   class="read-btn">
+
+                    ← Back to Tutorials
+
                 </a>
 
 
-                <a href="html-tutorial.html">
-                    Next: HTML →
+                <a href="java-tutorial.html"
+                   class="read-btn">
+
+                    Java Tutorial →
+
                 </a>
 
             </div>
@@ -1419,17 +1470,16 @@ print(f"{name} received grade {grade}")</code></pre>
     </h2>
 
     <p>
-
-        Receive new tutorials, technology news and
-        digital tools from TechHub Ghana.
-
+        Get new programming tutorials, technology news
+        and digital tools from TechHub Ghana.
     </p>
 
 
-    <form>
+    <form id="newsletterForm">
 
         <input
             type="email"
+            id="newsletterEmail"
             placeholder="Enter your email"
             aria-label="Email address"
             required>
@@ -1452,6 +1502,8 @@ print(f"{name} received grade {grade}")</code></pre>
     <div class="footer-grid">
 
 
+        <!-- ABOUT -->
+
         <div>
 
             <h3>
@@ -1463,14 +1515,14 @@ print(f"{name} received grade {grade}")</code></pre>
             </p>
 
             <p>
-
                 Your trusted source for technology
                 tutorials, news and digital tools.
-
             </p>
 
         </div>
 
+
+        <!-- QUICK LINKS -->
 
         <div>
 
@@ -1504,6 +1556,8 @@ print(f"{name} received grade {grade}")</code></pre>
 
         </div>
 
+
+        <!-- COURSES -->
 
         <div>
 
@@ -1550,6 +1604,8 @@ print(f"{name} received grade {grade}")</code></pre>
         </div>
 
 
+        <!-- CONTACT -->
+
         <div>
 
             <h3>
@@ -1573,9 +1629,7 @@ print(f"{name} received grade {grade}")</code></pre>
 
 
     <p class="copyright">
-
         © 2026 TechHub Ghana. All Rights Reserved.
-
     </p>
 
 </footer>
@@ -1590,4 +1644,4 @@ print(f"{name} received grade {grade}")</code></pre>
 
 </body>
 
-                  </html>
+    </html>
