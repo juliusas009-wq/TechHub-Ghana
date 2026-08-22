@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-21T23:48:44.680308+00:00",
+  "updated": "2026-08-22T01:08:45.633697+00:00",
   "articles": [
+    {
+      "title": "Japanese space tech startup Letara expands beyond satellite thrusters with $16M",
+      "summary": "Japanese space startup Letara is betting its hybrid rocket technology can move beyond small satellite thrusters into a broader market for space, defense and security, after raising ¥2.6 billion ($16 million).",
+      "link": "https://techcrunch.com/2026/08/21/japanese-space-tech-startup-letara-expands-beyond-satellite-thrusters-with-16m/",
+      "date": "Sat, 22 Aug 2026 01:03:06 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Anthropic’s Opus 4.6 is a smut-machine",
       "summary": "Anthropic forbids its Claude models from generating sexually explicit content. But a series of tests conducted by TechCrunch found that it didn't take much to get past the restriction.",
@@ -150,14 +158,6 @@
       "summary": "Together, these permits would allow up to 8,000 robotaxis to be deployed over the next 12 months.",
       "link": "https://techcrunch.com/2026/08/20/tesla-uber-and-waymo-all-get-the-ok-to-operate-thousands-of-robotaxis-in-nevada/",
       "date": "Fri, 21 Aug 2026 00:23:36 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "AI data startup Micro1 reaches $500M gross run rate amid AI training boom",
-      "summary": "Surging demand for AI training data is driving rapid growth for the startup and its rivals.",
-      "link": "https://techcrunch.com/2026/08/20/ai-data-startup-micro1-reaches-500m-gross-run-rate-amid-ai-training-boom/",
-      "date": "Fri, 21 Aug 2026 00:13:44 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
