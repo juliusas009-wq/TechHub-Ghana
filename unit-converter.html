@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC SEO
+    ===================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#0b5cff">
+
+    <meta name="description"
+          content="Convert units quickly and easily with the TechHub Ghana Unit Converter. Convert length, weight, temperature, area, volume, speed, time and digital storage units.">
+
+    <meta name="keywords"
+          content="unit converter Ghana, unit conversion, length converter, weight converter, temperature converter, area converter, volume converter, speed converter, digital storage converter, TechHub Ghana">
+
+    <meta name="author"
+          content="TechHub Ghana">
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <!-- =====================================================
+         PAGE TITLE
+    ===================================================== -->
+
+    <title>
+        Unit Converter | TechHub Ghana
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ===================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ===================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         MAIN STYLESHEET
+    ===================================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- =====================================================
+         FAVICON
+    ===================================================== -->
+
+    <link rel="icon"
+          href="images/logo.png"
+          type="image/png">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="top-bar">
+
+
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <div class="logo">
+
+            <a href="index.html"
+               aria-label="TechHub Ghana Home">
+
+                <img src="images/logo.png"
+                     alt="TechHub Ghana Logo"
+                     width="56"
+                     height="56">
+
+            </a>
+
+
+            <div>
+
+                <h1>
+                    TechHub Ghana
+                </h1>
+
+                <p>
+                    Technology News • Tutorials • Digital Tools
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SEARCH
+        ================================================== -->
+
+        <form class="search-box"
+              role="search"
+              action="news.html">
+
+            <label for="unitSearch"
+                   class="sr-only">
+
+                Search TechHub Ghana
+
+            </label>
+
+            <input
+                type="search"
+                id="unitSearch"
+                name="q"
+                placeholder="Search technology..."
+                autocomplete="off"
+            >
+
+            <button type="submit"
+                    aria-label="Search">
+
+                🔍
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- =================================================
+         MOBILE MENU BUTTON
+    ================================================== -->
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="navMenu"
+        aria-expanded="false">
+
+        ☰
+
+    </button>
+
+
+    <!-- =================================================
+         NAVIGATION
+    ================================================== -->
+
+    <nav id="navMenu"
+         aria-label="Main navigation">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="tools.html"
+           class="active">
+            Tools
+        </a>
+
+        <a href="gpa.html">
+            GPA
+        </a>
+
+        <a href="qr-generator.html">
+            QR Generator
+        </a>
+
+        <a href="ai-assistant.html">
+            AI Assistant
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     BREAKING NEWS
+===================================================== -->
+
+<section class="breaking-news"
+         aria-label="TechHub Ghana latest updates">
+
+    <div class="today-date"
+         id="today">
+    </div>
+
+    <marquee>
+
+        🔄 TechHub Ghana • Unit Converter • Student Tools •
+        Technology • Learning • Innovation • Digital Tools
+
+    </marquee>
+
+</section>
+
+
+<!-- =====================================================
+     UNIT CONVERTER HERO
+===================================================== -->
+
+<section class="tool-hero">
+
+    <div>
+
+        <span class="category">
+            🔄 DIGITAL TOOL
+        </span>
+
+        <h2>
+            Unit Converter
+        </h2>
+
+        <p>
+            Convert measurements quickly and easily between
+            different units of length, weight, temperature,
+            area, volume, speed, time and digital storage.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     UNIT CONVERTER
+===================================================== -->
+
+<section class="section">
+
+    <div class="calculator-container">
+
+
+        <!-- =================================================
+             INTRODUCTION
+        ================================================== -->
+
+        <div class="calculator-header">
+
+            <h2>
+                🔄 Convert Units
+            </h2>
+
+            <p>
+                Select a category, choose the units you want
+                to convert, enter a value and get your result
+                instantly.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             CONVERTER FORM
+        ================================================== -->
+
+        <form id="converterForm">
+
+
+            <!-- =================================================
+                 CATEGORY
+            ================================================== -->
+
+            <div class="converter-field">
+
+                <label for="category">
+
+                    📂 Conversion Category
+
+                </label>
+
+                <select id="category"
+                        required>
+
+                    <option value="length">
+                        Length
+                    </option>
+
+                    <option value="weight">
+                        Weight / Mass
+                    </option>
+
+                    <option value="temperature">
+                        Temperature
+                    </option>
+
+                    <option value="area">
+                        Area
+                    </option>
+
+                    <option value="volume">
+                        Volume
+                    </option>
+
+                    <option value="speed">
+                        Speed
+                    </option>
+
+                    <option value="time">
+                        Time
+                    </option>
+
+                    <option value="digital">
+                        Digital Storage
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- =================================================
+                 VALUE
+            ================================================== -->
+
+            <div class="converter-field">
+
+                <label for="inputValue">
+
+                    🔢 Value
+
+                </label>
+
+                <input
+                    type="number"
+                    id="inputValue"
+                    placeholder="Enter value"
+                    step="any"
+                    required>
+
+            </div>
+
+
+            <!-- =================================================
+                 FROM / TO
+            ================================================== -->
+
+            <div class="converter-grid">
+
+
+                <!-- FROM -->
+
+                <div class="converter-field">
+
+                    <label for="fromUnit">
+
+                        From
+
+                    </label>
+
+                    <select id="fromUnit"
+                            required>
+                    </select>
+
+                </div>
+
+
+                <!-- TO -->
+
+                <div class="converter-field">
+
+                    <label for="toUnit">
+
+                        To
+
+                    </label>
+
+                    <select id="toUnit"
+                            required>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 CONVERT BUTTONS
+            ================================================== -->
+
+            <div class="calculator-actions">
+
+                <button
+                    type="submit"
+                    class="read-btn">
+
+                    🔄 Convert
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="swapBtn">
+
+                    ⇄ Swap
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="resetBtn">
+
+                    🔄 Reset
+
+                </button>
+
+            </div>
+
+        </form>
+
+
+        <!-- =================================================
+             RESULT
+        ================================================== -->
+
+        <div
+            id="result"
+            class="gpa-result"
+            aria-live="polite">
+
+        </div>
+
+
+        <!-- =================================================
+             CONVERSION INFORMATION
+        ================================================== -->
+
+        <div class="highlight-box">
+
+            <h3>
+                💡 How to use the Unit Converter
+            </h3>
+
+            <p>
+                Choose the type of measurement you want to
+                convert, enter your value, select the original
+                unit and choose the unit you want to convert to.
+            </p>
+
+            <p>
+                <strong>
+                    Example: 1 kilometre = 0.621371 miles
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SUPPORTED CONVERSIONS
+===================================================== -->
+
+<section class="section">
+
+    <h2>
+        📐 Supported Conversions
+    </h2>
+
+    <p class="section-intro">
+        Use TechHub Ghana's Unit Converter for common
+        measurements used in school, work and everyday life.
+    </p>
+
+
+    <div class="tutorial-grid">
+
+
+        <!-- LENGTH -->
+
+        <div class="tutorial">
+
+            <h3>
+                📏 Length
+            </h3>
+
+            <p>
+                Convert metres, kilometres, centimetres,
+                millimetres, inches, feet, yards and miles.
+            </p>
+
+        </div>
+
+
+        <!-- WEIGHT -->
+
+        <div class="tutorial">
+
+            <h3>
+                ⚖️ Weight / Mass
+            </h3>
+
+            <p>
+                Convert kilograms, grams, milligrams,
+                pounds and ounces.
+            </p>
+
+        </div>
+
+
+        <!-- TEMPERATURE -->
+
+        <div class="tutorial">
+
+            <h3>
+                🌡️ Temperature
+            </h3>
+
+            <p>
+                Convert Celsius, Fahrenheit and Kelvin.
+            </p>
+
+        </div>
+
+
+        <!-- AREA -->
+
+        <div class="tutorial">
+
+            <h3>
+                📐 Area
+            </h3>
+
+            <p>
+                Convert square metres, square kilometres,
+                square feet, acres and hectares.
+            </p>
+
+        </div>
+
+
+        <!-- VOLUME -->
+
+        <div class="tutorial">
+
+            <h3>
+                🧪 Volume
+            </h3>
+
+            <p>
+                Convert litres, millilitres, cubic metres,
+                gallons and cups.
+            </p>
+
+        </div>
+
+
+        <!-- SPEED -->
+
+        <div class="tutorial">
+
+            <h3>
+                🚗 Speed
+            </h3>
+
+            <p>
+                Convert kilometres per hour, metres per second
+                and miles per hour.
+            </p>
+
+        </div>
+
+
+        <!-- TIME -->
+
+        <div class="tutorial">
+
+            <h3>
+                ⏱️ Time
+            </h3>
+
+            <p>
+                Convert seconds, minutes, hours, days and weeks.
+            </p>
+
+        </div>
+
+
+        <!-- DIGITAL -->
+
+        <div class="tutorial">
+
+            <h3>
+                💾 Digital Storage
+            </h3>
+
+            <p>
+                Convert bytes, kilobytes, megabytes, gigabytes
+                and terabytes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OTHER TOOLS
+===================================================== -->
+
+<section class="section">
+
+    <h2>
+        🛠️ More TechHub Ghana Tools
+    </h2>
+
+    <p class="section-intro">
+        Explore more useful tools for students and technology
+        enthusiasts.
+    </p>
+
+
+    <div class="tutorial-grid">
+
+
+        <!-- GPA -->
+
+        <div class="tutorial">
+
+            <h3>
+                🎓 GPA Calculator
+            </h3>
+
+            <p>
+                Calculate your GPA using course marks and
+                credit hours.
+            </p>
+
+            <a href="gpa.html"
+               class="read-btn">
+
+                Open GPA →
+
+            </a>
+
+        </div>
+
+
+        <!-- QR -->
+
+        <div class="tutorial">
+
+            <h3>
+                📱 QR Generator
+            </h3>
+
+            <p>
+                Generate QR codes quickly and easily.
+            </p>
+
+            <a href="qr-generator.html"
+               class="read-btn">
+
+                Open QR →
+
+            </a>
+
+        </div>
+
+
+        <!-- PASSWORD -->
+
+        <div class="tutorial">
+
+            <h3>
+                🔐 Password Generator
+            </h3>
+
+            <p>
+                Create strong and secure random passwords.
+            </p>
+
+            <a href="password-generator.html"
+               class="read-btn">
+
+                Open Tool →
+
+            </a>
+
+        </div>
+
+
+        <!-- ALL TOOLS -->
+
+        <div class="tutorial">
+
+            <h3>
+                🛠️ All Tools
+            </h3>
+
+            <p>
+                Explore all available TechHub Ghana digital
+                tools.
+            </p>
+
+            <a href="tools.html"
+               class="read-btn">
+
+                View Tools →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+    <h2>
+        📩 Stay Updated
+    </h2>
+
+    <p>
+        Get technology news, tutorials and useful digital tools.
+    </p>
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required>
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
+
+        <div>
+
+            <h3>
+                TechHub Ghana
+            </h3>
+
+            <p>
+                Technology • Learning • Innovation
+            </p>
+
+            <p>
+                Your platform for technology news,
+                tutorials and useful digital tools.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             QUICK LINKS
+        ================================================== -->
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
+
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
+
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
+
+            <p>
+                <a href="tools.html">
+                    Tools
+                </a>
+            </p>
+
+            <p>
+                <a href="about.html">
+                    About
+                </a>
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             DIGITAL TOOLS
+        ================================================== -->
+
+        <div>
+
+            <h3>
+                Digital Tools
+            </h3>
+
+            <p>
+                <a href="gpa.html">
+                    🎓 GPA Calculator
+                </a>
+            </p>
+
+            <p>
+                <a href="qr-generator.html">
+                    📱 QR Generator
+                </a>
+            </p>
+
+            <p>
+                <a href="ai-assistant.html">
+                    🤖 AI Assistant
+                </a>
+            </p>
+
+            <p>
+                <a href="password-generator.html">
+                    🔐 Password Generator
+                </a>
+            </p>
+
+            <p>
+                <a href="age-calculator.html">
+                    🎂 Age Calculator
+                </a>
+            </p>
+
+            <p>
+                <a href="unit-converter.html"
+                   aria-current="page">
+                    🔄 Unit Converter
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                🇬🇭 Ghana
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact TechHub Ghana
+                </a>
+            </p>
+
+            <p>
+                <a href="mailto:juliusas009@gmail.com">
+                    📧 juliusas009@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <a href="tel:+233534057748">
+                    📱 +233 534 057 748
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 TechHub Ghana.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     UNIT CONVERTER JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+function toggleMenu() {
+
+    const nav =
+        document.getElementById("navMenu");
+
+    const button =
+        document.getElementById("menuBtn");
+
+    if (!nav) return;
+
+    nav.classList.toggle("show");
+
+    if (button) {
+
+        const isOpen =
+            nav.classList.contains("show");
+
+        button.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    }
+
+}
+
+
+const menuButton =
+    document.getElementById("menuBtn");
+
+
+if (menuButton) {
+
+    menuButton.addEventListener(
+        "click",
+        toggleMenu
+    );
+
+}
+
+
+/* =====================================================
+   UNIT DATA
+===================================================== */
+
+const units = {
+
+
+    /* =================================================
+       LENGTH
+    ================================================== */
+
+    length: {
+
+        meter: {
+            name: "Metre (m)",
+            factor: 1
+        },
+
+        kilometer: {
+            name: "Kilometre (km)",
+            factor: 1000
+        },
+
+        centimeter: {
+            name: "Centimetre (cm)",
+            factor: 0.01
+        },
+
+        millimeter: {
+            name: "Millimetre (mm)",
+            factor: 0.001
+        },
+
+        micrometer: {
+            name: "Micrometre (µm)",
+            factor: 0.000001
+        },
+
+        nanometer: {
+            name: "Nanometre (nm)",
+            factor: 0.000000001
+        },
+
+        mile: {
+            name: "Mile (mi)",
+            factor: 1609.344
+        },
+
+        yard: {
+            name: "Yard (yd)",
+            factor: 0.9144
+        },
+
+        foot: {
+            name: "Foot (ft)",
+            factor: 0.3048
+        },
+
+        inch: {
+            name: "Inch (in)",
+            factor: 0.0254
+        }
+
+    },
+
+
+    /* =================================================
+       WEIGHT
+    ================================================== */
+
+    weight: {
+
+        kilogram: {
+            name: "Kilogram (kg)",
+            factor: 1
+        },
+
+        gram: {
+            name: "Gram (g)",
+            factor: 0.001
+        },
+
+        milligram: {
+            name: "Milligram (mg)",
+            factor: 0.000001
+        },
+
+        microgram: {
+            name: "Microgram (µg)",
+            factor: 0.000000001
+        },
+
+        tonne: {
+            name: "Metric Tonne (t)",
+            factor: 1000
+        },
+
+        pound: {
+            name: "Pound (lb)",
+            factor: 0.45359237
+        },
+
+        ounce: {
+            name: "Ounce (oz)",
+            factor: 0.028349523125
+        }
+
+    },
+
+
+    /* =================================================
+       TEMPERATURE
+    ================================================== */
+
+    temperature: {
+
+        celsius: {
+            name: "Celsius (°C)"
+        },
+
+        fahrenheit: {
+            name: "Fahrenheit (°F)"
+        },
+
+        kelvin: {
+            name: "Kelvin (K)"
+        }
+
+    },
+
+
+    /* =================================================
+       AREA
+    ================================================== */
+
+    area: {
+
+        squareMeter: {
+            name: "Square Metre (m²)",
+            factor: 1
+        },
+
+        squareKilometer: {
+            name: "Square Kilometre (km²)",
+            factor: 1000000
+        },
+
+        squareCentimeter: {
+            name: "Square Centimetre (cm²)",
+            factor: 0.0001
+        },
+
+        squareMillimeter: {
+            name: "Square Millimetre (mm²)",
+            factor: 0.000001
+        },
+
+        squareMile: {
+            name: "Square Mile (mi²)",
+            factor: 2589988.110336
+        },
+
+        squareYard: {
+            name: "Square Yard (yd²)",
+            factor: 0.83612736
+        },
+
+        squareFoot: {
+            name: "Square Foot (ft²)",
+            factor: 0.09290304
+        },
+
+        squareInch: {
+            name: "Square Inch (in²)",
+            factor: 0.00064516
+        },
+
+        hectare: {
+            name: "Hectare (ha)",
+            factor: 10000
+        },
+
+        acre: {
+            name: "Acre",
+            factor: 4046.8564224
+        }
+
+    },
+
+
+    /* =================================================
+       VOLUME
+    ================================================== */
+
+    volume: {
+
+        liter: {
+            name: "Litre (L)",
+            factor: 1
+        },
+
+        milliliter: {
+            name: "Millilitre (mL)",
+            factor: 0.001
+        },
+
+        cubicMeter: {
+            name: "Cubic Metre (m³)",
+            factor: 1000
+        },
+
+        cubicCentimeter: {
+            name: "Cubic Centimetre (cm³)",
+            factor: 0.001
+        },
+
+        gallonUS: {
+            name: "US Gallon",
+            factor: 3.785411784
+        },
+
+        quartUS: {
+            name: "US Quart",
+            factor: 0.946352946
+        },
+
+        pintUS: {
+            name: "US Pint",
+            factor: 0.473176473
+        },
+
+        cupUS: {
+            name: "US Cup",
+            factor: 0.2365882365
+        },
+
+        fluidOunceUS: {
+            name: "US Fluid Ounce",
+            factor: 0.0295735295625
+        }
+
+    },
+
+
+    /* =================================================
+       SPEED
+    ================================================== */
+
+    speed: {
+
+        meterSecond: {
+            name: "Metre/Second (m/s)",
+            factor: 1
+        },
+
+        kilometerHour: {
+            name: "Kilometre/Hour (km/h)",
+            factor: 0.2777777777778
+        },
+
+        mileHour: {
+            name: "Mile/Hour (mph)",
+            factor: 0.44704
+        },
+
+        footSecond: {
+            name: "Foot/Second (ft/s)",
+            factor: 0.3048
+        },
+
+        knot: {
+            name: "Knot (kn)",
+            factor: 0.5144444444444
+        }
+
+    },
+
+
+    /* =================================================
+       TIME
+    ================================================== */
+
+    time: {
+
+        second: {
+            name: "Second",
+            factor: 1
+        },
+
+        millisecond: {
+            name: "Millisecond",
+            factor: 0.001
+        },
+
+        minute: {
+            name: "Minute",
+            factor: 60
+        },
+
+        hour: {
+            name: "Hour",
+            factor: 3600
+        },
+
+        day: {
+            name: "Day",
+            factor: 86400
+        },
+
+        week: {
+            name: "Week",
+            factor: 604800
+        },
+
+        month: {
+            name: "Month (30 days)",
+            factor: 2592000
+        },
+
+        year: {
+            name: "Year (365 days)",
+            factor: 31536000
+        }
+
+    },
+
+
+    /* =================================================
+       DIGITAL STORAGE
+    ================================================== */
+
+    digital: {
+
+        bit: {
+            name: "Bit (bit)",
+            factor: 1
+        },
+
+        byte: {
+            name: "Byte (B)",
+            factor: 8
+        },
+
+        kilobit: {
+            name: "Kilobit (Kb)",
+            factor: 1000
+        },
+
+        kilobyte: {
+            name: "Kilobyte (KB)",
+            factor: 8000
+        },
+
+        megabit: {
+            name: "Megabit (Mb)",
+            factor: 1000000
+        },
+
+        megabyte: {
+            name: "Megabyte (MB)",
+            factor: 8000000
+        },
+
+        gigabit: {
+            name: "Gigabit (Gb)",
+            factor: 1000000000
+        },
+
+        gigabyte: {
+            name: "Gigabyte (GB)",
+            factor: 8000000000
+        },
+
+        terabit: {
+            name: "Terabit (Tb)",
+            factor: 1000000000000
+        },
+
+        terabyte: {
+            name: "Terabyte (TB)",
+            factor: 8000000000000
+        }
+
+    }
+
+};
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const category =
+    document.getElementById("category");
+
+const inputValue =
+    document.getElementById("inputValue");
+
+const fromUnit =
+    document.getElementById("fromUnit");
+
+const toUnit =
+    document.getElementById("toUnit");
+
+const converterForm =
+    document.getElementById("converterForm");
+
+const result =
+    document.getElementById("result");
+
+const swapBtn =
+    document.getElementById("swapBtn");
+
+const resetBtn =
+    document.getElementById("resetBtn");
+
+
+/* =====================================================
+   LOAD UNITS
+===================================================== */
+
+function loadUnits() {
+
+    const selectedCategory =
+        category.value;
+
+    const categoryUnits =
+        units[selectedCategory];
+
+
+    fromUnit.innerHTML = "";
+
+    toUnit.innerHTML = "";
+
+
+    Object.keys(categoryUnits).forEach(
+        function (key) {
+
+            const optionFrom =
+                document.createElement("option");
+
+            optionFrom.value =
+                key;
+
+            optionFrom.textContent =
+                categoryUnits[key].name;
+
+
+            const optionTo =
+                document.createElement("option");
+
+            optionTo.value =
+                key;
+
+            optionTo.textContent =
+                categoryUnits[key].name;
+
+
+            fromUnit.appendChild(
+                optionFrom
+            );
+
+            toUnit.appendChild(
+                optionTo
+            );
+
+        }
+    );
+
+
+    const availableUnits =
+        Object.keys(categoryUnits);
+
+
+    if (availableUnits.length > 1) {
+
+        toUnit.value =
+            availableUnits[1];
+
+    }
+
+
+    result.innerHTML = "";
+
+}
+
+
+/* =====================================================
+   TEMPERATURE CONVERSION
+===================================================== */
+
+function convertTemperature(
+    value,
+    from,
+    to
+) {
+
+    let celsius;
+
+
+    /* FROM CELSIUS */
+
+    if (from === "celsius") {
+
+        celsius = value;
+
+    }
+
+
+    /* FROM FAHRENHEIT */
+
+    else if (from === "fahrenheit") {
+
+        celsius =
+            (value - 32) *
+            5 / 9;
+
+    }
+
+
+    /* FROM KELVIN */
+
+    else if (from === "kelvin") {
+
+        celsius =
+            value - 273.15;
+
+    }
+
+
+    /* TO CELSIUS */
+
+    if (to === "celsius") {
+
+        return celsius;
+
+    }
+
+
+    /* TO FAHRENHEIT */
+
+    if (to === "fahrenheit") {
+
+        return (
+            celsius *
+            9 / 5
+        ) + 32;
+
+    }
+
+
+    /* TO KELVIN */
+
+    if (to === "kelvin") {
+
+        return celsius + 273.15;
+
+    }
+
+
+    return value;
+
+}
+
+
+/* =====================================================
+   GENERAL CONVERSION
+===================================================== */
+
+function convertValue(
+    value,
+    categoryName,
+    from,
+    to
+) {
+
+    if (
+        categoryName ===
+        "temperature"
+    ) {
+
+        return convertTemperature(
+            value,
+            from,
+            to
+        );
+
+    }
+
+
+    const categoryUnits =
+        units[categoryName];
+
+
+    const fromFactor =
+        categoryUnits[from].factor;
+
+    const toFactor =
+        categoryUnits[to].factor;
+
+
+    const baseValue =
+        value * fromFactor;
+
+
+    return baseValue / toFactor;
+
+}
+
+
+/* =====================================================
+   FORMAT RESULT
+===================================================== */
+
+function formatNumber(number) {
+
+    if (!Number.isFinite(number)) {
+
+        return "Invalid result";
+
+    }
+
+
+    if (number === 0) {
+
+        return "0";
+
+    }
+
+
+    if (
+        Math.abs(number) >=
+        0.000001
+        &&
+        Math.abs(number) < 1000000000000
+    ) {
+
+        return Number(
+            number.toFixed(10)
+        ).toLocaleString(
+            "en-US",
+            {
+                maximumFractionDigits: 10
+            }
+        );
+
+    }
+
+
+    return number.toExponential(6);
+
+}
+
+
+/* =====================================================
+   CONVERT
+===================================================== */
+
+converterForm.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
+
+
+        const value =
+            parseFloat(
+                inputValue.value
+            );
+
+
+        if (
+            Number.isNaN(value)
+            ||
+            !Number.isFinite(value)
+        ) {
+
+            alert(
+                "Please enter a valid number."
+            );
+
+            inputValue.focus();
+
+            return;
+
+        }
+
+
+        const selectedCategory =
+            category.value;
+
+        const from =
+            fromUnit.value;
+
+        const to =
+            toUnit.value;
+
+
+        const converted =
+            convertValue(
+                value,
+                selectedCategory,
+                from,
+                to
+            );
+
+
+        const fromName =
+            units[
+                selectedCategory
+            ][from].name;
+
+        const toName =
+            units[
+                selectedCategory
+            ][to].name;
+
+
+        result.innerHTML = `
+
+            <div class="result-card">
+
+                <span class="result-icon">
+                    🔄
+                </span>
+
+                <h2>
+                    Conversion Result
+                </h2>
+
+                <div class="gpa-number">
+                    ${formatNumber(converted)}
+                </div>
+
+                <p>
+                    ${toName}
+                </p>
+
+                <p class="result-message">
+
+                    ${formatNumber(value)}
+                    ${fromName}
+                    =
+                    ${formatNumber(converted)}
+                    ${toName}
+
+                </p>
+
+            </div>
+
+        `;
+
+
+        result.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }
+);
+
+
+/* =====================================================
+   CATEGORY CHANGE
+===================================================== */
+
+category.addEventListener(
+    "change",
+    function () {
+
+        loadUnits();
+
+    }
+);
+
+
+/* =====================================================
+   SWAP UNITS
+===================================================== */
+
+swapBtn.addEventListener(
+    "click",
+    function () {
+
+        const currentFrom =
+            fromUnit.value;
+
+        fromUnit.value =
+            toUnit.value;
+
+        toUnit.value =
+            currentFrom;
+
+
+        if (inputValue.value) {
+
+            converterForm.dispatchEvent(
+                new Event("submit")
+            );
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+resetBtn.addEventListener(
+    "click",
+    function () {
+
+        converterForm.reset();
+
+        category.value =
+            "length";
+
+        loadUnits();
+
+        inputValue.value =
+            "";
+
+        result.innerHTML =
+            "";
+
+    }
+);
+
+
+/* =====================================================
+   TODAY'S DATE
+===================================================== */
+
+const today =
+    document.getElementById(
+        "today"
+    );
+
+
+if (today) {
+
+    const date =
+        new Date();
+
+
+    today.textContent =
+        date.toLocaleDateString(
+            "en-GH",
+            {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            }
+        );
+
+}
+
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+
+const newsletterForm =
+    document.getElementById(
+        "newsletterForm"
+    );
+
+
+if (newsletterForm) {
+
+    newsletterForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            const email =
+                document.getElementById(
+                    "newsletterEmail"
+                );
+
+
+            if (
+                email &&
+                email.value.trim()
+            ) {
+
+                alert(
+                    "Thank you for subscribing to TechHub Ghana!"
+                );
+
+                newsletterForm.reset();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   INITIALIZE
+===================================================== */
+
+loadUnits();
+
+</script>
+
+
+</body>
+
+  </html>
