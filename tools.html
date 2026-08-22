@@ -25,6 +25,11 @@
         content="TechHub Ghana"
     >
 
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
     <title>Digital Tools | TechHub Ghana</title>
 
 
@@ -80,6 +85,7 @@
 
 <header class="main-header">
 
+
     <!-- =====================================================
          TOP BAR
     ====================================================== -->
@@ -100,6 +106,8 @@
             <img
                 src="images/logo.png"
                 alt="TechHub Ghana Logo"
+                width="56"
+                height="56"
             >
 
             <div class="logo-text">
@@ -249,7 +257,7 @@
 
 <section
     class="breaking-news"
-    aria-label="TechHub Ghana updates"
+    aria-label="TechHub Ghana technology updates"
 >
 
     <marquee
@@ -257,10 +265,14 @@
         direction="left"
     >
 
-        🛠️ Free Digital Tools • 🎓 GPA Calculator •
-        🔳 QR Generator • 🤖 AI Assistant •
-        🔐 Password Generator • 🎂 Age Calculator •
-        🔄 Unit Converter • 💻 TechHub Ghana
+        🛠️ Free Digital Tools •
+        🎓 GPA Calculator •
+        🔳 QR Generator •
+        🤖 AI Assistant •
+        🔐 Password Generator •
+        🎂 Age Calculator •
+        🔄 Unit Converter •
+        💻 TechHub Ghana
 
     </marquee>
 
@@ -333,7 +345,9 @@
         <div class="card-grid">
 
 
-            <!-- GPA -->
+            <!-- =================================================
+                 GPA CALCULATOR
+            ================================================== -->
 
             <article class="tool-card">
 
@@ -363,7 +377,9 @@
             </article>
 
 
-            <!-- QR -->
+            <!-- =================================================
+                 QR GENERATOR
+            ================================================== -->
 
             <article class="tool-card">
 
@@ -393,7 +409,9 @@
             </article>
 
 
-            <!-- AI -->
+            <!-- =================================================
+                 AI ASSISTANT
+            ================================================== -->
 
             <article class="tool-card">
 
@@ -423,7 +441,9 @@
             </article>
 
 
-            <!-- PASSWORD -->
+            <!-- =================================================
+                 PASSWORD GENERATOR
+            ================================================== -->
 
             <article class="tool-card">
 
@@ -453,7 +473,9 @@
             </article>
 
 
-            <!-- AGE -->
+            <!-- =================================================
+                 AGE CALCULATOR
+            ================================================== -->
 
             <article class="tool-card">
 
@@ -483,7 +505,9 @@
             </article>
 
 
-            <!-- UNIT CONVERTER -->
+            <!-- =================================================
+                 UNIT CONVERTER
+            ================================================== -->
 
             <article class="tool-card">
 
@@ -543,6 +567,8 @@
         <div class="card-grid">
 
 
+            <!-- FAST -->
+
             <article class="tool-card">
 
                 <div
@@ -563,6 +589,8 @@
 
             </article>
 
+
+            <!-- FREE -->
 
             <article class="tool-card">
 
@@ -585,6 +613,8 @@
             </article>
 
 
+            <!-- MOBILE -->
+
             <article class="tool-card">
 
                 <div
@@ -606,6 +636,8 @@
             </article>
 
 
+            <!-- STUDENT -->
+
             <article class="tool-card">
 
                 <div
@@ -625,7 +657,6 @@
                 </p>
 
             </article>
-
 
         </div>
 
@@ -655,6 +686,8 @@
                 </h2>
 
 
+                <!-- GPA -->
+
                 <article class="news-card">
 
                     <div>
@@ -679,6 +712,8 @@
 
                 </article>
 
+
+                <!-- QR -->
 
                 <article class="news-card">
 
@@ -705,6 +740,8 @@
                 </article>
 
 
+                <!-- AI -->
+
                 <article class="news-card">
 
                     <div>
@@ -729,6 +766,8 @@
 
                 </article>
 
+
+                <!-- PASSWORD -->
 
                 <article class="news-card">
 
@@ -763,7 +802,7 @@
 
             <aside
                 class="sidebar"
-                aria-label="Quick links"
+                aria-label="TechHub Ghana quick links"
             >
 
                 <h3>
@@ -797,6 +836,13 @@
                     </li>
 
                     <li>
+                        <a href="tools.html"
+                           aria-current="page">
+                            🛠️ Digital Tools
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="gpa.html">
                             🎓 GPA Calculator
                         </a>
@@ -817,6 +863,18 @@
                     <li>
                         <a href="password-generator.html">
                             🔐 Password Generator
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="age-calculator.html">
+                            🎂 Age Calculator
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="unit-converter.html">
+                            🔄 Unit Converter
                         </a>
                     </li>
 
@@ -868,6 +926,7 @@
             <input
                 type="email"
                 id="newsletterEmail"
+                name="email"
                 placeholder="Enter your email"
                 aria-label="Email address"
                 autocomplete="email"
@@ -1057,9 +1116,7 @@
 
 
     <p class="copyright">
-
         © 2026 TechHub Ghana. All Rights Reserved.
-
     </p>
 
 </footer>
@@ -1099,7 +1156,9 @@ document.addEventListener(
 
 
                 const emailInput =
-                    document.getElementById("newsletterEmail");
+                    document.getElementById(
+                        "newsletterEmail"
+                    );
 
 
                 if (!emailInput) {
@@ -1112,8 +1171,11 @@ document.addEventListener(
 
 
                 if (!email) {
+
                     emailInput.focus();
+
                     return;
+
                 }
 
 
