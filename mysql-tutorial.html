@@ -3,240 +3,885 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =========================================================
+         BASIC DOCUMENT SETUP
+    ========================================================== -->
 
-<title>MySQL Tutorial | TechHub Ghana</title>
+    <meta charset="UTF-8">
 
-<meta name="description"
-content="Learn MySQL databases from beginner to advanced with practical SQL examples at TechHub Ghana.">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
 
-<link rel="stylesheet" href="style.css">
+    <meta
+        name="theme-color"
+        content="#0b5cff"
+    >
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+        name="description"
+        content="Learn MySQL databases from beginner to advanced with practical SQL examples at TechHub Ghana. Learn databases, tables, SQL queries, relationships and database management."
+    >
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+    <meta
+        name="keywords"
+        content="MySQL tutorial Ghana, MySQL tutorial, learn MySQL, SQL tutorial, databases, SQL queries, database management, TechHub Ghana"
+    >
+
+    <meta
+        name="author"
+        content="TechHub Ghana"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <title>MySQL Tutorial | TechHub Ghana</title>
+
+
+    <!-- =========================================================
+         OPEN GRAPH
+    ========================================================== -->
+
+    <meta
+        property="og:type"
+        content="article"
+    >
+
+    <meta
+        property="og:title"
+        content="MySQL Tutorial | TechHub Ghana"
+    >
+
+    <meta
+        property="og:description"
+        content="Learn MySQL databases from beginner to advanced with practical SQL examples at TechHub Ghana."
+    >
+
+    <meta
+        property="og:image"
+        content="images/logo.png"
+    >
+
+    <meta
+        property="og:site_name"
+        content="TechHub Ghana"
+    >
+
+
+    <!-- =========================================================
+         GOOGLE FONT
+    ========================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         MAIN TECHHUB STYLESHEET
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =========================================================
+         FAVICON
+    ========================================================== -->
+
+    <link
+        rel="icon"
+        href="images/logo.png"
+        type="image/png"
+    >
+
+
+    <!-- =========================================================
+         PAGE SIDE SPACING
+         MATCHED TO STANDARD TECHHUB PAGE
+    ========================================================== -->
+
+    <style>
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ====================================================== */
+
+        main {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .section {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tutorial-page {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tutorial-content {
+            width: 100%;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 0;
+        }
+
+
+        /* =====================================================
+           HEADER LOGO
+           SAME STANDARD AS CSS / CONTACT PAGE
+        ====================================================== */
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            max-width: 56px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            min-width: 0;
+        }
+
+        .logo-text h1,
+        .logo-text p {
+            display: block;
+        }
+
+        .logo-text h1 {
+            white-space: nowrap;
+        }
+
+        .logo-text p {
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           CODE BLOCKS
+        ====================================================== */
+
+        .code-box {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .code-box pre {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+
+        /* =====================================================
+           TUTORIAL NAVIGATION
+        ====================================================== */
+
+        .tutorial-navigation {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        .newsletter {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .footer-grid,
+        .copyright {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           MOBILE — 768px
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            main {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .section,
+            .tutorial-page {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .tutorial-content {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .top-bar {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .logo {
+                gap: 9px;
+                max-width: calc(100% - 58px);
+            }
+
+            .logo img {
+                width: 44px;
+                height: 44px;
+                min-width: 44px;
+                max-width: 44px;
+            }
+
+            .logo-text {
+                min-width: 0;
+                overflow: hidden;
+            }
+
+            .logo-text h1 {
+                font-size: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .logo-text p {
+                font-size: 0.58rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .code-box {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            footer {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONES — 480px
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            main {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .top-bar {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .logo {
+                gap: 8px;
+            }
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                max-width: 40px;
+            }
+
+            .logo-text h1 {
+                font-size: 0.92rem;
+            }
+
+            .logo-text p {
+                font-size: 0.52rem;
+            }
+
+            footer {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
-<body>
 
+<body id="top">
 
-<!-- ================= HEADER ================= -->
 
-<header>
+    <!-- =========================================================
+         SKIP LINK
+    ========================================================== -->
 
-<div class="top-bar">
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to main content
+    </a>
 
-<div class="logo">
 
-<img src="images/logo.png" alt="TechHub Ghana Logo">
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
 
-<div>
+    <header
+        class="main-header"
+        id="siteHeader"
+    >
 
-<h1>TechHub Ghana</h1>
+        <div class="top-bar">
 
-<p>Technology • Learning • Innovation</p>
 
-</div>
+            <!-- =================================================
+                 STANDARD TECHHUB LOGO
+            ================================================= -->
 
-</div>
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="TechHub Ghana home"
+            >
 
+                <img
+                    src="images/logo.png"
+                    alt="TechHub Ghana logo"
+                    width="56"
+                    height="56"
+                    loading="eager"
+                    decoding="async"
+                >
 
-<div class="search-box">
+                <div class="logo-text">
 
-<input
-type="text"
-placeholder="Search tutorials...">
+                    <h1>
+                        TechHub Ghana
+                    </h1>
 
-<button>🔍</button>
+                    <p>
+                        Technology • Tutorials • Digital Tools
+                    </p>
 
-</div>
+                </div>
 
-</div>
+            </a>
 
 
-<button class="menu-btn" onclick="toggleMenu">
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================= -->
 
-☰
+            <div class="header-right">
 
-</button>
 
+                <!-- SEARCH -->
 
-<nav id="navMenu">
+                <form
+                    class="search-box"
+                    action="news.html"
+                    method="get"
+                    role="search"
+                >
 
-<a href="index.html">Home</a>
+                    <label
+                        for="tutorialSearch"
+                        class="sr-only"
+                    >
+                        Search tutorials
+                    </label>
 
-<a href="news.html">News</a>
+                    <input
+                        type="search"
+                        id="tutorialSearch"
+                        name="q"
+                        placeholder="Search tutorials..."
+                        autocomplete="off"
+                    >
 
-<a class="active" href="tutorials.html">Tutorials</a>
+                    <button
+                        type="submit"
+                        aria-label="Search tutorials"
+                    >
 
-<a href="tools.html">Tools</a>
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                            aria-hidden="true"
+                        ></i>
 
-<a href="about.html">About</a>
+                    </button>
 
-<a href="contact.html">Contact</a>
+                </form>
 
-</nav>
 
-</header>
+                <!-- DARK MODE -->
 
+                <button
+                    type="button"
+                    id="darkModeBtn"
+                    class="dark-mode-btn"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
+                >
 
-<!-- ================= BREAKING NEWS ================= -->
+                    <i
+                        class="fa-solid fa-moon"
+                        aria-hidden="true"
+                    ></i>
 
-<div class="breaking-news">
+                </button>
 
-<marquee>
 
-🗄️ Learn MySQL • Databases • SQL Queries • Tables • Relationships • Database Management
+                <!-- MOBILE MENU -->
 
-</marquee>
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="navMenu"
+                    aria-expanded="false"
+                >
 
-</div>
+                    <i
+                        class="fa-solid fa-bars"
+                        aria-hidden="true"
+                    ></i>
 
+                </button>
 
-<!-- ================= TUTORIAL ================= -->
+            </div>
 
-<section class="section">
+        </div>
 
-<div class="tutorial-header">
 
-<span class="category">
+        <!-- =====================================================
+             NAVIGATION
+        ====================================================== -->
 
-🗄️ MYSQL TUTORIAL
+        <nav
+            id="navMenu"
+            aria-label="Main navigation"
+        >
 
-</span>
+            <a href="index.html">
 
-<h2>
+                <i
+                    class="fa-solid fa-house"
+                    aria-hidden="true"
+                ></i>
 
-MySQL Database Tutorial
+                Home
 
-</h2>
+            </a>
 
-<p>
 
-Learn how to create databases, tables, insert data,
-write SQL queries and manage databases using MySQL.
+            <a href="ghana-tech.html">
 
-</p>
+                🇬🇭 Ghana Tech
 
-</div>
+            </a>
 
 
-<div class="tutorial-content">
+            <a href="news.html">
 
+                <i
+                    class="fa-regular fa-newspaper"
+                    aria-hidden="true"
+                ></i>
 
-<!-- ================= LESSON 1 ================= -->
+                News
 
-<h2>1. What is MySQL?</h2>
+            </a>
 
-<p>
 
-<strong>MySQL</strong> is a relational database management system
-used to store, organize and retrieve data.
+            <a
+                href="tutorials.html"
+                class="active"
+                aria-current="page"
+            >
 
-</p>
+                <i
+                    class="fa-solid fa-graduation-cap"
+                    aria-hidden="true"
+                ></i>
 
-<p>
+                Tutorials
 
-For example, a school can use MySQL to store:
+            </a>
 
-</p>
 
-<ul>
+            <a href="tools.html">
 
-<li>Students</li>
+                <i
+                    class="fa-solid fa-toolbox"
+                    aria-hidden="true"
+                ></i>
 
-<li>Courses</li>
+                Tools
 
-<li>Lecturers</li>
+            </a>
 
-<li>Grades</li>
 
-<li>Fees</li>
+            <a href="gpa.html">
+                🎓 GPA
+            </a>
 
-</ul>
 
+            <a href="qr-generator.html">
+                📱 QR Generator
+            </a>
 
-<!-- ================= LESSON 2 ================= -->
 
-<h2>2. What is a Database?</h2>
+            <a href="ai-assistant.html">
+                🤖 AI Assistant
+            </a>
 
-<p>
 
-A database is an organized collection of information.
+            <a href="about.html">
 
-For example:
+                <i
+                    class="fa-solid fa-circle-info"
+                    aria-hidden="true"
+                ></i>
 
-</p>
+                About
 
-<div class="code-box">
+            </a>
 
-<pre><code>
-SchoolDB
+
+            <a href="contact.html">
+
+                <i
+                    class="fa-solid fa-envelope"
+                    aria-hidden="true"
+                ></i>
+
+                Contact
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         BREAKING / UPDATE BAR
+    ========================================================== -->
+
+    <section
+        class="breaking-news"
+        aria-label="TechHub Ghana latest updates"
+    >
+
+        <div class="breaking-inner">
+
+            <div class="breaking-label">
+
+                <i
+                    class="fa-solid fa-bolt"
+                    aria-hidden="true"
+                ></i>
+
+                Tech Update
+
+            </div>
+
+
+            <div class="breaking-content">
+
+                <div class="breaking-track">
+
+                    <span>
+                        🗄️ MySQL
+                    </span>
+
+                    <span>
+                        SQL Queries
+                    </span>
+
+                    <span>
+                        Databases
+                    </span>
+
+                    <span>
+                        Tables
+                    </span>
+
+                    <span>
+                        Relationships
+                    </span>
+
+                    <span>
+                        JOIN
+                    </span>
+
+                    <span>
+                        Database Management
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main id="main-content">
+
+        <section class="section">
+
+            <div class="tutorial-page">
+
+
+                <!-- =================================================
+                     TUTORIAL HEADER
+                ================================================== -->
+
+                <div class="tutorial-header">
+
+                    <span class="category">
+                        🗄️ MYSQL TUTORIAL
+                    </span>
+
+                    <h2>
+                        MySQL Database Tutorial
+                    </h2>
+
+                    <p>
+                        Learn how to create databases, tables, insert data,
+                        write SQL queries and manage databases using MySQL.
+                    </p>
+
+                </div>
+
+
+                <!-- =================================================
+                     TUTORIAL CONTENT
+                ================================================== -->
+
+                <article class="tutorial-content">
+
+
+                    <!-- =================================================
+                         LESSON 1
+                    ================================================== -->
+
+                    <h2>
+                        1. What is MySQL?
+                    </h2>
+
+                    <p>
+                        <strong>MySQL</strong> is a relational database
+                        management system used to store, organize and
+                        retrieve data.
+                    </p>
+
+                    <p>
+                        For example, a school can use MySQL to store:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Students
+                        </li>
+
+                        <li>
+                            Courses
+                        </li>
+
+                        <li>
+                            Lecturers
+                        </li>
+
+                        <li>
+                            Grades
+                        </li>
+
+                        <li>
+                            Fees
+                        </li>
+
+                    </ul>
+
+
+                    <!-- =================================================
+                         LESSON 2
+                    ================================================== -->
+
+                    <h2>
+                        2. What is a Database?
+                    </h2>
+
+                    <p>
+                        A database is an organized collection of information.
+                    </p>
+
+                    <p>
+                        For example:
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>SchoolDB
 │
 ├── Students
 ├── Courses
 ├── Lecturers
-└── Results
-</code></pre>
+└── Results</code></pre>
 
-</div>
-
-
-<!-- ================= LESSON 3 ================= -->
-
-<h2>3. Create a Database</h2>
-
-<p>
-
-The <strong>CREATE DATABASE</strong> command creates a new database.
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 3
+                    ================================================== -->
 
-<pre><code>
-CREATE DATABASE SchoolDB;
-</code></pre>
+                    <h2>
+                        3. Create a Database
+                    </h2>
 
-</div>
-
-
-<p>
-
-To use the database:
-
-</p>
+                    <p>
+                        The <strong>CREATE DATABASE</strong> command creates
+                        a new database.
+                    </p>
 
 
-<div class="code-box">
+                    <div class="code-box">
 
-<pre><code>
-USE SchoolDB;
-</code></pre>
+<pre><code>CREATE DATABASE SchoolDB;</code></pre>
 
-</div>
+                    </div>
 
 
-<!-- ================= LESSON 4 ================= -->
-
-<h2>4. Create a Table</h2>
-
-<p>
-
-A table stores information in rows and columns.
-
-</p>
+                    <p>
+                        To use the database:
+                    </p>
 
 
-<div class="code-box">
+                    <div class="code-box">
 
-<pre><code>
-CREATE TABLE Students (
+<pre><code>USE SchoolDB;</code></pre>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         LESSON 4
+                    ================================================== -->
+
+                    <h2>
+                        4. Create a Table
+                    </h2>
+
+                    <p>
+                        A table stores information in rows and columns.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>CREATE TABLE Students (
 
     student_id INT PRIMARY KEY,
 
@@ -246,48 +891,45 @@ CREATE TABLE Students (
 
     course VARCHAR(100)
 
-);
-</code></pre>
+);</code></pre>
 
-</div>
-
-
-<!-- ================= LESSON 5 ================= -->
-
-<h2>5. Insert Data</h2>
-
-<p>
-
-Use <strong>INSERT INTO</strong> to add information to a table.
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 5
+                    ================================================== -->
 
-<pre><code>
-INSERT INTO Students
+                    <h2>
+                        5. Insert Data
+                    </h2>
+
+                    <p>
+                        Use <strong>INSERT INTO</strong> to add information
+                        to a table.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>INSERT INTO Students
 (student_id, name, age, course)
 
 VALUES
 
-(1, 'Kwame Mensah', 21, 'Information Technology');
-</code></pre>
+(1, 'Kwame Mensah', 21, 'Information Technology');</code></pre>
 
-</div>
-
-
-<p>
-
-You can insert multiple students:
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <p>
+                        You can insert multiple students:
+                    </p>
 
-<pre><code>
-INSERT INTO Students
+
+                    <div class="code-box">
+
+<pre><code>INSERT INTO Students
 (student_id, name, age, course)
 
 VALUES
@@ -296,270 +938,263 @@ VALUES
 
 (3, 'Kofi Asante', 22, 'Information Technology'),
 
-(4, 'Akua Mensah', 21, 'Cybersecurity');
-</code></pre>
+(4, 'Akua Mensah', 21, 'Cybersecurity');</code></pre>
 
-</div>
-
-
-<!-- ================= LESSON 6 ================= -->
-
-<h2>6. Display Data</h2>
-
-<p>
-
-Use <strong>SELECT</strong> to retrieve information.
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 6
+                    ================================================== -->
 
-<pre><code>
-SELECT * FROM Students;
-</code></pre>
+                    <h2>
+                        6. Display Data
+                    </h2>
 
-</div>
-
-
-<p>
-
-The asterisk (*) means all columns.
-
-</p>
+                    <p>
+                        Use <strong>SELECT</strong> to retrieve information.
+                    </p>
 
 
-<!-- ================= LESSON 7 ================= -->
+                    <div class="code-box">
 
-<h2>7. Select Specific Columns</h2>
+<pre><code>SELECT * FROM Students;</code></pre>
 
-
-<div class="code-box">
-
-<pre><code>
-SELECT name, course
-FROM Students;
-</code></pre>
-
-</div>
+                    </div>
 
 
-<!-- ================= LESSON 8 ================= -->
-
-<h2>8. WHERE Clause</h2>
-
-<p>
-
-The WHERE clause allows you to find specific records.
-
-</p>
+                    <p>
+                        The asterisk (*) means all columns.
+                    </p>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 7
+                    ================================================== -->
 
-<pre><code>
-SELECT *
+                    <h2>
+                        7. Select Specific Columns
+                    </h2>
+
+
+                    <div class="code-box">
+
+<pre><code>SELECT name, course
+FROM Students;</code></pre>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         LESSON 8
+                    ================================================== -->
+
+                    <h2>
+                        8. WHERE Clause
+                    </h2>
+
+                    <p>
+                        The WHERE clause allows you to find specific records.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>SELECT *
 FROM Students
-WHERE course = 'Information Technology';
-</code></pre>
+WHERE course = 'Information Technology';</code></pre>
 
-</div>
-
-
-<!-- ================= LESSON 9 ================= -->
-
-<h2>9. UPDATE Data</h2>
-
-<p>
-
-Use UPDATE to change existing information.
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 9
+                    ================================================== -->
 
-<pre><code>
-UPDATE Students
+                    <h2>
+                        9. UPDATE Data
+                    </h2>
+
+                    <p>
+                        Use UPDATE to change existing information.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>UPDATE Students
 
 SET age = 22
 
-WHERE student_id = 1;
-</code></pre>
+WHERE student_id = 1;</code></pre>
 
-</div>
-
-
-<p>
-
-⚠️ Always use a WHERE condition when updating specific records.
-
-</p>
+                    </div>
 
 
-<!-- ================= LESSON 10 ================= -->
-
-<h2>10. DELETE Data</h2>
-
-<p>
-
-Use DELETE to remove a record.
-
-</p>
+                    <p>
+                        ⚠️ Always use a WHERE condition when updating
+                        specific records.
+                    </p>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 10
+                    ================================================== -->
 
-<pre><code>
-DELETE FROM Students
+                    <h2>
+                        10. DELETE Data
+                    </h2>
 
-WHERE student_id = 4;
-</code></pre>
-
-</div>
-
-
-<p>
-
-⚠️ Be careful with DELETE. Without a WHERE condition,
-you could delete every record in the table.
-
-</p>
+                    <p>
+                        Use DELETE to remove a record.
+                    </p>
 
 
-<!-- ================= LESSON 11 ================= -->
+                    <div class="code-box">
 
-<h2>11. ORDER BY</h2>
+<pre><code>DELETE FROM Students
 
-<p>
+WHERE student_id = 4;</code></pre>
 
-ORDER BY sorts your results.
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <p>
+                        ⚠️ Be careful with DELETE. Without a WHERE condition,
+                        you could delete every record in the table.
+                    </p>
 
-<pre><code>
-SELECT *
+
+                    <!-- =================================================
+                         LESSON 11
+                    ================================================== -->
+
+                    <h2>
+                        11. ORDER BY
+                    </h2>
+
+                    <p>
+                        ORDER BY sorts your results.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>SELECT *
 FROM Students
-ORDER BY age ASC;
-</code></pre>
+ORDER BY age ASC;</code></pre>
 
-</div>
-
-
-<p>
-
-For descending order:
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <p>
+                        For descending order:
+                    </p>
 
-<pre><code>
-SELECT *
+
+                    <div class="code-box">
+
+<pre><code>SELECT *
 FROM Students
-ORDER BY age DESC;
-</code></pre>
+ORDER BY age DESC;</code></pre>
 
-</div>
-
-
-<!-- ================= LESSON 12 ================= -->
-
-<h2>12. COUNT()</h2>
-
-<p>
-
-COUNT() counts records.
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 12
+                    ================================================== -->
 
-<pre><code>
-SELECT COUNT(*)
-FROM Students;
-</code></pre>
+                    <h2>
+                        12. COUNT()
+                    </h2>
 
-</div>
-
-
-<!-- ================= LESSON 13 ================= -->
-
-<h2>13. GROUP BY</h2>
-
-<p>
-
-GROUP BY groups records with similar values.
-
-</p>
+                    <p>
+                        COUNT() counts records.
+                    </p>
 
 
-<div class="code-box">
+                    <div class="code-box">
 
-<pre><code>
-SELECT course, COUNT(*)
+<pre><code>SELECT COUNT(*)
+FROM Students;</code></pre>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         LESSON 13
+                    ================================================== -->
+
+                    <h2>
+                        13. GROUP BY
+                    </h2>
+
+                    <p>
+                        GROUP BY groups records with similar values.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>SELECT course, COUNT(*)
 
 FROM Students
 
-GROUP BY course;
-</code></pre>
+GROUP BY course;</code></pre>
 
-</div>
-
-
-<!-- ================= LESSON 14 ================= -->
-
-<h2>14. Primary Key</h2>
-
-<p>
-
-A primary key uniquely identifies each record in a table.
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 14
+                    ================================================== -->
 
-<pre><code>
-CREATE TABLE Students (
+                    <h2>
+                        14. Primary Key
+                    </h2>
+
+                    <p>
+                        A primary key uniquely identifies each record
+                        in a table.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>CREATE TABLE Students (
 
     student_id INT PRIMARY KEY,
 
     name VARCHAR(100)
 
-);
-</code></pre>
+);</code></pre>
 
-</div>
-
-
-<p>
-
-In this example, <strong>student_id</strong> is the primary key.
-
-</p>
+                    </div>
 
 
-<!-- ================= LESSON 15 ================= -->
-
-<h2>15. Foreign Key</h2>
-
-<p>
-
-A foreign key connects one table to another table.
-
-</p>
+                    <p>
+                        In this example,
+                        <strong>student_id</strong> is the primary key.
+                    </p>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 15
+                    ================================================== -->
 
-<pre><code>
-CREATE TABLE Courses (
+                    <h2>
+                        15. Foreign Key
+                    </h2>
+
+                    <p>
+                        A foreign key connects one table to another table.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>CREATE TABLE Courses (
 
     course_id INT PRIMARY KEY,
 
@@ -580,27 +1215,28 @@ CREATE TABLE Students (
 
     REFERENCES Courses(course_id)
 
-);
-</code></pre>
+);</code></pre>
 
-</div>
-
-
-<!-- ================= LESSON 16 ================= -->
-
-<h2>16. JOIN</h2>
-
-<p>
-
-JOIN allows you to retrieve related information from multiple tables.
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 16
+                    ================================================== -->
 
-<pre><code>
-SELECT
+                    <h2>
+                        16. JOIN
+                    </h2>
+
+                    <p>
+                        JOIN allows you to retrieve related information
+                        from multiple tables.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>SELECT
     Students.name,
     Courses.course_name
 
@@ -608,98 +1244,98 @@ FROM Students
 
 INNER JOIN Courses
 
-ON Students.course_id = Courses.course_id;
-</code></pre>
+ON Students.course_id = Courses.course_id;</code></pre>
 
-</div>
-
-
-<!-- ================= LESSON 17 ================= -->
-
-<h2>17. LIKE</h2>
-
-<p>
-
-LIKE searches for a particular pattern.
-
-</p>
+                    </div>
 
 
-<div class="code-box">
+                    <!-- =================================================
+                         LESSON 17
+                    ================================================== -->
 
-<pre><code>
-SELECT *
+                    <h2>
+                        17. LIKE
+                    </h2>
 
-FROM Students
-
-WHERE name LIKE 'K%';
-</code></pre>
-
-</div>
-
-
-<p>
-
-The <strong>%</strong> means any number of characters.
-
-</p>
+                    <p>
+                        LIKE searches for a particular pattern.
+                    </p>
 
 
-<!-- ================= LESSON 18 ================= -->
+                    <div class="code-box">
 
-<h2>18. BETWEEN</h2>
-
-
-<div class="code-box">
-
-<pre><code>
-SELECT *
+<pre><code>SELECT *
 
 FROM Students
 
-WHERE age BETWEEN 20 AND 22;
-</code></pre>
+WHERE name LIKE 'K%';</code></pre>
 
-</div>
-
-
-<!-- ================= LESSON 19 ================= -->
-
-<h2>19. DISTINCT</h2>
-
-<p>
-
-DISTINCT removes duplicate values from the result.
-
-</p>
+                    </div>
 
 
-<div class="code-box">
-
-<pre><code>
-SELECT DISTINCT course
-
-FROM Students;
-</code></pre>
-
-</div>
+                    <p>
+                        The <strong>%</strong> means any number of characters.
+                    </p>
 
 
-<!-- ================= LESSON 20 ================= -->
+                    <!-- =================================================
+                         LESSON 18
+                    ================================================== -->
 
-<h2>20. Complete Practical Example</h2>
-
-<p>
-
-Let's create a simple student database.
-
-</p>
+                    <h2>
+                        18. BETWEEN
+                    </h2>
 
 
-<div class="code-box">
+                    <div class="code-box">
 
-<pre><code>
-CREATE DATABASE TechHubSchool;
+<pre><code>SELECT *
+
+FROM Students
+
+WHERE age BETWEEN 20 AND 22;</code></pre>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         LESSON 19
+                    ================================================== -->
+
+                    <h2>
+                        19. DISTINCT
+                    </h2>
+
+                    <p>
+                        DISTINCT removes duplicate values from the result.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>SELECT DISTINCT course
+
+FROM Students;</code></pre>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         LESSON 20
+                    ================================================== -->
+
+                    <h2>
+                        20. Complete Practical Example
+                    </h2>
+
+                    <p>
+                        Let's create a simple student database.
+                    </p>
+
+
+                    <div class="code-box">
+
+<pre><code>CREATE DATABASE TechHubSchool;
 
 USE TechHubSchool;
 
@@ -740,249 +1376,574 @@ SELECT name, course
 
 FROM Students
 
-WHERE grade = 'A';
-</code></pre>
+WHERE grade = 'A';</code></pre>
 
-</div>
+                    </div>
 
 
-<!-- ================= PRACTICE ================= -->
+                    <!-- =================================================
+                         PRACTICE EXERCISE
+                    ================================================== -->
 
-<div class="tutorial-exercise">
+                    <div class="tutorial-exercise">
 
-<h2>📝 MySQL Practice Exercise</h2>
+                        <h2>
+                            📝 MySQL Practice Exercise
+                        </h2>
 
-<p>
+                        <p>
+                            Create a database called:
+                        </p>
 
-Create a database called:
 
-</p>
+                        <div class="code-box">
 
-<div class="code-box">
+<pre><code>CREATE DATABASE UniversityDB;</code></pre>
 
-<pre><code>
-UniversityDB
-</code></pre>
+                        </div>
 
-</div>
 
-<p>
+                        <p>
+                            Then create a table called
+                            <strong>Students</strong> containing:
+                        </p>
 
-Then create a table called <strong>Students</strong> containing:
 
-</p>
+                        <ol>
 
-<ol>
+                            <li>
+                                student_id
+                            </li>
 
-<li>student_id</li>
+                            <li>
+                                name
+                            </li>
 
-<li>name</li>
+                            <li>
+                                age
+                            </li>
 
-<li>age</li>
+                            <li>
+                                course
+                            </li>
 
-<li>course</li>
+                            <li>
+                                grade
+                            </li>
 
-<li>grade</li>
+                        </ol>
 
-</ol>
 
-<p>
+                        <p>
+                            Then practice:
+                        </p>
 
-Then practice:
 
-</p>
+                        <ul>
 
-<ul>
+                            <li>
+                                INSERT
+                            </li>
 
-<li>INSERT</li>
+                            <li>
+                                SELECT
+                            </li>
 
-<li>SELECT</li>
+                            <li>
+                                WHERE
+                            </li>
 
-<li>WHERE</li>
+                            <li>
+                                UPDATE
+                            </li>
 
-<li>UPDATE</li>
+                            <li>
+                                DELETE
+                            </li>
 
-<li>DELETE</li>
+                            <li>
+                                ORDER BY
+                            </li>
 
-<li>ORDER BY</li>
+                            <li>
+                                COUNT
+                            </li>
 
-<li>COUNT</li>
+                            <li>
+                                GROUP BY
+                            </li>
 
-<li>GROUP BY</li>
+                            <li>
+                                JOIN
+                            </li>
 
-<li>JOIN</li>
+                        </ul>
 
-</ul>
 
+                        <h3>
+                            Challenge
+                        </h3>
 
-<h3>Challenge</h3>
+                        <p>
+                            Find all students who are studying
+                            Information Technology and have a grade of A.
+                        </p>
 
-<p>
 
-Find all students who are studying Information Technology
-and have a grade of A.
+                        <div class="code-box">
 
-</p>
+<pre><code>SELECT *
+FROM Students
+WHERE course = 'Information Technology'
+AND grade = 'A';</code></pre>
 
-</div>
+                        </div>
 
+                    </div>
 
-<!-- ================= NAVIGATION ================= -->
 
-<div class="tutorial-navigation">
+                    <!-- =================================================
+                         TUTORIAL NAVIGATION
+                    ================================================== -->
 
-<a href="python-tutorial.html" class="read-btn">
+                    <div class="tutorial-navigation">
 
-← Python Tutorial
+                        <a
+                            href="python-tutorial.html"
+                            class="read-btn"
+                        >
 
-</a>
+                            <i
+                                class="fa-solid fa-arrow-left"
+                                aria-hidden="true"
+                            ></i>
 
+                            Python Tutorial
 
-<a href="java-tutorial.html" class="read-btn">
+                        </a>
 
-Java Tutorial →
 
-</a>
+                        <a
+                            href="java-tutorial.html"
+                            class="read-btn"
+                        >
 
-</div>
+                            Java Tutorial
 
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
 
-</div>
+                        </a>
 
-</section>
+                    </div>
 
+                </article>
 
-<!-- ================= NEWSLETTER ================= -->
+            </div>
 
-<section class="newsletter">
+        </section>
 
-<h2>
+    </main>
 
-Stay Updated
 
-</h2>
+    <!-- =========================================================
+         NEWSLETTER
+    ========================================================== -->
 
-<p>
+    <section class="newsletter">
 
-Receive new tutorials, technology news and digital tools.
+        <h2>
+            📩 Stay Updated
+        </h2>
 
-</p>
+        <p>
+            Receive new tutorials, technology news and digital tools.
+        </p>
 
 
-<form>
+        <form id="newsletterForm">
 
-<input
-type="email"
-placeholder="Enter your email"
-required>
+            <label
+                for="newsletterEmail"
+                class="sr-only"
+            >
+                Email address
+            </label>
 
-<button>
+            <input
+                type="email"
+                id="newsletterEmail"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                aria-label="Email address"
+                required
+            >
 
-Subscribe
+            <button type="submit">
+                Subscribe
+            </button>
 
-</button>
+        </form>
 
-</form>
+    </section>
 
-</section>
 
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
 
-<!-- ================= FOOTER ================= -->
+    <footer>
 
-<footer>
+        <div class="footer-grid">
 
-<div class="footer-grid">
 
-<div>
+            <!-- =================================================
+                 BRAND
+            ================================================== -->
 
-<h3>TechHub Ghana</h3>
+            <div>
 
-<p>
+                <h3>
+                    TechHub Ghana
+                </h3>
 
-Technology • Learning • Innovation
+                <p>
+                    Technology • Learning • Innovation
+                </p>
 
-</p>
+                <p>
+                    Free technology resources, tutorials,
+                    news and digital tools.
+                </p>
 
-</div>
+            </div>
 
 
-<div>
+            <!-- =================================================
+                 QUICK LINKS
+            ================================================== -->
 
-<h3>Quick Links</h3>
+            <div>
 
-<p>
-<a href="index.html">Home</a>
-</p>
+                <h3>
+                    Quick Links
+                </h3>
 
-<p>
-<a href="news.html">News</a>
-</p>
+                <p>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </p>
 
-<p>
-<a href="tutorials.html">Tutorials</a>
-</p>
+                <p>
+                    <a href="ghana-tech.html">
+                        Ghana Tech
+                    </a>
+                </p>
 
-<p>
-<a href="tools.html">Tools</a>
-</p>
+                <p>
+                    <a href="news.html">
+                        News
+                    </a>
+                </p>
 
-</div>
+                <p>
+                    <a href="tutorials.html">
+                        Tutorials
+                    </a>
+                </p>
 
+                <p>
+                    <a href="tools.html">
+                        Tools
+                    </a>
+                </p>
 
-<div>
+            </div>
 
-<h3>Tutorials</h3>
 
-<p>
-<a href="html-tutorial.html">HTML</a>
-</p>
+            <!-- =================================================
+                 TUTORIALS
+            ================================================== -->
 
-<p>
-<a href="css-tutorial.html">CSS</a>
-</p>
+            <div>
 
-<p>
-<a href="python-tutorial.html">Python</a>
-</p>
+                <h3>
+                    Tutorials
+                </h3>
 
-<p>
-<a href="java-tutorial.html">Java</a>
-</p>
+                <p>
+                    <a href="html-tutorial.html">
+                        HTML
+                    </a>
+                </p>
 
-<p>
-<a href="mysql-tutorial.html">MySQL</a>
-</p>
+                <p>
+                    <a href="css-tutorial.html">
+                        CSS
+                    </a>
+                </p>
 
-</div>
+                <p>
+                    <a href="javascript-tutorial.html">
+                        JavaScript
+                    </a>
+                </p>
 
+                <p>
+                    <a href="python-tutorial.html">
+                        Python
+                    </a>
+                </p>
 
-<div>
+                <p>
+                    <a href="java-tutorial.html">
+                        Java
+                    </a>
+                </p>
 
-<h3>Contact</h3>
+                <p>
+                    <a href="mysql-tutorial.html">
+                        MySQL
+                    </a>
+                </p>
 
-<p>📍 Accra, Ghana</p>
+                <p>
+                    <a href="cybersecurity-tutorial.html">
+                        Cybersecurity
+                    </a>
+                </p>
 
-<p>📧 info@techhubghana.com</p>
+            </div>
 
-</div>
 
-</div>
+            <!-- =================================================
+                 CONTACT
+            ================================================== -->
 
+            <div>
 
-<hr>
+                <h3>
+                    Contact
+                </h3>
 
+                <p>
+                    📧
+                    <a href="mailto:juliusas009@gmail.com">
+                        Email Us
+                    </a>
+                </p>
 
-<p class="copyright">
+                <p>
+                    📱
+                    <a href="tel:+233534057748">
+                        Call Us
+                    </a>
+                </p>
 
-© 2026 TechHub Ghana. All Rights Reserved.
+                <p>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </p>
 
-</p>
+            </div>
 
-</footer>
+        </div>
 
 
-<script src="script.js"></script>
+        <hr>
+
+
+        <p class="copyright">
+
+            ©
+            <span id="copyrightYear">
+                2026
+            </span>
+
+            TechHub Ghana.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+    <!-- =========================================================
+         BACK TO TOP
+    ========================================================== -->
+
+    <button
+        type="button"
+        id="topBtn"
+        aria-label="Back to top"
+        title="Back to top"
+    >
+
+        <i
+            class="fa-solid fa-arrow-up"
+            aria-hidden="true"
+        ></i>
+
+    </button>
+
+
+    <!-- =========================================================
+         MAIN JAVASCRIPT
+    ========================================================== -->
+
+    <script src="script.js" defer></script>
+
+
+    <!-- =========================================================
+         TUTORIAL PAGE FALLBACK JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* ================================================
+                   MOBILE MENU
+                ================================================= */
+
+                const menuBtn =
+                    document.getElementById("menuBtn");
+
+                const navMenu =
+                    document.getElementById("navMenu");
+
+
+                if (menuBtn && navMenu) {
+
+                    menuBtn.addEventListener(
+                        "click",
+                        function () {
+
+                            navMenu.classList.toggle("show");
+
+                            const isOpen =
+                                navMenu.classList.contains("show");
+
+                            menuBtn.setAttribute(
+                                "aria-expanded",
+                                String(isOpen)
+                            );
+
+                            menuBtn.setAttribute(
+                                "aria-label",
+                                isOpen
+                                    ? "Close navigation menu"
+                                    : "Open navigation menu"
+                            );
+
+                        }
+                    );
+
+
+                    /* Close menu after clicking a link */
+
+                    navMenu
+                        .querySelectorAll("a")
+                        .forEach(
+                            function (link) {
+
+                                link.addEventListener(
+                                    "click",
+                                    function () {
+
+                                        navMenu.classList.remove("show");
+
+                                        menuBtn.setAttribute(
+                                            "aria-expanded",
+                                            "false"
+                                        );
+
+                                        menuBtn.setAttribute(
+                                            "aria-label",
+                                            "Open navigation menu"
+                                        );
+
+                                    }
+                                );
+
+                            }
+                        );
+
+                }
+
+
+                /* ================================================
+                   COPYRIGHT YEAR
+                ================================================= */
+
+                const copyrightYear =
+                    document.getElementById("copyrightYear");
+
+
+                if (copyrightYear) {
+
+                    copyrightYear.textContent =
+                        new Date().getFullYear();
+
+                }
+
+
+                /* ================================================
+                   BACK TO TOP
+                ================================================= */
+
+                const topBtn =
+                    document.getElementById("topBtn");
+
+
+                if (topBtn) {
+
+                    window.addEventListener(
+                        "scroll",
+                        function () {
+
+                            if (window.scrollY > 400) {
+
+                                topBtn.classList.add("show");
+
+                            } else {
+
+                                topBtn.classList.remove("show");
+
+                            }
+
+                        }
+                    );
+
+
+                    topBtn.addEventListener(
+                        "click",
+                        function () {
+
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+
 
 </body>
 
-                     </html>
+    </html>
