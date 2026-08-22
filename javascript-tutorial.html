@@ -2,94 +2,111 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Java Programming Tutorial | TechHub Ghana</title>
 
     <meta name="description"
-          content="Learn Java programming from beginner to practical level with examples, exercises, OOP concepts and projects at TechHub Ghana.">
+          content="Learn Java programming from beginner to advanced with practical examples, exercises and projects at TechHub Ghana.">
 
     <meta name="keywords"
-          content="Java tutorial, learn Java, Java programming, Java Ghana, OOP, programming tutorial, TechHub Ghana">
+          content="Java tutorial, learn Java, Java programming, Java Ghana, programming tutorial, TechHub Ghana">
 
     <meta name="author"
           content="TechHub Ghana">
 
     <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
+
 </head>
 
+
 <body>
+
 
 <!-- =========================================================
      HEADER
 ========================================================= -->
 
-<header class="main-header">
+<header>
 
     <div class="top-bar">
 
-        <a href="index.html" class="logo">
+        <!-- LOGO -->
 
-            <img
-                src="images/logo.png"
-                alt="TechHub Ghana Logo">
+        <div class="logo">
 
-            <div class="logo-text">
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="TechHub Ghana Logo">
+
+            </a>
+
+            <div>
 
                 <h1>TechHub Ghana</h1>
 
                 <p>
-                    Technology News • Tutorials • Digital Tools
+                    Technology • Learning • Innovation
                 </p>
 
             </div>
 
-        </a>
+        </div>
 
 
-        <div class="header-right">
+        <!-- SEARCH -->
 
-            <div class="search-box">
+        <div class="search-box">
 
-                <input
-                    type="search"
-                    id="tutorialSearch"
-                    placeholder="Search tutorials..."
-                    aria-label="Search tutorials">
-
-                <button
-                    type="button"
-                    id="tutorialSearchBtn"
-                    aria-label="Search tutorials">
-
-                    🔍
-
-                </button>
-
-            </div>
-
+            <input
+                type="text"
+                id="tutorialSearch"
+                placeholder="Search tutorials..."
+                aria-label="Search tutorials">
 
             <button
-                class="menu-btn"
-                id="menuBtn"
                 type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false">
+                id="tutorialSearchBtn"
+                aria-label="Search tutorials">
 
-                ☰
+                🔍
 
             </button>
 
         </div>
 
     </div>
+
+
+    <!-- MOBILE MENU BUTTON -->
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+
+        ☰
+
+    </button>
 
 
     <!-- NAVIGATION -->
@@ -100,15 +117,12 @@
             Home
         </a>
 
-        <a href="ghana-tech.html">
-            🇬🇭 Ghana Tech
-        </a>
-
         <a href="news.html">
             News
         </a>
 
-        <a href="tutorials.html" class="active">
+        <a href="tutorials.html"
+           class="active">
             Tutorials
         </a>
 
@@ -145,125 +159,153 @@
      BREAKING NEWS
 ========================================================= -->
 
-<section class="breaking-news"
-         aria-label="Technology updates">
+<div class="breaking-news">
 
     <marquee>
-        ☕ Learn Java • Programming • OOP • Classes • Methods •
-        Inheritance • Databases • Projects
+
+        ☕ Learn Java • Programming • Object-Oriented Programming •
+        Classes • Objects • Methods • Projects
+
     </marquee>
 
-</section>
+</div>
 
 
 <!-- =========================================================
-     MAIN TUTORIAL
+     JAVA TUTORIAL
 ========================================================= -->
 
-<main class="tutorial-page">
+<section class="section">
 
-    <section class="section">
+    <div class="tutorial-header">
 
-        <!-- TUTORIAL HEADER -->
+        <span class="category">
 
-        <div class="tutorial-header">
+            ☕ JAVA TUTORIAL
 
-            <span class="category">
-                ☕ JAVA TUTORIAL
-            </span>
-
-            <h2>
-                Java Programming Tutorial
-            </h2>
-
-            <p>
-                Learn Java step-by-step from beginner level
-                to practical programming, object-oriented
-                programming and real-world projects.
-            </p>
-
-        </div>
+        </span>
 
 
-        <!-- TUTORIAL CONTENT -->
+        <h2>
 
-        <article class="tutorial-content">
+            Java Programming Tutorial
 
-
-            <!-- =================================================
-                 LESSON 1
-            ================================================== -->
-
-            <section id="introduction">
-
-                <h2>
-                    1. Introduction to Java
-                </h2>
-
-                <p>
-                    Java is a high-level, general-purpose programming
-                    language widely used to build desktop applications,
-                    web applications, enterprise software and other
-                    software systems.
-                </p>
-
-                <p>
-                    Java follows the object-oriented programming
-                    approach, which allows developers to organize
-                    programs using classes and objects.
-                </p>
-
-                <h3>
-                    Why Learn Java?
-                </h3>
-
-                <ul>
-
-                    <li>
-                        Easy to learn and widely documented.
-                    </li>
-
-                    <li>
-                        Object-oriented.
-                    </li>
-
-                    <li>
-                        Platform independent through the Java Virtual Machine.
-                    </li>
-
-                    <li>
-                        Widely used in software development.
-                    </li>
-
-                    <li>
-                        Useful for backend development.
-                    </li>
-
-                    <li>
-                        Supports large-scale enterprise applications.
-                    </li>
-
-                </ul>
-
-            </section>
+        </h2>
 
 
-            <!-- =================================================
-                 LESSON 2
-            ================================================== -->
+        <p>
 
-            <section id="first-program">
+            Learn Java programming from beginner to practical level
+            with simple explanations, examples, exercises and projects.
 
-                <h2>
-                    2. Your First Java Program
-                </h2>
+        </p>
 
-                <p>
-                    A simple Java program that displays
-                    "Hello World!" looks like this:
-                </p>
+    </div>
 
-                <div class="code-box">
+
+    <div class="tutorial-content">
+
+
+        <!-- =====================================================
+             LESSON 1
+        ====================================================== -->
+
+        <h2>
+            1. What is Java?
+        </h2>
+
+        <p>
+
+            <strong>Java</strong> is a high-level, object-oriented
+            programming language used to build many different types
+            of software applications.
+
+        </p>
+
+        <p>
+
+            Java is widely used for:
+
+        </p>
+
+        <ul>
+
+            <li>Desktop applications</li>
+
+            <li>Web applications</li>
+
+            <li>Enterprise software</li>
+
+            <li>Backend systems</li>
+
+            <li>Android development</li>
+
+            <li>Cloud applications</li>
+
+            <li>Large business systems</li>
+
+        </ul>
+
+
+        <p>
+
+            One of Java's major advantages is its
+            <strong>platform independence</strong>.
+
+        </p>
+
+
+        <!-- =====================================================
+             LESSON 2
+        ====================================================== -->
+
+        <h2>
+            2. Why Learn Java?
+        </h2>
+
+        <p>
+
+            Java remains an important programming language because
+            it is used in many real-world software systems.
+
+        </p>
+
+        <ul>
+
+            <li>Object-oriented programming</li>
+
+            <li>Platform independent</li>
+
+            <li>Strongly typed</li>
+
+            <li>Large developer community</li>
+
+            <li>Widely used in enterprise applications</li>
+
+            <li>Useful for backend development</li>
+
+            <li>Excellent for learning programming concepts</li>
+
+        </ul>
+
+
+        <!-- =====================================================
+             LESSON 3
+        ====================================================== -->
+
+        <h2>
+            3. Your First Java Program
+        </h2>
+
+        <p>
+
+            The following program displays
+            <strong>Hello World!</strong> on the screen.
+
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>public class Main {
 
@@ -275,42 +317,48 @@
 
 }</code></pre>
 
-                </div>
+        </div>
 
-                <p>
-                    The program produces:
-                </p>
 
-                <div class="code-box">
+        <p>
+
+            The output will be:
+
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>Hello World!</code></pre>
 
-                </div>
-
-                <p>
-                    <strong>System.out.println()</strong> is used
-                    to display information in the console.
-                </p>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 3
-            ================================================== -->
+        <p>
 
-            <section id="variables">
+            The <strong>System.out.println()</strong> statement
+            is used to display information in the console.
 
-                <h2>
-                    3. Variables
-                </h2>
+        </p>
 
-                <p>
-                    Variables are used to store information
-                    that a program can use.
-                </p>
 
-                <div class="code-box">
+        <!-- =====================================================
+             LESSON 4
+        ====================================================== -->
+
+        <h2>
+            4. Java Variables
+        </h2>
+
+        <p>
+
+            A variable is a named storage location used to hold
+            information in a program.
+
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>String name = "Julius";
 
@@ -320,132 +368,117 @@ double price = 25.50;
 
 boolean student = true;</code></pre>
 
-                </div>
-
-                <p>
-                    In this example:
-                </p>
-
-                <ul>
-
-                    <li>
-                        <strong>name</strong> stores text.
-                    </li>
-
-                    <li>
-                        <strong>age</strong> stores an integer.
-                    </li>
-
-                    <li>
-                        <strong>price</strong> stores a decimal number.
-                    </li>
-
-                    <li>
-                        <strong>student</strong> stores a true/false value.
-                    </li>
-
-                </ul>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 4
-            ================================================== -->
+        <p>
 
-            <section id="data-types">
+            In this example:
 
-                <h2>
-                    4. Java Data Types
-                </h2>
+        </p>
 
-                <p>
-                    Java provides several data types for storing
-                    different kinds of information.
-                </p>
+        <ul>
 
-                <h3>
-                    Common Primitive Data Types
-                </h3>
+            <li>
+                <strong>name</strong> stores text.
+            </li>
 
-                <ul>
+            <li>
+                <strong>age</strong> stores an integer.
+            </li>
 
-                    <li>
-                        <strong>int</strong> — whole numbers.
-                    </li>
+            <li>
+                <strong>price</strong> stores a decimal number.
+            </li>
 
-                    <li>
-                        <strong>double</strong> — decimal numbers.
-                    </li>
+            <li>
+                <strong>student</strong> stores true or false.
+            </li>
 
-                    <li>
-                        <strong>float</strong> — decimal numbers with
-                        lower precision than double.
-                    </li>
+        </ul>
 
-                    <li>
-                        <strong>char</strong> — a single character.
-                    </li>
 
-                    <li>
-                        <strong>boolean</strong> — true or false.
-                    </li>
+        <!-- =====================================================
+             LESSON 5
+        ====================================================== -->
 
-                    <li>
-                        <strong>long</strong> — large whole numbers.
-                    </li>
+        <h2>
+            5. Java Data Types
+        </h2>
 
-                </ul>
+        <p>
 
-                <h3>
-                    Example
-                </h3>
+            Java provides different data types for storing different
+            kinds of information.
 
-                <div class="code-box">
+        </p>
+
+
+        <h3>
+            Common Java Data Types
+        </h3>
+
+
+        <ul>
+
+            <li>int</li>
+
+            <li>double</li>
+
+            <li>float</li>
+
+            <li>char</li>
+
+            <li>boolean</li>
+
+            <li>String</li>
+
+            <li>long</li>
+
+            <li>short</li>
+
+            <li>byte</li>
+
+        </ul>
+
+
+        <div class="code-box">
 
 <pre><code>int number = 10;
 
 double salary = 2500.50;
 
-float temperature = 25.5f;
+float temperature = 36.5f;
 
 char grade = 'A';
 
 boolean passed = true;
 
-long population = 30000000L;
-
 String name = "Julius";</code></pre>
 
-                </div>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 5
-            ================================================== -->
+        <!-- =====================================================
+             LESSON 6
+        ====================================================== -->
 
-            <section id="operators">
+        <h2>
+            6. Arithmetic Operators
+        </h2>
 
-                <h2>
-                    5. Java Operators
-                </h2>
+        <p>
 
-                <p>
-                    Operators are symbols used to perform operations
-                    on values and variables.
-                </p>
+            Java supports common mathematical operators.
 
-                <h3>
-                    Arithmetic Operators
-                </h3>
+        </p>
 
-                <div class="code-box">
 
-<pre><code>int a = 10;
+        <div class="code-box">
 
-int b = 3;
+<pre><code>int a = 20;
+
+int b = 5;
 
 System.out.println(a + b);
 
@@ -457,45 +490,57 @@ System.out.println(a / b);
 
 System.out.println(a % b);</code></pre>
 
-                </div>
-
-                <p>
-                    Common arithmetic operators include:
-                </p>
-
-                <ul>
-
-                    <li><strong>+</strong> Addition</li>
-
-                    <li><strong>-</strong> Subtraction</li>
-
-                    <li><strong>*</strong> Multiplication</li>
-
-                    <li><strong>/</strong> Division</li>
-
-                    <li><strong>%</strong> Modulus</li>
-
-                </ul>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 6
-            ================================================== -->
+        <p>
 
-            <section id="if-statements">
+            The operators are:
 
-                <h2>
-                    6. If Statements
-                </h2>
+        </p>
 
-                <p>
-                    An if statement allows a Java program
-                    to make decisions.
-                </p>
+        <ul>
 
-                <div class="code-box">
+            <li>
+                <strong>+</strong> Addition
+            </li>
+
+            <li>
+                <strong>-</strong> Subtraction
+            </li>
+
+            <li>
+                <strong>*</strong> Multiplication
+            </li>
+
+            <li>
+                <strong>/</strong> Division
+            </li>
+
+            <li>
+                <strong>%</strong> Modulus
+            </li>
+
+        </ul>
+
+
+        <!-- =====================================================
+             LESSON 7
+        ====================================================== -->
+
+        <h2>
+            7. If Statement
+        </h2>
+
+        <p>
+
+            An <strong>if statement</strong> allows a program
+            to make decisions.
+
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>int age = 20;
 
@@ -505,13 +550,15 @@ if (age >= 18) {
 
 }</code></pre>
 
-                </div>
+        </div>
 
-                <h3>
-                    if / else
-                </h3>
 
-                <div class="code-box">
+        <h3>
+            if / else
+        </h3>
+
+
+        <div class="code-box">
 
 <pre><code>int age = 16;
 
@@ -525,27 +572,29 @@ if (age >= 18) {
 
 }</code></pre>
 
-                </div>
+        </div>
 
-                <h3>
-                    if / else if / else
-                </h3>
 
-                <div class="code-box">
+        <h3>
+            if / else if / else
+        </h3>
+
+
+        <div class="code-box">
 
 <pre><code>int score = 75;
 
 if (score >= 80) {
 
-    System.out.println("Grade A");
+    System.out.println("A");
 
 } else if (score >= 70) {
 
-    System.out.println("Grade B");
+    System.out.println("B");
 
 } else if (score >= 60) {
 
-    System.out.println("Grade C");
+    System.out.println("C");
 
 } else {
 
@@ -553,28 +602,26 @@ if (score >= 80) {
 
 }</code></pre>
 
-                </div>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 7
-            ================================================== -->
+        <!-- =====================================================
+             LESSON 8
+        ====================================================== -->
 
-            <section id="switch">
+        <h2>
+            8. Switch Statement
+        </h2>
 
-                <h2>
-                    7. Switch Statement
-                </h2>
+        <p>
 
-                <p>
-                    A switch statement can be used when you need
-                    to compare one value against several possible
-                    cases.
-                </p>
+            A switch statement can be used when you want to
+            compare a value against several possible cases.
 
-                <div class="code-box">
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>int day = 2;
 
@@ -597,31 +644,26 @@ switch (day) {
 
 }</code></pre>
 
-                </div>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 8
-            ================================================== -->
+        <!-- =====================================================
+             LESSON 9
+        ====================================================== -->
 
-            <section id="loops">
+        <h2>
+            9. For Loop
+        </h2>
 
-                <h2>
-                    8. Loops
-                </h2>
+        <p>
 
-                <p>
-                    Loops allow you to execute a block of code
-                    repeatedly.
-                </p>
+            A for loop is used to repeat a block of code a
+            specific number of times.
 
-                <h3>
-                    For Loop
-                </h3>
+        </p>
 
-                <div class="code-box">
+
+        <div class="code-box">
 
 <pre><code>for (int i = 1; i <= 5; i++) {
 
@@ -629,13 +671,17 @@ switch (day) {
 
 }</code></pre>
 
-                </div>
+        </div>
 
-                <p>
-                    Output:
-                </p>
 
-                <div class="code-box">
+        <p>
+
+            Output:
+
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>1
 2
@@ -643,13 +689,26 @@ switch (day) {
 4
 5</code></pre>
 
-                </div>
+        </div>
 
-                <h3>
-                    While Loop
-                </h3>
 
-                <div class="code-box">
+        <!-- =====================================================
+             LESSON 10
+        ====================================================== -->
+
+        <h2>
+            10. While Loop
+        </h2>
+
+        <p>
+
+            A while loop continues running while a condition
+            remains true.
+
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>int number = 1;
 
@@ -661,103 +720,72 @@ while (number <= 5) {
 
 }</code></pre>
 
-                </div>
-
-                <h3>
-                    Do-While Loop
-                </h3>
-
-                <div class="code-box">
-
-<pre><code>int number = 1;
-
-do {
-
-    System.out.println(number);
-
-    number++;
-
-} while (number <= 5);</code></pre>
-
-                </div>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 9
-            ================================================== -->
+        <!-- =====================================================
+             LESSON 11
+        ====================================================== -->
 
-            <section id="arrays">
+        <h2>
+            11. Arrays
+        </h2>
 
-                <h2>
-                    9. Arrays
-                </h2>
+        <p>
 
-                <p>
-                    An array stores multiple values of the same
-                    data type.
-                </p>
+            An array stores multiple values of the same data type.
 
-                <div class="code-box">
+        </p>
 
-<pre><code>int[] numbers = {
-    10,
-    20,
-    30,
-    40,
-    50
+
+        <div class="code-box">
+
+<pre><code>String[] students = {
+    "Julius",
+    "Ama",
+    "Kofi"
 };
 
-System.out.println(numbers[0]);</code></pre>
+System.out.println(students[0]);</code></pre>
 
-                </div>
-
-                <p>
-                    Java array indexes begin at <strong>0</strong>.
-                </p>
-
-                <h3>
-                    Loop Through an Array
-                </h3>
-
-                <div class="code-box">
-
-<pre><code>int[] numbers = {
-    10,
-    20,
-    30,
-    40,
-    50
-};
-
-for (int number : numbers) {
-
-    System.out.println(number);
-
-}</code></pre>
-
-                </div>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 10
-            ================================================== -->
+        <p>
 
-            <section id="methods">
+            Java array indexes start from <strong>0</strong>.
 
-                <h2>
-                    10. Methods
-                </h2>
+        </p>
 
-                <p>
-                    A method is a reusable block of code designed
-                    to perform a particular task.
-                </p>
 
-                <div class="code-box">
+        <div class="code-box">
+
+<pre><code>students[0]  // Julius
+
+students[1]  // Ama
+
+students[2]  // Kofi</code></pre>
+
+        </div>
+
+
+        <!-- =====================================================
+             LESSON 12
+        ====================================================== -->
+
+        <h2>
+            12. Methods
+        </h2>
+
+        <p>
+
+            A method is a reusable block of code designed to
+            perform a particular task.
+
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>public static void greet() {
 
@@ -765,19 +793,22 @@ for (int number : numbers) {
 
 }
 
+
 public static void main(String[] args) {
 
     greet();
 
 }</code></pre>
 
-                </div>
+        </div>
 
-                <h3>
-                    Method with Parameters
-                </h3>
 
-                <div class="code-box">
+        <h3>
+            Method with Parameters
+        </h3>
+
+
+        <div class="code-box">
 
 <pre><code>public static void greet(String name) {
 
@@ -785,55 +816,35 @@ public static void main(String[] args) {
 
 }
 
+
 public static void main(String[] args) {
 
     greet("Julius");
 
 }</code></pre>
 
-                </div>
-
-                <h3>
-                    Method with a Return Value
-                </h3>
-
-                <div class="code-box">
-
-<pre><code>public static int add(int a, int b) {
-
-    return a + b;
-
-}
-
-public static void main(String[] args) {
-
-    int result = add(10, 20);
-
-    System.out.println(result);
-
-}</code></pre>
-
-                </div>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 11
-            ================================================== -->
+        <!-- =====================================================
+             LESSON 13
+        ====================================================== -->
 
-            <section id="classes-objects">
+        <h2>
+            13. Classes and Objects
+        </h2>
 
-                <h2>
-                    11. Classes and Objects
-                </h2>
+        <p>
 
-                <p>
-                    Java is an object-oriented programming language.
-                    A class is a blueprint for creating objects.
-                </p>
+            Java is an object-oriented programming language.
 
-                <div class="code-box">
+            A <strong>class</strong> is a blueprint for creating
+            objects.
+
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>class Student {
 
@@ -842,6 +853,7 @@ public static void main(String[] args) {
     int age;
 
 }
+
 
 public class Main {
 
@@ -861,33 +873,26 @@ public class Main {
 
 }</code></pre>
 
-                </div>
-
-                <p>
-                    In this example, <strong>Student</strong> is a class
-                    and <strong>student</strong> is an object created
-                    from that class.
-                </p>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 12
-            ================================================== -->
+        <!-- =====================================================
+             LESSON 14
+        ====================================================== -->
 
-            <section id="constructors">
+        <h2>
+            14. Constructors
+        </h2>
 
-                <h2>
-                    12. Constructors
-                </h2>
+        <p>
 
-                <p>
-                    A constructor is a special method used to initialize
-                    an object when it is created.
-                </p>
+            A constructor is a special method that is called
+            when an object is created.
 
-                <div class="code-box">
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>class Student {
 
@@ -906,6 +911,7 @@ public class Main {
 
 }
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -921,84 +927,26 @@ public class Main {
 
 }</code></pre>
 
-                </div>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 13
-            ================================================== -->
+        <!-- =====================================================
+             LESSON 15
+        ====================================================== -->
 
-            <section id="encapsulation">
+        <h2>
+            15. Inheritance
+        </h2>
 
-                <h2>
-                    13. Encapsulation
-                </h2>
+        <p>
 
-                <p>
-                    Encapsulation means keeping data and the methods
-                    that operate on that data together while controlling
-                    how the data is accessed.
-                </p>
+            Inheritance allows one class to inherit properties
+            and methods from another class.
 
-                <div class="code-box">
-
-<pre><code>class Student {
-
-    private String name;
+        </p>
 
 
-    public void setName(String name) {
-
-        this.name = name;
-
-    }
-
-
-    public String getName() {
-
-        return name;
-
-    }
-
-}
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        Student student = new Student();
-
-        student.setName("Julius");
-
-        System.out.println(student.getName());
-
-    }
-
-}</code></pre>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 14
-            ================================================== -->
-
-            <section id="inheritance">
-
-                <h2>
-                    14. Inheritance
-                </h2>
-
-                <p>
-                    Inheritance allows one class to inherit properties
-                    and methods from another class.
-                </p>
-
-                <div class="code-box">
+        <div class="code-box">
 
 <pre><code>class Animal {
 
@@ -1036,45 +984,42 @@ public class Main {
 
 }</code></pre>
 
-                </div>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 15
-            ================================================== -->
+        <!-- =====================================================
+             LESSON 16
+        ====================================================== -->
 
-            <section id="polymorphism">
+        <h2>
+            16. Encapsulation
+        </h2>
 
-                <h2>
-                    15. Polymorphism
-                </h2>
+        <p>
 
-                <p>
-                    Polymorphism allows objects to behave differently
-                    depending on the class or method implementation.
-                </p>
+            Encapsulation means keeping data protected inside
+            a class and controlling access to it through methods.
 
-                <div class="code-box">
+        </p>
 
-<pre><code>class Animal {
 
-    void sound() {
+        <div class="code-box">
 
-        System.out.println("Animal sound");
+<pre><code>class Student {
+
+    private String name;
+
+
+    public void setName(String name) {
+
+        this.name = name;
 
     }
 
-}
 
+    public String getName() {
 
-class Dog extends Animal {
-
-    @Override
-    void sound() {
-
-        System.out.println("Dog barks");
+        return name;
 
     }
 
@@ -1085,37 +1030,70 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Animal animal = new Dog();
+        Student student = new Student();
 
-        animal.sound();
+        student.setName("Julius");
+
+        System.out.println(student.getName());
 
     }
 
 }</code></pre>
 
-                </div>
-
-            </section>
+        </div>
 
 
-            <!-- =================================================
-                 LESSON 16
-            ================================================== -->
+        <!-- =====================================================
+             LESSON 17
+        ====================================================== -->
 
-            <section id="input">
+        <h2>
+            17. Exception Handling
+        </h2>
 
-                <h2>
-                    16. User Input
-                </h2>
+        <p>
 
-                <p>
-                    Java provides the <strong>Scanner</strong> class
-                    for reading input from the keyboard.
-                </p>
+            Exception handling allows a program to handle
+            unexpected errors without immediately stopping.
 
-                <div class="code-box">
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>try {
+
+    int number = 10 / 0;
+
+} catch (ArithmeticException e) {
+
+    System.out.println("Cannot divide by zero.");
+
+}</code></pre>
+
+        </div>
+
+
+        <!-- =====================================================
+             LESSON 18
+        ====================================================== -->
+
+        <h2>
+            18. User Input
+        </h2>
+
+        <p>
+
+            Java can receive input from a user using the
+            <strong>Scanner</strong> class.
+
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>import java.util.Scanner;
+
 
 public class Main {
 
@@ -1129,440 +1107,33 @@ public class Main {
 
         System.out.println("Hello " + name);
 
-        input.close();
-
     }
 
 }</code></pre>
 
-                </div>
+        </div>
 
-                <h3>
-                    Reading Numbers
-                </h3>
 
-                <div class="code-box">
+        <!-- =====================================================
+             LESSON 19
+        ====================================================== -->
+
+        <h2>
+            19. Practical Student Grading Program
+        </h2>
+
+        <p>
+
+            Let's combine variables, input, conditions and
+            output to create a simple student grading program.
+
+        </p>
+
+
+        <div class="code-box">
 
 <pre><code>import java.util.Scanner;
 
-public class Main {
-
-    public static void main(String[] args) {
-
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Enter your age: ");
-
-        int age = input.nextInt();
-
-        System.out.println("Age: " + age);
-
-        input.close();
-
-    }
-
-}</code></pre>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 17
-            ================================================== -->
-
-            <section id="strings">
-
-                <h2>
-                    17. Working with Strings
-                </h2>
-
-                <p>
-                    Strings are used to store text.
-                </p>
-
-                <div class="code-box">
-
-<pre><code>String name = "Julius";
-
-System.out.println(name.length());
-
-System.out.println(name.toUpperCase());
-
-System.out.println(name.toLowerCase());
-
-System.out.println(name.charAt(0));</code></pre>
-
-                </div>
-
-                <p>
-                    Useful String methods include:
-                </p>
-
-                <ul>
-
-                    <li>
-                        <strong>length()</strong> — returns the number
-                        of characters.
-                    </li>
-
-                    <li>
-                        <strong>toUpperCase()</strong> — converts text
-                        to uppercase.
-                    </li>
-
-                    <li>
-                        <strong>toLowerCase()</strong> — converts text
-                        to lowercase.
-                    </li>
-
-                    <li>
-                        <strong>charAt()</strong> — returns a character
-                        at a specific index.
-                    </li>
-
-                </ul>
-
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 18
-            ================================================== -->
-
-            <section id="exceptions">
-
-                <h2>
-                    18. Exception Handling
-                </h2>
-
-                <p>
-                    Exception handling allows a program to respond
-                    to unexpected errors without immediately crashing.
-                </p>
-
-                <div class="code-box">
-
-<pre><code>try {
-
-    int result = 10 / 0;
-
-    System.out.println(result);
-
-} catch (ArithmeticException e) {
-
-    System.out.println("Cannot divide by zero.");
-
-}</code></pre>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 19
-            ================================================== -->
-
-            <section id="practice">
-
-                <h2>
-                    19. Java Practice Exercises
-                </h2>
-
-
-                <div class="tutorial-exercise">
-
-                    <h3>
-                        Exercise 1 — Student Information
-                    </h3>
-
-                    <p>
-                        Create a Java program that stores:
-                    </p>
-
-                    <ul>
-
-                        <li>Student name</li>
-
-                        <li>Student age</li>
-
-                        <li>Student course</li>
-
-                        <li>Student GPA</li>
-
-                    </ul>
-
-                    <p>
-                        Display all the information.
-                    </p>
-
-                </div>
-
-
-                <div class="tutorial-exercise">
-
-                    <h3>
-                        Exercise 2 — Pass or Fail
-                    </h3>
-
-                    <p>
-                        Create a program that asks for a student's
-                        examination score.
-                    </p>
-
-                    <p>
-                        If the score is 50 or above, display
-                        <strong>Pass</strong>. Otherwise display
-                        <strong>Fail</strong>.
-                    </p>
-
-                </div>
-
-
-                <div class="tutorial-exercise">
-
-                    <h3>
-                        Exercise 3 — Multiplication Table
-                    </h3>
-
-                    <p>
-                        Create a Java program that asks the user
-                        for a number and prints its multiplication
-                        table from 1 to 12.
-                    </p>
-
-                </div>
-
-
-                <div class="tutorial-exercise">
-
-                    <h3>
-                        Exercise 4 — Array
-                    </h3>
-
-                    <p>
-                        Create an array containing five student names
-                        and use a loop to display every name.
-                    </p>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 20
-            ================================================== -->
-
-            <section id="quiz">
-
-                <h2>
-                    20. Java Quiz
-                </h2>
-
-
-                <div class="tutorial-exercise">
-
-                    <h3>
-                        Question 1
-                    </h3>
-
-                    <p>
-                        Which keyword is used to create a class?
-                    </p>
-
-                    <p>A. object</p>
-                    <p>B. class</p>
-                    <p>C. create</p>
-                    <p>D. new</p>
-
-                    <details class="answer">
-
-                        <summary>
-                            Show Answer
-                        </summary>
-
-                        <p>
-                            <strong>B. class</strong>
-                        </p>
-
-                    </details>
-
-                </div>
-
-
-                <div class="tutorial-exercise">
-
-                    <h3>
-                        Question 2
-                    </h3>
-
-                    <p>
-                        Which method starts a Java application?
-                    </p>
-
-                    <p>A. start()</p>
-                    <p>B. run()</p>
-                    <p>C. main()</p>
-                    <p>D. execute()</p>
-
-                    <details class="answer">
-
-                        <summary>
-                            Show Answer
-                        </summary>
-
-                        <p>
-                            <strong>C. main()</strong>
-                        </p>
-
-                    </details>
-
-                </div>
-
-
-                <div class="tutorial-exercise">
-
-                    <h3>
-                        Question 3
-                    </h3>
-
-                    <p>
-                        Which data type is used to store whole numbers?
-                    </p>
-
-                    <p>A. String</p>
-                    <p>B. boolean</p>
-                    <p>C. int</p>
-                    <p>D. char</p>
-
-                    <details class="answer">
-
-                        <summary>
-                            Show Answer
-                        </summary>
-
-                        <p>
-                            <strong>C. int</strong>
-                        </p>
-
-                    </details>
-
-                </div>
-
-
-                <div class="tutorial-exercise">
-
-                    <h3>
-                        Question 4
-                    </h3>
-
-                    <p>
-                        Which keyword is used to inherit from another
-                        class?
-                    </p>
-
-                    <p>A. inherit</p>
-                    <p>B. extends</p>
-                    <p>C. implements</p>
-                    <p>D. superClass</p>
-
-                    <details class="answer">
-
-                        <summary>
-                            Show Answer
-                        </summary>
-
-                        <p>
-                            <strong>B. extends</strong>
-                        </p>
-
-                    </details>
-
-                </div>
-
-
-                <div class="tutorial-exercise">
-
-                    <h3>
-                        Question 5
-                    </h3>
-
-                    <p>
-                        Which class can be used to receive keyboard
-                        input from a user?
-                    </p>
-
-                    <p>A. Input</p>
-                    <p>B. Keyboard</p>
-                    <p>C. Scanner</p>
-                    <p>D. ReaderInput</p>
-
-                    <details class="answer">
-
-                        <summary>
-                            Show Answer
-                        </summary>
-
-                        <p>
-                            <strong>C. Scanner</strong>
-                        </p>
-
-                    </details>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 21
-            ================================================== -->
-
-            <section id="project">
-
-                <h2>
-                    🎯 21. Mini Java Project
-                </h2>
-
-                <p>
-                    Let's create a simple student grading system.
-                </p>
-
-                <p>
-                    The program will:
-                </p>
-
-                <ul>
-
-                    <li>
-                        Ask for the student's name.
-                    </li>
-
-                    <li>
-                        Ask for the student's score.
-                    </li>
-
-                    <li>
-                        Determine the grade.
-                    </li>
-
-                    <li>
-                        Display the student's name and grade.
-                    </li>
-
-                </ul>
-
-
-                <h3>
-                    Example Solution
-                </h3>
-
-                <div class="code-box">
-
-<pre><code>import java.util.Scanner;
 
 public class Main {
 
@@ -1615,99 +1186,333 @@ public class Main {
 
         System.out.println("Grade: " + grade);
 
+    }
 
-        input.close();
+}</code></pre>
+
+        </div>
+
+
+        <!-- =====================================================
+             LESSON 20
+        ====================================================== -->
+
+        <h2>
+            20. Complete Practical Example
+        </h2>
+
+        <p>
+
+            The following program combines several Java concepts
+            into a simple student information system.
+
+        </p>
+
+
+        <div class="code-box">
+
+<pre><code>import java.util.Scanner;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+
+        System.out.print("Enter student name: ");
+
+        String name = input.nextLine();
+
+
+        System.out.print("Enter age: ");
+
+        int age = input.nextInt();
+
+
+        System.out.print("Enter GPA: ");
+
+        double gpa = input.nextDouble();
+
+
+        System.out.println();
+
+        System.out.println("----- STUDENT INFORMATION -----");
+
+        System.out.println("Name: " + name);
+
+        System.out.println("Age: " + age);
+
+        System.out.println("GPA: " + gpa);
 
     }
 
 }</code></pre>
 
-                </div>
+        </div>
 
 
-                <div class="tutorial-exercise">
+        <!-- =====================================================
+             PRACTICE
+        ====================================================== -->
 
-                    <h3>
-                        🚀 Project Challenge
-                    </h3>
+        <div class="tutorial-exercise">
 
-                    <p>
-                        Improve the grading system by adding:
-                    </p>
+            <h2>
+                📝 Java Practice Exercise
+            </h2>
 
-                    <ul>
+            <p>
 
-                        <li>
-                            Student ID
-                        </li>
+                Create a Java program that stores the following
+                information about a student:
 
-                        <li>
-                            Course name
-                        </li>
+            </p>
 
-                        <li>
-                            Multiple subjects
-                        </li>
+            <ol>
 
-                        <li>
-                            Total score
-                        </li>
+                <li>Student name</li>
 
-                        <li>
-                            Average score
-                        </li>
+                <li>Student ID</li>
 
-                        <li>
-                            Grade calculation
-                        </li>
+                <li>Age</li>
 
-                        <li>
-                            Pass or fail status
-                        </li>
+                <li>Course</li>
 
-                    </ul>
+                <li>GPA</li>
 
-                    <p>
-                        Try to build the improved version yourself
-                        before looking for a solution.
-                    </p>
-
-                </div>
-
-            </section>
+            </ol>
 
 
-            <!-- =================================================
-                 TUTORIAL NAVIGATION
-            ================================================== -->
+            <p>
 
-            <div class="tutorial-navigation">
+                Then display the information in a clear format.
 
-                <a
-                    href="python-tutorial.html"
-                    class="read-btn">
-
-                    ← Python Tutorial
-
-                </a>
+            </p>
 
 
-                <a
-                    href="mysql-tutorial.html"
-                    class="read-btn">
+            <h3>
+                Expected Output
+            </h3>
 
-                    MySQL Tutorial →
 
-                </a>
+            <div class="code-box">
+
+<pre><code>----- STUDENT INFORMATION -----
+
+Name: Julius
+Student ID: 2026001
+Age: 20
+Course: Information Technology
+GPA: 3.50</code></pre>
 
             </div>
 
+        </div>
 
-        </article>
 
-    </section>
+        <!-- =====================================================
+             QUIZ
+        ====================================================== -->
 
-</main>
+        <div class="tutorial-exercise">
+
+            <h2>
+                🎯 Java Quiz
+            </h2>
+
+
+            <h3>
+                Question 1
+            </h3>
+
+            <p>
+
+                Which keyword is used to create a class in Java?
+
+            </p>
+
+            <p>
+                A. object
+            </p>
+
+            <p>
+                B. class
+            </p>
+
+            <p>
+                C. create
+            </p>
+
+            <p>
+                D. new
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Answer: B. class
+                </strong>
+
+            </p>
+
+
+            <h3>
+                Question 2
+            </h3>
+
+            <p>
+
+                Which method is the entry point of a Java program?
+
+            </p>
+
+            <p>
+                A. start()
+            </p>
+
+            <p>
+                B. run()
+            </p>
+
+            <p>
+                C. main()
+            </p>
+
+            <p>
+                D. execute()
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Answer: C. main()
+                </strong>
+
+            </p>
+
+
+            <h3>
+                Question 3
+            </h3>
+
+            <p>
+
+                Which keyword is used to create an object?
+
+            </p>
+
+            <p>
+                A. class
+            </p>
+
+            <p>
+                B. object
+            </p>
+
+            <p>
+                C. new
+            </p>
+
+            <p>
+                D. create
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Answer: C. new
+                </strong>
+
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             CHALLENGE
+        ====================================================== -->
+
+        <div class="tutorial-exercise">
+
+            <h2>
+                🚀 Java Challenge
+            </h2>
+
+            <p>
+
+                Build a simple Student Management Program.
+
+            </p>
+
+
+            <p>
+                Your program should allow the user to:
+            </p>
+
+
+            <ul>
+
+                <li>Enter a student's name.</li>
+
+                <li>Enter the student's ID.</li>
+
+                <li>Enter the student's age.</li>
+
+                <li>Enter the student's course.</li>
+
+                <li>Enter the student's GPA.</li>
+
+                <li>Display all student information.</li>
+
+                <li>Determine whether the student passed.</li>
+
+            </ul>
+
+
+            <p>
+
+                Try to build the program yourself before checking
+                for a solution.
+
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             NAVIGATION
+        ====================================================== -->
+
+        <div class="tutorial-navigation">
+
+            <a
+                href="python-tutorial.html"
+                class="read-btn">
+
+                ← Python Tutorial
+
+            </a>
+
+
+            <a
+                href="mysql-tutorial.html"
+                class="read-btn">
+
+                MySQL Tutorial →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
 
 
 <!-- =========================================================
@@ -1721,8 +1526,10 @@ public class Main {
     </h2>
 
     <p>
-        Get new programming tutorials, technology news
-        and digital tools from TechHub Ghana.
+
+        Receive new tutorials, technology news and digital tools
+        from TechHub Ghana.
+
     </p>
 
 
@@ -1733,11 +1540,13 @@ public class Main {
             id="newsletterEmail"
             placeholder="Enter your email"
             aria-label="Email address"
-            autocomplete="email"
             required>
 
+
         <button type="submit">
+
             Subscribe
+
         </button>
 
     </form>
@@ -1763,12 +1572,16 @@ public class Main {
             </h3>
 
             <p>
-                Technology • Innovation • Learning
+
+                Technology • Learning • Innovation
+
             </p>
 
             <p>
-                Your trusted source for technology
-                tutorials, news and digital tools.
+
+                Your trusted source for technology tutorials,
+                news and digital tools.
+
             </p>
 
         </div>
@@ -1782,11 +1595,13 @@ public class Main {
                 Quick Links
             </h3>
 
+
             <p>
                 <a href="index.html">
                     Home
                 </a>
             </p>
+
 
             <p>
                 <a href="news.html">
@@ -1794,11 +1609,13 @@ public class Main {
                 </a>
             </p>
 
+
             <p>
                 <a href="tutorials.html">
                     Tutorials
                 </a>
             </p>
+
 
             <p>
                 <a href="tools.html">
@@ -1817,11 +1634,13 @@ public class Main {
                 Tutorials
             </h3>
 
+
             <p>
                 <a href="html-tutorial.html">
                     HTML
                 </a>
             </p>
+
 
             <p>
                 <a href="css-tutorial.html">
@@ -1829,11 +1648,6 @@ public class Main {
                 </a>
             </p>
 
-            <p>
-                <a href="javascript-tutorial.html">
-                    JavaScript
-                </a>
-            </p>
 
             <p>
                 <a href="python-tutorial.html">
@@ -1841,15 +1655,24 @@ public class Main {
                 </a>
             </p>
 
+
             <p>
                 <a href="java-tutorial.html">
                     Java
                 </a>
             </p>
 
+
             <p>
                 <a href="mysql-tutorial.html">
                     MySQL
+                </a>
+            </p>
+
+
+            <p>
+                <a href="javascript-tutorial.html">
+                    JavaScript
                 </a>
             </p>
 
@@ -1864,9 +1687,11 @@ public class Main {
                 Contact
             </h3>
 
+
             <p>
                 📍 Accra, Ghana
             </p>
+
 
             <p>
                 📧 info@techhubghana.com
@@ -1881,7 +1706,9 @@ public class Main {
 
 
     <p class="copyright">
+
         © 2026 TechHub Ghana. All Rights Reserved.
+
     </p>
 
 </footer>
@@ -1893,6 +1720,7 @@ public class Main {
 
 <script src="script.js"></script>
 
+
 </body>
 
-    </html>
+                </html>
