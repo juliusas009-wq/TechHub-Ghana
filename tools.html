@@ -80,7 +80,6 @@
 
 <header class="main-header">
 
-
     <!-- =====================================================
          TOP BAR
     ====================================================== -->
@@ -88,8 +87,8 @@
     <div class="top-bar">
 
 
-        <!-- LOGO
-             Same structure used across TechHub Ghana pages
+        <!-- =================================================
+             LOGO
         ================================================== -->
 
         <a
@@ -134,12 +133,14 @@
                     id="siteSearch"
                     placeholder="Search TechHub Ghana..."
                     aria-label="Search TechHub Ghana"
+                    autocomplete="off"
                 >
 
                 <button
                     type="button"
                     id="searchBtn"
                     aria-label="Search"
+                    title="Search"
                 >
 
                     <i class="fas fa-search"></i>
@@ -158,7 +159,9 @@
                 aria-label="Toggle dark mode"
                 title="Toggle dark mode"
             >
+
                 🌙
+
             </button>
 
 
@@ -170,8 +173,11 @@
                 id="menuBtn"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
+                aria-controls="navMenu"
             >
+
                 ☰
+
             </button>
 
         </div>
@@ -243,10 +249,13 @@
 
 <section
     class="breaking-news"
-    aria-label="Technology updates"
+    aria-label="TechHub Ghana updates"
 >
 
-    <marquee>
+    <marquee
+        behavior="scroll"
+        direction="left"
+    >
 
         🛠️ Free Digital Tools • 🎓 GPA Calculator •
         🔳 QR Generator • 🤖 AI Assistant •
@@ -262,7 +271,10 @@
      TOOLS HERO
 ========================================================= -->
 
-<section class="tutorial-hero">
+<section
+    class="tutorial-hero"
+    aria-labelledby="toolsHeroTitle"
+>
 
     <div>
 
@@ -270,7 +282,7 @@
             🛠️ TECHHUB GHANA DIGITAL TOOLS
         </span>
 
-        <h2>
+        <h2 id="toolsHeroTitle">
             Free Digital Tools
         </h2>
 
@@ -292,15 +304,17 @@
 
 
     <!-- =====================================================
-         TOOLS SECTION
+         EXPLORE TOOLS
     ====================================================== -->
 
-    <section class="section">
-
+    <section
+        class="section"
+        aria-labelledby="exploreToolsTitle"
+    >
 
         <div class="section-header">
 
-            <h2>
+            <h2 id="exploreToolsTitle">
                 🛠️ Explore Our Tools
             </h2>
 
@@ -319,11 +333,14 @@
         <div class="card-grid">
 
 
-            <!-- GPA CALCULATOR -->
+            <!-- GPA -->
 
             <article class="tool-card">
 
-                <div class="icon">
+                <div
+                    class="icon"
+                    aria-hidden="true"
+                >
                     🎓
                 </div>
 
@@ -346,11 +363,14 @@
             </article>
 
 
-            <!-- QR GENERATOR -->
+            <!-- QR -->
 
             <article class="tool-card">
 
-                <div class="icon">
+                <div
+                    class="icon"
+                    aria-hidden="true"
+                >
                     🔳
                 </div>
 
@@ -373,11 +393,14 @@
             </article>
 
 
-            <!-- AI ASSISTANT -->
+            <!-- AI -->
 
             <article class="tool-card">
 
-                <div class="icon">
+                <div
+                    class="icon"
+                    aria-hidden="true"
+                >
                     🤖
                 </div>
 
@@ -400,11 +423,14 @@
             </article>
 
 
-            <!-- PASSWORD GENERATOR -->
+            <!-- PASSWORD -->
 
             <article class="tool-card">
 
-                <div class="icon">
+                <div
+                    class="icon"
+                    aria-hidden="true"
+                >
                     🔐
                 </div>
 
@@ -413,8 +439,8 @@
                 </h3>
 
                 <p>
-                    Generate strong and secure passwords for
-                    your online accounts.
+                    Generate strong passwords for your
+                    online accounts and digital services.
                 </p>
 
                 <a
@@ -427,11 +453,14 @@
             </article>
 
 
-            <!-- AGE CALCULATOR -->
+            <!-- AGE -->
 
             <article class="tool-card">
 
-                <div class="icon">
+                <div
+                    class="icon"
+                    aria-hidden="true"
+                >
                     🎂
                 </div>
 
@@ -458,7 +487,10 @@
 
             <article class="tool-card">
 
-                <div class="icon">
+                <div
+                    class="icon"
+                    aria-hidden="true"
+                >
                     🔄
                 </div>
 
@@ -480,7 +512,6 @@
 
             </article>
 
-
         </div>
 
     </section>
@@ -490,12 +521,14 @@
          WHY USE OUR TOOLS
     ====================================================== -->
 
-    <section class="section">
-
+    <section
+        class="section"
+        aria-labelledby="whyToolsTitle"
+    >
 
         <div class="section-header">
 
-            <h2>
+            <h2 id="whyToolsTitle">
                 ⭐ Why Use TechHub Ghana Tools?
             </h2>
 
@@ -510,11 +543,12 @@
         <div class="card-grid">
 
 
-            <!-- FAST -->
-
             <article class="tool-card">
 
-                <div class="icon">
+                <div
+                    class="icon"
+                    aria-hidden="true"
+                >
                     ⚡
                 </div>
 
@@ -530,11 +564,12 @@
             </article>
 
 
-            <!-- FREE -->
-
             <article class="tool-card">
 
-                <div class="icon">
+                <div
+                    class="icon"
+                    aria-hidden="true"
+                >
                     🆓
                 </div>
 
@@ -550,11 +585,12 @@
             </article>
 
 
-            <!-- MOBILE FRIENDLY -->
-
             <article class="tool-card">
 
-                <div class="icon">
+                <div
+                    class="icon"
+                    aria-hidden="true"
+                >
                     📱
                 </div>
 
@@ -570,11 +606,12 @@
             </article>
 
 
-            <!-- STUDENT FRIENDLY -->
-
             <article class="tool-card">
 
-                <div class="icon">
+                <div
+                    class="icon"
+                    aria-hidden="true"
+                >
                     🎓
                 </div>
 
@@ -583,8 +620,8 @@
                 </h3>
 
                 <p>
-                    Many of our tools are designed specifically
-                    with students in mind.
+                    Many of our tools are designed with
+                    students and learners in mind.
                 </p>
 
             </article>
@@ -599,24 +636,24 @@
          POPULAR TOOLS
     ====================================================== -->
 
-    <section class="section">
-
+    <section
+        class="section"
+        aria-labelledby="popularToolsTitle"
+    >
 
         <div class="news-layout">
 
 
             <!-- =================================================
-                 LEFT CONTENT
+                 POPULAR TOOLS
             ================================================== -->
 
             <div class="news-left">
 
-                <h2>
+                <h2 id="popularToolsTitle">
                     🔥 Popular Tools
                 </h2>
 
-
-                <!-- GPA -->
 
                 <article class="news-card">
 
@@ -643,8 +680,6 @@
                 </article>
 
 
-                <!-- QR -->
-
                 <article class="news-card">
 
                     <div>
@@ -669,8 +704,6 @@
 
                 </article>
 
-
-                <!-- AI -->
 
                 <article class="news-card">
 
@@ -697,8 +730,6 @@
                 </article>
 
 
-                <!-- PASSWORD -->
-
                 <article class="news-card">
 
                     <div>
@@ -708,8 +739,8 @@
                         </h3>
 
                         <p>
-                            Create strong passwords to help
-                            protect your online accounts.
+                            Create strong passwords for your
+                            important online accounts.
                         </p>
 
                         <a
@@ -723,7 +754,6 @@
 
                 </article>
 
-
             </div>
 
 
@@ -731,7 +761,10 @@
                  SIDEBAR
             ================================================== -->
 
-            <aside>
+            <aside
+                class="sidebar"
+                aria-label="Quick links"
+            >
 
                 <h3>
                     📌 Quick Links
@@ -803,7 +836,6 @@
 
             </aside>
 
-
         </div>
 
     </section>
@@ -813,9 +845,12 @@
          NEWSLETTER
     ====================================================== -->
 
-    <section class="newsletter">
+    <section
+        class="newsletter"
+        aria-labelledby="newsletterTitle"
+    >
 
-        <h2>
+        <h2 id="newsletterTitle">
             📩 Stay Updated
         </h2>
 
@@ -825,7 +860,10 @@
         </p>
 
 
-        <form id="newsletterForm">
+        <form
+            id="newsletterForm"
+            novalidate
+        >
 
             <input
                 type="email"
@@ -844,7 +882,6 @@
 
     </section>
 
-
 </main>
 
 
@@ -853,7 +890,6 @@
 ========================================================= -->
 
 <footer>
-
 
     <div class="footer-grid">
 
@@ -1014,7 +1050,6 @@
 
         </div>
 
-
     </div>
 
 
@@ -1026,7 +1061,6 @@
         © 2026 TechHub Ghana. All Rights Reserved.
 
     </p>
-
 
 </footer>
 
@@ -1049,9 +1083,7 @@ document.addEventListener(
     function () {
 
         const newsletterForm =
-            document.getElementById(
-                "newsletterForm"
-            );
+            document.getElementById("newsletterForm");
 
 
         if (!newsletterForm) {
@@ -1067,9 +1099,7 @@ document.addEventListener(
 
 
                 const emailInput =
-                    document.getElementById(
-                        "newsletterEmail"
-                    );
+                    document.getElementById("newsletterEmail");
 
 
                 if (!emailInput) {
@@ -1082,7 +1112,17 @@ document.addEventListener(
 
 
                 if (!email) {
+                    emailInput.focus();
                     return;
+                }
+
+
+                if (!emailInput.checkValidity()) {
+
+                    emailInput.reportValidity();
+
+                    return;
+
                 }
 
 
@@ -1104,4 +1144,4 @@ document.addEventListener(
 
 </body>
 
-                    </html>
+    </html>
