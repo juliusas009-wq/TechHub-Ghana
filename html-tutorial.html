@@ -3,15 +3,20 @@
 
 <head>
 
-    <!-- =====================================================
-         BASIC META
-    ====================================================== -->
+    <!-- =========================================================
+         BASIC DOCUMENT SETUP
+    ========================================================== -->
 
     <meta charset="UTF-8">
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b5cff"
     >
 
     <meta
@@ -21,7 +26,7 @@
 
     <meta
         name="keywords"
-        content="HTML tutorial, learn HTML, HTML Ghana, web development, programming, TechHub Ghana"
+        content="HTML tutorial Ghana, learn HTML, HTML beginners, web development, programming, TechHub Ghana"
     >
 
     <meta
@@ -37,9 +42,9 @@
     <title>HTML Tutorial for Beginners | TechHub Ghana</title>
 
 
-    <!-- =====================================================
+    <!-- =========================================================
          OPEN GRAPH
-    ====================================================== -->
+    ========================================================== -->
 
     <meta
         property="og:type"
@@ -67,9 +72,9 @@
     >
 
 
-    <!-- =====================================================
+    <!-- =========================================================
          GOOGLE FONT
-    ====================================================== -->
+    ========================================================== -->
 
     <link
         rel="preconnect"
@@ -88,19 +93,19 @@
     >
 
 
-    <!-- =====================================================
+    <!-- =========================================================
          FONT AWESOME
-    ====================================================== -->
+    ========================================================== -->
 
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     >
 
 
-    <!-- =====================================================
-         MAIN TECHHUB STYLESHEET
-    ====================================================== -->
+    <!-- =========================================================
+         MAIN STYLESHEET
+    ========================================================== -->
 
     <link
         rel="stylesheet"
@@ -108,9 +113,9 @@
     >
 
 
-    <!-- =====================================================
+    <!-- =========================================================
          FAVICON
-    ====================================================== -->
+    ========================================================== -->
 
     <link
         rel="icon"
@@ -119,27 +124,109 @@
     >
 
 
-    <!-- =====================================================
-         TUTORIAL PAGE STYLES
-    ====================================================== -->
+    <!-- =========================================================
+         PAGE SIDE SPACING
+         STANDARD TECHHUB GHANA LAYOUT
+         MATCHED TO CSS TUTORIAL STANDARD
+    ========================================================== -->
 
     <style>
 
-        /* =================================================
-           TUTORIAL PAGE
-        ================================================= */
+        /* =====================================================
+           GLOBAL PAGE PROTECTION
+        ====================================================== */
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ====================================================== */
+
+        main {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
 
         .tutorial-page {
             width: 100%;
             max-width: 1400px;
-            margin: 0 auto;
-            padding: 40px 20px 60px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 40px;
+            padding-bottom: 60px;
         }
 
 
-        /* =================================================
-           TUTORIAL HERO
-        ================================================= */
+        /* =====================================================
+           STANDARD TECHHUB LOGO
+        ====================================================== */
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            text-decoration: none;
+        }
+
+
+        .logo img {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            max-width: 56px;
+            object-fit: contain;
+            display: block;
+        }
+
+
+        .logo > div,
+        .logo-text {
+            min-width: 0;
+        }
+
+
+        .logo h1,
+        .logo p {
+            display: block;
+        }
+
+
+        .logo h1 {
+            white-space: nowrap;
+        }
+
+
+        .logo p {
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           TUTORIAL INTRO
+        ====================================================== */
 
         .tutorial-intro {
             background:
@@ -208,7 +295,7 @@
 
             font-size: 1rem;
 
-            color: rgba(255,255,255,0.94);
+            color: rgba(255, 255, 255, 0.94);
 
             position: relative;
 
@@ -216,9 +303,9 @@
         }
 
 
-        /* =================================================
+        /* =====================================================
            COURSE LAYOUT
-        ================================================= */
+        ====================================================== */
 
         .tutorial-layout {
             display: grid;
@@ -233,9 +320,9 @@
         }
 
 
-        /* =================================================
+        /* =====================================================
            LESSON SIDEBAR
-        ================================================= */
+        ====================================================== */
 
         .lesson-sidebar {
             background: #ffffff;
@@ -252,6 +339,8 @@
             top: 20px;
 
             border: 1px solid #e5e7eb;
+
+            min-width: 0;
         }
 
 
@@ -297,9 +386,9 @@
         }
 
 
-        /* =================================================
+        /* =====================================================
            LESSON CONTENT
-        ================================================= */
+        ====================================================== */
 
         .lesson-content {
             background: #ffffff;
@@ -380,11 +469,14 @@
         }
 
 
-        /* =================================================
+        /* =====================================================
            CODE BLOCKS
-        ================================================= */
+        ====================================================== */
 
         .code-box {
+            width: 100%;
+            max-width: 100%;
+
             background: #111827;
 
             color: #f9fafb;
@@ -419,12 +511,14 @@
             line-height: 1.7;
 
             min-width: max-content;
+
+            max-width: none;
         }
 
 
-        /* =================================================
+        /* =====================================================
            EXERCISES
-        ================================================= */
+        ====================================================== */
 
         .exercise {
             background: #f8fafc;
@@ -451,9 +545,9 @@
         }
 
 
-        /* =================================================
+        /* =====================================================
            ANSWERS
-        ================================================= */
+        ====================================================== */
 
         .answer {
             margin-top: 15px;
@@ -476,9 +570,9 @@
         }
 
 
-        /* =================================================
+        /* =====================================================
            LESSON NAVIGATION
-        ================================================= */
+        ====================================================== */
 
         .lesson-nav {
             display: flex;
@@ -528,9 +622,31 @@
         }
 
 
-        /* =================================================
-           DARK MODE SUPPORT
-        ================================================= */
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+            width: 100%;
+            max-width: 100%;
+
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+
+        .footer-grid,
+        .copyright {
+            max-width: 1400px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           DARK MODE
+        ====================================================== */
 
         body.dark-mode .lesson-sidebar,
         body.dark-mode .lesson-content {
@@ -583,9 +699,9 @@
         }
 
 
-        /* =================================================
+        /* =====================================================
            TABLET
-        ================================================= */
+        ====================================================== */
 
         @media (max-width: 1000px) {
 
@@ -601,15 +717,24 @@
         }
 
 
-        /* =================================================
-           MOBILE
-        ================================================= */
+        /* =====================================================
+           MOBILE — 768px
+        ====================================================== */
 
         @media (max-width: 768px) {
 
+            main {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+
             .tutorial-page {
+                width: 100%;
+                max-width: 100%;
+
                 padding:
-                    25px 12px 45px;
+                    25px 0 45px;
             }
 
 
@@ -633,6 +758,62 @@
                 font-size: 0.92rem;
 
                 line-height: 1.7;
+            }
+
+
+            /* =================================================
+               STANDARD MOBILE LOGO
+            ================================================== */
+
+            .top-bar {
+                width: 100%;
+                max-width: 100%;
+
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+
+            .logo {
+                gap: 9px;
+
+                max-width:
+                    calc(100% - 58px);
+            }
+
+
+            .logo img {
+                width: 44px;
+                height: 44px;
+
+                min-width: 44px;
+                max-width: 44px;
+            }
+
+
+            .logo > div,
+            .logo-text {
+                min-width: 0;
+
+                overflow: hidden;
+            }
+
+
+            .logo h1 {
+                font-size: 1rem;
+
+                overflow: hidden;
+
+                text-overflow: ellipsis;
+            }
+
+
+            .logo p {
+                font-size: 0.58rem;
+
+                overflow: hidden;
+
+                text-overflow: ellipsis;
             }
 
 
@@ -664,6 +845,10 @@
                 padding: 15px;
 
                 border-radius: 9px;
+
+                width: 100%;
+
+                overflow-x: auto;
             }
 
 
@@ -683,19 +868,60 @@
                 width: 100%;
             }
 
+
+            footer {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
         }
 
 
-        /* =================================================
-           SMALL PHONES
-        ================================================= */
+        /* =====================================================
+           SMALL PHONES — 480px
+        ====================================================== */
 
         @media (max-width: 480px) {
 
-            .tutorial-page {
-                padding-left: 10px;
+            main {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
 
-                padding-right: 10px;
+
+            .tutorial-page {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+
+            .top-bar {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+
+            .logo {
+                gap: 8px;
+            }
+
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+
+                min-width: 40px;
+                max-width: 40px;
+            }
+
+
+            .logo h1 {
+                font-size: 0.92rem;
+            }
+
+
+            .logo p {
+                font-size: 0.52rem;
             }
 
 
@@ -725,6 +951,12 @@
                 border-left-width: 4px;
             }
 
+
+            footer {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
         }
 
     </style>
@@ -732,452 +964,570 @@
 </head>
 
 
-<body>
+<body id="top">
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+    <!-- =========================================================
+         SKIP LINK
+    ========================================================== -->
 
-<header>
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to main content
+    </a>
 
-    <div class="top-bar">
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header
+        class="main-header"
+        id="siteHeader"
+    >
+
+        <div class="top-bar">
 
 
-        <!-- =================================================
-             STANDARD TECHHUB LOGO
-        ================================================= -->
+            <!-- =================================================
+                 STANDARD TECHHUB LOGO
+            ================================================= -->
 
-        <a
-            href="index.html"
-            class="logo"
-            aria-label="TechHub Ghana Home"
-        >
-
-            <img
-                src="images/logo.png"
-                alt="TechHub Ghana Logo"
-                loading="eager"
-                onerror="this.style.display='none'"
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="TechHub Ghana home"
             >
 
-            <div>
+                <img
+                    src="images/logo.png"
+                    alt="TechHub Ghana logo"
+                    width="56"
+                    height="56"
+                    loading="eager"
+                    decoding="async"
+                >
 
-                <h1>
-                    TechHub Ghana
-                </h1>
 
-                <p>
-                    Technology • Innovation • Digital Ghana
-                </p>
+                <div class="logo-text">
+
+                    <h1>
+                        TechHub Ghana
+                    </h1>
+
+                    <p>
+                        Technology • Innovation • Digital Ghana
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- =================================================
+                 HEADER RIGHT
+            ================================================= -->
+
+            <div class="header-right">
+
+
+                <!-- SEARCH -->
+
+                <form
+                    class="search-box"
+                    action="news.html"
+                    method="get"
+                    role="search"
+                >
+
+                    <label
+                        for="tutorialSearch"
+                        class="sr-only"
+                    >
+                        Search TechHub Ghana
+                    </label>
+
+                    <input
+                        type="search"
+                        id="tutorialSearch"
+                        name="q"
+                        placeholder="Search TechHub Ghana..."
+                        autocomplete="off"
+                    >
+
+
+                    <button
+                        type="submit"
+                        aria-label="Search"
+                    >
+
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                            aria-hidden="true"
+                        ></i>
+
+                    </button>
+
+                </form>
+
+
+                <!-- DARK MODE -->
+
+                <button
+                    type="button"
+                    id="darkModeBtn"
+                    class="dark-mode-btn"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
+                >
+
+                    <i
+                        class="fa-solid fa-moon"
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    type="button"
+                    class="menu-btn"
+                    id="menuBtn"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="navMenu"
+                >
+
+                    <i
+                        class="fa-solid fa-bars"
+                        aria-hidden="true"
+                    ></i>
+
+                </button>
 
             </div>
 
-        </a>
+        </div>
 
 
-        <!-- =================================================
-             HEADER SEARCH
-        ================================================= -->
+        <!-- =====================================================
+             NAVIGATION
+        ====================================================== -->
 
-        <form
-            class="search-box"
-            action="news.html"
-            method="get"
-            role="search"
+        <nav
+            id="navMenu"
+            aria-label="Main navigation"
         >
 
-            <label
-                for="tutorialSearch"
-                class="sr-only"
+            <a href="index.html">
+
+                <i
+                    class="fa-solid fa-house"
+                    aria-hidden="true"
+                ></i>
+
+                Home
+
+            </a>
+
+
+            <a href="ghana-tech.html">
+
+                <i
+                    class="fa-solid fa-flag"
+                    aria-hidden="true"
+                ></i>
+
+                Ghana Tech
+
+            </a>
+
+
+            <a href="news.html">
+
+                <i
+                    class="fa-regular fa-newspaper"
+                    aria-hidden="true"
+                ></i>
+
+                News
+
+            </a>
+
+
+            <a
+                href="tutorials.html"
+                class="active"
+                aria-current="page"
             >
-                Search TechHub Ghana
-            </label>
 
-            <input
-                type="search"
-                id="tutorialSearch"
-                name="q"
-                placeholder="Search TechHub Ghana..."
-                autocomplete="off"
-            >
+                <i
+                    class="fa-solid fa-graduation-cap"
+                    aria-hidden="true"
+                ></i>
 
-            <button
-                type="submit"
-                aria-label="Search"
-            >
+                Tutorials
 
-                <i class="fa-solid fa-magnifying-glass"></i>
-
-            </button>
-
-        </form>
+            </a>
 
 
-        <!-- =================================================
-             DARK MODE
-        ================================================= -->
+            <a href="tools.html">
 
-        <button
-            type="button"
-            id="darkModeBtn"
-            aria-label="Toggle dark mode"
-            title="Toggle dark mode"
-        >
+                <i
+                    class="fa-solid fa-toolbox"
+                    aria-hidden="true"
+                ></i>
 
-            <i class="fa-solid fa-moon"></i>
+                Tools
 
-        </button>
-
-    </div>
+            </a>
 
 
-    <!-- =====================================================
-         MOBILE MENU BUTTON
-    ====================================================== -->
+            <a href="gpa.html">
 
-    <button
-        type="button"
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="mainNav"
+                🎓 GPA
+
+            </a>
+
+
+            <a href="qr-generator.html">
+
+                📱 QR Generator
+
+            </a>
+
+
+            <a href="ai-assistant.html">
+
+                🤖 AI Assistant
+
+            </a>
+
+
+            <a href="about.html">
+
+                <i
+                    class="fa-solid fa-circle-info"
+                    aria-hidden="true"
+                ></i>
+
+                About
+
+            </a>
+
+
+            <a href="contact.html">
+
+                <i
+                    class="fa-solid fa-envelope"
+                    aria-hidden="true"
+                ></i>
+
+                Contact
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         BREAKING / UPDATE BAR
+    ========================================================== -->
+
+    <section
+        class="breaking-news"
+        aria-label="TechHub Ghana latest updates"
     >
 
-        <i class="fa-solid fa-bars"></i>
+        <div class="breaking-inner">
 
-    </button>
+            <div class="breaking-label">
 
+                <i
+                    class="fa-solid fa-bolt"
+                    aria-hidden="true"
+                ></i>
 
-    <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
+                Tech Update
 
-    <nav
-        id="mainNav"
-        aria-label="Main navigation"
-    >
+            </div>
 
-        <a href="index.html">
 
-            <i class="fa-solid fa-house"></i>
+            <div class="breaking-content">
 
-            Home
+                <div class="breaking-track">
 
-        </a>
+                    <span>
+                        🌐 HTML
+                    </span>
 
+                    <span>
+                        Web Development
+                    </span>
 
-        <a href="news.html">
+                    <span>
+                        CSS
+                    </span>
 
-            <i class="fa-solid fa-newspaper"></i>
+                    <span>
+                        JavaScript
+                    </span>
 
-            Tech News
+                    <span>
+                        Programming
+                    </span>
 
-        </a>
+                    <span>
+                        Website Design
+                    </span>
 
+                    <span>
+                        TechHub Ghana
+                    </span>
 
-        <a href="ghana-tech.html">
+                </div>
 
-            <i class="fa-solid fa-flag"></i>
+            </div>
 
-            Ghana Tech
-
-        </a>
-
-
-        <a href="ai-assistant.html">
-
-            <i class="fa-solid fa-robot"></i>
-
-            AI
-
-        </a>
-
-
-        <a
-            href="tutorials.html"
-            class="active"
-        >
-
-            <i class="fa-solid fa-code"></i>
-
-            Programming
-
-        </a>
-
-
-        <a href="tools.html">
-
-            <i class="fa-solid fa-toolbox"></i>
-
-            Tools
-
-        </a>
-
-
-        <a href="about.html">
-
-            <i class="fa-solid fa-circle-info"></i>
-
-            About
-
-        </a>
-
-
-        <a href="contact.html">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            Contact
-
-        </a>
-
-    </nav>
-
-</header>
-
-
-<!-- =========================================================
-     BREAKING NEWS
-========================================================= -->
-
-<section
-    class="breaking-news"
-    aria-label="Breaking technology news"
->
-
-    <div class="breaking-label">
-
-        <i class="fa-solid fa-bolt"></i>
-
-        BREAKING
-
-    </div>
-
-
-    <div class="breaking-content">
-
-        <span>
-
-            🌐 HTML • Web Development • CSS • JavaScript •
-            Programming • Website Design • TechHub Ghana
-
-        </span>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     MAIN CONTENT
-========================================================= -->
-
-<main class="tutorial-page">
-
-
-    <!-- =====================================================
-         COURSE INTRO
-    ====================================================== -->
-
-    <section class="tutorial-intro">
-
-        <h1>
-            🌐 HTML Tutorial for Beginners
-        </h1>
-
-        <p>
-
-            Learn how to build the structure of modern websites
-            using HTML. This course starts with the fundamentals
-            and progresses toward practical website development.
-
-        </p>
+        </div>
 
     </section>
 
 
-    <!-- =====================================================
-         COURSE LAYOUT
-    ====================================================== -->
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
 
-    <div class="tutorial-layout">
-
-
-        <!-- =================================================
-             LESSON SIDEBAR
-        ================================================= -->
-
-        <aside
-            class="lesson-sidebar"
-            aria-label="HTML course lessons"
-        >
-
-            <h3>
-                🌐 HTML Course
-            </h3>
+    <main id="main-content">
 
 
-            <a href="#introduction">
-                1. What is HTML?
-            </a>
-
-            <a href="#structure">
-                2. HTML Structure
-            </a>
-
-            <a href="#headings">
-                3. Headings
-            </a>
-
-            <a href="#paragraphs">
-                4. Paragraphs
-            </a>
-
-            <a href="#links">
-                5. Links
-            </a>
-
-            <a href="#images">
-                6. Images
-            </a>
-
-            <a href="#lists">
-                7. Lists
-            </a>
-
-            <a href="#tables">
-                8. Tables
-            </a>
-
-            <a href="#forms">
-                9. Forms
-            </a>
-
-            <a href="#semantic">
-                10. Semantic HTML
-            </a>
-
-            <a href="#attributes">
-                11. Attributes
-            </a>
-
-            <a href="#comments">
-                12. Comments
-            </a>
-
-            <a href="#media">
-                13. Audio & Video
-            </a>
-
-            <a href="#practice">
-                14. Practice
-            </a>
-
-            <a href="#exam">
-                15. Exam Questions
-            </a>
-
-            <a href="#project">
-                16. Mini Project
-            </a>
-
-        </aside>
+        <section class="tutorial-page">
 
 
-        <!-- =================================================
-             LESSON CONTENT
-        ================================================= -->
+            <!-- =====================================================
+                 COURSE INTRO
+            ====================================================== -->
 
-        <article class="lesson-content">
+            <section class="tutorial-intro">
 
+                <h1>
+                    🌐 HTML Tutorial for Beginners
+                </h1>
 
-            <h1>
-                🌐 HTML for Beginners
-            </h1>
-
-
-            <p>
-
-                Welcome to the TechHub Ghana HTML Tutorial.
-
-                This course teaches you how to build the structure
-                of websites using HTML, starting from the basics
-                and moving toward practical website development.
-
-            </p>
-
-
-            <!-- =================================================
-                 1. INTRODUCTION
-            ================================================= -->
-
-            <h2 id="introduction">
-                1. What is HTML?
-            </h2>
-
-
-            <p>
-
-                HTML stands for
-                <strong>HyperText Markup Language</strong>.
-
-                It is the standard markup language used to create
-                the structure of web pages.
-
-            </p>
-
-
-            <p>
-
-                HTML tells the browser what different parts of a
-                webpage are, such as headings, paragraphs, images,
-                links, tables and forms.
-
-            </p>
-
-
-            <div class="exercise">
-
-                <strong>
-                    💡 Remember:
-                </strong>
 
                 <p>
 
-                    HTML provides the
-                    <strong>structure</strong> of a website.
-
-                    CSS provides the
-                    <strong>design</strong>.
-
-                    JavaScript provides
-                    <strong>interaction</strong>.
+                    Learn how to build the structure of modern websites
+                    using HTML. This course starts with the fundamentals
+                    and progresses toward practical website development.
 
                 </p>
 
-            </div>
+            </section>
 
 
-            <!-- =================================================
-                 2. STRUCTURE
-            ================================================= -->
+            <!-- =====================================================
+                 COURSE LAYOUT
+            ====================================================== -->
 
-            <h2 id="structure">
-                2. Basic HTML Structure
-            </h2>
+            <div class="tutorial-layout">
 
 
-            <p>
+                <!-- =================================================
+                     LESSON SIDEBAR
+                ================================================= -->
 
-                Every normal HTML page starts with a basic
-                document structure.
+                <aside
+                    class="lesson-sidebar"
+                    aria-label="HTML course lessons"
+                >
 
-            </p>
+                    <h3>
+                        🌐 HTML Course
+                    </h3>
 
 
-            <div class="code-box">
+                    <a href="#introduction">
+                        1. What is HTML?
+                    </a>
+
+
+                    <a href="#structure">
+                        2. HTML Structure
+                    </a>
+
+
+                    <a href="#headings">
+                        3. Headings
+                    </a>
+
+
+                    <a href="#paragraphs">
+                        4. Paragraphs
+                    </a>
+
+
+                    <a href="#links">
+                        5. Links
+                    </a>
+
+
+                    <a href="#images">
+                        6. Images
+                    </a>
+
+
+                    <a href="#lists">
+                        7. Lists
+                    </a>
+
+
+                    <a href="#tables">
+                        8. Tables
+                    </a>
+
+
+                    <a href="#forms">
+                        9. Forms
+                    </a>
+
+
+                    <a href="#semantic">
+                        10. Semantic HTML
+                    </a>
+
+
+                    <a href="#attributes">
+                        11. Attributes
+                    </a>
+
+
+                    <a href="#comments">
+                        12. Comments
+                    </a>
+
+
+                    <a href="#media">
+                        13. Audio &amp; Video
+                    </a>
+
+
+                    <a href="#practice">
+                        14. Practice
+                    </a>
+
+
+                    <a href="#exam">
+                        15. Exam Questions
+                    </a>
+
+
+                    <a href="#project">
+                        16. Mini Project
+                    </a>
+
+                </aside>
+
+
+                <!-- =================================================
+                     LESSON CONTENT
+                ================================================= -->
+
+                <article class="lesson-content">
+
+
+                    <h1>
+                        🌐 HTML for Beginners
+                    </h1>
+
+
+                    <p>
+
+                        Welcome to the TechHub Ghana HTML Tutorial.
+
+                        This course teaches you how to build the structure
+                        of websites using HTML, starting from the basics
+                        and moving toward practical website development.
+
+                    </p>
+
+
+                    <!-- =================================================
+                         1. INTRODUCTION
+                    ================================================= -->
+
+                    <h2 id="introduction">
+                        1. What is HTML?
+                    </h2>
+
+
+                    <p>
+
+                        HTML stands for
+                        <strong>HyperText Markup Language</strong>.
+
+                        It is the standard markup language used to create
+                        the structure of web pages.
+
+                    </p>
+
+
+                    <p>
+
+                        HTML tells the browser what different parts of a
+                        webpage are, such as headings, paragraphs, images,
+                        links, tables and forms.
+
+                    </p>
+
+
+                    <div class="exercise">
+
+                        <strong>
+                            💡 Remember:
+                        </strong>
+
+
+                        <p>
+
+                            HTML provides the
+                            <strong>structure</strong> of a website.
+
+                            CSS provides the
+                            <strong>design</strong>.
+
+                            JavaScript provides
+                            <strong>interaction</strong>.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         2. STRUCTURE
+                    ================================================== -->
+
+                    <h2 id="structure">
+                        2. Basic HTML Structure
+                    </h2>
+
+
+                    <p>
+
+                        Every normal HTML page starts with a basic
+                        document structure.
+
+                    </p>
+
+
+                    <div class="code-box">
 
 <pre>&lt;!DOCTYPE html&gt;
 
@@ -1197,59 +1547,59 @@
 
 &lt;/html&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <p>
-                The important parts are:
-            </p>
+                    <p>
+                        The important parts are:
+                    </p>
 
 
-            <ul>
+                    <ul>
 
-                <li>
-                    <strong>&lt;!DOCTYPE html&gt;</strong>
-                    tells the browser that the document uses HTML5.
-                </li>
+                        <li>
+                            <strong>&lt;!DOCTYPE html&gt;</strong>
+                            tells the browser that the document uses HTML5.
+                        </li>
 
-                <li>
-                    <strong>&lt;html&gt;</strong>
-                    is the root element.
-                </li>
+                        <li>
+                            <strong>&lt;html&gt;</strong>
+                            is the root element.
+                        </li>
 
-                <li>
-                    <strong>&lt;head&gt;</strong>
-                    contains information about the webpage.
-                </li>
+                        <li>
+                            <strong>&lt;head&gt;</strong>
+                            contains information about the webpage.
+                        </li>
 
-                <li>
-                    <strong>&lt;title&gt;</strong>
-                    defines the browser tab title.
-                </li>
+                        <li>
+                            <strong>&lt;title&gt;</strong>
+                            defines the browser tab title.
+                        </li>
 
-                <li>
-                    <strong>&lt;body&gt;</strong>
-                    contains the visible webpage content.
-                </li>
+                        <li>
+                            <strong>&lt;body&gt;</strong>
+                            contains the visible webpage content.
+                        </li>
 
-            </ul>
-
-
-            <!-- =================================================
-                 3. HEADINGS
-            ================================================= -->
-
-            <h2 id="headings">
-                3. HTML Headings
-            </h2>
+                    </ul>
 
 
-            <p>
-                HTML provides six levels of headings.
-            </p>
+                    <!-- =================================================
+                         3. HEADINGS
+                    ================================================== -->
+
+                    <h2 id="headings">
+                        3. HTML Headings
+                    </h2>
 
 
-            <div class="code-box">
+                    <p>
+                        HTML provides six levels of headings.
+                    </p>
+
+
+                    <div class="code-box">
 
 <pre>&lt;h1&gt;Main Heading&lt;/h1&gt;
 
@@ -1263,37 +1613,37 @@
 
 &lt;h6&gt;Sixth Heading&lt;/h6&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <p>
+                    <p>
 
-                <strong>&lt;h1&gt;</strong>
-                represents the highest-level heading,
-                while <strong>&lt;h6&gt;</strong> represents
-                the lowest-level heading.
+                        <strong>&lt;h1&gt;</strong>
+                        represents the highest-level heading,
+                        while <strong>&lt;h6&gt;</strong> represents
+                        the lowest-level heading.
 
-            </p>
-
-
-            <!-- =================================================
-                 4. PARAGRAPHS
-            ================================================= -->
-
-            <h2 id="paragraphs">
-                4. Paragraphs
-            </h2>
+                    </p>
 
 
-            <p>
+                    <!-- =================================================
+                         4. PARAGRAPHS
+                    ================================================== -->
 
-                The <strong>&lt;p&gt;</strong> element is used
-                to create paragraphs.
+                    <h2 id="paragraphs">
+                        4. Paragraphs
+                    </h2>
 
-            </p>
+
+                    <p>
+
+                        The <strong>&lt;p&gt;</strong> element is used
+                        to create paragraphs.
+
+                    </p>
 
 
-            <div class="code-box">
+                    <div class="code-box">
 
 <pre>&lt;p&gt;
 Welcome to TechHub Ghana.
@@ -1303,110 +1653,110 @@ Welcome to TechHub Ghana.
 Learn programming and technology with us.
 &lt;/p&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <!-- =================================================
-                 5. LINKS
-            ================================================= -->
+                    <!-- =================================================
+                         5. LINKS
+                    ================================================== -->
 
-            <h2 id="links">
-                5. HTML Links
-            </h2>
-
-
-            <p>
-
-                Links allow users to move from one webpage
-                to another.
-
-            </p>
+                    <h2 id="links">
+                        5. HTML Links
+                    </h2>
 
 
-            <div class="code-box">
+                    <p>
+
+                        Links allow users to move from one webpage
+                        to another.
+
+                    </p>
+
+
+                    <div class="code-box">
 
 <pre>&lt;a href="https://example.com"&gt;
     Visit Website
 &lt;/a&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <p>
+                    <p>
 
-                The <strong>href</strong> attribute specifies
-                where the link goes.
+                        The <strong>href</strong> attribute specifies
+                        where the link goes.
 
-            </p>
-
-
-            <h3>
-                Link to another page
-            </h3>
+                    </p>
 
 
-            <div class="code-box">
+                    <h3>
+                        Link to another page
+                    </h3>
+
+
+                    <div class="code-box">
 
 <pre>&lt;a href="about.html"&gt;
     About Us
 &lt;/a&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <!-- =================================================
-                 6. IMAGES
-            ================================================= -->
+                    <!-- =================================================
+                         6. IMAGES
+                    ================================================== -->
 
-            <h2 id="images">
-                6. HTML Images
-            </h2>
-
-
-            <p>
-
-                The <strong>&lt;img&gt;</strong> element displays
-                an image.
-
-            </p>
+                    <h2 id="images">
+                        6. HTML Images
+                    </h2>
 
 
-            <div class="code-box">
+                    <p>
+
+                        The <strong>&lt;img&gt;</strong> element displays
+                        an image.
+
+                    </p>
+
+
+                    <div class="code-box">
 
 <pre>&lt;img
     src="images/logo.png"
     alt="TechHub Ghana Logo"
 &gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <p>
+                    <p>
 
-                The <strong>src</strong> attribute specifies
-                the image location.
+                        The <strong>src</strong> attribute specifies
+                        the image location.
 
-                The <strong>alt</strong> attribute provides
-                alternative text.
+                        The <strong>alt</strong> attribute provides
+                        alternative text.
 
-            </p>
-
-
-            <!-- =================================================
-                 7. LISTS
-            ================================================= -->
-
-            <h2 id="lists">
-                7. HTML Lists
-            </h2>
+                    </p>
 
 
-            <h3>
-                Unordered List
-            </h3>
+                    <!-- =================================================
+                         7. LISTS
+                    ================================================== -->
+
+                    <h2 id="lists">
+                        7. HTML Lists
+                    </h2>
 
 
-            <div class="code-box">
+                    <h3>
+                        Unordered List
+                    </h3>
+
+
+                    <div class="code-box">
 
 <pre>&lt;ul&gt;
 
@@ -1418,15 +1768,15 @@ Learn programming and technology with us.
 
 &lt;/ul&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <h3>
-                Ordered List
-            </h3>
+                    <h3>
+                        Ordered List
+                    </h3>
 
 
-            <div class="code-box">
+                    <div class="code-box">
 
 <pre>&lt;ol&gt;
 
@@ -1438,27 +1788,27 @@ Learn programming and technology with us.
 
 &lt;/ol&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <!-- =================================================
-                 8. TABLES
-            ================================================= -->
+                    <!-- =================================================
+                         8. TABLES
+                    ================================================== -->
 
-            <h2 id="tables">
-                8. HTML Tables
-            </h2>
-
-
-            <p>
-
-                Tables are useful for displaying information
-                in rows and columns.
-
-            </p>
+                    <h2 id="tables">
+                        8. HTML Tables
+                    </h2>
 
 
-            <div class="code-box">
+                    <p>
+
+                        Tables are useful for displaying information
+                        in rows and columns.
+
+                    </p>
+
+
+                    <div class="code-box">
 
 <pre>&lt;table&gt;
 
@@ -1484,52 +1834,52 @@ Learn programming and technology with us.
 
 &lt;/table&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <ul>
+                    <ul>
 
-                <li>
-                    <strong>&lt;table&gt;</strong>
-                    creates the table.
-                </li>
+                        <li>
+                            <strong>&lt;table&gt;</strong>
+                            creates the table.
+                        </li>
 
-                <li>
-                    <strong>&lt;tr&gt;</strong>
-                    creates a row.
-                </li>
+                        <li>
+                            <strong>&lt;tr&gt;</strong>
+                            creates a row.
+                        </li>
 
-                <li>
-                    <strong>&lt;th&gt;</strong>
-                    creates a table heading cell.
-                </li>
+                        <li>
+                            <strong>&lt;th&gt;</strong>
+                            creates a table heading cell.
+                        </li>
 
-                <li>
-                    <strong>&lt;td&gt;</strong>
-                    creates a table data cell.
-                </li>
+                        <li>
+                            <strong>&lt;td&gt;</strong>
+                            creates a table data cell.
+                        </li>
 
-            </ul>
-
-
-            <!-- =================================================
-                 9. FORMS
-            ================================================= -->
-
-            <h2 id="forms">
-                9. HTML Forms
-            </h2>
+                    </ul>
 
 
-            <p>
+                    <!-- =================================================
+                         9. FORMS
+                    ================================================== -->
 
-                Forms allow websites to collect information
-                from users.
+                    <h2 id="forms">
+                        9. HTML Forms
+                    </h2>
 
-            </p>
+
+                    <p>
+
+                        Forms allow websites to collect information
+                        from users.
+
+                    </p>
 
 
-            <div class="code-box">
+                    <div class="code-box">
 
 <pre>&lt;form&gt;
 
@@ -1563,46 +1913,53 @@ Learn programming and technology with us.
 
 &lt;/form&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <h3>
-                Common input types
-            </h3>
+                    <h3>
+                        Common input types
+                    </h3>
 
 
-            <ul>
+                    <ul>
 
-                <li>text</li>
-                <li>email</li>
-                <li>password</li>
-                <li>number</li>
-                <li>date</li>
-                <li>file</li>
-                <li>checkbox</li>
-                <li>radio</li>
+                        <li>text</li>
 
-            </ul>
+                        <li>email</li>
 
+                        <li>password</li>
 
-            <!-- =================================================
-                 10. SEMANTIC HTML
-            ================================================= -->
+                        <li>number</li>
 
-            <h2 id="semantic">
-                10. Semantic HTML
-            </h2>
+                        <li>date</li>
+
+                        <li>file</li>
+
+                        <li>checkbox</li>
+
+                        <li>radio</li>
+
+                    </ul>
 
 
-            <p>
+                    <!-- =================================================
+                         10. SEMANTIC HTML
+                    ================================================== -->
 
-                Semantic elements describe the meaning of
-                different sections of a webpage.
+                    <h2 id="semantic">
+                        10. Semantic HTML
+                    </h2>
 
-            </p>
+
+                    <p>
+
+                        Semantic elements describe the meaning of
+                        different sections of a webpage.
+
+                    </p>
 
 
-            <div class="code-box">
+                    <div class="code-box">
 
 <pre>&lt;header&gt;
     Website Header
@@ -1624,35 +1981,35 @@ Learn programming and technology with us.
     Website Footer
 &lt;/footer&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <p>
+                    <p>
 
-                Semantic HTML improves website structure,
-                accessibility and search-engine understanding.
+                        Semantic HTML improves website structure,
+                        accessibility and search-engine understanding.
 
-            </p>
-
-
-            <!-- =================================================
-                 11. ATTRIBUTES
-            ================================================= -->
-
-            <h2 id="attributes">
-                11. HTML Attributes
-            </h2>
+                    </p>
 
 
-            <p>
+                    <!-- =================================================
+                         11. ATTRIBUTES
+                    ================================================== -->
 
-                Attributes provide additional information
-                about HTML elements.
+                    <h2 id="attributes">
+                        11. HTML Attributes
+                    </h2>
 
-            </p>
+
+                    <p>
+
+                        Attributes provide additional information
+                        about HTML elements.
+
+                    </p>
 
 
-            <div class="code-box">
+                    <div class="code-box">
 
 <pre>&lt;a
     href="about.html"
@@ -1661,66 +2018,72 @@ Learn programming and technology with us.
     Read More
 &lt;/a&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <p>
-                Common attributes include:
-            </p>
+                    <p>
+                        Common attributes include:
+                    </p>
 
 
-            <ul>
+                    <ul>
 
-                <li>id</li>
-                <li>class</li>
-                <li>href</li>
-                <li>src</li>
-                <li>alt</li>
-                <li>title</li>
-                <li>style</li>
+                        <li>id</li>
 
-            </ul>
+                        <li>class</li>
 
+                        <li>href</li>
 
-            <!-- =================================================
-                 12. COMMENTS
-            ================================================= -->
+                        <li>src</li>
 
-            <h2 id="comments">
-                12. HTML Comments
-            </h2>
+                        <li>alt</li>
+
+                        <li>title</li>
+
+                        <li>style</li>
+
+                    </ul>
 
 
-            <p>
+                    <!-- =================================================
+                         12. COMMENTS
+                    ================================================== -->
 
-                Comments are notes written inside HTML code
-                that are not displayed as webpage content.
+                    <h2 id="comments">
+                        12. HTML Comments
+                    </h2>
 
-            </p>
+
+                    <p>
+
+                        Comments are notes written inside HTML code
+                        that are not displayed as webpage content.
+
+                    </p>
 
 
-            <div class="code-box">
+                    <div class="code-box">
 
 <pre>&lt;!-- This is an HTML comment --&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <!-- =================================================
-                 13. MEDIA
-            ================================================= -->
+                    <!-- =================================================
+                         13. MEDIA
+                    ================================================== -->
 
-            <h2 id="media">
-                13. Audio and Video
-            </h2>
-
-
-            <h3>
-                Audio
-            </h3>
+                    <h2 id="media">
+                        13. Audio and Video
+                    </h2>
 
 
-            <div class="code-box">
+                    <h3>
+                        Audio
+                    </h3>
+
+
+                    <div class="code-box">
 
 <pre>&lt;audio controls&gt;
 
@@ -1731,15 +2094,15 @@ Learn programming and technology with us.
 
 &lt;/audio&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <h3>
-                Video
-            </h3>
+                    <h3>
+                        Video
+                    </h3>
 
 
-            <div class="code-box">
+                    <div class="code-box">
 
 <pre>&lt;video controls width="500"&gt;
 
@@ -1750,287 +2113,326 @@ Learn programming and technology with us.
 
 &lt;/video&gt;</pre>
 
-            </div>
+                    </div>
 
 
-            <!-- =================================================
-                 14. PRACTICE
-            ================================================= -->
+                    <!-- =================================================
+                         14. PRACTICE
+                    ================================================== -->
 
-            <h2 id="practice">
-                14. Practical Exercises
-            </h2>
-
-
-            <div class="exercise">
-
-                <h3>
-                    Exercise 1
-                </h3>
-
-                <p>
-                    Create an HTML webpage containing:
-                </p>
-
-                <ul>
-
-                    <li>Your name</li>
-
-                    <li>Your school</li>
-
-                    <li>Your course</li>
-
-                    <li>A short paragraph about yourself</li>
-
-                </ul>
-
-            </div>
+                    <h2 id="practice">
+                        14. Practical Exercises
+                    </h2>
 
 
-            <div class="exercise">
+                    <div class="exercise">
 
-                <h3>
-                    Exercise 2
-                </h3>
+                        <h3>
+                            Exercise 1
+                        </h3>
 
-                <p>
+                        <p>
+                            Create an HTML webpage containing:
+                        </p>
 
-                    Create an HTML page containing an ordered
-                    list of five programming languages.
+                        <ul>
 
-                </p>
+                            <li>
+                                Your name
+                            </li>
 
-            </div>
+                            <li>
+                                Your school
+                            </li>
 
+                            <li>
+                                Your course
+                            </li>
 
-            <div class="exercise">
+                            <li>
+                                A short paragraph about yourself
+                            </li>
 
-                <h3>
-                    Exercise 3
-                </h3>
+                        </ul>
 
-                <p>
-
-                    Create a table containing three students
-                    and their scores.
-
-                </p>
-
-            </div>
-
-
-            <div class="exercise">
-
-                <h3>
-                    Exercise 4
-                </h3>
-
-                <p>
-                    Create a registration form containing:
-                </p>
-
-                <ul>
-
-                    <li>Name</li>
-
-                    <li>Email</li>
-
-                    <li>Password</li>
-
-                    <li>Gender</li>
-
-                    <li>Submit button</li>
-
-                </ul>
-
-            </div>
+                    </div>
 
 
-            <!-- =================================================
-                 15. EXAM QUESTIONS
-            ================================================= -->
+                    <div class="exercise">
 
-            <h2 id="exam">
-                15. Practical Exam Questions
-            </h2>
+                        <h3>
+                            Exercise 2
+                        </h3>
+
+                        <p>
+
+                            Create an HTML page containing an ordered
+                            list of five programming languages.
+
+                        </p>
+
+                    </div>
 
 
-            <div class="exercise">
+                    <div class="exercise">
 
-                <h3>
-                    Question 1
-                </h3>
+                        <h3>
+                            Exercise 3
+                        </h3>
 
-                <p>
-                    What does HTML stand for?
-                </p>
+                        <p>
 
-                <details class="answer">
+                            Create a table containing three students
+                            and their scores.
 
-                    <summary>
-                        Show Answer
-                    </summary>
+                        </p>
+
+                    </div>
+
+
+                    <div class="exercise">
+
+                        <h3>
+                            Exercise 4
+                        </h3>
+
+                        <p>
+                            Create a registration form containing:
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Name
+                            </li>
+
+                            <li>
+                                Email
+                            </li>
+
+                            <li>
+                                Password
+                            </li>
+
+                            <li>
+                                Gender
+                            </li>
+
+                            <li>
+                                Submit button
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         15. EXAM QUESTIONS
+                    ================================================== -->
+
+                    <h2 id="exam">
+                        15. Practical Exam Questions
+                    </h2>
+
+
+                    <div class="exercise">
+
+                        <h3>
+                            Question 1
+                        </h3>
+
+                        <p>
+                            What does HTML stand for?
+                        </p>
+
+
+                        <details class="answer">
+
+                            <summary>
+                                Show Answer
+                            </summary>
+
+                            <p>
+                                <strong>
+                                    HyperText Markup Language.
+                                </strong>
+                            </p>
+
+                        </details>
+
+                    </div>
+
+
+                    <div class="exercise">
+
+                        <h3>
+                            Question 2
+                        </h3>
+
+                        <p>
+                            Which HTML element is used to create
+                            the largest heading?
+                        </p>
+
+
+                        <details class="answer">
+
+                            <summary>
+                                Show Answer
+                            </summary>
+
+                            <p>
+                                <strong>&lt;h1&gt;</strong>
+                            </p>
+
+                        </details>
+
+                    </div>
+
+
+                    <div class="exercise">
+
+                        <h3>
+                            Question 3
+                        </h3>
+
+                        <p>
+                            Which HTML element is used to create
+                            a hyperlink?
+                        </p>
+
+
+                        <details class="answer">
+
+                            <summary>
+                                Show Answer
+                            </summary>
+
+                            <p>
+                                <strong>&lt;a&gt;</strong>
+                            </p>
+
+                        </details>
+
+                    </div>
+
+
+                    <div class="exercise">
+
+                        <h3>
+                            Question 4
+                        </h3>
+
+                        <p>
+                            Which attribute specifies the location
+                            of an image?
+                        </p>
+
+
+                        <details class="answer">
+
+                            <summary>
+                                Show Answer
+                            </summary>
+
+                            <p>
+                                <strong>src</strong>
+                            </p>
+
+                        </details>
+
+                    </div>
+
+
+                    <div class="exercise">
+
+                        <h3>
+                            Question 5
+                        </h3>
+
+                        <p>
+                            What is the purpose of the alt attribute?
+                        </p>
+
+
+                        <details class="answer">
+
+                            <summary>
+                                Show Answer
+                            </summary>
+
+                            <p>
+                                It provides alternative text describing
+                                an image.
+                            </p>
+
+                        </details>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         16. MINI PROJECT
+                    ================================================== -->
+
+                    <h2 id="project">
+                        16. HTML Mini Project
+                    </h2>
+
 
                     <p>
-                        <strong>
-                            HyperText Markup Language.
-                        </strong>
+
+                        Create a simple personal profile webpage.
+
+                        Your page should contain:
+
                     </p>
 
-                </details>
 
-            </div>
+                    <ul>
 
+                        <li>
+                            A page title
+                        </li>
 
-            <div class="exercise">
+                        <li>
+                            Your name
+                        </li>
 
-                <h3>
-                    Question 2
-                </h3>
+                        <li>
+                            Your profile image
+                        </li>
 
-                <p>
-                    Which HTML element is used to create
-                    the largest heading?
-                </p>
+                        <li>
+                            A short biography
+                        </li>
 
-                <details class="answer">
+                        <li>
+                            Your skills
+                        </li>
 
-                    <summary>
-                        Show Answer
-                    </summary>
+                        <li>
+                            Your education
+                        </li>
 
-                    <p>
-                        <strong>&lt;h1&gt;</strong>
-                    </p>
+                        <li>
+                            Your hobbies
+                        </li>
 
-                </details>
+                        <li>
+                            A contact form
+                        </li>
 
-            </div>
-
-
-            <div class="exercise">
-
-                <h3>
-                    Question 3
-                </h3>
-
-                <p>
-                    Which HTML element is used to create
-                    a hyperlink?
-                </p>
-
-                <details class="answer">
-
-                    <summary>
-                        Show Answer
-                    </summary>
-
-                    <p>
-                        <strong>&lt;a&gt;</strong>
-                    </p>
-
-                </details>
-
-            </div>
+                    </ul>
 
 
-            <div class="exercise">
-
-                <h3>
-                    Question 4
-                </h3>
-
-                <p>
-                    Which attribute specifies the location
-                    of an image?
-                </p>
-
-                <details class="answer">
-
-                    <summary>
-                        Show Answer
-                    </summary>
-
-                    <p>
-                        <strong>src</strong>
-                    </p>
-
-                </details>
-
-            </div>
+                    <h3>
+                        Example Project Structure
+                    </h3>
 
 
-            <div class="exercise">
-
-                <h3>
-                    Question 5
-                </h3>
-
-                <p>
-                    What is the purpose of the alt attribute?
-                </p>
-
-                <details class="answer">
-
-                    <summary>
-                        Show Answer
-                    </summary>
-
-                    <p>
-                        It provides alternative text describing
-                        an image.
-                    </p>
-
-                </details>
-
-            </div>
-
-
-            <!-- =================================================
-                 16. MINI PROJECT
-            ================================================= -->
-
-            <h2 id="project">
-                16. HTML Mini Project
-            </h2>
-
-
-            <p>
-
-                Create a simple personal profile webpage.
-
-                Your page should contain:
-
-            </p>
-
-
-            <ul>
-
-                <li>A page title</li>
-
-                <li>Your name</li>
-
-                <li>Your profile image</li>
-
-                <li>A short biography</li>
-
-                <li>Your skills</li>
-
-                <li>Your education</li>
-
-                <li>Your hobbies</li>
-
-                <li>A contact form</li>
-
-            </ul>
-
-
-            <h3>
-                Example Project Structure
-            </h3>
-
-
-            <div class="code-box">
+                    <div class="code-box">
 
 <pre>&lt;!DOCTYPE html&gt;
 
@@ -2103,299 +2505,444 @@ Learn programming and technology with us.
 
 &lt;/html&gt;</pre>
 
+                    </div>
+
+
+                    <div class="exercise">
+
+                        <h3>
+                            🎯 Challenge
+                        </h3>
+
+                        <p>
+
+                            Build the profile page yourself without
+                            copying the example.
+
+                            Try adding your own design, navigation,
+                            links and sections.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         LESSON NAVIGATION
+                    ================================================== -->
+
+                    <div class="lesson-nav">
+
+                        <a
+                            href="tutorials.html"
+                        >
+
+                            <i
+                                class="fa-solid fa-arrow-left"
+                                aria-hidden="true"
+                            ></i>
+
+                            &nbsp; Tutorials
+
+                        </a>
+
+
+                        <a
+                            href="css-tutorial.html"
+                        >
+
+                            Next: CSS &nbsp;
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                    </div>
+
+
+                </article>
+
             </div>
 
+        </section>
 
-            <div class="exercise">
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+
+            <!-- =================================================
+                 ABOUT
+            ================================================== -->
+
+            <div>
 
                 <h3>
-                    🎯 Challenge
+                    TechHub Ghana
                 </h3>
 
                 <p>
+                    Your platform for technology news,
+                    digital innovation and useful technology
+                    resources in Ghana.
+                </p>
 
-                    Build the profile page yourself without
-                    copying the example.
-
-                    Try adding your own design, navigation,
-                    links and sections.
-
+                <p>
+                    🇬🇭 Built for Ghana's digital generation.
                 </p>
 
             </div>
 
 
             <!-- =================================================
-                 LESSON NAVIGATION
-            ================================================= -->
+                 QUICK LINKS
+            ================================================== -->
 
-            <div class="lesson-nav">
+            <div>
 
-                <a href="tutorials.html">
+                <h3>
+                    Quick Links
+                </h3>
 
-                    <i class="fa-solid fa-arrow-left"></i>
+                <p>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </p>
 
-                    &nbsp; Tutorials
+                <p>
+                    <a href="news.html">
+                        Tech News
+                    </a>
+                </p>
 
-                </a>
+                <p>
+                    <a href="ghana-tech.html">
+                        Ghana Tech
+                    </a>
+                </p>
 
-
-                <a href="css-tutorial.html">
-
-                    Next: CSS &nbsp;
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
+                <p>
+                    <a href="tools.html">
+                        Tools
+                    </a>
+                </p>
 
             </div>
 
 
-        </article>
+            <!-- =================================================
+                 COURSES
+            ================================================== -->
 
-    </div>
+            <div>
 
-</main>
+                <h3>
+                    Courses
+                </h3>
 
+                <p>
+                    <a href="html-tutorial.html">
+                        HTML
+                    </a>
+                </p>
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+                <p>
+                    <a href="css-tutorial.html">
+                        CSS
+                    </a>
+                </p>
 
-<footer>
+                <p>
+                    <a href="javascript-tutorial.html">
+                        JavaScript
+                    </a>
+                </p>
 
-    <div class="footer-grid">
+                <p>
+                    <a href="python-tutorial.html">
+                        Python
+                    </a>
+                </p>
 
+                <p>
+                    <a href="mysql-tutorial.html">
+                        MySQL
+                    </a>
+                </p>
 
-        <!-- ABOUT -->
+                <p>
+                    <a href="cybersecurity-tutorial.html">
+                        Cybersecurity
+                    </a>
+                </p>
 
-        <div>
-
-            <h3>
-                TechHub Ghana
-            </h3>
-
-            <p>
-                Your platform for technology news,
-                digital innovation and useful technology
-                resources in Ghana.
-            </p>
-
-            <p>
-                🇬🇭 Built for Ghana's digital generation.
-            </p>
-
-        </div>
-
-
-        <!-- QUICK LINKS -->
-
-        <div>
-
-            <h3>
-                Quick Links
-            </h3>
-
-            <p>
-                <a href="index.html">
-                    Home
-                </a>
-            </p>
-
-            <p>
-                <a href="news.html">
-                    Tech News
-                </a>
-            </p>
-
-            <p>
-                <a href="ghana-tech.html">
-                    Ghana Tech
-                </a>
-            </p>
-
-            <p>
-                <a href="tools.html">
-                    Tools
-                </a>
-            </p>
-
-        </div>
+            </div>
 
 
-        <!-- COURSES -->
+            <!-- =================================================
+                 CONTACT
+            ================================================== -->
 
-        <div>
+            <div>
 
-            <h3>
-                Courses
-            </h3>
+                <h3>
+                    Contact
+                </h3>
 
-            <p>
-                <a href="html-tutorial.html">
-                    HTML
-                </a>
-            </p>
+                <p>
+                    📍 Accra, Ghana
+                </p>
 
-            <p>
-                <a href="css-tutorial.html">
-                    CSS
-                </a>
-            </p>
+                <p>
+                    📧 info@techhubghana.com
+                </p>
 
-            <p>
-                <a href="javascript-tutorial.html">
-                    JavaScript
-                </a>
-            </p>
+                <p>
+                    <a href="contact.html">
+                        Contact Us
+                    </a>
+                </p>
 
-            <p>
-                <a href="python-tutorial.html">
-                    Python
-                </a>
-            </p>
-
-            <p>
-                <a href="mysql-tutorial.html">
-                    MySQL
-                </a>
-            </p>
-
-            <p>
-                <a href="cybersecurity-tutorial.html">
-                    Cybersecurity
-                </a>
-            </p>
+            </div>
 
         </div>
 
 
-        <!-- CONTACT -->
+        <hr>
 
-        <div>
 
-            <h3>
-                Contact
-            </h3>
+        <div class="copyright">
 
             <p>
-                📍 Accra, Ghana
-            </p>
 
-            <p>
-                📧 info@techhubghana.com
-            </p>
+                ©
+                <span id="copyrightYear">
+                    2026
+                </span>
 
-            <p>
-                <a href="contact.html">
-                    Contact Us
-                </a>
+                TechHub Ghana.
+                All rights reserved.
+
             </p>
 
         </div>
 
-    </div>
+    </footer>
 
 
-    <hr>
+    <!-- =========================================================
+         BACK TO TOP
+    ========================================================== -->
+
+    <button
+        type="button"
+        id="topBtn"
+        aria-label="Back to top"
+        title="Back to top"
+    >
+
+        <i
+            class="fa-solid fa-arrow-up"
+            aria-hidden="true"
+        ></i>
+
+    </button>
 
 
-    <div class="copyright">
+    <!-- =========================================================
+         MAIN JAVASCRIPT
+    ========================================================== -->
 
-        <p>
-
-            ©
-            <span id="copyrightYear">
-                2026
-            </span>
-
-            TechHub Ghana.
-            All rights reserved.
-
-        </p>
-
-    </div>
-
-</footer>
+    <script
+        src="script.js"
+        defer
+    ></script>
 
 
-<!-- =========================================================
-     BACK TO TOP
-========================================================= -->
+    <!-- =========================================================
+         TUTORIAL PAGE FALLBACK JAVASCRIPT
+    ========================================================== -->
 
-<button
-    type="button"
-    id="topBtn"
-    aria-label="Back to top"
-    title="Back to top"
->
+    <script>
 
-    <i class="fa-solid fa-arrow-up"></i>
-
-</button>
-
-
-<!-- =========================================================
-     MAIN JAVASCRIPT
-========================================================= -->
-
-<script src="script.js"></script>
-
-
-<!-- =========================================================
-     TUTORIAL PAGE FALLBACK JAVASCRIPT
-========================================================= -->
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    /* ================================================
-       MOBILE MENU
-    ================================================= */
-
-    const menuBtn =
-        document.getElementById("menuBtn");
-
-    const mainNav =
-        document.getElementById("mainNav");
-
-
-    if (menuBtn && mainNav) {
-
-        menuBtn.addEventListener(
-            "click",
+        document.addEventListener(
+            "DOMContentLoaded",
             function () {
 
-                mainNav.classList.toggle("show");
 
-                const isOpen =
-                    mainNav.classList.contains("show");
+                /* ================================================
+                   MOBILE MENU
+                ================================================= */
 
-                menuBtn.setAttribute(
-                    "aria-expanded",
-                    String(isOpen)
-                );
+                const menuBtn =
+                    document.getElementById("menuBtn");
 
-            }
-        );
+                const navMenu =
+                    document.getElementById("navMenu");
 
 
-        /* Close menu after clicking a link */
+                if (menuBtn && navMenu) {
 
-        mainNav.querySelectorAll("a").forEach(
-            function (link) {
+                    menuBtn.addEventListener(
+                        "click",
+                        function () {
 
-                link.addEventListener(
-                    "click",
-                    function () {
+                            navMenu.classList.toggle("show");
 
-                        mainNav.classList.remove("show");
+                            const isOpen =
+                                navMenu.classList.contains("show");
 
-                        menuBtn.setAttribute(
-                            "aria-expanded",
-                            "false"
+                            menuBtn.setAttribute(
+                                "aria-expanded",
+                                String(isOpen)
+                            );
+
+                            menuBtn.setAttribute(
+                                "aria-label",
+                                isOpen
+                                    ? "Close navigation menu"
+                                    : "Open navigation menu"
+                            );
+
+                        }
+                    );
+
+
+                    navMenu
+                        .querySelectorAll("a")
+                        .forEach(
+                            function (link) {
+
+                                link.addEventListener(
+                                    "click",
+                                    function () {
+
+                                        navMenu.classList.remove(
+                                            "show"
+                                        );
+
+                                        menuBtn.setAttribute(
+                                            "aria-expanded",
+                                            "false"
+                                        );
+
+                                        menuBtn.setAttribute(
+                                            "aria-label",
+                                            "Open navigation menu"
+                                        );
+
+                                    }
+                                );
+
+                            }
                         );
+
+                }
+
+
+                /* ================================================
+                   COPYRIGHT YEAR
+                ================================================= */
+
+                const copyrightYear =
+                    document.getElementById(
+                        "copyrightYear"
+                    );
+
+
+                if (copyrightYear) {
+
+                    copyrightYear.textContent =
+                        new Date().getFullYear();
+
+                }
+
+
+                /* ================================================
+                   BACK TO TOP
+                ================================================= */
+
+                const topBtn =
+                    document.getElementById("topBtn");
+
+
+                if (topBtn) {
+
+                    window.addEventListener(
+                        "scroll",
+                        function () {
+
+                            if (window.scrollY > 400) {
+
+                                topBtn.classList.add("show");
+
+                            } else {
+
+                                topBtn.classList.remove("show");
+
+                            }
+
+                        }
+                    );
+
+
+                    topBtn.addEventListener(
+                        "click",
+                        function () {
+
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+
+                        }
+                    );
+
+                }
+
+
+                /* ================================================
+                   CLOSE MOBILE MENU WITH ESCAPE
+                ================================================= */
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Escape" &&
+                            navMenu &&
+                            navMenu.classList.contains("show")
+                        ) {
+
+                            navMenu.classList.remove("show");
+
+                            if (menuBtn) {
+
+                                menuBtn.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+                                menuBtn.setAttribute(
+                                    "aria-label",
+                                    "Open navigation menu"
+                                );
+
+                            }
+
+                        }
 
                     }
                 );
@@ -2403,72 +2950,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         );
 
-    }
-
-
-    /* ================================================
-       COPYRIGHT YEAR
-    ================================================= */
-
-    const copyrightYear =
-        document.getElementById("copyrightYear");
-
-
-    if (copyrightYear) {
-
-        copyrightYear.textContent =
-            new Date().getFullYear();
-
-    }
-
-
-    /* ================================================
-       BACK TO TOP
-    ================================================= */
-
-    const topBtn =
-        document.getElementById("topBtn");
-
-
-    if (topBtn) {
-
-        window.addEventListener(
-            "scroll",
-            function () {
-
-                if (window.scrollY > 400) {
-
-                    topBtn.classList.add("show");
-
-                } else {
-
-                    topBtn.classList.remove("show");
-
-                }
-
-            }
-        );
-
-
-        topBtn.addEventListener(
-            "click",
-            function () {
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-
-            }
-        );
-
-    }
-
-});
-
-</script>
+    </script>
 
 
 </body>
 
-                    </html>
+    </html>
