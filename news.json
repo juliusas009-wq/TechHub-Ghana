@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-22T15:45:50.075673+00:00",
+  "updated": "2026-08-22T16:21:35.631099+00:00",
   "articles": [
+    {
+      "title": "Frontier AI labs still won’t say how they’d contain a rogue model",
+      "summary": "A new study finds leading AI labs have few publicly documented plans for containing rogue models, raising questions about preparedness as AI systems increasingly demonstrate unexpected and potentially dangerous behavior.",
+      "link": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/",
+      "date": "Sat, 22 Aug 2026 16:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "US battery startups have found a lifeline in defense",
       "summary": "U.S. battery startups pulled in $500 million in grants from the Department of Energy, throwing a lifeline to an industry that was on the ropes after EV incentives were slashed.",
@@ -150,14 +158,6 @@
       "summary": "There's about to be a big fight to secure access to space.",
       "link": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
       "date": "Fri, 21 Aug 2026 14:00:00 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Tesla recalls 3 million cars as part of China-wide push to stop hidden door handles",
-      "summary": "Tesla and eight other automakers will install warning labels that help occupants identify the often hard-to-find manual door releases.",
-      "link": "https://techcrunch.com/2026/08/21/tesla-recalls-3-million-cars-as-part-of-china-wide-push-to-stop-hidden-door-handles/",
-      "date": "Fri, 21 Aug 2026 13:48:26 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
