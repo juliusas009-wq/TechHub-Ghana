@@ -16,14 +16,33 @@
     >
 
     <meta
+        name="keywords"
+        content="QR code generator, free QR generator, QR code maker, TechHub Ghana, generate QR code, Ghana digital tools"
+    >
+
+    <meta
+        name="author"
+        content="TechHub Ghana"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
         name="theme-color"
         content="#0b5ed7"
     >
 
-    <title>QR Code Generator | TechHub Ghana</title>
+    <title>
+        QR Code Generator | TechHub Ghana
+    </title>
 
-    <link rel="stylesheet" href="style.css">
 
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
 
     <link
         rel="preconnect"
@@ -32,7 +51,7 @@
 
     <link
         rel="preconnect"
-        href="https://fonts.googleapis.com"
+        href="https://fonts.gstatic.com"
         crossorigin
     >
 
@@ -42,10 +61,647 @@
     >
 
 
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     >
+
+
+    <!-- =====================================================
+         MAIN STYLESHEET
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =====================================================
+         QR GENERATOR PAGE STYLES
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           QR GENERATOR
+        ====================================================== */
+
+        .qr-generator-wrapper {
+
+            max-width: 850px;
+
+            margin: 0 auto;
+
+        }
+
+
+        .qr-generator-card {
+
+            background: #ffffff;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.08);
+
+        }
+
+
+        .qr-form-group {
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .qr-form-group label {
+
+            display: block;
+
+            margin-bottom: 10px;
+
+            color: #1f2937;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+        }
+
+
+        .qr-form-group label i {
+
+            margin-right: 7px;
+
+            color: #2563eb;
+
+        }
+
+
+        #qrText {
+
+            width: 100%;
+
+            min-height: 130px;
+
+            padding: 15px 16px;
+
+            resize: vertical;
+
+            border: 2px solid #e5e7eb;
+
+            border-radius: 10px;
+
+            background: #f8fafc;
+
+            color: #111827;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+            outline: none;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+
+        }
+
+
+        #qrText:focus {
+
+            border-color: #2563eb;
+
+            box-shadow:
+                0 0 0 3px rgba(37, 99, 235, 0.12);
+
+        }
+
+
+        .qr-character-count {
+
+            display: block;
+
+            margin-top: 6px;
+
+            text-align: right;
+
+            color: #6b7280;
+
+            font-size: 12px;
+
+        }
+
+
+        .qr-primary-btn {
+
+            width: 100%;
+
+            min-height: 52px;
+
+            padding: 0 20px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background: #2563eb;
+
+            color: #ffffff;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                transform 0.2s ease;
+
+        }
+
+
+        .qr-primary-btn:hover {
+
+            background: #1d4ed8;
+
+            transform: translateY(-1px);
+
+        }
+
+
+        .qr-primary-btn:active {
+
+            transform: scale(0.98);
+
+        }
+
+
+        .qr-result {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-direction: column;
+
+            min-height: 350px;
+
+            margin-top: 25px;
+
+            padding: 25px;
+
+            border: 2px dashed #d1d5db;
+
+            border-radius: 15px;
+
+            background: #f8fafc;
+
+            text-align: center;
+
+        }
+
+
+        .qr-result p {
+
+            margin: 12px 0 0;
+
+            color: #6b7280;
+
+            font-size: 14px;
+
+        }
+
+
+        .qr-placeholder {
+
+            color: #6b7280;
+
+        }
+
+
+        .qr-placeholder-icon {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 70px;
+
+            height: 70px;
+
+            margin: 0 auto 15px;
+
+            border-radius: 50%;
+
+            background: #eff6ff;
+
+            color: #2563eb;
+
+            font-size: 28px;
+
+        }
+
+
+        #generatedQR {
+
+            display: block;
+
+            width: 300px;
+
+            max-width: 100%;
+
+            height: auto;
+
+            padding: 10px;
+
+            border-radius: 10px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
+
+        }
+
+
+        .qr-success-message {
+
+            color: #16a34a !important;
+
+            font-weight: 600;
+
+        }
+
+
+        .qr-actions {
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .qr-download-btn {
+
+            flex: 1;
+
+            min-height: 50px;
+
+            border: 1px solid #2563eb;
+
+            border-radius: 10px;
+
+            background: #ffffff;
+
+            color: #2563eb;
+
+            font-family: inherit;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+
+        }
+
+
+        .qr-download-btn:hover {
+
+            background: #2563eb;
+
+            color: #ffffff;
+
+            transform: translateY(-1px);
+
+        }
+
+
+        .qr-download-btn i {
+
+            margin-right: 7px;
+
+        }
+
+
+        .qr-info {
+
+            margin-top: 30px;
+
+            padding: 25px;
+
+            border: 1px solid #dbeafe;
+
+            border-radius: 15px;
+
+            background: #eff6ff;
+
+        }
+
+
+        .qr-info h3 {
+
+            margin-bottom: 12px;
+
+            color: #1e3a8a;
+
+            font-size: 19px;
+
+        }
+
+
+        .qr-info h3 i {
+
+            margin-right: 7px;
+
+        }
+
+
+        .qr-info p {
+
+            margin-bottom: 12px;
+
+            color: #374151;
+
+            line-height: 1.7;
+
+        }
+
+
+        .qr-info ul {
+
+            margin: 0;
+
+            padding-left: 20px;
+
+        }
+
+
+        .qr-info li {
+
+            margin-bottom: 8px;
+
+            color: #374151;
+
+            line-height: 1.6;
+
+        }
+
+
+        .qr-info li:last-child {
+
+            margin-bottom: 0;
+
+        }
+
+
+        /* =====================================================
+           DARK MODE
+        ====================================================== */
+
+        body.dark-mode .qr-generator-card {
+
+            background: #111827;
+
+            border-color: #374151;
+
+        }
+
+
+        body.dark-mode .qr-form-group label {
+
+            color: #f3f4f6;
+
+        }
+
+
+        body.dark-mode #qrText {
+
+            background: #1f2937;
+
+            border-color: #374151;
+
+            color: #f9fafb;
+
+        }
+
+
+        body.dark-mode #qrText:focus {
+
+            border-color: #60a5fa;
+
+            box-shadow:
+                0 0 0 3px rgba(96, 165, 250, 0.15);
+
+        }
+
+
+        body.dark-mode .qr-character-count {
+
+            color: #9ca3af;
+
+        }
+
+
+        body.dark-mode .qr-result {
+
+            border-color: #4b5563;
+
+            background: #1f2937;
+
+        }
+
+
+        body.dark-mode .qr-result p {
+
+            color: #9ca3af;
+
+        }
+
+
+        body.dark-mode .qr-placeholder {
+
+            color: #9ca3af;
+
+        }
+
+
+        body.dark-mode .qr-placeholder-icon {
+
+            background: #172554;
+
+            color: #93c5fd;
+
+        }
+
+
+        body.dark-mode #generatedQR {
+
+            background: #ffffff;
+
+        }
+
+
+        body.dark-mode .qr-download-btn {
+
+            background: #1f2937;
+
+            border-color: #60a5fa;
+
+            color: #93c5fd;
+
+        }
+
+
+        body.dark-mode .qr-download-btn:hover {
+
+            background: #2563eb;
+
+            color: #ffffff;
+
+        }
+
+
+        body.dark-mode .qr-info {
+
+            background: #172554;
+
+            border-color: #1e40af;
+
+        }
+
+
+        body.dark-mode .qr-info h3 {
+
+            color: #bfdbfe;
+
+        }
+
+
+        body.dark-mode .qr-info p,
+
+        body.dark-mode .qr-info li {
+
+            color: #d1d5db;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            .qr-generator-card {
+
+                padding: 20px;
+
+            }
+
+
+            .qr-result {
+
+                min-height: 300px;
+
+                padding: 20px;
+
+            }
+
+
+            .qr-actions {
+
+                flex-direction: column;
+
+            }
+
+
+            .qr-download-btn {
+
+                width: 100%;
+
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .qr-generator-card {
+
+                padding: 16px;
+
+                border-radius: 14px;
+
+            }
+
+
+            #qrText {
+
+                min-height: 115px;
+
+                padding: 13px;
+
+                font-size: 14px;
+
+            }
+
+
+            .qr-result {
+
+                min-height: 260px;
+
+                padding: 16px;
+
+                border-radius: 12px;
+
+            }
+
+
+            .qr-info {
+
+                padding: 18px;
+
+            }
+
+
+            .qr-info h3 {
+
+                font-size: 17px;
+
+            }
+
+        }
+
+    </style>
 
 </head>
 
@@ -53,12 +709,29 @@
 <body>
 
 
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
 <header class="main-header">
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
 
     <div class="top-bar">
 
 
-        <a href="index.html" class="logo">
+        <!-- =================================================
+             LOGO
+        ================================================== -->
+
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="TechHub Ghana Home"
+        >
 
             <img
                 src="images/logo.png"
@@ -80,50 +753,82 @@
         </a>
 
 
-        <div class="search-box">
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
 
-            <input
-                type="search"
-                id="siteSearch"
-                placeholder="Search TechHub Ghana..."
-                aria-label="Search TechHub Ghana"
-            >
+        <div class="header-right">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="siteSearch"
+                    placeholder="Search TechHub Ghana..."
+                    aria-label="Search TechHub Ghana"
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="searchBtn"
+                    aria-label="Search"
+                    title="Search"
+                >
+
+                    <i class="fas fa-search"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- DARK MODE -->
 
             <button
                 type="button"
-                id="siteSearchBtn"
-                aria-label="Search"
+                id="darkModeBtn"
+                class="dark-mode-btn"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode"
             >
-                <i class="fas fa-search"></i>
+
+                🌙
+
+            </button>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                type="button"
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navMenu"
+            >
+
+                ☰
+
             </button>
 
         </div>
 
-
-        <button
-            type="button"
-            id="darkModeBtn"
-            class="dark-mode-btn"
-            aria-label="Toggle dark mode"
-        >
-            🌙
-        </button>
-
     </div>
 
 
-    <button
-        type="button"
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav
+        id="navMenu"
+        aria-label="Main navigation"
     >
-        ☰
-    </button>
-
-
-    <nav id="navMenu">
 
         <a href="index.html">
             Home
@@ -152,6 +857,7 @@
         <a
             href="qr-generator.html"
             class="active"
+            aria-current="page"
         >
             QR Generator
         </a>
@@ -173,100 +879,301 @@
 </header>
 
 
-<main>
+<!-- =========================================================
+     BREAKING NEWS
+========================================================= -->
+
+<section
+    class="breaking-news"
+    aria-label="TechHub Ghana updates"
+>
+
+    <marquee
+        behavior="scroll"
+        direction="left"
+    >
+
+        🔳 Free QR Code Generator •
+        🛠️ Free Digital Tools •
+        🎓 GPA Calculator •
+        🤖 AI Assistant •
+        🔐 Password Generator •
+        🎂 Age Calculator •
+        🔄 Unit Converter •
+        💻 TechHub Ghana
+
+    </marquee>
+
+</section>
 
 
-<section class="tool-page">
+<!-- =========================================================
+     QR GENERATOR HERO
+========================================================= -->
 
+<section
+    class="tutorial-hero"
+    aria-labelledby="qrHeroTitle"
+>
 
-    <div class="tool-header">
+    <div>
 
-        <span class="tool-badge">
-            🛠️ FREE DIGITAL TOOL
+        <span>
+            🔳 TECHHUB GHANA DIGITAL TOOLS
         </span>
 
-
-        <h1>
+        <h2 id="qrHeroTitle">
             QR Code Generator
-        </h1>
-
+        </h2>
 
         <p>
-            Create a QR code for websites, text,
-            phone numbers, emails and other information.
+            Create QR codes for websites, text, phone numbers,
+            email addresses and other useful information.
         </p>
-
-    </div>
-
-
-    <div class="qr-generator-card">
-
-
-        <label for="qrText">
-            Enter your content
-        </label>
-
-
-        <textarea
-            id="qrText"
-            placeholder="https://example.com"
-            rows="4"
-            maxlength="2000"
-            aria-label="QR code content"
-        ></textarea>
-
-
-        <button
-            type="button"
-            id="generateQR"
-            class="primary-btn"
-        >
-            Generate QR Code
-        </button>
-
-
-        <div
-            id="qrcode"
-            class="qr-result"
-            aria-live="polite"
-        >
-
-            <p>
-                Your QR code will appear here.
-            </p>
-
-        </div>
-
-
-        <div
-            id="qrActions"
-            class="qr-actions"
-            hidden
-        >
-
-            <button
-                type="button"
-                id="downloadQR"
-                class="secondary-btn"
-            >
-                Download QR Code
-            </button>
-
-        </div>
 
     </div>
 
 </section>
 
 
+<!-- =========================================================
+     MAIN CONTENT
+========================================================= -->
+
+<main>
+
+
+    <!-- =====================================================
+         QR GENERATOR
+    ====================================================== -->
+
+    <section
+        class="section"
+        aria-labelledby="qrGeneratorTitle"
+    >
+
+        <div class="qr-generator-wrapper">
+
+
+            <div class="qr-generator-card">
+
+
+                <!-- =================================================
+                     INPUT
+                ================================================== -->
+
+                <div class="qr-form-group">
+
+                    <label for="qrText">
+
+                        <i class="fas fa-qrcode"></i>
+
+                        Enter your content
+
+                    </label>
+
+
+                    <textarea
+                        id="qrText"
+                        placeholder="Enter a website URL, text, email address or phone number..."
+                        rows="4"
+                        maxlength="2000"
+                        aria-label="QR code content"
+                        autocomplete="off"
+                        spellcheck="false"
+                    ></textarea>
+
+
+                    <span
+                        id="qrCharacterCount"
+                        class="qr-character-count"
+                    >
+                        0 / 2000
+                    </span>
+
+                </div>
+
+
+                <!-- =================================================
+                     GENERATE BUTTON
+                ================================================== -->
+
+                <button
+                    type="button"
+                    id="generateQR"
+                    class="qr-primary-btn"
+                >
+
+                    <i class="fas fa-qrcode"></i>
+
+                    Generate QR Code
+
+                </button>
+
+
+                <!-- =================================================
+                     QR RESULT
+                ================================================== -->
+
+                <div
+                    id="qrcode"
+                    class="qr-result"
+                    aria-live="polite"
+                >
+
+                    <div class="qr-placeholder">
+
+                        <div
+                            class="qr-placeholder-icon"
+                            aria-hidden="true"
+                        >
+
+                            <i class="fas fa-qrcode"></i>
+
+                        </div>
+
+                        <p>
+                            Your QR code will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     QR ACTIONS
+                ================================================== -->
+
+                <div
+                    id="qrActions"
+                    class="qr-actions"
+                    hidden
+                >
+
+                    <button
+                        type="button"
+                        id="downloadQR"
+                        class="qr-download-btn"
+                    >
+
+                        <i class="fas fa-download"></i>
+
+                        Download QR Code
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 QR INFORMATION
+            ================================================== -->
+
+            <div class="qr-info">
+
+                <h3>
+                    <i class="fas fa-circle-info"></i>
+                    How to Use the QR Code Generator
+                </h3>
+
+
+                <p>
+                    Enter the information you want to store
+                    in the QR code and select
+                    <strong>Generate QR Code</strong>.
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        Enter a website URL such as
+                        https://example.com.
+                    </li>
+
+                    <li>
+                        You can also enter plain text,
+                        an email address or a phone number.
+                    </li>
+
+                    <li>
+                        Scan the generated QR code with
+                        your smartphone camera.
+                    </li>
+
+                    <li>
+                        Download the QR code and use it
+                        wherever you need it.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+    <section
+        class="newsletter"
+        aria-labelledby="newsletterTitle"
+    >
+
+        <h2 id="newsletterTitle">
+            📩 Stay Updated
+        </h2>
+
+        <p>
+            Get new technology tutorials, digital tools
+            and technology updates from TechHub Ghana.
+        </p>
+
+
+        <form
+            id="newsletterForm"
+            novalidate
+        >
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email"
+                aria-label="Email address"
+                autocomplete="email"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
 </main>
 
 
-<footer>
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
+<footer>
 
     <div class="footer-grid">
 
+
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
 
         <div>
 
@@ -279,12 +1186,16 @@
             </p>
 
             <p>
-                Free technology resources and digital
-                tools for students and everyday users.
+                Your trusted source for technology
+                tutorials, news and useful digital tools.
             </p>
 
         </div>
 
+
+        <!-- =================================================
+             QUICK LINKS
+        ================================================== -->
 
         <div>
 
@@ -295,6 +1206,12 @@
             <p>
                 <a href="index.html">
                     Home
+                </a>
+            </p>
+
+            <p>
+                <a href="ghana-tech.html">
+                    Ghana Tech
                 </a>
             </p>
 
@@ -316,35 +1233,73 @@
                 </a>
             </p>
 
+            <p>
+                <a href="about.html">
+                    About
+                </a>
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </p>
+
         </div>
 
+
+        <!-- =================================================
+             DIGITAL TOOLS
+        ================================================== -->
 
         <div>
 
             <h3>
-                Tools
+                Digital Tools
             </h3>
 
             <p>
                 <a href="gpa.html">
-                    GPA Calculator
+                    🎓 GPA Calculator
                 </a>
             </p>
 
             <p>
                 <a href="qr-generator.html">
-                    QR Generator
+                    🔳 QR Generator
                 </a>
             </p>
 
             <p>
                 <a href="ai-assistant.html">
-                    AI Assistant
+                    🤖 AI Assistant
+                </a>
+            </p>
+
+            <p>
+                <a href="password-generator.html">
+                    🔐 Password Generator
+                </a>
+            </p>
+
+            <p>
+                <a href="age-calculator.html">
+                    🎂 Age Calculator
+                </a>
+            </p>
+
+            <p>
+                <a href="unit-converter.html">
+                    🔄 Unit Converter
                 </a>
             </p>
 
         </div>
 
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
 
         <div>
 
@@ -353,8 +1308,20 @@
             </h3>
 
             <p>
-                <a href="contact.html">
-                    Contact Us
+                📍 Ghana
+            </p>
+
+            <p>
+                📧
+                <a href="mailto:juliusas009@gmail.com">
+                    juliusas009@gmail.com
+                </a>
+            </p>
+
+            <p>
+                📱
+                <a href="tel:+233534057748">
+                    +233 534 057 748
                 </a>
             </p>
 
@@ -367,44 +1334,56 @@
 
 
     <p class="copyright">
+
         © 2026 TechHub Ghana. All Rights Reserved.
+
     </p>
 
 </footer>
 
 
+<!-- =========================================================
+     MAIN JAVASCRIPT
+========================================================= -->
+
 <script src="script.js"></script>
 
 
-<script>
+<!-- =========================================================
+     QR GENERATOR JAVASCRIPT
+========================================================= -->
 
-/* =====================================================
-   TECHHUB GHANA QR GENERATOR
-===================================================== */
+<script>
 
 document.addEventListener(
     "DOMContentLoaded",
     function () {
 
 
+        /* =====================================================
+           ELEMENTS
+        ====================================================== */
+
         const qrInput =
             document.getElementById("qrText");
-
 
         const qrButton =
             document.getElementById("generateQR");
 
-
         const qrResult =
             document.getElementById("qrcode");
-
 
         const qrActions =
             document.getElementById("qrActions");
 
-
         const downloadButton =
             document.getElementById("downloadQR");
+
+        const characterCount =
+            document.getElementById("qrCharacterCount");
+
+        const newsletterForm =
+            document.getElementById("newsletterForm");
 
 
         if (
@@ -412,61 +1391,162 @@ document.addEventListener(
             !qrButton ||
             !qrResult
         ) {
+
             return;
+
         }
 
 
-        /* =================================================
+        /* =====================================================
+           UPDATE CHARACTER COUNT
+        ====================================================== */
+
+        function updateCharacterCount() {
+
+            if (!characterCount) {
+                return;
+            }
+
+
+            characterCount.textContent =
+                qrInput.value.length +
+                " / 2000";
+
+        }
+
+
+        qrInput.addEventListener(
+            "input",
+            updateCharacterCount
+        );
+
+
+        updateCharacterCount();
+
+
+        /* =====================================================
            GENERATE QR CODE
-        ================================================= */
+        ====================================================== */
 
-        qrButton.addEventListener(
-            "click",
-            function () {
+        function generateQRCode() {
 
-
-                const text =
-                    qrInput.value.trim();
+            const text =
+                qrInput.value.trim();
 
 
-                if (!text) {
-
-                    alert(
-                        "Please enter text, a URL, email or phone number."
-                    );
-
-                    qrInput.focus();
-
-                    return;
-                }
-
-
-                const qrURL =
-                    "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="
-                    +
-                    encodeURIComponent(text);
-
+            if (!text) {
 
                 qrResult.innerHTML = `
 
-                    <img
-                        id="generatedQR"
-                        src="${qrURL}"
-                        alt="Generated QR Code"
-                        width="300"
-                        height="300"
-                    >
+                    <div class="qr-placeholder">
 
-                    <p>
-                        QR code generated successfully.
-                    </p>
+                        <div
+                            class="qr-placeholder-icon"
+                            aria-hidden="true"
+                        >
+
+                            <i class="fas fa-circle-exclamation"></i>
+
+                        </div>
+
+                        <p>
+                            Please enter text, a URL,
+                            email or phone number.
+                        </p>
+
+                    </div>
 
                 `;
 
 
                 if (qrActions) {
 
-                    qrActions.hidden = false;
+                    qrActions.hidden = true;
+
+                }
+
+
+                qrInput.focus();
+
+                return;
+
+            }
+
+
+            /*
+             * Encode the user's content before placing it
+             * into the QR API URL.
+             */
+
+            const qrURL =
+                "https://api.qrserver.com/v1/create-qr-code/"
+                +
+                "?size=300x300"
+                +
+                "&format=png"
+                +
+                "&margin=10"
+                +
+                "&data="
+                +
+                encodeURIComponent(text);
+
+
+            qrResult.innerHTML = `
+
+                <img
+                    id="generatedQR"
+                    src="${qrURL}"
+                    alt="Generated QR code"
+                    width="300"
+                    height="300"
+                    loading="eager"
+                    decoding="async"
+                >
+
+                <p class="qr-success-message">
+                    <i class="fas fa-check-circle"></i>
+                    QR code generated successfully.
+                </p>
+
+            `;
+
+
+            if (qrActions) {
+
+                qrActions.hidden = false;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           GENERATE BUTTON
+        ====================================================== */
+
+        qrButton.addEventListener(
+            "click",
+            generateQRCode
+        );
+
+
+        /* =====================================================
+           ENTER KEY
+        ====================================================== */
+
+        qrInput.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Enter" &&
+                    (event.ctrlKey || event.metaKey)
+                ) {
+
+                    event.preventDefault();
+
+                    generateQRCode();
 
                 }
 
@@ -474,9 +1554,9 @@ document.addEventListener(
         );
 
 
-        /* =================================================
+        /* =====================================================
            DOWNLOAD QR CODE
-        ================================================= */
+        ====================================================== */
 
         if (downloadButton) {
 
@@ -504,9 +1584,13 @@ document.addEventListener(
 
                     try {
 
-
                         const response =
-                            await fetch(qr.src);
+                            await fetch(
+                                qr.src,
+                                {
+                                    mode: "cors"
+                                }
+                            );
 
 
                         if (!response.ok) {
@@ -523,11 +1607,15 @@ document.addEventListener(
 
 
                         const blobURL =
-                            URL.createObjectURL(blob);
+                            URL.createObjectURL(
+                                blob
+                            );
 
 
                         const link =
-                            document.createElement("a");
+                            document.createElement(
+                                "a"
+                            );
 
 
                         link.href =
@@ -549,26 +1637,96 @@ document.addEventListener(
                         link.remove();
 
 
-                        URL.revokeObjectURL(
-                            blobURL
+                        setTimeout(
+                            function () {
+
+                                URL.revokeObjectURL(
+                                    blobURL
+                                );
+
+                            },
+                            100
                         );
 
 
-                    }
-
-                    catch (error) {
+                    } catch (error) {
 
                         /*
-                           Fallback: open the QR image
-                           if browser blocks direct download.
-                        */
+                         * Some browsers or external services
+                         * may prevent direct downloads.
+                         * Open the image as a fallback.
+                         */
 
                         window.open(
                             qr.src,
-                            "_blank"
+                            "_blank",
+                            "noopener,noreferrer"
                         );
 
                     }
+
+                }
+            );
+
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        if (newsletterForm) {
+
+            newsletterForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const emailInput =
+                        document.getElementById(
+                            "newsletterEmail"
+                        );
+
+
+                    if (!emailInput) {
+
+                        return;
+
+                    }
+
+
+                    const email =
+                        emailInput.value.trim();
+
+
+                    if (!email) {
+
+                        emailInput.focus();
+
+                        return;
+
+                    }
+
+
+                    if (
+                        !emailInput.checkValidity()
+                    ) {
+
+                        emailInput.reportValidity();
+
+                        return;
+
+                    }
+
+
+                    alert(
+                        "✅ Thank you for subscribing to TechHub Ghana!"
+                    );
+
+
+                    newsletterForm.reset();
 
                 }
             );
@@ -583,4 +1741,4 @@ document.addEventListener(
 
 </body>
 
-</html>
+    </html>
