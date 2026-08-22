@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC SEO
+    ===================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#0b5cff">
+
+    <meta name="description"
+          content="Calculate your exact age in years, months and days with the free TechHub Ghana Age Calculator.">
+
+    <meta name="keywords"
+          content="age calculator Ghana, calculate age, age calculator, date of birth calculator, TechHub Ghana, student tools">
+
+    <meta name="author"
+          content="TechHub Ghana">
+
+    <meta name="robots"
+          content="index, follow">
+
+
+    <!-- =====================================================
+         PAGE TITLE
+    ===================================================== -->
+
+    <title>
+        Age Calculator | TechHub Ghana
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+    ===================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ===================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         MAIN STYLESHEET
+    ===================================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- =====================================================
+         FAVICON
+    ===================================================== -->
+
+    <link rel="icon"
+          href="images/logo.png"
+          type="image/png">
+
+
+    <!-- =====================================================
+         PAGE-SPECIFIC STYLES
+    ===================================================== -->
+
+    <style>
+
+        /* =====================================================
+           BASIC PAGE PROTECTION
+        ===================================================== */
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =====================================================
+           MAIN PAGE SPACING
+        ===================================================== */
+
+        main {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .section {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           HEADER LOGO
+           SAME TECHHUB GHANA STANDARD
+        ===================================================== */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .logo img {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo > div {
+            min-width: 0;
+        }
+
+        .logo h1 {
+            white-space: nowrap;
+        }
+
+        .logo p {
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           AGE CALCULATOR
+        ===================================================== */
+
+        .age-calculator-container {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* =====================================================
+           CALCULATOR HEADER
+        ===================================================== */
+
+        .age-calculator-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .age-calculator-header h2 {
+            margin-bottom: 10px;
+        }
+
+        .age-calculator-header p {
+            color: #6b7280;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           DATE INPUTS
+        ===================================================== */
+
+        .date-inputs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .date-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .date-field label {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .date-field input {
+            width: 100%;
+            min-height: 50px;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            background: #ffffff;
+            color: #111827;
+            font-family: inherit;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .date-field input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+        }
+
+
+        /* =====================================================
+           CALCULATOR ACTIONS
+        ===================================================== */
+
+        .age-calculator-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .calculate-age-btn,
+        .reset-age-btn {
+            min-height: 52px;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .calculate-age-btn {
+            flex: 1;
+            border: none;
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        .calculate-age-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .reset-age-btn {
+            padding: 0 25px;
+            border: 1px solid #d1d5db;
+            background: #ffffff;
+            color: #374151;
+        }
+
+        .reset-age-btn:hover {
+            background: #f3f4f6;
+        }
+
+
+        /* =====================================================
+           RESULT
+        ===================================================== */
+
+        .age-result {
+            margin-top: 30px;
+        }
+
+        .result-card {
+            padding: 30px;
+            border-radius: 16px;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            text-align: center;
+        }
+
+        .result-icon {
+            display: block;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .result-card h2 {
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        .age-number {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            color: #2563eb;
+        }
+
+        .age-number-label {
+            margin-top: 5px;
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        .age-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .age-detail {
+            padding: 18px 10px;
+            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid #dbeafe;
+        }
+
+        .age-detail strong {
+            display: block;
+            font-size: 1.5rem;
+            color: #2563eb;
+        }
+
+        .age-detail span {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .next-birthday {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #ffffff;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           INFORMATION BOX
+        ===================================================== */
+
+        .info-box {
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 15px;
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+        }
+
+        .info-box h3 {
+            margin-bottom: 12px;
+            color: #1f2937;
+        }
+
+        .info-box p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =====================================================
+           MORE TOOLS
+        ===================================================== */
+
+        .more-tools {
+            margin-top: 45px;
+        }
+
+        .more-tools > h2 {
+            margin-bottom: 8px;
+        }
+
+        .more-tools-intro {
+            margin-bottom: 25px;
+            color: #6b7280;
+        }
+
+
+        /* =====================================================
+           NEWSLETTER / FOOTER WIDTH
+        ===================================================== */
+
+        .newsletter {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .footer-grid,
+        .copyright {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           DARK MODE
+        ===================================================== */
+
+        body.dark-mode .age-calculator-container {
+            background: #111827;
+            border-color: #374151;
+        }
+
+        body.dark-mode .age-calculator-header p {
+            color: #9ca3af;
+        }
+
+        body.dark-mode .date-field label {
+            color: #e5e7eb;
+        }
+
+        body.dark-mode .date-field input {
+            background: #1f2937;
+            border-color: #4b5563;
+            color: #f9fafb;
+        }
+
+        body.dark-mode .reset-age-btn {
+            background: #1f2937;
+            border-color: #4b5563;
+            color: #f3f4f6;
+        }
+
+        body.dark-mode .reset-age-btn:hover {
+            background: #374151;
+        }
+
+        body.dark-mode .result-card {
+            background: #172554;
+            border-color: #1e40af;
+        }
+
+        body.dark-mode .result-card h2 {
+            color: #bfdbfe;
+        }
+
+        body.dark-mode .age-number-label {
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .age-detail {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        body.dark-mode .age-detail span {
+            color: #9ca3af;
+        }
+
+        body.dark-mode .next-birthday {
+            background: #1f2937;
+            color: #e5e7eb;
+        }
+
+        body.dark-mode .info-box {
+            background: #1f2937;
+            border-color: #374151;
+        }
+
+        body.dark-mode .info-box h3 {
+            color: #f3f4f6;
+        }
+
+        body.dark-mode .info-box p {
+            color: #d1d5db;
+        }
+
+        body.dark-mode .more-tools-intro {
+            color: #9ca3af;
+        }
+
+
+        /* =====================================================
+           MOBILE — 768px
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            main {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .section {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .top-bar {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .logo {
+                gap: 9px;
+                max-width: calc(100% - 58px);
+            }
+
+            .logo img {
+                width: 44px;
+                height: 44px;
+                min-width: 44px;
+            }
+
+            .logo > div {
+                overflow: hidden;
+            }
+
+            .logo h1 {
+                font-size: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .logo p {
+                font-size: 0.58rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .date-inputs {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .age-calculator-container {
+                padding: 20px;
+            }
+
+            .age-calculator-actions {
+                flex-direction: column;
+            }
+
+            .calculate-age-btn,
+            .reset-age-btn {
+                width: 100%;
+            }
+
+            .age-details {
+                grid-template-columns: 1fr;
+            }
+
+            .age-detail {
+                padding: 15px;
+            }
+
+            footer {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONES — 480px
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+            main {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .top-bar {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .logo {
+                gap: 8px;
+            }
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+            }
+
+            .logo h1 {
+                font-size: 0.92rem;
+            }
+
+            .logo p {
+                font-size: 0.52rem;
+            }
+
+            .age-calculator-container {
+                padding: 16px;
+                border-radius: 14px;
+            }
+
+            .age-calculator-header h2 {
+                font-size: 1.4rem;
+            }
+
+            .age-calculator-header p {
+                font-size: 0.9rem;
+            }
+
+            .result-card {
+                padding: 20px 15px;
+            }
+
+            .age-number {
+                font-size: 2.4rem;
+            }
+
+            .info-box {
+                padding: 18px;
+            }
+
+            footer {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="top-bar">
+
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            <a href="index.html"
+               aria-label="TechHub Ghana Home">
+
+                <img src="images/logo.png"
+                     alt="TechHub Ghana Logo"
+                     width="56"
+                     height="56"
+                     decoding="async">
+
+            </a>
+
+            <div>
+
+                <h1>
+                    TechHub Ghana
+                </h1>
+
+                <p>
+                    Technology News • Tutorials • Digital Tools
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <form class="search-box"
+              role="search"
+              action="news.html">
+
+            <label for="ageSearch"
+                   class="sr-only">
+
+                Search TechHub Ghana
+
+            </label>
+
+            <input
+                type="search"
+                id="ageSearch"
+                name="q"
+                placeholder="Search technology..."
+                autocomplete="off"
+            >
+
+            <button type="submit"
+                    aria-label="Search">
+
+                🔍
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- MOBILE MENU BUTTON -->
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="navMenu"
+        aria-expanded="false">
+
+        ☰
+
+    </button>
+
+
+    <!-- NAVIGATION -->
+
+    <nav id="navMenu"
+         aria-label="Main navigation">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="ghana-tech.html">
+            🇬🇭 Ghana Tech
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="tutorials.html">
+            Tutorials
+        </a>
+
+        <a href="tools.html"
+           class="active">
+            Tools
+        </a>
+
+        <a href="gpa.html">
+            🎓 GPA
+        </a>
+
+        <a href="qr-generator.html">
+            📱 QR Generator
+        </a>
+
+        <a href="ai-assistant.html">
+            🤖 AI Assistant
+        </a>
+
+        <a href="password-generator.html">
+            🔐 Password Generator
+        </a>
+
+        <a href="age-calculator.html"
+           aria-current="page">
+            🎂 Age Calculator
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     BREAKING NEWS
+===================================================== -->
+
+<section class="breaking-news"
+         aria-label="TechHub Ghana latest updates">
+
+    <div class="today-date"
+         id="today">
+    </div>
+
+    <marquee>
+
+        🎂 TechHub Ghana • Age Calculator • Student Tools •
+        Technology • Learning • Innovation
+
+    </marquee>
+
+</section>
+
+
+<!-- =====================================================
+     AGE HERO
+===================================================== -->
+
+<section class="tool-hero">
+
+    <div>
+
+        <span class="category">
+            🎂 TECHHUB GHANA DIGITAL TOOL
+        </span>
+
+        <h2>
+            Age Calculator
+        </h2>
+
+        <p>
+            Calculate your exact age in years, months and days
+            using your date of birth.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main id="main-content">
+
+
+    <!-- =================================================
+         AGE CALCULATOR
+    ================================================== -->
+
+    <section class="section">
+
+        <div class="age-calculator-container">
+
+
+            <!-- INTRODUCTION -->
+
+            <div class="age-calculator-header">
+
+                <h2>
+                    🎂 Calculate Your Age
+                </h2>
+
+                <p>
+                    Enter your date of birth below and calculate
+                    your exact age.
+                </p>
+
+            </div>
+
+
+            <!-- DATE INPUTS -->
+
+            <form id="ageForm">
+
+                <div class="date-inputs">
+
+
+                    <!-- DAY -->
+
+                    <div class="date-field">
+
+                        <label for="birthDay">
+                            Day
+                        </label>
+
+                        <input
+                            type="number"
+                            id="birthDay"
+                            min="1"
+                            max="31"
+                            placeholder="e.g. 15"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- MONTH -->
+
+                    <div class="date-field">
+
+                        <label for="birthMonth">
+                            Month
+                        </label>
+
+                        <input
+                            type="number"
+                            id="birthMonth"
+                            min="1"
+                            max="12"
+                            placeholder="e.g. 8"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- YEAR -->
+
+                    <div class="date-field">
+
+                        <label for="birthYear">
+                            Year
+                        </label>
+
+                        <input
+                            type="number"
+                            id="birthYear"
+                            min="1900"
+                            placeholder="e.g. 2005"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="age-calculator-actions">
+
+                    <button
+                        type="submit"
+                        class="calculate-age-btn">
+
+                        <i class="fa-solid fa-calculator"
+                           aria-hidden="true"></i>
+
+                        Calculate Age
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="resetAgeBtn"
+                        class="reset-age-btn">
+
+                        <i class="fa-solid fa-rotate-left"
+                           aria-hidden="true"></i>
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <!-- =================================================
+                 RESULT
+            ================================================== -->
+
+            <div
+                id="ageResult"
+                class="age-result"
+                aria-live="polite">
+
+            </div>
+
+
+            <!-- =================================================
+                 INFORMATION
+            ================================================== -->
+
+            <div class="info-box">
+
+                <h3>
+                    💡 About the Age Calculator
+                </h3>
+
+                <p>
+                    This calculator determines your age based on
+                    your date of birth and today's date.
+                </p>
+
+                <p>
+                    The result shows your age in years, months
+                    and days and also provides additional
+                    information about your next birthday.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MORE TOOLS
+    ====================================================== -->
+
+    <section class="section more-tools">
+
+        <h2>
+            🛠️ More TechHub Ghana Tools
+        </h2>
+
+        <p class="more-tools-intro">
+            Explore more useful tools for students and
+            technology enthusiasts.
+        </p>
+
+
+        <div class="tutorial-grid">
+
+
+            <!-- GPA -->
+
+            <div class="tutorial">
+
+                <h3>
+                    🎓 GPA Calculator
+                </h3>
+
+                <p>
+                    Calculate your GPA using course marks
+                    and credit hours.
+                </p>
+
+                <a href="gpa.html"
+                   class="read-btn">
+
+                    Open GPA →
+
+                </a>
+
+            </div>
+
+
+            <!-- QR -->
+
+            <div class="tutorial">
+
+                <h3>
+                    📱 QR Generator
+                </h3>
+
+                <p>
+                    Generate QR codes quickly and easily.
+                </p>
+
+                <a href="qr-generator.html"
+                   class="read-btn">
+
+                    Open Tool →
+
+                </a>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="tutorial">
+
+                <h3>
+                    🔐 Password Generator
+                </h3>
+
+                <p>
+                    Create strong random passwords for
+                    your online accounts.
+                </p>
+
+                <a href="password-generator.html"
+                   class="read-btn">
+
+                    Open Tool →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+    <section class="newsletter">
+
+        <h2>
+            📩 Stay Updated
+        </h2>
+
+        <p>
+            Get technology news, tutorials and useful
+            digital tools from TechHub Ghana.
+        </p>
+
+        <form id="newsletterForm">
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email"
+                autocomplete="email"
+                aria-label="Email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <!-- ABOUT -->
+
+        <div>
+
+            <h3>
+                TechHub Ghana
+            </h3>
+
+            <p>
+                Technology • Learning • Innovation
+            </p>
+
+            <p>
+                Your platform for technology news,
+                tutorials and useful digital tools.
+            </p>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <p>
+                <a href="index.html">
+                    Home
+                </a>
+            </p>
+
+            <p>
+                <a href="ghana-tech.html">
+                    Ghana Tech
+                </a>
+            </p>
+
+            <p>
+                <a href="news.html">
+                    News
+                </a>
+            </p>
+
+            <p>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </p>
+
+            <p>
+                <a href="tools.html">
+                    Tools
+                </a>
+            </p>
+
+            <p>
+                <a href="about.html">
+                    About
+                </a>
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- DIGITAL TOOLS -->
+
+        <div>
+
+            <h3>
+                Digital Tools
+            </h3>
+
+            <p>
+                <a href="gpa.html">
+                    🎓 GPA Calculator
+                </a>
+            </p>
+
+            <p>
+                <a href="qr-generator.html">
+                    📱 QR Generator
+                </a>
+            </p>
+
+            <p>
+                <a href="ai-assistant.html">
+                    🤖 AI Assistant
+                </a>
+            </p>
+
+            <p>
+                <a href="password-generator.html">
+                    🔐 Password Generator
+                </a>
+            </p>
+
+            <p>
+                <a href="age-calculator.html"
+                   aria-current="page">
+                    🎂 Age Calculator
+                </a>
+            </p>
+
+            <p>
+                <a href="unit-converter.html">
+                    🔄 Unit Converter
+                </a>
+            </p>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                🇬🇭 Ghana
+            </p>
+
+            <p>
+                📧
+                <a href="mailto:juliusas009@gmail.com">
+                    juliusas009@gmail.com
+                </a>
+            </p>
+
+            <p>
+                📱
+                <a href="tel:+233534057748">
+                    +233 534 057 748
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+
+        © 2026 TechHub Ghana.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const navMenu =
+    document.getElementById("navMenu");
+
+
+if (menuBtn && navMenu) {
+
+    menuBtn.addEventListener(
+        "click",
+        function () {
+
+            const isOpen =
+                navMenu.classList.toggle("show");
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   TODAY'S DATE
+===================================================== */
+
+const today =
+    document.getElementById("today");
+
+
+if (today) {
+
+    const currentDate =
+        new Date();
+
+    today.textContent =
+        currentDate.toLocaleDateString(
+            "en-GH",
+            {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            }
+        );
+
+}
+
+
+/* =====================================================
+   AGE CALCULATOR ELEMENTS
+===================================================== */
+
+const ageForm =
+    document.getElementById("ageForm");
+
+const ageResult =
+    document.getElementById("ageResult");
+
+const resetAgeBtn =
+    document.getElementById("resetAgeBtn");
+
+
+/* =====================================================
+   CALCULATE AGE
+===================================================== */
+
+if (ageForm) {
+
+    ageForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            const day =
+                Number(
+                    document.getElementById(
+                        "birthDay"
+                    ).value
+                );
+
+            const month =
+                Number(
+                    document.getElementById(
+                        "birthMonth"
+                    ).value
+                );
+
+            const year =
+                Number(
+                    document.getElementById(
+                        "birthYear"
+                    ).value
+                );
+
+
+            const todayDate =
+                new Date();
+
+            const currentYear =
+                todayDate.getFullYear();
+
+
+            /* =================================================
+               BASIC VALIDATION
+            ================================================== */
+
+            if (
+                !Number.isInteger(day) ||
+                !Number.isInteger(month) ||
+                !Number.isInteger(year)
+            ) {
+
+                showError(
+                    "Please enter a valid date of birth."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                day < 1 ||
+                day > 31 ||
+                month < 1 ||
+                month > 12
+            ) {
+
+                showError(
+                    "Please enter a valid day and month."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                year < 1900 ||
+                year > currentYear
+            ) {
+
+                showError(
+                    "Please enter a valid birth year."
+                );
+
+                return;
+
+            }
+
+
+            /* =================================================
+               CREATE BIRTH DATE
+            ================================================== */
+
+            const birthDate =
+                new Date(
+                    year,
+                    month - 1,
+                    day
+                );
+
+
+            /* =================================================
+               CHECK WHETHER DATE ACTUALLY EXISTS
+            ================================================== */
+
+            if (
+                birthDate.getFullYear() !== year ||
+                birthDate.getMonth() !== month - 1 ||
+                birthDate.getDate() !== day
+            ) {
+
+                showError(
+                    "The date you entered does not exist. Please check the day, month and year."
+                );
+
+                return;
+
+            }
+
+
+            /* =================================================
+               CHECK FUTURE DATE
+            ================================================== */
+
+            if (
+                birthDate > todayDate
+            ) {
+
+                showError(
+                    "Your date of birth cannot be in the future."
+                );
+
+                return;
+
+            }
+
+
+            /* =================================================
+               CALCULATE YEARS
+            ================================================== */
+
+            let years =
+                todayDate.getFullYear() -
+                birthDate.getFullYear();
+
+
+            let months =
+                todayDate.getMonth() -
+                birthDate.getMonth();
+
+
+            let days =
+                todayDate.getDate() -
+                birthDate.getDate();
+
+
+            if (days < 0) {
+
+                months--;
+
+                const previousMonth =
+                    new Date(
+                        todayDate.getFullYear(),
+                        todayDate.getMonth(),
+                        0
+                    );
+
+                days +=
+                    previousMonth.getDate();
+
+            }
+
+
+            if (months < 0) {
+
+                years--;
+
+                months += 12;
+
+            }
+
+
+            /* =================================================
+               TOTAL DAYS
+            ================================================== */
+
+            const millisecondsPerDay =
+                1000 *
+                60 *
+                60 *
+                24;
+
+
+            const totalMilliseconds =
+                todayDate.getTime() -
+                birthDate.getTime();
+
+
+            const totalDays =
+                Math.floor(
+                    totalMilliseconds /
+                    millisecondsPerDay
+                );
+
+
+            /* =================================================
+               NEXT BIRTHDAY
+            ================================================== */
+
+            let nextBirthday =
+                new Date(
+                    todayDate.getFullYear(),
+                    birthDate.getMonth(),
+                    birthDate.getDate()
+                );
+
+
+            if (
+                nextBirthday < todayDate
+            ) {
+
+                nextBirthday =
+                    new Date(
+                        todayDate.getFullYear() + 1,
+                        birthDate.getMonth(),
+                        birthDate.getDate()
+                    );
+
+            }
+
+
+            const daysUntilBirthday =
+                Math.ceil(
+                    (
+                        nextBirthday.getTime() -
+                        todayDate.getTime()
+                    ) /
+                    millisecondsPerDay
+                );
+
+
+            /* =================================================
+               BIRTHDAY MESSAGE
+            ================================================== */
+
+            let birthdayMessage;
+
+
+            if (
+                daysUntilBirthday === 0
+            ) {
+
+                birthdayMessage =
+                    "🎉 Happy Birthday! Today is your birthday.";
+
+            } else if (
+                daysUntilBirthday === 1
+            ) {
+
+                birthdayMessage =
+                    "🎂 Your next birthday is tomorrow!";
+
+            } else {
+
+                birthdayMessage =
+                    "🎂 Your next birthday is in " +
+                    daysUntilBirthday +
+                    " days.";
+
+            }
+
+
+            /* =================================================
+               DISPLAY RESULT
+            ================================================== */
+
+            ageResult.innerHTML = `
+
+                <div class="result-card">
+
+                    <span class="result-icon">
+                        🎉
+                    </span>
+
+                    <h2>
+                        Your Age
+                    </h2>
+
+                    <div class="age-number">
+                        ${years} years
+                    </div>
+
+                    <p class="age-number-label">
+                        ${months} months and ${days} days
+                    </p>
+
+
+                    <div class="age-details">
+
+                        <div class="age-detail">
+
+                            <strong>
+                                ${years}
+                            </strong>
+
+                            <span>
+                                Years
+                            </span>
+
+                        </div>
+
+
+                        <div class="age-detail">
+
+                            <strong>
+                                ${months}
+                            </strong>
+
+                            <span>
+                                Months
+                            </span>
+
+                        </div>
+
+
+                        <div class="age-detail">
+
+                            <strong>
+                                ${days}
+                            </strong>
+
+                            <span>
+                                Days
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="next-birthday">
+
+                        <strong>
+                            ${birthdayMessage}
+                        </strong>
+
+                        <br>
+
+                        Next birthday:
+                        ${formatDate(nextBirthday)}
+
+                        <br>
+
+                        Total days lived:
+                        approximately ${totalDays.toLocaleString()}
+
+                    </div>
+
+                </div>
+
+            `;
+
+
+            ageResult.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   SHOW ERROR
+===================================================== */
+
+function showError(message) {
+
+    if (!ageResult) {
+        return;
+    }
+
+
+    ageResult.innerHTML = `
+
+        <div class="result-card">
+
+            <span class="result-icon">
+                ⚠️
+            </span>
+
+            <h2>
+                Check Your Date
+            </h2>
+
+            <p>
+                ${message}
+            </p>
+
+        </div>
+
+    `;
+
+}
+
+
+/* =====================================================
+   FORMAT DATE
+===================================================== */
+
+function formatDate(date) {
+
+    return date.toLocaleDateString(
+        "en-GH",
+        {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }
+    );
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+if (resetAgeBtn) {
+
+    resetAgeBtn.addEventListener(
+        "click",
+        function () {
+
+            if (ageForm) {
+
+                ageForm.reset();
+
+            }
+
+
+            if (ageResult) {
+
+                ageResult.innerHTML = "";
+
+            }
+
+
+            document
+                .getElementById("birthDay")
+                .focus();
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   NEWSLETTER
+===================================================== */
+
+const newsletterForms =
+    document.querySelectorAll(
+        ".newsletter form"
+    );
+
+
+newsletterForms.forEach(
+    function (form) {
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                const email =
+                    form.querySelector(
+                        'input[type="email"]'
+                    );
+
+
+                if (
+                    email &&
+                    email.value.trim() &&
+                    email.checkValidity()
+                ) {
+
+                    alert(
+                        "Thank you for subscribing to TechHub Ghana!"
+                    );
+
+                    form.reset();
+
+                } else if (email) {
+
+                    email.reportValidity();
+
+                }
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+
+</body>
+
+          </html>
