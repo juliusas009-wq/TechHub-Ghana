@@ -12,11 +12,14 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color"
+          content="#0b5cff">
+
     <meta name="description"
-          content="Calculate your GPA quickly and easily with the TechHub Ghana GPA Calculator. Enter your course marks and credit hours to calculate your GPA out of 4.00.">
+          content="Generate strong and secure passwords for your online accounts with the free TechHub Ghana Password Generator.">
 
     <meta name="keywords"
-          content="GPA calculator Ghana, university GPA calculator, student GPA calculator, TechHub Ghana, CGPA calculator">
+          content="password generator Ghana, strong password generator, secure password, random password, TechHub Ghana, password security">
 
     <meta name="author"
           content="TechHub Ghana">
@@ -30,7 +33,7 @@
     ===================================================== -->
 
     <title>
-        GPA Calculator | TechHub Ghana
+        Password Generator | TechHub Ghana
     </title>
 
 
@@ -73,6 +76,600 @@
           href="images/logo.png"
           type="image/png">
 
+
+    <!-- =====================================================
+         PASSWORD GENERATOR PAGE STYLES
+         MATCHED TO GPA / TUTORIAL PAGE STANDARD
+    ===================================================== -->
+
+    <style>
+
+        /* =====================================================
+           PAGE WIDTH AND SPACING
+        ===================================================== */
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        main {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .section {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           PASSWORD GENERATOR CONTAINER
+        ===================================================== */
+
+        .password-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           PASSWORD HEADER
+        ===================================================== */
+
+        .password-header {
+            margin-bottom: 25px;
+        }
+
+        .password-header h2 {
+            margin-bottom: 10px;
+        }
+
+        .password-header p {
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           GENERATOR CARD
+        ===================================================== */
+
+        .password-generator-card {
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* =====================================================
+           PASSWORD DISPLAY
+        ===================================================== */
+
+        .password-display-wrapper {
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .password-display {
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+            min-height: 58px;
+            padding: 14px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            background: #f8fafc;
+            color: #111827;
+            font-family: "Courier New", monospace;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            outline: none;
+        }
+
+        .password-display:focus {
+            border-color: #2563eb;
+        }
+
+        .copy-password-btn {
+            width: 58px;
+            min-width: 58px;
+            min-height: 58px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.2s ease;
+        }
+
+        .copy-password-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .copy-password-btn:active {
+            transform: scale(0.97);
+        }
+
+
+        /* =====================================================
+           COPY MESSAGE
+        ===================================================== */
+
+        .copy-message {
+            min-height: 22px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #16a34a;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           SETTINGS
+        ===================================================== */
+
+        .password-settings {
+            width: 100%;
+        }
+
+        .setting-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .setting-row:last-child {
+            border-bottom: none;
+        }
+
+        .setting-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #1f2937;
+            font-weight: 500;
+        }
+
+        .setting-label i {
+            width: 22px;
+            text-align: center;
+            color: #2563eb;
+        }
+
+
+        /* =====================================================
+           LENGTH CONTROL
+        ===================================================== */
+
+        .length-control {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        #passwordLength {
+            width: 220px;
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+        #lengthValue {
+            min-width: 42px;
+            text-align: center;
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           CHECKBOX
+        ===================================================== */
+
+        .checkbox-control {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .checkbox-control input {
+            width: 20px;
+            height: 20px;
+            accent-color: #2563eb;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           STRENGTH
+        ===================================================== */
+
+        .strength-section {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 12px;
+            background: #f8fafc;
+        }
+
+        .strength-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .strength-header span:first-child {
+            color: #374151;
+            font-weight: 600;
+        }
+
+        #strengthText {
+            font-weight: 700;
+        }
+
+        .strength-bar {
+            width: 100%;
+            height: 10px;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #e5e7eb;
+        }
+
+        #strengthProgress {
+            width: 0%;
+            height: 100%;
+            border-radius: inherit;
+            transition: width 0.3s ease;
+        }
+
+        .strength-help {
+            margin-top: 10px;
+            color: #6b7280;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           ACTION BUTTONS
+        ===================================================== */
+
+        .password-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .generate-password-btn {
+            flex: 1;
+            min-height: 52px;
+            border: none;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .generate-password-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        .reset-password-btn {
+            min-height: 52px;
+            padding: 0 22px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            background: #ffffff;
+            color: #374151;
+            font-family: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .reset-password-btn:hover {
+            background: #f3f4f6;
+        }
+
+
+        /* =====================================================
+           SECURITY TIPS
+        ===================================================== */
+
+        .password-tips {
+            margin-top: 25px;
+            padding: 25px;
+            border: 1px solid #dbeafe;
+            border-radius: 15px;
+            background: #eff6ff;
+        }
+
+        .password-tips h3 {
+            margin-bottom: 12px;
+            color: #1e3a8a;
+        }
+
+        .password-tips ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .password-tips li {
+            margin-bottom: 8px;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        .password-tips li:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =====================================================
+           OTHER TOOLS
+        ===================================================== */
+
+        .other-tools {
+            margin-top: 50px;
+        }
+
+        .other-tools h2 {
+            margin-bottom: 10px;
+        }
+
+        .section-intro {
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================================
+           DARK MODE
+        ===================================================== */
+
+        body.dark-mode .password-generator-card {
+            background: #111827;
+            border-color: #374151;
+        }
+
+        body.dark-mode .password-display {
+            background: #1f2937;
+            border-color: #374151;
+            color: #f9fafb;
+        }
+
+        body.dark-mode .setting-row {
+            border-color: #374151;
+        }
+
+        body.dark-mode .setting-label {
+            color: #f3f4f6;
+        }
+
+        body.dark-mode .strength-section {
+            background: #1f2937;
+        }
+
+        body.dark-mode .strength-header span:first-child {
+            color: #e5e7eb;
+        }
+
+        body.dark-mode .strength-help {
+            color: #9ca3af;
+        }
+
+        body.dark-mode .reset-password-btn {
+            background: #1f2937;
+            border-color: #4b5563;
+            color: #f3f4f6;
+        }
+
+        body.dark-mode .reset-password-btn:hover {
+            background: #374151;
+        }
+
+        body.dark-mode .password-tips {
+            background: #172554;
+            border-color: #1e40af;
+        }
+
+        body.dark-mode .password-tips h3 {
+            color: #bfdbfe;
+        }
+
+        body.dark-mode .password-tips li {
+            color: #d1d5db;
+        }
+
+
+        /* =====================================================
+           FOOTER / NEWSLETTER WIDTH
+        ===================================================== */
+
+        .newsletter {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        footer {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .footer-grid,
+        .copyright {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           MOBILE — 768px
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            main {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .section {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .top-bar {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .logo img {
+                width: 44px;
+                height: 44px;
+                min-width: 44px;
+            }
+
+            .password-generator-card {
+                padding: 20px;
+            }
+
+            .password-display-wrapper {
+                flex-direction: column;
+            }
+
+            .copy-password-btn {
+                width: 100%;
+                min-width: 100%;
+                min-height: 48px;
+            }
+
+            .setting-row {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .length-control {
+                width: 100%;
+            }
+
+            #passwordLength {
+                width: 100%;
+            }
+
+            .password-actions {
+                flex-direction: column;
+            }
+
+            .generate-password-btn,
+            .reset-password-btn {
+                width: 100%;
+            }
+
+            .password-tips {
+                padding: 20px;
+            }
+
+            footer {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONES — 480px
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+            main {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .top-bar {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+            }
+
+            .password-generator-card {
+                padding: 16px;
+                border-radius: 14px;
+            }
+
+            .password-display {
+                font-size: 15px;
+                letter-spacing: 0.5px;
+            }
+
+            .strength-section {
+                padding: 16px;
+            }
+
+            .password-tips {
+                padding: 18px;
+            }
+
+            footer {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
@@ -96,7 +693,9 @@
                aria-label="TechHub Ghana Home">
 
                 <img src="images/logo.png"
-                     alt="TechHub Ghana Logo">
+                     alt="TechHub Ghana Logo"
+                     width="56"
+                     height="56">
 
             </a>
 
@@ -123,7 +722,7 @@
               role="search"
               action="news.html">
 
-            <label for="gpaSearch"
+            <label for="passwordSearch"
                    class="sr-only">
 
                 Search TechHub Ghana
@@ -132,7 +731,7 @@
 
             <input
                 type="search"
-                id="gpaSearch"
+                id="passwordSearch"
                 name="q"
                 placeholder="Search technology..."
                 autocomplete="off"
@@ -156,6 +755,7 @@
     <button
         class="menu-btn"
         id="menuBtn"
+        type="button"
         aria-label="Open navigation menu"
         aria-controls="navMenu"
         aria-expanded="false">
@@ -175,6 +775,10 @@
             Home
         </a>
 
+        <a href="ghana-tech.html">
+            🇬🇭 Ghana Tech
+        </a>
+
         <a href="news.html">
             News
         </a>
@@ -183,13 +787,13 @@
             Tutorials
         </a>
 
-        <a href="tools.html">
+        <a href="tools.html"
+           class="active">
             Tools
         </a>
 
-        <a href="gpa.html"
-           class="active">
-            GPA
+        <a href="gpa.html">
+            🎓 GPA
         </a>
 
         <a href="qr-generator.html">
@@ -226,8 +830,9 @@
 
     <marquee>
 
-        🎓 TechHub Ghana • GPA Calculator • Student Tools •
-        Technology • Learning • Innovation
+        🔐 TechHub Ghana • Password Generator •
+        Online Security • Digital Tools •
+        Strong Passwords • Technology • Learning
 
     </marquee>
 
@@ -236,7 +841,7 @@
 
 
 <!-- =====================================================
-     GPA HERO
+     PASSWORD HERO
 ===================================================== -->
 
 <section class="tool-hero">
@@ -244,16 +849,16 @@
     <div>
 
         <span class="category">
-            🎓 STUDENT TOOL
+            🔐 DIGITAL SECURITY TOOL
         </span>
 
         <h2>
-            GPA Calculator
+            Password Generator
         </h2>
 
         <p>
-            Calculate your Grade Point Average quickly using
-            your course marks and credit hours.
+            Create strong random passwords quickly and securely
+            to help protect your online accounts.
         </p>
 
     </div>
@@ -263,423 +868,319 @@
 
 
 <!-- =====================================================
-     GPA CALCULATOR
+     PASSWORD GENERATOR
 ===================================================== -->
 
 <section class="section">
 
-    <div class="calculator-container">
+    <div class="password-container">
 
 
         <!-- INTRODUCTION -->
 
-        <div class="calculator-header">
+        <div class="password-header">
 
             <h2>
-                🎓 Calculate Your GPA
+                🔐 Create a Strong Password
             </h2>
 
             <p>
-                Enter the mark and credit hour for each course.
-                The calculator will calculate your GPA on a
-                4.00 scale.
+                Customize the password length and choose the
+                character types you want to include.
             </p>
 
         </div>
 
 
 
-        <!-- GRADING SCALE -->
+        <!-- GENERATOR CARD -->
 
-        <div class="info-box">
+        <div class="password-generator-card">
 
-            <h3>
-                📊 Grading Scale
-            </h3>
 
-            <div class="grading-scale">
+            <!-- PASSWORD DISPLAY -->
 
-                <div>
-                    <strong>80–100</strong>
-                    <span>A • 4.00</span>
-                </div>
+            <div class="password-display-wrapper">
 
-                <div>
-                    <strong>75–79</strong>
-                    <span>B+ • 3.50</span>
-                </div>
-
-                <div>
-                    <strong>70–74</strong>
-                    <span>B • 3.00</span>
-                </div>
-
-                <div>
-                    <strong>65–69</strong>
-                    <span>C+ • 2.50</span>
-                </div>
-
-                <div>
-                    <strong>60–64</strong>
-                    <span>C • 2.00</span>
-                </div>
-
-                <div>
-                    <strong>55–59</strong>
-                    <span>D+ • 1.50</span>
-                </div>
-
-                <div>
-                    <strong>50–54</strong>
-                    <span>D • 1.00</span>
-                </div>
-
-                <div>
-                    <strong>0–49</strong>
-                    <span>F • 0.00</span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- GPA FORM -->
-
-        <form id="gpaForm">
-
-            <div class="gpa-table-wrapper">
-
-                <table class="gpa-table">
-
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                Course
-                            </th>
-
-                            <th>
-                                Mark (%)
-                            </th>
-
-                            <th>
-                                Credit Hours
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-
-                    <tbody>
-
-                        <!-- COURSE 1 -->
-
-                        <tr>
-
-                            <td>
-                                Course 1
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="mark1"
-                                    min="0"
-                                    max="100"
-                                    step="0.01"
-                                    placeholder="e.g. 75"
-                                    required
-                                >
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="credit1"
-                                    min="1"
-                                    max="20"
-                                    step="1"
-                                    value="3"
-                                    required
-                                >
-                            </td>
-
-                        </tr>
-
-
-                        <!-- COURSE 2 -->
-
-                        <tr>
-
-                            <td>
-                                Course 2
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="mark2"
-                                    min="0"
-                                    max="100"
-                                    step="0.01"
-                                    placeholder="e.g. 75"
-                                    required
-                                >
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="credit2"
-                                    min="1"
-                                    max="20"
-                                    step="1"
-                                    value="3"
-                                    required
-                                >
-                            </td>
-
-                        </tr>
-
-
-                        <!-- COURSE 3 -->
-
-                        <tr>
-
-                            <td>
-                                Course 3
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="mark3"
-                                    min="0"
-                                    max="100"
-                                    step="0.01"
-                                    placeholder="e.g. 75"
-                                    required
-                                >
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="credit3"
-                                    min="1"
-                                    max="20"
-                                    step="1"
-                                    value="3"
-                                    required
-                                >
-                            </td>
-
-                        </tr>
-
-
-                        <!-- COURSE 4 -->
-
-                        <tr>
-
-                            <td>
-                                Course 4
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="mark4"
-                                    min="0"
-                                    max="100"
-                                    step="0.01"
-                                    placeholder="e.g. 75"
-                                    required
-                                >
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="credit4"
-                                    min="1"
-                                    max="20"
-                                    step="1"
-                                    value="3"
-                                    required
-                                >
-                            </td>
-
-                        </tr>
-
-
-                        <!-- COURSE 5 -->
-
-                        <tr>
-
-                            <td>
-                                Course 5
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="mark5"
-                                    min="0"
-                                    max="100"
-                                    step="0.01"
-                                    placeholder="e.g. 75"
-                                    required
-                                >
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="credit5"
-                                    min="1"
-                                    max="20"
-                                    step="1"
-                                    value="3"
-                                    required
-                                >
-                            </td>
-
-                        </tr>
-
-
-                        <!-- COURSE 6 -->
-
-                        <tr>
-
-                            <td>
-                                Course 6
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="mark6"
-                                    min="0"
-                                    max="100"
-                                    step="0.01"
-                                    placeholder="e.g. 75"
-                                    required
-                                >
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="credit6"
-                                    min="1"
-                                    max="20"
-                                    step="1"
-                                    value="3"
-                                    required
-                                >
-                            </td>
-
-                        </tr>
-
-
-                        <!-- COURSE 7 -->
-
-                        <tr>
-
-                            <td>
-                                Course 7
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="mark7"
-                                    min="0"
-                                    max="100"
-                                    step="0.01"
-                                    placeholder="e.g. 75"
-                                    required
-                                >
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="credit7"
-                                    min="1"
-                                    max="20"
-                                    step="1"
-                                    value="3"
-                                    required
-                                >
-                            </td>
-
-                        </tr>
-
-
-                        <!-- COURSE 8 -->
-
-                        <tr>
-
-                            <td>
-                                Course 8
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="mark8"
-                                    min="0"
-                                    max="100"
-                                    step="0.01"
-                                    placeholder="e.g. 75"
-                                    required
-                                >
-                            </td>
-
-                            <td>
-                                <input
-                                    type="number"
-                                    id="credit8"
-                                    min="1"
-                                    max="20"
-                                    step="1"
-                                    value="3"
-                                    required
-                                >
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-
-
-            <!-- BUTTONS -->
-
-            <div class="calculator-actions">
+                <input
+                    type="text"
+                    id="passwordOutput"
+                    class="password-display"
+                    value=""
+                    placeholder="Your password will appear here"
+                    readonly
+                    aria-label="Generated password"
+                    spellcheck="false"
+                    autocomplete="off"
+                >
 
                 <button
-                    type="submit"
-                    class="read-btn">
+                    type="button"
+                    id="copyPasswordBtn"
+                    class="copy-password-btn"
+                    aria-label="Copy password"
+                    title="Copy password">
 
-                    🧮 Calculate GPA
+                    <i class="fa-solid fa-copy"
+                       aria-hidden="true"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- COPY MESSAGE -->
+
+            <div
+                id="copyMessage"
+                class="copy-message"
+                aria-live="polite">
+            </div>
+
+
+
+            <!-- SETTINGS -->
+
+            <div class="password-settings">
+
+
+                <!-- LENGTH -->
+
+                <div class="setting-row">
+
+                    <div class="setting-label">
+
+                        <i class="fa-solid fa-ruler-horizontal"
+                           aria-hidden="true">
+                        </i>
+
+                        <span>
+                            Password Length
+                        </span>
+
+                    </div>
+
+
+                    <div class="length-control">
+
+                        <input
+                            type="range"
+                            id="passwordLength"
+                            min="8"
+                            max="64"
+                            value="16"
+                            aria-label="Password length">
+
+                        <span
+                            id="lengthValue"
+                            aria-live="polite">
+
+                            16
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- UPPERCASE -->
+
+                <div class="setting-row">
+
+                    <div class="setting-label">
+
+                        <i class="fa-solid fa-font"
+                           aria-hidden="true">
+                        </i>
+
+                        <span>
+                            Uppercase Letters
+                        </span>
+
+                    </div>
+
+
+                    <label class="checkbox-control">
+
+                        <input
+                            type="checkbox"
+                            id="includeUppercase"
+                            checked
+                            aria-label="Include uppercase letters">
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- LOWERCASE -->
+
+                <div class="setting-row">
+
+                    <div class="setting-label">
+
+                        <i class="fa-solid fa-text-height"
+                           aria-hidden="true">
+                        </i>
+
+                        <span>
+                            Lowercase Letters
+                        </span>
+
+                    </div>
+
+
+                    <label class="checkbox-control">
+
+                        <input
+                            type="checkbox"
+                            id="includeLowercase"
+                            checked
+                            aria-label="Include lowercase letters">
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- NUMBERS -->
+
+                <div class="setting-row">
+
+                    <div class="setting-label">
+
+                        <i class="fa-solid fa-hashtag"
+                           aria-hidden="true">
+                        </i>
+
+                        <span>
+                            Numbers
+                        </span>
+
+                    </div>
+
+
+                    <label class="checkbox-control">
+
+                        <input
+                            type="checkbox"
+                            id="includeNumbers"
+                            checked
+                            aria-label="Include numbers">
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- SYMBOLS -->
+
+                <div class="setting-row">
+
+                    <div class="setting-label">
+
+                        <i class="fa-solid fa-asterisk"
+                           aria-hidden="true">
+                        </i>
+
+                        <span>
+                            Symbols
+                        </span>
+
+                    </div>
+
+
+                    <label class="checkbox-control">
+
+                        <input
+                            type="checkbox"
+                            id="includeSymbols"
+                            checked
+                            aria-label="Include symbols">
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PASSWORD STRENGTH -->
+
+            <div class="strength-section">
+
+                <div class="strength-header">
+
+                    <span>
+                        Password Strength
+                    </span>
+
+                    <span
+                        id="strengthText"
+                        aria-live="polite">
+
+                        Strong
+
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="strength-bar"
+                    role="progressbar"
+                    aria-label="Password strength"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0">
+
+                    <div id="strengthProgress"></div>
+
+                </div>
+
+
+                <p class="strength-help">
+
+                    Longer passwords containing a mixture of
+                    uppercase letters, lowercase letters,
+                    numbers and symbols are generally harder
+                    to guess.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ACTION BUTTONS -->
+
+            <div class="password-actions">
+
+                <button
+                    type="button"
+                    id="generatePasswordBtn"
+                    class="generate-password-btn">
+
+                    <i class="fa-solid fa-rotate"
+                       aria-hidden="true">
+                    </i>
+
+                    Generate Password
 
                 </button>
 
 
                 <button
                     type="button"
-                    class="secondary-btn"
-                    onclick="resetGPA()">
+                    id="resetPasswordBtn"
+                    class="reset-password-btn">
 
                     🔄 Reset
 
@@ -687,43 +1188,49 @@
 
             </div>
 
-        </form>
-
-
-
-        <!-- =================================================
-             RESULT
-        ================================================= -->
-
-        <div
-            id="result"
-            class="gpa-result"
-            aria-live="polite">
-
         </div>
 
 
-        <!-- =================================================
-             INFORMATION
-        ================================================= -->
 
-        <div class="highlight-box">
+        <!-- SECURITY TIPS -->
+
+        <div class="password-tips">
 
             <h3>
-                💡 How the GPA is calculated
+                🛡️ Password Security Tips
             </h3>
 
-            <p>
-                For each course, the grade point is multiplied
-                by the course credit hours. The total points are
-                then divided by the total number of credit hours.
-            </p>
+            <ul>
 
-            <p>
-                <strong>
-                    GPA = Total Grade Points ÷ Total Credit Hours
-                </strong>
-            </p>
+                <li>
+                    Use a different password for each important account.
+                </li>
+
+                <li>
+                    Prefer long passwords instead of short,
+                    predictable passwords.
+                </li>
+
+                <li>
+                    Avoid names, birthdays, phone numbers and
+                    other easily guessed information.
+                </li>
+
+                <li>
+                    Consider using a reputable password manager
+                    to store your passwords.
+                </li>
+
+                <li>
+                    Enable two-factor authentication whenever
+                    an account supports it.
+                </li>
+
+                <li>
+                    Never share your passwords with other people.
+                </li>
+
+            </ul>
 
         </div>
 
@@ -737,7 +1244,7 @@
      OTHER TOOLS
 ===================================================== -->
 
-<section class="section">
+<section class="section other-tools">
 
     <h2>
         🛠️ More TechHub Ghana Tools
@@ -750,6 +1257,28 @@
 
 
     <div class="tutorial-grid">
+
+
+        <div class="tutorial">
+
+            <h3>
+                🎓 GPA Calculator
+            </h3>
+
+            <p>
+                Calculate your GPA quickly using your course
+                marks and credit hours.
+            </p>
+
+            <a href="gpa.html"
+               class="read-btn">
+
+                Open GPA →
+
+            </a>
+
+        </div>
+
 
 
         <div class="tutorial">
@@ -833,13 +1362,14 @@
         Get technology news, tutorials and useful digital tools.
     </p>
 
-    <form>
+    <form id="newsletterForm">
 
         <input
             type="email"
+            id="newsletterEmail"
             placeholder="Enter your email"
-            required
-        >
+            autocomplete="email"
+            required>
 
         <button type="submit">
             Subscribe
@@ -860,6 +1390,8 @@
     <div class="footer-grid">
 
 
+        <!-- ABOUT -->
+
         <div>
 
             <h3>
@@ -879,6 +1411,8 @@
 
 
 
+        <!-- QUICK LINKS -->
+
         <div>
 
             <h3>
@@ -888,6 +1422,12 @@
             <p>
                 <a href="index.html">
                     Home
+                </a>
+            </p>
+
+            <p>
+                <a href="ghana-tech.html">
+                    Ghana Tech
                 </a>
             </p>
 
@@ -909,14 +1449,28 @@
                 </a>
             </p>
 
+            <p>
+                <a href="about.html">
+                    About
+                </a>
+            </p>
+
+            <p>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </p>
+
         </div>
 
 
 
+        <!-- DIGITAL TOOLS -->
+
         <div>
 
             <h3>
-                Student Tools
+                Digital Tools
             </h3>
 
             <p>
@@ -937,9 +1491,32 @@
                 </a>
             </p>
 
+            <p>
+                <a href="password-generator.html"
+                   aria-current="page">
+
+                    🔐 Password Generator
+
+                </a>
+            </p>
+
+            <p>
+                <a href="age-calculator.html">
+                    🎂 Age Calculator
+                </a>
+            </p>
+
+            <p>
+                <a href="unit-converter.html">
+                    🔄 Unit Converter
+                </a>
+            </p>
+
         </div>
 
 
+
+        <!-- CONTACT -->
 
         <div>
 
@@ -952,8 +1529,16 @@
             </p>
 
             <p>
-                <a href="contact.html">
-                    Contact TechHub Ghana
+                📧
+                <a href="mailto:juliusas009@gmail.com">
+                    juliusas009@gmail.com
+                </a>
+            </p>
+
+            <p>
+                📱
+                <a href="tel:+233534057748">
+                    +233 534 057 748
                 </a>
             </p>
 
@@ -977,418 +1562,836 @@
 
 
 <!-- =====================================================
-     JAVASCRIPT
+     MAIN JAVASCRIPT
+===================================================== -->
+
+<script src="script.js" defer></script>
+
+
+
+<!-- =====================================================
+     PASSWORD GENERATOR JAVASCRIPT
 ===================================================== -->
 
 <script>
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
-
-function toggleMenu() {
-
-    const nav =
-        document.getElementById("navMenu");
-
-    const button =
-        document.getElementById("menuBtn");
-
-    if (!nav) return;
-
-    nav.classList.toggle("show");
-
-    if (button) {
-
-        const isOpen =
-            nav.classList.contains("show");
-
-        button.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
-
-    }
-
-}
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
 
+        /* =================================================
+           ELEMENTS
+        ================================================= */
 
-/* =====================================================
-   GPA GRADE POINT
-===================================================== */
+        const passwordOutput =
+            document.getElementById(
+                "passwordOutput"
+            );
 
-function getGradePoint(mark) {
+        const passwordLength =
+            document.getElementById(
+                "passwordLength"
+            );
 
-    if (mark >= 80) return 4.00;
+        const lengthValue =
+            document.getElementById(
+                "lengthValue"
+            );
 
-    if (mark >= 75) return 3.50;
+        const includeUppercase =
+            document.getElementById(
+                "includeUppercase"
+            );
 
-    if (mark >= 70) return 3.00;
+        const includeLowercase =
+            document.getElementById(
+                "includeLowercase"
+            );
 
-    if (mark >= 65) return 2.50;
+        const includeNumbers =
+            document.getElementById(
+                "includeNumbers"
+            );
 
-    if (mark >= 60) return 2.00;
+        const includeSymbols =
+            document.getElementById(
+                "includeSymbols"
+            );
 
-    if (mark >= 55) return 1.50;
+        const generatePasswordBtn =
+            document.getElementById(
+                "generatePasswordBtn"
+            );
 
-    if (mark >= 50) return 1.00;
+        const copyPasswordBtn =
+            document.getElementById(
+                "copyPasswordBtn"
+            );
 
-    return 0.00;
+        const resetPasswordBtn =
+            document.getElementById(
+                "resetPasswordBtn"
+            );
 
-}
+        const strengthText =
+            document.getElementById(
+                "strengthText"
+            );
 
+        const strengthProgress =
+            document.getElementById(
+                "strengthProgress"
+            );
 
+        const strengthBar =
+            document.querySelector(
+                ".strength-bar"
+            );
 
-/* =====================================================
-   GPA CALCULATOR
-===================================================== */
-
-const gpaForm =
-    document.getElementById("gpaForm");
-
-
-if (gpaForm) {
-
-    gpaForm.addEventListener(
-        "submit",
-        function (event) {
-
-            event.preventDefault();
-
-
-            let totalPoints = 0;
-
-            let totalCredits = 0;
+        const copyMessage =
+            document.getElementById(
+                "copyMessage"
+            );
 
 
-            for (
-                let i = 1;
-                i <= 8;
-                i++
+        /* =================================================
+           CHARACTER SETS
+        ================================================= */
+
+        const uppercase =
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        const lowercase =
+            "abcdefghijklmnopqrstuvwxyz";
+
+        const numbers =
+            "0123456789";
+
+        const symbols =
+            "!@#$%^&*()-_=+[]{};:,.?/";
+
+
+        /* =================================================
+           SECURE RANDOM INDEX
+        ================================================= */
+
+        function secureRandomIndex(max) {
+
+            if (
+                window.crypto &&
+                window.crypto.getRandomValues &&
+                max > 0
             ) {
 
-                const markInput =
-                    document.getElementById(
-                        "mark" + i
+                const randomArray =
+                    new Uint32Array(1);
+
+                const maxUint =
+                    4294967296;
+
+                const limit =
+                    maxUint -
+                    (maxUint % max);
+
+                let randomNumber;
+
+                do {
+
+                    window.crypto.getRandomValues(
+                        randomArray
                     );
 
-                const creditInput =
-                    document.getElementById(
-                        "credit" + i
-                    );
+                    randomNumber =
+                        randomArray[0];
 
+                } while (
+                    randomNumber >= limit
+                );
 
-                if (
-                    !markInput ||
-                    !creditInput
-                ) {
-
-                    continue;
-
-                }
-
-
-                const mark =
-                    parseFloat(
-                        markInput.value
-                    );
-
-                const credit =
-                    parseFloat(
-                        creditInput.value
-                    );
-
-
-                /* Validate mark */
-
-                if (
-                    Number.isNaN(mark) ||
-                    mark < 0 ||
-                    mark > 100
-                ) {
-
-                    alert(
-                        "Please enter a valid mark between 0 and 100 for Course " +
-                        i +
-                        "."
-                    );
-
-                    markInput.focus();
-
-                    return;
-
-                }
-
-
-                /* Validate credit */
-
-                if (
-                    Number.isNaN(credit) ||
-                    credit <= 0
-                ) {
-
-                    alert(
-                        "Please enter a valid credit hour for Course " +
-                        i +
-                        "."
-                    );
-
-                    creditInput.focus();
-
-                    return;
-
-                }
-
-
-                const gradePoint =
-                    getGradePoint(mark);
-
-
-                totalPoints +=
-                    gradePoint * credit;
-
-
-                totalCredits +=
-                    credit;
+                return randomNumber % max;
 
             }
 
 
-            /* Prevent division by zero */
+            return Math.floor(
+                Math.random() * max
+            );
 
-            if (totalCredits <= 0) {
+        }
 
-                alert(
-                    "Please enter valid credit hours."
+
+        /* =================================================
+           RANDOM CHARACTER
+        ================================================= */
+
+        function randomCharacter(characters) {
+
+            return characters[
+                secureRandomIndex(
+                    characters.length
+                )
+            ];
+
+        }
+
+
+        /* =================================================
+           SECURE SHUFFLE
+        ================================================= */
+
+        function secureShuffle(array) {
+
+            for (
+                let i = array.length - 1;
+                i > 0;
+                i--
+            ) {
+
+                const j =
+                    secureRandomIndex(
+                        i + 1
+                    );
+
+                [
+                    array[i],
+                    array[j]
+                ] =
+                [
+                    array[j],
+                    array[i]
+                ];
+
+            }
+
+            return array;
+
+        }
+
+
+        /* =================================================
+           GENERATE PASSWORD
+        ================================================= */
+
+        function generatePassword() {
+
+            const length =
+                Number(
+                    passwordLength.value
                 );
+
+
+            let selectedSets = [];
+
+            let allCharacters = "";
+
+
+            if (includeUppercase.checked) {
+
+                selectedSets.push(
+                    uppercase
+                );
+
+                allCharacters +=
+                    uppercase;
+
+            }
+
+
+            if (includeLowercase.checked) {
+
+                selectedSets.push(
+                    lowercase
+                );
+
+                allCharacters +=
+                    lowercase;
+
+            }
+
+
+            if (includeNumbers.checked) {
+
+                selectedSets.push(
+                    numbers
+                );
+
+                allCharacters +=
+                    numbers;
+
+            }
+
+
+            if (includeSymbols.checked) {
+
+                selectedSets.push(
+                    symbols
+                );
+
+                allCharacters +=
+                    symbols;
+
+            }
+
+
+            /* =============================================
+               REQUIRE AT LEAST ONE TYPE
+            ============================================= */
+
+            if (
+                selectedSets.length === 0
+            ) {
+
+                includeLowercase.checked =
+                    true;
+
+                selectedSets.push(
+                    lowercase
+                );
+
+                allCharacters =
+                    lowercase;
+
+            }
+
+
+            const passwordCharacters = [];
+
+
+            /* =============================================
+               GUARANTEE EACH SELECTED TYPE
+            ============================================= */
+
+            selectedSets.forEach(
+                function (characterSet) {
+
+                    passwordCharacters.push(
+                        randomCharacter(
+                            characterSet
+                        )
+                    );
+
+                }
+            );
+
+
+            /* =============================================
+               FILL REMAINING CHARACTERS
+            ============================================= */
+
+            while (
+                passwordCharacters.length <
+                length
+            ) {
+
+                passwordCharacters.push(
+                    randomCharacter(
+                        allCharacters
+                    )
+                );
+
+            }
+
+
+            /* =============================================
+               SHUFFLE
+            ============================================= */
+
+            secureShuffle(
+                passwordCharacters
+            );
+
+
+            const password =
+                passwordCharacters.join("");
+
+
+            passwordOutput.value =
+                password;
+
+
+            updateStrength(
+                password
+            );
+
+
+            copyMessage.textContent = "";
+
+        }
+
+
+        /* =================================================
+           PASSWORD STRENGTH
+        ================================================= */
+
+        function calculateStrength(password) {
+
+            if (!password) {
+
+                return {
+                    score: 0,
+                    label: "No Password"
+                };
+
+            }
+
+
+            let score = 0;
+
+            const length =
+                password.length;
+
+
+            if (length >= 12) {
+
+                score += 2;
+
+            } else if (length >= 8) {
+
+                score += 1;
+
+            }
+
+
+            if (length >= 16) {
+
+                score += 2;
+
+            }
+
+
+            if (/[a-z]/.test(password)) {
+
+                score += 1;
+
+            }
+
+
+            if (/[A-Z]/.test(password)) {
+
+                score += 1;
+
+            }
+
+
+            if (/[0-9]/.test(password)) {
+
+                score += 1;
+
+            }
+
+
+            if (
+                /[^A-Za-z0-9]/.test(password)
+            ) {
+
+                score += 1;
+
+            }
+
+
+            if (score <= 2) {
+
+                return {
+                    score: score,
+                    label: "Weak"
+                };
+
+            }
+
+
+            if (score <= 4) {
+
+                return {
+                    score: score,
+                    label: "Fair"
+                };
+
+            }
+
+
+            if (score <= 6) {
+
+                return {
+                    score: score,
+                    label: "Strong"
+                };
+
+            }
+
+
+            return {
+                score: score,
+                label: "Very Strong"
+            };
+
+        }
+
+
+        /* =================================================
+           UPDATE STRENGTH
+        ================================================= */
+
+        function updateStrength(password) {
+
+            const result =
+                calculateStrength(
+                    password
+                );
+
+
+            strengthText.textContent =
+                result.label;
+
+
+            let percentage = 0;
+
+
+            if (
+                result.label === "Weak"
+            ) {
+
+                percentage = 25;
+
+            } else if (
+                result.label === "Fair"
+            ) {
+
+                percentage = 50;
+
+            } else if (
+                result.label === "Strong"
+            ) {
+
+                percentage = 75;
+
+            } else if (
+                result.label === "Very Strong"
+            ) {
+
+                percentage = 100;
+
+            }
+
+
+            strengthProgress.style.width =
+                percentage + "%";
+
+
+            if (strengthBar) {
+
+                strengthBar.setAttribute(
+                    "aria-valuenow",
+                    percentage
+                );
+
+            }
+
+
+            if (
+                result.label === "Weak"
+            ) {
+
+                strengthProgress.style.background =
+                    "#dc2626";
+
+                strengthText.style.color =
+                    "#dc2626";
+
+            } else if (
+                result.label === "Fair"
+            ) {
+
+                strengthProgress.style.background =
+                    "#f59e0b";
+
+                strengthText.style.color =
+                    "#d97706";
+
+            } else if (
+                result.label === "Strong"
+            ) {
+
+                strengthProgress.style.background =
+                    "#16a34a";
+
+                strengthText.style.color =
+                    "#16a34a";
+
+            } else if (
+                result.label === "Very Strong"
+            ) {
+
+                strengthProgress.style.background =
+                    "#15803d";
+
+                strengthText.style.color =
+                    "#15803d";
+
+            }
+
+        }
+
+
+        /* =================================================
+           COPY PASSWORD
+        ================================================= */
+
+        async function copyPassword() {
+
+            const password =
+                passwordOutput.value;
+
+
+            if (!password) {
+
+                copyMessage.textContent =
+                    "Generate a password first.";
 
                 return;
 
             }
 
 
-            const gpa =
-                totalPoints / totalCredits;
-
-
-            const result =
-                document.getElementById(
-                    "result"
-                );
-
-
-            result.innerHTML = `
-
-                <div class="result-card">
-
-                    <span class="result-icon">
-                        🎉
-                    </span>
-
-                    <h2>
-                        Your GPA
-                    </h2>
-
-                    <div class="gpa-number">
-                        ${gpa.toFixed(2)}
-                    </div>
-
-                    <p>
-                        out of 4.00
-                    </p>
-
-                    <p class="result-message">
-                        ${getGPAMessage(gpa)}
-                    </p>
-
-                </div>
-
-            `;
-
-
-            result.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-
-        }
-    );
-
-}
-
-
-
-/* =====================================================
-   GPA MESSAGE
-===================================================== */
-
-function getGPAMessage(gpa) {
-
-    if (gpa >= 3.75) {
-
-        return "Excellent performance! Keep it up. 🏆";
-
-    }
-
-    if (gpa >= 3.00) {
-
-        return "Very good performance. Keep improving! 👏";
-
-    }
-
-    if (gpa >= 2.50) {
-
-        return "Good performance. There is room to improve. 📚";
-
-    }
-
-    if (gpa >= 2.00) {
-
-        return "Keep working hard and aim higher. 💪";
-
-    }
-
-    if (gpa >= 1.00) {
-
-        return "Keep studying and seek help where necessary. 📖";
-
-    }
-
-    return "Keep working hard. You can improve your results. 💪";
-
-}
-
-
-
-/* =====================================================
-   RESET GPA
-===================================================== */
-
-function resetGPA() {
-
-    const form =
-        document.getElementById(
-            "gpaForm"
-        );
-
-    const result =
-        document.getElementById(
-            "result"
-        );
-
-
-    if (form) {
-
-        form.reset();
-
-    }
-
-
-    /* Restore default credit hours */
-
-    for (
-        let i = 1;
-        i <= 8;
-        i++
-    ) {
-
-        const credit =
-            document.getElementById(
-                "credit" + i
-            );
-
-
-        if (credit) {
-
-            credit.value = 3;
-
-        }
-
-    }
-
-
-    if (result) {
-
-        result.innerHTML = "";
-
-    }
-
-}
-
-
-
-/* =====================================================
-   TODAY'S DATE
-===================================================== */
-
-const today =
-    document.getElementById(
-        "today"
-    );
-
-
-if (today) {
-
-    const date =
-        new Date();
-
-
-    today.textContent =
-        date.toLocaleDateString(
-            "en-GH",
-            {
-                weekday: "long",
-                year: "numeric",
-                month: "long",
-                day: "numeric"
-            }
-        );
-
-}
-
-
-
-/* =====================================================
-   NEWSLETTER
-===================================================== */
-
-const newsletterForms =
-    document.querySelectorAll(
-        ".newsletter form"
-    );
-
-
-newsletterForms.forEach(
-    function (form) {
-
-        form.addEventListener(
-            "submit",
-            function (event) {
-
-                event.preventDefault();
-
-                const email =
-                    form.querySelector(
-                        'input[type="email"]'
-                    );
-
+            try {
 
                 if (
-                    email &&
-                    email.value.trim()
+                    navigator.clipboard &&
+                    window.isSecureContext
                 ) {
 
-                    alert(
-                        "Thank you for subscribing to TechHub Ghana!"
+                    await navigator.clipboard.writeText(
+                        password
                     );
 
-                    form.reset();
+                } else {
+
+                    passwordOutput.select();
+
+                    passwordOutput.setSelectionRange(
+                        0,
+                        passwordOutput.value.length
+                    );
+
+                    document.execCommand(
+                        "copy"
+                    );
 
                 }
 
+
+                copyMessage.textContent =
+                    "✅ Password copied to clipboard.";
+
+
+                copyPasswordBtn.innerHTML =
+                    '<i class="fa-solid fa-check" aria-hidden="true"></i>';
+
+
+                setTimeout(
+                    function () {
+
+                        copyPasswordBtn.innerHTML =
+                            '<i class="fa-solid fa-copy" aria-hidden="true"></i>';
+
+                    },
+                    1500
+                );
+
+
+            } catch (error) {
+
+                passwordOutput.focus();
+
+                passwordOutput.select();
+
+                copyMessage.textContent =
+                    "Please copy the password manually.";
+
+            }
+
+        }
+
+
+        /* =================================================
+           RESET
+        ================================================= */
+
+        function resetGenerator() {
+
+            passwordLength.value =
+                16;
+
+            lengthValue.textContent =
+                "16";
+
+
+            includeUppercase.checked =
+                true;
+
+            includeLowercase.checked =
+                true;
+
+            includeNumbers.checked =
+                true;
+
+            includeSymbols.checked =
+                true;
+
+
+            copyMessage.textContent =
+                "";
+
+
+            generatePassword();
+
+        }
+
+
+        /* =================================================
+           LENGTH SLIDER
+        ================================================= */
+
+        passwordLength.addEventListener(
+            "input",
+            function () {
+
+                lengthValue.textContent =
+                    passwordLength.value;
+
+                generatePassword();
+
             }
         );
+
+
+        /* =================================================
+           CHECKBOXES
+        ================================================= */
+
+        [
+            includeUppercase,
+            includeLowercase,
+            includeNumbers,
+            includeSymbols
+
+        ].forEach(
+            function (checkbox) {
+
+                checkbox.addEventListener(
+                    "change",
+                    generatePassword
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           BUTTONS
+        ================================================= */
+
+        generatePasswordBtn.addEventListener(
+            "click",
+            generatePassword
+        );
+
+
+        copyPasswordBtn.addEventListener(
+            "click",
+            copyPassword
+        );
+
+
+        resetPasswordBtn.addEventListener(
+            "click",
+            resetGenerator
+        );
+
+
+        /* =================================================
+           INITIAL PASSWORD
+        ================================================= */
+
+        generatePassword();
+
+
+        /* =================================================
+           TODAY'S DATE
+        ================================================= */
+
+        const today =
+            document.getElementById(
+                "today"
+            );
+
+
+        if (today) {
+
+            const date =
+                new Date();
+
+
+            today.textContent =
+                date.toLocaleDateString(
+                    "en-GH",
+                    {
+                        weekday: "long",
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                    }
+                );
+
+        }
+
+
+        /* =================================================
+           NEWSLETTER
+        ================================================= */
+
+        const newsletterForm =
+            document.getElementById(
+                "newsletterForm"
+            );
+
+
+        if (newsletterForm) {
+
+            newsletterForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const email =
+                        document.getElementById(
+                            "newsletterEmail"
+                        );
+
+
+                    if (
+                        email &&
+                        email.checkValidity()
+                    ) {
+
+                        alert(
+                            "Thank you for subscribing to TechHub Ghana!"
+                        );
+
+                        newsletterForm.reset();
+
+                    } else if (email) {
+
+                        email.reportValidity();
+
+                    }
+
+                }
+            );
+
+        }
 
     }
 );
@@ -1398,4 +2401,4 @@ newsletterForms.forEach(
 
 </body>
 
-    </html>
+                            </html>
