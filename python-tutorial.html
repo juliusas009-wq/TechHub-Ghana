@@ -3,447 +3,929 @@
 
 <head>
 
+    <!-- =========================================================
+         BASIC DOCUMENT SETUP
+    ========================================================== -->
+
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b5cff"
+    >
+
+    <meta
+        name="description"
+        content="Learn Python programming from beginner to practical level with examples, exercises, exam questions and projects at TechHub Ghana."
+    >
+
+    <meta
+        name="keywords"
+        content="Python tutorial, learn Python, Python programming, Python Ghana, programming tutorial, TechHub Ghana"
+    >
+
+    <meta
+        name="author"
+        content="TechHub Ghana"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
     <title>Python Programming Tutorial | TechHub Ghana</title>
 
-    <meta name="description"
-          content="Learn Python programming from beginner to practical level with examples, exercises, exam questions and projects at TechHub Ghana.">
 
-    <meta name="keywords"
-          content="Python tutorial, learn Python, Python programming, Python Ghana, programming tutorial, TechHub Ghana">
+    <!-- =========================================================
+         GOOGLE FONT
+    ========================================================== -->
 
-    <meta name="author"
-          content="TechHub Ghana">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
 
-    <!-- Google Fonts -->
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <!-- =========================================================
+         MAIN STYLESHEET
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =========================================================
+         PAGE SIDE SPACING
+         MATCHED EXACTLY TO THE CSS TUTORIAL STANDARD
+    ========================================================== -->
+
+    <style>
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ====================================================== */
+
+        main {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .section {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tutorial-page {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tutorial-content,
+        .tutorial-layout {
+            width: 100%;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           HEADER LOGO
+           SAME AS CSS TUTORIAL / CONTACT PAGE STANDARD
+        ====================================================== */
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            max-width: 56px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            min-width: 0;
+        }
+
+        .logo-text h1,
+        .logo-text p {
+            display: block;
+        }
+
+        .logo-text h1 {
+            white-space: nowrap;
+        }
+
+        .logo-text p {
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           CODE BLOCKS
+        ====================================================== */
+
+        .code-box {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .code-box pre {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+
+        /* =====================================================
+           TUTORIAL NAVIGATION
+        ====================================================== */
+
+        .tutorial-navigation {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        .newsletter {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .footer-grid,
+        .copyright {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           MOBILE — 768px
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            main {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .section,
+            .tutorial-page {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .tutorial-content,
+            .tutorial-layout {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .top-bar {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .logo {
+                gap: 9px;
+                max-width: calc(100% - 58px);
+            }
+
+            .logo img {
+                width: 44px;
+                height: 44px;
+                min-width: 44px;
+                max-width: 44px;
+            }
+
+            .logo-text {
+                min-width: 0;
+                overflow: hidden;
+            }
+
+            .logo-text h1 {
+                font-size: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .logo-text p {
+                font-size: 0.58rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .code-box {
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            footer {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONES — 480px
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            main {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .top-bar {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .logo {
+                gap: 8px;
+            }
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                max-width: 40px;
+            }
+
+            .logo-text h1 {
+                font-size: 0.92rem;
+            }
+
+            .logo-text p {
+                font-size: 0.52rem;
+            }
+
+            footer {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
 
-<body>
+<body id="top">
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+    <!-- =========================================================
+         SKIP LINK
+    ========================================================== -->
 
-<header class="main-header">
-
-    <div class="top-bar">
-
-
-        <!-- LOGO -->
-
-        <a href="index.html"
-           class="logo">
-
-            <img
-                src="images/logo.png"
-                alt="TechHub Ghana Logo">
-
-            <div class="logo-text">
-
-                <h1>
-                    TechHub Ghana
-                </h1>
-
-                <p>
-                    Technology • Tutorials • Digital Tools
-                </p>
-
-            </div>
-
-        </a>
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to main content
+    </a>
 
 
-        <!-- HEADER RIGHT -->
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
 
-        <div class="header-right">
+    <header
+        class="main-header"
+        id="siteHeader"
+    >
+
+        <div class="top-bar">
 
 
-            <!-- SEARCH -->
+            <!-- LOGO -->
 
-            <div class="search-box">
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="TechHub Ghana home"
+            >
 
-                <input
-                    type="search"
-                    id="tutorialSearch"
-                    placeholder="Search tutorials..."
-                    aria-label="Search tutorials">
+                <img
+                    src="images/logo.png"
+                    alt="TechHub Ghana logo"
+                    width="56"
+                    height="56"
+                    decoding="async"
+                >
+
+                <div class="logo-text">
+
+                    <h1>
+                        TechHub Ghana
+                    </h1>
+
+                    <p>
+                        Technology • Tutorials • Digital Tools
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- HEADER RIGHT -->
+
+            <div class="header-right">
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <label
+                        for="tutorialSearch"
+                        class="sr-only"
+                    >
+                        Search tutorials
+                    </label>
+
+                    <input
+                        type="search"
+                        id="tutorialSearch"
+                        placeholder="Search tutorials..."
+                        autocomplete="off"
+                        aria-label="Search tutorials"
+                    >
+
+                    <button
+                        type="button"
+                        id="tutorialSearchBtn"
+                        aria-label="Search tutorials"
+                    >
+
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                            aria-hidden="true"
+                        ></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- DARK MODE -->
 
                 <button
                     type="button"
-                    id="tutorialSearchBtn"
-                    aria-label="Search tutorials">
+                    id="darkModeBtn"
+                    class="dark-mode-btn"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
+                >
+                    🌙
+                </button>
 
-                    🔍
 
+                <!-- MOBILE MENU -->
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="navMenu"
+                    aria-expanded="false"
+                >
+                    ☰
                 </button>
 
             </div>
 
+        </div>
 
-            <!-- MOBILE MENU -->
 
-            <button
-                class="menu-btn"
-                id="menuBtn"
-                type="button"
-                aria-label="Open navigation menu"
-                aria-expanded="false">
+        <!-- =====================================================
+             NAVIGATION
+        ====================================================== -->
 
-                ☰
+        <nav
+            id="navMenu"
+            aria-label="Main navigation"
+        >
 
-            </button>
+            <a href="index.html">
+
+                <i
+                    class="fa-solid fa-house"
+                    aria-hidden="true"
+                ></i>
+
+                Home
+
+            </a>
+
+
+            <a href="ghana-tech.html">
+
+                🇬🇭 Ghana Tech
+
+            </a>
+
+
+            <a href="news.html">
+
+                <i
+                    class="fa-regular fa-newspaper"
+                    aria-hidden="true"
+                ></i>
+
+                News
+
+            </a>
+
+
+            <a
+                href="tutorials.html"
+                class="active"
+                aria-current="page"
+            >
+
+                <i
+                    class="fa-solid fa-graduation-cap"
+                    aria-hidden="true"
+                ></i>
+
+                Tutorials
+
+            </a>
+
+
+            <a href="tools.html">
+
+                <i
+                    class="fa-solid fa-toolbox"
+                    aria-hidden="true"
+                ></i>
+
+                Tools
+
+            </a>
+
+
+            <a href="gpa.html">
+                🎓 GPA
+            </a>
+
+
+            <a href="qr-generator.html">
+                📱 QR Generator
+            </a>
+
+
+            <a href="ai-assistant.html">
+                🤖 AI Assistant
+            </a>
+
+
+            <a href="about.html">
+
+                <i
+                    class="fa-solid fa-circle-info"
+                    aria-hidden="true"
+                ></i>
+
+                About
+
+            </a>
+
+
+            <a href="contact.html">
+
+                <i
+                    class="fa-solid fa-envelope"
+                    aria-hidden="true"
+                ></i>
+
+                Contact
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         BREAKING / UPDATE BAR
+    ========================================================== -->
+
+    <section
+        class="breaking-news"
+        aria-label="TechHub Ghana latest updates"
+    >
+
+        <div class="breaking-inner">
+
+            <div class="breaking-label">
+
+                <i
+                    class="fa-solid fa-bolt"
+                    aria-hidden="true"
+                ></i>
+
+                Tech Update
+
+            </div>
+
+
+            <div class="breaking-content">
+
+                <div class="breaking-track">
+
+                    <span>
+                        🐍 Python
+                    </span>
+
+                    <span>
+                        Programming
+                    </span>
+
+                    <span>
+                        Web Development
+                    </span>
+
+                    <span>
+                        Database
+                    </span>
+
+                    <span>
+                        Cybersecurity
+                    </span>
+
+                    <span>
+                        Artificial Intelligence
+                    </span>
+
+                    <span>
+                        Automation
+                    </span>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <!-- NAVIGATION -->
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
 
-    <nav id="navMenu">
+    <main id="main-content">
 
-        <a href="index.html">
-            Home
-        </a>
+        <section class="section">
 
-        <a href="ghana-tech.html">
-            🇬🇭 Ghana Tech
-        </a>
+            <div class="tutorial-page">
 
-        <a href="news.html">
-            News
-        </a>
+                <div class="tutorial-layout">
 
-        <a href="tutorials.html"
-           class="active">
-            Tutorials
-        </a>
 
-        <a href="tools.html">
-            Tools
-        </a>
+                    <!-- =================================================
+                         SIDEBAR
+                    ================================================== -->
 
-        <a href="gpa.html">
-            GPA
-        </a>
+                    <aside class="lesson-sidebar">
 
-        <a href="qr-generator.html">
-            QR Generator
-        </a>
+                        <h3>
+                            🐍 Python Course
+                        </h3>
 
-        <a href="ai-assistant.html">
-            AI Assistant
-        </a>
 
-        <a href="about.html">
-            About
-        </a>
+                        <a href="#introduction">
+                            1. Introduction
+                        </a>
 
-        <a href="contact.html">
-            Contact
-        </a>
+                        <a href="#first-program">
+                            2. First Program
+                        </a>
 
-    </nav>
+                        <a href="#variables">
+                            3. Variables
+                        </a>
 
-</header>
+                        <a href="#data-types">
+                            4. Data Types
+                        </a>
 
+                        <a href="#strings">
+                            5. Strings
+                        </a>
 
-<!-- =========================================================
-     BREAKING NEWS
-========================================================= -->
+                        <a href="#lists">
+                            6. Lists
+                        </a>
 
-<section class="breaking-news"
-         aria-label="Technology updates">
+                        <a href="#tuples">
+                            7. Tuples
+                        </a>
 
-    <marquee>
+                        <a href="#sets">
+                            8. Sets
+                        </a>
 
-        🐍 Learn Python • Programming • Web Development •
-        Database • Cybersecurity • Artificial Intelligence
+                        <a href="#dictionary">
+                            9. Dictionaries
+                        </a>
 
-    </marquee>
+                        <a href="#conditions">
+                            10. Conditions
+                        </a>
 
-</section>
+                        <a href="#loops">
+                            11. Loops
+                        </a>
 
+                        <a href="#functions">
+                            12. Functions
+                        </a>
 
-<!-- =========================================================
-     PYTHON TUTORIAL
-========================================================= -->
+                        <a href="#fstrings">
+                            13. f-Strings
+                        </a>
 
-<main class="tutorial-page">
+                        <a href="#input">
+                            14. User Input
+                        </a>
 
-    <div class="tutorial-layout">
+                        <a href="#practice">
+                            15. Practice
+                        </a>
 
+                        <a href="#exam">
+                            16. Exam Questions
+                        </a>
 
-        <!-- =================================================
-             SIDEBAR
-        ================================================== -->
+                        <a href="#project">
+                            17. Mini Project
+                        </a>
 
-        <aside class="lesson-sidebar">
+                    </aside>
 
-            <h3>
-                🐍 Python Course
-            </h3>
 
+                    <!-- =================================================
+                         MAIN LESSON CONTENT
+                    ================================================== -->
 
-            <a href="#introduction">
-                1. Introduction
-            </a>
+                    <article class="lesson-content">
 
-            <a href="#first-program">
-                2. First Program
-            </a>
 
-            <a href="#variables">
-                3. Variables
-            </a>
+                        <!-- =================================================
+                             COURSE HEADER
+                        ================================================== -->
 
-            <a href="#data-types">
-                4. Data Types
-            </a>
+                        <header>
 
-            <a href="#strings">
-                5. Strings
-            </a>
+                            <span class="category">
+                                🐍 PYTHON TUTORIAL
+                            </span>
 
-            <a href="#lists">
-                6. Lists
-            </a>
+                            <h1>
+                                Python Programming Tutorial
+                            </h1>
 
-            <a href="#tuples">
-                7. Tuples
-            </a>
+                            <p>
+                                Welcome to the TechHub Ghana Python
+                                Programming Tutorial.
+                            </p>
 
-            <a href="#sets">
-                8. Sets
-            </a>
+                            <p>
+                                This course teaches Python from the basics
+                                using simple explanations, practical examples,
+                                exercises, exam questions and projects.
+                            </p>
 
-            <a href="#dictionary">
-                9. Dictionaries
-            </a>
+                        </header>
 
-            <a href="#conditions">
-                10. Conditions
-            </a>
 
-            <a href="#loops">
-                11. Loops
-            </a>
+                        <!-- =================================================
+                             LESSON 1
+                        ================================================== -->
 
-            <a href="#functions">
-                12. Functions
-            </a>
+                        <section id="introduction">
 
-            <a href="#fstrings">
-                13. f-Strings
-            </a>
+                            <h2>
+                                1. What is Python?
+                            </h2>
 
-            <a href="#input">
-                14. User Input
-            </a>
+                            <p>
+                                Python is a high-level programming language
+                                used to create software, websites, automation
+                                tools, artificial intelligence systems, data
+                                analysis applications and many other
+                                technologies.
+                            </p>
 
-            <a href="#practice">
-                15. Practice
-            </a>
+                            <p>
+                                Python is popular because its syntax is
+                                relatively simple and easy to read.
+                            </p>
 
-            <a href="#exam">
-                16. Exam Questions
-            </a>
 
-            <a href="#project">
-                17. Mini Project
-            </a>
+                            <div class="exercise">
 
-        </aside>
+                                <h3>
+                                    🐍 What Can Python Be Used For?
+                                </h3>
 
+                                <ul>
 
-        <!-- =================================================
-             MAIN LESSON CONTENT
-        ================================================== -->
+                                    <li>
+                                        Web development
+                                    </li>
 
-        <article class="lesson-content">
+                                    <li>
+                                        Artificial Intelligence
+                                    </li>
 
+                                    <li>
+                                        Machine Learning
+                                    </li>
 
-            <!-- =================================================
-                 COURSE HEADER
-            ================================================== -->
+                                    <li>
+                                        Data Science
+                                    </li>
 
-            <header>
+                                    <li>
+                                        Automation
+                                    </li>
 
-                <span class="category">
-                    🐍 PYTHON TUTORIAL
-                </span>
+                                    <li>
+                                        Cybersecurity
+                                    </li>
 
-                <h1>
-                    Python Programming Tutorial
-                </h1>
+                                    <li>
+                                        Software development
+                                    </li>
 
-                <p>
-                    Welcome to the TechHub Ghana Python Programming
-                    Tutorial.
-                </p>
+                                </ul>
 
-                <p>
-                    This course teaches Python from the basics using
-                    simple explanations, practical examples,
-                    exercises, exam questions and projects.
-                </p>
+                            </div>
 
-            </header>
+                        </section>
 
 
-            <!-- =================================================
-                 LESSON 1
-            ================================================== -->
+                        <!-- =================================================
+                             LESSON 2
+                        ================================================== -->
 
-            <section id="introduction">
+                        <section id="first-program">
 
-                <h2>
-                    1. What is Python?
-                </h2>
+                            <h2>
+                                2. Your First Python Program
+                            </h2>
 
-                <p>
-                    Python is a high-level programming language used
-                    to create software, websites, automation tools,
-                    artificial intelligence systems, data analysis
-                    applications and many other technologies.
-                </p>
+                            <p>
+                                One of the simplest Python programs displays
+                                text on the screen.
+                            </p>
 
-                <p>
-                    Python is popular because its syntax is relatively
-                    simple and easy to read.
-                </p>
 
-
-                <div class="exercise">
-
-                    <h3>
-                        🐍 What Can Python Be Used For?
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            Web development
-                        </li>
-
-                        <li>
-                            Artificial Intelligence
-                        </li>
-
-                        <li>
-                            Machine Learning
-                        </li>
-
-                        <li>
-                            Data Science
-                        </li>
-
-                        <li>
-                            Automation
-                        </li>
-
-                        <li>
-                            Cybersecurity
-                        </li>
-
-                        <li>
-                            Software development
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 2
-            ================================================== -->
-
-            <section id="first-program">
-
-                <h2>
-                    2. Your First Python Program
-                </h2>
-
-                <p>
-                    One of the simplest Python programs displays text
-                    on the screen.
-                </p>
-
-
-                <div class="code-box">
+                            <div class="code-box">
 
 <pre><code>print("Hello World!")</code></pre>
 
-                </div>
+                            </div>
 
 
-                <p>
-                    The <strong>print()</strong> function displays
-                    information on the screen.
-                </p>
+                            <p>
+                                The <strong>print()</strong> function displays
+                                information on the screen.
+                            </p>
 
 
-                <div class="exercise">
+                            <div class="exercise">
 
-                    <h3>
-                        📝 Practice
-                    </h3>
+                                <h3>
+                                    📝 Practice
+                                </h3>
 
-                    <p>
-                        Write a Python program that prints:
-                    </p>
+                                <p>
+                                    Write a Python program that prints:
+                                </p>
 
 
-                    <div class="code-box">
+                                <div class="code-box">
 
 <pre><code>Welcome to TechHub Ghana</code></pre>
 
-                    </div>
+                                </div>
 
-                </div>
+                            </div>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 3
-            ================================================== -->
-
-            <section id="variables">
-
-                <h2>
-                    3. Variables
-                </h2>
-
-                <p>
-                    A variable is a name used to store data.
-                </p>
+                        </section>
 
 
-                <div class="code-box">
+                        <!-- =================================================
+                             LESSON 3
+                        ================================================== -->
+
+                        <section id="variables">
+
+                            <h2>
+                                3. Variables
+                            </h2>
+
+                            <p>
+                                A variable is a name used to store data.
+                            </p>
+
+
+                            <div class="code-box">
 
 <pre><code>name = "Julius"
 
@@ -455,89 +937,71 @@ print(name)
 print(age)
 print(country)</code></pre>
 
-                </div>
+                            </div>
 
 
-                <p>
-                    In this example:
-                </p>
+                            <p>
+                                In this example:
+                            </p>
 
-                <ul>
+                            <ul>
 
-                    <li>
-                        <strong>name</strong> stores text.
-                    </li>
+                                <li>
+                                    <strong>name</strong> stores text.
+                                </li>
 
-                    <li>
-                        <strong>age</strong> stores a number.
-                    </li>
+                                <li>
+                                    <strong>age</strong> stores a number.
+                                </li>
 
-                    <li>
-                        <strong>country</strong> stores text.
-                    </li>
+                                <li>
+                                    <strong>country</strong> stores text.
+                                </li>
 
-                </ul>
+                            </ul>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 4
-            ================================================== -->
-
-            <section id="data-types">
-
-                <h2>
-                    4. Python Data Types
-                </h2>
-
-                <p>
-                    Python has several important data types.
-                </p>
+                        </section>
 
 
-                <ul>
+                        <!-- =================================================
+                             LESSON 4
+                        ================================================== -->
 
-                    <li>
-                        String
-                    </li>
+                        <section id="data-types">
 
-                    <li>
-                        Integer
-                    </li>
+                            <h2>
+                                4. Python Data Types
+                            </h2>
 
-                    <li>
-                        Float
-                    </li>
-
-                    <li>
-                        Complex
-                    </li>
-
-                    <li>
-                        List
-                    </li>
-
-                    <li>
-                        Tuple
-                    </li>
-
-                    <li>
-                        Set
-                    </li>
-
-                    <li>
-                        Dictionary
-                    </li>
-
-                    <li>
-                        Boolean
-                    </li>
-
-                </ul>
+                            <p>
+                                Python has several important data types.
+                            </p>
 
 
-                <div class="code-box">
+                            <ul>
+
+                                <li>String</li>
+
+                                <li>Integer</li>
+
+                                <li>Float</li>
+
+                                <li>Complex</li>
+
+                                <li>List</li>
+
+                                <li>Tuple</li>
+
+                                <li>Set</li>
+
+                                <li>Dictionary</li>
+
+                                <li>Boolean</li>
+
+                            </ul>
+
+
+                            <div class="code-box">
 
 <pre><code>name = "Julius"          # String
 
@@ -558,27 +1022,27 @@ student = {
 
 passed = True             # Boolean</code></pre>
 
-                </div>
+                            </div>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 5
-            ================================================== -->
-
-            <section id="strings">
-
-                <h2>
-                    5. Strings
-                </h2>
-
-                <p>
-                    A string is text surrounded by quotation marks.
-                </p>
+                        </section>
 
 
-                <div class="code-box">
+                        <!-- =================================================
+                             LESSON 5
+                        ================================================== -->
+
+                        <section id="strings">
+
+                            <h2>
+                                5. Strings
+                            </h2>
+
+                            <p>
+                                A string is text surrounded by quotation marks.
+                            </p>
+
+
+                            <div class="code-box">
 
 <pre><code>name = "Julius"
 
@@ -590,51 +1054,51 @@ print(name.lower())
 
 print(len(name))</code></pre>
 
-                </div>
+                            </div>
 
 
-                <p>
-                    Useful string methods include:
-                </p>
+                            <p>
+                                Useful string methods include:
+                            </p>
 
-                <ul>
+                            <ul>
 
-                    <li>
-                        <strong>upper()</strong> — converts text
-                        to uppercase.
-                    </li>
+                                <li>
+                                    <strong>upper()</strong> — converts text
+                                    to uppercase.
+                                </li>
 
-                    <li>
-                        <strong>lower()</strong> — converts text
-                        to lowercase.
-                    </li>
+                                <li>
+                                    <strong>lower()</strong> — converts text
+                                    to lowercase.
+                                </li>
 
-                    <li>
-                        <strong>len()</strong> — returns the number
-                        of characters.
-                    </li>
+                                <li>
+                                    <strong>len()</strong> — returns the number
+                                    of characters.
+                                </li>
 
-                </ul>
+                            </ul>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 6
-            ================================================== -->
-
-            <section id="lists">
-
-                <h2>
-                    6. Lists
-                </h2>
-
-                <p>
-                    A list stores multiple values in one variable.
-                </p>
+                        </section>
 
 
-                <div class="code-box">
+                        <!-- =================================================
+                             LESSON 6
+                        ================================================== -->
+
+                        <section id="lists">
+
+                            <h2>
+                                6. Lists
+                            </h2>
+
+                            <p>
+                                A list stores multiple values in one variable.
+                            </p>
+
+
+                            <div class="code-box">
 
 <pre><code>students = [
     "Julius",
@@ -646,16 +1110,16 @@ print(students)
 
 print(students[0])</code></pre>
 
-                </div>
+                            </div>
 
 
-                <p>
-                    Python list indexes start from
-                    <strong>0</strong>.
-                </p>
+                            <p>
+                                Python list indexes start from
+                                <strong>0</strong>.
+                            </p>
 
 
-                <div class="code-box">
+                            <div class="code-box">
 
 <pre><code>students[0]  # Julius
 
@@ -663,29 +1127,29 @@ students[1]  # Ama
 
 students[2]  # Kofi</code></pre>
 
-                </div>
+                            </div>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 7
-            ================================================== -->
-
-            <section id="tuples">
-
-                <h2>
-                    7. Tuples
-                </h2>
-
-                <p>
-                    A tuple is similar to a list, but tuples are
-                    immutable, meaning their elements cannot normally
-                    be changed after creation.
-                </p>
+                        </section>
 
 
-                <div class="code-box">
+                        <!-- =================================================
+                             LESSON 7
+                        ================================================== -->
+
+                        <section id="tuples">
+
+                            <h2>
+                                7. Tuples
+                            </h2>
+
+                            <p>
+                                A tuple is similar to a list, but tuples are
+                                immutable, meaning their elements cannot
+                                normally be changed after creation.
+                            </p>
+
+
+                            <div class="code-box">
 
 <pre><code>coordinates = (10, 20)
 
@@ -693,59 +1157,60 @@ print(coordinates)
 
 print(coordinates[0])</code></pre>
 
-                </div>
+                            </div>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 8
-            ================================================== -->
-
-            <section id="sets">
-
-                <h2>
-                    8. Sets
-                </h2>
-
-                <p>
-                    A set is a collection that stores unique values.
-                </p>
+                        </section>
 
 
-                <div class="code-box">
+                        <!-- =================================================
+                             LESSON 8
+                        ================================================== -->
+
+                        <section id="sets">
+
+                            <h2>
+                                8. Sets
+                            </h2>
+
+                            <p>
+                                A set is a collection that stores unique
+                                values.
+                            </p>
+
+
+                            <div class="code-box">
 
 <pre><code>numbers = {1, 2, 3, 3, 4}
 
 print(numbers)</code></pre>
 
-                </div>
+                            </div>
 
 
-                <p>
-                    Duplicate values are automatically removed.
-                </p>
+                            <p>
+                                Duplicate values are automatically removed.
+                            </p>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 9
-            ================================================== -->
-
-            <section id="dictionary">
-
-                <h2>
-                    9. Dictionaries
-                </h2>
-
-                <p>
-                    A dictionary stores information using
-                    key-value pairs.
-                </p>
+                        </section>
 
 
-                <div class="code-box">
+                        <!-- =================================================
+                             LESSON 9
+                        ================================================== -->
+
+                        <section id="dictionary">
+
+                            <h2>
+                                9. Dictionaries
+                            </h2>
+
+                            <p>
+                                A dictionary stores information using
+                                key-value pairs.
+                            </p>
+
+
+                            <div class="code-box">
 
 <pre><code>student = {
 
@@ -761,27 +1226,27 @@ print(student["name"])
 
 print(student["course"])</code></pre>
 
-                </div>
+                            </div>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 10
-            ================================================== -->
-
-            <section id="conditions">
-
-                <h2>
-                    10. Conditions
-                </h2>
-
-                <p>
-                    Conditions allow a program to make decisions.
-                </p>
+                        </section>
 
 
-                <div class="code-box">
+                        <!-- =================================================
+                             LESSON 10
+                        ================================================== -->
+
+                        <section id="conditions">
+
+                            <h2>
+                                10. Conditions
+                            </h2>
+
+                            <p>
+                                Conditions allow a program to make decisions.
+                            </p>
+
+
+                            <div class="code-box">
 
 <pre><code>age = 20
 
@@ -793,15 +1258,15 @@ else:
 
     print("Minor")</code></pre>
 
-                </div>
+                            </div>
 
 
-                <h3>
-                    if / elif / else
-                </h3>
+                            <h3>
+                                if / elif / else
+                            </h3>
 
 
-                <div class="code-box">
+                            <div class="code-box">
 
 <pre><code>score = 75
 
@@ -821,46 +1286,46 @@ else:
 
     print("Fail")</code></pre>
 
-                </div>
+                            </div>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 11
-            ================================================== -->
-
-            <section id="loops">
-
-                <h2>
-                    11. Loops
-                </h2>
-
-                <p>
-                    Loops allow you to repeat instructions.
-                </p>
+                        </section>
 
 
-                <h3>
-                    For Loop
-                </h3>
+                        <!-- =================================================
+                             LESSON 11
+                        ================================================== -->
+
+                        <section id="loops">
+
+                            <h2>
+                                11. Loops
+                            </h2>
+
+                            <p>
+                                Loops allow you to repeat instructions.
+                            </p>
 
 
-                <div class="code-box">
+                            <h3>
+                                For Loop
+                            </h3>
+
+
+                            <div class="code-box">
 
 <pre><code>for number in range(1, 6):
 
     print(number)</code></pre>
 
-                </div>
+                            </div>
 
 
-                <p>
-                    Output:
-                </p>
+                            <p>
+                                Output:
+                            </p>
 
 
-                <div class="code-box">
+                            <div class="code-box">
 
 <pre><code>1
 2
@@ -868,15 +1333,15 @@ else:
 4
 5</code></pre>
 
-                </div>
+                            </div>
 
 
-                <h3>
-                    While Loop
-                </h3>
+                            <h3>
+                                While Loop
+                            </h3>
 
 
-                <div class="code-box">
+                            <div class="code-box">
 
 <pre><code>number = 1
 
@@ -886,28 +1351,28 @@ while number <= 5:
 
     number += 1</code></pre>
 
-                </div>
+                            </div>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 12
-            ================================================== -->
-
-            <section id="functions">
-
-                <h2>
-                    12. Functions
-                </h2>
-
-                <p>
-                    A function is a reusable block of code designed
-                    to perform a particular task.
-                </p>
+                        </section>
 
 
-                <div class="code-box">
+                        <!-- =================================================
+                             LESSON 12
+                        ================================================== -->
+
+                        <section id="functions">
+
+                            <h2>
+                                12. Functions
+                            </h2>
+
+                            <p>
+                                A function is a reusable block of code designed
+                                to perform a particular task.
+                            </p>
+
+
+                            <div class="code-box">
 
 <pre><code>def greet():
 
@@ -916,15 +1381,15 @@ while number <= 5:
 
 greet()</code></pre>
 
-                </div>
+                            </div>
 
 
-                <h3>
-                    Function with Parameters
-                </h3>
+                            <h3>
+                                Function with Parameters
+                            </h3>
 
 
-                <div class="code-box">
+                            <div class="code-box">
 
 <pre><code>def greet(name):
 
@@ -933,28 +1398,28 @@ greet()</code></pre>
 
 greet("Julius")</code></pre>
 
-                </div>
+                            </div>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 13
-            ================================================== -->
-
-            <section id="fstrings">
-
-                <h2>
-                    13. f-Strings
-                </h2>
-
-                <p>
-                    f-strings make it easy to insert variables
-                    inside text.
-                </p>
+                        </section>
 
 
-                <div class="code-box">
+                        <!-- =================================================
+                             LESSON 13
+                        ================================================== -->
+
+                        <section id="fstrings">
+
+                            <h2>
+                                13. f-Strings
+                            </h2>
+
+                            <p>
+                                f-strings make it easy to insert variables
+                                inside text.
+                            </p>
+
+
+                            <div class="code-box">
 
 <pre><code>name = "Julius"
 
@@ -962,292 +1427,286 @@ age = 20
 
 print(f"My name is {name} and I am {age} years old.")</code></pre>
 
-                </div>
+                            </div>
 
 
-                <p>
-                    Output:
-                </p>
+                            <p>
+                                Output:
+                            </p>
 
 
-                <div class="code-box">
+                            <div class="code-box">
 
 <pre><code>My name is Julius and I am 20 years old.</code></pre>
 
-                </div>
+                            </div>
 
-            </section>
-
-
-            <!-- =================================================
-                 LESSON 14
-            ================================================== -->
-
-            <section id="input">
-
-                <h2>
-                    14. User Input
-                </h2>
-
-                <p>
-                    The <strong>input()</strong> function allows a
-                    Python program to receive information from a user.
-                </p>
+                        </section>
 
 
-                <div class="code-box">
+                        <!-- =================================================
+                             LESSON 14
+                        ================================================== -->
+
+                        <section id="input">
+
+                            <h2>
+                                14. User Input
+                            </h2>
+
+                            <p>
+                                The <strong>input()</strong> function allows a
+                                Python program to receive information from
+                                a user.
+                            </p>
+
+
+                            <div class="code-box">
 
 <pre><code>name = input("Enter your name: ")
 
 print(f"Hello {name}")</code></pre>
 
-                </div>
+                            </div>
 
 
-                <h3>
-                    Getting Numbers
-                </h3>
+                            <h3>
+                                Getting Numbers
+                            </h3>
 
 
-                <p>
-                    Input received from <strong>input()</strong> is
-                    normally returned as text, so it may need to be
-                    converted when performing numerical calculations.
-                </p>
+                            <p>
+                                Input received from <strong>input()</strong>
+                                is normally returned as text, so it may need
+                                to be converted when performing numerical
+                                calculations.
+                            </p>
 
 
-                <div class="code-box">
+                            <div class="code-box">
 
 <pre><code>age = int(input("Enter your age: "))
 
 print(age)</code></pre>
 
-                </div>
+                            </div>
 
-            </section>
+                        </section>
 
 
-            <!-- =================================================
-                 LESSON 15
-            ================================================== -->
+                        <!-- =================================================
+                             LESSON 15
+                        ================================================== -->
 
-            <section id="practice">
+                        <section id="practice">
 
-                <h2>
-                    15. Practical Exercises
-                </h2>
+                            <h2>
+                                15. Practical Exercises
+                            </h2>
 
 
-                <div class="exercise">
+                            <div class="exercise">
 
-                    <h3>
-                        Exercise 1
-                    </h3>
+                                <h3>
+                                    Exercise 1
+                                </h3>
 
-                    <p>
-                        Create variables for:
-                    </p>
+                                <p>
+                                    Create variables for:
+                                </p>
 
-                    <ul>
+                                <ul>
 
-                        <li>
-                            Your name
-                        </li>
+                                    <li>
+                                        Your name
+                                    </li>
 
-                        <li>
-                            Your age
-                        </li>
+                                    <li>
+                                        Your age
+                                    </li>
 
-                        <li>
-                            Your school
-                        </li>
+                                    <li>
+                                        Your school
+                                    </li>
 
-                        <li>
-                            Your course
-                        </li>
+                                    <li>
+                                        Your course
+                                    </li>
 
-                    </ul>
+                                </ul>
 
-                    <p>
-                        Then print all the information.
-                    </p>
+                                <p>
+                                    Then print all the information.
+                                </p>
 
-                </div>
+                            </div>
 
 
-                <div class="exercise">
+                            <div class="exercise">
 
-                    <h3>
-                        Exercise 2
-                    </h3>
+                                <h3>
+                                    Exercise 2
+                                </h3>
 
-                    <p>
-                        Create a Python program that checks whether
-                        a student passed an examination.
-                    </p>
+                                <p>
+                                    Create a Python program that checks whether
+                                    a student passed an examination.
+                                </p>
 
-                    <p>
-                        The pass mark is <strong>50</strong>.
-                    </p>
+                                <p>
+                                    The pass mark is <strong>50</strong>.
+                                </p>
 
-                </div>
+                            </div>
 
 
-                <div class="exercise">
+                            <div class="exercise">
 
-                    <h3>
-                        Exercise 3
-                    </h3>
+                                <h3>
+                                    Exercise 3
+                                </h3>
 
-                    <p>
-                        Create a list containing five student names
-                        and use a loop to print every name.
-                    </p>
+                                <p>
+                                    Create a list containing five student
+                                    names and use a loop to print every name.
+                                </p>
 
-                </div>
+                            </div>
 
 
-                <div class="exercise">
+                            <div class="exercise">
 
-                    <h3>
-                        Exercise 4
-                    </h3>
+                                <h3>
+                                    Exercise 4
+                                </h3>
 
-                    <p>
-                        Write a Python program that asks a user for
-                        two numbers and displays their sum.
-                    </p>
+                                <p>
+                                    Write a Python program that asks a user
+                                    for two numbers and displays their sum.
+                                </p>
 
-                </div>
+                            </div>
 
-            </section>
+                        </section>
 
 
-            <!-- =================================================
-                 LESSON 16
-            ================================================== -->
+                        <!-- =================================================
+                             LESSON 16
+                        ================================================== -->
 
-            <section id="exam">
+                        <section id="exam">
 
-                <h2>
-                    16. Practical Exam Questions
-                </h2>
+                            <h2>
+                                16. Practical Exam Questions
+                            </h2>
 
 
-                <!-- QUESTION 1 -->
+                            <div class="exercise">
 
-                <div class="exercise">
+                                <h3>
+                                    Question 1
+                                </h3>
 
-                    <h3>
-                        Question 1
-                    </h3>
+                                <p>
+                                    What is a variable in Python?
+                                </p>
 
-                    <p>
-                        What is a variable in Python?
-                    </p>
 
+                                <details class="answer">
 
-                    <details class="answer">
+                                    <summary>
+                                        Show Answer
+                                    </summary>
 
-                        <summary>
-                            Show Answer
-                        </summary>
+                                    <p>
+                                        A variable is a name used to store
+                                        data in a program.
+                                    </p>
 
-                        <p>
-                            A variable is a name used to store data
-                            in a program.
-                        </p>
+                                </details>
 
-                    </details>
+                            </div>
 
-                </div>
 
+                            <div class="exercise">
 
-                <!-- QUESTION 2 -->
+                                <h3>
+                                    Question 2
+                                </h3>
 
-                <div class="exercise">
+                                <p>
+                                    Which Python data type is used to store
+                                    True or False?
+                                </p>
 
-                    <h3>
-                        Question 2
-                    </h3>
 
-                    <p>
-                        Which Python data type is used to store
-                        True or False?
-                    </p>
+                                <details class="answer">
 
+                                    <summary>
+                                        Show Answer
+                                    </summary>
 
-                    <details class="answer">
+                                    <p>
+                                        <strong>Boolean (bool)</strong>
+                                    </p>
 
-                        <summary>
-                            Show Answer
-                        </summary>
+                                </details>
 
-                        <p>
-                            <strong>Boolean (bool)</strong>
-                        </p>
+                            </div>
 
-                    </details>
 
-                </div>
+                            <div class="exercise">
 
+                                <h3>
+                                    Question 3
+                                </h3>
 
-                <!-- QUESTION 3 -->
+                                <p>
+                                    Write Python code that prints numbers
+                                    from 1 to 10.
+                                </p>
 
-                <div class="exercise">
 
-                    <h3>
-                        Question 3
-                    </h3>
+                                <details class="answer">
 
-                    <p>
-                        Write Python code that prints numbers
-                        from 1 to 10.
-                    </p>
+                                    <summary>
+                                        Show Answer
+                                    </summary>
 
 
-                    <details class="answer">
-
-                        <summary>
-                            Show Answer
-                        </summary>
-
-
-                        <div class="code-box">
+                                    <div class="code-box">
 
 <pre><code>for number in range(1, 11):
 
     print(number)</code></pre>
 
-                        </div>
+                                    </div>
 
-                    </details>
+                                </details>
 
-                </div>
-
-
-                <!-- QUESTION 4 -->
-
-                <div class="exercise">
-
-                    <h3>
-                        Question 4
-                    </h3>
-
-                    <p>
-                        Create a dictionary containing a student's
-                        name, age and course.
-                    </p>
+                            </div>
 
 
-                    <details class="answer">
+                            <div class="exercise">
 
-                        <summary>
-                            Show Answer
-                        </summary>
+                                <h3>
+                                    Question 4
+                                </h3>
+
+                                <p>
+                                    Create a dictionary containing a student's
+                                    name, age and course.
+                                </p>
 
 
-                        <div class="code-box">
+                                <details class="answer">
+
+                                    <summary>
+                                        Show Answer
+                                    </summary>
+
+
+                                    <div class="code-box">
 
 <pre><code>student = {
 
@@ -1261,90 +1720,88 @@ print(age)</code></pre>
 
 print(student)</code></pre>
 
-                        </div>
+                                    </div>
 
-                    </details>
+                                </details>
 
-                </div>
-
-
-                <!-- QUESTION 5 -->
-
-                <div class="exercise">
-
-                    <h3>
-                        Question 5
-                    </h3>
-
-                    <p>
-                        Which function is used to display information
-                        on the screen in Python?
-                    </p>
+                            </div>
 
 
-                    <details class="answer">
+                            <div class="exercise">
 
-                        <summary>
-                            Show Answer
-                        </summary>
+                                <h3>
+                                    Question 5
+                                </h3>
 
-                        <p>
-                            <strong>print()</strong>
-                        </p>
-
-                    </details>
-
-                </div>
-
-            </section>
+                                <p>
+                                    Which function is used to display
+                                    information on the screen in Python?
+                                </p>
 
 
-            <!-- =================================================
-                 LESSON 17
-            ================================================== -->
+                                <details class="answer">
 
-            <section id="project">
+                                    <summary>
+                                        Show Answer
+                                    </summary>
 
-                <h2>
-                    🎯 17. Mini Python Project
-                </h2>
+                                    <p>
+                                        <strong>print()</strong>
+                                    </p>
 
-                <p>
-                    Create a simple student grading system.
-                </p>
+                                </details>
 
-                <p>
-                    The program should:
-                </p>
+                            </div>
+
+                        </section>
 
 
-                <ul>
+                        <!-- =================================================
+                             LESSON 17
+                        ================================================== -->
 
-                    <li>
-                        Ask for the student's name.
-                    </li>
+                        <section id="project">
 
-                    <li>
-                        Ask for the student's score.
-                    </li>
+                            <h2>
+                                🎯 17. Mini Python Project
+                            </h2>
 
-                    <li>
-                        Determine the grade.
-                    </li>
+                            <p>
+                                Create a simple student grading system.
+                            </p>
 
-                    <li>
-                        Display the student's name and grade.
-                    </li>
-
-                </ul>
+                            <p>
+                                The program should:
+                            </p>
 
 
-                <h3>
-                    Example Solution
-                </h3>
+                            <ul>
+
+                                <li>
+                                    Ask for the student's name.
+                                </li>
+
+                                <li>
+                                    Ask for the student's score.
+                                </li>
+
+                                <li>
+                                    Determine the grade.
+                                </li>
+
+                                <li>
+                                    Display the student's name and grade.
+                                </li>
+
+                            </ul>
 
 
-                <div class="code-box">
+                            <h3>
+                                Example Solution
+                            </h3>
+
+
+                            <div class="code-box">
 
 <pre><code>name = input("Enter student name: ")
 
@@ -1374,272 +1831,297 @@ else:
 
 print(f"{name} received grade {grade}")</code></pre>
 
+                            </div>
+
+
+                            <div class="exercise">
+
+                                <h3>
+                                    🚀 Challenge
+                                </h3>
+
+                                <p>
+                                    Improve the grading system by adding:
+                                </p>
+
+
+                                <ul>
+
+                                    <li>
+                                        Student ID
+                                    </li>
+
+                                    <li>
+                                        Course name
+                                    </li>
+
+                                    <li>
+                                        Multiple subjects
+                                    </li>
+
+                                    <li>
+                                        Total score
+                                    </li>
+
+                                    <li>
+                                        Average score
+                                    </li>
+
+                                    <li>
+                                        Grade calculation
+                                    </li>
+
+                                </ul>
+
+
+                                <p>
+                                    Try to build the program yourself before
+                                    looking for a solution.
+                                </p>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- =================================================
+                             TUTORIAL NAVIGATION
+                        ================================================== -->
+
+                        <div class="tutorial-navigation">
+
+                            <a
+                                href="tutorials.html"
+                                class="read-btn"
+                            >
+
+                                <i
+                                    class="fa-solid fa-arrow-left"
+                                    aria-hidden="true"
+                                ></i>
+
+                                Back to Tutorials
+
+                            </a>
+
+
+                            <a
+                                href="java-tutorial.html"
+                                class="read-btn"
+                            >
+
+                                Java Tutorial
+
+                                <i
+                                    class="fa-solid fa-arrow-right"
+                                    aria-hidden="true"
+                                ></i>
+
+                            </a>
+
+                        </div>
+
+
+                    </article>
+
                 </div>
 
+            </div>
 
-                <div class="exercise">
+        </section>
 
-                    <h3>
-                        🚀 Challenge
-                    </h3>
-
-                    <p>
-                        Improve the grading system by adding:
-                    </p>
+    </main>
 
 
-                    <ul>
+    <!-- =========================================================
+         NEWSLETTER
+    ========================================================== -->
 
-                        <li>
-                            Student ID
-                        </li>
+    <section class="newsletter">
 
-                        <li>
-                            Course name
-                        </li>
+        <h2>
+            📩 Stay Updated
+        </h2>
 
-                        <li>
-                            Multiple subjects
-                        </li>
-
-                        <li>
-                            Total score
-                        </li>
-
-                        <li>
-                            Average score
-                        </li>
-
-                        <li>
-                            Grade calculation
-                        </li>
-
-                    </ul>
+        <p>
+            Get new programming tutorials, technology news
+            and digital tools from TechHub Ghana.
+        </p>
 
 
-                    <p>
-                        Try to build the program yourself before
-                        looking for a solution.
-                    </p>
+        <form id="newsletterForm">
 
-                </div>
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email"
+                autocomplete="email"
+                aria-label="Email address"
+                required
+            >
 
-            </section>
+            <button type="submit">
+                Subscribe
+            </button>
 
+        </form>
 
-            <!-- =================================================
-                 TUTORIAL NAVIGATION
-            ================================================== -->
-
-            <div class="tutorial-navigation">
-
-
-                <a href="tutorials.html"
-                   class="read-btn">
-
-                    ← Back to Tutorials
-
-                </a>
+    </section>
 
 
-                <a href="java-tutorial.html"
-                   class="read-btn">
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
 
-                    Java Tutorial →
+    <footer>
 
-                </a>
+        <div class="footer-grid">
+
+
+            <!-- ABOUT -->
+
+            <div>
+
+                <h3>
+                    TechHub Ghana
+                </h3>
+
+                <p>
+                    Technology • Innovation • Learning
+                </p>
+
+                <p>
+                    Your trusted source for technology
+                    tutorials, news and digital tools.
+                </p>
 
             </div>
 
 
-        </article>
+            <!-- QUICK LINKS -->
 
-    </div>
+            <div>
 
-</main>
+                <h3>
+                    Quick Links
+                </h3>
 
+                <p>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </p>
 
-<!-- =========================================================
-     NEWSLETTER
-========================================================= -->
+                <p>
+                    <a href="ghana-tech.html">
+                        Ghana Tech
+                    </a>
+                </p>
 
-<section class="newsletter">
+                <p>
+                    <a href="news.html">
+                        News
+                    </a>
+                </p>
 
-    <h2>
-        Stay Updated
-    </h2>
+                <p>
+                    <a href="tutorials.html">
+                        Tutorials
+                    </a>
+                </p>
 
-    <p>
-        Get new programming tutorials, technology news
-        and digital tools from TechHub Ghana.
-    </p>
+                <p>
+                    <a href="tools.html">
+                        Tools
+                    </a>
+                </p>
 
-
-    <form id="newsletterForm">
-
-        <input
-            type="email"
-            id="newsletterEmail"
-            placeholder="Enter your email"
-            aria-label="Email address"
-            required>
-
-        <button type="submit">
-            Subscribe
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer>
-
-    <div class="footer-grid">
+            </div>
 
 
-        <!-- ABOUT -->
+            <!-- COURSES -->
 
-        <div>
+            <div>
 
-            <h3>
-                TechHub Ghana
-            </h3>
+                <h3>
+                    Courses
+                </h3>
 
-            <p>
-                Technology • Innovation • Learning
-            </p>
+                <p>
+                    <a href="python-tutorial.html">
+                        Python
+                    </a>
+                </p>
 
-            <p>
-                Your trusted source for technology
-                tutorials, news and digital tools.
-            </p>
+                <p>
+                    <a href="html-tutorial.html">
+                        HTML
+                    </a>
+                </p>
 
-        </div>
+                <p>
+                    <a href="css-tutorial.html">
+                        CSS
+                    </a>
+                </p>
 
+                <p>
+                    <a href="javascript-tutorial.html">
+                        JavaScript
+                    </a>
+                </p>
 
-        <!-- QUICK LINKS -->
+                <p>
+                    <a href="java-tutorial.html">
+                        Java
+                    </a>
+                </p>
 
-        <div>
+                <p>
+                    <a href="mysql-tutorial.html">
+                        MySQL
+                    </a>
+                </p>
 
-            <h3>
-                Quick Links
-            </h3>
-
-            <p>
-                <a href="index.html">
-                    Home
-                </a>
-            </p>
-
-            <p>
-                <a href="news.html">
-                    News
-                </a>
-            </p>
-
-            <p>
-                <a href="tutorials.html">
-                    Tutorials
-                </a>
-            </p>
-
-            <p>
-                <a href="tools.html">
-                    Tools
-                </a>
-            </p>
-
-        </div>
+            </div>
 
 
-        <!-- COURSES -->
+            <!-- CONTACT -->
 
-        <div>
+            <div>
 
-            <h3>
-                Courses
-            </h3>
+                <h3>
+                    Contact
+                </h3>
 
-            <p>
-                <a href="python-tutorial.html">
-                    Python
-                </a>
-            </p>
+                <p>
+                    📍 Accra, Ghana
+                </p>
 
-            <p>
-                <a href="html-tutorial.html">
-                    HTML
-                </a>
-            </p>
+                <p>
+                    📧 info@techhubghana.com
+                </p>
 
-            <p>
-                <a href="css-tutorial.html">
-                    CSS
-                </a>
-            </p>
-
-            <p>
-                <a href="javascript-tutorial.html">
-                    JavaScript
-                </a>
-            </p>
-
-            <p>
-                <a href="java-tutorial.html">
-                    Java
-                </a>
-            </p>
-
-            <p>
-                <a href="mysql-tutorial.html">
-                    MySQL
-                </a>
-            </p>
+            </div>
 
         </div>
 
 
-        <!-- CONTACT -->
-
-        <div>
-
-            <h3>
-                Contact
-            </h3>
-
-            <p>
-                📍 Accra, Ghana
-            </p>
-
-            <p>
-                📧 info@techhubghana.com
-            </p>
-
-        </div>
-
-    </div>
+        <hr>
 
 
-    <hr>
+        <p class="copyright">
+            © 2026 TechHub Ghana. All Rights Reserved.
+        </p>
+
+    </footer>
 
 
-    <p class="copyright">
-        © 2026 TechHub Ghana. All Rights Reserved.
-    </p>
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
 
-</footer>
-
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
-<script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 
 </body>
