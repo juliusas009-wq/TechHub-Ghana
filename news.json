@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-22T15:19:06.818020+00:00",
+  "updated": "2026-08-22T15:45:50.075673+00:00",
   "articles": [
+    {
+      "title": "US battery startups have found a lifeline in defense",
+      "summary": "U.S. battery startups pulled in $500 million in grants from the Department of Energy, throwing a lifeline to an industry that was on the ropes after EV incentives were slashed.",
+      "link": "https://techcrunch.com/2026/08/22/us-battery-startups-have-found-a-lifeline-in-defense/",
+      "date": "Sat, 22 Aug 2026 15:20:00 +0000",
+      "source": "TechCrunch",
+      "category": "Technology"
+    },
     {
       "title": "Pixel 11 Pro XL review: Snappier cameras can’t hide an iterative upgrade",
       "summary": "Google’s Pixel 11 Pro XL brings snappier cameras and genuinely useful AI features like Rambler, but its iterative upgrades may not be enough to tempt recent Pixel owners.",
@@ -152,14 +160,6 @@
       "date": "Fri, 21 Aug 2026 13:48:26 +0000",
       "source": "TechCrunch",
       "category": "Technology"
-    },
-    {
-      "title": "Private equity firm Apollo confirms data breach amid hacking wave targeting financial giants",
-      "summary": "The private equity giant confirms a breach, weeks after Google researchers said hackers were targeting financial companies.",
-      "link": "https://techcrunch.com/2026/08/21/private-equity-firm-apollo-confirms-data-breach-amid-hacking-wave-targeting-financial-giants/",
-      "date": "Fri, 21 Aug 2026 13:35:23 +0000",
-      "source": "TechCrunch",
-      "category": "Cybersecurity"
     },
     {
       "title": "The Download: threats from space mirrors and credit for AI drugs",
