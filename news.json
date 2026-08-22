@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-22T16:21:35.631099+00:00",
+  "updated": "2026-08-22T16:49:40.742880+00:00",
   "articles": [
+    {
+      "title": "OpenAI says California should strengthen its AI safety bill",
+      "summary": "OpenAI is calling for California to strengthen SB 53, an AI safety bill that the company previously opposed.",
+      "link": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+      "date": "Sat, 22 Aug 2026 16:30:34 +0000",
+      "source": "TechCrunch",
+      "category": "Artificial Intelligence"
+    },
     {
       "title": "Frontier AI labs still won’t say how they’d contain a rogue model",
       "summary": "A new study finds leading AI labs have few publicly documented plans for containing rogue models, raising questions about preparedness as AI systems increasingly demonstrate unexpected and potentially dangerous behavior.",
@@ -150,14 +158,6 @@
       "summary": "Are pigs flying? Walmart has finally caved on its refusal to support Apple Pay and Google Pay.",
       "link": "https://techcrunch.com/2026/08/21/walmart-to-finally-start-accepting-apple-pay-and-google-pay/",
       "date": "Fri, 21 Aug 2026 14:30:23 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
-    },
-    {
-      "title": "Starcloud raises $250 million for orbital data centers as launch options dry up",
-      "summary": "There's about to be a big fight to secure access to space.",
-      "link": "https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/",
-      "date": "Fri, 21 Aug 2026 14:00:00 +0000",
       "source": "TechCrunch",
       "category": "Technology"
     },
