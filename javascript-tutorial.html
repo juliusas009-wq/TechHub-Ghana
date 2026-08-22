@@ -3,309 +3,800 @@
 
 <head>
 
+    <!-- =========================================================
+         BASIC DOCUMENT SETUP
+    ========================================================== -->
+
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b5cff"
+    >
+
+    <meta
+        name="description"
+        content="Learn Java programming from beginner to practical level with simple explanations, examples, exercises and projects at TechHub Ghana."
+    >
+
+    <meta
+        name="keywords"
+        content="Java tutorial Ghana, learn Java, Java programming, Java beginners, Java OOP, Java exercises, TechHub Ghana"
+    >
+
+    <meta
+        name="author"
+        content="TechHub Ghana"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
     <title>Java Programming Tutorial | TechHub Ghana</title>
 
-    <meta name="description"
-          content="Learn Java programming from beginner to advanced with practical examples, exercises and projects at TechHub Ghana.">
 
-    <meta name="keywords"
-          content="Java tutorial, learn Java, Java programming, Java Ghana, programming tutorial, TechHub Ghana">
+    <!-- =========================================================
+         GOOGLE FONT
+    ========================================================== -->
 
-    <meta name="author"
-          content="TechHub Ghana">
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <!-- Google Fonts -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         MAIN STYLESHEET
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =========================================================
+         PAGE SIDE SPACING
+         MATCHED TO CSS TUTORIAL / CONTACT PAGE STANDARD
+    ========================================================== -->
+
+    <style>
+
+        /* =====================================================
+           GLOBAL PAGE WIDTH
+        ====================================================== */
+
+        html,
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ====================================================== */
+
+        main,
+        .section {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        main {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .section {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tutorial-page {
+            width: 100%;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tutorial-content {
+            width: 100%;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           HEADER LOGO
+           SAME AS CSS TUTORIAL STANDARD
+        ====================================================== */
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            max-width: 56px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo-text {
+            min-width: 0;
+        }
+
+        .logo-text h1,
+        .logo-text p {
+            display: block;
+        }
+
+        .logo-text h1 {
+            white-space: nowrap;
+        }
+
+        .logo-text p {
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           CODE BLOCKS
+        ====================================================== */
+
+        .code-box {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .code-box pre {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+
+        /* =====================================================
+           TUTORIAL NAVIGATION
+        ====================================================== */
+
+        .tutorial-navigation {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        .newsletter {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+            width: 100%;
+            max-width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .footer-grid,
+        .copyright {
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           MOBILE — 768px
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            main {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .section,
+            .tutorial-page {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .tutorial-content {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .top-bar {
+                width: 100%;
+                max-width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .logo {
+                gap: 9px;
+                max-width: calc(100% - 58px);
+            }
+
+            .logo img {
+                width: 44px;
+                height: 44px;
+                min-width: 44px;
+                max-width: 44px;
+            }
+
+            .logo-text {
+                min-width: 0;
+                overflow: hidden;
+            }
+
+            .logo-text h1 {
+                font-size: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .logo-text p {
+                font-size: 0.58rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .code-box {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: auto;
+            }
+
+            footer {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONES — 480px
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            main {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .top-bar {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .logo {
+                gap: 8px;
+            }
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+                min-width: 40px;
+                max-width: 40px;
+            }
+
+            .logo-text h1 {
+                font-size: 0.92rem;
+            }
+
+            .logo-text p {
+                font-size: 0.52rem;
+            }
+
+            footer {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+        }
+
+    </style>
 
 </head>
 
 
-<body>
+<body id="top">
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+    <!-- =========================================================
+         SKIP LINK
+    ========================================================== -->
 
-<header>
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
+        Skip to main content
+    </a>
 
-    <div class="top-bar">
 
-        <!-- LOGO -->
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
 
-        <div class="logo">
+    <header
+        class="main-header"
+        id="siteHeader"
+    >
 
-            <a href="index.html">
+        <div class="top-bar">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo"
+                aria-label="TechHub Ghana home"
+            >
 
                 <img
                     src="images/logo.png"
-                    alt="TechHub Ghana Logo">
+                    alt="TechHub Ghana logo"
+                    width="56"
+                    height="56"
+                    decoding="async"
+                >
+
+                <div class="logo-text">
+
+                    <h1>
+                        TechHub Ghana
+                    </h1>
+
+                    <p>
+                        Technology • Tutorials • Digital Tools
+                    </p>
+
+                </div>
 
             </a>
 
-            <div>
 
-                <h1>TechHub Ghana</h1>
+            <!-- HEADER RIGHT -->
 
-                <p>
-                    Technology • Learning • Innovation
-                </p>
+            <div class="header-right">
+
+
+                <!-- SEARCH -->
+
+                <div class="search-box">
+
+                    <label
+                        for="tutorialSearch"
+                        class="sr-only"
+                    >
+                        Search tutorials
+                    </label>
+
+                    <input
+                        type="search"
+                        id="tutorialSearch"
+                        placeholder="Search tutorials..."
+                        autocomplete="off"
+                        aria-label="Search tutorials"
+                    >
+
+                    <button
+                        type="button"
+                        id="tutorialSearchBtn"
+                        aria-label="Search tutorials"
+                    >
+
+                        <i
+                            class="fa-solid fa-magnifying-glass"
+                            aria-hidden="true"
+                        ></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- DARK MODE -->
+
+                <button
+                    type="button"
+                    id="darkModeBtn"
+                    class="dark-mode-btn"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
+
+                <!-- MOBILE MENU -->
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="navMenu"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
 
             </div>
 
         </div>
 
 
-        <!-- SEARCH -->
+        <!-- =====================================================
+             NAVIGATION
+        ====================================================== -->
 
-        <div class="search-box">
+        <nav
+            id="navMenu"
+            aria-label="Main navigation"
+        >
 
-            <input
-                type="text"
-                id="tutorialSearch"
-                placeholder="Search tutorials..."
-                aria-label="Search tutorials">
+            <a href="index.html">
 
-            <button
-                type="button"
-                id="tutorialSearchBtn"
-                aria-label="Search tutorials">
+                <i
+                    class="fa-solid fa-house"
+                    aria-hidden="true"
+                ></i>
 
-                🔍
+                Home
 
-            </button>
+            </a>
+
+
+            <a href="ghana-tech.html">
+
+                🇬🇭 Ghana Tech
+
+            </a>
+
+
+            <a href="news.html">
+
+                <i
+                    class="fa-regular fa-newspaper"
+                    aria-hidden="true"
+                ></i>
+
+                News
+
+            </a>
+
+
+            <a
+                href="tutorials.html"
+                class="active"
+                aria-current="page"
+            >
+
+                <i
+                    class="fa-solid fa-graduation-cap"
+                    aria-hidden="true"
+                ></i>
+
+                Tutorials
+
+            </a>
+
+
+            <a href="tools.html">
+
+                <i
+                    class="fa-solid fa-toolbox"
+                    aria-hidden="true"
+                ></i>
+
+                Tools
+
+            </a>
+
+
+            <a href="gpa.html">
+                🎓 GPA
+            </a>
+
+
+            <a href="qr-generator.html">
+                📱 QR Generator
+            </a>
+
+
+            <a href="ai-assistant.html">
+                🤖 AI Assistant
+            </a>
+
+
+            <a href="about.html">
+
+                <i
+                    class="fa-solid fa-circle-info"
+                    aria-hidden="true"
+                ></i>
+
+                About
+
+            </a>
+
+
+            <a href="contact.html">
+
+                <i
+                    class="fa-solid fa-envelope"
+                    aria-hidden="true"
+                ></i>
+
+                Contact
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================================
+         BREAKING / UPDATE BAR
+    ========================================================== -->
+
+    <section
+        class="breaking-news"
+        aria-label="TechHub Ghana Java tutorial updates"
+    >
+
+        <div class="breaking-inner">
+
+            <div class="breaking-label">
+
+                <i
+                    class="fa-solid fa-bolt"
+                    aria-hidden="true"
+                ></i>
+
+                Tech Update
+
+            </div>
+
+
+            <div class="breaking-content">
+
+                <div class="breaking-track">
+
+                    <span>
+                        ☕ Java
+                    </span>
+
+                    <span>
+                        Programming
+                    </span>
+
+                    <span>
+                        Object-Oriented Programming
+                    </span>
+
+                    <span>
+                        Classes
+                    </span>
+
+                    <span>
+                        Objects
+                    </span>
+
+                    <span>
+                        Methods
+                    </span>
+
+                    <span>
+                        Java Projects
+                    </span>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <!-- MOBILE MENU BUTTON -->
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
 
-    <button
-        class="menu-btn"
-        id="menuBtn"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false">
+    <main id="main-content">
 
-        ☰
+        <section class="section">
 
-    </button>
+            <div class="tutorial-page">
 
 
-    <!-- NAVIGATION -->
+                <!-- =================================================
+                     TUTORIAL HEADER
+                ================================================== -->
 
-    <nav id="navMenu">
+                <div class="tutorial-header">
 
-        <a href="index.html">
-            Home
-        </a>
+                    <span class="category">
+                        ☕ JAVA TUTORIAL
+                    </span>
 
-        <a href="news.html">
-            News
-        </a>
+                    <h2>
+                        Java Programming Tutorial
+                    </h2>
 
-        <a href="tutorials.html"
-           class="active">
-            Tutorials
-        </a>
+                    <p>
+                        Learn Java programming from beginner to practical
+                        level with simple explanations, examples, exercises
+                        and projects.
+                    </p>
 
-        <a href="tools.html">
-            Tools
-        </a>
+                </div>
 
-        <a href="gpa.html">
-            GPA
-        </a>
 
-        <a href="qr-generator.html">
-            QR Generator
-        </a>
+                <!-- =================================================
+                     TUTORIAL CONTENT
+                ================================================== -->
 
-        <a href="ai-assistant.html">
-            AI Assistant
-        </a>
+                <article class="tutorial-content">
 
-        <a href="about.html">
-            About
-        </a>
 
-        <a href="contact.html">
-            Contact
-        </a>
+                    <!-- =================================================
+                         LESSON 1
+                    ================================================== -->
 
-    </nav>
+                    <h2>
+                        1. What is Java?
+                    </h2>
 
-</header>
+                    <p>
+                        <strong>Java</strong> is a high-level, object-oriented
+                        programming language used to build many different
+                        types of software applications.
+                    </p>
 
+                    <p>
+                        Java is widely used for:
+                    </p>
 
-<!-- =========================================================
-     BREAKING NEWS
-========================================================= -->
+                    <ul>
 
-<div class="breaking-news">
+                        <li>Desktop applications</li>
 
-    <marquee>
+                        <li>Web applications</li>
 
-        ☕ Learn Java • Programming • Object-Oriented Programming •
-        Classes • Objects • Methods • Projects
+                        <li>Enterprise software</li>
 
-    </marquee>
+                        <li>Backend systems</li>
 
-</div>
+                        <li>Android development</li>
 
+                        <li>Cloud applications</li>
 
-<!-- =========================================================
-     JAVA TUTORIAL
-========================================================= -->
+                        <li>Large business systems</li>
 
-<section class="section">
+                    </ul>
 
-    <div class="tutorial-header">
+                    <p>
+                        One of Java's major advantages is its
+                        <strong>platform independence</strong>.
+                    </p>
 
-        <span class="category">
 
-            ☕ JAVA TUTORIAL
+                    <!-- =================================================
+                         LESSON 2
+                    ================================================== -->
 
-        </span>
+                    <h2>
+                        2. Why Learn Java?
+                    </h2>
 
+                    <p>
+                        Java remains an important programming language because
+                        it is used in many real-world software systems.
+                    </p>
 
-        <h2>
+                    <ul>
 
-            Java Programming Tutorial
+                        <li>Object-oriented programming</li>
 
-        </h2>
+                        <li>Platform independent</li>
 
+                        <li>Strongly typed</li>
 
-        <p>
+                        <li>Large developer community</li>
 
-            Learn Java programming from beginner to practical level
-            with simple explanations, examples, exercises and projects.
+                        <li>Widely used in enterprise applications</li>
 
-        </p>
+                        <li>Useful for backend development</li>
 
-    </div>
+                        <li>Excellent for learning programming concepts</li>
 
+                    </ul>
 
-    <div class="tutorial-content">
 
+                    <!-- =================================================
+                         LESSON 3
+                    ================================================== -->
 
-        <!-- =====================================================
-             LESSON 1
-        ====================================================== -->
+                    <h2>
+                        3. Your First Java Program
+                    </h2>
 
-        <h2>
-            1. What is Java?
-        </h2>
+                    <p>
+                        The following program displays
+                        <strong>Hello World!</strong> on the screen.
+                    </p>
 
-        <p>
-
-            <strong>Java</strong> is a high-level, object-oriented
-            programming language used to build many different types
-            of software applications.
-
-        </p>
-
-        <p>
-
-            Java is widely used for:
-
-        </p>
-
-        <ul>
-
-            <li>Desktop applications</li>
-
-            <li>Web applications</li>
-
-            <li>Enterprise software</li>
-
-            <li>Backend systems</li>
-
-            <li>Android development</li>
-
-            <li>Cloud applications</li>
-
-            <li>Large business systems</li>
-
-        </ul>
-
-
-        <p>
-
-            One of Java's major advantages is its
-            <strong>platform independence</strong>.
-
-        </p>
-
-
-        <!-- =====================================================
-             LESSON 2
-        ====================================================== -->
-
-        <h2>
-            2. Why Learn Java?
-        </h2>
-
-        <p>
-
-            Java remains an important programming language because
-            it is used in many real-world software systems.
-
-        </p>
-
-        <ul>
-
-            <li>Object-oriented programming</li>
-
-            <li>Platform independent</li>
-
-            <li>Strongly typed</li>
-
-            <li>Large developer community</li>
-
-            <li>Widely used in enterprise applications</li>
-
-            <li>Useful for backend development</li>
-
-            <li>Excellent for learning programming concepts</li>
-
-        </ul>
-
-
-        <!-- =====================================================
-             LESSON 3
-        ====================================================== -->
-
-        <h2>
-            3. Your First Java Program
-        </h2>
-
-        <p>
-
-            The following program displays
-            <strong>Hello World!</strong> on the screen.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>public class Main {
 
@@ -317,48 +808,38 @@
 
 }</code></pre>
 
-        </div>
+                    </div>
 
+                    <p>
+                        The output will be:
+                    </p>
 
-        <p>
-
-            The output will be:
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>Hello World!</code></pre>
 
-        </div>
+                    </div>
+
+                    <p>
+                        The <strong>System.out.println()</strong> statement
+                        is used to display information in the console.
+                    </p>
 
 
-        <p>
+                    <!-- =================================================
+                         LESSON 4
+                    ================================================== -->
 
-            The <strong>System.out.println()</strong> statement
-            is used to display information in the console.
+                    <h2>
+                        4. Java Variables
+                    </h2>
 
-        </p>
+                    <p>
+                        A variable is a named storage location used to hold
+                        information in a program.
+                    </p>
 
-
-        <!-- =====================================================
-             LESSON 4
-        ====================================================== -->
-
-        <h2>
-            4. Java Variables
-        </h2>
-
-        <p>
-
-            A variable is a named storage location used to hold
-            information in a program.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>String name = "Julius";
 
@@ -368,81 +849,73 @@ double price = 25.50;
 
 boolean student = true;</code></pre>
 
-        </div>
+                    </div>
+
+                    <p>
+                        In this example:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>name</strong> stores text.
+                        </li>
+
+                        <li>
+                            <strong>age</strong> stores an integer.
+                        </li>
+
+                        <li>
+                            <strong>price</strong> stores a decimal number.
+                        </li>
+
+                        <li>
+                            <strong>student</strong> stores true or false.
+                        </li>
+
+                    </ul>
 
 
-        <p>
+                    <!-- =================================================
+                         LESSON 5
+                    ================================================== -->
 
-            In this example:
+                    <h2>
+                        5. Java Data Types
+                    </h2>
 
-        </p>
+                    <p>
+                        Java provides different data types for storing
+                        different kinds of information.
+                    </p>
 
-        <ul>
+                    <h3>
+                        Common Java Data Types
+                    </h3>
 
-            <li>
-                <strong>name</strong> stores text.
-            </li>
+                    <ul>
 
-            <li>
-                <strong>age</strong> stores an integer.
-            </li>
+                        <li>int</li>
 
-            <li>
-                <strong>price</strong> stores a decimal number.
-            </li>
+                        <li>double</li>
 
-            <li>
-                <strong>student</strong> stores true or false.
-            </li>
+                        <li>float</li>
 
-        </ul>
+                        <li>char</li>
 
+                        <li>boolean</li>
 
-        <!-- =====================================================
-             LESSON 5
-        ====================================================== -->
+                        <li>String</li>
 
-        <h2>
-            5. Java Data Types
-        </h2>
+                        <li>long</li>
 
-        <p>
+                        <li>short</li>
 
-            Java provides different data types for storing different
-            kinds of information.
+                        <li>byte</li>
 
-        </p>
+                    </ul>
 
-
-        <h3>
-            Common Java Data Types
-        </h3>
-
-
-        <ul>
-
-            <li>int</li>
-
-            <li>double</li>
-
-            <li>float</li>
-
-            <li>char</li>
-
-            <li>boolean</li>
-
-            <li>String</li>
-
-            <li>long</li>
-
-            <li>short</li>
-
-            <li>byte</li>
-
-        </ul>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>int number = 10;
 
@@ -456,25 +929,22 @@ boolean passed = true;
 
 String name = "Julius";</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 6
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 6
+                    ================================================== -->
 
-        <h2>
-            6. Arithmetic Operators
-        </h2>
+                    <h2>
+                        6. Arithmetic Operators
+                    </h2>
 
-        <p>
+                    <p>
+                        Java supports common mathematical operators.
+                    </p>
 
-            Java supports common mathematical operators.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>int a = 20;
 
@@ -490,57 +960,51 @@ System.out.println(a / b);
 
 System.out.println(a % b);</code></pre>
 
-        </div>
+                    </div>
+
+                    <p>
+                        The operators are:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <strong>+</strong> Addition
+                        </li>
+
+                        <li>
+                            <strong>-</strong> Subtraction
+                        </li>
+
+                        <li>
+                            <strong>*</strong> Multiplication
+                        </li>
+
+                        <li>
+                            <strong>/</strong> Division
+                        </li>
+
+                        <li>
+                            <strong>%</strong> Modulus
+                        </li>
+
+                    </ul>
 
 
-        <p>
+                    <!-- =================================================
+                         LESSON 7
+                    ================================================== -->
 
-            The operators are:
+                    <h2>
+                        7. If Statement
+                    </h2>
 
-        </p>
+                    <p>
+                        An <strong>if statement</strong> allows a program
+                        to make decisions.
+                    </p>
 
-        <ul>
-
-            <li>
-                <strong>+</strong> Addition
-            </li>
-
-            <li>
-                <strong>-</strong> Subtraction
-            </li>
-
-            <li>
-                <strong>*</strong> Multiplication
-            </li>
-
-            <li>
-                <strong>/</strong> Division
-            </li>
-
-            <li>
-                <strong>%</strong> Modulus
-            </li>
-
-        </ul>
-
-
-        <!-- =====================================================
-             LESSON 7
-        ====================================================== -->
-
-        <h2>
-            7. If Statement
-        </h2>
-
-        <p>
-
-            An <strong>if statement</strong> allows a program
-            to make decisions.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>int age = 20;
 
@@ -550,15 +1014,13 @@ if (age >= 18) {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
+                    <h3>
+                        if / else
+                    </h3>
 
-        <h3>
-            if / else
-        </h3>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>int age = 16;
 
@@ -572,15 +1034,13 @@ if (age >= 18) {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
+                    <h3>
+                        if / else if / else
+                    </h3>
 
-        <h3>
-            if / else if / else
-        </h3>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>int score = 75;
 
@@ -602,26 +1062,23 @@ if (score >= 80) {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 8
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 8
+                    ================================================== -->
 
-        <h2>
-            8. Switch Statement
-        </h2>
+                    <h2>
+                        8. Switch Statement
+                    </h2>
 
-        <p>
+                    <p>
+                        A switch statement can be used when you want to
+                        compare a value against several possible cases.
+                    </p>
 
-            A switch statement can be used when you want to
-            compare a value against several possible cases.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>int day = 2;
 
@@ -644,26 +1101,23 @@ switch (day) {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 9
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 9
+                    ================================================== -->
 
-        <h2>
-            9. For Loop
-        </h2>
+                    <h2>
+                        9. For Loop
+                    </h2>
 
-        <p>
+                    <p>
+                        A for loop is used to repeat a block of code a
+                        specific number of times.
+                    </p>
 
-            A for loop is used to repeat a block of code a
-            specific number of times.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>for (int i = 1; i <= 5; i++) {
 
@@ -671,17 +1125,13 @@ switch (day) {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
+                    <p>
+                        Output:
+                    </p>
 
-        <p>
-
-            Output:
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>1
 2
@@ -689,26 +1139,23 @@ switch (day) {
 4
 5</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 10
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 10
+                    ================================================== -->
 
-        <h2>
-            10. While Loop
-        </h2>
+                    <h2>
+                        10. While Loop
+                    </h2>
 
-        <p>
+                    <p>
+                        A while loop continues running while a condition
+                        remains true.
+                    </p>
 
-            A while loop continues running while a condition
-            remains true.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>int number = 1;
 
@@ -720,25 +1167,22 @@ while (number <= 5) {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 11
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 11
+                    ================================================== -->
 
-        <h2>
-            11. Arrays
-        </h2>
+                    <h2>
+                        11. Arrays
+                    </h2>
 
-        <p>
+                    <p>
+                        An array stores multiple values of the same data type.
+                    </p>
 
-            An array stores multiple values of the same data type.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>String[] students = {
     "Julius",
@@ -748,17 +1192,13 @@ while (number <= 5) {
 
 System.out.println(students[0]);</code></pre>
 
-        </div>
+                    </div>
 
+                    <p>
+                        Java array indexes start from <strong>0</strong>.
+                    </p>
 
-        <p>
-
-            Java array indexes start from <strong>0</strong>.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>students[0]  // Julius
 
@@ -766,26 +1206,23 @@ students[1]  // Ama
 
 students[2]  // Kofi</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 12
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 12
+                    ================================================== -->
 
-        <h2>
-            12. Methods
-        </h2>
+                    <h2>
+                        12. Methods
+                    </h2>
 
-        <p>
+                    <p>
+                        A method is a reusable block of code designed to
+                        perform a particular task.
+                    </p>
 
-            A method is a reusable block of code designed to
-            perform a particular task.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>public static void greet() {
 
@@ -800,15 +1237,13 @@ public static void main(String[] args) {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
+                    <h3>
+                        Method with Parameters
+                    </h3>
 
-        <h3>
-            Method with Parameters
-        </h3>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>public static void greet(String name) {
 
@@ -823,28 +1258,24 @@ public static void main(String[] args) {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 13
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 13
+                    ================================================== -->
 
-        <h2>
-            13. Classes and Objects
-        </h2>
+                    <h2>
+                        13. Classes and Objects
+                    </h2>
 
-        <p>
+                    <p>
+                        Java is an object-oriented programming language.
+                        A <strong>class</strong> is a blueprint for creating
+                        objects.
+                    </p>
 
-            Java is an object-oriented programming language.
-
-            A <strong>class</strong> is a blueprint for creating
-            objects.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>class Student {
 
@@ -873,26 +1304,23 @@ public class Main {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 14
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 14
+                    ================================================== -->
 
-        <h2>
-            14. Constructors
-        </h2>
+                    <h2>
+                        14. Constructors
+                    </h2>
 
-        <p>
+                    <p>
+                        A constructor is a special method that is called
+                        when an object is created.
+                    </p>
 
-            A constructor is a special method that is called
-            when an object is created.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>class Student {
 
@@ -927,26 +1355,23 @@ public class Main {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 15
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 15
+                    ================================================== -->
 
-        <h2>
-            15. Inheritance
-        </h2>
+                    <h2>
+                        15. Inheritance
+                    </h2>
 
-        <p>
+                    <p>
+                        Inheritance allows one class to inherit properties
+                        and methods from another class.
+                    </p>
 
-            Inheritance allows one class to inherit properties
-            and methods from another class.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>class Animal {
 
@@ -984,26 +1409,23 @@ public class Main {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 16
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 16
+                    ================================================== -->
 
-        <h2>
-            16. Encapsulation
-        </h2>
+                    <h2>
+                        16. Encapsulation
+                    </h2>
 
-        <p>
+                    <p>
+                        Encapsulation means keeping data protected inside
+                        a class and controlling access to it through methods.
+                    </p>
 
-            Encapsulation means keeping data protected inside
-            a class and controlling access to it through methods.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>class Student {
 
@@ -1040,26 +1462,23 @@ public class Main {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 17
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 17
+                    ================================================== -->
 
-        <h2>
-            17. Exception Handling
-        </h2>
+                    <h2>
+                        17. Exception Handling
+                    </h2>
 
-        <p>
+                    <p>
+                        Exception handling allows a program to handle
+                        unexpected errors without immediately stopping.
+                    </p>
 
-            Exception handling allows a program to handle
-            unexpected errors without immediately stopping.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>try {
 
@@ -1071,26 +1490,23 @@ public class Main {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 18
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 18
+                    ================================================== -->
 
-        <h2>
-            18. User Input
-        </h2>
+                    <h2>
+                        18. User Input
+                    </h2>
 
-        <p>
+                    <p>
+                        Java can receive input from a user using the
+                        <strong>Scanner</strong> class.
+                    </p>
 
-            Java can receive input from a user using the
-            <strong>Scanner</strong> class.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>import java.util.Scanner;
 
@@ -1111,26 +1527,23 @@ public class Main {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 19
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 19
+                    ================================================== -->
 
-        <h2>
-            19. Practical Student Grading Program
-        </h2>
+                    <h2>
+                        19. Practical Student Grading Program
+                    </h2>
 
-        <p>
+                    <p>
+                        Let's combine variables, input, conditions and
+                        output to create a simple student grading program.
+                    </p>
 
-            Let's combine variables, input, conditions and
-            output to create a simple student grading program.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>import java.util.Scanner;
 
@@ -1190,26 +1603,23 @@ public class Main {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             LESSON 20
-        ====================================================== -->
+                    <!-- =================================================
+                         LESSON 20
+                    ================================================== -->
 
-        <h2>
-            20. Complete Practical Example
-        </h2>
+                    <h2>
+                        20. Complete Practical Example
+                    </h2>
 
-        <p>
+                    <p>
+                        The following program combines several Java concepts
+                        into a simple student information system.
+                    </p>
 
-            The following program combines several Java concepts
-            into a simple student information system.
-
-        </p>
-
-
-        <div class="code-box">
+                    <div class="code-box">
 
 <pre><code>import java.util.Scanner;
 
@@ -1250,54 +1660,57 @@ public class Main {
 
 }</code></pre>
 
-        </div>
+                    </div>
 
 
-        <!-- =====================================================
-             PRACTICE
-        ====================================================== -->
+                    <!-- =================================================
+                         PRACTICE EXERCISE
+                    ================================================== -->
 
-        <div class="tutorial-exercise">
+                    <div class="tutorial-exercise">
 
-            <h2>
-                📝 Java Practice Exercise
-            </h2>
+                        <h2>
+                            📝 Java Practice Exercise
+                        </h2>
 
-            <p>
+                        <p>
+                            Create a Java program that stores the following
+                            information about a student:
+                        </p>
 
-                Create a Java program that stores the following
-                information about a student:
+                        <ol>
 
-            </p>
+                            <li>
+                                Student name
+                            </li>
 
-            <ol>
+                            <li>
+                                Student ID
+                            </li>
 
-                <li>Student name</li>
+                            <li>
+                                Age
+                            </li>
 
-                <li>Student ID</li>
+                            <li>
+                                Course
+                            </li>
 
-                <li>Age</li>
+                            <li>
+                                GPA
+                            </li>
 
-                <li>Course</li>
+                        </ol>
 
-                <li>GPA</li>
+                        <p>
+                            Then display the information in a clear format.
+                        </p>
 
-            </ol>
+                        <h3>
+                            Expected Output
+                        </h3>
 
-
-            <p>
-
-                Then display the information in a clear format.
-
-            </p>
-
-
-            <h3>
-                Expected Output
-            </h3>
-
-
-            <div class="code-box">
+                        <div class="code-box">
 
 <pre><code>----- STUDENT INFORMATION -----
 
@@ -1307,418 +1720,415 @@ Age: 20
 Course: Information Technology
 GPA: 3.50</code></pre>
 
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         QUIZ
+                    ================================================== -->
+
+                    <div class="tutorial-exercise">
+
+                        <h2>
+                            🎯 Java Quiz
+                        </h2>
+
+
+                        <h3>
+                            Question 1
+                        </h3>
+
+                        <p>
+                            Which keyword is used to create a class in Java?
+                        </p>
+
+                        <p>
+                            A. object
+                        </p>
+
+                        <p>
+                            B. class
+                        </p>
+
+                        <p>
+                            C. create
+                        </p>
+
+                        <p>
+                            D. new
+                        </p>
+
+                        <p>
+                            <strong>
+                                Answer: B. class
+                            </strong>
+                        </p>
+
+
+                        <h3>
+                            Question 2
+                        </h3>
+
+                        <p>
+                            Which method is the entry point of a Java program?
+                        </p>
+
+                        <p>
+                            A. start()
+                        </p>
+
+                        <p>
+                            B. run()
+                        </p>
+
+                        <p>
+                            C. main()
+                        </p>
+
+                        <p>
+                            D. execute()
+                        </p>
+
+                        <p>
+                            <strong>
+                                Answer: C. main()
+                            </strong>
+                        </p>
+
+
+                        <h3>
+                            Question 3
+                        </h3>
+
+                        <p>
+                            Which keyword is used to create an object?
+                        </p>
+
+                        <p>
+                            A. class
+                        </p>
+
+                        <p>
+                            B. object
+                        </p>
+
+                        <p>
+                            C. new
+                        </p>
+
+                        <p>
+                            D. create
+                        </p>
+
+                        <p>
+                            <strong>
+                                Answer: C. new
+                            </strong>
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         CHALLENGE
+                    ================================================== -->
+
+                    <div class="tutorial-exercise">
+
+                        <h2>
+                            🚀 Java Challenge
+                        </h2>
+
+                        <p>
+                            Build a simple Student Management Program.
+                        </p>
+
+                        <p>
+                            Your program should allow the user to:
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Enter a student's name.
+                            </li>
+
+                            <li>
+                                Enter the student's ID.
+                            </li>
+
+                            <li>
+                                Enter the student's age.
+                            </li>
+
+                            <li>
+                                Enter the student's course.
+                            </li>
+
+                            <li>
+                                Enter the student's GPA.
+                            </li>
+
+                            <li>
+                                Display all student information.
+                            </li>
+
+                            <li>
+                                Determine whether the student passed.
+                            </li>
+
+                        </ul>
+
+                        <p>
+                            Try to build the program yourself before checking
+                            for a solution.
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         TUTORIAL NAVIGATION
+                    ================================================== -->
+
+                    <div class="tutorial-navigation">
+
+                        <a
+                            href="python-tutorial.html"
+                            class="read-btn"
+                        >
+
+                            <i
+                                class="fa-solid fa-arrow-left"
+                                aria-hidden="true"
+                            ></i>
+
+                            Python Tutorial
+
+                        </a>
+
+
+                        <a
+                            href="mysql-tutorial.html"
+                            class="read-btn"
+                        >
+
+                            MySQL Tutorial
+
+                            <i
+                                class="fa-solid fa-arrow-right"
+                                aria-hidden="true"
+                            ></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         NEWSLETTER
+    ========================================================== -->
+
+    <section class="newsletter">
+
+        <h2>
+            📩 Stay Updated
+        </h2>
+
+        <p>
+            Receive new tutorials, technology news and digital tools
+            from TechHub Ghana.
+        </p>
+
+        <form id="newsletterForm">
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email"
+                autocomplete="email"
+                aria-label="Email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+
+            <!-- BRAND -->
+
+            <div>
+
+                <h3>
+                    TechHub Ghana
+                </h3>
+
+                <p>
+                    Technology • Learning • Innovation
+                </p>
+
+                <p>
+                    Your trusted source for technology tutorials,
+                    news and digital tools.
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <p>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </p>
+
+                <p>
+                    <a href="ghana-tech.html">
+                        Ghana Tech
+                    </a>
+                </p>
+
+                <p>
+                    <a href="news.html">
+                        News
+                    </a>
+                </p>
+
+                <p>
+                    <a href="tutorials.html">
+                        Tutorials
+                    </a>
+                </p>
+
+                <p>
+                    <a href="tools.html">
+                        Tools
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- TUTORIALS -->
+
+            <div>
+
+                <h3>
+                    Tutorials
+                </h3>
+
+                <p>
+                    <a href="html-tutorial.html">
+                        HTML
+                    </a>
+                </p>
+
+                <p>
+                    <a href="css-tutorial.html">
+                        CSS
+                    </a>
+                </p>
+
+                <p>
+                    <a href="python-tutorial.html">
+                        Python
+                    </a>
+                </p>
+
+                <p>
+                    <a
+                        href="java-tutorial.html"
+                        aria-current="page"
+                    >
+                        Java
+                    </a>
+                </p>
+
+                <p>
+                    <a href="mysql-tutorial.html">
+                        MySQL
+                    </a>
+                </p>
+
+                <p>
+                    <a href="javascript-tutorial.html">
+                        JavaScript
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    📍 Accra, Ghana
+                </p>
+
+                <p>
+                    📧 info@techhubghana.com
+                </p>
+
             </div>
 
         </div>
 
 
-        <!-- =====================================================
-             QUIZ
-        ====================================================== -->
+        <hr>
 
-        <div class="tutorial-exercise">
 
-            <h2>
-                🎯 Java Quiz
-            </h2>
+        <p class="copyright">
+            © 2026 TechHub Ghana. All Rights Reserved.
+        </p>
 
+    </footer>
 
-            <h3>
-                Question 1
-            </h3>
 
-            <p>
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
 
-                Which keyword is used to create a class in Java?
-
-            </p>
-
-            <p>
-                A. object
-            </p>
-
-            <p>
-                B. class
-            </p>
-
-            <p>
-                C. create
-            </p>
-
-            <p>
-                D. new
-            </p>
-
-
-            <p>
-
-                <strong>
-                    Answer: B. class
-                </strong>
-
-            </p>
-
-
-            <h3>
-                Question 2
-            </h3>
-
-            <p>
-
-                Which method is the entry point of a Java program?
-
-            </p>
-
-            <p>
-                A. start()
-            </p>
-
-            <p>
-                B. run()
-            </p>
-
-            <p>
-                C. main()
-            </p>
-
-            <p>
-                D. execute()
-            </p>
-
-
-            <p>
-
-                <strong>
-                    Answer: C. main()
-                </strong>
-
-            </p>
-
-
-            <h3>
-                Question 3
-            </h3>
-
-            <p>
-
-                Which keyword is used to create an object?
-
-            </p>
-
-            <p>
-                A. class
-            </p>
-
-            <p>
-                B. object
-            </p>
-
-            <p>
-                C. new
-            </p>
-
-            <p>
-                D. create
-            </p>
-
-
-            <p>
-
-                <strong>
-                    Answer: C. new
-                </strong>
-
-            </p>
-
-        </div>
-
-
-        <!-- =====================================================
-             CHALLENGE
-        ====================================================== -->
-
-        <div class="tutorial-exercise">
-
-            <h2>
-                🚀 Java Challenge
-            </h2>
-
-            <p>
-
-                Build a simple Student Management Program.
-
-            </p>
-
-
-            <p>
-                Your program should allow the user to:
-            </p>
-
-
-            <ul>
-
-                <li>Enter a student's name.</li>
-
-                <li>Enter the student's ID.</li>
-
-                <li>Enter the student's age.</li>
-
-                <li>Enter the student's course.</li>
-
-                <li>Enter the student's GPA.</li>
-
-                <li>Display all student information.</li>
-
-                <li>Determine whether the student passed.</li>
-
-            </ul>
-
-
-            <p>
-
-                Try to build the program yourself before checking
-                for a solution.
-
-            </p>
-
-        </div>
-
-
-        <!-- =====================================================
-             NAVIGATION
-        ====================================================== -->
-
-        <div class="tutorial-navigation">
-
-            <a
-                href="python-tutorial.html"
-                class="read-btn">
-
-                ← Python Tutorial
-
-            </a>
-
-
-            <a
-                href="mysql-tutorial.html"
-                class="read-btn">
-
-                MySQL Tutorial →
-
-            </a>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     NEWSLETTER
-========================================================= -->
-
-<section class="newsletter">
-
-    <h2>
-        Stay Updated
-    </h2>
-
-    <p>
-
-        Receive new tutorials, technology news and digital tools
-        from TechHub Ghana.
-
-    </p>
-
-
-    <form id="newsletterForm">
-
-        <input
-            type="email"
-            id="newsletterEmail"
-            placeholder="Enter your email"
-            aria-label="Email address"
-            required>
-
-
-        <button type="submit">
-
-            Subscribe
-
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer>
-
-    <div class="footer-grid">
-
-
-        <!-- ABOUT -->
-
-        <div>
-
-            <h3>
-                TechHub Ghana
-            </h3>
-
-            <p>
-
-                Technology • Learning • Innovation
-
-            </p>
-
-            <p>
-
-                Your trusted source for technology tutorials,
-                news and digital tools.
-
-            </p>
-
-        </div>
-
-
-        <!-- QUICK LINKS -->
-
-        <div>
-
-            <h3>
-                Quick Links
-            </h3>
-
-
-            <p>
-                <a href="index.html">
-                    Home
-                </a>
-            </p>
-
-
-            <p>
-                <a href="news.html">
-                    News
-                </a>
-            </p>
-
-
-            <p>
-                <a href="tutorials.html">
-                    Tutorials
-                </a>
-            </p>
-
-
-            <p>
-                <a href="tools.html">
-                    Tools
-                </a>
-            </p>
-
-        </div>
-
-
-        <!-- TUTORIALS -->
-
-        <div>
-
-            <h3>
-                Tutorials
-            </h3>
-
-
-            <p>
-                <a href="html-tutorial.html">
-                    HTML
-                </a>
-            </p>
-
-
-            <p>
-                <a href="css-tutorial.html">
-                    CSS
-                </a>
-            </p>
-
-
-            <p>
-                <a href="python-tutorial.html">
-                    Python
-                </a>
-            </p>
-
-
-            <p>
-                <a href="java-tutorial.html">
-                    Java
-                </a>
-            </p>
-
-
-            <p>
-                <a href="mysql-tutorial.html">
-                    MySQL
-                </a>
-            </p>
-
-
-            <p>
-                <a href="javascript-tutorial.html">
-                    JavaScript
-                </a>
-            </p>
-
-        </div>
-
-
-        <!-- CONTACT -->
-
-        <div>
-
-            <h3>
-                Contact
-            </h3>
-
-
-            <p>
-                📍 Accra, Ghana
-            </p>
-
-
-            <p>
-                📧 info@techhubghana.com
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <hr>
-
-
-    <p class="copyright">
-
-        © 2026 TechHub Ghana. All Rights Reserved.
-
-    </p>
-
-</footer>
-
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
-<script src="script.js"></script>
+    <script
+        src="script.js"
+        defer
+    ></script>
 
 
 </body>
