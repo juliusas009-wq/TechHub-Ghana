@@ -1,6 +1,14 @@
 {
-  "updated": "2026-08-22T18:59:20.253952+00:00",
+  "updated": "2026-08-22T19:28:49.968884+00:00",
   "articles": [
+    {
+      "title": "Inherent, founded by DeepMind alumni, says its AI ‘teammate’ just outperformed Anthropic and OpenAI at replicating research",
+      "summary": "Built by DeepMind alumni, British AI lab Inherent released Faraday, an AI agent whose ability to replicate scientific papers could be a stepping stone for innovation.",
+      "link": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
+      "date": "Sat, 22 Aug 2026 19:00:00 +0000",
+      "source": "TechCrunch",
+      "category": "Artificial Intelligence"
+    },
     {
       "title": "OpenAI says California should strengthen its AI safety bill",
       "summary": "OpenAI is calling for California to strengthen SB 53, an AI safety bill that the company previously opposed.",
@@ -152,14 +160,6 @@
       "date": "Fri, 21 Aug 2026 14:39:24 +0000",
       "source": "TechCrunch",
       "category": "Cloud Computing"
-    },
-    {
-      "title": "Walmart to finally start accepting Apple Pay and Google Pay",
-      "summary": "Are pigs flying? Walmart has finally caved on its refusal to support Apple Pay and Google Pay.",
-      "link": "https://techcrunch.com/2026/08/21/walmart-to-finally-start-accepting-apple-pay-and-google-pay/",
-      "date": "Fri, 21 Aug 2026 14:30:23 +0000",
-      "source": "TechCrunch",
-      "category": "Technology"
     },
     {
       "title": "The Download: threats from space mirrors and credit for AI drugs",
