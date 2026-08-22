@@ -1,0 +1,685 @@
+name: Update Ghana Tech News
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: "0 */6 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+
+  update-news:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # =====================================================
+      # CHECK OUT REPOSITORY
+      # =====================================================
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # =====================================================
+      # SET UP PYTHON
+      # =====================================================
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+
+      # =====================================================
+      # FETCH GHANA TECH NEWS
+      # =====================================================
+
+      - name: Fetch Ghana technology news
+        run: |
+
+          python <<'PY'
+
+          import json
+          import re
+          import urllib.parse
+          import urllib.request
+          import xml.etree.ElementTree as ET
+          from datetime import datetime, timezone
+          from email.utils import parsedate_to_datetime
+
+
+          OUTPUT_FILE = "ghana-tech-news.json"
+
+
+          # =================================================
+          # NEWS SEARCHES
+          # =================================================
+
+          searches = [
+              (
+                  "Ghana Technology",
+                  "Ghana technology"
+              ),
+
+              (
+                  "Ghana Technology",
+                  "Ghana tech"
+              ),
+
+              (
+                  "Startups",
+                  "Ghana technology startups"
+              ),
+
+              (
+                  "FinTech",
+                  "Ghana fintech"
+              ),
+
+              (
+                  "Artificial Intelligence",
+                  "Ghana artificial intelligence"
+              ),
+
+              (
+                  "Cybersecurity",
+                  "Ghana cybersecurity"
+              ),
+
+              (
+                  "Programming",
+                  "Ghana programming software development"
+              ),
+
+              (
+                  "Digital Economy",
+                  "Ghana digital economy"
+              )
+          ]
+
+
+          # =================================================
+          # CATEGORY KEYWORDS
+          # =================================================
+
+          category_keywords = {
+
+              "Artificial Intelligence": [
+                  "artificial intelligence",
+                  "generative ai",
+                  "machine learning",
+                  "chatgpt",
+                  "openai",
+                  "ai tool",
+                  "ai tools"
+              ],
+
+              "Cybersecurity": [
+                  "cybersecurity",
+                  "cyber security",
+                  "cybercrime",
+                  "cyber attack",
+                  "hacking",
+                  "online security",
+                  "data breach",
+                  "scam"
+              ],
+
+              "FinTech": [
+                  "fintech",
+                  "mobile money",
+                  "momo",
+                  "digital payment",
+                  "digital banking",
+                  "banking technology",
+                  "payment platform"
+              ],
+
+              "Startups": [
+                  "startup",
+                  "start-up",
+                  "entrepreneur",
+                  "venture",
+                  "funding",
+                  "investment"
+              ],
+
+              "Programming": [
+                  "programming",
+                  "software development",
+                  "developer",
+                  "coding",
+                  "python",
+                  "javascript",
+                  "web development",
+                  "app development"
+              ],
+
+              "Digital Economy": [
+                  "digital economy",
+                  "e-commerce",
+                  "ecommerce",
+                  "digital business",
+                  "digital jobs",
+                  "online business"
+              ]
+          }
+
+
+          # =================================================
+          # XML NAMESPACES
+          # =================================================
+
+          namespaces = {
+
+              "media":
+                  "http://search.yahoo.com/mrss/",
+
+              "content":
+                  "http://purl.org/rss/1.0/modules/content/"
+
+          }
+
+
+          # =================================================
+          # HTML CLEANING
+          # =================================================
+
+          def clean_html(text):
+
+              if not text:
+                  return ""
+
+              text = re.sub(
+                  r"<[^>]+>",
+                  " ",
+                  text
+              )
+
+              text = (
+                  text
+                  .replace("&nbsp;", " ")
+                  .replace("&amp;", "&")
+                  .replace("&quot;", '"')
+                  .replace("&#39;", "'")
+              )
+
+              text = re.sub(
+                  r"\s+",
+                  " ",
+                  text
+              )
+
+              return text.strip()
+
+
+          # =================================================
+          # PARSE DATE
+          # =================================================
+
+          def parse_date(value):
+
+              if not value:
+                  return ""
+
+              try:
+
+                  dt = parsedate_to_datetime(
+                      value
+                  )
+
+                  if dt.tzinfo is None:
+
+                      dt = dt.replace(
+                          tzinfo=timezone.utc
+                      )
+
+                  return dt.astimezone(
+                      timezone.utc
+                  ).isoformat()
+
+              except Exception:
+
+                  return ""
+
+
+          # =================================================
+          # DETERMINE CATEGORY
+          # =================================================
+
+          def determine_category(
+              title,
+              description,
+              default_category
+          ):
+
+              text = (
+                  title +
+                  " " +
+                  description
+              ).lower()
+
+
+              for category, keywords in category_keywords.items():
+
+                  for keyword in keywords:
+
+                      if keyword in text:
+
+                          return category
+
+
+              return default_category
+
+
+          # =================================================
+          # EXTRACT IMAGE
+          # =================================================
+
+          def extract_image(item):
+
+              media_content =
+                  item.find(
+                      "media:content",
+                      namespaces
+                  )
+
+              if media_content is not None:
+
+                  url = media_content.attrib.get(
+                      "url",
+                      ""
+                  )
+
+                  if url:
+                      return url
+
+
+              media_thumbnail =
+                  item.find(
+                      "media:thumbnail",
+                      namespaces
+                  )
+
+              if media_thumbnail is not None:
+
+                  url = media_thumbnail.attrib.get(
+                      "url",
+                      ""
+                  )
+
+                  if url:
+                      return url
+
+
+              enclosure =
+                  item.find("enclosure")
+
+              if enclosure is not None:
+
+                  url = enclosure.attrib.get(
+                      "url",
+                      ""
+                  )
+
+                  image_type =
+                      enclosure.attrib.get(
+                          "type",
+                          ""
+                      )
+
+                  if (
+                      url and
+                      image_type.startswith("image/")
+                  ):
+
+                      return url
+
+
+              return ""
+
+
+          # =================================================
+          # FETCH RSS FEED
+          # =================================================
+
+          def fetch_feed(
+              category,
+              query
+          ):
+
+              encoded_query =
+                  urllib.parse.quote_plus(
+                      query + " when:7d"
+                  )
+
+
+              feed_url = (
+                  "https://news.google.com/rss/search?"
+                  + "q="
+                  + encoded_query
+                  + "&hl=en-GH"
+                  + "&gl=GH"
+                  + "&ceid=GH:en"
+              )
+
+
+              request =
+                  urllib.request.Request(
+                      feed_url,
+                      headers={
+                          "User-Agent":
+                              "TechHub-Ghana-NewsBot/1.0"
+                      }
+                  )
+
+
+              try:
+
+                  with urllib.request.urlopen(
+                      request,
+                      timeout=30
+                  ) as response:
+
+                      data =
+                          response.read()
+
+
+                  root =
+                      ET.fromstring(data)
+
+
+                  channel =
+                      root.find("channel")
+
+
+                  if channel is None:
+
+                      return []
+
+
+                  articles = []
+
+
+                  for item in channel.findall("item"):
+
+                      title_element =
+                          item.find("title")
+
+                      link_element =
+                          item.find("link")
+
+                      description_element =
+                          item.find("description")
+
+                      pub_date_element =
+                          item.find("pubDate")
+
+                      source_element =
+                          item.find("source")
+
+
+                      title =
+                          clean_html(
+                              title_element.text
+                              if title_element is not None
+                              else ""
+                          )
+
+
+                      link =
+                          (
+                              link_element.text.strip()
+                              if link_element is not None
+                              and link_element.text
+                              else ""
+                          )
+
+
+                      description =
+                          clean_html(
+                              description_element.text
+                              if description_element is not None
+                              else ""
+                          )
+
+
+                      published_at =
+                          parse_date(
+                              pub_date_element.text
+                              if pub_date_element is not None
+                              else ""
+                          )
+
+
+                      source =
+                          (
+                              source_element.text.strip()
+                              if source_element is not None
+                              and source_element.text
+                              else "News Source"
+                          )
+
+
+                      image =
+                          extract_image(item)
+
+
+                      if not title or not link:
+
+                          continue
+
+
+                      # -------------------------------------
+                      # Limit description length
+                      # -------------------------------------
+
+                      if len(description) > 300:
+
+                          description =
+                              description[:297] + "..."
+
+
+                      detected_category =
+                          determine_category(
+                              title,
+                              description,
+                              category
+                          )
+
+
+                      articles.append({
+
+                          "title":
+                              title,
+
+                          "description":
+                              description,
+
+                          "url":
+                              link,
+
+                          "source":
+                              source,
+
+                          "category":
+                              detected_category,
+
+                          "publishedAt":
+                              published_at,
+
+                          "image":
+                              image
+
+                      })
+
+
+                  return articles
+
+
+              except Exception as error:
+
+                  print(
+                      "Feed error:",
+                      query,
+                      error
+                  )
+
+                  return []
+
+
+          # =================================================
+          # COLLECT ARTICLES
+          # =================================================
+
+          all_articles = []
+
+
+          for category, query in searches:
+
+              print(
+                  "Fetching:",
+                  query
+              )
+
+              articles =
+                  fetch_feed(
+                      category,
+                      query
+                  )
+
+              all_articles.extend(
+                  articles
+              )
+
+
+          # =================================================
+          # REMOVE DUPLICATES
+          # =================================================
+
+          unique_articles = {}
+
+          for article in all_articles:
+
+              key =
+                  article["url"].strip().lower()
+
+
+              if key not in unique_articles:
+
+                  unique_articles[key] =
+                      article
+
+
+          articles =
+              list(
+                  unique_articles.values()
+              )
+
+
+          # =================================================
+          # SORT NEWEST FIRST
+          # =================================================
+
+          articles.sort(
+              key=lambda article:
+                  article.get(
+                      "publishedAt",
+                      ""
+                  ),
+              reverse=True
+          )
+
+
+          # =================================================
+          # KEEP MAXIMUM 50 STORIES
+          # =================================================
+
+          articles =
+              articles[:50]
+
+
+          # =================================================
+          # SAVE JSON
+          # =================================================
+
+          output = {
+
+              "updatedAt":
+                  datetime.now(
+                      timezone.utc
+                  ).isoformat(),
+
+              "source":
+                  "TechHub Ghana",
+
+              "articles":
+                  articles
+
+          }
+
+
+          with open(
+              OUTPUT_FILE,
+              "w",
+              encoding="utf-8"
+          ) as file:
+
+              json.dump(
+                  output,
+                  file,
+                  ensure_ascii=False,
+                  indent=4
+              )
+
+
+          print(
+              "Saved",
+              len(articles),
+              "articles."
+          )
+
+          PY
+
+
+      # =====================================================
+      # CHECK FOR CHANGES
+      # =====================================================
+
+      - name: Check generated news
+        run: |
+
+          echo "Generated news file:"
+          cat ghana-tech-news.json
+
+
+      # =====================================================
+      # COMMIT UPDATED NEWS
+      # =====================================================
+
+      - name: Commit updated news
+        run: |
+
+          git config user.name "TechHub Ghana News Bot"
+
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add ghana-tech-news.json
+
+          if git diff --cached --quiet; then
+
+            echo "No news changes to commit."
+
+          else
+
+            git commit -m "Update Ghana Tech news"
+
+            git push
+
+          fi
