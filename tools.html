@@ -12,12 +12,12 @@
 
     <meta
         name="description"
-        content="Free digital tools from TechHub Ghana including GPA Calculator, QR Code Generator, AI Assistant and Password Generator."
+        content="Free digital tools from TechHub Ghana including GPA Calculator, QR Code Generator, AI Assistant, Password Generator, Age Calculator and Unit Converter."
     >
 
     <meta
         name="keywords"
-        content="TechHub Ghana, digital tools, GPA calculator, QR generator, AI assistant, password generator"
+        content="TechHub Ghana, digital tools, GPA calculator, QR generator, AI assistant, password generator, age calculator, unit converter"
     >
 
     <meta
@@ -88,7 +88,9 @@
     <div class="top-bar">
 
 
-        <!-- LOGO -->
+        <!-- LOGO
+             Same structure used across TechHub Ghana pages
+        ================================================== -->
 
         <a
             href="index.html"
@@ -116,58 +118,65 @@
         </a>
 
 
-        <!-- SEARCH -->
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
 
-        <div class="search-box">
+        <div class="header-right">
 
-            <input
-                type="search"
-                id="siteSearch"
-                placeholder="Search TechHub Ghana..."
-                aria-label="Search TechHub Ghana"
-            >
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="search"
+                    id="siteSearch"
+                    placeholder="Search TechHub Ghana..."
+                    aria-label="Search TechHub Ghana"
+                >
+
+                <button
+                    type="button"
+                    id="searchBtn"
+                    aria-label="Search"
+                >
+
+                    <i class="fas fa-search"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- DARK MODE -->
 
             <button
                 type="button"
-                id="searchBtn"
-                aria-label="Search"
+                id="darkModeBtn"
+                class="dark-mode-btn"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode"
             >
+                🌙
+            </button>
 
-                <i class="fas fa-search"></i>
 
+            <!-- MOBILE MENU -->
+
+            <button
+                type="button"
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
             </button>
 
         </div>
 
-
-        <!-- DARK MODE -->
-
-        <button
-            type="button"
-            id="darkModeBtn"
-            class="dark-mode-btn"
-            aria-label="Toggle dark mode"
-            title="Toggle dark mode"
-        >
-            🌙
-        </button>
-
     </div>
-
-
-    <!-- =====================================================
-         MOBILE MENU BUTTON
-    ====================================================== -->
-
-    <button
-        type="button"
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-    >
-        ☰
-    </button>
 
 
     <!-- =====================================================
@@ -198,6 +207,7 @@
         <a
             href="tools.html"
             class="active"
+            aria-current="page"
         >
             Tools
         </a>
@@ -227,23 +237,25 @@
 </header>
 
 
-
 <!-- =========================================================
      BREAKING NEWS
 ========================================================= -->
 
-<section class="breaking-news">
+<section
+    class="breaking-news"
+    aria-label="Technology updates"
+>
 
     <marquee>
 
         🛠️ Free Digital Tools • 🎓 GPA Calculator •
         🔳 QR Generator • 🤖 AI Assistant •
-        🔐 Password Generator • 💻 TechHub Ghana
+        🔐 Password Generator • 🎂 Age Calculator •
+        🔄 Unit Converter • 💻 TechHub Ghana
 
     </marquee>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -272,524 +284,568 @@
 </section>
 
 
-
 <!-- =========================================================
-     TOOLS SECTION
+     MAIN CONTENT
 ========================================================= -->
 
 <main>
 
-<section class="section">
-
-
-    <div class="section-header">
-
-        <h2>
-            🛠️ Explore Our Tools
-        </h2>
-
-        <p>
-            Simple, fast and free tools for your everyday
-            digital needs.
-        </p>
-
-    </div>
-
-
 
     <!-- =====================================================
-         TOOL GRID
+         TOOLS SECTION
     ====================================================== -->
 
-    <div class="card-grid">
+    <section class="section">
 
 
-        <!-- =================================================
-             GPA CALCULATOR
-        ================================================== -->
-
-        <article class="tool-card">
-
-            <div class="icon">
-                🎓
-            </div>
-
-            <h3>
-                GPA Calculator
-            </h3>
-
-            <p>
-                Calculate your semester GPA quickly and easily.
-                Perfect for university and college students.
-            </p>
-
-            <a
-                href="gpa.html"
-                class="read-btn"
-            >
-                Open GPA Calculator
-            </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             QR GENERATOR
-        ================================================== -->
-
-        <article class="tool-card">
-
-            <div class="icon">
-                🔳
-            </div>
-
-            <h3>
-                QR Code Generator
-            </h3>
-
-            <p>
-                Create QR codes for websites, text,
-                phone numbers, emails and other information.
-            </p>
-
-            <a
-                href="qr-generator.html"
-                class="read-btn"
-            >
-                Generate QR Code
-            </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             AI ASSISTANT
-        ================================================== -->
-
-        <article class="tool-card">
-
-            <div class="icon">
-                🤖
-            </div>
-
-            <h3>
-                AI Assistant
-            </h3>
-
-            <p>
-                Rewrite, summarize, correct grammar and
-                improve your writing with AI.
-            </p>
-
-            <a
-                href="ai-assistant.html"
-                class="read-btn"
-            >
-                Open AI Assistant
-            </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             PASSWORD GENERATOR
-        ================================================== -->
-
-        <article class="tool-card">
-
-            <div class="icon">
-                🔐
-            </div>
-
-            <h3>
-                Password Generator
-            </h3>
-
-            <p>
-                Generate strong and secure passwords for
-                your online accounts.
-            </p>
-
-            <a
-                href="password-generator.html"
-                class="read-btn"
-            >
-                Generate Password
-            </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             AGE CALCULATOR
-        ================================================== -->
-
-        <article class="tool-card">
-
-            <div class="icon">
-                🎂
-            </div>
-
-            <h3>
-                Age Calculator
-            </h3>
-
-            <p>
-                Calculate your exact age in years, months
-                and days using your date of birth.
-            </p>
-
-            <a
-                href="age-calculator.html"
-                class="read-btn"
-            >
-                Calculate Age
-            </a>
-
-        </article>
-
-
-
-        <!-- =================================================
-             UNIT CONVERTER
-        ================================================== -->
-
-        <article class="tool-card">
-
-            <div class="icon">
-                🔄
-            </div>
-
-            <h3>
-                Unit Converter
-            </h3>
-
-            <p>
-                Convert common measurements such as length,
-                weight, temperature and more.
-            </p>
-
-            <a
-                href="unit-converter.html"
-                class="read-btn"
-            >
-                Open Converter
-            </a>
-
-        </article>
-
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     WHY USE OUR TOOLS
-========================================================= -->
-
-<section class="section">
-
-
-    <h2>
-        ⭐ Why Use TechHub Ghana Tools?
-    </h2>
-
-
-    <div class="card-grid">
-
-
-        <article class="tool-card">
-
-            <div class="icon">
-                ⚡
-            </div>
-
-            <h3>
-                Fast
-            </h3>
-
-            <p>
-                Our tools are designed to be simple and
-                quick to use.
-            </p>
-
-        </article>
-
-
-
-        <article class="tool-card">
-
-            <div class="icon">
-                🆓
-            </div>
-
-            <h3>
-                Free
-            </h3>
-
-            <p>
-                Access useful digital tools without
-                paying a subscription.
-            </p>
-
-        </article>
-
-
-
-        <article class="tool-card">
-
-            <div class="icon">
-                📱
-            </div>
-
-            <h3>
-                Mobile Friendly
-            </h3>
-
-            <p>
-                Use TechHub Ghana tools on smartphones,
-                tablets and computers.
-            </p>
-
-        </article>
-
-
-
-        <article class="tool-card">
-
-            <div class="icon">
-                🎓
-            </div>
-
-            <h3>
-                Student Friendly
-            </h3>
-
-            <p>
-                Many of our tools are designed specifically
-                with students in mind.
-            </p>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     POPULAR TOOLS
-========================================================= -->
-
-<section class="section">
-
-
-    <div class="news-layout">
-
-
-        <!-- LEFT -->
-
-        <div class="news-left">
+        <div class="section-header">
 
             <h2>
-                🔥 Popular Tools
+                🛠️ Explore Our Tools
             </h2>
 
-
-            <div class="news-card">
-
-                <div>
-
-                    <h3>
-                        🎓 GPA Calculator
-                    </h3>
-
-                    <p>
-                        Quickly calculate your GPA and keep
-                        track of your academic performance.
-                    </p>
-
-                    <a
-                        href="gpa.html"
-                        class="read-btn"
-                    >
-                        Try It
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="news-card">
-
-                <div>
-
-                    <h3>
-                        🔳 QR Code Generator
-                    </h3>
-
-                    <p>
-                        Create a QR code from a URL,
-                        text or other information.
-                    </p>
-
-                    <a
-                        href="qr-generator.html"
-                        class="read-btn"
-                    >
-                        Try It
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="news-card">
-
-                <div>
-
-                    <h3>
-                        🤖 AI Assistant
-                    </h3>
-
-                    <p>
-                        Improve your writing with rewriting,
-                        summarization and grammar correction.
-                    </p>
-
-                    <a
-                        href="ai-assistant.html"
-                        class="read-btn"
-                    >
-                        Try It
-                    </a>
-
-                </div>
-
-            </div>
+            <p>
+                Simple, fast and free tools for your everyday
+                digital needs.
+            </p>
 
         </div>
 
 
+        <!-- =================================================
+             TOOL GRID
+        ================================================== -->
 
-        <!-- SIDEBAR -->
-
-        <aside>
-
-            <h3>
-                📌 Quick Links
-            </h3>
-
-            <ul>
-
-                <li>
-                    <a href="index.html">
-                        🏠 Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="news.html">
-                        📰 Technology News
-                    </a>
-                </li>
-
-                <li>
-                    <a href="tutorials.html">
-                        📚 Tutorials
-                    </a>
-                </li>
-
-                <li>
-                    <a href="gpa.html">
-                        🎓 GPA Calculator
-                    </a>
-                </li>
-
-                <li>
-                    <a href="qr-generator.html">
-                        🔳 QR Generator
-                    </a>
-                </li>
-
-                <li>
-                    <a href="ai-assistant.html">
-                        🤖 AI Assistant
-                    </a>
-                </li>
-
-                <li>
-                    <a href="about.html">
-                        ℹ️ About TechHub Ghana
-                    </a>
-                </li>
-
-                <li>
-                    <a href="contact.html">
-                        📧 Contact Us
-                    </a>
-                </li>
-
-            </ul>
-
-        </aside>
+        <div class="card-grid">
 
 
-    </div>
+            <!-- GPA CALCULATOR -->
 
-</section>
+            <article class="tool-card">
+
+                <div class="icon">
+                    🎓
+                </div>
+
+                <h3>
+                    GPA Calculator
+                </h3>
+
+                <p>
+                    Calculate your semester GPA quickly and easily.
+                    Perfect for university and college students.
+                </p>
+
+                <a
+                    href="gpa.html"
+                    class="read-btn"
+                >
+                    Open GPA Calculator
+                </a>
+
+            </article>
 
 
+            <!-- QR GENERATOR -->
 
-<!-- =========================================================
-     NEWSLETTER
-========================================================= -->
+            <article class="tool-card">
 
-<section class="newsletter">
+                <div class="icon">
+                    🔳
+                </div>
 
-    <h2>
-        📩 Stay Updated
-    </h2>
+                <h3>
+                    QR Code Generator
+                </h3>
 
-    <p>
-        Get new technology tutorials, digital tools
-        and technology updates from TechHub Ghana.
-    </p>
+                <p>
+                    Create QR codes for websites, text,
+                    phone numbers, emails and other information.
+                </p>
+
+                <a
+                    href="qr-generator.html"
+                    class="read-btn"
+                >
+                    Generate QR Code
+                </a>
+
+            </article>
 
 
-    <form id="newsletterForm">
+            <!-- AI ASSISTANT -->
 
-        <input
-            type="email"
-            id="newsletterEmail"
-            placeholder="Enter your email"
-            aria-label="Email address"
-            required
-        >
+            <article class="tool-card">
 
-        <button type="submit">
-            Subscribe
-        </button>
+                <div class="icon">
+                    🤖
+                </div>
 
-    </form>
+                <h3>
+                    AI Assistant
+                </h3>
 
-</section>
+                <p>
+                    Rewrite, summarize, correct grammar and
+                    improve your writing with AI.
+                </p>
+
+                <a
+                    href="ai-assistant.html"
+                    class="read-btn"
+                >
+                    Open AI Assistant
+                </a>
+
+            </article>
+
+
+            <!-- PASSWORD GENERATOR -->
+
+            <article class="tool-card">
+
+                <div class="icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Password Generator
+                </h3>
+
+                <p>
+                    Generate strong and secure passwords for
+                    your online accounts.
+                </p>
+
+                <a
+                    href="password-generator.html"
+                    class="read-btn"
+                >
+                    Generate Password
+                </a>
+
+            </article>
+
+
+            <!-- AGE CALCULATOR -->
+
+            <article class="tool-card">
+
+                <div class="icon">
+                    🎂
+                </div>
+
+                <h3>
+                    Age Calculator
+                </h3>
+
+                <p>
+                    Calculate your exact age in years, months
+                    and days using your date of birth.
+                </p>
+
+                <a
+                    href="age-calculator.html"
+                    class="read-btn"
+                >
+                    Calculate Age
+                </a>
+
+            </article>
+
+
+            <!-- UNIT CONVERTER -->
+
+            <article class="tool-card">
+
+                <div class="icon">
+                    🔄
+                </div>
+
+                <h3>
+                    Unit Converter
+                </h3>
+
+                <p>
+                    Convert common measurements such as length,
+                    weight, temperature and more.
+                </p>
+
+                <a
+                    href="unit-converter.html"
+                    class="read-btn"
+                >
+                    Open Converter
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WHY USE OUR TOOLS
+    ====================================================== -->
+
+    <section class="section">
+
+
+        <div class="section-header">
+
+            <h2>
+                ⭐ Why Use TechHub Ghana Tools?
+            </h2>
+
+            <p>
+                Built to be simple, useful and accessible
+                across your devices.
+            </p>
+
+        </div>
+
+
+        <div class="card-grid">
+
+
+            <!-- FAST -->
+
+            <article class="tool-card">
+
+                <div class="icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Fast
+                </h3>
+
+                <p>
+                    Our tools are designed to be simple,
+                    responsive and quick to use.
+                </p>
+
+            </article>
+
+
+            <!-- FREE -->
+
+            <article class="tool-card">
+
+                <div class="icon">
+                    🆓
+                </div>
+
+                <h3>
+                    Free
+                </h3>
+
+                <p>
+                    Access useful digital tools without
+                    paying a subscription.
+                </p>
+
+            </article>
+
+
+            <!-- MOBILE FRIENDLY -->
+
+            <article class="tool-card">
+
+                <div class="icon">
+                    📱
+                </div>
+
+                <h3>
+                    Mobile Friendly
+                </h3>
+
+                <p>
+                    Use TechHub Ghana tools on smartphones,
+                    tablets and computers.
+                </p>
+
+            </article>
+
+
+            <!-- STUDENT FRIENDLY -->
+
+            <article class="tool-card">
+
+                <div class="icon">
+                    🎓
+                </div>
+
+                <h3>
+                    Student Friendly
+                </h3>
+
+                <p>
+                    Many of our tools are designed specifically
+                    with students in mind.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         POPULAR TOOLS
+    ====================================================== -->
+
+    <section class="section">
+
+
+        <div class="news-layout">
+
+
+            <!-- =================================================
+                 LEFT CONTENT
+            ================================================== -->
+
+            <div class="news-left">
+
+                <h2>
+                    🔥 Popular Tools
+                </h2>
+
+
+                <!-- GPA -->
+
+                <article class="news-card">
+
+                    <div>
+
+                        <h3>
+                            🎓 GPA Calculator
+                        </h3>
+
+                        <p>
+                            Quickly calculate your GPA and keep
+                            track of your academic performance.
+                        </p>
+
+                        <a
+                            href="gpa.html"
+                            class="read-btn"
+                        >
+                            Try It
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- QR -->
+
+                <article class="news-card">
+
+                    <div>
+
+                        <h3>
+                            🔳 QR Code Generator
+                        </h3>
+
+                        <p>
+                            Create a QR code from a URL,
+                            text or other information.
+                        </p>
+
+                        <a
+                            href="qr-generator.html"
+                            class="read-btn"
+                        >
+                            Try It
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- AI -->
+
+                <article class="news-card">
+
+                    <div>
+
+                        <h3>
+                            🤖 AI Assistant
+                        </h3>
+
+                        <p>
+                            Improve your writing with rewriting,
+                            summarization and grammar correction.
+                        </p>
+
+                        <a
+                            href="ai-assistant.html"
+                            class="read-btn"
+                        >
+                            Try It
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PASSWORD -->
+
+                <article class="news-card">
+
+                    <div>
+
+                        <h3>
+                            🔐 Password Generator
+                        </h3>
+
+                        <p>
+                            Create strong passwords to help
+                            protect your online accounts.
+                        </p>
+
+                        <a
+                            href="password-generator.html"
+                            class="read-btn"
+                        >
+                            Try It
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
+
+            <aside>
+
+                <h3>
+                    📌 Quick Links
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            🏠 Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ghana-tech.html">
+                            🇬🇭 Ghana Technology
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="news.html">
+                            📰 Technology News
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tutorials.html">
+                            📚 Tutorials
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gpa.html">
+                            🎓 GPA Calculator
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="qr-generator.html">
+                            🔳 QR Generator
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ai-assistant.html">
+                            🤖 AI Assistant
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="password-generator.html">
+                            🔐 Password Generator
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            ℹ️ About TechHub Ghana
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            📧 Contact Us
+                        </a>
+                    </li>
+
+                </ul>
+
+            </aside>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         NEWSLETTER
+    ====================================================== -->
+
+    <section class="newsletter">
+
+        <h2>
+            📩 Stay Updated
+        </h2>
+
+        <p>
+            Get new technology tutorials, digital tools
+            and technology updates from TechHub Ghana.
+        </p>
+
+
+        <form id="newsletterForm">
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email"
+                aria-label="Email address"
+                autocomplete="email"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
 
 </main>
-
 
 
 <!-- =========================================================
@@ -802,7 +858,9 @@
     <div class="footer-grid">
 
 
-        <!-- ABOUT -->
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
 
         <div>
 
@@ -822,8 +880,9 @@
         </div>
 
 
-
-        <!-- QUICK LINKS -->
+        <!-- =================================================
+             QUICK LINKS
+        ================================================== -->
 
         <div>
 
@@ -834,6 +893,12 @@
             <p>
                 <a href="index.html">
                     Home
+                </a>
+            </p>
+
+            <p>
+                <a href="ghana-tech.html">
+                    Ghana Tech
                 </a>
             </p>
 
@@ -870,8 +935,9 @@
         </div>
 
 
-
-        <!-- TOOLS -->
+        <!-- =================================================
+             DIGITAL TOOLS
+        ================================================== -->
 
         <div>
 
@@ -909,11 +975,18 @@
                 </a>
             </p>
 
+            <p>
+                <a href="unit-converter.html">
+                    🔄 Unit Converter
+                </a>
+            </p>
+
         </div>
 
 
-
-        <!-- CONTACT -->
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
 
         <div>
 
@@ -958,7 +1031,6 @@
 </footer>
 
 
-
 <!-- =========================================================
      MAIN JAVASCRIPT
 ========================================================= -->
@@ -975,7 +1047,6 @@
 document.addEventListener(
     "DOMContentLoaded",
     function () {
-
 
         const newsletterForm =
             document.getElementById(
@@ -999,6 +1070,11 @@ document.addEventListener(
                     document.getElementById(
                         "newsletterEmail"
                     );
+
+
+                if (!emailInput) {
+                    return;
+                }
 
 
                 const email =
@@ -1028,4 +1104,4 @@ document.addEventListener(
 
 </body>
 
-</html>
+                    </html>
