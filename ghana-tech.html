@@ -21,12 +21,12 @@
 
     <meta
         name="description"
-        content="TechHub Ghana — Ghana technology news, startups, digital innovation, AI, cybersecurity, programming and emerging technology."
+        content="TechHub Ghana brings you Ghana technology news, startups, artificial intelligence, cybersecurity, fintech, programming, digital innovation and emerging technology."
     >
 
     <meta
         name="keywords"
-        content="Ghana technology, Ghana tech news, TechHub Ghana, AI Ghana, cybersecurity Ghana, startups Ghana, programming Ghana, fintech Ghana, digital economy Ghana"
+        content="Ghana technology, Ghana tech news, TechHub Ghana, AI Ghana, cybersecurity Ghana, startups Ghana, programming Ghana, fintech Ghana, digital economy Ghana, technology news Ghana"
     >
 
     <meta
@@ -39,10 +39,20 @@
         content="index, follow"
     >
 
+    <meta
+        name="googlebot"
+        content="index, follow"
+    >
+
     <link
         rel="canonical"
         href="https://juliusas009-wq.github.io/TechHub-Ghana/ghana-tech.html"
     >
+
+
+    <!-- =========================================================
+         PAGE TITLE
+    ========================================================== -->
 
     <title>
         Ghana Tech News | TechHub Ghana
@@ -65,7 +75,7 @@
 
     <meta
         property="og:description"
-        content="Ghana technology news, startups, AI, cybersecurity, fintech, programming and digital innovation."
+        content="Follow Ghana technology news, startups, AI, cybersecurity, fintech, programming and digital innovation on TechHub Ghana."
     >
 
     <meta
@@ -88,6 +98,11 @@
         content="Ghana technology and digital innovation"
     >
 
+    <meta
+        property="og:locale"
+        content="en_GH"
+    >
+
 
     <!-- =========================================================
          TWITTER / X
@@ -105,7 +120,7 @@
 
     <meta
         name="twitter:description"
-        content="Ghana technology news, startups, AI, cybersecurity, fintech and digital innovation."
+        content="Ghana technology news, startups, AI, cybersecurity, fintech, programming and digital innovation."
     >
 
     <meta
@@ -124,9 +139,14 @@
         href="images/logo.png"
     >
 
+    <link
+        rel="apple-touch-icon"
+        href="images/logo.png"
+    >
+
 
     <!-- =========================================================
-         GOOGLE FONT
+         PERFORMANCE
     ========================================================== -->
 
     <link
@@ -139,6 +159,16 @@
         href="https://fonts.gstatic.com"
         crossorigin
     >
+
+    <link
+        rel="dns-prefetch"
+        href="//cdnjs.cloudflare.com"
+    >
+
+
+    <!-- =========================================================
+         GOOGLE FONT
+    ========================================================== -->
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
@@ -157,7 +187,7 @@
 
 
     <!-- =========================================================
-         MAIN GLOBAL STYLESHEET
+         GLOBAL STYLESHEET
     ========================================================== -->
 
     <link
@@ -177,7 +207,36 @@
 
 
     <!-- =========================================================
-         BASIC PAGE SAFETY
+         STRUCTURED DATA
+    ========================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Ghana Tech News | TechHub Ghana",
+        "url": "https://juliusas009-wq.github.io/TechHub-Ghana/ghana-tech.html",
+        "description": "Ghana technology news, startups, artificial intelligence, cybersecurity, fintech, programming and digital innovation.",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "TechHub Ghana",
+            "url": "https://juliusas009-wq.github.io/TechHub-Ghana/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "TechHub Ghana",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://juliusas009-wq.github.io/TechHub-Ghana/images/logo.png"
+            }
+        },
+        "inLanguage": "en-GH"
+    }
+    </script>
+
+
+    <!-- =========================================================
+         PAGE SAFETY / RESPONSIVE FIXES
     ========================================================== -->
 
     <style>
@@ -203,8 +262,14 @@
         }
 
 
+        button,
+        input {
+            font: inherit;
+        }
+
+
         /* =====================================================
-           COMMON LOGO
+           SHARED LOGO STRUCTURE
         ====================================================== */
 
         .logo {
@@ -219,27 +284,21 @@
         .logo-image {
             width: 56px;
             height: 56px;
-
             min-width: 56px;
             max-width: 56px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             overflow: hidden;
         }
 
 
         .logo-image img {
             display: block;
-
             width: 56px !important;
             height: 56px !important;
-
             max-width: 56px !important;
             max-height: 56px !important;
-
             object-fit: contain;
         }
 
@@ -266,6 +325,120 @@
 
 
         /* =====================================================
+           GHANA TECH PAGE CONTAINMENT
+        ====================================================== */
+
+        .ghana-tech-page,
+        .ghana-tech-hero,
+        .ghana-stats,
+        .ghana-news-controls,
+        .ghana-featured,
+        .ghana-news-section,
+        .ghana-trending,
+        .ghana-topics,
+        .ghana-source-note,
+        .ghana-newsletter {
+            max-width: 100%;
+            min-width: 0;
+        }
+
+
+        .ghana-tech-hero-content,
+        .ghana-tech-hero-image,
+        .ghana-featured-image,
+        .ghana-featured-content {
+            min-width: 0;
+        }
+
+
+        .ghana-tech-hero-image img,
+        .ghana-featured-image img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        .ghana-news-grid,
+        .ghana-topic-grid,
+        .ghana-trending-grid {
+            min-width: 0;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           BREAKING NEWS
+        ====================================================== */
+
+        .breaking-content {
+            min-width: 0;
+            overflow: hidden;
+        }
+
+
+        .breaking-track {
+            min-width: max-content;
+        }
+
+
+        /* =====================================================
+           SEARCH
+        ====================================================== */
+
+        .ghana-search {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+        }
+
+
+        .ghana-search input {
+            min-width: 0;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           CATEGORY BUTTONS
+        ====================================================== */
+
+        .ghana-category-buttons {
+            max-width: 100%;
+            overflow-x: auto;
+            scrollbar-width: thin;
+        }
+
+
+        .ghana-category-buttons::-webkit-scrollbar {
+            height: 5px;
+        }
+
+
+        /* =====================================================
+           NEWSLETTER
+        ====================================================== */
+
+        .ghana-newsletter {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        .ghana-newsletter form {
+            width: 100%;
+            max-width: 100%;
+        }
+
+
+        .ghana-newsletter input {
+            min-width: 0;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
            MOBILE
         ====================================================== */
 
@@ -282,7 +455,6 @@
             .top-bar {
                 width: 100%;
                 max-width: 100%;
-
                 padding-left: 16px;
                 padding-right: 16px;
             }
@@ -297,7 +469,6 @@
             .logo-image {
                 width: 44px;
                 height: 44px;
-
                 min-width: 44px;
                 max-width: 44px;
             }
@@ -306,7 +477,6 @@
             .logo-image img {
                 width: 44px !important;
                 height: 44px !important;
-
                 max-width: 44px !important;
                 max-height: 44px !important;
             }
@@ -314,7 +484,6 @@
 
             .logo-title {
                 font-size: 1rem;
-
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
@@ -322,15 +491,15 @@
 
             .logo-tagline {
                 font-size: 0.58rem;
-
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
 
 
-            /* =================================================
-               HERO
-            ================================================== */
+            .search-box {
+                min-width: 0;
+            }
+
 
             .ghana-tech-hero {
                 width: 100%;
@@ -338,25 +507,6 @@
                 overflow: hidden;
             }
 
-
-            .ghana-tech-hero-content,
-            .ghana-tech-hero-image {
-                min-width: 0;
-                max-width: 100%;
-            }
-
-
-            .ghana-tech-hero-image img {
-                display: block;
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-            }
-
-
-            /* =================================================
-               NEWS
-            ================================================== */
 
             .ghana-news-grid {
                 width: 100%;
@@ -372,84 +522,11 @@
             }
 
 
-            .ghana-featured-image,
-            .ghana-featured-content {
-                min-width: 0;
-                max-width: 100%;
-            }
-
-
-            .ghana-featured-image img {
-                display: block;
-                width: 100%;
-                max-width: 100%;
-                height: auto;
-            }
-
-
-            /* =================================================
-               SEARCH
-            ================================================== */
-
-            .ghana-search {
-                width: 100%;
-                max-width: 100%;
-                min-width: 0;
-            }
-
-
-            .ghana-search input {
-                min-width: 0;
-                max-width: 100%;
-            }
-
-
-            /* =================================================
-               FILTERS
-            ================================================== */
-
-            .ghana-category-buttons {
-                max-width: 100%;
-                overflow-x: auto;
-            }
-
-
-            /* =================================================
-               TOPICS
-            ================================================== */
-
             .ghana-topic-grid {
                 width: 100%;
                 max-width: 100%;
-                min-width: 0;
             }
 
-
-            /* =================================================
-               NEWSLETTER
-            ================================================== */
-
-            .ghana-newsletter {
-                width: 100%;
-                max-width: 100%;
-            }
-
-
-            .ghana-newsletter form {
-                width: 100%;
-                max-width: 100%;
-            }
-
-
-            .ghana-newsletter input {
-                min-width: 0;
-                max-width: 100%;
-            }
-
-
-            /* =================================================
-               FOOTER
-            ================================================== */
 
             .footer-grid {
                 width: 100%;
@@ -470,10 +547,14 @@
             }
 
 
+            .logo {
+                gap: 8px;
+            }
+
+
             .logo-image {
                 width: 40px;
                 height: 40px;
-
                 min-width: 40px;
                 max-width: 40px;
             }
@@ -482,7 +563,6 @@
             .logo-image img {
                 width: 40px !important;
                 height: 40px !important;
-
                 max-width: 40px !important;
                 max-height: 40px !important;
             }
@@ -521,10 +601,6 @@
 
     <!-- =========================================================
          SITE HEADER
-         
-         IMPORTANT:
-         This is the SAME header structure used by index.html.
-         Do not add another header/logo anywhere else.
     ========================================================== -->
 
     <header
@@ -532,14 +608,10 @@
         id="siteHeader"
     >
 
-        <!-- =====================================================
-             TOP BAR
-        ====================================================== -->
-
         <div class="top-bar">
 
 
-            <!-- BRAND / LOGO -->
+            <!-- BRAND -->
 
             <a
                 href="index.html"
@@ -581,6 +653,8 @@
                 class="search-box"
                 id="searchForm"
                 role="search"
+                action="news.html"
+                method="get"
             >
 
                 <label
@@ -603,7 +677,7 @@
 
                 <button
                     type="submit"
-                    aria-label="Search"
+                    aria-label="Search TechHub Ghana"
                 >
 
                     <i
@@ -637,7 +711,7 @@
 
 
         <!-- =====================================================
-             NAVIGATION
+             MAIN NAVIGATION
         ====================================================== -->
 
         <nav
@@ -648,8 +722,6 @@
 
             <div class="nav-inner">
 
-
-                <!-- HOME -->
 
                 <a href="index.html">
 
@@ -664,8 +736,6 @@
 
                 </a>
 
-
-                <!-- GHANA TECH -->
 
                 <a
                     href="ghana-tech.html"
@@ -687,8 +757,6 @@
                 </a>
 
 
-                <!-- NEWS -->
-
                 <a href="news.html">
 
                     <i
@@ -702,8 +770,6 @@
 
                 </a>
 
-
-                <!-- TUTORIALS -->
 
                 <a href="tutorials.html">
 
@@ -719,8 +785,6 @@
                 </a>
 
 
-                <!-- TOOLS -->
-
                 <a href="tools.html">
 
                     <i
@@ -735,8 +799,6 @@
                 </a>
 
 
-                <!-- ABOUT -->
-
                 <a href="about.html">
 
                     <i
@@ -750,8 +812,6 @@
 
                 </a>
 
-
-                <!-- CONTACT -->
 
                 <a href="contact.html">
 
@@ -788,6 +848,7 @@
             <div
                 class="today-date"
                 id="today"
+                aria-label="Today's date"
             >
 
                 <i
@@ -874,7 +935,10 @@
              HERO
         ====================================================== -->
 
-        <section class="ghana-tech-hero">
+        <section
+            class="ghana-tech-hero"
+            aria-labelledby="ghanaTechTitle"
+        >
 
             <div class="ghana-tech-hero-content">
 
@@ -883,7 +947,7 @@
                 </span>
 
 
-                <h1>
+                <h1 id="ghanaTechTitle">
 
                     Ghana's Technology
                     <br>
@@ -942,10 +1006,13 @@
 
                 <img
                     src="images/ghana-tech.jpg"
-                    alt="Technology and digital innovation in Ghana"
+                    alt="Ghana technology and digital innovation"
+                    width="1200"
+                    height="700"
                     loading="eager"
                     decoding="async"
-                    onerror="this.src='images/ai-news.jpg'"
+                    fetchpriority="high"
+                    onerror="this.onerror=null;this.src='images/ai-news.jpg';"
                 >
 
             </div>
@@ -959,12 +1026,15 @@
 
         <section
             class="ghana-stats"
-            aria-label="Ghana technology statistics"
+            aria-label="Ghana technology highlights"
         >
 
             <article class="ghana-stat">
 
-                <div class="ghana-stat-icon">
+                <div
+                    class="ghana-stat-icon"
+                    aria-hidden="true"
+                >
                     🇬🇭
                 </div>
 
@@ -981,7 +1051,10 @@
 
             <article class="ghana-stat">
 
-                <div class="ghana-stat-icon">
+                <div
+                    class="ghana-stat-icon"
+                    aria-hidden="true"
+                >
                     🤖
                 </div>
 
@@ -998,7 +1071,10 @@
 
             <article class="ghana-stat">
 
-                <div class="ghana-stat-icon">
+                <div
+                    class="ghana-stat-icon"
+                    aria-hidden="true"
+                >
                     💳
                 </div>
 
@@ -1015,7 +1091,10 @@
 
             <article class="ghana-stat">
 
-                <div class="ghana-stat-icon">
+                <div
+                    class="ghana-stat-icon"
+                    aria-hidden="true"
+                >
                     🚀
                 </div>
 
@@ -1038,15 +1117,23 @@
 
         <section
             class="ghana-news-controls"
-            aria-label="Search Ghana technology news"
+            aria-labelledby="latestGhanaNewsTitle"
         >
 
-            <h2>
+            <h2 id="latestGhanaNewsTitle">
                 Latest Ghana Tech News
             </h2>
 
 
             <div class="ghana-search">
+
+                <label
+                    for="ghanaSearch"
+                    class="sr-only"
+                >
+                    Search Ghana technology news
+                </label>
+
 
                 <input
                     type="search"
@@ -1060,7 +1147,7 @@
                 <button
                     type="button"
                     id="ghanaSearchBtn"
-                    aria-label="Search news"
+                    aria-label="Search Ghana technology news"
                 >
 
                     <i
@@ -1077,13 +1164,14 @@
                 class="ghana-category-buttons"
                 id="ghanaCategoryButtons"
                 role="group"
-                aria-label="News categories"
+                aria-label="Ghana technology news categories"
             >
 
                 <button
                     type="button"
                     class="ghana-filter active"
                     data-category="All"
+                    aria-pressed="true"
                 >
                     All
                 </button>
@@ -1093,6 +1181,7 @@
                     type="button"
                     class="ghana-filter"
                     data-category="Ghana Technology"
+                    aria-pressed="false"
                 >
                     🇬🇭 Ghana Tech
                 </button>
@@ -1102,6 +1191,7 @@
                     type="button"
                     class="ghana-filter"
                     data-category="Artificial Intelligence"
+                    aria-pressed="false"
                 >
                     🤖 AI
                 </button>
@@ -1111,6 +1201,7 @@
                     type="button"
                     class="ghana-filter"
                     data-category="Cybersecurity"
+                    aria-pressed="false"
                 >
                     🔐 Cybersecurity
                 </button>
@@ -1120,6 +1211,7 @@
                     type="button"
                     class="ghana-filter"
                     data-category="FinTech"
+                    aria-pressed="false"
                 >
                     💳 FinTech
                 </button>
@@ -1129,6 +1221,7 @@
                     type="button"
                     class="ghana-filter"
                     data-category="Startups"
+                    aria-pressed="false"
                 >
                     🚀 Startups
                 </button>
@@ -1138,6 +1231,7 @@
                     type="button"
                     class="ghana-filter"
                     data-category="Programming"
+                    aria-pressed="false"
                 >
                     💻 Programming
                 </button>
@@ -1147,6 +1241,7 @@
                     type="button"
                     class="ghana-filter"
                     data-category="Digital Economy"
+                    aria-pressed="false"
                 >
                     📈 Digital Economy
                 </button>
@@ -1164,6 +1259,7 @@
             class="ghana-search-message"
             id="ghanaSearchMessage"
             aria-live="polite"
+            role="status"
         ></div>
 
 
@@ -1174,7 +1270,7 @@
         <section
             class="ghana-featured"
             id="ghanaFeatured"
-            aria-label="Featured Ghana technology story"
+            aria-labelledby="featuredTitle"
         >
 
             <div class="ghana-featured-image">
@@ -1183,9 +1279,11 @@
                     id="featuredImage"
                     src="images/ghana-tech.jpg"
                     alt="Featured Ghana technology story"
+                    width="1200"
+                    height="700"
                     loading="lazy"
                     decoding="async"
-                    onerror="this.src='images/ai-news.jpg'"
+                    onerror="this.onerror=null;this.src='images/ai-news.jpg';"
                 >
 
             </div>
@@ -1199,8 +1297,7 @@
 
 
                 <h2 id="featuredTitle">
-                    Ghana's Digital Technology Ecosystem Is Entering
-                    a New Era
+                    Ghana's Digital Technology Ecosystem Is Entering a New Era
                 </h2>
 
 
@@ -1266,11 +1363,12 @@
         <section
             class="ghana-news-section"
             id="ghanaNews"
+            aria-labelledby="ghanaStoriesTitle"
         >
 
             <div class="ghana-news-section-heading">
 
-                <h2>
+                <h2 id="ghanaStoriesTitle">
                     Ghana Technology Stories
                 </h2>
 
@@ -1285,21 +1383,22 @@
             <div
                 class="ghana-news-grid"
                 id="ghanaNewsGrid"
+                aria-live="polite"
             >
-
                 <!-- Ghana Tech JavaScript inserts news cards here -->
-
             </div>
 
 
             <div
                 class="no-ghana-news"
                 id="noGhanaNews"
+                role="status"
+                aria-live="polite"
             >
 
                 <div
-                    style="font-size: 45px; margin-bottom: 15px;"
                     aria-hidden="true"
+                    style="font-size:45px;margin-bottom:15px;"
                 >
                     🔎
                 </div>
@@ -1324,11 +1423,14 @@
              TRENDING TOPICS
         ====================================================== -->
 
-        <section class="ghana-trending">
+        <section
+            class="ghana-trending"
+            aria-labelledby="trendingTitle"
+        >
 
             <div class="ghana-trending-box">
 
-                <h2>
+                <h2 id="trendingTitle">
 
                     <i
                         class="fa-solid fa-fire"
@@ -1346,6 +1448,7 @@
                     <a
                         href="#ghanaNews"
                         data-trending="Artificial Intelligence"
+                        aria-label="View Artificial Intelligence stories"
                     >
 
                         <span>
@@ -1362,6 +1465,7 @@
                     <a
                         href="#ghanaNews"
                         data-trending="FinTech"
+                        aria-label="View FinTech stories"
                     >
 
                         <span>
@@ -1378,6 +1482,7 @@
                     <a
                         href="#ghanaNews"
                         data-trending="Cybersecurity"
+                        aria-label="View Cybersecurity stories"
                     >
 
                         <span>
@@ -1394,6 +1499,7 @@
                     <a
                         href="#ghanaNews"
                         data-trending="Startups"
+                        aria-label="View Ghanaian startup stories"
                     >
 
                         <span>
@@ -1410,6 +1516,7 @@
                     <a
                         href="#ghanaNews"
                         data-trending="Digital Economy"
+                        aria-label="View Ghana digital economy stories"
                     >
 
                         <span>
@@ -1426,6 +1533,7 @@
                     <a
                         href="#ghanaNews"
                         data-trending="Programming"
+                        aria-label="View programming stories"
                     >
 
                         <span>
@@ -1452,9 +1560,10 @@
         <section
             class="ghana-topics"
             id="ghanaTopics"
+            aria-labelledby="topicsTitle"
         >
 
-            <h2>
+            <h2 id="topicsTitle">
                 Explore Ghana Tech Topics
             </h2>
 
@@ -1600,7 +1709,7 @@
 
                     <p>
                         Technology in education, online learning
-                        and digital student tools.
+                        and digital tools for modern learning.
                     </p>
 
                 </article>
@@ -1614,9 +1723,12 @@
              SOURCE / DISCLAIMER
         ====================================================== -->
 
-        <section class="ghana-source-note">
+        <section
+            class="ghana-source-note"
+            aria-labelledby="sourceNoteTitle"
+        >
 
-            <h3>
+            <h3 id="sourceNoteTitle">
 
                 <i
                     class="fa-solid fa-circle-info"
@@ -1644,9 +1756,12 @@
              NEWSLETTER
         ====================================================== -->
 
-        <section class="ghana-newsletter">
+        <section
+            class="ghana-newsletter"
+            aria-labelledby="newsletterTitle"
+        >
 
-            <h2>
+            <h2 id="newsletterTitle">
                 Stay Ahead of Ghana Tech
             </h2>
 
@@ -1657,13 +1772,26 @@
             </p>
 
 
-            <form id="ghanaNewsletterForm">
+            <form
+                id="ghanaNewsletterForm"
+                novalidate
+            >
+
+                <label
+                    for="ghanaNewsletterEmail"
+                    class="sr-only"
+                >
+                    Email address
+                </label>
+
 
                 <input
                     type="email"
                     id="ghanaNewsletterEmail"
+                    name="email"
                     placeholder="Enter your email address"
                     autocomplete="email"
+                    inputmode="email"
                     required
                     aria-label="Email address"
                 >
@@ -1686,7 +1814,7 @@
             <p
                 id="ghanaNewsletterMessage"
                 aria-live="polite"
-                style="margin-top: 15px; margin-bottom: 0;"
+                style="margin-top:15px;margin-bottom:0;"
             ></p>
 
         </section>
@@ -1710,6 +1838,7 @@
                 <a
                     href="index.html"
                     class="footer-brand"
+                    aria-label="TechHub Ghana home"
                 >
 
                     <img
@@ -1787,7 +1916,7 @@
             </div>
 
 
-            <!-- TOOLS -->
+            <!-- POPULAR TOOLS -->
 
             <div class="footer-column">
 
@@ -1819,6 +1948,18 @@
                     <li>
                         <a href="password-generator.html">
                             Password Generator
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="age-calculator.html">
+                            Age Calculator
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="unit-converter.html">
+                            Unit Converter
                         </a>
                     </li>
 
@@ -1948,4 +2089,4 @@
 
 </body>
 
-                    </html>
+    </html>
